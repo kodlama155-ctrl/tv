@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-09-28T17:23:33.307616+00:00",
+  "updated_at_utc": "2026-09-28T17:25:46.448388+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-09-14T17:23:33.307616+00:00",
+  "cutoff_utc": "2026-09-14T17:25:46.448388+00:00",
   "repos_per_query": 50,
   "queries": [
     {
@@ -28,15 +28,100 @@
       "query": "tr iptv m3u",
       "github_query": "tr iptv m3u pushed:>=2026-09-14",
       "repos_returned": 4
+    },
+    {
+      "query": "turkish iptv",
+      "github_query": "turkish iptv pushed:>=2026-09-14",
+      "repos_returned": 11
+    },
+    {
+      "query": "turkiye tv m3u",
+      "github_query": "turkiye tv m3u pushed:>=2026-09-14",
+      "repos_returned": 1
+    },
+    {
+      "query": "turkey live tv",
+      "github_query": "turkey live tv pushed:>=2026-09-14",
+      "repos_returned": 0
+    },
+    {
+      "query": "turkish live tv",
+      "github_query": "turkish live tv pushed:>=2026-09-14",
+      "repos_returned": 0
+    },
+    {
+      "query": "turkiye canli tv",
+      "github_query": "turkiye canli tv pushed:>=2026-09-14",
+      "repos_returned": 2
     }
   ],
-  "repos_scanned": 7,
+  "repos_scanned": 19,
   "stale_repos_skipped": 0,
-  "playlist_file_candidates": 7,
-  "fresh_files_scanned": 5,
-  "stale_files_skipped": 2,
-  "unique_m3u8_candidates": 134,
+  "playlist_file_candidates": 26,
+  "fresh_files_scanned": 23,
+  "stale_files_skipped": 3,
+  "unique_m3u8_candidates": 3063,
   "fresh_source_files": [
+    {
+      "repo": "GhostFelina/cortexia-tv-public",
+      "path": "public/TV-tr.m3u",
+      "last_commit": "2026-09-28T10:44:42Z",
+      "entries_found": 125
+    },
+    {
+      "repo": "GhostFelina/cortexia-tv-public",
+      "path": "public/TV.m3u",
+      "last_commit": "2026-09-28T10:44:42Z",
+      "entries_found": 3015
+    },
+    {
+      "repo": "GhostFelina/cortexia-tv-public",
+      "path": "public/TV-ar.m3u",
+      "last_commit": "2026-09-28T10:44:42Z",
+      "entries_found": 338
+    },
+    {
+      "repo": "GhostFelina/cortexia-tv-public",
+      "path": "public/TV-es.m3u",
+      "last_commit": "2026-09-28T10:44:42Z",
+      "entries_found": 276
+    },
+    {
+      "repo": "GhostFelina/cortexia-tv-public",
+      "path": "public/TV-gb.m3u",
+      "last_commit": "2026-09-28T10:44:42Z",
+      "entries_found": 263
+    },
+    {
+      "repo": "GhostFelina/cortexia-tv-public",
+      "path": "public/TV-mx.m3u",
+      "last_commit": "2026-09-28T10:44:42Z",
+      "entries_found": 315
+    },
+    {
+      "repo": "GhostFelina/cortexia-tv-public",
+      "path": "public/TV-us.m3u",
+      "last_commit": "2026-09-28T10:44:42Z",
+      "entries_found": 1698
+    },
+    {
+      "repo": "FeridunN12/ibo-iptv-playlist",
+      "path": "combined.m3u",
+      "last_commit": "2026-09-28T09:12:27Z",
+      "entries_found": 452
+    },
+    {
+      "repo": "FeridunN12/ibo-iptv-playlist",
+      "path": "docs/combined.m3u",
+      "last_commit": "2026-09-28T09:12:27Z",
+      "entries_found": 452
+    },
+    {
+      "repo": "K3rimoff/IPTV",
+      "path": "Aze.m3u",
+      "last_commit": "2026-09-27T04:00:35Z",
+      "entries_found": 0
+    },
     {
       "repo": "mlinder/tree-sitter-m3u",
       "path": "examples/iptv.m3u",
@@ -45,15 +130,63 @@
     },
     {
       "repo": "mlinder/tree-sitter-m3u",
+      "path": "examples/simple.m3u",
+      "last_commit": "2026-09-25T09:12:21Z",
+      "entries_found": 0
+    },
+    {
+      "repo": "mlinder/tree-sitter-m3u",
+      "path": "examples/extended.m3u",
+      "last_commit": "2026-09-25T09:12:21Z",
+      "entries_found": 0
+    },
+    {
+      "repo": "mlinder/tree-sitter-m3u",
+      "path": "examples/hls-media.m3u8",
+      "last_commit": "2026-09-25T09:12:21Z",
+      "entries_found": 0
+    },
+    {
+      "repo": "mlinder/tree-sitter-m3u",
       "path": "test/corpus/playlists.txt",
       "last_commit": "2026-09-25T09:12:21Z",
       "entries_found": 2
+    },
+    {
+      "repo": "mlinder/tree-sitter-m3u",
+      "path": "examples/hls-all-tags.m3u8",
+      "last_commit": "2026-09-25T09:12:21Z",
+      "entries_found": 0
+    },
+    {
+      "repo": "mlinder/tree-sitter-m3u",
+      "path": "examples/hls-multivariant.m3u8",
+      "last_commit": "2026-09-25T09:12:21Z",
+      "entries_found": 0
     },
     {
       "repo": "akifdepoozel-crypto/car-tv-turkiye",
       "path": "CAR_TV_Turkiye_Tum_130_Calisan_Final.m3u",
       "last_commit": "2026-09-22T09:53:02Z",
       "entries_found": 130
+    },
+    {
+      "repo": "YananHelena/iptvson",
+      "path": "playlist.m3u",
+      "last_commit": "2026-09-18T05:42:18Z",
+      "entries_found": 36
+    },
+    {
+      "repo": "omerdenizhan/IPTV-M3U",
+      "path": "m3u/XXX-2.m3u",
+      "last_commit": "2026-09-14T19:27:45Z",
+      "entries_found": 0
+    },
+    {
+      "repo": "omerdenizhan/IPTV-M3U",
+      "path": "m3u/XXX-1.m3u",
+      "last_commit": "2026-09-14T19:27:00Z",
+      "entries_found": 0
     },
     {
       "repo": "omerdenizhan/IPTV-M3U",

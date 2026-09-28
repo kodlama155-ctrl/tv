@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="Mir.ru@SD" tvg-logo="https://i.imgur.com/AqWaJT8.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML group-title="Genel",like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="General",Mir (720p)
+https://cdn4.skygo.mn/live/disk1/MIR/HLSv3-FTA/MIR.m3u8
 #EXTINF:-1 tvg-id="NTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/NTV_%28Turkey%29_logo.svg/960px-NTV_%28Turkey%29_logo.svg.png" group-title="Genel",NTV (720p) [Not 24/7]
 https://dogus-live.daioncdn.net/ntv/ntv.m3u8
 #EXTINF:-1 tvg-id="TV8.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png" group-title="Genel",TV 8 (1080p) [Not 24/7]
@@ -25,6 +27,10 @@ https://tv-trtspor1.medya.trt.com.tr/master.m3u8
 https://tv-trtspor2.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTSporYildiz.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg/960px-TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg.png" group-title="Spor",TRT Spor Yildiz (1440p) [Geo-blocked]
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
+#EXTINF:-1 tvg-logo="https://press.upentertainment.com/wp-content/uploads/2022/03/aspire-tv-life-logo.jpg" group-title="Eğlence",Aspire TV Life
+https://uptv-aspiretvlife-klowdtv.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/ILfXDRs.png" group-title="Eğlence",Canal 7 TeleValencia
+https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8
 #EXTINF:-1 tvg-id="GEMComedy.tr@SD" tvg-logo="https://i.imgur.com/FuscfJW.png" group-title="Eğlence",GEM Comedy
 https://ca-rt.onetv.app/gemcomedy/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="GEMEntertainment.tr@SD" tvg-logo="https://www.gemgroup.tv/assets/images/channels/icon_8.png" group-title="Eğlence",GEM Entertainment
@@ -37,6 +43,8 @@ https://ca-rt.onetv.app/gemriver/index-0.m3u8?token=onetv202
 https://ca-rt.onetv.app/gemriverplus/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="Kanal7.tr@SD" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Eğlence",Kanal 7 (1080p) [Not 24/7]
 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/DmuTwDw.png" group-title="Eğlence",La 2
+https://rtvelivestream.rtve.es/rtvesec/la2/la2_main_dvr.m3u8
 #EXTINF:-1 tvg-id="GEMBollywood.tr@SD" tvg-logo="https://i.imgur.com/2XASeBk.png" group-title="Dizi / Film",GEM Bollywood
 https://ca-rt.onetv.app/gembollywood/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="GEMDrama.tr@SD" tvg-logo="https://i.imgur.com/k2pGyRH.png" group-title="Dizi / Film",GEM Drama
@@ -61,6 +69,10 @@ https://ca-rt.onetv.app/gemseriesplus/index-0.m3u8?token=onetv202
 https://ca-rt.onetv.app/gem/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="GEMTVPlus.tr@SD" tvg-logo="https://gemgroup.tv/assets/images/channels/icon_17.png" group-title="Dizi / Film",GEM TV Plus
 https://ca-rt.onetv.app/gemtvplus/index-0.m3u8?token=onetv202
+#EXTINF:-1 tvg-logo="https://i.imgur.com/JMa7jws.png" group-title="Dizi / Film",Golden Premier
+http://200.229.147.210:9999/play/a00k/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/GBlvQBI.png" group-title="Dizi / Film",Golden Premier 2
+http://200.229.147.210:9999/play/a00l/index.m3u8
 #EXTINF:-1 tvg-id="GEM24B.tr@SD" tvg-logo="https://i.imgur.com/8LgdPst.png" group-title="Müzik",GEM 24B
 https://ca-rt.onetv.app/gem24b/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="GEMMifa.tr@SD" tvg-logo="https://i.imgur.com/qlI7o7V.png" group-title="Müzik",GEM Mifa
@@ -77,8 +89,12 @@ https://saran-live.ercdn.net/disneyjunior/index.m3u8
 https://ca-rt.onetv.app/gemjunior/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="GEMKids.tr@SD" tvg-logo="https://i.imgur.com/ArkjaFk.png" group-title="Çocuk",GEM Kids
 https://ca-rt.onetv.app/gemkids/index-0.m3u8?token=onetv202
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Çocuk",TRT Cocuk
+http://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTCocuk.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Çocuk",TRT Cocuk (1440p)
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/HHmc14i.png" group-title="Çocuk",TVS Pinball Network
+https://rpn.bozztv.com/gusa/gusa-TVSCartoonNetwork/index.m3u8
 #EXTINF:-1 tvg-id="GEMNature.tr@SD" tvg-logo="https://i.imgur.com/ENvOMDQ.png" group-title="Belgesel",GEM Nature
 https://ca-rt.onetv.app/gemnature/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="NationalGeographic.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Belgesel",National Geographic (1080p) [Geo-blocked]
