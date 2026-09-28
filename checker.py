@@ -5,6 +5,7 @@ import concurrent.futures
 import datetime as dt
 import json
 import re
+import time
 import unicodedata
 import urllib.parse
 import urllib.request
@@ -27,12 +28,17 @@ VALIDATION = ROOT / "validation.json"
 UA = "Mozilla/5.0 (EmirTV-M3U-Bot/2.0)"
 PLAYLIST_TIMEOUT = 20
 MAX_WORKERS = 24
+RETRY_WORKERS = 8
+UNKNOWN_RETRY_DELAY = 15
 
 CREDENTIAL_PATH_RE = re.compile(
-    r"/(?:live|iptv)/[^/]{3,}/[^/]{6,}/",
+    r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
     flags=re.I,
 )
-PRIVATE_QUERY_KEYS = {"username", "password", "passwd"}
+SENSITIVE_QUERY_KEYS = {
+    "token", "auth", "authorization", "password", "passwd", "username",
+    "user", "key", "sig", "signature", "jwt", "session", "hdnts", "hdnea",
+}
 
 CATEGORY_ORDER = [
     "Genel",
@@ -131,7 +137,7 @@ def safe_public_candidate(url: str) -> bool:
             keep_blank_values=True,
         )
     }
-    if query_keys & PRIVATE_QUERY_KEYS:
+    if query_keys & SENSITIVE_QUERY_KEYS:
         return False
 
     return True
@@ -292,6 +298,54 @@ def main():
                     "reason": type(e).__name__,
                 }
 
+    retry_urls = [
+        url
+        for _, url in candidates
+        if validation_results.get(
+            canonical(url),
+            {"status": "unknown"},
+        ).get("status") == "unknown"
+    ]
+    retry_recovered = 0
+
+    if retry_urls:
+        time.sleep(UNKNOWN_RETRY_DELAY)
+
+        with concurrent.futures.ThreadPoolExecutor(
+            max_workers=RETRY_WORKERS
+        ) as ex:
+            retry_map = {
+                ex.submit(validate_hls, url): url
+                for url in retry_urls
+            }
+            for fut in concurrent.futures.as_completed(retry_map):
+                url = retry_map[fut]
+                key = canonical(url)
+                first = validation_results.get(
+                    key,
+                    {"status": "unknown", "reason": "missing first result"},
+                )
+
+                try:
+                    second = fut.result()
+                except Exception as e:
+                    second = {
+                        "status": "unknown",
+                        "reason": type(e).__name__,
+                    }
+
+                merged = dict(second)
+                merged["retry_attempted"] = True
+                merged["first_reason"] = first.get("reason")
+
+                if (
+                    first.get("status") == "unknown"
+                    and merged.get("status") != "unknown"
+                ):
+                    retry_recovered += 1
+
+                validation_results[key] = merged
+
     buckets = {
         "verified": [],
         "restricted": [],
@@ -372,6 +426,10 @@ def main():
         "verified_entries": counts["verified"],
         "restricted_entries": counts["restricted"],
         "unknown_entries": counts["unknown"],
+        "unknown_retry_candidates": len(retry_urls),
+        "unknown_retry_recovered": retry_recovered,
+        "unknown_retry_delay_seconds": UNKNOWN_RETRY_DELAY,
+        "unknown_retry_workers": RETRY_WORKERS,
         "dead_entries": counts["dead"],
         "drm_entries": counts["drm"],
         "all_non_dead_non_drm_entries": len(all_candidates),
