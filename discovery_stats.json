@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-09-28T17:25:46.448388+00:00",
+  "updated_at_utc": "2026-09-28T17:32:34.741075+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-09-14T17:25:46.448388+00:00",
+  "cutoff_utc": "2026-09-14T17:32:34.741075+00:00",
   "repos_per_query": 50,
   "queries": [
     {
@@ -57,10 +57,10 @@
   ],
   "repos_scanned": 19,
   "stale_repos_skipped": 0,
-  "playlist_file_candidates": 26,
-  "fresh_files_scanned": 23,
-  "stale_files_skipped": 3,
-  "unique_m3u8_candidates": 3063,
+  "playlist_file_candidates": 12,
+  "fresh_files_scanned": 10,
+  "stale_files_skipped": 2,
+  "unique_m3u8_candidates": 184,
   "fresh_source_files": [
     {
       "repo": "GhostFelina/cortexia-tv-public",
@@ -69,99 +69,21 @@
       "entries_found": 125
     },
     {
-      "repo": "GhostFelina/cortexia-tv-public",
-      "path": "public/TV.m3u",
-      "last_commit": "2026-09-28T10:44:42Z",
-      "entries_found": 3015
-    },
-    {
-      "repo": "GhostFelina/cortexia-tv-public",
-      "path": "public/TV-ar.m3u",
-      "last_commit": "2026-09-28T10:44:42Z",
-      "entries_found": 338
-    },
-    {
-      "repo": "GhostFelina/cortexia-tv-public",
-      "path": "public/TV-es.m3u",
-      "last_commit": "2026-09-28T10:44:42Z",
-      "entries_found": 276
-    },
-    {
-      "repo": "GhostFelina/cortexia-tv-public",
-      "path": "public/TV-gb.m3u",
-      "last_commit": "2026-09-28T10:44:42Z",
-      "entries_found": 263
-    },
-    {
-      "repo": "GhostFelina/cortexia-tv-public",
-      "path": "public/TV-mx.m3u",
-      "last_commit": "2026-09-28T10:44:42Z",
-      "entries_found": 315
-    },
-    {
-      "repo": "GhostFelina/cortexia-tv-public",
-      "path": "public/TV-us.m3u",
-      "last_commit": "2026-09-28T10:44:42Z",
-      "entries_found": 1698
-    },
-    {
       "repo": "FeridunN12/ibo-iptv-playlist",
       "path": "combined.m3u",
       "last_commit": "2026-09-28T09:12:27Z",
-      "entries_found": 452
+      "entries_found": 147
     },
     {
       "repo": "FeridunN12/ibo-iptv-playlist",
       "path": "docs/combined.m3u",
       "last_commit": "2026-09-28T09:12:27Z",
-      "entries_found": 452
+      "entries_found": 147
     },
     {
       "repo": "K3rimoff/IPTV",
       "path": "Aze.m3u",
       "last_commit": "2026-09-27T04:00:35Z",
-      "entries_found": 0
-    },
-    {
-      "repo": "mlinder/tree-sitter-m3u",
-      "path": "examples/iptv.m3u",
-      "last_commit": "2026-09-25T09:12:21Z",
-      "entries_found": 3
-    },
-    {
-      "repo": "mlinder/tree-sitter-m3u",
-      "path": "examples/simple.m3u",
-      "last_commit": "2026-09-25T09:12:21Z",
-      "entries_found": 0
-    },
-    {
-      "repo": "mlinder/tree-sitter-m3u",
-      "path": "examples/extended.m3u",
-      "last_commit": "2026-09-25T09:12:21Z",
-      "entries_found": 0
-    },
-    {
-      "repo": "mlinder/tree-sitter-m3u",
-      "path": "examples/hls-media.m3u8",
-      "last_commit": "2026-09-25T09:12:21Z",
-      "entries_found": 0
-    },
-    {
-      "repo": "mlinder/tree-sitter-m3u",
-      "path": "test/corpus/playlists.txt",
-      "last_commit": "2026-09-25T09:12:21Z",
-      "entries_found": 2
-    },
-    {
-      "repo": "mlinder/tree-sitter-m3u",
-      "path": "examples/hls-all-tags.m3u8",
-      "last_commit": "2026-09-25T09:12:21Z",
-      "entries_found": 0
-    },
-    {
-      "repo": "mlinder/tree-sitter-m3u",
-      "path": "examples/hls-multivariant.m3u8",
-      "last_commit": "2026-09-25T09:12:21Z",
       "entries_found": 0
     },
     {

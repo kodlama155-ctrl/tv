@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-28T17:30:15.516930+00:00",
+  "updated_at_utc": "2026-09-28T17:33:44.585216+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -25,41 +25,41 @@
     {
       "url": "local:discovered.m3u",
       "status": "ok",
-      "entries": 3063
+      "entries": 184
     }
   ],
-  "raw_entries": 4029,
-  "discovered_entries": 3063,
-  "unique_entries": 3210,
-  "filtered_private_style_entries": 340,
-  "verified_entries": 2891,
-  "restricted_entries": 63,
-  "unknown_entries": 159,
-  "dead_entries": 95,
-  "drm_entries": 2,
-  "all_non_dead_non_drm_entries": 3113,
+  "raw_entries": 1150,
+  "discovered_entries": 184,
+  "unique_entries": 346,
+  "filtered_private_style_entries": 326,
+  "verified_entries": 175,
+  "restricted_entries": 54,
+  "unknown_entries": 81,
+  "dead_entries": 36,
+  "drm_entries": 0,
+  "all_non_dead_non_drm_entries": 310,
   "categories_verified": {
-    "Genel": 91,
-    "Haber": 171,
-    "Spor": 151,
-    "Eğlence": 1184,
-    "Dizi / Film": 554,
-    "Müzik": 65,
-    "Çocuk": 149,
-    "Belgesel": 192,
-    "Yerel": 3,
-    "Dini": 13,
-    "Eğitim": 5,
-    "Diğer": 313
+    "Genel": 49,
+    "Haber": 26,
+    "Spor": 4,
+    "Eğlence": 17,
+    "Dizi / Film": 4,
+    "Müzik": 15,
+    "Çocuk": 10,
+    "Belgesel": 2,
+    "Yerel": 0,
+    "Dini": 7,
+    "Eğitim": 3,
+    "Diğer": 38
   },
   "categories_restricted": {
-    "Genel": 3,
+    "Genel": 2,
     "Haber": 5,
     "Spor": 6,
-    "Eğlence": 9,
-    "Dizi / Film": 14,
+    "Eğlence": 6,
+    "Dizi / Film": 12,
     "Müzik": 4,
-    "Çocuk": 7,
+    "Çocuk": 4,
     "Belgesel": 4,
     "Yerel": 0,
     "Dini": 0,
@@ -67,17 +67,17 @@
     "Diğer": 11
   },
   "categories_unknown": {
-    "Genel": 19,
-    "Haber": 18,
-    "Spor": 10,
-    "Eğlence": 29,
-    "Dizi / Film": 24,
-    "Müzik": 8,
-    "Çocuk": 1,
-    "Belgesel": 11,
+    "Genel": 16,
+    "Haber": 8,
+    "Spor": 7,
+    "Eğlence": 7,
+    "Dizi / Film": 2,
+    "Müzik": 3,
+    "Çocuk": 0,
+    "Belgesel": 6,
     "Yerel": 0,
     "Dini": 3,
     "Eğitim": 5,
-    "Diğer": 31
+    "Diğer": 24
   }
 }
