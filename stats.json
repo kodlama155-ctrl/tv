@@ -1,5 +1,6 @@
 {
-  "updated_at_utc": "2026-09-28T16:40:36.032601+00:00",
+  "updated_at_utc": "2026-09-28T17:00:10.270482+00:00",
+  "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -30,25 +31,52 @@
   "raw_entries": 1437,
   "discovered_entries": 471,
   "unique_entries": 846,
-  "kept_entries": 799,
-  "categories": {
-    "Genel": 119,
-    "Haber": 90,
-    "Spor": 128,
-    "Eğlence": 29,
-    "Dizi / Film": 93,
-    "Müzik": 39,
-    "Çocuk": 29,
-    "Belgesel": 47,
+  "verified_entries": 209,
+  "restricted_entries": 387,
+  "unknown_entries": 187,
+  "dead_entries": 63,
+  "drm_entries": 0,
+  "all_non_dead_non_drm_entries": 783,
+  "categories_verified": {
+    "Genel": 60,
+    "Haber": 28,
+    "Spor": 4,
+    "Eğlence": 12,
+    "Dizi / Film": 4,
+    "Müzik": 15,
+    "Çocuk": 8,
+    "Belgesel": 2,
     "Yerel": 0,
-    "Dini": 10,
-    "Eğitim": 8,
-    "Diğer": 207
+    "Dini": 6,
+    "Eğitim": 3,
+    "Diğer": 67
   },
-  "probe": {
-    "ok": 238,
-    "restricted": 381,
-    "unknown": 180,
-    "dead": 47
+  "categories_restricted": {
+    "Genel": 41,
+    "Haber": 46,
+    "Spor": 114,
+    "Eğlence": 10,
+    "Dizi / Film": 82,
+    "Müzik": 18,
+    "Çocuk": 21,
+    "Belgesel": 33,
+    "Yerel": 0,
+    "Dini": 0,
+    "Eğitim": 0,
+    "Diğer": 22
+  },
+  "categories_unknown": {
+    "Genel": 18,
+    "Haber": 16,
+    "Spor": 9,
+    "Eğlence": 7,
+    "Dizi / Film": 2,
+    "Müzik": 6,
+    "Çocuk": 0,
+    "Belgesel": 8,
+    "Yerel": 0,
+    "Dini": 3,
+    "Eğitim": 5,
+    "Diğer": 113
   }
 }
