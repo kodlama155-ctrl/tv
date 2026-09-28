@@ -1,6 +1,6 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="ATV.tr@SD" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="Genel",ATV (Turkiye) (1080p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
+#EXTINF:-1 tvg-id="ATV.tr@SD" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="Genel",ATV (360p)
+http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8
 #EXTINF:-1 tvg-id="ATVAlanya.tr@SD" tvg-logo="https://i.imgur.com/bUwarR0.png" group-title="Genel",ATV Alanya (720p) [Not 24/7]
 http://stream2.taksimbilisim.com:1935/alanyatv/alanyatv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="BenguturkTV.tr@SD" tvg-logo="https://i.imgur.com/p3ON1oX.png" group-title="Genel",Benguturk TV (1080p)
@@ -329,8 +329,6 @@ https://zaplacanlitv.com/ebatv-lise/playlist.m3u8
 https://zaplacanlitv.com/ebatv-ortaokul/playlist.m3u8
 #EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TRT Spor2
 https://zaplacanlitv.com/trtspor2/playlist.m3u8
-#EXTINF:-1 tvg-id="TRTTurk.tr@SD" group-title="Diğer",TRT Turk
-https://viamotionhsi.netplus.ch/live/eds/trtturk/browser-HLS8/trtturk.m3u8
 #EXTINF:-1 tvg-id="TV100.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/0/0f/TV100_logo.png/960px-TV100_logo.png" group-title="Diğer",TV 100 (1080p)
 https://tv100-live.daioncdn.net/tv100/tv100.m3u8
 #EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Tv 360
