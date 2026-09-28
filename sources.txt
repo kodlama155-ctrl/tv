@@ -1,0 +1,5 @@
+# Her satıra bir açık M3U/M3U8 playlist URL'si.
+https://iptv-org.github.io/iptv/countries/tr.m3u
+https://iptv-org.github.io/iptv/languages/tur.m3u
+https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u
+https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u
