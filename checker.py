@@ -28,6 +28,12 @@ UA = "Mozilla/5.0 (EmirTV-M3U-Bot/2.0)"
 PLAYLIST_TIMEOUT = 20
 MAX_WORKERS = 24
 
+CREDENTIAL_PATH_RE = re.compile(
+    r"/(?:live|iptv)/[^/]{3,}/[^/]{6,}/",
+    flags=re.I,
+)
+PRIVATE_QUERY_KEYS = {"username", "password", "passwd"}
+
 CATEGORY_ORDER = [
     "Genel",
     "Haber",
@@ -104,6 +110,31 @@ def parse_playlist(text: str):
             out.append((meta or "#EXTINF:-1,Unknown", line))
             meta = None
     return out
+
+def safe_public_candidate(url: str) -> bool:
+    try:
+        p = urllib.parse.urlsplit(url)
+    except Exception:
+        return False
+
+    if p.scheme not in ("http", "https") or not p.hostname:
+        return False
+    if p.username or p.password:
+        return False
+    if CREDENTIAL_PATH_RE.search(p.path):
+        return False
+
+    query_keys = {
+        key.lower()
+        for key, _ in urllib.parse.parse_qsl(
+            p.query,
+            keep_blank_values=True,
+        )
+    }
+    if query_keys & PRIVATE_QUERY_KEYS:
+        return False
+
+    return True
 
 def canonical(url: str) -> str:
     p = urllib.parse.urlsplit(url)
@@ -233,8 +264,14 @@ def main():
             })
 
     unique = {}
+    filtered_private_style = 0
+
     for meta, url in entries:
+        if not safe_public_candidate(url):
+            filtered_private_style += 1
+            continue
         unique.setdefault(canonical(url), (meta, url))
+
     candidates = list(unique.values())
 
     validation_results = {}
@@ -331,6 +368,7 @@ def main():
         "raw_entries": len(entries),
         "discovered_entries": discovered_entries,
         "unique_entries": len(candidates),
+        "filtered_private_style_entries": filtered_private_style,
         "verified_entries": counts["verified"],
         "restricted_entries": counts["restricted"],
         "unknown_entries": counts["unknown"],
