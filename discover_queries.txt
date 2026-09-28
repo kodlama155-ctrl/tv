@@ -1,0 +1,7 @@
+# Public GitHub repository discovery queries.
+# Keep these focused on Turkish/Türkiye IPTV playlists.
+iptv turkey m3u
+turkey m3u8 playlist
+turkish iptv playlist
+turkiye iptv m3u
+tr iptv m3u
