@@ -1,8 +1,34 @@
 {
-  "updated_at_utc": null,
-  "sources": [],
-  "raw_entries": 0,
-  "unique_entries": 0,
-  "kept_entries": 0,
-  "probe": {"ok": 0, "restricted": 0, "unknown": 0, "dead": 0}
+  "updated_at_utc": "2026-09-28T16:24:02.677000+00:00",
+  "sources": [
+    {
+      "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "status": "ok",
+      "entries": 175
+    },
+    {
+      "url": "https://iptv-org.github.io/iptv/languages/tur.m3u",
+      "status": "ok",
+      "entries": 177
+    },
+    {
+      "url": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
+      "status": "ok",
+      "entries": 326
+    },
+    {
+      "url": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "status": "ok",
+      "entries": 288
+    }
+  ],
+  "raw_entries": 966,
+  "unique_entries": 662,
+  "kept_entries": 640,
+  "probe": {
+    "ok": 193,
+    "restricted": 375,
+    "unknown": 72,
+    "dead": 22
+  }
 }
