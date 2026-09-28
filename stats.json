@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-28T16:35:58.361411+00:00",
+  "updated_at_utc": "2026-09-28T16:40:36.032601+00:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -31,6 +31,20 @@
   "discovered_entries": 471,
   "unique_entries": 846,
   "kept_entries": 799,
+  "categories": {
+    "Genel": 119,
+    "Haber": 90,
+    "Spor": 128,
+    "Eğlence": 29,
+    "Dizi / Film": 93,
+    "Müzik": 39,
+    "Çocuk": 29,
+    "Belgesel": 47,
+    "Yerel": 0,
+    "Dini": 10,
+    "Eğitim": 8,
+    "Diğer": 207
+  },
   "probe": {
     "ok": 238,
     "restricted": 381,
