@@ -52,5 +52,6 @@ jobs:
             echo "No changes"
           else
             git commit -m "bot: validate HLS streams and update playlists"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
