@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SOURCES = ROOT / "sources.txt"
+DISCOVERED = ROOT / "discovered.m3u"
 OUTPUT = ROOT / "a.m3u"
 STATS = ROOT / "stats.json"
 
@@ -101,6 +102,16 @@ def main():
         except Exception as e:
             source_report.append({"url": src, "status": "error", "error": type(e).__name__})
 
+    discovered_entries = 0
+    if DISCOVERED.exists():
+        try:
+            parsed = parse_playlist(DISCOVERED.read_text(encoding="utf-8"))
+            discovered_entries = len(parsed)
+            entries.extend(parsed)
+            source_report.append({"url": "local:discovered.m3u", "status": "ok", "entries": discovered_entries})
+        except Exception as e:
+            source_report.append({"url": "local:discovered.m3u", "status": "error", "error": type(e).__name__})
+
     unique = {}
     for meta, url in entries:
         unique.setdefault(canonical(url), (meta, url))
@@ -134,6 +145,7 @@ def main():
         "updated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
         "sources": source_report,
         "raw_entries": len(entries),
+        "discovered_entries": discovered_entries,
         "unique_entries": len(candidates),
         "kept_entries": len(kept),
         "probe": counts,
