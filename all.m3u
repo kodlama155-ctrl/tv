@@ -201,6 +201,8 @@ https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
 http://live.arkumedia.com:1935/marmaratv/marmaratv/playlist.m3u8
 #EXTINF:-1 tvg-id="TGRTHaber.tr@SD" tvg-logo="https://i.imgur.com/PrxwKDw.png" group-title="Haber",TGRT Haber (360p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe4598be8e5d.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="TGRTHaber.tr@SD" tvg-logo="https://i.imgur.com/PrxwKDw.png" group-title="Haber",TGRT Haber (720p)
+https://canli.tgrthaber.com/tgrt.m3u8
 #EXTINF:-1 tvg-id="24TV.tr@SD" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="Haber",TR24 TV (720p) [Not 24/7]
 https://tv.ensonhaber.com/tv24/tv24.m3u8
 #EXTINF:-1 tvg-id="TRTArabi.tr@SD" tvg-logo="https://i.imgur.com/dEfI2M9.png" group-title="Haber",TRT Arabi (1080p) [Not 24/7]
@@ -215,8 +217,6 @@ https://dash2.antik.sk/live/test_trt_world_atktv/playlist.m3u8
 https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="ASpor.tr@SD" tvg-logo="https://i.imgur.com/ZhkZzLf.png" group-title="Spor",A Spor SD (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
-#EXTINF:-1 tvg-id="GEMFit.tr@SD" tvg-logo="https://i.imgur.com/7FQxaII.png" group-title="Spor",GEM Fit
-https://ca-rt.onetv.app/gemfit/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="GEMSport.tr@SD" tvg-logo="https://www.gemgroup.tv/assets/images/channels/icon_34.png" group-title="Spor",GEM Sport
 https://steep-wildflower-284d.nhhwkiszzzvcuojxdo.workers.dev/?url=https://gg.hls2.xyz/live/IR+-+GEM+Sport/chunks.m3u8
 #EXTINF:-1 tvg-id="HTSporTV.tr@SD" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="Spor",HTSpor TV (1080p)
@@ -257,16 +257,6 @@ https://canlitvulusal.xyz/live/eurostar/index.m3u8
 https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="FortunaTV.tr@SD" tvg-logo="https://i.imgur.com/ZbUSlOC.png" group-title="Eğlence",Fortuna TV (720p)
 https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="GEMComedy.tr@SD" tvg-logo="https://i.imgur.com/FuscfJW.png" group-title="Eğlence",GEM Comedy
-https://ca-rt.onetv.app/gemcomedy/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMEntertainment.tr@SD" tvg-logo="https://www.gemgroup.tv/assets/images/channels/icon_8.png" group-title="Eğlence",GEM Entertainment
-https://ca-rt.onetv.app/gementertainment/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMLife.tr@SD" tvg-logo="https://i.imgur.com/gI8qePa.png" group-title="Eğlence",GEM Life
-https://ca-rt.onetv.app/gemlife/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMRiver.tr@SD" tvg-logo="https://i.imgur.com/yJ6f1B6.png" group-title="Eğlence",GEM River
-https://ca-rt.onetv.app/gemriver/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMRiverPlus.tr@SD" tvg-logo="https://gemgroup.tv/assets/images/channels/icon_29.png" group-title="Eğlence",GEM River Plus
-https://ca-rt.onetv.app/gemriverplus/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="Kanal7.tr@SD" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Eğlence",Kanal 7 (1080p) [Not 24/7]
 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
 #EXTINF:-1 tvg-id="Kanal7.tr@SD" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Eğlence",Kanal 7 (720p)
@@ -309,32 +299,8 @@ http://turkmedya-live.ercdn.net/tv4/tv4.m3u8
 https://thema-vivekanald-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="CNBCe.tr@SD" tvg-logo="https://s.cnbce.com/dist/images/logo-nav.png" group-title="Dizi / Film",CNBC-e
 https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
-#EXTINF:-1 tvg-id="GEMBollywood.tr@SD" tvg-logo="https://i.imgur.com/2XASeBk.png" group-title="Dizi / Film",GEM Bollywood
-https://ca-rt.onetv.app/gembollywood/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMDrama.tr@SD" tvg-logo="https://i.imgur.com/k2pGyRH.png" group-title="Dizi / Film",GEM Drama
-https://ca-rt.onetv.app/gemdrama/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMDramaPlus.tr@SD" tvg-logo="https://gemgroup.tv/assets/images/channels/icon_7.png" group-title="Dizi / Film",GEM Drama Plus
-https://ca-rt.onetv.app/gemdramaplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMFilm.tr@SD" tvg-logo="https://i.imgur.com/nrFz3LU.png" group-title="Dizi / Film",GEM Film
-https://ca-rt.onetv.app/gemfilm/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMOnyx.tr@SD" tvg-logo="https://i.imgur.com/gXRIAw4.png" group-title="Dizi / Film",GEM Onyx
-https://ca-rt.onetv.app/gemonyx/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMPixel.tr@SD" tvg-logo="https://i.ibb.co/Q3tkbPrn/icon-27.png" group-title="Dizi / Film",GEM Pixel
-https://ca-rt.onetv.app/gempixel/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="GEMPixel.tr@SD" tvg-logo="https://i.ibb.co/Q3tkbPrn/icon-27.png" group-title="Dizi / Film",GEM Pixel
 https://glserver1.tamashaland.com/live/aBCH96886YznRbGOiqTnnQ__/stream_0.m3u8
-#EXTINF:-1 tvg-id="GEMRubix.tr@SD" tvg-logo="https://i.imgur.com/cDjOj58.png" group-title="Dizi / Film",GEM Rubix
-https://ca-rt.onetv.app/gemrubix/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMRubixPlus.tr@SD" tvg-logo="https://gemgroup.tv/assets/images/channels/icon_31.png" group-title="Dizi / Film",GEM Rubix Plus
-https://ca-rt.onetv.app/gemrubixplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMSeries.tr@SD" tvg-logo="https://i.imgur.com/M0WMDXm.png" group-title="Dizi / Film",GEM Series
-https://ca-rt.onetv.app/gemseries/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMSeriesPlus.tr@SD" tvg-logo="https://gemgroup.tv/assets/images/channels/icon_33.png" group-title="Dizi / Film",GEM Series Plus
-https://ca-rt.onetv.app/gemseriesplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMTV.tr@SD" tvg-logo="https://gemgroup.tv/assets/images/channels/icon_16.png" group-title="Dizi / Film",GEM TV
-https://ca-rt.onetv.app/gem/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMTVPlus.tr@SD" tvg-logo="https://gemgroup.tv/assets/images/channels/icon_17.png" group-title="Dizi / Film",GEM TV Plus
-https://ca-rt.onetv.app/gemtvplus/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="GrandCinema.tr@SD" tvg-logo="" group-title="Dizi / Film",Grand Cinema
 https://gcinemahls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="GZT.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/GZT_logo.svg/960px-GZT_logo.svg.png" group-title="Dizi / Film",GZT (1080p)
@@ -347,12 +313,6 @@ http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8
 https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
 #EXTINF:-1 tvg-id="FinestTV.de@SD" tvg-logo="https://i.imgur.com/1uoP10V.png" group-title="Müzik",Finest TV (288p) [Not 24/7]
 https://media.finest.tv/hls/live.m3u8
-#EXTINF:-1 tvg-id="GEM24B.tr@SD" tvg-logo="https://i.imgur.com/8LgdPst.png" group-title="Müzik",GEM 24B
-https://ca-rt.onetv.app/gem24b/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMMifa.tr@SD" tvg-logo="https://i.imgur.com/qlI7o7V.png" group-title="Müzik",GEM Mifa
-https://ca-rt.onetv.app/gemmifa/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMMifaPlus.tr@SD" tvg-logo="https://i.imgur.com/8FIAqR5.png" group-title="Müzik",GEM Mifa Plus
-https://ca-rt.onetv.app/gemmifaplus/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="KNMusicTV.az@SD" tvg-logo="https://www.knmusictv.com/wp-content/uploads/2026/01/LOGO2112.png" group-title="Müzik",KN Music TV
 https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="KralPopTV.tr@SD" tvg-logo="https://i.imgur.com/ch365lh.png" group-title="Müzik",Kral Pop TV (720p)
@@ -393,10 +353,6 @@ https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
 https://saran-live.ercdn.net/babytv/index.m3u8
 #EXTINF:-1 tvg-id="DisneyJr.tr@SD" tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png" group-title="Çocuk",Disney Jr. (Turkiye) (1080p) [Geo-blocked]
 https://saran-live.ercdn.net/disneyjunior/index.m3u8
-#EXTINF:-1 tvg-id="GEMJunior.tr@SD" tvg-logo="https://i.imgur.com/jK8yzj2.png" group-title="Çocuk",GEM Junior
-https://ca-rt.onetv.app/gemjunior/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMKids.tr@SD" tvg-logo="https://i.imgur.com/ArkjaFk.png" group-title="Çocuk",GEM Kids
-https://ca-rt.onetv.app/gemkids/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="MinikaCocuk.tr@SD" tvg-logo="https://i.imgur.com/VCywMTv.png" group-title="Çocuk",Minika Cocuk (576p)
 http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
 #EXTINF:-1 tvg-id="MinikaCocuk.tr@SD" tvg-logo="https://i.imgur.com/VCywMTv.png" group-title="Çocuk",Minika Cocuk (720p)
@@ -417,8 +373,6 @@ http://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="CGTNDocumentary.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/CGTN_Documentary_logo.png/960px-CGTN_Documentary_logo.png" group-title="Belgesel",CGTN Documentary
 https://mn-nl.mncdn.com/dogusdyg_drone/cgtn/playlist.m3u8
-#EXTINF:-1 tvg-id="GEMNature.tr@SD" tvg-logo="https://i.imgur.com/ENvOMDQ.png" group-title="Belgesel",GEM Nature
-https://ca-rt.onetv.app/gemnature/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="LoveNature.ca@SD" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="Belgesel",Love Nature (1080p)
 https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 #EXTINF:-1 tvg-id="LoveNature.ca@HD" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="Belgesel",Love Nature HD (1080p)
@@ -457,8 +411,6 @@ https://lbl.netmedya.net/hls/lalegultv.m3u8
 http://lalegultv.netmedya.net/hls/lalegultv.m3u8
 #EXTINF:-1 tvg-id="LalegulTV.tr@SD" tvg-logo="https://i.imgur.com/wwCysFs.png" group-title="Dini",Lalegül TV (720p) [Not 24/7]
 http://lalegultv.netmedya.net/lalegul-tv/lalegultv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="SercemTV.tr@HD" tvg-logo="https://sercemtv.com.tr/sercemlogo.jpg" group-title="Dini",Sercem TV (1080p)
-https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 #EXTINF:-1 tvg-id="CiftciTV.tr@SD" tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="Eğitim",Çiftçi TV (1080p) [Not 24/7]
 http://stream.taksimbilisim.com:1935/ciftcitv/smil:ciftcitv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CiftciTV.tr@SD" tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="Eğitim",Ciftci TV (720p) [Not 24/7]
@@ -505,10 +457,6 @@ https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8
 https://mn-nl.mncdn.com/blutv_flashtv/live.m3u8
 #EXTINF:-1 tvg-id="FX.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/960px-FX_International_logo.svg.png" group-title="Diğer",FX (1080p) [Geo-blocked]
 https://saran-live.ercdn.net/fx/index.m3u8
-#EXTINF:-1 tvg-id="GEMClassic.tr@SD" tvg-logo="https://i.imgur.com/25BhuOf.png" group-title="Diğer",GEM Classic
-https://ca-rt.onetv.app/gemclassic/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-id="GEMFood.tr@SD" tvg-logo="https://i.imgur.com/SMtSinK.png" group-title="Diğer",GEM Food
-https://ca-rt.onetv.app/gemfood/index-0.m3u8?token=onetv202
 #EXTINF:-1 tvg-id="IcelTV.tr@SD" tvg-logo="https://i.imgur.com/CGwImKv.png" group-title="Diğer",Icel TV (720p) [Not 24/7]
 http://stream.taksimbilisim.com:1935/iceltv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="IcelTV.tr@SD" tvg-logo="https://i.imgur.com/CGwImKv.png" group-title="Diğer",Icel TV (720p) [Not 24/7]
