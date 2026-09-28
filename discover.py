@@ -89,10 +89,16 @@ def parse_github_time(value: str | None):
 def likely_playlist_path(path: str) -> bool:
     low = path.lower()
 
-    if not low.endswith(PLAYLIST_EXTS):
-        return False
+    # Gerçek M3U/M3U8 dosyalarını adı ne olursa olsun değerlendir.
+    # combined.m3u gibi genel isimli ama güncel listeleri kaçırmayalım.
+    if low.endswith((".m3u", ".m3u8")):
+        return True
 
-    return any(h in low for h in PATH_HINTS)
+    # .txt dosyalarında ise IPTV/Türkiye ipucu şart olsun.
+    if low.endswith(".txt"):
+        return any(h in low for h in PATH_HINTS)
+
+    return False
 
 
 def turkey_priority(path: str):
