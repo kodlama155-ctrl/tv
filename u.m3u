@@ -1,6 +1,6 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="ATV.tr@SD" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="Genel",ATV (360p)
-http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8
+#EXTINF:-1 tvg-id="ATV.tr@SD" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="Genel",ATV (Turkiye) (1080p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-id="ATVAlanya.tr@SD" tvg-logo="https://i.imgur.com/bUwarR0.png" group-title="Genel",ATV Alanya (720p) [Not 24/7]
 http://stream2.taksimbilisim.com:1935/alanyatv/alanyatv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="BenguturkTV.tr@SD" tvg-logo="https://i.imgur.com/p3ON1oX.png" group-title="Genel",Benguturk TV (1080p)
@@ -13,8 +13,6 @@ https://cdn-cekmekoybeltv.yayin.com.tr/cekmekoybeltv/cekmekoybeltv_1080p/playlis
 https://59cba4d34b678.streamlock.net/canlitv/hunattv/playlist.m3u8
 #EXTINF:-1 tvg-id="IBBTV.tr@SD" tvg-logo="https://i.imgur.com/aXxAz84.png" group-title="Genel",IBB TV (1080p) [Not 24/7]
 https://npserver1.ibb.gov.tr/webtv/webtv_wowza1/playlist.m3u8
-#EXTINF:-1 tvg-id="IctimaiTV.az@SD" tvg-logo="https://i.imgur.com/HzY4VMo.png" group-title="Genel",Ictimai TV
-https://live.itv.az/itv.m3u8
 #EXTINF:-1 tvg-id="Kanal3.tr@SD" tvg-logo="https://i.imgur.com/eXErSv0.png" group-title="Genel",Kanal 3 (1080p) [Not 24/7]
 https://waw2.artiyerelmedya.net/kanal3/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="Kanal3.tr@SD" tvg-logo="https://i.imgur.com/eXErSv0.png" group-title="Genel",Kanal 3 (720p) [Not 24/7]
@@ -33,14 +31,10 @@ http://51.15.2.151/hls/kanalavrupa.m3u8
 http://212.174.58.161/hls-live/livepkgr/_definst_/liveevent/kanalb.m3u8
 #EXTINF:-1 tvg-id="TGRTEurope.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/TGRT_EU.png/960px-TGRT_EU.png" group-title="Genel",TGRT Europe (576p)
 https://tv.ensonhaber.com/tv/tr/tgrteu/index.m3u8
-#EXTINF:-1 tvg-id="UlusalKanal.tr@SD" group-title="Genel",Ulusal Kanal (720p)
-https://stream.guventechnology.com:19360/ulusaltv/ulusaltv.m3u8
 #EXTINF:-1 tvg-id="ATurk.tr@SD" tvg-logo="https://i.imgur.com/je5wQ3G.png" group-title="Haber",A Türk Izmir (360p)
 https://vdo.digitalbox.xyz:3807/stream/play.m3u8
 #EXTINF:-1 tvg-id="AkitTV.tr@SD" tvg-logo="https://i.imgur.com/oGto929.png" group-title="Haber",Akit TV (720p)
 https://akittv-live.ercdn.net/akittv/akittv.m3u8
-#EXTINF:-1 tvg-id="AnewZTV.az@SD" tvg-logo="https://i.imgur.com/Lwgdbuu.png" group-title="Haber",AnewZ
-https://53be5ef2d13aa.streamlock.net/cubesanewz-secure/smil:cubesanewz-secure-web.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="ASTV.tr@SD" tvg-logo="https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png" group-title="Haber",Bursa AS TV (720p) [Geo-blocked]
 https://waw2.artiyerelmedya.net/astv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="CanTV.tr@SD" tvg-logo="https://i.imgur.com/oIMtuwB.png" group-title="Haber",Can TV (720p)
@@ -51,24 +45,12 @@ https://livetv.canbroadcast.com:7443/canlican/tv.m3u8
 https://live.example.com/news/index.m3u8
 #EXTINF:-1 tvg-id="weather.example" tvg-name="Example Weather" tvg-country="SE" tvg-language="Swedish" group-title="Haber",Example Weather
 https://live.example.com/weather/index.m3u8
-#EXTINF:-1 tvg-id="HaberGlobal.tr@SD" group-title="Haber",Haber Global
-https://haberglobaldvr.blutv.com/blutv_haberglobal_dvr/live.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Haber",Haber Global
-https://zaplacanlitv.com/haberglobal/playlist.m3u8
 #EXTINF:-1 tvg-id="24TV.tr@SD" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="Haber" user-agent="Mozilla/5.0 Macintosh; Intel Mac OS X 10_14_5 AppleWebKit/537.36 KHTML,like Gecko Chrome/76.0.3809.25 Safari/537.36",24 TV (1080p)
 https://mn-nl.mncdn.com/kanal24/smil:kanal24.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="OnMedyaTV.tr@SD" tvg-logo="https://i.imgur.com/thvk3Py.png" group-title="Haber",ON Medya Haber (720p) [Geo-blocked]
 http://live.arkumedia.com:1935/marmaratv/marmaratv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Haber",Tgrt Haber
-https://zaplacanlitv.com/tgrt-haber/playlist.m3u8
 #EXTINF:-1 tvg-id="TGRTHaber.tr@SD" tvg-logo="https://i.imgur.com/PrxwKDw.png" group-title="Haber",TGRT Haber (360p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe4598be8e5d.smil/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Haber",TRT Haber
-https://zaplacanlitv.com/trt-haber/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Haber",Türk Haber TV
-https://zaplacanlitv.com/turk-haber-tv/playlist.m3u8
-#EXTINF:-1 tvg-id="CBCSport.az@HD" tvg-logo="https://i.imgur.com/3mEdjuq.png" group-title="Spor",CBC Sport HD [Geo-blocked]
-https://mn-nl.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8
 #EXTINF:-1 tvg-id="SSport.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="Spor",S Sport
 https://bcovlive-a.akamaihd.net/540fcb034b144b848e7ff887f61a293a/eu-central-1/6415845530001/profile_0/chunklist.m3u8
 #EXTINF:-1 tvg-id="SSport.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="Spor",S Sport (720p)
@@ -81,8 +63,6 @@ https://corestream.siteyaptim.live/s-sport2/index.m3u8
 https://live.sportstv.com.tr/hls/low/sportstv.m3u8
 #EXTINF:-1 tvg-id="TabiiSpor6.tr@SD" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w300/43020.jpeg" group-title="Spor",Tabii Spor 6 (720p) [Geo-blocked]
 https://vbtob9hyq58eiophct5qctxr2.medya.trt.com.tr/master.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Spor",TRT Spor
-https://zaplacanlitv.com/trtspor/playlist.m3u8
 #EXTINF:-1 tvg-id="TRTSpor.tr@SD" tvg-logo="https://i.imgur.com/6tv0zxh.png" group-title="Spor",TRT Spor (720p)
 https://corestream.siteyaptim.live/trt-spor/index.m3u8
 #EXTINF:-1 tvg-id="EuroStar.tr@SD" tvg-logo="https://i.imgur.com/kb165Ot.png" group-title="Eğlence",EuroStar TV (1080p)
@@ -95,8 +75,6 @@ http://8.243.126.131:8000/play/a0mn/index.m3u8
 https://sosyoapp-live.cdnnew.com/sosyo/buraya-bir-isim-verin.m3u8
 #EXTINF:-1 tvg-id="NOWTV.tr@SD" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="Eğlence",NOW TV
 http://116.202.238.88/FOXTV_TR/index.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Eğlence",Show Tv
-https://zaplacanlitv.com/show-tv/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalDDrama.tr@SD" tvg-logo="https://i.imgur.com/WIeZMKT.png" group-title="Eğlence",Vive Kanal D Drama (1080p)
 https://thema-vivekanald-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MovieSmartTurk.tr@SD" tvg-logo="https://i.imgur.com/DWN9ulT.png" group-title="Dizi / Film",MovieSmart Turk (576p)
@@ -111,22 +89,14 @@ https://media.finest.tv/hls/live.m3u8
 https://mn-nl.mncdn.com/blutv_nr1turk2/live.m3u8
 #EXTINF:-1 tvg-id="Number1TV.tr@SD" tvg-logo="https://i.imgur.com/02cDIBi.png" group-title="Müzik",Number 1 TV (720p)
 https://mn-nl.mncdn.com/blutv_nr12/live.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Müzik",Plus Music TV
-https://zaplacanlitv.com/plus-music-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Müzik",TRT Müzik Tv
-https://zaplacanlitv.com/trtmuzik/playlist.m3u8
 #EXTINF:-1 tvg-id="CGTNDocumentary.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/CGTN_Documentary_logo.png/960px-CGTN_Documentary_logo.png" group-title="Belgesel",CGTN Documentary
 https://mn-nl.mncdn.com/dogusdyg_drone/cgtn/playlist.m3u8
 #EXTINF:-1 tvg-id="TarihTV.tr@SD" tvg-logo="https://i.imgur.com/HbIGZUt.png" group-title="Belgesel",Tarih TV
 https://tv1.arectv30.sbs/live/tarihtv.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Belgesel",TGRT Belgesel
-https://zaplacanlitv.com/tgrtbelgesel/playlist.m3u8
 #EXTINF:-1 tvg-id="TGRTBelgesel.tr@SD" tvg-logo="https://i.imgur.com/VwWTnf0.png" group-title="Belgesel",TGRT Belgesel (576p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TGRTBelgesel.tr@SD" tvg-logo="https://i.imgur.com/VwWTnf0.png" group-title="Belgesel",TGRT Belgesel TV (576p)
 https://tv.ensonhaber.com/tv/tr/tgrtbelgesel/index.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Belgesel",TRT Belgesel
-https://zaplacanlitv.com/trtbelgesel/playlist.m3u8
 #EXTINF:-1 tvg-id="TRTBelgesel.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Belgesel_logo_%282019-%29.svg/960px-TRT_Belgesel_logo_%282019-%29.svg.png" group-title="Belgesel",TRT Belgesel (1080p)
 http://hls127.freeott.top:8080/TRT_BELGESEL_TR/video.m3u8
 #EXTINF:-1 tvg-id="ViasatExplore.tr@SD" tvg-logo="https://i.imgur.com/DyT5pKB.png" group-title="Belgesel",Viasat Explore
@@ -147,196 +117,38 @@ https://tv-e-okul02.medya.trt.com.tr/master.m3u8
 https://vdo.digitalbox.xyz:3986/live/unitvlive.m3u8
 #EXTINF:-1 tvg-id="WomanTV.tr@SD" tvg-logo="https://i.imgur.com/f2zGoV3.png" group-title="Eğitim",Woman TV (1080p)
 https://embedlp.becdn.net/womantv.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",24 TV
-https://zaplacanlitv.com/24tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Ada TV
-https://zaplacanlitv.com/adatv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Afyon Türk TV
-https://zaplacanlitv.com/afyon-turk-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Akit Tv
-https://zaplacanlitv.com/akittv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",AL Zahra TV Azerbaycan
-https://zaplacanlitv.com/al-zahra-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Alanya ATV
-https://zaplacanlitv.com/alanya-atv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Alanya Postası Web TV
-https://zaplacanlitv.com/alanya-postasi-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Anadolu RTV
-https://zaplacanlitv.com/anadolu-rtv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Arabesk TV
-https://zaplacanlitv.com/arabesk-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",ARB 24 TV Azerbaycan
-https://zaplacanlitv.com/arb24-tv-az/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",ARB TV Azerbaycan
-https://zaplacanlitv.com/arb-tv-az/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",ART Amasya TV
-https://zaplacanlitv.com/art-amasya-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Artvin Medya TV
-https://zaplacanlitv.com/artvin-medya-tv/playlist.m3u8
-#EXTINF:-1 tvg-id="ATV.tr@SD" group-title="Diğer",ATV
-http://116.202.238.88/ATV_TR/index.m3u8
 #EXTINF:-1 tvg-id="ATVAvrupa.tr@SD" tvg-logo="https://i.tmgrup.com.tr/aav/site/v1/i/atv-avrupa-logo.png" group-title="Diğer",ATV Avrupa (576p)
 https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",AV TV
-https://zaplacanlitv.com/avtv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Bakü TV Azerbaycan
-https://zaplacanlitv.com/baku-tv-az/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Bartın TV
-https://zaplacanlitv.com/bartin-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Bengütürk Tv
-https://zaplacanlitv.com/benguturktv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Beyaz Tv
-https://zaplacanlitv.com/beyaz-tv/playlist.m3u8
 #EXTINF:-1 tvg-id="BeyazTV.tr@SD" tvg-logo="https://i.imgur.com/uykIdML.png" group-title="Diğer",Beyaz TV (720p) [Not 24/7]
 https://mn-nl.mncdn.com/blutv_beyaztv2/live.m3u8
 #EXTINF:-1 tvg-id="BizimevTV.tr@SD" tvg-logo="https://i.imgur.com/eJa6sFY.png" group-title="Diğer",Bizimev TV (720p)
 https://mn-nl.mncdn.com/blutv_bizimev/bizimev_sd.smil/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Bloomberg HT
-https://zaplacanlitv.com/bloomberght/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Bursa AS TV
-https://zaplacanlitv.com/astv/playlist.m3u8
 #EXTINF:-1 tvg-id="BursaTV.tr@SD" tvg-logo="https://i.imgur.com/9cl1MR8.png" group-title="Diğer",Bursa TV (720p) [Not 24/7]
 https://cdn-bursatv.yayin.com.tr/bursatv/bursatv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Büyük Alanya TV
-https://zaplacanlitv.com/buyuk-alanya-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Cine5 TV
-https://zaplacanlitv.com/cine5tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Dalga TV Azerbaycan
-https://zaplacanlitv.com/dalgatv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Deniz Postası TV
-https://zaplacanlitv.com/deniz-postasi-tv/playlist.m3u8
-#EXTINF:-1 tvg-id="Dersim62TV.tr@SD" group-title="Diğer",Dersim62 TV (720p)
-http://live.arkumedia.com:1935/dersim62tv/dersim62tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Dim TV Antalya
-https://zaplacanlitv.com/dim-tv-antalya/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Dmax
-https://zaplacanlitv.com/dmax/playlist.m3u8
-#EXTINF:-1 tvg-id="EdessaTV.tr@SD" group-title="Diğer",Edessa TV (720p)
-https://tv.digitalbox.xyz:19360/edessatv/edessatv.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",ER TV
-https://zaplacanlitv.com/ertv/playlist.m3u8
-#EXTINF:-1 tvg-id="EuroD.tr@SD" group-title="Diğer",Euro D (1080p)
-https://viamotionhsi.netplus.ch/live/eds/eurod/browser-HLS8/eurod.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Euro Star
-https://zaplacanlitv.com/eurostar/playlist.m3u8
 #EXTINF:-1 tvg-id="FlashTV.tr@SD" tvg-logo="https://i.imgur.com/L0NHKBM.png" group-title="Diğer",Flash TV (720p)
 https://mn-nl.mncdn.com/blutv_flashtv/live.m3u8
-#EXTINF:-1 tvg-id="GEM24B.tr@SD" group-title="Diğer",GEM 24B (1080p)
-http://66.102.120.18:8000/play/a044/index.m3u8
-#EXTINF:-1 tvg-id="GEMTVPlus.tr@SD" group-title="Diğer",GEM TV + (1080p)
-http://66.102.120.18:8000/play/a045/index.m3u8
-#EXTINF:-1 tvg-id="GZT.tr@SD" group-title="Diğer",GZT (1080p)
-https://mn-nl.mncdn.com/gzttv/gzttv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Habertürk Tv
-https://zaplacanlitv.com/haberturktv/playlist.m3u8
-#EXTINF:-1 tvg-id="IBBTV.tr@SD" group-title="Diğer",IBB TV (1080p)
-http://wowza.istweb.tv:1935/webtv/webtv_wowza1/playlist.m3u8
 #EXTINF:-1 tvg-id="IcelTV.tr@SD" tvg-logo="https://i.imgur.com/CGwImKv.png" group-title="Diğer",Icel TV (720p) [Not 24/7]
 http://stream.taksimbilisim.com:1935/iceltv/bant1/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kanal 26
-https://zaplacanlitv.com/kanal26/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kanal 34
-https://zaplacanlitv.com/kanal-34/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kanal 68
-https://zaplacanlitv.com/kanal68/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kanal 7
-https://zaplacanlitv.com/kanal7/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kanal 7 Avrupa
-https://zaplacanlitv.com/kanal7-avrupa/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kanal A Alanya
-https://zaplacanlitv.com/kanal-a-alanya/playlist.m3u8
-#EXTINF:-1 tvg-id="" group-title="Diğer",Kanal Antalya (720p)
-https://cdn-kanaltvo.yayin.com.tr/kanaltvo/kanaltvo/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kanal T
-https://zaplacanlitv.com/kanalt/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kanal V
-https://zaplacanlitv.com/kanal-v/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kepez TV Azerbaycan
-https://zaplacanlitv.com/kepeztv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kıbrıs Güneş Tv
-https://zaplacanlitv.com/kibris-gunes-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kon Tv HD
-https://zaplacanlitv.com/kon-tv-hd/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Köy TV
-https://zaplacanlitv.com/koy-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Kral Tv
-https://zaplacanlitv.com/kraltv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Lalegül TV
-https://zaplacanlitv.com/lalegultv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Lider Tv Azerbaycan
-https://zaplacanlitv.com/lidertv/playlist.m3u8
 #EXTINF:-1 tvg-id="PowerTurkTV.tr@SD" tvg-logo="https://i.imgur.com/9OPoXQG.png" group-title="Diğer" user-agent="Mozilla/5.0 Macintosh; Intel Mac OS X 10_14_5 AppleWebKit/537.36 KHTML,like Gecko Chrome/76.0.3809.25 Safari/537.36",Power Turk (720p) [Not 24/7]
 https://mn-nl.mncdn.com/blutv_powerturk/smil:powerturk_sd.smil/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Manisa TV
-https://zaplacanlitv.com/manisa-tv/playlist.m3u8
 #EXTINF:-1 group-title="Diğer",MC TV (720p)
 https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&output=playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Mersin Sun RTV
-https://zaplacanlitv.com/sun-rtv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Milyon TV
-https://zaplacanlitv.com/milyon-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Muz TV Azerbaycan
-https://zaplacanlitv.com/muztv/playlist.m3u8
 #EXTINF:-1 tvg-id="NaturalTV.tr@SD" tvg-logo="https://i.imgur.com/rfcJ674.png" group-title="Diğer",Natural TV (720p) [Not 24/7]
 http://broadcasttr.com:1935/naturaltv/bant1/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Naxçıvan TV Azerbaycan
-https://zaplacanlitv.com/nahcivan-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",NTV
-https://zaplacanlitv.com/ntv/playlist.m3u8
-#EXTINF:-1 tvg-id="Number1Dance.tr@SD" group-title="Diğer",Number 1 Dance (480p)
-http://wms.brtk.net:1935/live/brt1/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Pamukkale TV
-https://zaplacanlitv.com/pamukkaletv/playlist.m3u8
-#EXTINF:-1 tvg-id="PamukkaleTV.tr@SD" group-title="Diğer",Pamukkale TV (614p)
-http://ms1.sanlisoy.com:1935/pamukkaletv/pamukkaletv/playlist.m3u8
 #EXTINF:-1 tvg-id="PowerTurkTV.tr@SD" tvg-logo="https://i.imgur.com/9OPoXQG.png" group-title="Diğer",PowerTurk TV
 https://powerturk.blutv.com/blutv_powerturk/powerturk_sd.smil/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Qebele TV Azerbaycan
-https://zaplacanlitv.com/qebeletv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Refahiye TV
-https://zaplacanlitv.com/refahiyetv/playlist.m3u8
 #EXTINF:-1 tvg-id="RTGTV.ru@SD" tvg-logo="https://i.imgur.com/ZMKPAho.png" group-title="Diğer",RTG TV (720p)
 http://31.148.48.15/RTG_HD/index.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Star Tv
-https://zaplacanlitv.com/star-tv/playlist.m3u8
 #EXTINF:-1 tvg-id="SunRTV.tr@SD" tvg-logo="https://i.imgur.com/64tph9N.png" group-title="Diğer",Sun RTV (720p) [Not 24/7]
 https://tr.socialsmart.tv/suntv/bant1/chunks.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Tatlıses TV
-https://zaplacanlitv.com/tatlises-tv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Tay Tv
-https://zaplacanlitv.com/taytv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TGRT EU
-https://zaplacanlitv.com/tgrteu/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TLC Tv
-https://zaplacanlitv.com/tlctv/playlist.m3u8
 #EXTINF:-1 tvg-id="ToprakTV.tr@SD" tvg-logo="https://i.imgur.com/JGnS0qs.png" group-title="Diğer",Toprak TV (720p) [Not 24/7]
 https://59cba4d34b678.streamlock.net/canlitv/topraktv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Torba TV
-https://zaplacanlitv.com/torbatv/playlist.m3u8
-#EXTINF:-1 tvg-id="" group-title="Diğer",Torba TV (720p) [Not 24/7]
-https://59cba4d34b678.streamlock.net/canlitv/torbatv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TRT 1
-https://zaplacanlitv.com/trt1/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TRT 2
-https://zaplacanlitv.com/trt2/playlist.m3u8
 #EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Diğer",TRT 3 (720p)
 https://tv-trt3.live.trt.com.tr/master.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TRT EBA TV İlkokul
-https://zaplacanlitv.com/ebatv-ilkokul/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TRT EBA Tv Lise
-https://zaplacanlitv.com/ebatv-lise/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TRT Eba TV Ortaokul
-https://zaplacanlitv.com/ebatv-ortaokul/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TRT Spor2
-https://zaplacanlitv.com/trtspor2/playlist.m3u8
 #EXTINF:-1 tvg-id="TV100.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/0/0f/TV100_logo.png/960px-TV100_logo.png" group-title="Diğer",TV 100 (1080p)
 https://tv100-live.daioncdn.net/tv100/tv100.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Tv 360
-https://zaplacanlitv.com/tv360/playlist.m3u8
 #EXTINF:-1 tvg-id="TV38.tr@SD" tvg-logo="https://i.imgur.com/KDBXLqn.png" group-title="Diğer",TV 38 (360p) [Not 24/7]
 https://59cba4d34b678.streamlock.net/live/tv38/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TV 41
-https://zaplacanlitv.com/tv41/playlist.m3u8
 #EXTINF:-1 tvg-id="TV41.tr@SD" tvg-logo="https://i.imgur.com/6T472LM.png" group-title="Diğer",TV 41 (720p) [Not 24/7]
 http://stream.taksimbilisim.com:1935/tv41/bant1/TV41.m3u8
 #EXTINF:-1 tvg-id="TV41.tr@SD" tvg-logo="https://i.imgur.com/6T472LM.png" group-title="Diğer",TV 41 (720p) [Not 24/7]
@@ -347,27 +159,9 @@ http://stream.taksimbilisim.com:1935/tv41/smil:tv41.smil/playlist.m3u8
 https://canli.tv42.com.tr/memfs/d936e417-c4bd-4d42-89a2-02f289892d1d.m3u8
 #EXTINF:-1 tvg-id="TV52.tr@SD" tvg-logo="https://i.imgur.com/k4R5CzO.png" group-title="Diğer",TV 52 (720p) [Not 24/7]
 http://stream.taksimbilisim.com:1935/tv52/smil:tv52.smil/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TV5
-https://zaplacanlitv.com/tv5/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",TvA Adana
-https://zaplacanlitv.com/tva-adana/playlist.m3u8
-#EXTINF:-1 tvg-id="TVNET.tr@SD" group-title="Diğer",TVnet (720p)
-https://mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8
 #EXTINF:-1 tvg-id="TYTTurk.tr@SD" tvg-logo="https://tytturk.com/upload/tyt-logo.png" group-title="Diğer",TYT Turk
 https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Uçankuş Tv
-https://zaplacanlitv.com/ucankustv/playlist.m3u8
-#EXTINF:-1 tvg-id="UcanKusTV.tr@SD" group-title="Diğer",UçanKuş TV (720p)
-https://ucankus-live.cdnnew.com/ucankus/ucankus.m3u8
 #EXTINF:-1 tvg-id="UlkeTV.tr@SD" tvg-logo="https://i.imgur.com/wdWR7Qk.png" group-title="Diğer",Ülke TV (720p)
 https://mn-nl.mncdn.com/blutv_ulketv2/live.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Ümid TV Azerbaycan
-https://zaplacanlitv.com/umid-tv-az/playlist.m3u8
 #EXTINF:-1 tvg-id="VTV.tr@SD" tvg-logo="https://www.vtv.net.tr/uploads/logo/sitelogo_4.jpg" group-title="Diğer" referrer="https://www.vtv.net.tr/",V TV (720p)
 https://serdar.tiviplayer.com/player/m3u8/65aae71c9b93f0965aaed3a92660d98b/65aae71c9b93f0965aaed3a92660d98b.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Yaban TV
-https://zaplacanlitv.com/yabantv/playlist.m3u8
-#EXTINF:0 tvg-id="Zapla TV" tvg-name="zaplacanlitv.com" group-title="Diğer",Yol TV
-https://zaplacanlitv.com/yoltv/playlist.m3u8
-#EXTINF:-1 tvg-id="YOLTV.de@SD" group-title="Diğer",Yol TV (720p)
-https://stream.yol.tv:9443/medialive/yol.m3u8

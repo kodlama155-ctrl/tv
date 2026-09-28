@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-28T17:02:29.657392+00:00",
+  "updated_at_utc": "2026-09-28T17:24:33.460753+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -25,38 +25,38 @@
     {
       "url": "local:discovered.m3u",
       "status": "ok",
-      "entries": 471
+      "entries": 134
     }
   ],
-  "raw_entries": 1437,
-  "discovered_entries": 471,
-  "unique_entries": 519,
-  "filtered_private_style_entries": 327,
-  "verified_entries": 209,
-  "restricted_entries": 61,
-  "unknown_entries": 186,
-  "dead_entries": 63,
+  "raw_entries": 1100,
+  "discovered_entries": 134,
+  "unique_entries": 341,
+  "filtered_private_style_entries": 326,
+  "verified_entries": 167,
+  "restricted_entries": 55,
+  "unknown_entries": 83,
+  "dead_entries": 36,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 456,
+  "all_non_dead_non_drm_entries": 305,
   "categories_verified": {
-    "Genel": 60,
-    "Haber": 27,
-    "Spor": 4,
+    "Genel": 50,
+    "Haber": 25,
+    "Spor": 3,
     "Eğlence": 12,
     "Dizi / Film": 4,
     "Müzik": 15,
-    "Çocuk": 8,
+    "Çocuk": 7,
     "Belgesel": 2,
     "Yerel": 0,
     "Dini": 7,
     "Eğitim": 3,
-    "Diğer": 67
+    "Diğer": 39
   },
   "categories_restricted": {
     "Genel": 2,
-    "Haber": 6,
+    "Haber": 5,
     "Spor": 6,
-    "Eğlence": 7,
+    "Eğlence": 6,
     "Dizi / Film": 12,
     "Müzik": 4,
     "Çocuk": 5,
@@ -64,20 +64,20 @@
     "Yerel": 0,
     "Dini": 0,
     "Eğitim": 0,
-    "Diğer": 15
+    "Diğer": 11
   },
   "categories_unknown": {
-    "Genel": 18,
-    "Haber": 16,
-    "Spor": 9,
-    "Eğlence": 7,
+    "Genel": 16,
+    "Haber": 10,
+    "Spor": 7,
+    "Eğlence": 6,
     "Dizi / Film": 2,
-    "Müzik": 6,
+    "Müzik": 4,
     "Çocuk": 0,
-    "Belgesel": 8,
+    "Belgesel": 6,
     "Yerel": 0,
     "Dini": 3,
     "Eğitim": 5,
-    "Diğer": 112
+    "Diğer": 24
   }
 }

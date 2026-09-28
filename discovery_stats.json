@@ -1,29 +1,72 @@
 {
-  "updated_at_utc": "2026-09-28T17:01:37.154745+00:00",
+  "updated_at_utc": "2026-09-28T17:23:33.307616+00:00",
+  "max_file_age_days": 14,
+  "cutoff_utc": "2026-09-14T17:23:33.307616+00:00",
+  "repos_per_query": 50,
   "queries": [
     {
       "query": "iptv turkey m3u",
-      "repos": 5
+      "github_query": "iptv turkey m3u pushed:>=2026-09-14",
+      "repos_returned": 0
     },
     {
       "query": "turkey m3u8 playlist",
-      "repos": 0
+      "github_query": "turkey m3u8 playlist pushed:>=2026-09-14",
+      "repos_returned": 0
     },
     {
       "query": "turkish iptv playlist",
-      "repos": 4
+      "github_query": "turkish iptv playlist pushed:>=2026-09-14",
+      "repos_returned": 1
     },
     {
       "query": "turkiye iptv m3u",
-      "repos": 6
+      "github_query": "turkiye iptv m3u pushed:>=2026-09-14",
+      "repos_returned": 2
     },
     {
       "query": "tr iptv m3u",
-      "repos": 8
+      "github_query": "tr iptv m3u pushed:>=2026-09-14",
+      "repos_returned": 4
     }
   ],
-  "repos_scanned": 21,
-  "files_scanned": 12,
-  "unique_m3u8_candidates": 471,
-  "errors": 3
+  "repos_scanned": 7,
+  "stale_repos_skipped": 0,
+  "playlist_file_candidates": 7,
+  "fresh_files_scanned": 5,
+  "stale_files_skipped": 2,
+  "unique_m3u8_candidates": 134,
+  "fresh_source_files": [
+    {
+      "repo": "mlinder/tree-sitter-m3u",
+      "path": "examples/iptv.m3u",
+      "last_commit": "2026-09-25T09:12:21Z",
+      "entries_found": 3
+    },
+    {
+      "repo": "mlinder/tree-sitter-m3u",
+      "path": "test/corpus/playlists.txt",
+      "last_commit": "2026-09-25T09:12:21Z",
+      "entries_found": 2
+    },
+    {
+      "repo": "akifdepoozel-crypto/car-tv-turkiye",
+      "path": "CAR_TV_Turkiye_Tum_130_Calisan_Final.m3u",
+      "last_commit": "2026-09-22T09:53:02Z",
+      "entries_found": 130
+    },
+    {
+      "repo": "omerdenizhan/IPTV-M3U",
+      "path": "m3u/turkiye-sports.m3u",
+      "last_commit": "2026-09-14T19:23:40Z",
+      "entries_found": 0
+    },
+    {
+      "repo": "omerdenizhan/IPTV-M3U",
+      "path": "m3u/turkiye.m3u",
+      "last_commit": "2026-09-14T18:18:04Z",
+      "entries_found": 0
+    }
+  ],
+  "errors": 0
 }
