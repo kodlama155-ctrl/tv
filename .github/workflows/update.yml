@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "checker.py"
+      - "hls_validator.py"
       - "discover.py"
       - "discover_queries.txt"
       - "sources.txt"
@@ -22,7 +23,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,17 +39,18 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: python discover.py
 
-      - name: Build playlist
+      - name: Validate streams and build playlists
         run: python checker.py
 
       - name: Commit changes
         run: |
           git config user.name "emirtv-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add a.m3u stats.json discovered.m3u discovery_stats.json
+          git add             a.m3u r.m3u u.m3u all.m3u             stats.json validation.json             discovered.m3u discovery_stats.json
+
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "bot: discover and update playlist"
+            git commit -m "bot: validate HLS streams and update playlists"
             git push
           fi
