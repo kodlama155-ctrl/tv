@@ -53,6 +53,22 @@ def likely_playlist_path(path: str) -> bool:
         return False
     return any(h in low for h in PATH_HINTS)
 
+def safe_candidate(url: str) -> bool:
+    try:
+        p = urllib.parse.urlsplit(url)
+    except Exception:
+        return False
+    if p.scheme not in ("http", "https") or not p.hostname:
+        return False
+    if p.username or p.password:
+        return False
+    if CREDENTIAL_PATH_RE.search(p.path):
+        return False
+    query_keys = {k.lower() for k, _ in urllib.parse.parse_qsl(p.query, keep_blank_values=True)}
+    if query_keys & SENSITIVE_QUERY_KEYS:
+        return False
+    return True
+
 def extract_entries(text: str):
     entries = []
     last_meta = None
@@ -68,6 +84,9 @@ def extract_entries(text: str):
         m = M3U8_RE.search(line)
         if m:
             url = m.group(0).rstrip("),;")
+            if not safe_candidate(url):
+                last_meta = None
+                continue
             meta = last_meta or "#EXTINF:-1 group-title=\"Discovered\",Discovered stream"
             entries.append((meta, url))
             last_meta = None
@@ -75,7 +94,9 @@ def extract_entries(text: str):
     # Some files embed URLs in JSON/markdown instead of normal M3U lines.
     if not entries:
         for url in M3U8_RE.findall(text):
-            entries.append(("#EXTINF:-1 group-title=\"Discovered\",Discovered stream", url.rstrip("),;")))
+            url = url.rstrip("),;")
+            if safe_candidate(url):
+                entries.append(("#EXTINF:-1 group-title=\"Discovered\",Discovered stream", url))
     return entries
 
 def canonical(url: str) -> str:
