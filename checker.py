@@ -5,23 +5,27 @@ import concurrent.futures
 import datetime as dt
 import json
 import re
-import socket
 import unicodedata
-import urllib.error
 import urllib.parse
 import urllib.request
 from collections import Counter
 from pathlib import Path
 
+from hls_validator import validate_hls
+
 ROOT = Path(__file__).resolve().parent
 SOURCES = ROOT / "sources.txt"
 DISCOVERED = ROOT / "discovered.m3u"
-OUTPUT = ROOT / "a.m3u"
-STATS = ROOT / "stats.json"
 
-UA = "Mozilla/5.0 (EmirTV-M3U-Bot/1.0)"
+VERIFIED_OUTPUT = ROOT / "a.m3u"
+RESTRICTED_OUTPUT = ROOT / "r.m3u"
+UNKNOWN_OUTPUT = ROOT / "u.m3u"
+ALL_OUTPUT = ROOT / "all.m3u"
+STATS = ROOT / "stats.json"
+VALIDATION = ROOT / "validation.json"
+
+UA = "Mozilla/5.0 (EmirTV-M3U-Bot/2.0)"
 PLAYLIST_TIMEOUT = 20
-STREAM_TIMEOUT = 8
 MAX_WORKERS = 24
 
 CATEGORY_ORDER = [
@@ -41,9 +45,7 @@ CATEGORY_ORDER = [
 CATEGORY_INDEX = {name: i for i, name in enumerate(CATEGORY_ORDER)}
 
 CATEGORY_KEYWORDS = {
-    "Haber": [
-        "news", "haber", "gundem", "gazete", "breaking", "politika",
-    ],
+    "Haber": ["news", "haber", "gundem", "gazete", "breaking", "politika"],
     "Spor": [
         "sports", "sport", "spor", "futbol", "football", "soccer",
         "basket", "basketbol", "voleybol", "volleyball",
@@ -52,9 +54,7 @@ CATEGORY_KEYWORDS = {
         "movie", "movies", "film", "films", "cinema", "sinema",
         "series", "serial", "dizi",
     ],
-    "Müzik": [
-        "music", "musical", "muzik", "muzik", "radio", "radyo",
-    ],
+    "Müzik": ["music", "musical", "muzik", "radio", "radyo"],
     "Çocuk": [
         "kids", "kid", "children", "child", "cocuk", "cartoon",
         "animation", "animasyon", "cizgi",
@@ -71,27 +71,20 @@ CATEGORY_KEYWORDS = {
         "education", "educational", "egitim", "school", "okul",
         "university", "universite", "ders",
     ],
-    "Yerel": [
-        "local", "regional", "region", "yerel", "belediye",
-    ],
+    "Yerel": ["local", "regional", "region", "yerel", "belediye"],
     "Eğlence": [
-        "entertainment", "eglence", "comedy", "komedi", "lifestyle",
-        "variety", "show",
+        "entertainment", "eglence", "comedy", "komedi",
+        "lifestyle", "variety", "show",
     ],
-    "Genel": [
-        "general", "genel", "national", "ulusal",
-    ],
+    "Genel": ["general", "genel", "national", "ulusal"],
 }
 
-def get(url: str, timeout: int, headers: dict | None = None):
-    req_headers = {"User-Agent": UA, "Accept": "*/*"}
-    if headers:
-        req_headers.update(headers)
-    req = urllib.request.Request(url, headers=req_headers)
-    return urllib.request.urlopen(req, timeout=timeout)
-
 def fetch_text(url: str) -> str:
-    with get(url, PLAYLIST_TIMEOUT) as r:
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": UA, "Accept": "*/*"},
+    )
+    with urllib.request.urlopen(req, timeout=PLAYLIST_TIMEOUT) as r:
         raw = r.read(8_000_000)
     return raw.decode("utf-8", errors="replace")
 
@@ -114,12 +107,16 @@ def parse_playlist(text: str):
 
 def canonical(url: str) -> str:
     p = urllib.parse.urlsplit(url)
-    return urllib.parse.urlunsplit((p.scheme.lower(), p.netloc.lower(), p.path, p.query, ""))
+    return urllib.parse.urlunsplit(
+        (p.scheme.lower(), p.netloc.lower(), p.path, p.query, "")
+    )
 
 def fold(text: str) -> str:
     text = text.replace("ı", "i").replace("İ", "I")
     text = unicodedata.normalize("NFKD", text)
-    return "".join(ch for ch in text if not unicodedata.combining(ch)).lower()
+    return "".join(
+        ch for ch in text if not unicodedata.combining(ch)
+    ).lower()
 
 def channel_name(meta: str) -> str:
     if "," not in meta:
@@ -135,7 +132,6 @@ def category_for(meta: str) -> str:
     name = channel_name(meta)
     haystack = fold(f"{group} {name}")
 
-    # Exact/obvious existing group names get priority.
     for category in CATEGORY_ORDER:
         if category == "Diğer":
             continue
@@ -147,14 +143,17 @@ def category_for(meta: str) -> str:
         "Belgesel", "Dini", "Eğitim", "Yerel", "Eğlence", "Genel",
     ]:
         for keyword in CATEGORY_KEYWORDS[category]:
-            if re.search(rf"(?<![a-z0-9]){re.escape(fold(keyword))}(?![a-z0-9])", haystack):
+            if re.search(
+                rf"(?<![a-z0-9]){re.escape(fold(keyword))}(?![a-z0-9])",
+                haystack,
+            ):
                 return category
 
-    # Undefined/unknown/discovered kategorileri temizce Diğer'e gider.
     return "Diğer"
 
 def normalize_meta(meta: str):
     category = category_for(meta)
+
     if "," in meta:
         head, label = meta.split(",", 1)
     else:
@@ -173,40 +172,19 @@ def normalize_meta(meta: str):
 
     return f"{head},{label.strip()}", category, label.strip()
 
-def probe(url: str):
-    req = urllib.request.Request(
-        url,
-        method="GET",
-        headers={
-            "User-Agent": UA,
-            "Accept": "*/*",
-            "Range": "bytes=0-2047",
-        },
+def write_playlist(path: Path, entries):
+    ordered = sorted(
+        entries,
+        key=lambda x: (
+            CATEGORY_INDEX.get(x["category"], 999),
+            fold(x["name"]),
+            canonical(x["url"]),
+        ),
     )
-    try:
-        with urllib.request.urlopen(req, timeout=STREAM_TIMEOUT) as r:
-            code = getattr(r, "status", 200)
-            sample = r.read(2048)
-            ctype = (r.headers.get("Content-Type") or "").lower()
-        ok = 200 <= code < 400
-        if ok and (
-            b"#EXTM3U" in sample
-            or "mpegurl" in ctype
-            or "video" in ctype
-            or "octet-stream" in ctype
-        ):
-            return "ok", code
-        return ("ok" if ok else "dead"), code
-    except urllib.error.HTTPError as e:
-        if e.code in (401, 403, 429, 451):
-            return "restricted", e.code
-        if e.code in (404, 410):
-            return "dead", e.code
-        return "unknown", e.code
-    except (urllib.error.URLError, TimeoutError, socket.timeout):
-        return "unknown", None
-    except Exception:
-        return "unknown", None
+    lines = ["#EXTM3U"]
+    for item in ordered:
+        lines.extend([item["meta"], item["url"]])
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 def main():
     source_urls = [
@@ -217,19 +195,29 @@ def main():
 
     entries = []
     source_report = []
+
     for src in source_urls:
         try:
-            text = fetch_text(src)
-            parsed = parse_playlist(text)
+            parsed = parse_playlist(fetch_text(src))
             entries.extend(parsed)
-            source_report.append({"url": src, "status": "ok", "entries": len(parsed)})
+            source_report.append({
+                "url": src,
+                "status": "ok",
+                "entries": len(parsed),
+            })
         except Exception as e:
-            source_report.append({"url": src, "status": "error", "error": type(e).__name__})
+            source_report.append({
+                "url": src,
+                "status": "error",
+                "error": type(e).__name__,
+            })
 
     discovered_entries = 0
     if DISCOVERED.exists():
         try:
-            parsed = parse_playlist(DISCOVERED.read_text(encoding="utf-8"))
+            parsed = parse_playlist(
+                DISCOVERED.read_text(encoding="utf-8")
+            )
             discovered_entries = len(parsed)
             entries.extend(parsed)
             source_report.append({
@@ -249,56 +237,120 @@ def main():
         unique.setdefault(canonical(url), (meta, url))
     candidates = list(unique.values())
 
-    results = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
-        future_map = {ex.submit(probe, url): url for _, url in candidates}
+    validation_results = {}
+    with concurrent.futures.ThreadPoolExecutor(
+        max_workers=MAX_WORKERS
+    ) as ex:
+        future_map = {
+            ex.submit(validate_hls, url): url
+            for _, url in candidates
+        }
         for fut in concurrent.futures.as_completed(future_map):
             url = future_map[fut]
             try:
-                results[canonical(url)] = fut.result()
-            except Exception:
-                results[canonical(url)] = ("unknown", None)
+                validation_results[canonical(url)] = fut.result()
+            except Exception as e:
+                validation_results[canonical(url)] = {
+                    "status": "unknown",
+                    "reason": type(e).__name__,
+                }
 
-    kept = []
-    counts = {"ok": 0, "restricted": 0, "unknown": 0, "dead": 0}
-    category_counts = Counter()
+    buckets = {
+        "verified": [],
+        "restricted": [],
+        "unknown": [],
+        "dead": [],
+        "drm": [],
+    }
+    category_counts = {
+        "verified": Counter(),
+        "restricted": Counter(),
+        "unknown": Counter(),
+    }
+    report = []
 
     for meta, url in candidates:
-        status, _ = results.get(canonical(url), ("unknown", None))
-        counts[status] = counts.get(status, 0) + 1
-        if status == "dead":
-            continue
+        result = validation_results.get(
+            canonical(url),
+            {"status": "unknown", "reason": "missing result"},
+        )
+        status = result.get("status", "unknown")
+        if status not in buckets:
+            status = "unknown"
 
         normalized_meta, category, name = normalize_meta(meta)
-        kept.append((normalized_meta, url, category, name))
-        category_counts[category] += 1
+        item = {
+            "meta": normalized_meta,
+            "url": url,
+            "category": category,
+            "name": name,
+        }
+        buckets[status].append(item)
 
-    kept.sort(
+        if status in category_counts:
+            category_counts[status][category] += 1
+
+        report.append({
+            "name": name,
+            "category": category,
+            "url": url,
+            **result,
+        })
+
+    # Ana liste yalnızca gerçek HLS media segmenti doğrulanan yayınlardan oluşur.
+    write_playlist(VERIFIED_OUTPUT, buckets["verified"])
+    write_playlist(RESTRICTED_OUTPUT, buckets["restricted"])
+    write_playlist(UNKNOWN_OUTPUT, buckets["unknown"])
+
+    all_candidates = (
+        buckets["verified"]
+        + buckets["restricted"]
+        + buckets["unknown"]
+    )
+    write_playlist(ALL_OUTPUT, all_candidates)
+
+    report.sort(
         key=lambda x: (
-            CATEGORY_INDEX.get(x[2], 999),
-            fold(x[3]),
-            canonical(x[1]),
+            x.get("status", ""),
+            CATEGORY_INDEX.get(x["category"], 999),
+            fold(x["name"]),
         )
     )
+    VALIDATION.write_text(
+        json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
-    body = ["#EXTM3U"]
-    for meta, url, _, _ in kept:
-        body.extend([meta, url])
-    OUTPUT.write_text("\n".join(body) + "\n", encoding="utf-8")
-
+    counts = {key: len(value) for key, value in buckets.items()}
     stats = {
-        "updated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "updated_at_utc": dt.datetime.now(
+            dt.timezone.utc
+        ).isoformat(),
+        "validation_mode": "HLS manifest + variant + real media segments",
         "sources": source_report,
         "raw_entries": len(entries),
         "discovered_entries": discovered_entries,
         "unique_entries": len(candidates),
-        "kept_entries": len(kept),
-        "categories": {
-            category: category_counts.get(category, 0)
+        "verified_entries": counts["verified"],
+        "restricted_entries": counts["restricted"],
+        "unknown_entries": counts["unknown"],
+        "dead_entries": counts["dead"],
+        "drm_entries": counts["drm"],
+        "all_non_dead_non_drm_entries": len(all_candidates),
+        "categories_verified": {
+            category: category_counts["verified"].get(category, 0)
             for category in CATEGORY_ORDER
         },
-        "probe": counts,
+        "categories_restricted": {
+            category: category_counts["restricted"].get(category, 0)
+            for category in CATEGORY_ORDER
+        },
+        "categories_unknown": {
+            category: category_counts["unknown"].get(category, 0)
+            for category in CATEGORY_ORDER
+        },
     }
+
     STATS.write_text(
         json.dumps(stats, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
