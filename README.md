@@ -29,7 +29,8 @@ DRM/SAMPLE-AES yayınlar ana listeye alınmaz. Kesin 404/410 yayınlar ölü kab
 
 ## Otomasyon
 
-GitHub Actions her 6 saatte bir:
+GitHub Actions her 6 saatte bir. Otomatik keşifte sorgu başına en fazla 50 repo incelenir ve playlist dosyasının kendi son commit tarihi 14 günden eskiyse kaynak keşfe alınmaz.
+
 
 1. Açık GitHub repo/listelerinde yeni M3U8 adayları arar.
 2. Kaynak listeleri birleştirip tekrar eden URL'leri temizler.
