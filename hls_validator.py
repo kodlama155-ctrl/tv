@@ -287,8 +287,16 @@ def validate_hls(url: str):
         return result
 
     failures = []
-    # En iyi üç varyantı dene. 1080p bozukken 720p çalışıyorsa kanalı kaybetme.
-    for variant in variants[:3]:
+    # Önce en iyi üç varyantı dene. Bunlar bozuksa en düşük kaliteli
+    # varyantı son çare olarak da doğrula; böylece yalnız üst kalite
+    # bozuk diye çalışan bir kanalı tamamen kaybetmeyiz.
+    candidates = variants[:3]
+    if len(variants) > 3:
+        lowest = variants[-1]
+        if all(item["url"] != lowest["url"] for item in candidates):
+            candidates.append(lowest)
+
+    for variant in candidates:
         try:
             vcode, vdata, vfinal, _, vlatency = _request(
                 variant["url"], MANIFEST_TIMEOUT, MAX_MANIFEST_BYTES
