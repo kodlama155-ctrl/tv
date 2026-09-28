@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-09-28T17:32:34.741075+00:00",
+  "updated_at_utc": "2026-09-28T18:36:36.533897+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-09-14T17:32:34.741075+00:00",
+  "cutoff_utc": "2026-09-14T18:36:36.533897+00:00",
   "repos_per_query": 50,
   "queries": [
     {
@@ -58,8 +58,8 @@
   "repos_scanned": 19,
   "stale_repos_skipped": 0,
   "playlist_file_candidates": 12,
-  "fresh_files_scanned": 10,
-  "stale_files_skipped": 2,
+  "fresh_files_scanned": 9,
+  "stale_files_skipped": 3,
   "unique_m3u8_candidates": 184,
   "fresh_source_files": [
     {
@@ -114,12 +114,6 @@
       "repo": "omerdenizhan/IPTV-M3U",
       "path": "m3u/turkiye-sports.m3u",
       "last_commit": "2026-09-14T19:23:40Z",
-      "entries_found": 0
-    },
-    {
-      "repo": "omerdenizhan/IPTV-M3U",
-      "path": "m3u/turkiye.m3u",
-      "last_commit": "2026-09-14T18:18:04Z",
       "entries_found": 0
     }
   ],
