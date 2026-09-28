@@ -26,6 +26,11 @@ MAX_FILE_BYTES = 2_000_000
 PLAYLIST_EXTS = (".m3u", ".m3u8", ".txt")
 PATH_HINTS = ("tr", "turk", "turkey", "turkiye", "türkiye", "iptv", "playlist", "channel")
 M3U8_RE = re.compile(r'https?://[^\s"\'<>]+?\.m3u8(?:\?[^\s"\'<>]*)?', re.I)
+SENSITIVE_QUERY_KEYS = {
+    "token", "auth", "authorization", "password", "passwd", "username",
+    "user", "key", "sig", "signature", "jwt", "session", "hdnts", "hdnea",
+}
+CREDENTIAL_PATH_RE = re.compile(r"/iptv/[A-Za-z0-9_-]{8,}/", re.I)
 
 def request_json(url: str):
     headers = {
