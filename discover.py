@@ -86,17 +86,28 @@ def parse_github_time(value: str | None):
         return None
 
 
-def likely_playlist_path(path: str) -> bool:
+def likely_playlist_path(
+    path: str,
+    repo_has_turkish_hint: bool,
+) -> bool:
     low = path.lower()
 
-    # Gerçek M3U/M3U8 dosyalarını adı ne olursa olsun değerlendir.
-    # combined.m3u gibi genel isimli ama güncel listeleri kaçırmayalım.
     if low.endswith((".m3u", ".m3u8")):
-        return True
+        # TV-tr.m3u / turkiye.m3u gibi açıkça Türkiye dosyaları her zaman uygun.
+        if turkey_priority(path) == 0:
+            return True
 
-    # .txt dosyalarında ise IPTV/Türkiye ipucu şart olsun.
+        # combined.m3u gibi genel isim ancak repo Türkçe/Türkiye odaklıysa incelenir.
+        return repo_has_turkish_hint
+
     if low.endswith(".txt"):
-        return any(h in low for h in PATH_HINTS)
+        return (
+            turkey_priority(path) == 0
+            or (
+                repo_has_turkish_hint
+                and any(h in low for h in PATH_HINTS)
+            )
+        )
 
     return False
 
@@ -116,6 +127,42 @@ def turkey_priority(path: str):
     )
 
     return 0 if any(h in low for h in strong) else 1
+
+
+def repository_turkish_hints(item: dict):
+    text = " ".join([
+        str(item.get("full_name") or ""),
+        str(item.get("name") or ""),
+        str(item.get("description") or ""),
+    ]).lower()
+
+    positive = (
+        "turkish",
+        "turkey",
+        "turkiye",
+        "türkiye",
+        "türk",
+        "iptvtr",
+        "iptv-tr",
+        "tr iptv",
+    )
+    mixed = (
+        "russian",
+        "azerbaijan",
+        "azerbaijani",
+        "multi-country",
+        "multicountry",
+        "6 ulke",
+        "6 ülke",
+        "6 countries",
+    )
+
+    has_hint = any(token in text for token in positive)
+    safe_default = has_hint and not any(
+        token in text for token in mixed
+    )
+
+    return has_hint, safe_default
 
 
 def safe_candidate(url: str) -> bool:
@@ -147,9 +194,26 @@ def safe_candidate(url: str) -> bool:
     return True
 
 
-def extract_entries(text: str):
+def extract_entries(
+    text: str,
+    default_turkish: bool = False,
+    path_turkish: bool = False,
+):
     entries = []
     last_meta = None
+    active_turkish = bool(
+        default_turkish or path_turkish
+    )
+
+    turkey_section_tokens = (
+        "turkish",
+        "turkey",
+        "turkiye",
+        "türkiye",
+        "türk",
+        "tr channels",
+        "tr kanallar",
+    )
 
     for raw in text.splitlines():
         line = raw.strip()
@@ -162,6 +226,25 @@ def extract_entries(text: str):
             continue
 
         if line.startswith("#"):
+            low = line.lower()
+
+            # combined.m3u gibi çok ülkeli listelerde yalnız Türkiye bölümünü al.
+            if any(
+                token in low
+                for token in turkey_section_tokens
+            ):
+                active_turkish = True
+            elif (
+                "channels" in low
+                or "kanallar" in low
+                or "канал" in low
+            ):
+                active_turkish = False
+
+            continue
+
+        if not active_turkish:
+            last_meta = None
             continue
 
         match = M3U8_RE.search(line)
@@ -181,18 +264,7 @@ def extract_entries(text: str):
         entries.append((meta, url))
         last_meta = None
 
-    if not entries:
-        for url in M3U8_RE.findall(text):
-            url = url.rstrip("),;")
-
-            if safe_candidate(url):
-                entries.append((
-                    '#EXTINF:-1 group-title="Discovered",Discovered stream',
-                    url,
-                ))
-
     return entries
-
 
 def canonical(url: str) -> str:
     p = urllib.parse.urlsplit(url)
@@ -350,6 +422,10 @@ def main():
                     errors += 1
                     continue
 
+                repo_has_hint, repo_default_turkish = (
+                    repository_turkish_hints(item)
+                )
+
                 paths = [
                     node.get("path", "")
                     for node in tree.get(
@@ -358,7 +434,8 @@ def main():
                     )
                     if node.get("type") == "blob"
                     and likely_playlist_path(
-                        node.get("path", "")
+                        node.get("path", ""),
+                        repo_has_hint,
                     )
                 ]
 
@@ -410,7 +487,11 @@ def main():
                             continue
 
                         entries = extract_entries(
-                            text
+                            text,
+                            default_turkish=repo_default_turkish,
+                            path_turkish=(
+                                turkey_priority(path) == 0
+                            ),
                         )
 
                         fresh_source_files.append({
