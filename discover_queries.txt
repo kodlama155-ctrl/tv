@@ -1,7 +1,13 @@
 # Public GitHub repository discovery queries.
-# Keep these focused on Turkish/Türkiye IPTV playlists.
+# Repositories are additionally filtered by pushed date, and each playlist
+# file must have its own commit within the last 14 days.
 iptv turkey m3u
 turkey m3u8 playlist
 turkish iptv playlist
 turkiye iptv m3u
 tr iptv m3u
+turkish iptv
+turkiye tv m3u
+turkey live tv
+turkish live tv
+turkiye canli tv
