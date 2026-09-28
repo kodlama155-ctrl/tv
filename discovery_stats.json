@@ -1,8 +1,29 @@
 {
-  "updated_at_utc": null,
-  "queries": [],
-  "repos_scanned": 0,
-  "files_scanned": 0,
-  "unique_m3u8_candidates": 0,
-  "errors": 0
+  "updated_at_utc": "2026-09-28T16:32:13.442207+00:00",
+  "queries": [
+    {
+      "query": "iptv turkey m3u",
+      "repos": 5
+    },
+    {
+      "query": "turkey m3u8 playlist",
+      "repos": 0
+    },
+    {
+      "query": "turkish iptv playlist",
+      "repos": 4
+    },
+    {
+      "query": "turkiye iptv m3u",
+      "repos": 6
+    },
+    {
+      "query": "tr iptv m3u",
+      "repos": 8
+    }
+  ],
+  "repos_scanned": 21,
+  "files_scanned": 12,
+  "unique_m3u8_candidates": 608,
+  "errors": 3
 }
