@@ -93,3 +93,16 @@ https://tv-trt2-dai.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
 https://trt2dvr.blutv.com/blutv_trt2_dvr/live.m3u8
 
+
+# --- TRT 2 BluTV header-aware probe ---
+
+# BluTV TRT 2 with the legacy player UA used by public working lists.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+#EXTVLCOPT:http-user-agent=Lavf53.32.100
+https://trt2.blutv.com/blutv_trt2/live.m3u8
+
+# MNCDN equivalent with the same player UA.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+#EXTVLCOPT:http-user-agent=Lavf53.32.100
+https://mn-nl.mncdn.com/blutv_trt2/live.m3u8
+
