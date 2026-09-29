@@ -1,41 +1,29 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import html
 import json
 import re
 import unicodedata
 import urllib.request
 from collections import Counter
 from functools import lru_cache
+from html.parser import HTMLParser
 
-# EmirTV category engine.
+# EmirTV dynamic category/order engine.
 #
-# Decision order is evidence-based instead of one giant hand-written channel map:
-#   1) current professional-platform placement (Tivibu + TV+ + Digiturk reference)
-#   2) live iptv-org channel metadata (channels.json) by exact tvg-id
-#   3) regional/international identity signals
-#   4) source group-title and channel-name keywords
-#   5) Turkish/general fallback
+# There are deliberately NO hard-coded channel-to-category lists in this file.
+# The bot learns placement from current platform category pages on every run.
+# If platforms do not classify a channel, it falls back to content metadata.
 #
-# Platform reference was rebuilt from current 2026 pages:
-#   https://www.tivibu.com.tr/canli-tv/ulusal
-#   https://www.tivibu.com.tr/canli-tv/haber
-#   https://www.tivibu.com.tr/canli-tv/spor
-#   https://www.tivibu.com.tr/canli-tv/dizi
-#   https://www.tivibu.com.tr/canli-tv/cocuk
-#   https://www.tivibu.com.tr/canli-tv/belgesel
-#   https://www.tivibu.com.tr/canli-tv/yasam-stil
-#   https://www.tivibu.com.tr/canli-tv/muzik
-#   https://tvplus.com.tr/canli-tv
-#   https://tvplus.com.tr/destek/sss/tvplus-kanallari
-#   https://www.digiturk.com.tr/AllChannels
-# D-Smart's current public pages confirm the same broad taxonomy (ulusal,
-# haber, spor, film/dizi, belgesel, çocuk, müzik, yaşam) but do not expose a
-# reliable machine-readable per-channel category list, so we do not invent
-# channel votes from D-Smart.
+# Priority:
+#   1) current professional platform category pages
+#   2) iptv-org live channel metadata
+#   3) strong channel/source content signals
+#   4) foreign-country signal
+#   5) Diğer
 #
-# iptv-org is fetched live on every checker process (one request, cached in memory):
-IPTV_ORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
+# Important: being a Turkish channel is NOT enough to become "Ulusal".
 
 CATEGORY_ORDER = [
     "Ulusal",
@@ -51,150 +39,54 @@ CATEGORY_ORDER = [
     "Diğer",
 ]
 
-ALIASES = {
-    "kanalddrama": "kanalddrama",
-    "htspor": "htsportv",
-    "haberturk": "haberturktv",
-    "benguturk": "benguturktv",
-    "powerturk": "powerturktv",
-    "tr24tv": "24tv",
-    "tv8bucuk": "tv85",
-    "tv85hd": "tv85",
-    "cnnturkhd": "cnnturk",
-    "sozcutvtr": "sozcutv",
-    "szctv": "sozcutv",
-    "trtcocukhd": "trtcocuk",
-    "trtgenc": "trtgenc",
-    "htsporhd": "htsportv",
-}
+IPTV_ORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
 
-# Names/IDs visibly placed in these categories by current Tivibu pages.
-TIVIBU = {
-    "Ulusal": {
-        "trt1", "kanald", "atv", "showtv", "nowtv", "startv", "kanal7",
-        "tv8", "beyaztv", "cnbce", "diyanettv", "a2tv", "teve2", "tv85",
-        "trt2",
+# Category URLs only. No individual channels are stored here.
+PLATFORM_PAGES = {
+    "Tivibu": {
+        "Ulusal": ["https://www.tivibu.com.tr/canli-tv/ulusal"],
+        "Haber": ["https://www.tivibu.com.tr/canli-tv/haber"],
+        "Spor": ["https://www.tivibu.com.tr/canli-tv/spor"],
+        "Film & Dizi": [
+            "https://www.tivibu.com.tr/canli-tv/dizi",
+            "https://www.tivibu.com.tr/canli-tv/sinema",
+        ],
+        "Çocuk": ["https://www.tivibu.com.tr/canli-tv/cocuk"],
+        "Belgesel": ["https://www.tivibu.com.tr/canli-tv/belgesel"],
+        "Yaşam": ["https://www.tivibu.com.tr/canli-tv/yasam-stil"],
+        "Müzik": ["https://www.tivibu.com.tr/canli-tv/muzik"],
+        "Uluslararası": ["https://www.tivibu.com.tr/canli-tv/global"],
     },
-    "Haber": {
-        "360", "trthaber", "ntv", "ahaber", "24tv", "cnnturk",
-        "haberturktv", "bloomberght", "ulketv", "tvnet", "tgrthaber",
-        "akittv", "haberglobal", "tv100", "benguturktv", "ekoturk",
-        "gzt", "halktv", "sozcutv",
-    },
-    "Spor": {
-        "aspor", "trtspor", "trtsporyildiz", "fbtv", "htsportv",
-    },
-    "Film & Dizi": {
-        "bbcfirst", "fx", "epicdrama",
-    },
-    "Çocuk": {
-        "trtcocuk", "minikacocuk", "minikago", "trtdiyanetcocuk",
-        "spacetoonturkey", "disneyjr", "babytv", "trtgenc",
-    },
-    "Belgesel": {
-        "trtbelgesel", "lovenature", "tarihtv", "habitattv",
-    },
-    "Yaşam": {
-        "tlc", "dmax",
-    },
-    "Müzik": {
-        "trtmuzik", "dreamturk", "powertv", "powerturktv", "number1tv",
+    "TV+": {
+        "Haber": ["https://tvplus.com.tr/canli-tv/kategori/haber"],
+        "Spor": ["https://tvplus.com.tr/canli-tv/kategori/spor"],
+        "Film & Dizi": ["https://tvplus.com.tr/canli-tv/kategori/filmdizi"],
+        "Çocuk": ["https://tvplus.com.tr/canli-tv/kategori/cocuk"],
+        "Belgesel": ["https://tvplus.com.tr/canli-tv/kategori/belgesel"],
+        "Yaşam": ["https://tvplus.com.tr/canli-tv/kategori/yasam"],
+        "Yerel": ["https://tvplus.com.tr/canli-tv/kategori/yerel"],
     },
 }
 
-# TV+ current lineup/category structure. Only channels whose placement is clear
-# from TV+'s category pages/current lineup are used as votes.
-TVPLUS = {
-    "Ulusal": {
-        "trt1", "kanald", "startv", "atv", "showtv", "nowtv", "tv8",
-        "360", "a2tv", "cnbce", "teve2", "kanal7", "beyaztv", "tv85",
-        "trt2", "tv4", "diyanettv",
-    },
-    "Haber": {
-        "tv100", "flashhabertv", "gzt", "turkhabertv", "cnnturk", "ntv",
-        "haberturktv", "ahaber", "trthaber", "24tv", "bloomberght",
-        "halktv", "tele1", "haberglobal", "ekoturk", "ulketv", "tgrthaber",
-        "tvnet", "akittv", "benguturktv", "sozcutv",
-    },
-    "Spor": {
-        "trtspor", "trtsporyildiz", "aspor", "htsportv", "fbtv",
-        "sportstv",
-    },
-    "Film & Dizi": {
-        "fx", "epicdrama",
-    },
-    "Çocuk": {
-        "babytv", "disneyjr", "trtcocuk", "minikacocuk", "minikago",
-        "spacetoonturkey", "trtdiyanetcocuk", "trtgenc",
-    },
-    "Belgesel": {
-        "trtbelgesel", "lovenature", "tarihtv",
-    },
-    "Yaşam": {
-        "tlc", "dmax", "ciftcitv",
-    },
-    "Müzik": {
-        "number1tv", "powertv", "dreamturk", "powerturktv", "trtmuzik",
-    },
-    "Yerel": {
-        "kadirgatv", "kontv", "kanal23", "kanalv", "kanal26", "kanal33",
-        "on6",
-    },
+# Digiturk is parsed dynamically by section heading when the public page exposes
+# those headings in server-rendered HTML. If the page shape changes, it simply
+# contributes no vote instead of inventing data.
+DIGITURK_ALL_URL = "https://www.digiturk.com.tr/AllChannels"
+DIGITURK_HEADINGS = {
+    "Ulusal": ("ulusal", "genel"),
+    "Haber": ("haber",),
+    "Spor": ("spor",),
+    "Film & Dizi": ("film", "dizi", "sinema"),
+    "Çocuk": ("cocuk",),
+    "Belgesel": ("belgesel",),
+    "Yaşam": ("yasam", "eglence"),
+    "Müzik": ("muzik",),
+    "Uluslararası": ("uluslararasi", "global"),
 }
 
-
-# Digiturk current AllChannels page exposes explicit ULUSAL/HABER sections.
-# Only placements that are actually visible on the current page are included.
-# Conflicts are intentional: the voting system resolves them instead of
-# pretending every professional platform agrees.
-DIGITURK = {
-    "Ulusal": {
-        "trt1", "kanald", "atv", "showtv", "nowtv", "startv", "tv8",
-        "360", "kanal7", "a2tv", "beyaztv", "tv100", "halktv", "teve2",
-        "trteba", "gzt",
-    },
-    "Haber": {
-        "haberglobal", "akittv", "benguturktv", "turkhabertv", "cncbe",
-        "cnbce", "sozcutv", "trtworld",
-    },
-}
-
-# Regional identity is needed because iptv-org removed city/subdivision fields
-# from channels in 2025, while many Turkish local stations are tagged "general".
-LOCAL_REFERENCE = {
-    "aksutv", "alanyapostatv", "altastv", "anadolunettv", "arastv",
-    "astv", "atvalanya", "brtv", "caytv", "denizpostasitv", "dimtv",
-    "edessatv", "ertv", "erzurumwebtv", "estv", "etvkayseri", "etvmanisa",
-    "guneydogutv", "haber61tv", "hunattv", "iceltv", "kanal12", "kanal15",
-    "kanal23", "kanal26", "kanal3", "kanal32", "kanal33", "kanal58",
-    "kanalfirat", "kanalv", "kaytv", "kentturk", "kocaelitv", "kontv",
-    "konyaolaytv", "linetv", "mavikaradeniztv", "mercantv", "mturktv",
-    "olayturktv", "sunrtv", "tempotv", "tontv", "tv1", "tv264", "tv41",
-    "tv52", "tvden", "urfanatiktv", "van65tv", "kadirgatv", "on6",
-}
-
-OFFICIAL_CONTENT_REFERENCE = {
-    # Used only when the channel is not placed by the professional-platform
-    # reference. These are channel-purpose facts from the broadcaster itself.
-    "ilketv": "Haber",
-    "zaroktv": "Çocuk",
-    "tbmmtv": "Haber",
-}
-
-INTERNATIONAL_REFERENCE = {
-    "adatv", "afroturktv", "alzahratvturkic", "elsharqtv", "eurod",
-    "imamhusseintv5", "kanal7avrupa", "kurdistantv", "luystv", "manastv",
-    "mctv", "mekameleentv", "persianaturkiye", "sat7turk", "trtarabi",
-    "trtavaz", "trtkurdi", "trtturk", "trtworld", "westazerbaijantv",
-    "yoltv", "finesttv",
-}
-
+# Only content-type mappings. Broad labels such as general/entertainment,
+# religious/education/culture do NOT automatically mean "Ulusal".
 IPTV_CATEGORY_MAP = {
-    "general": "Ulusal",
-    "entertainment": "Ulusal",
-    "religious": "Ulusal",
-    "education": "Ulusal",
-    "culture": "Ulusal",
     "news": "Haber",
     "business": "Haber",
     "legislative": "Haber",
@@ -217,145 +109,48 @@ IPTV_CATEGORY_MAP = {
     "music": "Müzik",
 }
 
-# Current professional-platform channel order references.
-# Ordering is category-local: channels seen by multiple platforms use the
-# average relative position; channels seen by one platform still rank ahead
-# of completely unknown channels. Unknown channels fall back to A-Z.
-PLATFORM_ORDER = {
-    "Tivibu": {
-        "Ulusal": [
-            "trt1", "kanald", "atv", "showtv", "nowtv", "startv",
-            "kanal7", "tv8", "360", "beyaztv", "cnbce", "diyanettv",
-            "a2tv", "teve2", "tv85", "trt2", "vavtv", "tv4",
-            "semerkandtv", "trteba",
-        ],
-        "Haber": [
-            "trthaber", "ntv", "ahaber", "24tv", "cnnturk",
-            "haberturktv", "bloomberght", "ulketv", "tvnet", "tgrthaber",
-            "akittv", "haberglobal", "tv100", "benguturktv",
-            "turkhabertv", "ekoturk", "gzt", "halktv", "sozcutv",
-            "tele1",
-        ],
-        "Spor": [
-            "trtspor", "trtsporyildiz", "aspor", "htsportv", "fbtv",
-            "sportstv",
-        ],
-        "Film & Dizi": [
-            "bbcfirst", "fx", "epicdrama", "kanalddrama",
-        ],
-        "Çocuk": [
-            "babytv", "nickelodeon", "nicktoons", "nickjr", "davinci",
-            "trtgenc", "trtcocuk", "minikacocuk", "minikago",
-            "spacetoonturkey", "trtdiyanetcocuk", "disneyjr",
-        ],
-        "Belgesel": [
-            "trtbelgesel", "tarihtv", "lovenature",
-        ],
-        "Yaşam": [
-            "tlc", "dmax", "ciftcitv",
-        ],
-        "Müzik": [
-            "trtmuzik", "number1tv", "dreamturk", "powertv",
-            "powerturktv",
-        ],
-        "Uluslararası": [
-            "trtturk", "trtavaz", "trtkurdi", "trtworld", "trtarabi",
-        ],
-    },
-    "TV+": {
-        "Ulusal": [
-            "trt1", "kanald", "startv", "atv", "showtv", "nowtv",
-            "tv8", "360", "a2tv", "cnbce", "teve2", "kanal7",
-            "beyaztv", "tv85", "trt2", "tv4", "diyanettv",
-            "semerkandtv", "trteba",
-        ],
-        "Haber": [
-            "tv100", "flashhabertv", "gzt", "turkhabertv", "cnnturk",
-            "ntv", "haberturktv", "ahaber", "trthaber", "24tv",
-            "bloomberght", "halktv", "tele1", "haberglobal", "ekoturk",
-            "ulketv", "tgrthaber", "tvnet", "akittv", "benguturktv",
-            "sozcutv",
-        ],
-        "Spor": [
-            "trtspor", "trtsporyildiz", "aspor", "htsportv", "fbtv",
-            "ssport", "ssport2", "eurosport1", "eurosport2", "sportstv",
-        ],
-        "Film & Dizi": [
-            "epicdrama", "fx", "kanalddrama",
-        ],
-        "Çocuk": [
-            "babytv", "disneyjr", "cbeebies", "moonbugkidstv",
-            "cartoonito", "nickjr", "nickelodeon", "nicktoons", "azoomee",
-            "davinci", "cartoonnetwork", "trtcocuk", "minikacocuk",
-            "minikago", "spacetoonturkey", "trtdiyanetcocuk", "trtgenc",
-        ],
-        "Belgesel": [
-            "trtbelgesel", "tarihtv", "viasatexplore",
-            "nationalgeographic", "bbcearth", "viasathistory",
-            "discoverychannel", "nationalgeographicwild", "lovenature",
-        ],
-        "Yaşam": [
-            "tlc", "dmax", "ciftcitv",
-        ],
-        "Müzik": [
-            "number1tv", "powertv", "dreamturk", "number1turk",
-            "powerturktv", "trtmuzik",
-        ],
-        "Yerel": [
-            "kadirgatv", "kontv", "kanal23", "kanalv", "kanal26",
-            "kanal33", "on6",
-        ],
-        "Uluslararası": [
-            "cnninternational", "bbcnews", "bloomberg", "anews",
-            "trtworld", "aljazeeraenglish", "deutschewelleenglish",
-            "france24english", "euronews", "aljazeeraarabic",
-            "france24arabic", "skynewsarabia", "tv5monde",
-            "trtturk", "trtarabi", "trtavaz", "trtkurdi",
-        ],
-    },
-}
-
 GROUP_MAP = {
-    "general": "Ulusal",
-    "genel": "Ulusal",
-    "national": "Ulusal",
-    "ulusal": "Ulusal",
-    "entertainment": "Ulusal",
-    "eglence": "Ulusal",
-    "religious": "Ulusal",
-    "religion": "Ulusal",
-    "dini": "Ulusal",
-    "education": "Ulusal",
-    "educational": "Ulusal",
-    "egitim": "Ulusal",
-    "news": "Haber",
     "haber": "Haber",
-    "sports": "Spor",
-    "sport": "Spor",
+    "news": "Haber",
     "spor": "Spor",
+    "sport": "Spor",
+    "sports": "Spor",
+    "film": "Film & Dizi",
     "movie": "Film & Dizi",
     "movies": "Film & Dizi",
-    "film": "Film & Dizi",
     "cinema": "Film & Dizi",
     "sinema": "Film & Dizi",
-    "series": "Film & Dizi",
     "dizi": "Film & Dizi",
+    "series": "Film & Dizi",
+    "cocuk": "Çocuk",
     "kids": "Çocuk",
     "children": "Çocuk",
-    "cocuk": "Çocuk",
-    "documentary": "Belgesel",
     "belgesel": "Belgesel",
-    "lifestyle": "Yaşam",
+    "documentary": "Belgesel",
     "yasam": "Yaşam",
-    "music": "Müzik",
+    "lifestyle": "Yaşam",
     "muzik": "Müzik",
+    "music": "Müzik",
+    "yerel": "Yerel",
     "local": "Yerel",
     "regional": "Yerel",
-    "yerel": "Yerel",
+    "uluslararasi": "Uluslararası",
     "international": "Uluslararası",
     "global": "Uluslararası",
-    "world": "Uluslararası",
 }
+
+UA = "Mozilla/5.0 (EmirTV-CategoryBot/2.0)"
+
+
+class _TextParser(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts: list[str] = []
+
+    def handle_data(self, data: str):
+        value = " ".join(data.split())
+        if value:
+            self.parts.append(value)
 
 
 def fold(text: str) -> str:
@@ -370,13 +165,13 @@ def normalize_identity(text: str) -> str:
     value = re.sub(r"\.(?:tr|cy|uk|de|fr|az|iq|ir|ca|us|kg)$", "", value)
     value = re.sub(r"\[[^\]]*\]", "", value)
     value = re.sub(
-        r"\([^)]*(?:\d{3,4}p|turkiye|turkey|hd|sd|uhd|4k|8k)[^)]*\)",
+        r"\([^)]*(?:\d{3,4}p|turkiye|turkey|hd|sd|uhd|4k|8k|geo-blocked|not 24/7)[^)]*\)",
         "",
         value,
     )
-    value = re.sub(r"\b(?:hd|sd|uhd|fhd)\b", "", value)
+    value = re.sub(r"\b(?:hd|sd|uhd|fhd|4k|8k)\b", "", value)
     value = re.sub(r"[^a-z0-9]+", "", value)
-    return ALIASES.get(value, value)
+    return value
 
 
 def split_extinf(meta: str) -> tuple[str, str]:
@@ -406,13 +201,6 @@ def _tvg_base(meta: str) -> str:
     return _attr(meta, "tvg-id").split("@", 1)[0].strip()
 
 
-def _identity(meta: str) -> str:
-    tvg = _attr(meta, "tvg-id")
-    if tvg:
-        return normalize_identity(tvg)
-    return normalize_identity(split_extinf(meta)[1])
-
-
 def _country(meta: str) -> str:
     base = _tvg_base(meta)
     if "." not in base:
@@ -420,15 +208,219 @@ def _country(meta: str) -> str:
     return fold(base.rsplit(".", 1)[-1])
 
 
+def _clean_display_name(name: str) -> str:
+    value = re.sub(r"\[[^\]]*\]", " ", name)
+    value = re.sub(
+        r"\([^)]*(?:\d{3,4}p|turkiye|turkey|hd|sd|uhd|4k|8k|geo-blocked|not 24/7)[^)]*\)",
+        " ",
+        value,
+        flags=re.I,
+    )
+    value = re.sub(r"\b(?:1080p|900p|720p|576p|540p|480p|360p|288p|1440p|2160p)\b", " ", value, flags=re.I)
+    return " ".join(value.split()).strip()
+
+
+def _camel_words(value: str) -> str:
+    value = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", value)
+    return value.replace("_", " ").replace("-", " ")
+
+
+def _match_variants(meta: str) -> list[str]:
+    name = _clean_display_name(split_extinf(meta)[1])
+    base = _tvg_base(meta)
+    if "." in base:
+        base = base.rsplit(".", 1)[0]
+
+    raw = [
+        name,
+        _camel_words(base),
+        base,
+    ]
+
+    variants = []
+    seen = set()
+    for item in raw:
+        item = fold(item)
+        item = re.sub(r"[^a-z0-9]+", " ", item).strip()
+        if not item:
+            continue
+
+        candidates = [item]
+
+        # Generic suffix cleanup, not channel-specific rules.
+        if item.endswith(" turkiye"):
+            candidates.append(item[:-8].strip())
+        if item.endswith(" turkey"):
+            candidates.append(item[:-7].strip())
+        if item.endswith(" hd"):
+            candidates.append(item[:-3].strip())
+        if item.endswith(" tv") and len(item) > 5 and not item.startswith("tv"):
+            candidates.append(item[:-3].strip())
+
+        compact = re.sub(r"\s+", "", item)
+        if compact:
+            candidates.append(compact)
+
+        for candidate in candidates:
+            if len(candidate) < 3 or candidate in seen:
+                continue
+            seen.add(candidate)
+            variants.append(candidate)
+
+    return variants
+
+
+def _visible_text(raw_html: str) -> str:
+    parser = _TextParser()
+    try:
+        parser.feed(raw_html)
+    except Exception:
+        pass
+    return " \n ".join(parser.parts)
+
+
+@lru_cache(maxsize=64)
+def _fetch_page(url: str) -> dict:
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": UA,
+                "Accept": "text/html,application/xhtml+xml,*/*",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=20) as response:
+            raw = response.read(8_000_000).decode("utf-8", errors="replace")
+        visible = _visible_text(raw)
+        return {
+            "ok": True,
+            "visible": fold(html.unescape(visible)),
+            "raw": fold(html.unescape(raw)),
+        }
+    except Exception as exc:
+        return {
+            "ok": False,
+            "visible": "",
+            "raw": "",
+            "error": type(exc).__name__,
+        }
+
+
+def _variant_position(text: str, variants: list[str]) -> int | None:
+    best = None
+    for variant in variants:
+        # Prevent tiny identities such as "atv" matching inside a larger word.
+        pattern = rf"(?<![a-z0-9]){re.escape(variant)}(?![a-z0-9])"
+        match = re.search(pattern, text)
+        if match is None:
+            compact = re.sub(r"\s+", "", variant)
+            if len(compact) >= 5:
+                pattern = rf"(?<![a-z0-9]){re.escape(compact)}(?![a-z0-9])"
+                match = re.search(pattern, re.sub(r"\s+", "", text))
+        if match is not None:
+            pos = match.start()
+            best = pos if best is None else min(best, pos)
+    return best
+
+
+def _platform_matches(meta: str) -> list[dict]:
+    variants = _match_variants(meta)
+    matches = []
+
+    for platform, category_pages in PLATFORM_PAGES.items():
+        for category, urls in category_pages.items():
+            best_position = None
+            matched_url = None
+            for url in urls:
+                page = _fetch_page(url)
+                if not page["ok"]:
+                    continue
+
+                # Visible page text is high confidence.
+                pos = _variant_position(page["visible"], variants)
+                confidence = "visible"
+
+                # Some JS sites keep channel cards only in serialized HTML data.
+                if pos is None:
+                    pos = _variant_position(page["raw"], variants)
+                    confidence = "embedded"
+
+                if pos is not None and (
+                    best_position is None or pos < best_position
+                ):
+                    best_position = pos
+                    matched_url = url
+                    matched_confidence = confidence
+
+            if best_position is not None:
+                matches.append({
+                    "platform": platform,
+                    "category": category,
+                    "position": best_position,
+                    "confidence": matched_confidence,
+                    "url": matched_url,
+                })
+
+    return matches
+
+
+@lru_cache(maxsize=1)
+def _digiturk_sections() -> dict[str, str]:
+    page = _fetch_page(DIGITURK_ALL_URL)
+    if not page["ok"]:
+        return {}
+
+    text = page["visible"]
+    headings = []
+    for category, aliases in DIGITURK_HEADINGS.items():
+        positions = []
+        for alias in aliases:
+            m = re.search(
+                rf"(?<![a-z0-9]){re.escape(alias)}(?![a-z0-9])",
+                text,
+            )
+            if m:
+                positions.append(m.start())
+        if positions:
+            headings.append((min(positions), category))
+
+    if len(headings) < 2:
+        return {}
+
+    headings.sort()
+    sections = {}
+    for i, (start, category) in enumerate(headings):
+        end = headings[i + 1][0] if i + 1 < len(headings) else len(text)
+        sections[category] = text[start:end]
+    return sections
+
+
+def _digiturk_match(meta: str) -> list[dict]:
+    variants = _match_variants(meta)
+    out = []
+    for category, section in _digiturk_sections().items():
+        pos = _variant_position(section, variants)
+        if pos is not None:
+            out.append({
+                "platform": "Digiturk",
+                "category": category,
+                "position": pos,
+                "confidence": "section",
+                "url": DIGITURK_ALL_URL,
+            })
+    return out
+
+
 @lru_cache(maxsize=1)
 def _iptv_org_index() -> dict[str, list[str]]:
     try:
         req = urllib.request.Request(
             IPTV_ORG_CHANNELS_URL,
-            headers={"User-Agent": "Mozilla/5.0 (EmirTV-CategoryBot/1.0)"},
+            headers={"User-Agent": UA, "Accept": "application/json,*/*"},
         )
         with urllib.request.urlopen(req, timeout=20) as response:
             data = json.loads(response.read(12_000_000).decode("utf-8"))
+
         out = {}
         for row in data:
             channel_id = str(row.get("id") or "").strip().casefold()
@@ -444,79 +436,11 @@ def _iptv_org_index() -> dict[str, list[str]]:
         return {}
 
 
-def _platform_votes(identity: str) -> list[tuple[str, str]]:
-    votes = []
-    for platform, mapping in (
-        ("Tivibu", TIVIBU),
-        ("TV+", TVPLUS),
-        ("Digiturk", DIGITURK),
-    ):
-        for category, ids in mapping.items():
-            if identity in ids:
-                votes.append((platform, category))
-    return votes
-
-
-
-def order_decision(meta: str, category: str | None = None) -> dict:
-    identity = _identity(meta)
-    if category is None:
-        category = classify(meta)["category"]
-
-    positions = []
-    evidence = []
-    for platform, mapping in PLATFORM_ORDER.items():
-        order = mapping.get(category, [])
-        if identity not in order:
-            continue
-        index = order.index(identity)
-        # Normalize to 0..1 so short and long platform lists have equal weight.
-        relative = index / max(1, len(order) - 1)
-        positions.append(relative)
-        evidence.append({
-            "platform": platform,
-            "position": index + 1,
-            "category_size": len(order),
-        })
-
-    if positions:
-        score = sum(positions) / len(positions)
-        return {
-            "known": True,
-            "score": score,
-            "identity": identity,
-            "category": category,
-            "sources": len(positions),
-            "evidence": evidence,
-        }
-
-    return {
-        "known": False,
-        "score": 999.0,
-        "identity": identity,
-        "category": category,
-        "sources": 0,
-        "evidence": [],
-    }
-
-
-def channel_sort_key(meta: str, category: str | None = None, name: str | None = None):
-    if category is None:
-        category = classify(meta)["category"]
-    if name is None:
-        name = split_extinf(meta)[1]
-    decision = order_decision(meta, category)
-    return (
-        0 if decision["known"] else 1,
-        -decision["sources"],
-        decision["score"],
-        fold(name),
-        decision["identity"],
-    )
+def _all_platform_matches(meta: str) -> list[dict]:
+    return _platform_matches(meta) + _digiturk_match(meta)
 
 
 def classify(meta: str) -> dict:
-    identity = _identity(meta)
     name = split_extinf(meta)[1]
     group = fold(_attr(meta, "group-title")).strip()
     country = _country(meta)
@@ -524,58 +448,40 @@ def classify(meta: str) -> dict:
     scores = Counter()
     evidence = []
 
-    # Professional platforms are the strongest evidence.
-    for platform, category in _platform_votes(identity):
-        scores[category] += 50
-        evidence.append(f"{platform}:{category}")
+    platform_matches = _all_platform_matches(meta)
+    for match in platform_matches:
+        weight = 100 if match["confidence"] in {"visible", "section"} else 70
+        scores[match["category"]] += weight
+        evidence.append(
+            f'{match["platform"]}:{match["category"]}:{match["confidence"]}'
+        )
 
-    # Clear regional/international station identity.
-    if identity in LOCAL_REFERENCE:
-        # A regional station stays Yerel even if its actual programming is
-        # news/music/general. Location is the defining category here.
-        scores["Yerel"] += 90
-        evidence.append("regional-reference:Yerel")
-
-    if identity in INTERNATIONAL_REFERENCE:
-        # Same idea for explicitly international/overseas services.
-        scores["Uluslararası"] += 90
-        evidence.append("international-reference:Uluslararası")
-
-    official_category = OFFICIAL_CONTENT_REFERENCE.get(identity)
-    if official_category:
-        scores[official_category] += 70
-        evidence.append(f"official-content:{official_category}")
-
-    # Live machine-readable channel metadata from iptv-org.
     base = _tvg_base(meta).casefold()
     if base:
-        categories = _iptv_org_index().get(base, [])
-        for raw in categories:
-            mapped = IPTV_CATEGORY_MAP.get(raw)
+        for raw_category in _iptv_org_index().get(base, []):
+            mapped = IPTV_CATEGORY_MAP.get(raw_category)
             if mapped:
-                scores[mapped] += 20
-                evidence.append(f"iptv-org:{raw}->{mapped}")
+                scores[mapped] += 35
+                evidence.append(f"iptv-org:{raw_category}->{mapped}")
 
-    # Original M3U group is useful but deliberately weaker than references.
+    # Source group is useful for strong content/local labels only.
     if group in GROUP_MAP:
         mapped = GROUP_MAP[group]
-        scores[mapped] += 8
+        scores[mapped] += 18
         evidence.append(f"source-group:{group}->{mapped}")
 
-    # Strong words in the *channel name* beat broad metadata such as
-    # "general" or "entertainment". This prevents cases like "Kanal D Drama"
-    # being pushed into Ulusal merely because an upstream database calls it
-    # entertainment.
-    name_fold = fold(name)
-    strong_name_groups = [
+    name_fold = fold(_clean_display_name(name))
+    keyword_groups = [
         ("Haber", ["haber", "news"]),
         ("Spor", ["spor", "sport", "sports"]),
         ("Film & Dizi", ["drama", "dizi", "film", "movie", "cinema", "sinema"]),
         ("Çocuk", ["cocuk", "kids", "kid", "cartoon"]),
         ("Belgesel", ["belgesel", "documentary"]),
-        ("Müzik", ["muzik", "music"]),
+        ("Yaşam", ["yasam", "lifestyle"]),
+        ("Müzik", ["muzik", "music", "radyo", "radio"]),
+        ("Yerel", ["yerel", "local", "regional"]),
     ]
-    for category, keywords in strong_name_groups:
+    for category, keywords in keyword_groups:
         if any(
             re.search(
                 rf"(?<![a-z0-9]){re.escape(fold(keyword))}(?![a-z0-9])",
@@ -583,66 +489,36 @@ def classify(meta: str) -> dict:
             )
             for keyword in keywords
         ):
-            scores[category] += 40
+            scores[category] += 25
             evidence.append(f"channel-name:{category}")
 
-    haystack = fold(f"{group} {name}")
-    keyword_groups = [
-        ("Yerel", ["local", "regional", "yerel", "belediye"]),
-        ("Haber", ["news", "haber", "gundem", "gazete", "breaking"]),
-        ("Spor", ["sports", "sport", "spor", "futbol", "football", "basketbol"]),
-        ("Film & Dizi", ["movie", "film", "cinema", "sinema", "series", "serial", "dizi", "drama"]),
-        ("Çocuk", ["kids", "children", "cocuk", "cartoon", "animation", "cizgi"]),
-        ("Belgesel", ["documentary", "belgesel", "nature", "doga", "history", "science"]),
-        ("Yaşam", ["lifestyle", "yasam", "gezi", "yemek", "travel", "food", "hobi"]),
-        ("Müzik", ["music", "muzik", "radyo", "radio"]),
-        ("Uluslararası", ["international", "global", "world"]),
-    ]
-    for category, keywords in keyword_groups:
-        if any(
-            re.search(
-                rf"(?<![a-z0-9]){re.escape(fold(keyword))}(?![a-z0-9])",
-                haystack,
-            )
-            for keyword in keywords
-        ):
-            scores[category] += 4
-            evidence.append(f"keyword:{category}")
-
-    # Country is a weak hint: content type should beat nationality.
+    # Foreign origin is only a fallback signal. Content/platform evidence wins.
     if country and country != "tr":
-        scores["Uluslararası"] += 10
+        scores["Uluslararası"] += 20
         evidence.append(f"country:{country}->Uluslararası")
-    elif country == "tr":
-        scores["Ulusal"] += 1
-        evidence.append("country:tr->Ulusal-fallback")
 
     if not scores:
         return {
             "category": "Diğer",
             "source": "fallback",
-            "identity": identity,
+            "score": 0,
             "votes": {},
-            "evidence": [],
+            "evidence": ["no-reliable-category-evidence"],
+            "platform_matches": [],
         }
 
-    # Deterministic tie-break follows UI category order.
     category = max(
         CATEGORY_ORDER,
         key=lambda c: (scores.get(c, 0), -CATEGORY_ORDER.index(c)),
     )
-    top_score = scores[category]
 
-    if any(e.startswith(("Tivibu:", "TV+:")) and e.endswith(":" + category) for e in evidence):
-        source = "platform"
-    elif any(e.startswith("iptv-org:") and e.endswith("->" + category) for e in evidence):
+    if any(m["category"] == category for m in platform_matches):
+        source = "platform-live"
+    elif any(
+        e.startswith("iptv-org:") and e.endswith("->" + category)
+        for e in evidence
+    ):
         source = "iptv-org"
-    elif category == "Yerel" and identity in LOCAL_REFERENCE:
-        source = "regional-reference"
-    elif category == "Uluslararası" and identity in INTERNATIONAL_REFERENCE:
-        source = "international-reference"
-    elif OFFICIAL_CONTENT_REFERENCE.get(identity) == category:
-        source = "official-content"
     elif group in GROUP_MAP and GROUP_MAP[group] == category:
         source = "source-group"
     else:
@@ -651,8 +527,63 @@ def classify(meta: str) -> dict:
     return {
         "category": category,
         "source": source,
-        "identity": identity,
-        "score": top_score,
+        "score": scores[category],
         "votes": dict(scores),
         "evidence": evidence,
+        "platform_matches": platform_matches,
     }
+
+
+def order_decision(meta: str, category: str | None = None) -> dict:
+    if category is None:
+        category = classify(meta)["category"]
+
+    matches = [
+        m for m in _all_platform_matches(meta)
+        if m["category"] == category
+    ]
+
+    if not matches:
+        return {
+            "known": False,
+            "score": 999999999.0,
+            "category": category,
+            "sources": 0,
+            "evidence": [],
+        }
+
+    # More independent platforms = stronger professional ordering evidence.
+    platforms = sorted({m["platform"] for m in matches})
+
+    # Use page position normalized only among matched sources. Absolute position
+    # is sufficient for stable ordering within the same platform page and the
+    # multi-platform source count prevents one weak page from beating consensus.
+    score = sum(float(m["position"]) for m in matches) / len(matches)
+
+    return {
+        "known": True,
+        "score": score,
+        "category": category,
+        "sources": len(platforms),
+        "evidence": matches,
+    }
+
+
+def channel_sort_key(
+    meta: str,
+    category: str | None = None,
+    name: str | None = None,
+):
+    if category is None:
+        category = classify(meta)["category"]
+    if name is None:
+        name = split_extinf(meta)[1]
+
+    decision = order_decision(meta, category)
+    return (
+        0 if decision["known"] else 1,
+        -decision["sources"],
+        decision["score"],
+        fold(name),
+        normalize_identity(_tvg_base(meta) or name),
+    )
