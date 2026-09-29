@@ -359,6 +359,10 @@ def select_representatives(items: list[dict]) -> list[dict]:
         copy = dict(best)
         copy["channel_key"] = key
         copy["variant_count"] = len(variants)
+        copy["geo_restricted"] = (
+            copy.get("status") == "restricted"
+            and any(bool(row.get("geo_hint")) for row in variants)
+        )
         selected.append(copy)
 
     return selected
@@ -395,6 +399,11 @@ def build_missing_report(validation_report: list[dict], output_path: Path) -> di
                 ),
             )
             status = best.get("status", "unknown")
+            if (
+                status == "restricted"
+                and any(bool(row.get("geo_hint")) for row in matches)
+            ):
+                status = "geo-restricted"
             reason = best.get("reason", "")
             url = best.get("url", "")
         else:
@@ -419,6 +428,7 @@ def build_missing_report(validation_report: list[dict], output_path: Path) -> di
         "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
         "core_channels_total": len(CORE_CHANNELS),
         "core_channels_verified": verified_count,
+        "core_channels_geo_restricted": status_counts.get("geo-restricted", 0),
         "core_channels_not_verified": len(CORE_CHANNELS) - verified_count,
         "status_counts": dict(status_counts),
         "missing_channels": missing,
