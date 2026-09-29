@@ -125,6 +125,28 @@
     "http_code": 404
   },
   {
+    "name": "Meltem TV (1080p)",
+    "tvg_id": "MeltemTV.tr@SD",
+    "channel_key": "meltemtv",
+    "category": "Ulusal",
+    "category_source": "iptv-org",
+    "category_votes": {
+      "Ulusal": 29
+    },
+    "category_evidence": [
+      "iptv-org:general->Ulusal",
+      "source-group:general->Ulusal",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
+    "status": "dead",
+    "reason": "response is not HLS",
+    "http_code": 200,
+    "manifest_latency_ms": 614,
+    "retry_attempted": true,
+    "first_reason": "variant not HLS"
+  },
+  {
     "name": "On4 TV (1080p)",
     "tvg_id": "On4TV.tr@SD",
     "channel_key": "on4tv",
@@ -178,7 +200,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 204,
-    "manifest_latency_ms": 174
+    "manifest_latency_ms": 556
   },
   {
     "name": "Show Turk (1080p)",
@@ -363,34 +385,13 @@
     "http_code": 404
   },
   {
-    "name": "Tele1",
-    "tvg_id": "Tele1.tr@HD",
-    "channel_key": "tele1",
-    "category": "Haber",
-    "category_source": "platform",
-    "category_votes": {
-      "Haber": 62,
-      "Ulusal": 1
-    },
-    "category_evidence": [
-      "TV+:Haber",
-      "source-group:haber->Haber",
-      "keyword:Haber",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
-    "status": "dead",
-    "reason": "manifest HTTP 404",
-    "http_code": 404
-  },
-  {
     "name": "TGRT Haber (720p)",
     "tvg_id": "TGRTHaber.tr@SD",
     "channel_key": "tgrthaber",
     "category": "Haber",
     "category_source": "platform",
     "category_votes": {
-      "Haber": 132,
+      "Haber": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -398,13 +399,14 @@
       "TV+:Haber",
       "iptv-org:news->Haber",
       "source-group:news->Haber",
+      "channel-name:Haber",
       "keyword:Haber",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://canli.tgrthaber.com/tgrt.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 585,
+    "manifest_latency_ms": 311,
     "status": "dead",
     "reason": "segment HTTP 404",
     "http_code": 200
@@ -431,7 +433,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 687
+    "manifest_latency_ms": 489
   },
   {
     "name": "beIN Box Office 1",
@@ -452,7 +454,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 398
+    "manifest_latency_ms": 9701
   },
   {
     "name": "beIN Box Office 2",
@@ -473,7 +475,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 375
+    "manifest_latency_ms": 690
   },
   {
     "name": "beIN Box Office 3",
@@ -494,7 +496,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 9400
+    "manifest_latency_ms": 717
   },
   {
     "name": "beIN Movies Stars",
@@ -515,7 +517,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 404
+    "manifest_latency_ms": 676
   },
   {
     "name": "beIN Movies Turk",
@@ -536,7 +538,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 331
+    "manifest_latency_ms": 682
   },
   {
     "name": "BBC Earth Turkiye",
@@ -558,7 +560,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 457
+    "manifest_latency_ms": 733
   },
   {
     "name": "National Geographic (Turkiye)",
@@ -580,7 +582,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 561
+    "manifest_latency_ms": 720
   },
   {
     "name": "National Geographic Wild (Turkiye)",
@@ -602,7 +604,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 333
+    "manifest_latency_ms": 719
   },
   {
     "name": "Viasat History (Turkiye) (720p)",
@@ -624,7 +626,7 @@
     "status": "dead",
     "reason": "response is not HLS",
     "http_code": 200,
-    "manifest_latency_ms": 347
+    "manifest_latency_ms": 803
   },
   {
     "name": "RTG int.",
@@ -653,7 +655,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -674,7 +676,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -695,7 +697,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -716,7 +718,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -737,7 +739,7 @@
     "category": "Yerel",
     "category_source": "platform",
     "category_votes": {
-      "Yerel": 95,
+      "Yerel": 140,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -805,7 +807,7 @@
     "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 736,
+    "manifest_latency_ms": 439,
     "status": "restricted",
     "reason": "segment HTTP 401",
     "http_code": 200,
@@ -926,7 +928,7 @@
     "url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 934,
+    "manifest_latency_ms": 977,
     "status": "restricted",
     "reason": "segment HTTP 401",
     "http_code": 200
@@ -1104,7 +1106,7 @@
     "url": "https://7nyaler.streamhostingcdn.top/stream/46/index.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 508,
+    "manifest_latency_ms": 281,
     "status": "restricted",
     "reason": "segment HTTP 403",
     "http_code": 200
@@ -1136,13 +1138,15 @@
     "category": "Spor",
     "category_source": "iptv-org",
     "category_votes": {
-      "Spor": 32,
-      "Haber": 4,
+      "Spor": 72,
+      "Haber": 44,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Haber",
+      "channel-name:Spor",
       "keyword:Haber",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
@@ -1150,7 +1154,7 @@
     "url": "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 547,
+    "manifest_latency_ms": 530,
     "status": "restricted",
     "reason": "segment HTTP 403",
     "http_code": 200
@@ -1162,12 +1166,13 @@
     "category": "Spor",
     "category_source": "iptv-org",
     "category_votes": {
-      "Spor": 32,
+      "Spor": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -1204,7 +1209,7 @@
     "category": "Spor",
     "category_source": "platform",
     "category_votes": {
-      "Spor": 132,
+      "Spor": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -1212,6 +1217,7 @@
       "TV+:Spor",
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -1227,7 +1233,7 @@
     "category": "Spor",
     "category_source": "platform",
     "category_votes": {
-      "Spor": 132,
+      "Spor": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -1235,6 +1241,7 @@
       "TV+:Spor",
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -1250,7 +1257,7 @@
     "category": "Spor",
     "category_source": "platform",
     "category_votes": {
-      "Spor": 132,
+      "Spor": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -1258,13 +1265,14 @@
       "TV+:Spor",
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor",
     "resolution": "2560x1440",
     "bandwidth": 10489600,
-    "manifest_latency_ms": 470,
+    "manifest_latency_ms": 384,
     "status": "restricted",
     "reason": "segment HTTP 403",
     "http_code": 200,
@@ -1385,7 +1393,7 @@
     "category": "Belgesel",
     "category_source": "platform",
     "category_votes": {
-      "Belgesel": 132,
+      "Belgesel": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -1393,6 +1401,7 @@
       "TV+:Belgesel",
       "iptv-org:documentary->Belgesel",
       "source-group:documentary->Belgesel",
+      "channel-name:Belgesel",
       "keyword:Belgesel",
       "country:tr->Ulusal-fallback"
     ],
@@ -1788,28 +1797,6 @@
     "first_reason": "manifest URLError"
   },
   {
-    "name": "Kanal D Drama (1080p)",
-    "tvg_id": "KanalDDrama.tr@SD",
-    "channel_key": "kanalddrama",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Ulusal": 29,
-      "Film & Dizi": 4
-    },
-    "category_evidence": [
-      "iptv-org:entertainment->Ulusal",
-      "source-group:entertainment->Ulusal",
-      "keyword:Film & Dizi",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "http://8.243.126.131:8000/play/a0mn/index.m3u8",
-    "status": "unknown",
-    "reason": "manifest URLError",
-    "retry_attempted": true,
-    "first_reason": "manifest URLError"
-  },
-  {
     "name": "Lalegül TV (720p) [Not 24/7]",
     "tvg_id": "LalegulTV.tr@SD",
     "channel_key": "lalegultv",
@@ -1911,52 +1898,6 @@
     "reason": "manifest URLError",
     "retry_attempted": true,
     "first_reason": "manifest URLError"
-  },
-  {
-    "name": "TGRT Belgesel (576p) [Not 24/7]",
-    "tvg_id": "TGRTBelgesel.tr@SD",
-    "channel_key": "tgrtbelgesel",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Ulusal": 29,
-      "Belgesel": 4
-    },
-    "category_evidence": [
-      "iptv-org:general->Ulusal",
-      "source-group:general->Ulusal",
-      "keyword:Belgesel",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8",
-    "status": "unknown",
-    "reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404",
-    "variants": 3,
-    "retry_attempted": true,
-    "first_reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404"
-  },
-  {
-    "name": "TGRT Belgesel TV (576p)",
-    "tvg_id": "TGRTBelgesel.tr@SD",
-    "channel_key": "tgrtbelgesel",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Ulusal": 29,
-      "Belgesel": 4
-    },
-    "category_evidence": [
-      "iptv-org:general->Ulusal",
-      "source-group:general->Ulusal",
-      "keyword:Belgesel",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://tv.ensonhaber.com/tv/tr/tgrtbelgesel/index.m3u8",
-    "status": "unknown",
-    "reason": "manifest HTTP 500",
-    "http_code": 500,
-    "retry_attempted": true,
-    "first_reason": "manifest HTTP 500"
   },
   {
     "name": "TGRT Europe (576p)",
@@ -2147,28 +2088,6 @@
     "reason": "manifest TimeoutError",
     "retry_attempted": true,
     "first_reason": "manifest TimeoutError"
-  },
-  {
-    "name": "Vive Kanal D Drama (1080p)",
-    "tvg_id": "KanalDDrama.tr@SD",
-    "channel_key": "kanalddrama",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Ulusal": 29,
-      "Film & Dizi": 4
-    },
-    "category_evidence": [
-      "iptv-org:entertainment->Ulusal",
-      "source-group:entertainment->Ulusal",
-      "keyword:Film & Dizi",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://thema-vivekanald-rakuten.amagi.tv/playlist.m3u8",
-    "status": "unknown",
-    "reason": "manifest URLError",
-    "retry_attempted": true,
-    "first_reason": "manifest URLError"
   },
   {
     "name": "Woman TV (1080p)",
@@ -2385,12 +2304,13 @@
     "category": "Haber",
     "category_source": "iptv-org",
     "category_votes": {
-      "Haber": 32,
+      "Haber": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:news->Haber",
       "source-group:news->Haber",
+      "channel-name:Haber",
       "keyword:Haber",
       "country:tr->Ulusal-fallback"
     ],
@@ -2477,7 +2397,7 @@
     "category": "Haber",
     "category_source": "platform",
     "category_votes": {
-      "Haber": 132,
+      "Haber": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -2485,6 +2405,7 @@
       "TV+:Haber",
       "iptv-org:news->Haber",
       "source-group:news->Haber",
+      "channel-name:Haber",
       "keyword:Haber",
       "country:tr->Ulusal-fallback"
     ],
@@ -2590,12 +2511,13 @@
     "category": "Spor",
     "category_source": "iptv-org",
     "category_votes": {
-      "Spor": 32,
+      "Spor": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -2613,12 +2535,13 @@
     "category": "Spor",
     "category_source": "iptv-org",
     "category_votes": {
-      "Spor": 32,
+      "Spor": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -2635,12 +2558,13 @@
     "category": "Spor",
     "category_source": "iptv-org",
     "category_votes": {
-      "Spor": 32,
+      "Spor": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -2658,12 +2582,13 @@
     "category": "Spor",
     "category_source": "iptv-org",
     "category_votes": {
-      "Spor": 32,
+      "Spor": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -2680,13 +2605,14 @@
     "category": "Spor",
     "category_source": "platform",
     "category_votes": {
-      "Spor": 82,
+      "Spor": 122,
       "Ulusal": 1
     },
     "category_evidence": [
       "TV+:Spor",
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -2703,12 +2629,13 @@
     "category": "Spor",
     "category_source": "iptv-org",
     "category_votes": {
-      "Spor": 32,
+      "Spor": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
@@ -2725,7 +2652,7 @@
     "category": "Spor",
     "category_source": "platform",
     "category_votes": {
-      "Spor": 132,
+      "Spor": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -2733,10 +2660,34 @@
       "TV+:Spor",
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://corestream.siteyaptim.live/trt-spor/index.m3u8",
+    "status": "unknown",
+    "reason": "manifest URLError",
+    "retry_attempted": true,
+    "first_reason": "manifest URLError"
+  },
+  {
+    "name": "Kanal D Drama (1080p)",
+    "tvg_id": "KanalDDrama.tr@SD",
+    "channel_key": "kanalddrama",
+    "category": "Film & Dizi",
+    "category_source": "fallback",
+    "category_votes": {
+      "Ulusal": 29,
+      "Film & Dizi": 44
+    },
+    "category_evidence": [
+      "iptv-org:entertainment->Ulusal",
+      "source-group:entertainment->Ulusal",
+      "channel-name:Film & Dizi",
+      "keyword:Film & Dizi",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "http://8.243.126.131:8000/play/a0mn/index.m3u8",
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
@@ -2764,18 +2715,63 @@
     "first_reason": "manifest ConnectionResetError"
   },
   {
+    "name": "Timeless Dizi Channel (Poland) (1080p)",
+    "tvg_id": "TimelessDiziChannel.pl@SD",
+    "channel_key": "timelessdizichannelpl",
+    "category": "Film & Dizi",
+    "category_source": "fallback",
+    "category_votes": {
+      "Film & Dizi": 44,
+      "Uluslararası": 10
+    },
+    "category_evidence": [
+      "channel-name:Film & Dizi",
+      "keyword:Film & Dizi",
+      "country:pl->Uluslararası"
+    ],
+    "url": "http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8",
+    "status": "unknown",
+    "reason": "manifest TimeoutError",
+    "retry_attempted": true,
+    "first_reason": "manifest TimeoutError"
+  },
+  {
+    "name": "Vive Kanal D Drama (1080p)",
+    "tvg_id": "KanalDDrama.tr@SD",
+    "channel_key": "kanalddrama",
+    "category": "Film & Dizi",
+    "category_source": "fallback",
+    "category_votes": {
+      "Ulusal": 29,
+      "Film & Dizi": 44
+    },
+    "category_evidence": [
+      "iptv-org:entertainment->Ulusal",
+      "source-group:entertainment->Ulusal",
+      "channel-name:Film & Dizi",
+      "keyword:Film & Dizi",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://thema-vivekanald-rakuten.amagi.tv/playlist.m3u8",
+    "status": "unknown",
+    "reason": "manifest URLError",
+    "retry_attempted": true,
+    "first_reason": "manifest URLError"
+  },
+  {
     "name": "CGTN Documentary",
     "tvg_id": "CGTNDocumentary.tr@SD",
     "channel_key": "cgtndocumentary",
     "category": "Belgesel",
     "category_source": "iptv-org",
     "category_votes": {
-      "Belgesel": 32,
+      "Belgesel": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:documentary->Belgesel",
       "source-group:documentary->Belgesel",
+      "channel-name:Belgesel",
       "keyword:Belgesel",
       "country:tr->Ulusal-fallback"
     ],
@@ -2807,13 +2803,61 @@
     "first_reason": "manifest URLError"
   },
   {
+    "name": "TGRT Belgesel (576p) [Not 24/7]",
+    "tvg_id": "TGRTBelgesel.tr@SD",
+    "channel_key": "tgrtbelgesel",
+    "category": "Belgesel",
+    "category_source": "fallback",
+    "category_votes": {
+      "Ulusal": 29,
+      "Belgesel": 44
+    },
+    "category_evidence": [
+      "iptv-org:general->Ulusal",
+      "source-group:general->Ulusal",
+      "channel-name:Belgesel",
+      "keyword:Belgesel",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8",
+    "status": "unknown",
+    "reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404",
+    "variants": 3,
+    "retry_attempted": true,
+    "first_reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404"
+  },
+  {
+    "name": "TGRT Belgesel TV (576p)",
+    "tvg_id": "TGRTBelgesel.tr@SD",
+    "channel_key": "tgrtbelgesel",
+    "category": "Belgesel",
+    "category_source": "fallback",
+    "category_votes": {
+      "Ulusal": 29,
+      "Belgesel": 44
+    },
+    "category_evidence": [
+      "iptv-org:general->Ulusal",
+      "source-group:general->Ulusal",
+      "channel-name:Belgesel",
+      "keyword:Belgesel",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://tv.ensonhaber.com/tv/tr/tgrtbelgesel/index.m3u8",
+    "status": "unknown",
+    "reason": "manifest HTTP 500",
+    "http_code": 500,
+    "retry_attempted": true,
+    "first_reason": "manifest HTTP 500"
+  },
+  {
     "name": "TRT Belgesel (1080p)",
     "tvg_id": "TRTBelgesel.tr@SD",
     "channel_key": "trtbelgesel",
     "category": "Belgesel",
     "category_source": "platform",
     "category_votes": {
-      "Belgesel": 132,
+      "Belgesel": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -2821,6 +2865,7 @@
       "TV+:Belgesel",
       "iptv-org:documentary->Belgesel",
       "source-group:documentary->Belgesel",
+      "channel-name:Belgesel",
       "keyword:Belgesel",
       "country:tr->Ulusal-fallback"
     ],
@@ -2990,7 +3035,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -3012,7 +3057,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -3036,7 +3081,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -3058,7 +3103,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -3078,7 +3123,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -3100,7 +3145,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -3122,7 +3167,7 @@
     "category": "Yerel",
     "category_source": "platform",
     "category_votes": {
-      "Yerel": 95,
+      "Yerel": 140,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -3145,7 +3190,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -3165,7 +3210,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -3185,7 +3230,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -3205,7 +3250,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -3225,7 +3270,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -3245,7 +3290,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Müzik": 32
     },
     "category_evidence": [
@@ -3268,7 +3313,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Ulusal": 28
     },
     "category_evidence": [
@@ -3283,26 +3328,6 @@
     "http_code": 400,
     "retry_attempted": true,
     "first_reason": "manifest HTTP 400"
-  },
-  {
-    "name": "Timeless Dizi Channel (Poland) (1080p)",
-    "tvg_id": "TimelessDiziChannel.pl@SD",
-    "channel_key": "timelessdizichannelpl",
-    "category": "Uluslararası",
-    "category_source": "fallback",
-    "category_votes": {
-      "Film & Dizi": 4,
-      "Uluslararası": 10
-    },
-    "category_evidence": [
-      "keyword:Film & Dizi",
-      "country:pl->Uluslararası"
-    ],
-    "url": "http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8",
-    "status": "unknown",
-    "reason": "manifest TimeoutError",
-    "retry_attempted": true,
-    "first_reason": "manifest TimeoutError"
   },
   {
     "name": "4U TV (720p)",
@@ -3321,10 +3346,10 @@
     "url": "https://hls.4utv.live/hls/stream.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 465,
+    "manifest_latency_ms": 287,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 920,
+    "segment_latency_ms": 565,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -3348,10 +3373,10 @@
     "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 944,
+    "manifest_latency_ms": 1292,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1222,
+    "segment_latency_ms": 883,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3376,10 +3401,10 @@
     "url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 636,
+    "manifest_latency_ms": 644,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 912,
+    "segment_latency_ms": 666,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -3403,10 +3428,10 @@
     "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 1386,
+    "manifest_latency_ms": 701,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1178,
+    "segment_latency_ms": 876,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -3429,10 +3454,10 @@
     "url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 803,
+    "manifest_latency_ms": 686,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1074,
+    "segment_latency_ms": 726,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -3451,11 +3476,11 @@
     ],
     "url": "https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2677290,
-    "manifest_latency_ms": 551,
+    "bandwidth": 2624721,
+    "manifest_latency_ms": 369,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 970,
+    "segment_latency_ms": 666,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3478,10 +3503,10 @@
     "url": "https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2890800,
-    "manifest_latency_ms": 987,
+    "manifest_latency_ms": 658,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1111,
+    "segment_latency_ms": 1153,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3509,10 +3534,10 @@
     "url": "https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 952,
+    "manifest_latency_ms": 640,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1216,
+    "segment_latency_ms": 876,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3537,10 +3562,10 @@
     "url": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2305600,
-    "manifest_latency_ms": 629,
+    "manifest_latency_ms": 503,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1050,
+    "segment_latency_ms": 727,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3562,11 +3587,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1225545,
-    "manifest_latency_ms": 1193,
+    "bandwidth": 1316526,
+    "manifest_latency_ms": 1207,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1544,
+    "segment_latency_ms": 1524,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3589,33 +3614,10 @@
     "url": "https://dost.stream.emsal.im/tv/live.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 704,
+    "manifest_latency_ms": 484,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1060,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200
-  },
-  {
-    "name": "Ilke TV (1080p)",
-    "tvg_id": "IlkeTV.tr@HD",
-    "channel_key": "ilketv",
-    "category": "Ulusal",
-    "category_source": "fallback",
-    "category_votes": {
-      "Ulusal": 1
-    },
-    "category_evidence": [
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://stream.ilketv.com.tr/hls/ilkecanli.m3u8",
-    "resolution": null,
-    "bandwidth": null,
-    "manifest_latency_ms": 491,
-    "status": "verified",
-    "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 986,
+    "segment_latency_ms": 762,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -3639,94 +3641,10 @@
     "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 789,
+    "manifest_latency_ms": 360,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1136,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 4
-  },
-  {
-    "name": "Kanal D Drama (1080p)",
-    "tvg_id": "KanalDDrama.tr@SD",
-    "channel_key": "kanalddrama",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Ulusal": 29,
-      "Film & Dizi": 4
-    },
-    "category_evidence": [
-      "iptv-org:entertainment->Ulusal",
-      "source-group:entertainment->Ulusal",
-      "keyword:Film & Dizi",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "http://190.93.224.42/KANAL-D-DRAMA/index.m3u8",
-    "resolution": "872x480",
-    "bandwidth": 1100000,
-    "manifest_latency_ms": 269,
-    "status": "verified",
-    "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 678,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 1
-  },
-  {
-    "name": "Kanal D Drama (1080p)",
-    "tvg_id": "KanalDDrama.tr@SD",
-    "channel_key": "kanalddrama",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Ulusal": 29,
-      "Film & Dizi": 4
-    },
-    "category_evidence": [
-      "iptv-org:entertainment->Ulusal",
-      "source-group:entertainment->Ulusal",
-      "keyword:Film & Dizi",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/KanalD.stream/playlist.m3u8",
-    "resolution": "1920x1080",
-    "bandwidth": 3287758,
-    "manifest_latency_ms": 575,
-    "status": "verified",
-    "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1024,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 1
-  },
-  {
-    "name": "Kanal D Drama (1080p)",
-    "tvg_id": "KanalDDrama.tr@SD",
-    "channel_key": "kanalddrama",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Ulusal": 29,
-      "Film & Dizi": 4
-    },
-    "category_evidence": [
-      "iptv-org:entertainment->Ulusal",
-      "source-group:entertainment->Ulusal",
-      "keyword:Film & Dizi",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01602-themahqfrance-vivekanald-samsungspain/playlist.m3u8",
-    "resolution": "1920x1080",
-    "bandwidth": 6046040,
-    "manifest_latency_ms": 179,
-    "status": "verified",
-    "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 360,
+    "segment_latency_ms": 668,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3749,10 +3667,10 @@
     "url": "https://tbn02a.ltnschedule.com/hls/nx21i.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 6000000,
-    "manifest_latency_ms": 434,
+    "manifest_latency_ms": 293,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 859,
+    "segment_latency_ms": 582,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3775,67 +3693,13 @@
     "url": "https://lbl.netmedya.net/hls/lalegultv.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 555,
+    "manifest_latency_ms": 288,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 687,
+    "segment_latency_ms": 480,
     "encrypted": false,
     "vod": false,
     "http_code": 200
-  },
-  {
-    "name": "Manas TV (1080p)",
-    "tvg_id": "ManasTV.kg@SD",
-    "channel_key": "manastv",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Uluslararası": 55,
-      "Ulusal": 60
-    },
-    "category_evidence": [
-      "international-reference:Uluslararası",
-      "iptv-org:education->Ulusal",
-      "iptv-org:culture->Ulusal",
-      "iptv-org:entertainment->Ulusal",
-      "country:kg->Uluslararası"
-    ],
-    "url": "http://212.42.111.152:8080/hls/manas.m3u8",
-    "resolution": null,
-    "bandwidth": null,
-    "manifest_latency_ms": 459,
-    "status": "verified",
-    "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1124,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200
-  },
-  {
-    "name": "Meltem TV (1080p)",
-    "tvg_id": "MeltemTV.tr@SD",
-    "channel_key": "meltemtv",
-    "category": "Ulusal",
-    "category_source": "iptv-org",
-    "category_votes": {
-      "Ulusal": 29
-    },
-    "category_evidence": [
-      "iptv-org:general->Ulusal",
-      "source-group:general->Ulusal",
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
-    "resolution": "1920x1080",
-    "bandwidth": 1902134,
-    "manifest_latency_ms": 972,
-    "status": "verified",
-    "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1408,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 1
   },
   {
     "name": "Natural TV (720p) [Not 24/7]",
@@ -3852,11 +3716,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/naturaltv/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 1650187,
-    "manifest_latency_ms": 553,
+    "bandwidth": 1473884,
+    "manifest_latency_ms": 473,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 913,
+    "segment_latency_ms": 602,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3876,12 +3740,12 @@
       "TV+:Ulusal"
     ],
     "url": "http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
-    "resolution": "854x480",
-    "bandwidth": 800000,
-    "manifest_latency_ms": 519,
+    "resolution": "1280x720",
+    "bandwidth": 1050000,
+    "manifest_latency_ms": 1946,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 944,
+    "segment_latency_ms": 674,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3906,10 +3770,10 @@
     "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
     "resolution": "1280x720",
     "bandwidth": 1050000,
-    "manifest_latency_ms": 1821,
+    "manifest_latency_ms": 652,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1174,
+    "segment_latency_ms": 941,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3930,10 +3794,10 @@
     "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2305600,
-    "manifest_latency_ms": 575,
+    "manifest_latency_ms": 565,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 916,
+    "segment_latency_ms": 672,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -3957,10 +3821,10 @@
     "url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 468,
+    "manifest_latency_ms": 423,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 922,
+    "segment_latency_ms": 674,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -3982,10 +3846,10 @@
     "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8l4w3lst4co5&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 790,
+    "manifest_latency_ms": 623,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1000,
+    "segment_latency_ms": 709,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -4006,10 +3870,10 @@
     "url": "http://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 565,
+    "manifest_latency_ms": 168,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1116,
+    "segment_latency_ms": 668,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -4031,37 +3895,13 @@
     "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 871,
+    "manifest_latency_ms": 384,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1152,
+    "segment_latency_ms": 662,
     "encrypted": false,
     "vod": false,
     "http_code": 200
-  },
-  {
-    "name": "TBMM TV (720p)",
-    "tvg_id": "TBMMTV.tr@SD",
-    "channel_key": "tbmmtv",
-    "category": "Ulusal",
-    "category_source": "fallback",
-    "category_votes": {
-      "Ulusal": 1
-    },
-    "category_evidence": [
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8",
-    "resolution": null,
-    "bandwidth": 1200000,
-    "manifest_latency_ms": 614,
-    "status": "verified",
-    "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1082,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 2
   },
   {
     "name": "Tivi 6 (720p)",
@@ -4079,11 +3919,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1349205,
-    "manifest_latency_ms": 830,
+    "bandwidth": 1309323,
+    "manifest_latency_ms": 614,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1592,
+    "segment_latency_ms": 1621,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4105,10 +3945,10 @@
     "url": "http://tv-trt1.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 117,
+    "manifest_latency_ms": 708,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 776,
+    "segment_latency_ms": 597,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4131,10 +3971,10 @@
     "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 216,
+    "manifest_latency_ms": 2298,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 652,
+    "segment_latency_ms": 1442,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4157,10 +3997,10 @@
     "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
     "resolution": "1280x720",
     "bandwidth": 4716800,
-    "manifest_latency_ms": 581,
+    "manifest_latency_ms": 119,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 544,
+    "segment_latency_ms": 344,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4181,10 +4021,10 @@
     "url": "http://turkmedya-live.ercdn.net/tv4/tv4.m3u8",
     "resolution": null,
     "bandwidth": 2500000,
-    "manifest_latency_ms": 287,
+    "manifest_latency_ms": 168,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 777,
+    "segment_latency_ms": 518,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4206,10 +4046,10 @@
     "url": "https://turkmedya-live.ercdn.net/tv4/tv4.m3u8",
     "resolution": null,
     "bandwidth": 2500000,
-    "manifest_latency_ms": 695,
+    "manifest_latency_ms": 329,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1005,
+    "segment_latency_ms": 632,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4234,10 +4074,10 @@
     "url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 890,
+    "manifest_latency_ms": 699,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1166,
+    "segment_latency_ms": 661,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4258,38 +4098,14 @@
     "url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2309771,
-    "manifest_latency_ms": 414,
+    "manifest_latency_ms": 369,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1102,
+    "segment_latency_ms": 786,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
     "variants": 4
-  },
-  {
-    "name": "Zarok TV (720p)",
-    "tvg_id": "ZarokTV.tr@SD",
-    "channel_key": "zaroktv",
-    "category": "Ulusal",
-    "category_source": "fallback",
-    "category_votes": {
-      "Ulusal": 1
-    },
-    "category_evidence": [
-      "country:tr->Ulusal-fallback"
-    ],
-    "url": "https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8",
-    "resolution": "1280x720",
-    "bandwidth": 2719024,
-    "manifest_latency_ms": 474,
-    "status": "verified",
-    "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 910,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 1
   },
   {
     "name": "24 TV (720p)",
@@ -4312,10 +4128,10 @@
     "url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
     "resolution": null,
     "bandwidth": 2500000,
-    "manifest_latency_ms": 588,
+    "manifest_latency_ms": 350,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1032,
+    "segment_latency_ms": 604,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4342,10 +4158,10 @@
     "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
     "resolution": null,
     "bandwidth": 2500000,
-    "manifest_latency_ms": 596,
+    "manifest_latency_ms": 331,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1030,
+    "segment_latency_ms": 597,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4358,7 +4174,7 @@
     "category": "Haber",
     "category_source": "platform",
     "category_votes": {
-      "Haber": 132,
+      "Haber": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -4366,16 +4182,17 @@
       "TV+:Haber",
       "iptv-org:news->Haber",
       "source-group:news->Haber",
+      "channel-name:Haber",
       "keyword:Haber",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 1889,
+    "manifest_latency_ms": 1790,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1156,
+    "segment_latency_ms": 896,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4400,10 +4217,10 @@
     "url": "https://starmenajo.com/hls/almahriah/index.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 605,
+    "manifest_latency_ms": 307,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1003,
+    "segment_latency_ms": 632,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -4428,10 +4245,10 @@
     "url": "https://tv.ensonhaber.com/benguturk/benguturk.m3u8",
     "resolution": null,
     "bandwidth": 1500000,
-    "manifest_latency_ms": 427,
+    "manifest_latency_ms": 104,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 660,
+    "segment_latency_ms": 327,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4453,11 +4270,11 @@
     ],
     "url": "https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 5340000,
-    "manifest_latency_ms": 1021,
+    "bandwidth": 3940000,
+    "manifest_latency_ms": 816,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1826,
+    "segment_latency_ms": 1396,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4482,10 +4299,10 @@
     "url": "https://ciner.daioncdn.net/bloomberght/bloomberght.m3u8",
     "resolution": "1280x720",
     "bandwidth": 1050000,
-    "manifest_latency_ms": 541,
+    "manifest_latency_ms": 375,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1112,
+    "segment_latency_ms": 647,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4510,10 +4327,10 @@
     "url": "https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2500000,
-    "manifest_latency_ms": 495,
+    "manifest_latency_ms": 104,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 663,
+    "segment_latency_ms": 268,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4537,11 +4354,11 @@
     ],
     "url": "https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1692752,
-    "manifest_latency_ms": 734,
+    "bandwidth": 1689593,
+    "manifest_latency_ms": 505,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 890,
+    "segment_latency_ms": 692,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4568,10 +4385,10 @@
     "url": "https://cdn.ekoturk.net/hls/master.m3u8",
     "resolution": "1280x720",
     "bandwidth": 3185600,
-    "manifest_latency_ms": 594,
+    "manifest_latency_ms": 503,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1116,
+    "segment_latency_ms": 877,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4595,11 +4412,11 @@
     ],
     "url": "https://yayin30.haber100.com/live/finansturk/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1770993,
-    "manifest_latency_ms": 245,
+    "bandwidth": 1900417,
+    "manifest_latency_ms": 130,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 442,
+    "segment_latency_ms": 174,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4612,23 +4429,24 @@
     "category": "Haber",
     "category_source": "platform",
     "category_votes": {
-      "Haber": 82,
+      "Haber": 122,
       "Ulusal": 1
     },
     "category_evidence": [
       "TV+:Haber",
       "iptv-org:news->Haber",
       "source-group:news->Haber",
+      "channel-name:Haber",
       "keyword:Haber",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2305600,
-    "manifest_latency_ms": 771,
+    "manifest_latency_ms": 690,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1188,
+    "segment_latency_ms": 801,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4657,11 +4475,11 @@
     ],
     "url": "https://gzttv-live.lg.mncdn.com/gzttv/gzttv/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 4466880,
-    "manifest_latency_ms": 453,
+    "bandwidth": 4999145,
+    "manifest_latency_ms": 299,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 3078,
+    "segment_latency_ms": 3184,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4674,7 +4492,7 @@
     "category": "Haber",
     "category_source": "platform",
     "category_votes": {
-      "Haber": 132,
+      "Haber": 172,
       "Uluslararası": 4,
       "Ulusal": 1
     },
@@ -4683,6 +4501,7 @@
       "TV+:Haber",
       "iptv-org:news->Haber",
       "source-group:news->Haber",
+      "channel-name:Haber",
       "keyword:Haber",
       "keyword:Uluslararası",
       "country:tr->Ulusal-fallback"
@@ -4690,10 +4509,10 @@
     "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8",
     "resolution": null,
     "bandwidth": 1500000,
-    "manifest_latency_ms": 442,
+    "manifest_latency_ms": 164,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 786,
+    "segment_latency_ms": 496,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4720,10 +4539,10 @@
     "url": "https://tv.ensonhaber.com/haberturk/haberturk.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2500000,
-    "manifest_latency_ms": 443,
+    "manifest_latency_ms": 201,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 595,
+    "segment_latency_ms": 312,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4750,14 +4569,39 @@
     "url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 736,
+    "manifest_latency_ms": 435,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1141,
+    "segment_latency_ms": 686,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
     "variants": 4
+  },
+  {
+    "name": "Ilke TV (1080p)",
+    "tvg_id": "IlkeTV.tr@HD",
+    "channel_key": "ilketv",
+    "category": "Haber",
+    "category_source": "official-content",
+    "category_votes": {
+      "Haber": 70,
+      "Ulusal": 1
+    },
+    "category_evidence": [
+      "official-content:Haber",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://stream.ilketv.com.tr/hls/ilkecanli.m3u8",
+    "resolution": null,
+    "bandwidth": null,
+    "manifest_latency_ms": 424,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "segment_latency_ms": 656,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200
   },
   {
     "name": "Life TV (Turkiye) (720p) [Not 24/7]",
@@ -4777,11 +4621,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2109087,
-    "manifest_latency_ms": 843,
+    "bandwidth": 2166584,
+    "manifest_latency_ms": 880,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1332,
+    "segment_latency_ms": 1361,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4807,14 +4651,68 @@
     "url": "https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 785,
+    "manifest_latency_ms": 451,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1020,
+    "segment_latency_ms": 674,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
     "variants": 4
+  },
+  {
+    "name": "TBMM TV (720p)",
+    "tvg_id": "TBMMTV.tr@SD",
+    "channel_key": "tbmmtv",
+    "category": "Haber",
+    "category_source": "official-content",
+    "category_votes": {
+      "Haber": 70,
+      "Ulusal": 1
+    },
+    "category_evidence": [
+      "official-content:Haber",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8",
+    "resolution": null,
+    "bandwidth": 1200000,
+    "manifest_latency_ms": 432,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "segment_latency_ms": 780,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200,
+    "variants": 2
+  },
+  {
+    "name": "Tele1",
+    "tvg_id": "Tele1.tr@HD",
+    "channel_key": "tele1",
+    "category": "Haber",
+    "category_source": "platform",
+    "category_votes": {
+      "Haber": 62,
+      "Ulusal": 1
+    },
+    "category_evidence": [
+      "TV+:Haber",
+      "source-group:haber->Haber",
+      "keyword:Haber",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
+    "resolution": null,
+    "bandwidth": 3000000,
+    "manifest_latency_ms": 946,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "segment_latency_ms": 1125,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200,
+    "variants": 3
   },
   {
     "name": "TGRT Haber",
@@ -4823,7 +4721,7 @@
     "category": "Haber",
     "category_source": "platform",
     "category_votes": {
-      "Haber": 132,
+      "Haber": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -4831,16 +4729,17 @@
       "TV+:Haber",
       "iptv-org:news->Haber",
       "source-group:haber->Haber",
+      "channel-name:Haber",
       "keyword:Haber",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 601,
+    "manifest_latency_ms": 615,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1140,
+    "segment_latency_ms": 783,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4867,10 +4766,10 @@
     "url": "https://tv.ensonhaber.com/tv24/tv24.m3u8",
     "resolution": null,
     "bandwidth": 1500000,
-    "manifest_latency_ms": 460,
+    "manifest_latency_ms": 109,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 656,
+    "segment_latency_ms": 444,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4883,7 +4782,7 @@
     "category": "Haber",
     "category_source": "platform",
     "category_votes": {
-      "Haber": 132,
+      "Haber": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -4891,16 +4790,17 @@
       "TV+:Haber",
       "iptv-org:news->Haber",
       "source-group:news->Haber",
+      "channel-name:Haber",
       "keyword:Haber",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 233,
+    "manifest_latency_ms": 22,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 81,
+    "segment_latency_ms": 28,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4925,11 +4825,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2783033,
-    "manifest_latency_ms": 536,
+    "bandwidth": 2730153,
+    "manifest_latency_ms": 362,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 936,
+    "segment_latency_ms": 656,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4955,10 +4855,10 @@
     "url": "https://ensonhaber-live.ercdn.net/tv100/tv100.m3u8",
     "resolution": null,
     "bandwidth": 3000000,
-    "manifest_latency_ms": 626,
+    "manifest_latency_ms": 495,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1008,
+    "segment_latency_ms": 685,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -4981,11 +4881,11 @@
     ],
     "url": "https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 5018697,
-    "manifest_latency_ms": 180,
+    "bandwidth": 5130745,
+    "manifest_latency_ms": 30,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1924,
+    "segment_latency_ms": 30,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5010,11 +4910,11 @@
     ],
     "url": "https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1419776,
-    "manifest_latency_ms": 537,
+    "bandwidth": 1416392,
+    "manifest_latency_ms": 427,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1022,
+    "segment_latency_ms": 770,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5027,7 +4927,7 @@
     "category": "Spor",
     "category_source": "platform",
     "category_votes": {
-      "Spor": 132,
+      "Spor": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -5035,16 +4935,17 @@
       "TV+:Spor",
       "iptv-org:sports->Spor",
       "source-group:sports->Spor",
+      "channel-name:Spor",
       "keyword:Spor",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 1791,
+    "manifest_latency_ms": 1119,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1185,
+    "segment_latency_ms": 922,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5071,10 +4972,10 @@
     "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 589,
+    "manifest_latency_ms": 580,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1000,
+    "segment_latency_ms": 871,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5095,10 +4996,10 @@
     "url": "http://tjktv-live.tjk.org/tjktv.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 6000000,
-    "manifest_latency_ms": 313,
+    "manifest_latency_ms": 305,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 774,
+    "segment_latency_ms": 485,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5123,10 +5024,10 @@
     "url": "https://tjktv-live.tjk.org/tjktv.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 6000000,
-    "manifest_latency_ms": 591,
+    "manifest_latency_ms": 397,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 972,
+    "segment_latency_ms": 626,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5152,10 +5053,10 @@
     "url": "http://88.212.15.29/live/bbc_first/index.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 310,
+    "manifest_latency_ms": 218,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 768,
+    "segment_latency_ms": 550,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -5178,10 +5079,10 @@
     "url": "https://glserver1.tamashaland.com/live/aBCH96886YznRbGOiqTnnQ__/stream_0.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 654,
+    "manifest_latency_ms": 368,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 821,
+    "segment_latency_ms": 614,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -5193,22 +5094,23 @@
     "category": "Film & Dizi",
     "category_source": "iptv-org",
     "category_votes": {
-      "Film & Dizi": 32,
+      "Film & Dizi": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:movies->Film & Dizi",
       "source-group:movies->Film & Dizi",
+      "channel-name:Film & Dizi",
       "keyword:Film & Dizi",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://gcinemahls.wns.live/hls/stream.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 472,
+    "manifest_latency_ms": 437,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 886,
+    "segment_latency_ms": 548,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -5220,22 +5122,110 @@
     "category": "Film & Dizi",
     "category_source": "fallback",
     "category_votes": {
-      "Film & Dizi": 4
+      "Film & Dizi": 44
     },
     "category_evidence": [
+      "channel-name:Film & Dizi",
       "keyword:Film & Dizi"
     ],
     "url": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/KanalD_principal_SRT/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 3302318,
-    "manifest_latency_ms": 278,
+    "bandwidth": 3320116,
+    "manifest_latency_ms": 559,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 847,
+    "segment_latency_ms": 752,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
     "variants": 1
+  },
+  {
+    "name": "Kanal D Drama (1080p)",
+    "tvg_id": "KanalDDrama.tr@SD",
+    "channel_key": "kanalddrama",
+    "category": "Film & Dizi",
+    "category_source": "fallback",
+    "category_votes": {
+      "Ulusal": 29,
+      "Film & Dizi": 44
+    },
+    "category_evidence": [
+      "iptv-org:entertainment->Ulusal",
+      "source-group:entertainment->Ulusal",
+      "channel-name:Film & Dizi",
+      "keyword:Film & Dizi",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "http://190.93.224.42/KANAL-D-DRAMA/index.m3u8",
+    "resolution": "872x480",
+    "bandwidth": 910000,
+    "manifest_latency_ms": 236,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "segment_latency_ms": 589,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200,
+    "variants": 1
+  },
+  {
+    "name": "Kanal D Drama (1080p)",
+    "tvg_id": "KanalDDrama.tr@SD",
+    "channel_key": "kanalddrama",
+    "category": "Film & Dizi",
+    "category_source": "fallback",
+    "category_votes": {
+      "Ulusal": 29,
+      "Film & Dizi": 44
+    },
+    "category_evidence": [
+      "iptv-org:entertainment->Ulusal",
+      "source-group:entertainment->Ulusal",
+      "channel-name:Film & Dizi",
+      "keyword:Film & Dizi",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/KanalD.stream/playlist.m3u8",
+    "resolution": "1920x1080",
+    "bandwidth": 3301921,
+    "manifest_latency_ms": 558,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "segment_latency_ms": 926,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200,
+    "variants": 1
+  },
+  {
+    "name": "Kanal D Drama (1080p)",
+    "tvg_id": "KanalDDrama.tr@SD",
+    "channel_key": "kanalddrama",
+    "category": "Film & Dizi",
+    "category_source": "fallback",
+    "category_votes": {
+      "Ulusal": 29,
+      "Film & Dizi": 44
+    },
+    "category_evidence": [
+      "iptv-org:entertainment->Ulusal",
+      "source-group:entertainment->Ulusal",
+      "channel-name:Film & Dizi",
+      "keyword:Film & Dizi",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01602-themahqfrance-vivekanald-samsungspain/playlist.m3u8",
+    "resolution": "1920x1080",
+    "bandwidth": 6046040,
+    "manifest_latency_ms": 175,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "segment_latency_ms": 215,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200,
+    "variants": 4
   },
   {
     "name": "BabyFirst (720p)",
@@ -5255,11 +5245,11 @@
     ],
     "url": "https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 3360000,
-    "manifest_latency_ms": 263,
+    "bandwidth": 6080000,
+    "manifest_latency_ms": 81,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 71,
+    "segment_latency_ms": 31,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5272,7 +5262,7 @@
     "category": "Çocuk",
     "category_source": "platform",
     "category_votes": {
-      "Çocuk": 132,
+      "Çocuk": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -5280,16 +5270,17 @@
       "TV+:Çocuk",
       "iptv-org:kids->Çocuk",
       "source-group:kids->Çocuk",
+      "channel-name:Çocuk",
       "keyword:Çocuk",
       "country:tr->Ulusal-fallback"
     ],
     "url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8",
     "resolution": "1280x720",
     "bandwidth": 1050000,
-    "manifest_latency_ms": 997,
+    "manifest_latency_ms": 411,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 912,
+    "segment_latency_ms": 670,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5302,7 +5293,7 @@
     "category": "Çocuk",
     "category_source": "platform",
     "category_votes": {
-      "Çocuk": 132,
+      "Çocuk": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -5310,16 +5301,17 @@
       "TV+:Çocuk",
       "iptv-org:kids->Çocuk",
       "source-group:kids->Çocuk",
+      "channel-name:Çocuk",
       "keyword:Çocuk",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8",
     "resolution": "1280x720",
     "bandwidth": 1050000,
-    "manifest_latency_ms": 872,
+    "manifest_latency_ms": 632,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1190,
+    "segment_latency_ms": 896,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5346,10 +5338,10 @@
     "url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
     "resolution": "1280x720",
     "bandwidth": 1050000,
-    "manifest_latency_ms": 451,
+    "manifest_latency_ms": 525,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 924,
+    "segment_latency_ms": 674,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5376,10 +5368,10 @@
     "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
     "resolution": "1280x720",
     "bandwidth": 1050000,
-    "manifest_latency_ms": 830,
+    "manifest_latency_ms": 714,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1178,
+    "segment_latency_ms": 926,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5406,10 +5398,10 @@
     "url": "https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8",
     "resolution": "1280x720",
     "bandwidth": 2000000,
-    "manifest_latency_ms": 613,
+    "manifest_latency_ms": 832,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 558,
+    "segment_latency_ms": 438,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5422,20 +5414,21 @@
     "category": "Çocuk",
     "category_source": "platform",
     "category_votes": {
-      "Çocuk": 104
+      "Çocuk": 144
     },
     "category_evidence": [
       "Tivibu:Çocuk",
       "TV+:Çocuk",
+      "channel-name:Çocuk",
       "keyword:Çocuk"
     ],
     "url": "http://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 9257600,
-    "manifest_latency_ms": 103,
+    "manifest_latency_ms": 476,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 114,
+    "segment_latency_ms": 490,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5448,7 +5441,7 @@
     "category": "Çocuk",
     "category_source": "platform",
     "category_votes": {
-      "Çocuk": 132,
+      "Çocuk": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -5456,16 +5449,17 @@
       "TV+:Çocuk",
       "iptv-org:kids->Çocuk",
       "source-group:kids->Çocuk",
+      "channel-name:Çocuk",
       "keyword:Çocuk",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 9257600,
-    "manifest_latency_ms": 113,
+    "manifest_latency_ms": 1038,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 140,
+    "segment_latency_ms": 528,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5478,20 +5472,21 @@
     "category": "Çocuk",
     "category_source": "platform",
     "category_votes": {
-      "Çocuk": 104
+      "Çocuk": 144
     },
     "category_evidence": [
       "Tivibu:Çocuk",
       "TV+:Çocuk",
+      "channel-name:Çocuk",
       "keyword:Çocuk"
     ],
     "url": "http://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 241,
+    "manifest_latency_ms": 417,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 348,
+    "segment_latency_ms": 590,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5504,7 +5499,7 @@
     "category": "Çocuk",
     "category_source": "platform",
     "category_votes": {
-      "Çocuk": 132,
+      "Çocuk": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -5512,16 +5507,17 @@
       "TV+:Çocuk",
       "iptv-org:kids->Çocuk",
       "source-group:kids->Çocuk",
+      "channel-name:Çocuk",
       "keyword:Çocuk",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 606,
+    "manifest_latency_ms": 218,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 666,
+    "segment_latency_ms": 512,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5547,14 +5543,40 @@
     "url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 270,
+    "manifest_latency_ms": 1238,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 512,
+    "segment_latency_ms": 1069,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
     "variants": 5
+  },
+  {
+    "name": "Zarok TV (720p)",
+    "tvg_id": "ZarokTV.tr@SD",
+    "channel_key": "zaroktv",
+    "category": "Çocuk",
+    "category_source": "official-content",
+    "category_votes": {
+      "Çocuk": 70,
+      "Ulusal": 1
+    },
+    "category_evidence": [
+      "official-content:Çocuk",
+      "country:tr->Ulusal-fallback"
+    ],
+    "url": "https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8",
+    "resolution": "1280x720",
+    "bandwidth": 2719024,
+    "manifest_latency_ms": 410,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "segment_latency_ms": 681,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200,
+    "variants": 1
   },
   {
     "name": "Love Nature (1080p)",
@@ -5577,10 +5599,10 @@
     "url": "https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 6046040,
-    "manifest_latency_ms": 97,
+    "manifest_latency_ms": 14,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 69,
+    "segment_latency_ms": 16,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5607,10 +5629,10 @@
     "url": "https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 5040000,
-    "manifest_latency_ms": 1044,
+    "manifest_latency_ms": 830,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1818,
+    "segment_latency_ms": 1422,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5634,11 +5656,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1235088,
-    "manifest_latency_ms": 995,
+    "bandwidth": 1316443,
+    "manifest_latency_ms": 1196,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1544,
+    "segment_latency_ms": 998,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5662,11 +5684,11 @@
     ],
     "url": "https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 3921991,
-    "manifest_latency_ms": 532,
+    "bandwidth": 4537256,
+    "manifest_latency_ms": 358,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 914,
+    "segment_latency_ms": 632,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5690,11 +5712,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 5754426,
-    "manifest_latency_ms": 530,
+    "bandwidth": 2427206,
+    "manifest_latency_ms": 366,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 914,
+    "segment_latency_ms": 652,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5721,10 +5743,10 @@
     "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
     "resolution": null,
     "bandwidth": 1577503,
-    "manifest_latency_ms": 582,
+    "manifest_latency_ms": 349,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 997,
+    "segment_latency_ms": 588,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5737,22 +5759,23 @@
     "category": "Müzik",
     "category_source": "iptv-org",
     "category_votes": {
-      "Müzik": 32,
+      "Müzik": 72,
       "Uluslararası": 10
     },
     "category_evidence": [
       "iptv-org:music->Müzik",
       "source-group:music->Müzik",
+      "channel-name:Müzik",
       "keyword:Müzik",
       "country:az->Uluslararası"
     ],
     "url": "https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 447,
+    "manifest_latency_ms": 426,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 904,
+    "segment_latency_ms": 732,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -5764,22 +5787,23 @@
     "category": "Müzik",
     "category_source": "iptv-org",
     "category_votes": {
-      "Müzik": 32,
+      "Müzik": 72,
       "Ulusal": 1
     },
     "category_evidence": [
       "iptv-org:music->Müzik",
       "source-group:music->Müzik",
+      "channel-name:Müzik",
       "keyword:Müzik",
       "country:tr->Ulusal-fallback"
     ],
     "url": "http://54.36.110.140/live3/live3.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 436,
+    "manifest_latency_ms": 276,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 740,
+    "segment_latency_ms": 472,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -5802,11 +5826,11 @@
     ],
     "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1174784,
-    "manifest_latency_ms": 432,
+    "bandwidth": 1170488,
+    "manifest_latency_ms": 327,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1018,
+    "segment_latency_ms": 628,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5830,11 +5854,11 @@
     ],
     "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1234784,
-    "manifest_latency_ms": 489,
+    "bandwidth": 1191769,
+    "manifest_latency_ms": 393,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 980,
+    "segment_latency_ms": 652,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5858,11 +5882,11 @@
     ],
     "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2987946,
-    "manifest_latency_ms": 671,
+    "bandwidth": 2978672,
+    "manifest_latency_ms": 480,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 868,
+    "segment_latency_ms": 628,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5889,10 +5913,10 @@
     "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
     "resolution": null,
     "bandwidth": 400000,
-    "manifest_latency_ms": 486,
+    "manifest_latency_ms": 408,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 972,
+    "segment_latency_ms": 586,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5916,11 +5940,11 @@
     ],
     "url": "https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2776194,
-    "manifest_latency_ms": 1050,
+    "bandwidth": 2776451,
+    "manifest_latency_ms": 1053,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1660,
+    "segment_latency_ms": 1319,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5944,11 +5968,11 @@
     ],
     "url": "https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2749552,
-    "manifest_latency_ms": 1042,
+    "bandwidth": 2703671,
+    "manifest_latency_ms": 1052,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1651,
+    "segment_latency_ms": 1319,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5972,10 +5996,10 @@
     "url": "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 7596000,
-    "manifest_latency_ms": 1066,
+    "manifest_latency_ms": 996,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1478,
+    "segment_latency_ms": 1136,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -5998,11 +6022,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8",
     "resolution": "1920x1088",
-    "bandwidth": 8575237,
-    "manifest_latency_ms": 836,
+    "bandwidth": 8688639,
+    "manifest_latency_ms": 980,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1688,
+    "segment_latency_ms": 980,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6026,10 +6050,10 @@
     "url": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 7596000,
-    "manifest_latency_ms": 1097,
+    "manifest_latency_ms": 1057,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1618,
+    "segment_latency_ms": 1316,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6053,11 +6077,11 @@
     ],
     "url": "https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2771962,
-    "manifest_latency_ms": 1066,
+    "bandwidth": 2766170,
+    "manifest_latency_ms": 736,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1654,
+    "segment_latency_ms": 1317,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6081,11 +6105,11 @@
     ],
     "url": "https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2755183,
-    "manifest_latency_ms": 1047,
+    "bandwidth": 2762649,
+    "manifest_latency_ms": 727,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1539,
+    "segment_latency_ms": 1323,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6109,11 +6133,11 @@
     ],
     "url": "https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2772490,
-    "manifest_latency_ms": 876,
+    "bandwidth": 2770612,
+    "manifest_latency_ms": 736,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1656,
+    "segment_latency_ms": 1312,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6136,11 +6160,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8",
     "resolution": "1920x1088",
-    "bandwidth": 6349562,
-    "manifest_latency_ms": 834,
+    "bandwidth": 7161625,
+    "manifest_latency_ms": 619,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1329,
+    "segment_latency_ms": 1225,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6165,10 +6189,10 @@
     "url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 5711200,
-    "manifest_latency_ms": 124,
+    "manifest_latency_ms": 61,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 365,
+    "segment_latency_ms": 44,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6181,7 +6205,7 @@
     "category": "Müzik",
     "category_source": "platform",
     "category_votes": {
-      "Müzik": 132,
+      "Müzik": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -6189,16 +6213,17 @@
       "TV+:Müzik",
       "iptv-org:music->Müzik",
       "source-group:music->Müzik",
+      "channel-name:Müzik",
       "keyword:Müzik",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 1546,
+    "manifest_latency_ms": 1297,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1828,
+    "segment_latency_ms": 1433,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -6210,7 +6235,7 @@
     "category": "Müzik",
     "category_source": "platform",
     "category_votes": {
-      "Müzik": 132,
+      "Müzik": 172,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -6218,16 +6243,17 @@
       "TV+:Müzik",
       "iptv-org:music->Müzik",
       "source-group:music->Müzik",
+      "channel-name:Müzik",
       "keyword:Müzik",
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 138,
+    "manifest_latency_ms": 95,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 77,
+    "segment_latency_ms": 48,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6240,7 +6266,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6251,11 +6277,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1302040,
-    "manifest_latency_ms": 1399,
+    "bandwidth": 1301805,
+    "manifest_latency_ms": 946,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1706,
+    "segment_latency_ms": 1466,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6268,7 +6294,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6279,11 +6305,11 @@
     ],
     "url": "https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 4660912,
-    "manifest_latency_ms": 716,
+    "bandwidth": 3345223,
+    "manifest_latency_ms": 627,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1094,
+    "segment_latency_ms": 804,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6296,7 +6322,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6307,11 +6333,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1632861,
-    "manifest_latency_ms": 571,
+    "bandwidth": 1663388,
+    "manifest_latency_ms": 463,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 958,
+    "segment_latency_ms": 662,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6324,7 +6350,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6335,11 +6361,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 3614938,
-    "manifest_latency_ms": 1403,
+    "bandwidth": 3525966,
+    "manifest_latency_ms": 937,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1707,
+    "segment_latency_ms": 1468,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6352,7 +6378,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6363,11 +6389,11 @@
     ],
     "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
     "resolution": "1080x720",
-    "bandwidth": 1901136,
-    "manifest_latency_ms": 585,
+    "bandwidth": 1901237,
+    "manifest_latency_ms": 242,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 920,
+    "segment_latency_ms": 398,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6380,7 +6406,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -6393,11 +6419,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2868864,
-    "manifest_latency_ms": 1399,
+    "bandwidth": 2753415,
+    "manifest_latency_ms": 947,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1714,
+    "segment_latency_ms": 1470,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6410,7 +6436,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6421,11 +6447,11 @@
     ],
     "url": "https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2256300,
-    "manifest_latency_ms": 850,
+    "bandwidth": 2274800,
+    "manifest_latency_ms": 633,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1013,
+    "segment_latency_ms": 815,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6438,7 +6464,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -6447,11 +6473,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1369803,
-    "manifest_latency_ms": 1052,
+    "bandwidth": 1341245,
+    "manifest_latency_ms": 607,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1315,
+    "segment_latency_ms": 1590,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6464,7 +6490,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6475,11 +6501,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1283799,
-    "manifest_latency_ms": 606,
+    "bandwidth": 1303374,
+    "manifest_latency_ms": 394,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1086,
+    "segment_latency_ms": 722,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6492,7 +6518,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6503,11 +6529,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2073506,
-    "manifest_latency_ms": 1231,
+    "bandwidth": 3362503,
+    "manifest_latency_ms": 1204,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1578,
+    "segment_latency_ms": 1524,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6520,7 +6546,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -6533,11 +6559,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_dimtv/dimtv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1761237,
-    "manifest_latency_ms": 840,
+    "bandwidth": 1762217,
+    "manifest_latency_ms": 609,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1702,
+    "segment_latency_ms": 1009,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6550,7 +6576,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6562,10 +6588,10 @@
     "url": "https://canli.edessatv.com/hls/stream.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 3269024,
-    "manifest_latency_ms": 496,
+    "manifest_latency_ms": 280,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 920,
+    "segment_latency_ms": 558,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6578,7 +6604,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6589,11 +6615,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2157426,
-    "manifest_latency_ms": 826,
+    "bandwidth": 2124660,
+    "manifest_latency_ms": 1619,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1432,
+    "segment_latency_ms": 1050,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6606,7 +6632,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6617,11 +6643,11 @@
     ],
     "url": "https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2643186,
-    "manifest_latency_ms": 704,
+    "bandwidth": 2625448,
+    "manifest_latency_ms": 489,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 991,
+    "segment_latency_ms": 788,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6634,7 +6660,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -6643,11 +6669,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1729038,
-    "manifest_latency_ms": 844,
+    "bandwidth": 1728443,
+    "manifest_latency_ms": 1618,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1392,
+    "segment_latency_ms": 1054,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6660,7 +6686,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6671,11 +6697,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1939043,
-    "manifest_latency_ms": 1169,
+    "bandwidth": 1931208,
+    "manifest_latency_ms": 609,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1544,
+    "segment_latency_ms": 1220,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6688,7 +6714,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -6697,11 +6723,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 1041740,
-    "manifest_latency_ms": 540,
+    "bandwidth": 951179,
+    "manifest_latency_ms": 361,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 932,
+    "segment_latency_ms": 608,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6714,7 +6740,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -6727,11 +6753,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1704370,
-    "manifest_latency_ms": 615,
+    "bandwidth": 1665745,
+    "manifest_latency_ms": 478,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1073,
+    "segment_latency_ms": 612,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6744,7 +6770,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -6757,11 +6783,11 @@
     ],
     "url": "https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2980000,
-    "manifest_latency_ms": 455,
+    "bandwidth": 2920000,
+    "manifest_latency_ms": 403,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 904,
+    "segment_latency_ms": 596,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6774,7 +6800,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -6787,11 +6813,11 @@
     ],
     "url": "https://win8.yayin.com.tr/haber61tv/smil:haber61tv.smil/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2980000,
-    "manifest_latency_ms": 446,
+    "bandwidth": 2920000,
+    "manifest_latency_ms": 271,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 892,
+    "segment_latency_ms": 618,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6804,7 +6830,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6815,11 +6841,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_hunattv/hunattv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1224632,
-    "manifest_latency_ms": 834,
+    "bandwidth": 1590585,
+    "manifest_latency_ms": 617,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1754,
+    "segment_latency_ms": 1184,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6832,7 +6858,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -6841,11 +6867,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 3179640,
-    "manifest_latency_ms": 604,
+    "bandwidth": 2384003,
+    "manifest_latency_ms": 366,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1034,
+    "segment_latency_ms": 682,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6858,7 +6884,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6869,11 +6895,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1362183,
-    "manifest_latency_ms": 829,
+    "bandwidth": 1231320,
+    "manifest_latency_ms": 922,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1346,
+    "segment_latency_ms": 1192,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6886,7 +6912,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6897,11 +6923,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1297805,
-    "manifest_latency_ms": 830,
+    "bandwidth": 1335174,
+    "manifest_latency_ms": 683,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1312,
+    "segment_latency_ms": 980,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6914,7 +6940,7 @@
     "category": "Yerel",
     "category_source": "platform",
     "category_votes": {
-      "Yerel": 95,
+      "Yerel": 140,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6926,11 +6952,11 @@
     ],
     "url": "https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2900000,
-    "manifest_latency_ms": 619,
+    "bandwidth": 2770000,
+    "manifest_latency_ms": 374,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1040,
+    "segment_latency_ms": 653,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6943,7 +6969,7 @@
     "category": "Yerel",
     "category_source": "platform",
     "category_votes": {
-      "Yerel": 95,
+      "Yerel": 140,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6955,11 +6981,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kanal23/kanal23/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1138636,
-    "manifest_latency_ms": 861,
+    "bandwidth": 1150880,
+    "manifest_latency_ms": 621,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1697,
+    "segment_latency_ms": 980,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -6972,7 +6998,7 @@
     "category": "Yerel",
     "category_source": "platform",
     "category_votes": {
-      "Yerel": 95,
+      "Yerel": 140,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -6984,11 +7010,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1151112,
-    "manifest_latency_ms": 857,
+    "bandwidth": 1272514,
+    "manifest_latency_ms": 686,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1346,
+    "segment_latency_ms": 983,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7001,7 +7027,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7012,11 +7038,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2137932,
-    "manifest_latency_ms": 843,
+    "bandwidth": 2170368,
+    "manifest_latency_ms": 1045,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1334,
+    "segment_latency_ms": 990,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7029,7 +7055,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7040,11 +7066,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1531322,
-    "manifest_latency_ms": 596,
+    "bandwidth": 1556526,
+    "manifest_latency_ms": 349,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1044,
+    "segment_latency_ms": 590,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7057,7 +7083,7 @@
     "category": "Yerel",
     "category_source": "platform",
     "category_votes": {
-      "Yerel": 95,
+      "Yerel": 140,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7069,11 +7095,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/kanal33/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2115630,
-    "manifest_latency_ms": 528,
+    "bandwidth": 2222445,
+    "manifest_latency_ms": 387,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 949,
+    "segment_latency_ms": 689,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7086,7 +7112,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7097,8 +7123,8 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1269556,
-    "manifest_latency_ms": 887,
+    "bandwidth": 1045175,
+    "manifest_latency_ms": 624,
     "status": "verified",
     "reason": "2 media segment(s) verified",
     "segment_latency_ms": 1348,
@@ -7114,7 +7140,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7125,11 +7151,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1197452,
-    "manifest_latency_ms": 838,
+    "bandwidth": 1192458,
+    "manifest_latency_ms": 1047,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1365,
+    "segment_latency_ms": 1310,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7142,7 +7168,7 @@
     "category": "Yerel",
     "category_source": "platform",
     "category_votes": {
-      "Yerel": 95,
+      "Yerel": 140,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7154,11 +7180,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1285896,
-    "manifest_latency_ms": 850,
+    "bandwidth": 1341879,
+    "manifest_latency_ms": 1033,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1347,
+    "segment_latency_ms": 1310,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7171,7 +7197,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7182,11 +7208,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2175507,
-    "manifest_latency_ms": 851,
+    "bandwidth": 2606363,
+    "manifest_latency_ms": 1041,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1351,
+    "segment_latency_ms": 1314,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7199,7 +7225,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7210,11 +7236,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2114589,
-    "manifest_latency_ms": 829,
+    "bandwidth": 1968572,
+    "manifest_latency_ms": 1050,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1342,
+    "segment_latency_ms": 1308,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7227,7 +7253,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7238,11 +7264,11 @@
     ],
     "url": "https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 2948804,
-    "manifest_latency_ms": 533,
+    "bandwidth": 3273868,
+    "manifest_latency_ms": 385,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 913,
+    "segment_latency_ms": 650,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7255,7 +7281,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7266,11 +7292,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1458117,
-    "manifest_latency_ms": 844,
+    "bandwidth": 1759079,
+    "manifest_latency_ms": 747,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1361,
+    "segment_latency_ms": 1306,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7283,7 +7309,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7294,11 +7320,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2280616,
-    "manifest_latency_ms": 531,
+    "bandwidth": 2267310,
+    "manifest_latency_ms": 349,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 918,
+    "segment_latency_ms": 761,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7311,7 +7337,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7322,11 +7348,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1238820,
-    "manifest_latency_ms": 863,
+    "bandwidth": 1192450,
+    "manifest_latency_ms": 945,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1336,
+    "segment_latency_ms": 1200,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7339,7 +7365,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7348,11 +7374,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8",
     "resolution": "720x576",
-    "bandwidth": 1367558,
-    "manifest_latency_ms": 851,
+    "bandwidth": 1357683,
+    "manifest_latency_ms": 1368,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1258,
+    "segment_latency_ms": 1544,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7365,7 +7391,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7376,11 +7402,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1841675,
-    "manifest_latency_ms": 598,
+    "bandwidth": 1642534,
+    "manifest_latency_ms": 363,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1042,
+    "segment_latency_ms": 624,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7393,7 +7419,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -7406,11 +7432,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 3206245,
-    "manifest_latency_ms": 831,
+    "bandwidth": 3226790,
+    "manifest_latency_ms": 662,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1362,
+    "segment_latency_ms": 985,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7423,7 +7449,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7432,11 +7458,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1280281,
-    "manifest_latency_ms": 854,
+    "bandwidth": 1253992,
+    "manifest_latency_ms": 606,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1776,
+    "segment_latency_ms": 1199,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7449,7 +7475,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7458,11 +7484,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1220084,
-    "manifest_latency_ms": 869,
+    "bandwidth": 1308388,
+    "manifest_latency_ms": 609,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1340,
+    "segment_latency_ms": 1199,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7475,7 +7501,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7484,11 +7510,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 5103012,
-    "manifest_latency_ms": 835,
+    "bandwidth": 4863821,
+    "manifest_latency_ms": 1219,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1532,
+    "segment_latency_ms": 1022,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7501,7 +7527,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7510,11 +7536,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/tv1/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2197147,
-    "manifest_latency_ms": 550,
+    "bandwidth": 2169543,
+    "manifest_latency_ms": 507,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 934,
+    "segment_latency_ms": 602,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7527,7 +7553,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7537,10 +7563,10 @@
     "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2305600,
-    "manifest_latency_ms": 544,
+    "manifest_latency_ms": 578,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1134,
+    "segment_latency_ms": 627,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7553,7 +7579,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7562,11 +7588,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1051691,
-    "manifest_latency_ms": 827,
+    "bandwidth": 1202596,
+    "manifest_latency_ms": 1040,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1680,
+    "segment_latency_ms": 990,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7579,7 +7605,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7588,11 +7614,11 @@
     ],
     "url": "https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1982127,
-    "manifest_latency_ms": 587,
+    "bandwidth": 2199988,
+    "manifest_latency_ms": 376,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1044,
+    "segment_latency_ms": 629,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7605,7 +7631,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7615,10 +7641,10 @@
     "url": "http://canli.tvden.com.tr/hls/live.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 1019,
+    "manifest_latency_ms": 721,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 964,
+    "segment_latency_ms": 714,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -7630,7 +7656,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -7639,11 +7665,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 4951211,
-    "manifest_latency_ms": 845,
+    "bandwidth": 4856575,
+    "manifest_latency_ms": 614,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1726,
+    "segment_latency_ms": 981,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7656,7 +7682,7 @@
     "category": "Yerel",
     "category_source": "regional-reference",
     "category_votes": {
-      "Yerel": 45,
+      "Yerel": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7667,11 +7693,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1173178,
-    "manifest_latency_ms": 833,
+    "bandwidth": 1276282,
+    "manifest_latency_ms": 606,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1756,
+    "segment_latency_ms": 976,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7684,7 +7710,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Ulusal": 28
     },
     "category_evidence": [
@@ -7695,11 +7721,11 @@
     ],
     "url": "https://yayin1.canlitv.fun/live/kibrisadatv.stream/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 1449309,
-    "manifest_latency_ms": 797,
+    "bandwidth": 1260595,
+    "manifest_latency_ms": 633,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1210,
+    "segment_latency_ms": 847,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7712,7 +7738,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7723,11 +7749,11 @@
     ],
     "url": "https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 1692357,
-    "manifest_latency_ms": 524,
+    "bandwidth": 1892028,
+    "manifest_latency_ms": 365,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 916,
+    "segment_latency_ms": 610,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7740,7 +7766,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7752,10 +7778,10 @@
     "url": "https://live.al-zahratv.com/live/playlist.m3u8",
     "resolution": "1280x720",
     "bandwidth": 2509424,
-    "manifest_latency_ms": 573,
+    "manifest_latency_ms": 466,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1140,
+    "segment_latency_ms": 730,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7768,7 +7794,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7779,11 +7805,11 @@
     ],
     "url": "https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 2948892,
-    "manifest_latency_ms": 538,
+    "bandwidth": 3008300,
+    "manifest_latency_ms": 305,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 771,
+    "segment_latency_ms": 576,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7796,7 +7822,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7808,10 +7834,10 @@
     "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8",
     "resolution": null,
     "bandwidth": 1301120,
-    "manifest_latency_ms": 582,
+    "manifest_latency_ms": 355,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 992,
+    "segment_latency_ms": 636,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7824,7 +7850,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Ulusal": 28
     },
     "category_evidence": [
@@ -7836,10 +7862,10 @@
     "url": "http://live.al-zahratv.com/live/playlist.m3u8",
     "resolution": "1280x720",
     "bandwidth": 2509424,
-    "manifest_latency_ms": 305,
+    "manifest_latency_ms": 121,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1252,
+    "segment_latency_ms": 724,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7852,7 +7878,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 29
     },
     "category_evidence": [
@@ -7863,11 +7889,11 @@
     ],
     "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
     "resolution": "1920x1080",
-    "bandwidth": 1421092,
-    "manifest_latency_ms": 546,
+    "bandwidth": 1382928,
+    "manifest_latency_ms": 450,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1045,
+    "segment_latency_ms": 750,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7880,7 +7906,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Ulusal": 28
     },
     "category_evidence": [
@@ -7892,10 +7918,10 @@
     "url": "https://5a3ed7a72ed4b.streamlock.net/live/SMIL:myStream.smil/playlist.m3u8",
     "resolution": "1280x720",
     "bandwidth": 1700000,
-    "manifest_latency_ms": 759,
+    "manifest_latency_ms": 505,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 958,
+    "segment_latency_ms": 690,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7908,7 +7934,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 21
     },
     "category_evidence": [
@@ -7919,14 +7945,42 @@
     "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2305600,
-    "manifest_latency_ms": 640,
+    "manifest_latency_ms": 572,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 927,
+    "segment_latency_ms": 684,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
     "variants": 3
+  },
+  {
+    "name": "Manas TV (1080p)",
+    "tvg_id": "ManasTV.kg@SD",
+    "channel_key": "manastv",
+    "category": "Uluslararası",
+    "category_source": "international-reference",
+    "category_votes": {
+      "Uluslararası": 100,
+      "Ulusal": 60
+    },
+    "category_evidence": [
+      "international-reference:Uluslararası",
+      "iptv-org:education->Ulusal",
+      "iptv-org:culture->Ulusal",
+      "iptv-org:entertainment->Ulusal",
+      "country:kg->Uluslararası"
+    ],
+    "url": "http://212.42.111.152:8080/hls/manas.m3u8",
+    "resolution": null,
+    "bandwidth": null,
+    "manifest_latency_ms": 340,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "segment_latency_ms": 868,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200
   },
   {
     "name": "MC TV (720p)",
@@ -7935,7 +7989,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Ulusal": 28
     },
     "category_evidence": [
@@ -7946,11 +8000,11 @@
     ],
     "url": "https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&output=playlist.m3u8&protocol=https&service=wowza&type=live",
     "resolution": "1280x720",
-    "bandwidth": 2009682,
-    "manifest_latency_ms": 494,
+    "bandwidth": 1908764,
+    "manifest_latency_ms": 314,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 946,
+    "segment_latency_ms": 610,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -7963,7 +8017,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -7977,10 +8031,10 @@
     "url": "https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 3128000,
-    "manifest_latency_ms": 420,
+    "manifest_latency_ms": 301,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 725,
+    "segment_latency_ms": 530,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8001,10 +8055,10 @@
     "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01255-secomcofites-my-myzen-en-plex/playlist.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 4716800,
-    "manifest_latency_ms": 60,
+    "manifest_latency_ms": 28,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 640,
+    "segment_latency_ms": 404,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8017,7 +8071,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Ulusal": 28
     },
     "category_evidence": [
@@ -8029,10 +8083,10 @@
     "url": "https://turkhls.persiana.live/hls/stream.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 456,
+    "manifest_latency_ms": 425,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 900,
+    "segment_latency_ms": 704,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -8044,7 +8098,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55
+      "Uluslararası": 100
     },
     "category_evidence": [
       "international-reference:Uluslararası",
@@ -8052,11 +8106,11 @@
     ],
     "url": "https://live.artidijitalmedya.com/artidijital_sat7turk/sat7turk/playlist.m3u8",
     "resolution": "1280x720",
-    "bandwidth": 1440616,
-    "manifest_latency_ms": 857,
+    "bandwidth": 1408585,
+    "manifest_latency_ms": 1086,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1344,
+    "segment_latency_ms": 1212,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8069,7 +8123,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -8083,10 +8137,10 @@
     "url": "https://tv-trtarabi.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 726,
+    "manifest_latency_ms": 132,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 524,
+    "segment_latency_ms": 22,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8099,7 +8153,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -8109,10 +8163,10 @@
     "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 710,
+    "manifest_latency_ms": 259,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 550,
+    "segment_latency_ms": 380,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8125,7 +8179,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -8135,10 +8189,10 @@
     "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 72,
+    "manifest_latency_ms": 264,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 66,
+    "segment_latency_ms": 20,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8151,7 +8205,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 45,
+      "Uluslararası": 90,
       "Ulusal": 1
     },
     "category_evidence": [
@@ -8161,10 +8215,10 @@
     "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 672,
+    "manifest_latency_ms": 145,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 36,
+    "segment_latency_ms": 210,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8177,7 +8231,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 49,
+      "Uluslararası": 94,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -8192,10 +8246,10 @@
     "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
     "resolution": "2560x1440",
     "bandwidth": 11545600,
-    "manifest_latency_ms": 42,
+    "manifest_latency_ms": 18,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 46,
+    "segment_latency_ms": 18,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8208,7 +8262,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 49,
+      "Uluslararası": 94,
       "Haber": 32,
       "Ulusal": 1
     },
@@ -8223,10 +8277,10 @@
     "url": "https://dash2.antik.sk/live/test_trt_world_atktv/playlist.m3u8",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 608,
+    "manifest_latency_ms": 442,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 910,
+    "segment_latency_ms": 624,
     "encrypted": false,
     "vod": false,
     "http_code": 200
@@ -8238,7 +8292,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Ulusal": 28
     },
     "category_evidence": [
@@ -8250,10 +8304,10 @@
     "url": "https://ncdn.telewebion.ir/azarbayjangharbi/live/playlist.m3u8",
     "resolution": "720x576",
     "bandwidth": 1515800,
-    "manifest_latency_ms": 1081,
+    "manifest_latency_ms": 948,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 1364,
+    "segment_latency_ms": 1038,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
@@ -8266,7 +8320,7 @@
     "category": "Uluslararası",
     "category_source": "international-reference",
     "category_votes": {
-      "Uluslararası": 55,
+      "Uluslararası": 100,
       "Ulusal": 28
     },
     "category_evidence": [
@@ -8278,10 +8332,10 @@
     "url": "https://live.yoltv.com/hls/stream.m3u8",
     "resolution": "1280x720",
     "bandwidth": 1108800,
-    "manifest_latency_ms": 482,
+    "manifest_latency_ms": 360,
     "status": "verified",
     "reason": "2 media segment(s) verified",
-    "segment_latency_ms": 894,
+    "segment_latency_ms": 696,
     "encrypted": false,
     "vod": false,
     "http_code": 200,
