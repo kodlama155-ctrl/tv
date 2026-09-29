@@ -21,7 +21,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-m3u
+  group: update-m3u-v2
   cancel-in-progress: true
 
 jobs:
