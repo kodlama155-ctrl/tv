@@ -1,22 +1,22 @@
 {
-  "updated_at_utc": "2026-09-29T17:32:51.185834+00:00",
+  "updated_at_utc": "2026-09-29T17:41:36.491567+00:00",
   "fallback_targets": 5,
   "pages_scanned": 5,
   "pages_with_candidates": 3,
-  "raw_candidates": 13,
-  "accepted_unique_candidates": 12,
+  "raw_candidates": 9,
+  "accepted_unique_candidates": 8,
   "probe_statuses": {
-    "restricted": 2,
+    "restricted": 1,
     "dead": 1,
-    "verified": 10
+    "verified": 7
   },
   "sources": [
     {
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "network_events": 13,
-      "response_bodies_scanned": 648,
+      "network_events": 2,
+      "response_bodies_scanned": 1072,
       "candidates": [
         {
           "url": "https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758",
@@ -29,30 +29,6 @@
           "referer": "https://www.atv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "script-body"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "fetch-body"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8?st=5FP5hPAEx0p2W8mvV2RNYg&e=1790748377",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "fetch-body"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv_720p.m3u8?st=5FP5hPAEx0p2W8mvV2RNYg&e=1790748377",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "request"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv_480p.m3u8?st=5FP5hPAEx0p2W8mvV2RNYg&e=1790748377",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "request"
         }
       ]
     },
@@ -61,15 +37,15 @@
       "page": "https://www.benguturk.com/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 30,
+      "response_bodies_scanned": 31,
       "candidates": []
     },
     {
       "name": "EKOTÜRK",
       "page": "https://www.ekoturk.com/canli-yayin/",
       "status": "ok",
-      "network_events": 24,
-      "response_bodies_scanned": 106,
+      "network_events": 23,
+      "response_bodies_scanned": 103,
       "candidates": [
         {
           "url": "https://cdn.ekoturk.net/hls/master.m3u8",
@@ -102,7 +78,7 @@
       "page": "https://www.startv.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 7,
-      "response_bodies_scanned": 123,
+      "response_bodies_scanned": 114,
       "candidates": [
         {
           "url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9",
@@ -117,7 +93,7 @@
           "via": "script-body"
         },
         {
-          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjxbpb4e5kz&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
+          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjy44sj1v62&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
           "referer": "https://www.startv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
@@ -129,7 +105,7 @@
       "page": "https://www.tv100.com/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 13,
+      "response_bodies_scanned": 12,
       "candidates": []
     }
   ]

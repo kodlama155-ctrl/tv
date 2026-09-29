@@ -1,8 +1,12 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
-https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_720p.m3u8?app=bf58ab52-4865-4c81-b223-26b41009801e&ce=3
+#EXTVLCOPT:http-referrer=https://www.tv8.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=bf58ab52-4865-4c81-b223-26b41009801e&ce=3
 #EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-https://tv-trt2-ts.live.trt.com.tr/master.m3u8
+#EXTVLCOPT:http-referrer=https://www.trt2.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://tv-trt2.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-id="CNNTurk.tr@HD" group-title="Haber",CNN Türk
 https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8
 #EXTINF:-1 tvg-id="AnadoluAgency.tr@SD" tvg-logo="https://i.imgur.com/dWElJll.png" group-title="Haber",AA Live
