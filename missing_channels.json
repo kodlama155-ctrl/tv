@@ -1,20 +1,27 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 56,
-  "core_channels_verified": 46,
-  "core_channels_geo_restricted": 4,
-  "core_channels_not_verified": 10,
+  "core_channels_verified": 44,
+  "core_channels_geo_restricted": 6,
+  "core_channels_not_verified": 12,
   "status_counts": {
-    "verified": 46,
+    "verified": 44,
     "restricted": 5,
-    "unknown": 1,
-    "geo-restricted": 4
+    "geo-restricted": 6,
+    "unknown": 1
   },
   "missing_channels": [
     {
-      "name": "TRT 2",
+      "name": "TV8.5",
       "expected_category": "Ulusal",
       "status": "restricted",
+      "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401",
+      "candidate_url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=bf58ab52-4865-4c81-b223-26b41009801e&ce=3"
+    },
+    {
+      "name": "TRT 2",
+      "expected_category": "Ulusal",
+      "status": "geo-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
     },
@@ -31,6 +38,13 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
+    },
+    {
+      "name": "TRT Spor",
+      "expected_category": "Spor",
+      "status": "geo-restricted",
+      "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
+      "candidate_url": "https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor"
     },
     {
       "name": "TRT Spor Yıldız",
