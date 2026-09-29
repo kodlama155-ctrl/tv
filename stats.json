@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T04:05:17.555663+00:00",
+  "updated_at_utc": "2026-09-29T04:06:07.725509+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -99,14 +99,14 @@
     "Uluslararası": 0,
     "Diğer": 22
   },
-  "tr_recheck_candidates": 66,
-  "tr_recheck_restricted_candidates": 24,
-  "tr_recheck_unknown_candidates": 42,
-  "tr_verified_entries": 11,
-  "tr_recovered_restricted_entries": 10,
-  "tr_recovered_unknown_entries": 1,
+  "tr_recheck_candidates": 55,
+  "tr_recheck_restricted_candidates": 14,
+  "tr_recheck_unknown_candidates": 41,
+  "tr_verified_entries": 0,
+  "tr_recovered_restricted_entries": 0,
+  "tr_recovered_unknown_entries": 0,
   "tr_still_restricted_entries": 14,
   "tr_still_unknown_entries": 41,
   "tr_recheck_workers": 8,
-  "tr_recheck_at_utc": "2026-09-29T04:05:17.555663+00:00"
+  "tr_recheck_at_utc": "2026-09-29T04:06:07.725509+00:00"
 }
