@@ -78,3 +78,18 @@ https://tv-trt2.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
 https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk_1080p.m3u8
 
+
+# --- TRT 2 targeted probe round ---
+
+# TRT official HTTP 1440p endpoint seen in fresh public lists.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+http://tv-trt2.medya.trt.com.tr/master_1440.m3u8
+
+# TRT official-style DAI host candidate.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+https://tv-trt2-dai.medya.trt.com.tr/master.m3u8
+
+# BluTV DVR distribution for TRT 2.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+https://trt2dvr.blutv.com/blutv_trt2_dvr/live.m3u8
+
