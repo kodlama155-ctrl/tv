@@ -1,21 +1,16 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 56,
-  "core_channels_verified": 43,
-  "core_channels_not_verified": 13,
+  "core_channels_verified": 46,
+  "core_channels_geo_restricted": 4,
+  "core_channels_not_verified": 10,
   "status_counts": {
-    "verified": 43,
-    "restricted": 12,
-    "unknown": 1
+    "verified": 46,
+    "restricted": 5,
+    "unknown": 1,
+    "geo-restricted": 4
   },
   "missing_channels": [
-    {
-      "name": "TV8.5",
-      "expected_category": "Ulusal",
-      "status": "restricted",
-      "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401",
-      "candidate_url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3"
-    },
     {
       "name": "TRT 2",
       "expected_category": "Ulusal",
@@ -38,44 +33,30 @@
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
     },
     {
-      "name": "TRT Spor",
-      "expected_category": "Spor",
-      "status": "restricted",
-      "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
-      "candidate_url": "https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor"
-    },
-    {
       "name": "TRT Spor Yıldız",
       "expected_category": "Spor",
-      "status": "restricted",
+      "status": "geo-restricted",
       "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
       "candidate_url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor"
     },
     {
       "name": "FX",
       "expected_category": "Film & Dizi",
-      "status": "restricted",
+      "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
     },
     {
-      "name": "TRT Çocuk",
-      "expected_category": "Çocuk",
-      "status": "restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8"
-    },
-    {
       "name": "BabyTV Türkiye",
       "expected_category": "Çocuk",
-      "status": "restricted",
+      "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/babytv/index.m3u8"
     },
     {
       "name": "Disney Junior",
       "expected_category": "Çocuk",
-      "status": "restricted",
+      "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8"
     },
