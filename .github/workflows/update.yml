@@ -9,6 +9,8 @@ on:
       - "discover.py"
       - "discover_queries.txt"
       - "sources.txt"
+      - "priority_sources.m3u"
+      - "channel_policy.py"
       - "tr_recheck.py"
       - ".github/workflows/update.yml"
   schedule:
@@ -47,7 +49,7 @@ jobs:
         run: |
           git config user.name "emirtv-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add             a.m3u r.m3u u.m3u all.m3u             stats.json validation.json             discovered.m3u discovery_stats.json
+          git add             a.m3u r.m3u u.m3u all.m3u             stats.json validation.json missing_channels.json             discovered.m3u discovery_stats.json
 
           if git diff --cached --quiet; then
             echo "No changes"
@@ -98,7 +100,7 @@ jobs:
         run: |
           git config user.name "emirtv-tr-runner"
           git config user.email "actions@users.noreply.github.com"
-          git add a.m3u r.m3u all.m3u stats.json validation.json
+          git add a.m3u r.m3u all.m3u stats.json validation.json missing_channels.json
 
           git diff --cached --quiet
           if ($LASTEXITCODE -eq 0) {
