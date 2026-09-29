@@ -89,25 +89,25 @@ OFFICIAL_SOURCES = [
     {
         "name": "A Spor",
         "category": "Spor",
-        "page": "https://www.ahaber.com.tr/canli-yayin-aspor.html",
+        "page": "https://www.aspor.com.tr/webtv/canli-yayin",
         "hints": ["aspor", "a-spor"],
     },
     {
         "name": "A Para",
         "category": "Haber",
-        "page": "https://www.ahaber.com.tr/canli-yayin-apara.html",
+        "page": "https://www.apara.com.tr/canli-yayin",
         "hints": ["apara", "a-para"],
     },
     {
         "name": "A News",
         "category": "Uluslararası",
-        "page": "https://www.ahaber.com.tr/canli-yayin-anews.html",
+        "page": "https://www.anews.com.tr/webtv/live-broadcast",
         "hints": ["anews", "a-news"],
     },
     {
         "name": "Vav TV",
         "category": "Dini",
-        "page": "https://www.ahaber.com.tr/canli-yayin-vavtv.html",
+        "page": "https://www.vavtv.com.tr/canli-yayin",
         "hints": ["vavtv", "vav"],
     },
     {
