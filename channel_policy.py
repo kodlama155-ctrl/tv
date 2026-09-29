@@ -308,49 +308,15 @@ def _identity_category(identity: str) -> str | None:
     return None
 
 
+def category_decision(meta: str) -> dict:
+    # Keep the classification engine separate so channel placement is decided
+    # from platform/API evidence, not from ad-hoc overrides in this file.
+    from category_engine import classify
+    return classify(meta)
+
+
 def category_for(meta: str) -> str:
-    name = channel_name(meta)
-    identity = channel_key(meta, name)
-
-    explicit = _identity_category(identity)
-    if explicit:
-        return explicit
-
-    country = country_from_tvg_id(meta)
-    if country and country != "tr":
-        return "Uluslararası"
-
-    group = fold(existing_group(meta)).strip()
-    if group in GROUP_MAP:
-        return GROUP_MAP[group]
-
-    haystack = fold(f"{existing_group(meta)} {name}")
-
-    keyword_groups = [
-        ("Yerel", ["local", "regional", "yerel", "belediye"]),
-        ("Haber", ["news", "haber", "gundem", "gazete", "breaking"]),
-        ("Spor", ["sports", "sport", "spor", "futbol", "football", "basketbol"]),
-        ("Film & Dizi", ["movie", "film", "cinema", "sinema", "series", "serial", "dizi"]),
-        ("Çocuk", ["kids", "children", "cocuk", "cartoon", "animation", "cizgi"]),
-        ("Belgesel", ["documentary", "belgesel", "nature", "doga", "history", "science"]),
-        ("Yaşam", ["lifestyle", "yasam", "gezi", "yemek", "travel", "food", "hobi"]),
-        ("Müzik", ["music", "muzik", "radyo", "radio"]),
-        ("Uluslararası", ["international", "global", "world"]),
-    ]
-    for category, keywords in keyword_groups:
-        for keyword in keywords:
-            if re.search(
-                rf"(?<![a-z0-9]){re.escape(fold(keyword))}(?![a-z0-9])",
-                haystack,
-            ):
-                return category
-
-    # Turkish channels with no stronger signal are treated as national/general.
-    if country == "tr":
-        return "Ulusal"
-
-    return "Diğer"
-
+    return category_decision(meta)["category"]
 
 def normalize_meta(meta: str) -> tuple[str, str, str]:
     category = category_for(meta)
