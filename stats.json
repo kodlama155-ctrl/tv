@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T01:28:59.137738+00:00",
+  "updated_at_utc": "2026-09-29T01:32:13.228067+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -44,24 +44,24 @@
   "stream_validation_statuses": {
     "restricted": 33,
     "unknown": 86,
-    "verified": 180,
-    "dead": 38
+    "verified": 181,
+    "dead": 37
   },
-  "verified_entries": 155,
+  "verified_entries": 156,
   "restricted_entries": 24,
   "unknown_entries": 41,
   "unknown_retry_candidates": 87,
   "unknown_retry_recovered": 1,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
-  "dead_entries": 27,
+  "dead_entries": 26,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 220,
+  "all_non_dead_non_drm_entries": 221,
   "core_channels_total": 56,
   "core_channels_verified": 41,
   "core_channels_not_verified": 15,
   "categories_verified": {
-    "Ulusal": 24,
+    "Ulusal": 25,
     "Haber": 25,
     "Spor": 3,
     "Film & Dizi": 4,
