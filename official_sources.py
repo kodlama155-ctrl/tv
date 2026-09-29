@@ -141,6 +141,12 @@ OFFICIAL_SOURCES = [
         "hints": ["tv8"],
     },
     {
+        "name": "TV8.5",
+        "category": "Ulusal",
+        "page": "https://img.tv8bucuk.com/tv8-5-canli-yayin",
+        "hints": ["tv8bucuk", "tv85", "tv8-5"],
+    },
+    {
         "name": "Kanal 7",
         "category": "Ulusal",
         "page": "https://www.kanal7.com/canli-izle",
