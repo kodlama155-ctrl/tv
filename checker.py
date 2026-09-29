@@ -14,7 +14,9 @@ from pathlib import Path
 from channel_policy import (
     CATEGORY_INDEX,
     CATEGORY_ORDER,
+    SOURCE_PRIORITY,
     build_missing_report,
+    canonical_name_decision,
     category_decision,
     channel_key,
     fold,
@@ -76,7 +78,11 @@ def _clean_option_value(value: str | None):
     return value
 
 
-def parse_playlist(text: str):
+def parse_playlist(
+    text: str,
+    source_kind: str = "unknown",
+    source_name: str = "",
+):
     lines = [x.strip() for x in text.splitlines()]
     out = []
     meta = None
@@ -116,6 +122,8 @@ def parse_playlist(text: str):
                 "url": line,
                 "user_agent": options.get("user_agent"),
                 "referrer": options.get("referrer"),
+                "source_kind": source_kind,
+                "source_name": source_name,
             })
             meta = None
             options = {}
@@ -195,7 +203,11 @@ def main():
     priority_entries = 0
     if PRIORITY.exists():
         try:
-            parsed = parse_playlist(PRIORITY.read_text(encoding="utf-8"))
+            parsed = parse_playlist(
+                PRIORITY.read_text(encoding="utf-8"),
+                source_kind="priority",
+                source_name="priority_sources.m3u",
+            )
             priority_entries = len(parsed)
             entries.extend(parsed)
             source_report.append({
@@ -214,7 +226,9 @@ def main():
     if OFFICIAL.exists():
         try:
             parsed = parse_playlist(
-                OFFICIAL.read_text(encoding="utf-8")
+                OFFICIAL.read_text(encoding="utf-8"),
+                source_kind="official_html",
+                source_name="official_discovered.m3u",
             )
             official_entries = len(parsed)
             entries.extend(parsed)
@@ -234,7 +248,9 @@ def main():
     if TURKUVAZ_OFFICIAL.exists():
         try:
             parsed = parse_playlist(
-                TURKUVAZ_OFFICIAL.read_text(encoding="utf-8")
+                TURKUVAZ_OFFICIAL.read_text(encoding="utf-8"),
+                source_kind="official_api",
+                source_name="turkuvaz_discovered.m3u",
             )
             turkuvaz_official_entries = len(parsed)
             entries.extend(parsed)
@@ -254,7 +270,9 @@ def main():
     if BROWSER_OFFICIAL.exists():
         try:
             parsed = parse_playlist(
-                BROWSER_OFFICIAL.read_text(encoding="utf-8")
+                BROWSER_OFFICIAL.read_text(encoding="utf-8"),
+                source_kind="official_browser",
+                source_name="browser_discovered.m3u",
             )
             browser_official_entries = len(parsed)
             entries.extend(parsed)
@@ -272,7 +290,16 @@ def main():
 
     for src in source_urls:
         try:
-            parsed = parse_playlist(fetch_text(src))
+            source_kind = (
+                "iptv_org"
+                if "iptv-org.github.io" in src
+                else "upstream"
+            )
+            parsed = parse_playlist(
+                fetch_text(src),
+                source_kind=source_kind,
+                source_name=src,
+            )
             entries.extend(parsed)
             source_report.append({
                 "url": src,
@@ -290,7 +317,9 @@ def main():
     if DISCOVERED.exists():
         try:
             parsed = parse_playlist(
-                DISCOVERED.read_text(encoding="utf-8")
+                DISCOVERED.read_text(encoding="utf-8"),
+                source_kind="github_discovery",
+                source_name="discovered.m3u",
             )
             discovered_entries = len(parsed)
             entries.extend(parsed)
@@ -322,12 +351,28 @@ def main():
         if existing is None:
             unique[key] = dict(entry)
         else:
-            # Priority metadata wins, but later sources may carry the
-            # User-Agent/Referer required by the same stream URL.
-            if not existing.get("user_agent") and entry.get("user_agent"):
-                existing["user_agent"] = entry["user_agent"]
-            if not existing.get("referrer") and entry.get("referrer"):
-                existing["referrer"] = entry["referrer"]
+            existing_score = SOURCE_PRIORITY.get(
+                existing.get("source_kind", "unknown"),
+                SOURCE_PRIORITY["unknown"],
+            )
+            incoming_score = SOURCE_PRIORITY.get(
+                entry.get("source_kind", "unknown"),
+                SOURCE_PRIORITY["unknown"],
+            )
+
+            if incoming_score > existing_score:
+                merged = dict(entry)
+                if not merged.get("user_agent"):
+                    merged["user_agent"] = existing.get("user_agent")
+                if not merged.get("referrer"):
+                    merged["referrer"] = existing.get("referrer")
+                unique[key] = merged
+                existing = merged
+            else:
+                if not existing.get("user_agent") and entry.get("user_agent"):
+                    existing["user_agent"] = entry["user_agent"]
+                if not existing.get("referrer") and entry.get("referrer"):
+                    existing["referrer"] = entry["referrer"]
 
     candidates = list(unique.values())
     header_aware_entries = sum(
@@ -429,6 +474,7 @@ def main():
             status = "unknown"
 
         decision = category_decision(meta)
+        naming = canonical_name_decision(meta)
         normalized_meta, category, name = normalize_meta(meta)
         ordering = order_decision(normalized_meta, category)
         key = channel_key(normalized_meta, name)
@@ -438,6 +484,8 @@ def main():
             "url": url,
             "user_agent": entry.get("user_agent"),
             "referrer": entry.get("referrer"),
+            "source_kind": entry.get("source_kind", "unknown"),
+            "source_name": entry.get("source_name", ""),
             "category": category,
             "name": name,
             "channel_key": key,
@@ -449,6 +497,8 @@ def main():
 
         report.append({
             "name": name,
+            "original_name": naming.get("original_name"),
+            "name_source": naming.get("source"),
             "tvg_id": tvg_id(normalized_meta),
             "channel_key": key,
             "category": category,
@@ -460,6 +510,8 @@ def main():
             "order_sources": ordering.get("sources", 0),
             "order_evidence": ordering.get("evidence", []),
             "url": url,
+            "stream_source_kind": entry.get("source_kind", "unknown"),
+            "stream_source_name": entry.get("source_name", ""),
             "http_user_agent": entry.get("user_agent"),
             "http_referrer": entry.get("referrer"),
             **result,
