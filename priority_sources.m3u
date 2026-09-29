@@ -80,11 +80,6 @@ https://teve2.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
 https://demiroren.daioncdn.net/teve2/teve2_1080p.m3u8?app=6aab838a-437e-4a1b-bbd0-e30f79cdbbbd&ce=3
 
 # TRT 2: alternate TRT public live delivery hostname.
-#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-https://tv-trt2-ts.live.trt.com.tr/master.m3u8
-
-#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-https://tv-trt2.live.trt.com.tr/master.m3u8
 
 
 # TV8.5 master candidates with the broadcaster web referer.
@@ -98,37 +93,5 @@ https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=bf58ab52-4865-4c81-b223-26b4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3
 
-# TRT 2 official public 720p endpoints with the official site referer.
-#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-#EXTVLCOPT:http-referrer=https://www.trt2.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://tv-trt2.medya.trt.com.tr/master_720.m3u8
 
-#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-#EXTVLCOPT:http-referrer=https://www.trt2.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-http://tv-trt2.medya.trt.com.tr/master_720.m3u8
-
-
-# TV8.5 alternate public live host.
-#EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
-#EXTVLCOPT:http-referrer=https://www.tv8.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://tv8-live.daioncdn.net/tv8bucuk/tv8bucuk.m3u8
-
-# TRT 2 public fallback delivery paths used by current Turkish IPTV lists.
-#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-https://trn10.tulix.tv/gt-trt2/index.m3u8
-
-#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-https://trt2dvr.blutv.com/blutv_trt2_dvr/live.m3u8
-
-
-# TRT 2 last-resort public relay candidates. These are still fully validated
 # and lose to any verified official source because official source kinds score higher.
-#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-http://167.114.115.233:8080/trt2fhd/index.m3u8
-
-#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
-http://95.174.71.114:80/TR-TRT2/index.m3u8
-
