@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="360.tr@SD" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="Ulusal",360 (720p) [Not 24/7]
+https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
 #EXTINF:-1 tvg-id="4UTV.tr@SD" tvg-logo="https://i.imgur.com/PexhKwp.png" group-title="Ulusal",4U TV (720p)
 https://hls.4utv.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="A2TV.tr@SD" tvg-logo="https://iatv.tmgrup.com.tr/site/v2/a2tv/i/a2tv-logo.png" group-title="Ulusal",A2TV (1080p)
@@ -111,8 +113,6 @@ https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.
 https://embedlp.becdn.net/womantv.m3u8
 #EXTINF:-1 tvg-id="24TV.tr@SD" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="Haber",24 TV (720p)
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
-#EXTINF:-1 tvg-id="360.tr@SD" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="Haber",360 (720p) [Not 24/7]
-https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
 #EXTINF:-1 tvg-id="AHaber.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png" group-title="Haber",A Haber (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 #EXTINF:-1 tvg-id="ATurk.tr@SD" tvg-logo="https://i.imgur.com/je5wQ3G.png" group-title="Haber",A Türk Izmir (360p)
