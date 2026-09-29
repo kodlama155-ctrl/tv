@@ -291,6 +291,11 @@ def _label_keys(value: str) -> set[str]:
 
     keys = {value, re.sub(r"\s+", "", value)}
 
+    compact_alias = re.sub(r"\s+", "", value)
+    # Tivibu brands Teve2 as "TV2" in its Ulusal rail.
+    if compact_alias in {"tv2", "teve2"}:
+        keys.update({"tv2", "teve2"})
+
     if value.endswith(" tv") and len(value) > 5 and not value.startswith("tv"):
         short = value[:-3].strip()
         keys.add(short)
