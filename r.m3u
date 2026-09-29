@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="ShowTV.tr@HD" group-title="Ulusal",Show TV
-https://ciner-live.daioncdn.net/showtv/showtv.m3u8
-#EXTINF:-1 tvg-id="Kanal7.tr@SD" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Ulusal",Kanal 7 (1080p) [Not 24/7]
-https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
 #EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3
 #EXTINF:-1 tvg-id="TRT2.tr@SD" tvg-logo="https://i.imgur.com/iOCQdyD.png" group-title="Ulusal",TRT 2 (1440p) [Geo-blocked]

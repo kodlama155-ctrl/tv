@@ -1,35 +1,20 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 56,
-  "core_channels_verified": 40,
-  "core_channels_not_verified": 16,
+  "core_channels_verified": 42,
+  "core_channels_not_verified": 14,
   "status_counts": {
-    "verified": 40,
-    "restricted": 14,
-    "unknown": 1,
-    "dead": 1
+    "verified": 42,
+    "restricted": 12,
+    "unknown": 2
   },
   "missing_channels": [
-    {
-      "name": "Show TV",
-      "expected_category": "Ulusal",
-      "status": "restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://ciner-live.daioncdn.net/showtv/showtv.m3u8"
-    },
     {
       "name": "TV8.5",
       "expected_category": "Ulusal",
       "status": "restricted",
       "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401",
       "candidate_url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3"
-    },
-    {
-      "name": "Kanal 7",
-      "expected_category": "Ulusal",
-      "status": "restricted",
-      "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401",
-      "candidate_url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8"
     },
     {
       "name": "Teve2",
@@ -60,11 +45,11 @@
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
     },
     {
-      "name": "TVNET",
+      "name": "Tele1",
       "expected_category": "Haber",
-      "status": "dead",
-      "reason": "manifest HTTP 404",
-      "candidate_url": "https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8"
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",

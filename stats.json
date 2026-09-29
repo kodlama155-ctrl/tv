@@ -1,11 +1,16 @@
 {
-  "updated_at_utc": "2026-09-29T13:49:05.149163+00:00",
+  "updated_at_utc": "2026-09-29T14:01:30.754530+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
       "url": "local:priority_sources.m3u",
       "status": "ok",
       "entries": 19
+    },
+    {
+      "url": "local:official_discovered.m3u",
+      "status": "ok",
+      "entries": 13
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -33,36 +38,37 @@
       "entries": 184
     }
   ],
-  "raw_entries": 1169,
+  "raw_entries": 1182,
   "priority_entries": 19,
+  "official_entries": 13,
   "discovered_entries": 184,
-  "unique_entries": 337,
-  "unique_stream_candidates": 337,
-  "semantic_channels": 247,
-  "duplicate_stream_variants_collapsed": 90,
+  "unique_entries": 347,
+  "unique_stream_candidates": 347,
+  "semantic_channels": 246,
+  "duplicate_stream_variants_collapsed": 101,
   "filtered_private_style_entries": 352,
-  "header_aware_entries": 17,
+  "header_aware_entries": 30,
   "stream_validation_statuses": {
-    "restricted": 33,
-    "unknown": 98,
-    "verified": 179,
-    "dead": 27
+    "restricted": 34,
+    "unknown": 99,
+    "dead": 28,
+    "verified": 186
   },
-  "verified_entries": 153,
-  "restricted_entries": 24,
+  "verified_entries": 155,
+  "restricted_entries": 22,
   "unknown_entries": 51,
-  "unknown_retry_candidates": 98,
-  "unknown_retry_recovered": 0,
+  "unknown_retry_candidates": 102,
+  "unknown_retry_recovered": 3,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
-  "dead_entries": 19,
+  "dead_entries": 18,
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 228,
   "core_channels_total": 56,
-  "core_channels_verified": 40,
-  "core_channels_not_verified": 16,
+  "core_channels_verified": 42,
+  "core_channels_not_verified": 14,
   "categories_verified": {
-    "Ulusal": 9,
+    "Ulusal": 11,
     "Haber": 27,
     "Spor": 3,
     "Film & Dizi": 4,
@@ -77,7 +83,7 @@
     "Diğer": 66
   },
   "categories_restricted": {
-    "Ulusal": 4,
+    "Ulusal": 2,
     "Haber": 3,
     "Spor": 5,
     "Film & Dizi": 1,
@@ -93,7 +99,7 @@
   },
   "categories_unknown": {
     "Ulusal": 0,
-    "Haber": 5,
+    "Haber": 6,
     "Spor": 5,
     "Film & Dizi": 7,
     "Çocuk": 0,
@@ -104,6 +110,6 @@
     "Müzik": 2,
     "Yerel": 0,
     "Uluslararası": 0,
-    "Diğer": 20
+    "Diğer": 19
   }
 }
