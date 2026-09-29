@@ -9,6 +9,7 @@ on:
       - "discover.py"
       - "discover_queries.txt"
       - "sources.txt"
+      - "tr_recheck.py"
       - ".github/workflows/update.yml"
   schedule:
     - cron: "17 */6 * * *"
@@ -55,3 +56,44 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
+  tr-recheck:
+    name: Recheck restricted streams from Türkiye
+    needs: update
+    if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.actor == 'kodlama155-ctrl') }}
+    runs-on: [self-hosted, Windows, X64, tr]
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Recheck restricted streams from Türkiye
+        run: |
+          git pull --ff-only origin main
+          python tr_recheck.py
+
+      - name: Commit Türkiye verification results
+        shell: pwsh
+        run: |
+          git config user.name "emirtv-tr-runner"
+          git config user.email "actions@users.noreply.github.com"
+          git add a.m3u r.m3u all.m3u stats.json validation.json
+
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "No Türkiye verification changes"
+            exit 0
+          }
+
+          git commit -m "bot: verify restricted streams from Türkiye"
+          git pull --rebase origin main
+          git push origin HEAD:main
