@@ -123,3 +123,12 @@ https://trn10.tulix.tv/gt-trt2/index.m3u8
 #EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
 https://trt2dvr.blutv.com/blutv_trt2_dvr/live.m3u8
 
+
+# TRT 2 last-resort public relay candidates. These are still fully validated
+# and lose to any verified official source because official source kinds score higher.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+http://167.114.115.233:8080/trt2fhd/index.m3u8
+
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+http://95.174.71.114:80/TR-TRT2/index.m3u8
+
