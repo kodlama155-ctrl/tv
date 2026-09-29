@@ -1,0 +1,113 @@
+#EXTM3U
+# SOURCE: official-browser:https://www.ekoturk.com/canli-yayin/
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Haber",EKOTÜRK
+#EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://cdn.ekoturk.net/hls/240p.m3u8
+# SOURCE: official-browser:https://www.ekoturk.com/canli-yayin/
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Haber",EKOTÜRK
+#EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://cdn.ekoturk.net/hls/320p.m3u8
+# SOURCE: official-browser:https://www.ekoturk.com/canli-yayin/
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Haber",EKOTÜRK
+#EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://cdn.ekoturk.net/hls/720p.m3u8
+# SOURCE: official-browser:https://www.ekoturk.com/canli-yayin/
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Haber",EKOTÜRK
+#EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://cdn.ekoturk.net/hls/master.m3u8
+# SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
+# DISCOVERY: request
+# PROBE: unknown response is not HLS
+#EXTINF:-1 group-title="Ulusal",A2
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://securevideotoken.tmgrup.com.tr/webtv/secure?942880&url=https%3A%2F%2Ftrkvz-live.ercdn.net%2Fa2tv%2Fa2tv.m3u8&url2=https%3A%2F%2Ftrkvz-live.ercdn.net%2Fa2tv%2Fa2tv.m3u8
+# SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
+# DISCOVERY: xhr-body
+# PROBE: restricted manifest HTTP 403
+#EXTINF:-1 group-title="Ulusal",A2
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8
+# SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
+# DISCOVERY: xhr-body
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Ulusal",A2
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8?st=vPTmN3NZZ0QW3cV6bb2oEw&e=1790739627
+# SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Ulusal",A2
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/a2tv/a2tv_480p.m3u8?st=vPTmN3NZZ0QW3cV6bb2oEw&e=1790739627
+# SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Ulusal",A2
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/a2tv/a2tv_720p.m3u8?st=vPTmN3NZZ0QW3cV6bb2oEw&e=1790739627
+# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
+# DISCOVERY: request
+# PROBE: unknown response is not HLS
+#EXTINF:-1 group-title="Ulusal",ATV
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://securevideotoken.tmgrup.com.tr/webtv/secure?124083&url=https%3A%2F%2Ftrkvz-live.ercdn.net%2Fatvhd%2Fatvhd.m3u8&url2=https%3A%2F%2Ftrkvz-live.ercdn.net%2Fatvhd%2Fatvhd.m3u8
+# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
+# DISCOVERY: xhr-body
+# PROBE: restricted manifest HTTP 403
+#EXTINF:-1 group-title="Ulusal",ATV
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8
+# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
+# DISCOVERY: xhr-body
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Ulusal",ATV
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=gRjSV12ts8t6WOyryVOsjg&e=1790739647
+# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Ulusal",ATV
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/atvhd/atvhd_1080p.m3u8?st=gRjSV12ts8t6WOyryVOsjg&e=1790739647
+# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Ulusal",ATV
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/atvhd/atvhd_360p.m3u8?st=gRjSV12ts8t6WOyryVOsjg&e=1790739647
+# SOURCE: official-browser:https://www.startv.com.tr/canli-yayin
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Ulusal",Star TV
+#EXTVLCOPT:http-referrer=https://www.startv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ppid=a8120b75643995193ef7bbe66c7dcf6e&dfp_paln=AQzzBGQEIq0fgLCikH0EcbPZoMDU8MR6Dm4Vs3iV2qK6VQVY8_THXbevgb4jGLdpyQE2qRhaT6TxfDFyKrSXkn0FjF31QUyR_6pXqTSUye_iMcChqTxtXUsiz5Gva7IK7FdSzifQxkRYQ4iqxS9QFRYpURC_WuAgOtEI6w3L9BQxvxYnMJSi6JouPRFx88iwYNDAzlFnjbFzQmDEnPKyX4WmcfXU1xApTTRkdKmMP-K1_8XKYx6nA-op4CYCqUyQoEaqMDp3RKzg-KCe7S4jHsZbfNKAx3zmL6DsR2nWXnGbQILEG6L7HoOaX2SWs2hFQ3DNZlAEJcsVp7pBpJetbGpJugG3TPY1qGCDM8UPK53lttY2aEmP0meXopuXpYyyCcTAQdjHqoP_y7ayfi1YemyNxhUw3jJeQcLcDGRZqrEfH13K-Oa8QVcVKKwcnyTxGCntxzhEhV0jbhTU0T5OEym-Egi75FrS626JGaq3jNBw3AgiVdVbW4Slqn4blVtRrSkr2Tai8xCQ9IlpZmDpGCpwjWc8CI57BwWNth5xCb2PP7vkp2H63bdf8CBItCAdLK906RhOFj9quE1JHq9dJEthL7CwQ3jorVlopcEBgjJ9SZqongY9A61e85TAqLkBNxaUxkTdfEI3l4OPVnyiYUIKy6PUB88HFhmaSKkhNKPPU2F7ibXSlhZIDDmRCxsXkjknNDwR173o-QtZ15uYWZX6RyWTXLV6vkFM32nIvtu039zWf6mdR186e2IlqWovShneS-0U4bov6dn-eFNjtaHEufu7LTboJteRQFFhxjgaEPsJHtjuHBVzI-zk1N4gDmA_nhXyHmZTH-bn40sY-NiCBn_ohnoFNU40tXS5vvHak4uYgTjkLd05NXmdUCARNFc2JpN4vKuG9yXGF6q1IgIbq6dbrEoBPGO0CE-J1y2e8-IE6IPiCHKAwCzKLHxzfTkSHJALlsIQY5Ey5deSS0mcXkUKmFPlLTDXZM-naS8NrB_icpNBFj6Fp-6FyN7-pd1fQskWemSFI1yOs_bNgy_0W8_N9j3YqlsgJ1K7-vxPuNJq5hvvjNqwVA2XoKPthtUa5gN3ipOdQchX2T7kpFHbOKFgI47kCGop4GtqhPaYj8WgJoT561IZ5czd6LlQfFVNErHyltG_vGzu3ap0dk22Lt1ydRPj-2p_Y-Pq92uxVLEC4R0t-rXH6H_EwatlqY6rsrBrLKBp5FbSMiPfp2dZ2Ahx5fhCfiy97zd_8nPg7oyML-jvbapy2IrjUf5Qczt5LoWcq_oxDO_vHRtEZxrCh8X0aUVwfVcCfceDa9Wr_g3daS1nncknUQ0uCFycPuCqj8CrHgNMQZf4HMWyYwI2-AeEBa4ctOC2ChC1WXnscSTkbuc0X66F9fdhaIBeQFFbeN9T_9XRdcrZ7Kokxe5SN7P4Z-d5SIRskh0B4mEAYuHT1g22cC5OLadfNCzcSXuuPgGxtCnhfme99TJVZ62i6tDgWEhubQbXOAKtl3J13Xx-K3I.
+# SOURCE: official-browser:https://www.startv.com.tr/canli-yayin
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Ulusal",Star TV
+#EXTVLCOPT:http-referrer=https://www.startv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjkc6n4zon2&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3
