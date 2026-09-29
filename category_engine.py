@@ -217,6 +217,104 @@ IPTV_CATEGORY_MAP = {
     "music": "Müzik",
 }
 
+# Current professional-platform channel order references.
+# Ordering is category-local: channels seen by multiple platforms use the
+# average relative position; channels seen by one platform still rank ahead
+# of completely unknown channels. Unknown channels fall back to A-Z.
+PLATFORM_ORDER = {
+    "Tivibu": {
+        "Ulusal": [
+            "trt1", "kanald", "atv", "showtv", "nowtv", "startv",
+            "kanal7", "tv8", "360", "beyaztv", "cnbce", "diyanettv",
+            "a2tv", "teve2", "tv85", "trt2", "vavtv", "tv4",
+            "semerkandtv", "trteba",
+        ],
+        "Haber": [
+            "trthaber", "ntv", "ahaber", "24tv", "cnnturk",
+            "haberturktv", "bloomberght", "ulketv", "tvnet", "tgrthaber",
+            "akittv", "haberglobal", "tv100", "benguturktv",
+            "turkhabertv", "ekoturk", "gzt", "halktv", "sozcutv",
+            "tele1",
+        ],
+        "Spor": [
+            "trtspor", "trtsporyildiz", "aspor", "htsportv", "fbtv",
+            "sportstv",
+        ],
+        "Film & Dizi": [
+            "bbcfirst", "fx", "epicdrama", "kanalddrama",
+        ],
+        "Çocuk": [
+            "babytv", "nickelodeon", "nicktoons", "nickjr", "davinci",
+            "trtgenc", "trtcocuk", "minikacocuk", "minikago",
+            "spacetoonturkey", "trtdiyanetcocuk", "disneyjr",
+        ],
+        "Belgesel": [
+            "trtbelgesel", "tarihtv", "lovenature",
+        ],
+        "Yaşam": [
+            "tlc", "dmax", "ciftcitv",
+        ],
+        "Müzik": [
+            "trtmuzik", "number1tv", "dreamturk", "powertv",
+            "powerturktv",
+        ],
+        "Uluslararası": [
+            "trtturk", "trtavaz", "trtkurdi", "trtworld", "trtarabi",
+        ],
+    },
+    "TV+": {
+        "Ulusal": [
+            "trt1", "kanald", "startv", "atv", "showtv", "nowtv",
+            "tv8", "360", "a2tv", "cnbce", "teve2", "kanal7",
+            "beyaztv", "tv85", "trt2", "tv4", "diyanettv",
+            "semerkandtv", "trteba",
+        ],
+        "Haber": [
+            "tv100", "flashhabertv", "gzt", "turkhabertv", "cnnturk",
+            "ntv", "haberturktv", "ahaber", "trthaber", "24tv",
+            "bloomberght", "halktv", "tele1", "haberglobal", "ekoturk",
+            "ulketv", "tgrthaber", "tvnet", "akittv", "benguturktv",
+            "sozcutv",
+        ],
+        "Spor": [
+            "trtspor", "trtsporyildiz", "aspor", "htsportv", "fbtv",
+            "ssport", "ssport2", "eurosport1", "eurosport2", "sportstv",
+        ],
+        "Film & Dizi": [
+            "epicdrama", "fx", "kanalddrama",
+        ],
+        "Çocuk": [
+            "babytv", "disneyjr", "cbeebies", "moonbugkidstv",
+            "cartoonito", "nickjr", "nickelodeon", "nicktoons", "azoomee",
+            "davinci", "cartoonnetwork", "trtcocuk", "minikacocuk",
+            "minikago", "spacetoonturkey", "trtdiyanetcocuk", "trtgenc",
+        ],
+        "Belgesel": [
+            "trtbelgesel", "tarihtv", "viasatexplore",
+            "nationalgeographic", "bbcearth", "viasathistory",
+            "discoverychannel", "nationalgeographicwild", "lovenature",
+        ],
+        "Yaşam": [
+            "tlc", "dmax", "ciftcitv",
+        ],
+        "Müzik": [
+            "number1tv", "powertv", "dreamturk", "number1turk",
+            "powerturktv", "trtmuzik",
+        ],
+        "Yerel": [
+            "kadirgatv", "kontv", "kanal23", "kanalv", "kanal26",
+            "kanal33", "on6",
+        ],
+        "Uluslararası": [
+            "cnninternational", "bbcnews", "bloomberg", "anews",
+            "trtworld", "aljazeeraenglish", "deutschewelleenglish",
+            "france24english", "euronews", "aljazeeraarabic",
+            "france24arabic", "skynewsarabia", "tv5monde",
+            "trtturk", "trtarabi", "trtavaz", "trtkurdi",
+        ],
+    },
+}
+
 GROUP_MAP = {
     "general": "Ulusal",
     "genel": "Ulusal",
@@ -357,6 +455,63 @@ def _platform_votes(identity: str) -> list[tuple[str, str]]:
             if identity in ids:
                 votes.append((platform, category))
     return votes
+
+
+
+def order_decision(meta: str, category: str | None = None) -> dict:
+    identity = _identity(meta)
+    if category is None:
+        category = classify(meta)["category"]
+
+    positions = []
+    evidence = []
+    for platform, mapping in PLATFORM_ORDER.items():
+        order = mapping.get(category, [])
+        if identity not in order:
+            continue
+        index = order.index(identity)
+        # Normalize to 0..1 so short and long platform lists have equal weight.
+        relative = index / max(1, len(order) - 1)
+        positions.append(relative)
+        evidence.append({
+            "platform": platform,
+            "position": index + 1,
+            "category_size": len(order),
+        })
+
+    if positions:
+        score = sum(positions) / len(positions)
+        return {
+            "known": True,
+            "score": score,
+            "identity": identity,
+            "category": category,
+            "sources": len(positions),
+            "evidence": evidence,
+        }
+
+    return {
+        "known": False,
+        "score": 999.0,
+        "identity": identity,
+        "category": category,
+        "sources": 0,
+        "evidence": [],
+    }
+
+
+def channel_sort_key(meta: str, category: str | None = None, name: str | None = None):
+    if category is None:
+        category = classify(meta)["category"]
+    if name is None:
+        name = split_extinf(meta)[1]
+    decision = order_decision(meta, category)
+    return (
+        0 if decision["known"] else 1,
+        decision["score"],
+        fold(name),
+        decision["identity"],
+    )
 
 
 def classify(meta: str) -> dict:
