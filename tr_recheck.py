@@ -9,6 +9,14 @@ import urllib.parse
 from collections import Counter
 from pathlib import Path
 
+from channel_policy import (
+    CATEGORY_INDEX,
+    CATEGORY_ORDER,
+    build_missing_report,
+    channel_name,
+    existing_group,
+    fold,
+)
 from hls_validator import validate_hls
 
 ROOT = Path(__file__).resolve().parent
@@ -18,14 +26,9 @@ UNKNOWN = ROOT / "u.m3u"
 ALL = ROOT / "all.m3u"
 VALIDATION = ROOT / "validation.json"
 STATS = ROOT / "stats.json"
+MISSING = ROOT / "missing_channels.json"
 
 MAX_WORKERS = 8
-
-CATEGORY_ORDER = [
-    "Genel", "Haber", "Spor", "Eğlence", "Dizi / Film", "Müzik",
-    "Çocuk", "Belgesel", "Yerel", "Dini", "Eğitim", "Diğer",
-]
-CATEGORY_INDEX = {name: i for i, name in enumerate(CATEGORY_ORDER)}
 
 
 def canonical(url: str) -> str:
@@ -57,14 +60,7 @@ def parse_playlist(path: Path):
 
 
 def category_from_meta(meta: str) -> str:
-    m = re.search(r'group-title="([^"]*)"', meta, flags=re.I)
-    return m.group(1).strip() if m else "Diğer"
-
-
-def channel_name(meta: str) -> str:
-    if "," not in meta:
-        return "Unknown"
-    return meta.rsplit(",", 1)[-1].strip() or "Unknown"
+    return existing_group(meta) or "Diğer"
 
 
 def write_playlist(path: Path, entries):
@@ -72,7 +68,7 @@ def write_playlist(path: Path, entries):
         entries,
         key=lambda item: (
             CATEGORY_INDEX.get(category_from_meta(item["meta"]), 999),
-            channel_name(item["meta"]).casefold(),
+            fold(channel_name(item["meta"])),
             canonical(item["url"]),
         ),
     )
@@ -179,6 +175,8 @@ def main():
         encoding="utf-8",
     )
 
+    coverage = build_missing_report(report, MISSING)
+
     if STATS.exists():
         stats = json.loads(STATS.read_text(encoding="utf-8"))
     else:
@@ -206,6 +204,9 @@ def main():
     stats["tr_still_restricted_entries"] = len(still_restricted)
     stats["tr_recheck_workers"] = MAX_WORKERS
     stats["tr_recheck_at_utc"] = now
+    stats["core_channels_total"] = coverage["core_channels_total"]
+    stats["core_channels_verified"] = coverage["core_channels_verified"]
+    stats["core_channels_not_verified"] = coverage["core_channels_not_verified"]
 
     stats["categories_verified"] = {
         category: categories_verified.get(category, 0)
@@ -229,6 +230,8 @@ def main():
         "tr_recheck_candidates": len(restricted),
         "tr_verified_entries": len(tr_verified),
         "tr_still_restricted_entries": len(still_restricted),
+        "core_channels_verified": coverage["core_channels_verified"],
+        "core_channels_not_verified": coverage["core_channels_not_verified"],
     }, ensure_ascii=False, indent=2))
 
 
