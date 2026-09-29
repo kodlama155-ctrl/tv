@@ -28,6 +28,7 @@ from hls_validator import validate_hls
 ROOT = Path(__file__).resolve().parent
 SOURCES = ROOT / "sources.txt"
 PRIORITY = ROOT / "priority_sources.m3u"
+OFFICIAL = ROOT / "official_discovered.m3u"
 DISCOVERED = ROOT / "discovered.m3u"
 
 VERIFIED_OUTPUT = ROOT / "a.m3u"
@@ -203,6 +204,26 @@ def main():
         except Exception as e:
             source_report.append({
                 "url": "local:priority_sources.m3u",
+                "status": "error",
+                "error": type(e).__name__,
+            })
+
+    official_entries = 0
+    if OFFICIAL.exists():
+        try:
+            parsed = parse_playlist(
+                OFFICIAL.read_text(encoding="utf-8")
+            )
+            official_entries = len(parsed)
+            entries.extend(parsed)
+            source_report.append({
+                "url": "local:official_discovered.m3u",
+                "status": "ok",
+                "entries": official_entries,
+            })
+        except Exception as e:
+            source_report.append({
+                "url": "local:official_discovered.m3u",
                 "status": "error",
                 "error": type(e).__name__,
             })
@@ -470,6 +491,7 @@ def main():
         "sources": source_report,
         "raw_entries": len(entries),
         "priority_entries": priority_entries,
+        "official_entries": official_entries,
         "discovered_entries": discovered_entries,
         "unique_entries": len(candidates),
         "unique_stream_candidates": len(candidates),
