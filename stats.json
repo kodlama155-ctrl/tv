@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T03:53:10.041053+00:00",
+  "updated_at_utc": "2026-09-29T03:57:04.817356+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -44,19 +44,19 @@
   "stream_validation_statuses": {
     "restricted": 33,
     "unknown": 86,
-    "dead": 37,
-    "verified": 181
+    "dead": 39,
+    "verified": 179
   },
-  "verified_entries": 155,
+  "verified_entries": 154,
   "restricted_entries": 24,
   "unknown_entries": 42,
   "unknown_retry_candidates": 86,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
-  "dead_entries": 26,
+  "dead_entries": 27,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 221,
+  "all_non_dead_non_drm_entries": 220,
   "core_channels_total": 56,
   "core_channels_verified": 40,
   "core_channels_not_verified": 16,
@@ -71,7 +71,7 @@
     "Müzik": 16,
     "Yerel": 0,
     "Uluslararası": 10,
-    "Diğer": 74
+    "Diğer": 73
   },
   "categories_restricted": {
     "Ulusal": 4,
