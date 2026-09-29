@@ -72,3 +72,9 @@ https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3
 #EXTVLCOPT:http-referrer=https://www.trt2.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://tv-trt2.medya.trt.com.tr/master.m3u8
+
+
+# TV8.5 stable direct CDN candidate (Turknet/ERCDN, no SID/app token).
+#EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
+https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk_1080p.m3u8
+
