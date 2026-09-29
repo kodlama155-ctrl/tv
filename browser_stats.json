@@ -1,144 +1,20 @@
 {
-  "updated_at_utc": "2026-09-29T16:01:39.235583+00:00",
-  "fallback_targets": 11,
-  "pages_scanned": 11,
-  "pages_with_candidates": 4,
-  "raw_candidates": 18,
-  "accepted_unique_candidates": 13,
+  "updated_at_utc": "2026-09-29T16:18:23.313002+00:00",
+  "fallback_targets": 4,
+  "pages_scanned": 4,
+  "pages_with_candidates": 2,
+  "raw_candidates": 6,
+  "accepted_unique_candidates": 6,
   "probe_statuses": {
-    "restricted": 7,
-    "dead": 3,
-    "verified": 8
+    "verified": 6
   },
   "sources": [
-    {
-      "name": "A Haber",
-      "page": "https://www.ahaber.com.tr/video/canli-yayin",
-      "status": "ok",
-      "network_events": 0,
-      "response_bodies_scanned": 1043,
-      "candidates": []
-    },
-    {
-      "name": "A News",
-      "page": "https://www.ahaber.com.tr/canli-yayin-anews.html",
-      "status": "ok",
-      "network_events": 0,
-      "response_bodies_scanned": 1079,
-      "candidates": []
-    },
-    {
-      "name": "A Para",
-      "page": "https://www.ahaber.com.tr/canli-yayin-apara.html",
-      "status": "ok",
-      "network_events": 0,
-      "response_bodies_scanned": 1108,
-      "candidates": []
-    },
-    {
-      "name": "A Spor",
-      "page": "https://www.ahaber.com.tr/canli-yayin-aspor.html",
-      "status": "ok",
-      "network_events": 0,
-      "response_bodies_scanned": 1217,
-      "candidates": []
-    },
-    {
-      "name": "A2",
-      "page": "https://www.atv.com.tr/a2tv/canli-yayin",
-      "status": "ok",
-      "network_events": 4,
-      "response_bodies_scanned": 1278,
-      "candidates": [
-        {
-          "url": "https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://trkvz-dev.daioncdn.net/atv/atv.m3u8?ce=3&app=8672c3cb-70f1-4686-9158-cc03a23c6b0f",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://gcdn.2mdn.net/api/manifest/hls_variant/source/web_video_ads/id/b5d11d5b34ffbb45/itag/0/playlist_type/LIVE/xpc/Eghovf3BOnoBAQ%3D%3D/ei/-_RjaqHQLMaI2O4Ppb_auQQ/susc/vsau/acao/yes/ctier/L/vprv/1/rqh/5/pacing/0/ip/0.0.0.0/ipbits/0/expire/3929383675/sparams/ip,ipbits,expire,source,id,itag,playlist_type,xpc,ei,susc,acao,ctier,vprv,rqh/signature/5F8A22B2A6614F74E1C2B0D2319A737742F86E013CC567CF3826165A90881163.E5E9487E542FD9CFBE67E0292252B9D9DB735201B24AB1005A5384CCEB1D835A/key/us0/file/index.m3u8",
-          "referer": "https://imasdk.googleapis.com/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "fetch-body"
-        },
-        {
-          "url": "https://gcdn.2mdn.net/api/manifest/hls_variant/source/web_video_ads/id/b5d11d5b34ffbb45/itag/0/playlist_type/LIVE/xpc/Eghovf3BOnoBAQ==/ei/-_RjaqHQLMaI2O4Ppb_auQQ/susc/vsau/acao/yes/ctier/L/vprv/1/rqh/5/pacing/0/ip/0.0.0.0/ipbits/0/expire/3929383675/sparams/ip,ipbits,expire,source,id,itag,playlist_type,xpc,ei,susc,acao,ctier,vprv,rqh/signature/5F8A22B2A6614F74E1C2B0D2319A737742F86E013CC567CF3826165A90881163.E5E9487E542FD9CFBE67E0292252B9D9DB735201B24AB1005A5384CCEB1D835A/key/us0/file/index.m3u8",
-          "referer": "https://imasdk.googleapis.com/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "fetch-body"
-        }
-      ]
-    },
-    {
-      "name": "ATV",
-      "page": "https://www.atv.com.tr/canli-yayin",
-      "status": "ok",
-      "network_events": 87,
-      "response_bodies_scanned": 1295,
-      "candidates": [
-        {
-          "url": "https://trkvz-live.ercdn.net/atvavrupahd/atvavrupahd.m3u8",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://trkvz.daioncdn.net/atv/atv.m3u8?ce=3&app=866e32e3-9fea-477f-a5ef-64ebe32956f3",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://trkvz.daioncdn.net/atv-overflow/atv-overflow.m3u8?ce=3&app=",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://trkvz.daioncdn.net/atv/atv.m3u8?ce=3&app=",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://trkvz-beta.daioncdn.net/atv/atv.m3u8?ce=3&app=",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://trkvz-dev.daioncdn.net/atv/atv.m3u8?ce=3&app=8672c3cb-70f1-4686-9158-cc03a23c6b0f",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/atvavrupa/atvavrupa.m3u8",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        }
-      ]
-    },
     {
       "name": "BengüTürk",
       "page": "https://www.benguturk.com/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 31,
+      "response_bodies_scanned": 30,
       "candidates": []
     },
     {
@@ -173,7 +49,7 @@
       "page": "https://www.startv.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 7,
-      "response_bodies_scanned": 130,
+      "response_bodies_scanned": 111,
       "candidates": [
         {
           "url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9",
@@ -188,7 +64,7 @@
           "via": "script-body"
         },
         {
-          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjphfq6f44w&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
+          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjqn5vyry6g&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
           "referer": "https://www.startv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
@@ -201,14 +77,6 @@
       "status": "ok",
       "network_events": 0,
       "response_bodies_scanned": 12,
-      "candidates": []
-    },
-    {
-      "name": "Vav TV",
-      "page": "https://www.ahaber.com.tr/canli-yayin-vavtv.html",
-      "status": "ok",
-      "network_events": 0,
-      "response_bodies_scanned": 67,
       "candidates": []
     }
   ]

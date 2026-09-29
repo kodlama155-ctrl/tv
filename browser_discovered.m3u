@@ -20,55 +20,6 @@ https://cdn.ekoturk.net/hls/720p.m3u8
 #EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://cdn.ekoturk.net/hls/master.m3u8
-# SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
-# DISCOVERY: script-body
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Ulusal",A2
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758
-# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
-# DISCOVERY: script-body
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Ulusal",ATV
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvavrupa/atvavrupa.m3u8
-# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
-# DISCOVERY: script-body
-# PROBE: restricted manifest HTTP 401
-#EXTINF:-1 group-title="Ulusal",ATV
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvavrupahd/atvavrupahd.m3u8
-# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
-# DISCOVERY: script-body
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Ulusal",ATV
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8
-# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
-# DISCOVERY: script-body
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Ulusal",ATV
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz.daioncdn.net/atv-overflow/atv-overflow.m3u8?ce=3&app=
-# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
-# DISCOVERY: script-body
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Ulusal",ATV
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz.daioncdn.net/atv/atv.m3u8?ce=3&app=
-# SOURCE: official-browser:https://www.atv.com.tr/canli-yayin
-# DISCOVERY: script-body
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Ulusal",ATV
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz.daioncdn.net/atv/atv.m3u8?ce=3&app=866e32e3-9fea-477f-a5ef-64ebe32956f3
 # SOURCE: official-browser:https://www.startv.com.tr/canli-yayin
 # DISCOVERY: script-body
 # PROBE: verified real media segment verified
@@ -89,4 +40,4 @@ https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-2
 #EXTINF:-1 group-title="Ulusal",Star TV
 #EXTVLCOPT:http-referrer=https://www.startv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjphfq6f44w&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3
+https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjqn5vyry6g&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3

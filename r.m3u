@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 group-title="Ulusal",A2
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758
 #EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3
 #EXTINF:-1 tvg-id="TRT2.tr@SD" tvg-logo="https://i.imgur.com/iOCQdyD.png" group-title="Ulusal",TRT 2 (1440p) [Geo-blocked]
