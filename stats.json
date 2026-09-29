@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T01:01:13.592635+00:00",
+  "updated_at_utc": "2026-09-29T01:09:24.820488+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -44,14 +44,14 @@
   "stream_validation_statuses": {
     "restricted": 33,
     "unknown": 86,
-    "dead": 38,
-    "verified": 180
+    "dead": 37,
+    "verified": 181
   },
   "verified_entries": 155,
   "restricted_entries": 24,
   "unknown_entries": 42,
-  "unknown_retry_candidates": 86,
-  "unknown_retry_recovered": 0,
+  "unknown_retry_candidates": 87,
+  "unknown_retry_recovered": 1,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
   "dead_entries": 26,
