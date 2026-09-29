@@ -39,6 +39,7 @@ VERIFIED_OUTPUT = ROOT / "a.m3u"
 RESTRICTED_OUTPUT = ROOT / "r.m3u"
 UNKNOWN_OUTPUT = ROOT / "u.m3u"
 ALL_OUTPUT = ROOT / "all.m3u"
+TURKEY_OUTPUT = ROOT / "tr.m3u"
 STATS = ROOT / "stats.json"
 VALIDATION = ROOT / "validation.json"
 MISSING_OUTPUT = ROOT / "missing_channels.json"
@@ -607,6 +608,18 @@ def main():
     )
     write_playlist(ALL_OUTPUT, all_candidates)
 
+    # Türkiye cihaz listesi: strict verified yayınlara ek olarak yalnızca
+    # doğrulanmış geo-hint taşıyan restricted resmî yayınları dahil eder.
+    # Bu sayede GitHub'ın yurt dışı runner'ı TRT 2 gibi Türkiye'ye açık
+    # yayınları 403 gördüğünde kanal cihaz listesinden tamamen kaybolmaz.
+    turkey_candidates = list(buckets["verified"])
+    turkey_candidates.extend(
+        item
+        for item in buckets["restricted"]
+        if item.get("geo_restricted")
+    )
+    write_playlist(TURKEY_OUTPUT, turkey_candidates)
+
     report.sort(
         key=lambda x: (
             x.get("status", ""),
@@ -663,6 +676,10 @@ def main():
         "dead_entries": counts["dead"],
         "drm_entries": counts["drm"],
         "all_non_dead_non_drm_entries": len(all_candidates),
+        "turkey_device_entries": len(turkey_candidates),
+        "turkey_device_geo_fallbacks": sum(
+            1 for item in turkey_candidates if item.get("geo_restricted")
+        ),
         "core_channels_total": coverage["core_channels_total"],
         "core_channels_verified": coverage["core_channels_verified"],
         "core_channels_geo_restricted": coverage.get(
