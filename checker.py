@@ -64,21 +64,59 @@ def fetch_text(url: str) -> str:
     return raw.decode("utf-8", errors="replace")
 
 
+def _clean_option_value(value: str | None):
+    if value is None:
+        return None
+    value = value.strip()
+    if not value or "\r" in value or "\n" in value:
+        return None
+    return value
+
+
 def parse_playlist(text: str):
     lines = [x.strip() for x in text.splitlines()]
     out = []
     meta = None
+    options = {}
+
     for line in lines:
         if not line:
             continue
+
         if line.startswith("#EXTINF"):
             meta = line
+            options = {}
             continue
+
+        if line.startswith("#EXTVLCOPT:"):
+            payload = line.split(":", 1)[1]
+            if "=" not in payload:
+                continue
+            key, value = payload.split("=", 1)
+            key = key.strip().lower()
+            value = _clean_option_value(value)
+
+            if not value:
+                continue
+            if key == "http-user-agent":
+                options["user_agent"] = value
+            elif key in {"http-referrer", "http-referer"}:
+                options["referrer"] = value
+            continue
+
         if line.startswith("#"):
             continue
+
         if line.startswith(("http://", "https://")):
-            out.append((meta or "#EXTINF:-1,Unknown", line))
+            out.append({
+                "meta": meta or "#EXTINF:-1,Unknown",
+                "url": line,
+                "user_agent": options.get("user_agent"),
+                "referrer": options.get("referrer"),
+            })
             meta = None
+            options = {}
+
     return out
 
 
@@ -130,7 +168,12 @@ def write_playlist(path: Path, entries):
     )
     lines = ["#EXTM3U"]
     for item in ordered:
-        lines.extend([item["meta"], item["url"]])
+        lines.append(item["meta"])
+        if item.get("referrer"):
+            lines.append(f'#EXTVLCOPT:http-referrer={item["referrer"]}')
+        if item.get("user_agent"):
+            lines.append(f'#EXTVLCOPT:http-user-agent={item["user_agent"]}')
+        lines.append(item["url"])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -202,25 +245,50 @@ def main():
 
     unique = {}
     filtered_private_style = 0
+    header_aware_entries = 0
 
-    for meta, url in entries:
+    for entry in entries:
+        url = entry["url"]
         if not safe_public_candidate(url):
             filtered_private_style += 1
             continue
-        unique.setdefault(canonical(url), (meta, url))
+
+        key = canonical(url)
+        existing = unique.get(key)
+
+        if existing is None:
+            unique[key] = dict(entry)
+        else:
+            # Priority metadata wins, but later sources may carry the
+            # User-Agent/Referer required by the same stream URL.
+            if not existing.get("user_agent") and entry.get("user_agent"):
+                existing["user_agent"] = entry["user_agent"]
+            if not existing.get("referrer") and entry.get("referrer"):
+                existing["referrer"] = entry["referrer"]
 
     candidates = list(unique.values())
+    header_aware_entries = sum(
+        1
+        for entry in candidates
+        if entry.get("user_agent") or entry.get("referrer")
+    )
 
     validation_results = {}
     with concurrent.futures.ThreadPoolExecutor(
         max_workers=MAX_WORKERS
     ) as ex:
         future_map = {
-            ex.submit(validate_hls, url): url
-            for _, url in candidates
+            ex.submit(
+                validate_hls,
+                entry["url"],
+                user_agent=entry.get("user_agent"),
+                referrer=entry.get("referrer"),
+            ): entry
+            for entry in candidates
         }
         for fut in concurrent.futures.as_completed(future_map):
-            url = future_map[fut]
+            entry = future_map[fut]
+            url = entry["url"]
             try:
                 validation_results[canonical(url)] = fut.result()
             except Exception as e:
@@ -229,28 +297,34 @@ def main():
                     "reason": type(e).__name__,
                 }
 
-    retry_urls = [
-        url
-        for _, url in candidates
+    retry_entries = [
+        entry
+        for entry in candidates
         if validation_results.get(
-            canonical(url),
+            canonical(entry["url"]),
             {"status": "unknown"},
         ).get("status") == "unknown"
     ]
     retry_recovered = 0
 
-    if retry_urls:
+    if retry_entries:
         time.sleep(UNKNOWN_RETRY_DELAY)
 
         with concurrent.futures.ThreadPoolExecutor(
             max_workers=RETRY_WORKERS
         ) as ex:
             retry_map = {
-                ex.submit(validate_hls, url): url
-                for url in retry_urls
+                ex.submit(
+                    validate_hls,
+                    entry["url"],
+                    user_agent=entry.get("user_agent"),
+                    referrer=entry.get("referrer"),
+                ): entry
+                for entry in retry_entries
             }
             for fut in concurrent.futures.as_completed(retry_map):
-                url = retry_map[fut]
+                entry = retry_map[fut]
+                url = entry["url"]
                 key = canonical(url)
                 first = validation_results.get(
                     key,
@@ -280,7 +354,9 @@ def main():
     variant_items = []
     report = []
 
-    for meta, url in candidates:
+    for entry in candidates:
+        meta = entry["meta"]
+        url = entry["url"]
         result = validation_results.get(
             canonical(url),
             {"status": "unknown", "reason": "missing result"},
@@ -297,6 +373,8 @@ def main():
         item = {
             "meta": normalized_meta,
             "url": url,
+            "user_agent": entry.get("user_agent"),
+            "referrer": entry.get("referrer"),
             "category": category,
             "name": name,
             "channel_key": key,
@@ -319,6 +397,8 @@ def main():
             "order_sources": ordering.get("sources", 0),
             "order_evidence": ordering.get("evidence", []),
             "url": url,
+            "http_user_agent": entry.get("user_agent"),
+            "http_referrer": entry.get("referrer"),
             **result,
             "status": status,
         })
@@ -386,7 +466,7 @@ def main():
         "updated_at_utc": dt.datetime.now(
             dt.timezone.utc
         ).isoformat(),
-        "validation_mode": "HLS manifest + variant + real media segments",
+        "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
         "sources": source_report,
         "raw_entries": len(entries),
         "priority_entries": priority_entries,
@@ -398,11 +478,12 @@ def main():
             0, len(candidates) - len(selected)
         ),
         "filtered_private_style_entries": filtered_private_style,
+        "header_aware_entries": header_aware_entries,
         "stream_validation_statuses": dict(raw_status_counts),
         "verified_entries": counts["verified"],
         "restricted_entries": counts["restricted"],
         "unknown_entries": counts["unknown"],
-        "unknown_retry_candidates": len(retry_urls),
+        "unknown_retry_candidates": len(retry_entries),
         "unknown_retry_recovered": retry_recovered,
         "unknown_retry_delay_seconds": UNKNOWN_RETRY_DELAY,
         "unknown_retry_workers": RETRY_WORKERS,
