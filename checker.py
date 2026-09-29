@@ -117,13 +117,18 @@ def parse_playlist(
             continue
 
         if line.startswith(("http://", "https://")):
+            meta_value = meta or "#EXTINF:-1,Unknown"
             out.append({
-                "meta": meta or "#EXTINF:-1,Unknown",
+                "meta": meta_value,
                 "url": line,
                 "user_agent": options.get("user_agent"),
                 "referrer": options.get("referrer"),
                 "source_kind": source_kind,
                 "source_name": source_name,
+                "geo_hint": (
+                    "geo-blocked" in fold(meta_value)
+                    or "geo blocked" in fold(meta_value)
+                ),
             })
             meta = None
             options = {}
@@ -366,6 +371,9 @@ def main():
                     merged["user_agent"] = existing.get("user_agent")
                 if not merged.get("referrer"):
                     merged["referrer"] = existing.get("referrer")
+                merged["geo_hint"] = bool(
+                    merged.get("geo_hint") or existing.get("geo_hint")
+                )
                 unique[key] = merged
                 existing = merged
             else:
@@ -373,6 +381,9 @@ def main():
                     existing["user_agent"] = entry["user_agent"]
                 if not existing.get("referrer") and entry.get("referrer"):
                     existing["referrer"] = entry["referrer"]
+                existing["geo_hint"] = bool(
+                    existing.get("geo_hint") or entry.get("geo_hint")
+                )
 
     candidates = list(unique.values())
     header_aware_entries = sum(
@@ -405,7 +416,7 @@ def main():
                     "reason": type(e).__name__,
                 }
 
-    retry_entries = [
+    initial_unknown_entries = [
         entry
         for entry in candidates
         if validation_results.get(
@@ -413,6 +424,30 @@ def main():
             {"status": "unknown"},
         ).get("status") == "unknown"
     ]
+
+    verified_channel_keys = {
+        channel_key(entry["meta"])
+        for entry in candidates
+        if (
+            validation_results.get(
+                canonical(entry["url"]),
+                {"status": "unknown"},
+            ).get("status") == "verified"
+            and channel_key(entry["meta"])
+        )
+    }
+
+    retry_entries = [
+        entry
+        for entry in initial_unknown_entries
+        if (
+            not channel_key(entry["meta"])
+            or channel_key(entry["meta"]) not in verified_channel_keys
+        )
+    ]
+    unknown_retry_skipped_verified_sibling = (
+        len(initial_unknown_entries) - len(retry_entries)
+    )
     retry_recovered = 0
 
     if retry_entries:
@@ -476,7 +511,10 @@ def main():
         decision = category_decision(meta)
         naming = canonical_name_decision(meta)
         raw_name = naming.get("original_name") or ""
-        geo_hint = "geo-blocked" in fold(raw_name) or "geo blocked" in fold(raw_name)
+        geo_hint = bool(entry.get("geo_hint")) or (
+            "geo-blocked" in fold(raw_name)
+            or "geo blocked" in fold(raw_name)
+        )
         normalized_meta, category, name = normalize_meta(meta)
         ordering = order_decision(normalized_meta, category)
         key = channel_key(normalized_meta, name)
@@ -616,6 +654,9 @@ def main():
         "restricted_entries": counts["restricted"],
         "unknown_entries": counts["unknown"],
         "unknown_retry_candidates": len(retry_entries),
+        "unknown_retry_skipped_verified_sibling": (
+            unknown_retry_skipped_verified_sibling
+        ),
         "unknown_retry_recovered": retry_recovered,
         "unknown_retry_delay_seconds": UNKNOWN_RETRY_DELAY,
         "unknown_retry_workers": RETRY_WORKERS,
