@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T16:22:17.224251+00:00",
+  "updated_at_utc": "2026-09-29T16:29:33.058775+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -15,12 +15,12 @@
     {
       "url": "local:turkuvaz_discovered.m3u",
       "status": "ok",
-      "entries": 7
+      "entries": 6
     },
     {
       "url": "local:browser_discovered.m3u",
       "status": "ok",
-      "entries": 6
+      "entries": 9
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -48,29 +48,29 @@
       "entries": 184
     }
   ],
-  "raw_entries": 1197,
+  "raw_entries": 1199,
   "priority_entries": 19,
   "official_entries": 15,
-  "turkuvaz_official_entries": 7,
-  "browser_official_entries": 6,
+  "turkuvaz_official_entries": 6,
+  "browser_official_entries": 9,
   "discovered_entries": 184,
-  "unique_entries": 360,
-  "unique_stream_candidates": 360,
+  "unique_entries": 362,
+  "unique_stream_candidates": 362,
   "semantic_channels": 249,
-  "duplicate_stream_variants_collapsed": 111,
+  "duplicate_stream_variants_collapsed": 113,
   "filtered_private_style_entries": 352,
-  "header_aware_entries": 45,
+  "header_aware_entries": 47,
   "stream_validation_statuses": {
-    "restricted": 37,
+    "restricted": 38,
     "unknown": 99,
     "dead": 28,
-    "verified": 196
+    "verified": 197
   },
   "verified_entries": 157,
   "restricted_entries": 22,
   "unknown_entries": 52,
-  "unknown_retry_candidates": 99,
-  "unknown_retry_recovered": 0,
+  "unknown_retry_candidates": 100,
+  "unknown_retry_recovered": 1,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
   "dead_entries": 18,

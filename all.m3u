@@ -8,7 +8,7 @@ https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
 #EXTINF:-1 group-title="Ulusal",ATV
 #EXTVLCOPT:http-referrer=https://www.atv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=o-Ax17qK_iPO81rrK0leAQ&e=1790743862
+https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=PGv1qNnNGoSrDGh2-I6EhQ&e=1790744278
 #EXTINF:-1 group-title="Ulusal",Show TV
 #EXTVLCOPT:http-referrer=https://www.showtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -20,7 +20,7 @@ https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=1740db13-3ee9-4858-8d2c-b
 #EXTINF:-1 group-title="Ulusal",NOW TV
 #EXTVLCOPT:http-referrer=https://www.nowtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=P5LLB2dZSOkpuUSyQc-nQw&e=1790712825
+https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=jmOYrxyCn7NnuUweB9D3XQ&e=1790713348
 #EXTINF:-1 group-title="Ulusal",TV8
 #EXTVLCOPT:http-referrer=https://www.tv8.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -30,9 +30,9 @@ https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&c
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8
 #EXTINF:-1 group-title="Ulusal",A2
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/canli-yayin
+#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=Zpsr9hmbP06Vp2357C73xA&e=1790743864
+https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=2L1AoCtC3_sora2uMSlDsQ&e=1790744325
 #EXTINF:-1 tvg-id="A2TV.tr@SD" tvg-logo="https://iatv.tmgrup.com.tr/site/v2/a2tv/i/a2tv-logo.png" group-title="Ulusal",A2TV (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
 #EXTINF:-1 tvg-id="CNBCe.tr@SD" tvg-logo="https://s.cnbce.com/dist/images/logo-nav.png" group-title="Ulusal",CNBC-e
@@ -68,7 +68,7 @@ https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8
 #EXTINF:-1 group-title="Haber",A Para
 #EXTVLCOPT:http-referrer=https://www.apara.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=Ldnl5CZM46lnoaCNcGfiEQ&e=1790743871
+https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=q5ctIIvYEH_gmFv7WXwxOQ&e=1790744285
 #EXTINF:-1 tvg-id="UlkeTV.tr@HD" group-title="Haber",Ülke TV
 https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8
 #EXTINF:-1 tvg-id="HaberGlobal.tr@SD" tvg-logo="https://i.imgur.com/fu6XeGS.png" group-title="Haber",Haber Global (720p) [Not 24/7]
@@ -100,7 +100,7 @@ https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 group-title="Haber",A News
 #EXTVLCOPT:http-referrer=https://www.anews.com.tr/webtv/live-broadcast
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=VjCoSxAYEJYcS-7YWPqCaA&e=1790743873
+https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=EJmLl4kt1HT2z_P4ahCo7w&e=1790744287
 #EXTINF:-1 tvg-id="TRTWorld.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TRT_World.svg/960px-TRT_World.svg.png" group-title="Haber",TRT World (1080p) [Not 24/7]
 https://tv-trtworld.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTArabi.tr@SD" tvg-logo="https://i.imgur.com/dEfI2M9.png" group-title="Haber",TRT Arabi (1080p) [Not 24/7]
@@ -136,7 +136,7 @@ https://tv-trtspor1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="Spor",A Spor
 #EXTVLCOPT:http-referrer=https://www.aspor.com.tr/webtv/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=LcUdJVDieNBFJaxk7gSjzw&e=1790743869
+https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=gmS-DYqyQb_fOYjqs-theg&e=1790744282
 #EXTINF:-1 tvg-id="TRTSporYildiz.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg/960px-TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg.png" group-title="Spor",TRT Spor Yildiz (1440p) [Geo-blocked]
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
 #EXTINF:-1 tvg-id="FBTV.tr@SD" tvg-logo="https://i.imgur.com/qBVqtYd.png" group-title="Spor",FB TV

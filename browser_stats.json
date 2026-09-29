@@ -1,20 +1,55 @@
 {
-  "updated_at_utc": "2026-09-29T16:18:23.313002+00:00",
-  "fallback_targets": 4,
-  "pages_scanned": 4,
-  "pages_with_candidates": 2,
-  "raw_candidates": 6,
-  "accepted_unique_candidates": 6,
+  "updated_at_utc": "2026-09-29T16:25:17.178042+00:00",
+  "fallback_targets": 5,
+  "pages_scanned": 5,
+  "pages_with_candidates": 3,
+  "raw_candidates": 10,
+  "accepted_unique_candidates": 9,
   "probe_statuses": {
-    "verified": 6
+    "restricted": 1,
+    "dead": 1,
+    "verified": 8
   },
   "sources": [
+    {
+      "name": "A2",
+      "page": "https://www.atv.com.tr/a2tv/canli-yayin",
+      "status": "ok",
+      "network_events": 9,
+      "response_bodies_scanned": 834,
+      "candidates": [
+        {
+          "url": "https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758",
+          "referer": "https://www.atv.com.tr/",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "script-body"
+        },
+        {
+          "url": "https://trkvz-dev.daioncdn.net/atv/atv.m3u8?ce=3&app=8672c3cb-70f1-4686-9158-cc03a23c6b0f",
+          "referer": "https://www.atv.com.tr/",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "script-body"
+        },
+        {
+          "url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=2L1AoCtC3_sora2uMSlDsQ&e=1790744325",
+          "referer": "https://www.atv.com.tr/",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "fetch-body"
+        },
+        {
+          "url": "https://trkvz-live.ercdn.net/atvhd/atvhd_1080p.m3u8?st=2L1AoCtC3_sora2uMSlDsQ&e=1790744325",
+          "referer": "https://www.atv.com.tr/",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "request"
+        }
+      ]
+    },
     {
       "name": "BengüTürk",
       "page": "https://www.benguturk.com/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 30,
+      "response_bodies_scanned": 32,
       "candidates": []
     },
     {
@@ -22,7 +57,7 @@
       "page": "https://www.ekoturk.com/canli-yayin/",
       "status": "ok",
       "network_events": 22,
-      "response_bodies_scanned": 104,
+      "response_bodies_scanned": 105,
       "candidates": [
         {
           "url": "https://cdn.ekoturk.net/hls/master.m3u8",
@@ -49,7 +84,7 @@
       "page": "https://www.startv.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 7,
-      "response_bodies_scanned": 111,
+      "response_bodies_scanned": 123,
       "candidates": [
         {
           "url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9",
@@ -64,7 +99,7 @@
           "via": "script-body"
         },
         {
-          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjqn5vyry6g&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
+          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sjraqukdp6u&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
           "referer": "https://www.startv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
@@ -76,7 +111,7 @@
       "page": "https://www.tv100.com/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 12,
+      "response_bodies_scanned": 13,
       "candidates": []
     }
   ]
