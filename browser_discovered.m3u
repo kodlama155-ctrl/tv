@@ -40,21 +40,21 @@ https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8
 #EXTINF:-1 group-title="Ulusal",A2
 #EXTVLCOPT:http-referrer=https://www.atv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8?st=t5lCSoYj279oP30qKg1fpw&e=1790755076
+https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8?st=R-xsdVakNMh2hNIWzF54OQ&e=1790757924
 # SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
 # DISCOVERY: request
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",A2
 #EXTVLCOPT:http-referrer=https://www.atv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/a2tv/a2tv_480p.m3u8?st=t5lCSoYj279oP30qKg1fpw&e=1790755076
+https://trkvz-live.ercdn.net/a2tv/a2tv_480p.m3u8?st=R-xsdVakNMh2hNIWzF54OQ&e=1790757924
 # SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
 # DISCOVERY: request
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",A2
 #EXTVLCOPT:http-referrer=https://www.atv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/a2tv/a2tv_720p.m3u8?st=t5lCSoYj279oP30qKg1fpw&e=1790755076
+https://trkvz-live.ercdn.net/a2tv/a2tv_720p.m3u8?st=R-xsdVakNMh2hNIWzF54OQ&e=1790757924
 # SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
 # DISCOVERY: script-body
 # PROBE: restricted manifest HTTP 403
@@ -82,25 +82,4 @@ https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-2
 #EXTINF:-1 group-title="Ulusal",Star TV
 #EXTVLCOPT:http-referrer=https://www.startv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sk7aebqz4ca&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3
-# SOURCE: official-browser:https://www.anews.com.tr/webtv/live-broadcast
-# DISCOVERY: fetch-body
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Uluslararası",A News
-#EXTVLCOPT:http-referrer=https://www.anews.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8
-# SOURCE: official-browser:https://www.anews.com.tr/webtv/live-broadcast
-# DISCOVERY: fetch-body
-# PROBE: verified real media segment verified
-#EXTINF:-1 group-title="Uluslararası",A News
-#EXTVLCOPT:http-referrer=https://www.anews.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=n8ImOKGjj-SdA1syS16UcA&e=1790755053
-# SOURCE: official-browser:https://www.anews.com.tr/webtv/live-broadcast
-# DISCOVERY: request
-# PROBE: verified real media segment verified
-#EXTINF:-1 group-title="Uluslararası",A News
-#EXTVLCOPT:http-referrer=https://www.anews.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/anewshd/anewshd_720p.m3u8?st=n8ImOKGjj-SdA1syS16UcA&e=1790755053
+https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8skbiu7w225v&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3

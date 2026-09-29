@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-09-29T19:23:00.164655+00:00",
-  "official_pages": 20,
+  "updated_at_utc": "2026-09-29T20:10:36.457794+00:00",
+  "official_pages": 21,
   "pages_ok": 19,
   "pages_with_candidates": 10,
   "raw_candidates": 15,
   "accepted_unique_candidates": 15,
   "probe_statuses": {
-    "restricted": 4,
     "verified": 10,
+    "restricted": 4,
     "unknown": 1
   },
   "sources": [
@@ -138,8 +138,8 @@
       "page_candidates": 2,
       "aux_scanned": 2,
       "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=nPBnVmBmcwO9l9otdMkhPg&e=1790723986",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=nPBnVmBmcwO9l9otdMkhPg&e=1790723986"
+        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=hhBfNFPbDiDCvOYDl3LsKg&e=1790726988",
+        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=hhBfNFPbDiDCvOYDl3LsKg&e=1790726988"
       ],
       "identity_rejected_candidates": 0
     },
@@ -211,6 +211,16 @@
         "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3"
       ],
       "identity_rejected_candidates": 0
+    },
+    {
+      "name": "TV8.5",
+      "page": "https://img.tv8bucuk.com/tv8-5-canli-yayin",
+      "status": "page_error",
+      "page_final_url": null,
+      "page_candidates": 0,
+      "aux_scanned": 0,
+      "candidates": [],
+      "error": "URLError"
     },
     {
       "name": "TVNET",
