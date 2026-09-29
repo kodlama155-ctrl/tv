@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T03:02:27.282218+00:00",
+  "updated_at_utc": "2026-09-29T03:07:58.264190+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -44,14 +44,14 @@
   "stream_validation_statuses": {
     "restricted": 33,
     "unknown": 86,
-    "dead": 37,
-    "verified": 181
+    "dead": 38,
+    "verified": 180
   },
   "verified_entries": 155,
   "restricted_entries": 24,
   "unknown_entries": 42,
-  "unknown_retry_candidates": 87,
-  "unknown_retry_recovered": 1,
+  "unknown_retry_candidates": 86,
+  "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
   "dead_entries": 26,
@@ -61,34 +61,34 @@
   "core_channels_verified": 40,
   "core_channels_not_verified": 16,
   "categories_verified": {
-    "Ulusal": 28,
-    "Haber": 24,
-    "Spor": 4,
-    "Film & Dizi": 4,
+    "Ulusal": 10,
+    "Haber": 26,
+    "Spor": 3,
+    "Film & Dizi": 5,
     "Çocuk": 7,
-    "Belgesel": 0,
-    "Yaşam": 3,
-    "Müzik": 14,
-    "Yerel": 4,
+    "Belgesel": 1,
+    "Yaşam": 2,
+    "Müzik": 16,
+    "Yerel": 6,
     "Uluslararası": 10,
-    "Diğer": 57
+    "Diğer": 69
   },
   "categories_restricted": {
-    "Ulusal": 3,
-    "Haber": 4,
+    "Ulusal": 4,
+    "Haber": 3,
     "Spor": 5,
-    "Film & Dizi": 0,
+    "Film & Dizi": 1,
     "Çocuk": 2,
     "Belgesel": 3,
     "Yaşam": 2,
     "Müzik": 1,
     "Yerel": 0,
     "Uluslararası": 0,
-    "Diğer": 4
+    "Diğer": 3
   },
   "categories_unknown": {
-    "Ulusal": 6,
-    "Haber": 5,
+    "Ulusal": 0,
+    "Haber": 6,
     "Spor": 3,
     "Film & Dizi": 2,
     "Çocuk": 0,
@@ -97,6 +97,6 @@
     "Müzik": 2,
     "Yerel": 1,
     "Uluslararası": 0,
-    "Diğer": 17
+    "Diğer": 22
   }
 }
