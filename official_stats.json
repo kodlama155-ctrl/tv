@@ -1,15 +1,14 @@
 {
-  "updated_at_utc": "2026-09-29T13:58:46.742763+00:00",
+  "updated_at_utc": "2026-09-29T14:03:38.224368+00:00",
   "official_pages": 20,
   "pages_ok": 19,
   "pages_with_candidates": 8,
-  "raw_candidates": 15,
-  "accepted_unique_candidates": 13,
+  "raw_candidates": 12,
+  "accepted_unique_candidates": 12,
   "probe_statuses": {
-    "dead": 2,
-    "verified": 10,
-    "unknown": 2,
-    "restricted": 1
+    "verified": 9,
+    "restricted": 2,
+    "unknown": 1
   },
   "sources": [
     {
@@ -19,7 +18,8 @@
       "page_final_url": "https://www.ahaber.com.tr/video/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "A News",
@@ -28,7 +28,8 @@
       "page_final_url": "https://www.ahaber.com.tr/canli-yayin-anews.html",
       "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "A Para",
@@ -37,7 +38,8 @@
       "page_final_url": "https://www.ahaber.com.tr/canli-yayin-apara.html",
       "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "A Spor",
@@ -46,7 +48,8 @@
       "page_final_url": "https://www.ahaber.com.tr/canli-yayin-aspor.html",
       "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "A2",
@@ -55,7 +58,8 @@
       "page_final_url": "https://www.atv.com.tr/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "ATV",
@@ -64,7 +68,8 @@
       "page_final_url": "https://www.atv.com.tr/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "BengüTürk",
@@ -73,7 +78,8 @@
       "page_final_url": "https://www.benguturk.com/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 1,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "EKOTÜRK",
@@ -82,7 +88,8 @@
       "page_final_url": "https://www.ekoturk.com/canli-yayin/",
       "page_candidates": 0,
       "aux_scanned": 4,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "Habertürk",
@@ -93,7 +100,8 @@
       "aux_scanned": 4,
       "candidates": [
         "https://ciner.daioncdn.net/haberturktv/haberturktv.m3u8?app=c98ab0b0-50cc-495b-bb37-778e91f5ff5b&ce=3"
-      ]
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "Kanal 7",
@@ -106,7 +114,8 @@
         "https://live.kanal7.com/live/kanal7LiveDesktop/index.m3u8",
         "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
         "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8?app=f99587ad-1637-494d-8255-da35b09d17a1&ce=3"
-      ]
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "Kanal D",
@@ -118,7 +127,8 @@
       "candidates": [
         "https://kdlive.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8",
         "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3"
-      ]
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "NOW TV",
@@ -128,9 +138,10 @@
       "page_candidates": 2,
       "aux_scanned": 2,
       "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=yUqTtqd0d1RBpcWqBE0OKw&e=1790704549",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=yUqTtqd0d1RBpcWqBE0OKw&e=1790704549"
-      ]
+        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=C5PMGg3WAY4bS5nN-93CxQ&e=1790704853",
+        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=C5PMGg3WAY4bS5nN-93CxQ&e=1790704853"
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "Show TV",
@@ -140,9 +151,9 @@
       "page_candidates": 2,
       "aux_scanned": 4,
       "candidates": [
-        "https://ciner-live.ercdn.net/showturk/playlist.m3u8?e=1790697191&st=E_P8E-63_yOLSrjei7ET9g&tv=1",
         "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&st=RBzhSuGauna0OGld-DJUVA&e=1664766175&tv=1"
-      ]
+      ],
+      "identity_rejected_candidates": 1
     },
     {
       "name": "Star TV",
@@ -151,7 +162,8 @@
       "page_final_url": "https://www.startv.com.tr/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 4,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "TRT Haber",
@@ -162,7 +174,8 @@
       "aux_scanned": 0,
       "candidates": [
         "https://tv-trthaber.medya.trt.com.tr/master.m3u8"
-      ]
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "TRT Spor",
@@ -172,10 +185,9 @@
       "page_candidates": 3,
       "aux_scanned": 4,
       "candidates": [
-        "https://trt.daioncdn.net/trtspor/master.m3u8?app=web\\u0026platform=trtspor",
-        "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web\\u0026platform=trtspor",
-        "https://rd-trtradyo1.medya.trt.com.tr/master.m3u8"
-      ]
+        "https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor"
+      ],
+      "identity_rejected_candidates": 2
     },
     {
       "name": "TV100",
@@ -194,7 +206,8 @@
       "page_final_url": "https://www.tv8.com.tr/",
       "page_candidates": 0,
       "aux_scanned": 4,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "TVNET",
@@ -205,7 +218,8 @@
       "aux_scanned": 4,
       "candidates": [
         "https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/playlist.m3u8"
-      ]
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "Vav TV",
@@ -214,7 +228,8 @@
       "page_final_url": "https://www.ahaber.com.tr/canli-yayin-vavtv.html",
       "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": []
+      "candidates": [],
+      "identity_rejected_candidates": 0
     }
   ]
 }

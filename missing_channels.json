@@ -1,12 +1,12 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 56,
-  "core_channels_verified": 42,
-  "core_channels_not_verified": 14,
+  "core_channels_verified": 43,
+  "core_channels_not_verified": 13,
   "status_counts": {
-    "verified": 42,
+    "verified": 43,
     "restricted": 12,
-    "unknown": 2
+    "unknown": 1
   },
   "missing_channels": [
     {
@@ -43,13 +43,6 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
-    },
-    {
-      "name": "Tele1",
-      "expected_category": "Haber",
-      "status": "unknown",
-      "reason": "manifest URLError",
-      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",
