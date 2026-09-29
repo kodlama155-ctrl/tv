@@ -71,15 +71,27 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      - name: Check local Python
+        shell: pwsh
+        run: |
+          if (Get-Command python -ErrorAction SilentlyContinue) {
+            python --version
+          } elseif (Get-Command py -ErrorAction SilentlyContinue) {
+            py -3 --version
+          } else {
+            throw "Python is not installed or not available in PATH on tv-runner-tr."
+          }
 
       - name: Recheck restricted streams from Türkiye
+        shell: pwsh
         run: |
           git pull --ff-only origin main
-          python tr_recheck.py
+
+          if (Get-Command python -ErrorAction SilentlyContinue) {
+            python tr_recheck.py
+          } else {
+            py -3 tr_recheck.py
+          }
 
       - name: Commit Türkiye verification results
         shell: pwsh
