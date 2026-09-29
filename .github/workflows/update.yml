@@ -14,6 +14,7 @@ on:
       - "sources.txt"
       - "priority_sources.m3u"
       - "channel_policy.py"
+      - "name_engine.py"
       - "category_engine.py"
       - ".github/workflows/update.yml"
   schedule:
