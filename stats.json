@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T13:44:43.244654+00:00",
+  "updated_at_utc": "2026-09-29T13:49:05.149163+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -44,15 +44,15 @@
   "header_aware_entries": 17,
   "stream_validation_statuses": {
     "restricted": 33,
-    "unknown": 97,
-    "verified": 180,
+    "unknown": 98,
+    "verified": 179,
     "dead": 27
   },
-  "verified_entries": 154,
+  "verified_entries": 153,
   "restricted_entries": 24,
-  "unknown_entries": 50,
-  "unknown_retry_candidates": 99,
-  "unknown_retry_recovered": 2,
+  "unknown_entries": 51,
+  "unknown_retry_candidates": 98,
+  "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
   "dead_entries": 19,
@@ -74,7 +74,7 @@
     "Müzik": 16,
     "Yerel": 0,
     "Uluslararası": 8,
-    "Diğer": 67
+    "Diğer": 66
   },
   "categories_restricted": {
     "Ulusal": 4,
@@ -104,6 +104,6 @@
     "Müzik": 2,
     "Yerel": 0,
     "Uluslararası": 0,
-    "Diğer": 19
+    "Diğer": 20
   }
 }

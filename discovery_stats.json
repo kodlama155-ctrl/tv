@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-09-29T13:42:32.233346+00:00",
+  "updated_at_utc": "2026-09-29T13:46:47.470318+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-09-15T13:42:32.233346+00:00",
+  "cutoff_utc": "2026-09-15T13:46:47.470318+00:00",
   "repos_per_query": 50,
   "queries": [
     {
@@ -61,6 +61,7 @@
   "fresh_files_scanned": 6,
   "stale_files_skipped": 6,
   "unique_m3u8_candidates": 184,
+  "header_aware_candidates": 1,
   "fresh_source_files": [
     {
       "repo": "FeridunN12/ibo-iptv-playlist",
