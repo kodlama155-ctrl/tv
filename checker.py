@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parent
 SOURCES = ROOT / "sources.txt"
 PRIORITY = ROOT / "priority_sources.m3u"
 OFFICIAL = ROOT / "official_discovered.m3u"
+BROWSER_OFFICIAL = ROOT / "browser_discovered.m3u"
 DISCOVERED = ROOT / "discovered.m3u"
 
 VERIFIED_OUTPUT = ROOT / "a.m3u"
@@ -224,6 +225,26 @@ def main():
         except Exception as e:
             source_report.append({
                 "url": "local:official_discovered.m3u",
+                "status": "error",
+                "error": type(e).__name__,
+            })
+
+    browser_official_entries = 0
+    if BROWSER_OFFICIAL.exists():
+        try:
+            parsed = parse_playlist(
+                BROWSER_OFFICIAL.read_text(encoding="utf-8")
+            )
+            browser_official_entries = len(parsed)
+            entries.extend(parsed)
+            source_report.append({
+                "url": "local:browser_discovered.m3u",
+                "status": "ok",
+                "entries": browser_official_entries,
+            })
+        except Exception as e:
+            source_report.append({
+                "url": "local:browser_discovered.m3u",
                 "status": "error",
                 "error": type(e).__name__,
             })
@@ -492,6 +513,7 @@ def main():
         "raw_entries": len(entries),
         "priority_entries": priority_entries,
         "official_entries": official_entries,
+        "browser_official_entries": browser_official_entries,
         "discovered_entries": discovered_entries,
         "unique_entries": len(candidates),
         "unique_stream_candidates": len(candidates),
