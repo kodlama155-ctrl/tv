@@ -7,7 +7,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-UA = "Mozilla/5.0 (EmirTV-HLS-Validator/2.0)"
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 MANIFEST_TIMEOUT = 9
 SEGMENT_TIMEOUT = 9
 MAX_MANIFEST_BYTES = 800_000
@@ -16,12 +16,36 @@ MAX_SEGMENT_BYTES = 128_000
 RESTRICTED_CODES = {401, 403, 451}
 DEAD_CODES = {404, 410}
 
-def _request(url: str, timeout: int, max_bytes: int, use_range: bool = False):
+def _safe_header_value(value):
+    if value is None:
+        return None
+    value = str(value).strip()
+    if not value or "\r" in value or "\n" in value:
+        return None
+    return value
+
+
+def _request(
+    url: str,
+    timeout: int,
+    max_bytes: int,
+    use_range: bool = False,
+    request_headers: dict | None = None,
+):
     headers = {
         "User-Agent": UA,
         "Accept": "*/*",
         "Cache-Control": "no-cache",
     }
+
+    request_headers = request_headers or {}
+    custom_ua = _safe_header_value(request_headers.get("user_agent"))
+    referrer = _safe_header_value(request_headers.get("referrer"))
+
+    if custom_ua:
+        headers["User-Agent"] = custom_ua
+    if referrer:
+        headers["Referer"] = referrer
     if use_range:
         headers["Range"] = f"bytes=0-{max_bytes - 1}"
 
@@ -147,9 +171,15 @@ def _media_details(text: str, base_url: str):
         "vod": "#EXT-X-ENDLIST" in text,
     }
 
-def _aux_reachable(url: str):
+def _aux_reachable(url: str, request_headers: dict | None = None):
     try:
-        code, data, _, _, _ = _request(url, SEGMENT_TIMEOUT, 32_000, use_range=True)
+        code, data, _, _, _ = _request(
+            url,
+            SEGMENT_TIMEOUT,
+            32_000,
+            use_range=True,
+            request_headers=request_headers,
+        )
         return (200 <= code < 400 and len(data) > 0), None
     except urllib.error.HTTPError as e:
         return False, _failure_for_http(e.code)
@@ -184,7 +214,13 @@ def _payload_looks_media(url: str, data: bytes, ctype: str, encrypted: bool) -> 
     # playlist is valid HLS, so a non-trivial binary body is acceptable.
     return len(data) >= 1024
 
-def _verify_media(media_url: str, text: str, manifest_latency_ms: int, variant: dict | None):
+def _verify_media(
+    media_url: str,
+    text: str,
+    manifest_latency_ms: int,
+    variant: dict | None,
+    request_headers: dict | None = None,
+):
     info = _media_details(text, media_url)
 
     base = {
@@ -197,12 +233,12 @@ def _verify_media(media_url: str, text: str, manifest_latency_ms: int, variant: 
         return {**base, "status": "drm", "reason": "DRM/SAMPLE-AES playlist"}
 
     if info["key_url"]:
-        ok, failure = _aux_reachable(info["key_url"])
+        ok, failure = _aux_reachable(info["key_url"], request_headers)
         if not ok:
             return {**base, "status": failure or "unknown", "reason": "AES-128 key unreachable"}
 
     if info["init_url"]:
-        ok, failure = _aux_reachable(info["init_url"])
+        ok, failure = _aux_reachable(info["init_url"], request_headers)
         if not ok:
             return {**base, "status": failure or "unknown", "reason": "init segment unreachable"}
 
@@ -210,17 +246,21 @@ def _verify_media(media_url: str, text: str, manifest_latency_ms: int, variant: 
     if not segments:
         return {**base, "status": "unknown", "reason": "playlist has no media segments"}
 
-    # Live HLS'in en son segmenti henüz CDN'e yayılmamış olabilir.
-    # Mümkünse sondan 2. ve 3. segmentleri doğrula.
-    if len(segments) >= 3:
-        candidates = [segments[-2], segments[-3]]
+    # Canlı HLS oynatıcıları canlı kenarın hemen dibindeki segmentten
+    # başlamamalıdır. Bu yüzden mümkün olduğunda biraz daha gerideki
+    # segmentleri deneriz ve tek bir geçici segment hatasında kanalı düşürmeyiz.
+    if info["vod"]:
+        candidates = segments[: min(3, len(segments))]
+    elif len(segments) >= 5:
+        candidates = [segments[-4], segments[-3], segments[-2]]
+    elif len(segments) >= 3:
+        candidates = [segments[-3], segments[-2]]
     elif len(segments) == 2:
-        candidates = [segments[-1], segments[-2]]
+        candidates = [segments[-2], segments[-1]]
     else:
         candidates = [segments[-1]]
 
-    checked = 0
-    segment_latencies = []
+    failures = []
 
     for seg_url in candidates:
         try:
@@ -229,38 +269,63 @@ def _verify_media(media_url: str, text: str, manifest_latency_ms: int, variant: 
                 SEGMENT_TIMEOUT,
                 MAX_SEGMENT_BYTES,
                 use_range=True,
+                request_headers=request_headers,
             )
             if not (200 <= code < 400):
-                return {**base, "status": "unknown", "reason": f"segment HTTP {code}"}
+                failures.append(("unknown", f"segment HTTP {code}"))
+                continue
             if not _payload_looks_media(final_url, data, ctype, info["encrypted"]):
-                return {**base, "status": "unknown", "reason": "segment payload invalid"}
+                failures.append(("unknown", "segment payload invalid"))
+                continue
 
-            checked += 1
-            segment_latencies.append(latency)
-
-        except urllib.error.HTTPError as e:
             return {
                 **base,
-                "status": _failure_for_http(e.code),
-                "reason": f"segment HTTP {e.code}",
-                "http_code": e.code,
+                "status": "verified",
+                "reason": "real media segment verified",
+                "segment_latency_ms": latency,
+                "segment_probes": len(failures) + 1,
+                "encrypted": info["encrypted"],
+                "vod": info["vod"],
             }
+
+        except urllib.error.HTTPError as e:
+            failures.append((_failure_for_http(e.code), f"segment HTTP {e.code}"))
         except Exception as e:
-            return {**base, "status": "unknown", "reason": f"segment {type(e).__name__}"}
+            failures.append(("unknown", f"segment {type(e).__name__}"))
+
+    failure_statuses = [status for status, _ in failures]
+    if failure_statuses and all(status == "restricted" for status in failure_statuses):
+        final_status = "restricted"
+    else:
+        # Manifest erişilebildiği halde yalnız segmentler 404/410 veriyorsa
+        # bunu doğrudan "dead" saymıyoruz; canlı playlist/CDN yarışı olabilir.
+        final_status = "unknown"
 
     return {
         **base,
-        "status": "verified",
-        "reason": f"{checked} media segment(s) verified",
-        "segment_latency_ms": round(sum(segment_latencies) / max(len(segment_latencies), 1)),
+        "status": final_status,
+        "reason": "; ".join(reason for _, reason in failures[:3]) or "no playable segment",
+        "segment_probes": len(failures),
         "encrypted": info["encrypted"],
         "vod": info["vod"],
     }
 
-def validate_hls(url: str):
+def validate_hls(
+    url: str,
+    user_agent: str | None = None,
+    referrer: str | None = None,
+):
+    request_headers = {
+        "user_agent": user_agent,
+        "referrer": referrer,
+    }
+
     try:
         code, data, final_url, _, latency = _request(
-            url, MANIFEST_TIMEOUT, MAX_MANIFEST_BYTES
+            url,
+            MANIFEST_TIMEOUT,
+            MAX_MANIFEST_BYTES,
+            request_headers=request_headers,
         )
     except urllib.error.HTTPError as e:
         return {
@@ -274,7 +339,7 @@ def validate_hls(url: str):
     text = _text(data)
     if "#EXTM3U" not in text[:2048]:
         return {
-            "status": "dead",
+            "status": "unknown",
             "reason": "response is not HLS",
             "http_code": code,
             "manifest_latency_ms": latency,
@@ -282,7 +347,13 @@ def validate_hls(url: str):
 
     variants = _variants(text, final_url)
     if not variants:
-        result = _verify_media(final_url, text, latency, None)
+        result = _verify_media(
+            final_url,
+            text,
+            latency,
+            None,
+            request_headers=request_headers,
+        )
         result["http_code"] = code
         return result
 
@@ -299,41 +370,52 @@ def validate_hls(url: str):
     for variant in candidates:
         try:
             vcode, vdata, vfinal, _, vlatency = _request(
-                variant["url"], MANIFEST_TIMEOUT, MAX_MANIFEST_BYTES
+                variant["url"],
+                MANIFEST_TIMEOUT,
+                MAX_MANIFEST_BYTES,
+                request_headers=request_headers,
             )
             vtext = _text(vdata)
             if "#EXTM3U" not in vtext[:2048]:
                 failures.append("variant not HLS")
                 continue
 
-            result = _verify_media(vfinal, vtext, vlatency, variant)
+            result = _verify_media(
+                vfinal,
+                vtext,
+                vlatency,
+                variant,
+                request_headers=request_headers,
+            )
             result["http_code"] = vcode
             result["variants"] = len(variants)
 
             if result["status"] == "verified":
                 return result
-            if result["status"] in ("restricted", "drm"):
-                return result
 
-            failures.append(result.get("reason", result["status"]))
+            failures.append((
+                result.get("status", "unknown"),
+                result.get("reason", result.get("status", "unknown")),
+            ))
 
         except urllib.error.HTTPError as e:
-            status = _failure_for_http(e.code)
-            failures.append(f"variant HTTP {e.code}")
-            if status == "restricted":
-                return {
-                    "status": "restricted",
-                    "reason": f"variant HTTP {e.code}",
-                    "http_code": e.code,
-                    "resolution": variant.get("resolution"),
-                    "bandwidth": variant.get("bandwidth"),
-                    "variants": len(variants),
-                }
+            failures.append((
+                _failure_for_http(e.code),
+                f"variant HTTP {e.code}",
+            ))
         except Exception as e:
-            failures.append(type(e).__name__)
+            failures.append(("unknown", type(e).__name__))
+
+    statuses = [status for status, _ in failures]
+    if statuses and all(status == "restricted" for status in statuses):
+        final_status = "restricted"
+    elif statuses and all(status == "drm" for status in statuses):
+        final_status = "drm"
+    else:
+        final_status = "unknown"
 
     return {
-        "status": "unknown",
-        "reason": "; ".join(failures[:3]) or "no playable variant",
+        "status": final_status,
+        "reason": "; ".join(reason for _, reason in failures[:3]) or "no playable variant",
         "variants": len(variants),
     }
