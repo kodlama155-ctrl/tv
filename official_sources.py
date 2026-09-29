@@ -137,7 +137,7 @@ OFFICIAL_SOURCES = [
     {
         "name": "TV8",
         "category": "Ulusal",
-        "page": "https://www.tv8.com.tr/",
+        "page": "https://www.tv8.com.tr/canli-yayin",
         "hints": ["tv8"],
     },
     {
