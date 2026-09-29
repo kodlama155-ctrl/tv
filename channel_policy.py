@@ -9,81 +9,13 @@ import urllib.parse
 from collections import Counter
 from pathlib import Path
 
-CATEGORY_ORDER = [
-    "Ulusal",
-    "Haber",
-    "Spor",
-    "Film & Dizi",
-    "Çocuk",
-    "Belgesel",
-    "Yaşam",
-    "Müzik",
-    "Yerel",
-    "Uluslararası",
-    "Diğer",
-]
+from category_engine import CATEGORY_ORDER
+
 CATEGORY_INDEX = {name: i for i, name in enumerate(CATEGORY_ORDER)}
 
-# Strong channel-level overrides. Source group-title values are often wrong,
-# so known channels are classified by identity first.
-CATEGORY_IDS = {
-    "Ulusal": {
-        "a2tv", "atv", "beyaztv", "cine1", "cnbce", "diyanettv", "diyartv",
-        "dosttv", "fortunatv", "kanal7", "lalegultv", "nowtv", "sercemtv",
-        "semerkandtv", "showtv", "startv", "teve2", "trt1", "trt2", "trteba",
-        "trtgenc", "tv4", "tv8", "tv85", "360",
-    },
-    "Haber": {
-        "24tv", "ahaber", "akittv", "benguturktv", "bloomberght", "cnnturk",
-        "dha", "ekoturk", "finansturktv", "flashhabertv", "gzt", "haberglobal",
-        "haberturktv", "halktv", "ilketv", "ntv", "sozcutv", "tbmmtv",
-        "tele1", "tgrthaber", "trthaber", "turkhabertv", "tv100", "tvnet",
-        "ulketv",
-    },
-    "Spor": {
-        "aspor", "htsportv", "sportstv", "tjktv", "tjktv2", "trtspor",
-        "trtsporyildiz",
-    },
-    "Film & Dizi": {
-        "bbcfirst", "fx", "gempixel", "grandcinema", "kanald", "kanaldDrama",
-    },
-    "Çocuk": {
-        "babyfirst", "babytv", "disneyjr", "minikacocuk", "minikago",
-        "spacetoonturkey", "trtcocuk", "trtdiyanetcocuk", "zaroktv",
-    },
-    "Belgesel": {
-        "lovenature", "trtbelgesel",
-    },
-    "Yaşam": {
-        "ciftcitv", "dmax", "myzentv", "naturaltv", "stingraynaturescape",
-        "tlc", "vavtv",
-    },
-    "Müzik": {
-        "dreamturk", "knmusictv", "medmuzik", "number1ask", "number1damar",
-        "number1dance", "number1tv", "powerdance", "powerlove", "powerturktv",
-        "powerturkakustik", "powerturkslow", "powerturktaptaze", "powertv",
-        "trtmuzik",
-    },
-    "Yerel": {
-        "aksutv", "alanyapostatv", "altastv", "anadolunettv", "arastv",
-        "astv", "atvalanya", "brtv", "caytv", "denizpostasitv", "dimtv",
-        "edessatv", "ertv", "erzurumwebtv", "estv", "etvkayseri",
-        "etvmanisa", "guneydogutv", "haber61tv", "hunattv", "iceltv",
-        "kanal12", "kanal15", "kanal23", "kanal26", "kanal3", "kanal32",
-        "kanal33", "kanal58", "kanalfirat", "kanalv", "kaytv", "kentturk",
-        "kocaelitv", "konyaolaytv", "linetv", "mavikaradeniztv", "mercantv",
-        "mturktv", "olayturktv", "sunrtv", "tempotv", "tontv", "tv1",
-        "tv264", "tv41", "tv52", "tvden", "urfanatiktv", "van65tv",
-    },
-    "Uluslararası": {
-        "adatv", "afroturktv", "almahriatv", "almazrah", "alzahratvturkic",
-        "elsharqtv", "imamhusseintv5", "kanal7avrupa", "kurdistantv", "luystv",
-        "manastv", "mctv", "mekameleentv", "persianaturkiye", "sat7turk",
-        "trtarabi", "trtavaz", "trtkurdi", "trtturk", "trtworld",
-        "westazerbaijantv", "yoltv", "eurod",
-    },
-}
-
+# Legacy per-channel classification overrides were removed. Classification is
+# owned exclusively by category_engine.py and learned from live platform/API
+# evidence. Identity aliases below are only for duplicate-channel matching.
 # Fix a few identity spellings used by different lists.
 IDENTITY_ALIASES = {
     "kanalddrama": "kanalddrama",
@@ -98,47 +30,6 @@ IDENTITY_ALIASES = {
     "sozcutvtr": "sozcutv",
 }
 
-GROUP_MAP = {
-    "general": "Ulusal",
-    "genel": "Ulusal",
-    "national": "Ulusal",
-    "ulusal": "Ulusal",
-    "entertainment": "Ulusal",
-    "eglence": "Ulusal",
-    "religious": "Ulusal",
-    "religion": "Ulusal",
-    "dini": "Ulusal",
-    "education": "Ulusal",
-    "educational": "Ulusal",
-    "egitim": "Ulusal",
-    "news": "Haber",
-    "haber": "Haber",
-    "sports": "Spor",
-    "sport": "Spor",
-    "spor": "Spor",
-    "movie": "Film & Dizi",
-    "movies": "Film & Dizi",
-    "film": "Film & Dizi",
-    "cinema": "Film & Dizi",
-    "series": "Film & Dizi",
-    "dizi": "Film & Dizi",
-    "kids": "Çocuk",
-    "children": "Çocuk",
-    "cocuk": "Çocuk",
-    "documentary": "Belgesel",
-    "belgesel": "Belgesel",
-    "lifestyle": "Yaşam",
-    "yasam": "Yaşam",
-    "music": "Müzik",
-    "muzik": "Müzik",
-    "local": "Yerel",
-    "regional": "Yerel",
-    "yerel": "Yerel",
-    "international": "Uluslararası",
-    "global": "Uluslararası",
-    "world": "Uluslararası",
-}
-
 CORE_CHANNELS = [
     # Ulusal
     {"id": "TRT1", "name": "TRT 1", "category": "Ulusal"},
@@ -150,13 +41,13 @@ CORE_CHANNELS = [
     {"id": "TV8", "name": "TV8", "category": "Ulusal"},
     {"id": "TV85", "name": "TV8.5", "category": "Ulusal", "aliases": ["TV8 Bucuk"]},
     {"id": "Kanal7", "name": "Kanal 7", "category": "Ulusal"},
-    {"id": "360", "name": "360", "category": "Ulusal"},
+    {"id": "360", "name": "360", "category": "Haber"},
     {"id": "A2TV", "name": "A2", "category": "Ulusal"},
     {"id": "Teve2", "name": "Teve2", "category": "Ulusal"},
     {"id": "BeyazTV", "name": "Beyaz TV", "category": "Ulusal"},
     {"id": "TV4", "name": "TV4", "category": "Ulusal"},
     {"id": "TRT2", "name": "TRT 2", "category": "Ulusal"},
-    {"id": "DiyanetTV", "name": "Diyanet TV", "category": "Ulusal"},
+    {"id": "DiyanetTV", "name": "Diyanet TV", "category": "Dini"},
     {"id": "CNBCe", "name": "CNBC-e", "category": "Ulusal"},
 
     # Haber
@@ -297,15 +188,6 @@ def country_from_tvg_id(meta: str) -> str:
     if "." not in base:
         return ""
     return fold(base.rsplit(".", 1)[-1])
-
-
-def _identity_category(identity: str) -> str | None:
-    identity = IDENTITY_ALIASES.get(identity, identity)
-    for category, ids in CATEGORY_IDS.items():
-        normalized = {normalize_identity(x) for x in ids}
-        if identity in normalized:
-            return category
-    return None
 
 
 def category_decision(meta: str) -> dict:
