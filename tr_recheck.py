@@ -4,7 +4,6 @@ from __future__ import annotations
 import concurrent.futures
 import datetime as dt
 import json
-import re
 import urllib.parse
 from collections import Counter
 from pathlib import Path
@@ -95,11 +94,15 @@ def main():
     restricted = parse_playlist(RESTRICTED)
     unknown = parse_playlist(UNKNOWN)
 
+    # Türkiye çıkışından hem erişim-kısıtlı hem de hosted runner'da belirsiz
+    # kalan yayınları tekrar deneriz. Böylece geo/DNS/CDN farkları da yakalanır.
+    candidates = dedupe(restricted + unknown)
+
     results = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
         future_map = {
             ex.submit(validate_hls, item["url"]): item
-            for item in restricted
+            for item in candidates
         }
         for fut in concurrent.futures.as_completed(future_map):
             item = future_map[fut]
@@ -114,6 +117,11 @@ def main():
 
     tr_verified = []
     still_restricted = []
+    still_unknown = []
+    recovered_restricted = 0
+    recovered_unknown = 0
+
+    restricted_urls = {canonical(item["url"]) for item in restricted}
 
     for item in restricted:
         key = canonical(item["url"])
@@ -121,19 +129,35 @@ def main():
             key,
             {"status": "unknown", "reason": "missing TR result"},
         )
-
         if result.get("status") == "verified":
             tr_verified.append(item)
+            recovered_restricted += 1
         else:
             still_restricted.append(item)
 
+    for item in unknown:
+        key = canonical(item["url"])
+        result = results.get(
+            key,
+            {"status": "unknown", "reason": "missing TR result"},
+        )
+        if result.get("status") == "verified":
+            tr_verified.append(item)
+            recovered_unknown += 1
+        else:
+            still_unknown.append(item)
+
     verified = dedupe(verified + tr_verified)
     still_restricted = dedupe(still_restricted)
-    unknown = dedupe(unknown)
+    still_unknown = dedupe(still_unknown)
 
     write_playlist(VERIFIED, verified)
     write_playlist(RESTRICTED, still_restricted)
-    write_playlist(ALL, dedupe(verified + still_restricted + unknown))
+    write_playlist(UNKNOWN, still_unknown)
+    write_playlist(
+        ALL,
+        dedupe(verified + still_restricted + still_unknown),
+    )
 
     now = dt.datetime.now(dt.timezone.utc).isoformat()
 
@@ -148,7 +172,7 @@ def main():
         if item.get("url")
     }
 
-    for item in restricted:
+    for item in candidates:
         key = canonical(item["url"])
         result = results.get(
             key,
@@ -189,19 +213,24 @@ def main():
         category_from_meta(item["meta"]) for item in still_restricted
     )
     categories_unknown = Counter(
-        category_from_meta(item["meta"]) for item in unknown
+        category_from_meta(item["meta"]) for item in still_unknown
     )
 
     stats["updated_at_utc"] = now
     stats["verified_entries"] = len(verified)
     stats["restricted_entries"] = len(still_restricted)
-    stats["unknown_entries"] = len(unknown)
+    stats["unknown_entries"] = len(still_unknown)
     stats["all_non_dead_non_drm_entries"] = (
-        len(verified) + len(still_restricted) + len(unknown)
+        len(verified) + len(still_restricted) + len(still_unknown)
     )
-    stats["tr_recheck_candidates"] = len(restricted)
+    stats["tr_recheck_candidates"] = len(candidates)
+    stats["tr_recheck_restricted_candidates"] = len(restricted)
+    stats["tr_recheck_unknown_candidates"] = len(unknown)
     stats["tr_verified_entries"] = len(tr_verified)
+    stats["tr_recovered_restricted_entries"] = recovered_restricted
+    stats["tr_recovered_unknown_entries"] = recovered_unknown
     stats["tr_still_restricted_entries"] = len(still_restricted)
+    stats["tr_still_unknown_entries"] = len(still_unknown)
     stats["tr_recheck_workers"] = MAX_WORKERS
     stats["tr_recheck_at_utc"] = now
     stats["core_channels_total"] = coverage["core_channels_total"]
@@ -227,9 +256,12 @@ def main():
     )
 
     print(json.dumps({
-        "tr_recheck_candidates": len(restricted),
+        "tr_recheck_candidates": len(candidates),
+        "tr_recovered_restricted_entries": recovered_restricted,
+        "tr_recovered_unknown_entries": recovered_unknown,
         "tr_verified_entries": len(tr_verified),
         "tr_still_restricted_entries": len(still_restricted),
+        "tr_still_unknown_entries": len(still_unknown),
         "core_channels_verified": coverage["core_channels_verified"],
         "core_channels_not_verified": coverage["core_channels_not_verified"],
     }, ensure_ascii=False, indent=2))
