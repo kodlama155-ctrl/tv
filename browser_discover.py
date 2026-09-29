@@ -23,6 +23,7 @@ from official_sources import (
 
 ROOT = Path(__file__).resolve().parent
 OFFICIAL_STATS = ROOT / "official_stats.json"
+TURKUVAZ_STATS = ROOT / "turkuvaz_stats.json"
 OUTPUT = ROOT / "browser_discovered.m3u"
 STATS = ROOT / "browser_stats.json"
 
@@ -84,6 +85,20 @@ def load_targets():
     except Exception:
         return list(OFFICIAL_SOURCES)
 
+    resolved_by_player_api = set()
+    if TURKUVAZ_STATS.exists():
+        try:
+            turkuvaz = json.loads(
+                TURKUVAZ_STATS.read_text(encoding="utf-8")
+            )
+            resolved_by_player_api = {
+                row.get("name")
+                for row in turkuvaz.get("sources", [])
+                if row.get("status") == "accepted"
+            }
+        except Exception:
+            resolved_by_player_api = set()
+
     by_name = _source_map()
     targets = []
 
@@ -93,6 +108,8 @@ def load_targets():
             continue
 
         if row.get("candidates"):
+            continue
+        if source["name"] in resolved_by_player_api:
             continue
 
         targets.append(source)
