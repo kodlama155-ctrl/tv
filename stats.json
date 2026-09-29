@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-09-29T13:28:16.818395+00:00",
-  "validation_mode": "HLS manifest + variant + real media segments",
+  "updated_at_utc": "2026-09-29T13:44:43.244654+00:00",
+  "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
       "url": "local:priority_sources.m3u",
@@ -41,22 +41,23 @@
   "semantic_channels": 247,
   "duplicate_stream_variants_collapsed": 90,
   "filtered_private_style_entries": 352,
+  "header_aware_entries": 17,
   "stream_validation_statuses": {
     "restricted": 33,
-    "unknown": 86,
-    "verified": 178,
-    "dead": 40
+    "unknown": 97,
+    "verified": 180,
+    "dead": 27
   },
-  "verified_entries": 153,
+  "verified_entries": 154,
   "restricted_entries": 24,
-  "unknown_entries": 41,
-  "unknown_retry_candidates": 88,
+  "unknown_entries": 50,
+  "unknown_retry_candidates": 99,
   "unknown_retry_recovered": 2,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
-  "dead_entries": 29,
+  "dead_entries": 19,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 218,
+  "all_non_dead_non_drm_entries": 228,
   "core_channels_total": 56,
   "core_channels_verified": 40,
   "core_channels_not_verified": 16,
@@ -73,7 +74,7 @@
     "Müzik": 16,
     "Yerel": 0,
     "Uluslararası": 8,
-    "Diğer": 66
+    "Diğer": 67
   },
   "categories_restricted": {
     "Ulusal": 4,
@@ -93,16 +94,16 @@
   "categories_unknown": {
     "Ulusal": 0,
     "Haber": 5,
-    "Spor": 4,
-    "Film & Dizi": 2,
+    "Spor": 5,
+    "Film & Dizi": 7,
     "Çocuk": 0,
-    "Belgesel": 4,
+    "Belgesel": 6,
     "Yaşam": 1,
     "Dini": 1,
     "Eğitim": 4,
     "Müzik": 2,
     "Yerel": 0,
     "Uluslararası": 0,
-    "Diğer": 18
+    "Diğer": 19
   }
 }
