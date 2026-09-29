@@ -239,7 +239,7 @@ def fold(text: str) -> str:
 
 def normalize_identity(text: str) -> str:
     value = fold(text)
-    value = re.sub(r"@(?:sd|hd|uhd|fhd|4k|8k)$", "", value)
+    value = re.sub(r"@[^@]+$", "", value)
     value = re.sub(r"\.(?:tr|cy|uk|de|fr|az|iq|ir|ca|us|kg)$", "", value)
     value = re.sub(r"\[[^\]]*\]", "", value)
     value = re.sub(
