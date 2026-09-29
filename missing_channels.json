@@ -1,13 +1,13 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 56,
-  "core_channels_verified": 38,
-  "core_channels_not_verified": 18,
+  "core_channels_verified": 40,
+  "core_channels_not_verified": 16,
   "status_counts": {
-    "verified": 38,
-    "restricted": 13,
-    "absent": 4,
-    "unknown": 1
+    "verified": 40,
+    "restricted": 14,
+    "unknown": 1,
+    "dead": 1
   },
   "missing_channels": [
     {
@@ -48,30 +48,23 @@
     {
       "name": "CNN Türk",
       "expected_category": "Haber",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
-    },
-    {
-      "name": "TGRT Haber",
-      "expected_category": "Haber",
-      "status": "unknown",
-      "reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404",
-      "candidate_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe4598be8e5d.smil/playlist.m3u8"
-    },
-    {
-      "name": "TV100",
-      "expected_category": "Haber",
       "status": "restricted",
-      "reason": "segment HTTP 403",
-      "candidate_url": "https://7nyaler.streamhostingcdn.top/stream/46/index.m3u8"
+      "reason": "variant HTTP 403",
+      "candidate_url": "https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8"
     },
     {
       "name": "Sözcü TV",
       "expected_category": "Haber",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
+    },
+    {
+      "name": "Tele1",
+      "expected_category": "Haber",
+      "status": "dead",
+      "reason": "manifest HTTP 404",
+      "candidate_url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8"
     },
     {
       "name": "TRT Spor",
@@ -95,18 +88,11 @@
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
     },
     {
-      "name": "BBC First Türkiye",
-      "expected_category": "Film & Dizi",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
-    },
-    {
       "name": "BabyTV Türkiye",
       "expected_category": "Çocuk",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
+      "status": "restricted",
+      "reason": "manifest HTTP 401",
+      "candidate_url": "https://saran-live.ercdn.net/babytv/index.m3u8"
     },
     {
       "name": "Disney Junior",

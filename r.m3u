@@ -15,10 +15,10 @@ https://tv-trt2.medya.trt.com.tr/master.m3u8
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3
 #EXTINF:-1 tvg-id="AnadoluAgency.tr@SD" tvg-logo="https://i.imgur.com/dWElJll.png" group-title="Haber",AA Live (720p) [Not 24/7]
 https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="CNNTurk.tr@HD" group-title="Haber",CNN Türk
+https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8
 #EXTINF:-1 tvg-id="KudusTV.tr@SD" tvg-logo="https://i.imgur.com/lwRA84B.png" group-title="Haber",Kudüs TV (480p) [Geo-blocked]
 https://yayin.kudustv.com/981680400/kudustv/playlist.m3u8
-#EXTINF:-1 tvg-id="TV100.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/0/0f/TV100_logo.png/960px-TV100_logo.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 VLC/3.0.21 LibVLC/3.0.21" group-title="Haber",TV 100 (Turkiye)
-https://7nyaler.streamhostingcdn.top/stream/46/index.m3u8
 #EXTINF:-1 tvg-id="beINSportsHaber.tr@SD" tvg-logo="https://i.imgur.com/QWo0x7S.jpg" group-title="Spor",beIN Sports Haber (720p)
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 #EXTINF:-1 tvg-id="GEMSport.tr@SD" tvg-logo="https://www.gemgroup.tv/assets/images/channels/icon_34.png" group-title="Spor",GEM Sport
@@ -31,6 +31,8 @@ https://tv-trtspor1.medya.trt.com.tr/master.m3u8
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
 #EXTINF:-1 tvg-id="FX.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/960px-FX_International_logo.svg.png" group-title="Film & Dizi",FX (1080p) [Geo-blocked]
 https://saran-live.ercdn.net/fx/index.m3u8
+#EXTINF:-1 tvg-id="BabyTV.uk@Turkiye" tvg-logo="https://i.imgur.com/4BDJ5FT.png" group-title="Çocuk",BabyTV Turkiye (1080p) [Geo-blocked]
+https://saran-live.ercdn.net/babytv/index.m3u8
 #EXTINF:-1 tvg-id="DisneyJr.tr@SD" tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png" group-title="Çocuk",Disney Jr. (Turkiye) (1080p) [Geo-blocked]
 https://saran-live.ercdn.net/disneyjunior/index.m3u8
 #EXTINF:-1 tvg-id="NationalGeographic.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Belgesel",National Geographic (1080p) [Geo-blocked]
@@ -45,5 +47,3 @@ https://dogus-live.daioncdn.net/dmax/dmax_720p.m3u8
 https://dogus-live.daioncdn.net/tlc/tlc.m3u8
 #EXTINF:-1 tvg-id="KralPopTV.tr@SD" tvg-logo="https://i.imgur.com/ch365lh.png" group-title="Müzik",Kral Pop TV (720p)
 https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
-#EXTINF:-1 tvg-id="BabyTV.uk@Turkiye" tvg-logo="https://i.imgur.com/4BDJ5FT.png" group-title="Uluslararası",BabyTV Turkiye (1080p) [Geo-blocked]
-https://saran-live.ercdn.net/babytv/index.m3u8

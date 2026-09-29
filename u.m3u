@@ -23,6 +23,8 @@ http://51.15.2.151/hls/kanalavrupa.m3u8
 http://212.174.58.161/hls-live/livepkgr/_definst_/liveevent/kanalb.m3u8
 #EXTINF:-1 tvg-id="MilyonTV.tr@SD" tvg-logo="https://i.imgur.com/lEIFDwo.png" group-title="Ulusal",Milyon TV (720p)
 https://sosyoapp-live.cdnnew.com/sosyo/buraya-bir-isim-verin.m3u8
+#EXTINF:-1 tvg-id="TarihTV.tr@SD" tvg-logo="https://i.imgur.com/HbIGZUt.png" group-title="Ulusal",Tarih TV
+https://tv1.arectv30.sbs/live/tarihtv.m3u8
 #EXTINF:-1 tvg-id="TGRTBelgesel.tr@SD" tvg-logo="https://i.imgur.com/VwWTnf0.png" group-title="Ulusal",TGRT Belgesel (576p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TGRTEurope.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/TGRT_EU.png/960px-TGRT_EU.png" group-title="Ulusal",TGRT Europe (576p)
@@ -53,8 +55,8 @@ https://akittv-live.ercdn.net/akittv/akittv.m3u8
 https://livetv.canbroadcast.com:7443/canlican/tv.m3u8
 #EXTINF:-1 tvg-id="OnMedyaTV.tr@SD" tvg-logo="https://i.imgur.com/thvk3Py.png" group-title="Haber",ON Medya Haber (720p) [Geo-blocked]
 http://live.arkumedia.com:1935/marmaratv/marmaratv/playlist.m3u8
-#EXTINF:-1 tvg-id="TGRTHaber.tr@SD" tvg-logo="https://i.imgur.com/PrxwKDw.png" group-title="Haber",TGRT Haber (360p) [Not 24/7]
-https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe4598be8e5d.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber",Sözcü TV
+https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 tvg-id="SSport.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="Spor",S Sport (720p)
 https://corestream.siteyaptim.live/s-sport/index.m3u8
 #EXTINF:-1 tvg-id="SSport2.tr@SD" tvg-logo="https://i.imgur.com/2jIItAy.png" group-title="Spor",S Sport 2 (720p)
@@ -67,6 +69,8 @@ https://vbtob9hyq58eiophct5qctxr2.medya.trt.com.tr/master.m3u8
 http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174
 #EXTINF:-1 tvg-id="CGTNDocumentary.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/CGTN_Documentary_logo.png/960px-CGTN_Documentary_logo.png" group-title="Belgesel",CGTN Documentary
 https://mn-nl.mncdn.com/dogusdyg_drone/cgtn/playlist.m3u8
+#EXTINF:-1 tvg-id="ViasatExplore.tr@SD" tvg-logo="https://i.imgur.com/DyT5pKB.png" group-title="Belgesel",Viasat Explore
+https://tv.arectv29.sbs/live/viasathistory.m3u8
 #EXTINF:-1 tvg-id="WomanTV.tr@SD" tvg-logo="https://i.imgur.com/f2zGoV3.png" group-title="Yaşam",Woman TV (1080p)
 https://embedlp.becdn.net/womantv.m3u8
 #EXTINF:-1 tvg-id="Number1Turk.tr@SD" tvg-logo="https://i.imgur.com/18zjk3q.png" group-title="Müzik",Number 1 Türk (720p)
