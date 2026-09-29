@@ -10,6 +10,7 @@ from collections import Counter
 from pathlib import Path
 
 from category_engine import CATEGORY_ORDER
+from name_engine import canonical_channel_name
 
 CATEGORY_INDEX = {name: i for i, name in enumerate(CATEGORY_ORDER)}
 
@@ -18,6 +19,11 @@ CATEGORY_INDEX = {name: i for i, name in enumerate(CATEGORY_ORDER)}
 # evidence. Identity aliases below are only for duplicate-channel matching.
 # Fix a few identity spellings used by different lists.
 IDENTITY_ALIASES = {
+    "a2": "a2tv",
+    "now": "nowtv",
+    "trt3trtspor": "trtspor",
+    "bbcfirstturkiye": "bbcfirst",
+    "ntvturkiye": "ntv",
     "kanalddrama": "kanalddrama",
     "htspor": "htsportv",
     "haberturk": "haberturktv",
@@ -110,6 +116,17 @@ STATUS_PRIORITY = {
     "dead": 0,
 }
 
+SOURCE_PRIORITY = {
+    "official_api": 100,
+    "official_browser": 95,
+    "official_html": 90,
+    "priority": 80,
+    "iptv_org": 70,
+    "upstream": 60,
+    "github_discovery": 40,
+    "unknown": 20,
+}
+
 PREFERRED_HOST_SUFFIXES = (
     "medya.trt.com.tr",
     "daioncdn.net",
@@ -200,15 +217,30 @@ def category_decision(meta: str) -> dict:
 def category_for(meta: str) -> str:
     return category_decision(meta)["category"]
 
+def canonical_name_decision(meta: str) -> dict:
+    _, label = split_extinf(meta)
+    name, source = canonical_channel_name(
+        tvg_id(meta),
+        label,
+    )
+    return {
+        "name": name,
+        "source": source,
+        "original_name": label.strip(),
+    }
+
+
 def normalize_meta(meta: str) -> tuple[str, str, str]:
     category = category_for(meta)
-    head, label = split_extinf(meta)
+    head, _ = split_extinf(meta)
+    naming = canonical_name_decision(meta)
+    label = naming["name"]
 
     # Collapse duplicate group-title attributes left by malformed source metadata.
     head = re.sub(r'\s+group-title="[^"]*"', "", head, flags=re.I)
     head = head.rstrip() + f' group-title="{category}"'
 
-    return f"{head},{label.strip()}", category, label.strip()
+    return f"{head},{label}", category, label
 
 
 def _resolution_height(item: dict) -> int:
@@ -248,20 +280,64 @@ def _host_quality(url: str) -> int:
     return score
 
 
-def representative_score(item: dict) -> tuple:
-    status = item.get("status", "unknown")
-    status_score = STATUS_PRIORITY.get(status, 2)
-    quality = _resolution_height(item)
-    stability = _host_quality(item.get("url", ""))
+def _stability_score(item: dict) -> int:
+    score = 100
+
+    if item.get("retry_attempted"):
+        score -= 30
+
+    probes = int(item.get("segment_probes") or 1)
+    score -= max(0, probes - 1) * 12
 
     name = fold(item.get("name", ""))
     if "not 24/7" in name:
-        stability -= 100
+        score -= 100
+
+    return score
+
+
+def _latency_score(item: dict) -> int:
+    values = []
+    for key in ("manifest_latency_ms", "segment_latency_ms"):
+        try:
+            value = int(item.get(key))
+        except (TypeError, ValueError):
+            continue
+        if value >= 0:
+            values.append(value)
+
+    if not values:
+        return -999999
+
+    return -sum(values)
+
+
+def representative_score(item: dict) -> tuple:
+    status = item.get("status", "unknown")
+    status_score = STATUS_PRIORITY.get(status, 2)
+    source_score = SOURCE_PRIORITY.get(
+        item.get("source_kind", "unknown"),
+        SOURCE_PRIORITY["unknown"],
+    )
+    quality = _resolution_height(item)
+
+    try:
+        bitrate = int(item.get("bandwidth") or 0)
+    except (TypeError, ValueError):
+        bitrate = 0
+
+    stability = _stability_score(item)
+    host_quality = _host_quality(item.get("url", ""))
+    latency = _latency_score(item)
 
     return (
         status_score,
+        source_score,
         quality,
+        bitrate,
         stability,
+        host_quality,
+        latency,
         1 if item.get("url", "").startswith("https://") else 0,
     )
 
