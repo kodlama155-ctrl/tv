@@ -1,11 +1,11 @@
 {
-  "updated_at_utc": "2026-09-29T18:47:01.063966+00:00",
+  "updated_at_utc": "2026-09-29T19:05:46.946280+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
       "url": "local:priority_sources.m3u",
       "status": "ok",
-      "entries": 26
+      "entries": 33
     },
     {
       "url": "local:official_discovered.m3u",
@@ -20,7 +20,7 @@
     {
       "url": "local:browser_discovered.m3u",
       "status": "ok",
-      "entries": 11
+      "entries": 7
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -48,42 +48,42 @@
       "entries": 184
     }
   ],
-  "raw_entries": 1208,
-  "priority_entries": 26,
+  "raw_entries": 1211,
+  "priority_entries": 33,
   "official_entries": 15,
   "turkuvaz_official_entries": 6,
-  "browser_official_entries": 11,
+  "browser_official_entries": 7,
   "discovered_entries": 184,
-  "unique_entries": 371,
-  "unique_stream_candidates": 371,
+  "unique_entries": 374,
+  "unique_stream_candidates": 374,
   "semantic_channels": 248,
-  "duplicate_stream_variants_collapsed": 123,
+  "duplicate_stream_variants_collapsed": 126,
   "filtered_private_style_entries": 352,
-  "header_aware_entries": 51,
+  "header_aware_entries": 47,
   "selected_stream_sources": {
     "official_html": 9,
     "priority": 12,
-    "official_api": 6,
-    "official_browser": 3,
-    "iptv_org": 159,
+    "iptv_org": 161,
+    "official_api": 5,
+    "official_browser": 2,
     "upstream": 59
   },
   "channel_name_sources": {
-    "turksat": 115,
+    "turksat": 118,
     "digiturk": 24,
     "official-fallback": 16,
     "cleaned-source": 216
   },
   "stream_validation_statuses": {
-    "restricted": 43,
-    "unknown": 101,
-    "verified": 200,
+    "restricted": 46,
+    "unknown": 107,
+    "verified": 194,
     "dead": 27
   },
   "verified_entries": 156,
   "restricted_entries": 22,
   "unknown_entries": 52,
-  "unknown_retry_candidates": 101,
+  "unknown_retry_candidates": 107,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,

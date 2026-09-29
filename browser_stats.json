@@ -1,22 +1,22 @@
 {
-  "updated_at_utc": "2026-09-29T18:42:20.224207+00:00",
+  "updated_at_utc": "2026-09-29T19:01:18.375949+00:00",
   "fallback_targets": 5,
   "pages_scanned": 5,
   "pages_with_candidates": 3,
-  "raw_candidates": 12,
-  "accepted_unique_candidates": 11,
+  "raw_candidates": 8,
+  "accepted_unique_candidates": 7,
   "probe_statuses": {
-    "restricted": 2,
+    "restricted": 1,
     "dead": 1,
-    "verified": 9
+    "verified": 6
   },
   "sources": [
     {
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "network_events": 13,
-      "response_bodies_scanned": 313,
+      "network_events": 2,
+      "response_bodies_scanned": 1060,
       "candidates": [
         {
           "url": "https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758",
@@ -29,30 +29,6 @@
           "referer": "https://www.atv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "script-body"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "fetch-body"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8?st=BZyWD2A3Onltcy9RHeEpjA&e=1790752546",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "fetch-body"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv_720p.m3u8?st=BZyWD2A3Onltcy9RHeEpjA&e=1790752546",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "request"
-        },
-        {
-          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv_480p.m3u8?st=BZyWD2A3Onltcy9RHeEpjA&e=1790752546",
-          "referer": "https://www.atv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "request"
         }
       ]
     },
@@ -96,7 +72,7 @@
       "page": "https://www.startv.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 7,
-      "response_bodies_scanned": 99,
+      "response_bodies_scanned": 111,
       "candidates": [
         {
           "url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9",
@@ -111,7 +87,7 @@
           "via": "script-body"
         },
         {
-          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sk3irslds8y&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
+          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8sk585nbzo69&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
           "referer": "https://www.startv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
