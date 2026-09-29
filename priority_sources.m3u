@@ -124,3 +124,18 @@ https://stream.tvcdn.net/eglence/trt-2.m3u8
 #EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
 https://ythls.kekikakademi.org/youtube/channel/UC2r8FIjCvkYbcbxVe5koa_g.m3u8
 
+
+# --- Quick-probe round 3: direct BluTV/MNCDN candidates ---
+
+# TV8.5 direct public BluTV/MNCDN delivery.
+#EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
+https://mn-nl.mncdn.com/blutv_tv8_5/smil:tv8_5_sd.smil/playlist.m3u8
+
+# TRT 2 direct public BluTV delivery.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+https://trt2.blutv.com/blutv_trt2/live.m3u8
+
+# TRT 2 direct public BluTV native MNCDN delivery.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+https://tv-trt2-live.mncdn.com/blutv_trt2_native/output.m3u8
+
