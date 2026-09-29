@@ -19,6 +19,59 @@ TURKSAT_URLS = [
 ]
 DIGITURK_URL = "https://digiturk.net.tr/kanallar"
 
+# Stable Türksat display-name seed. The live Türksat pages are still parsed
+# when available, but this keeps Türksat-first naming deterministic when the
+# site changes markup or blocks automated HTML fetches. Quality suffixes such
+# as HD/SD are intentionally omitted from the app-facing channel name.
+TURKSAT_CANONICAL_NAMES = {
+    "trt1": "TRT 1",
+    "atv": "ATV",
+    "kanald": "Kanal D",
+    "showtv": "Show TV",
+    "startv": "Star TV",
+    "nowtv": "NOW TV",
+    "tv8": "TV8",
+    "tv85": "TV8.5",
+    "kanal7": "Kanal 7",
+    "a2tv": "A2",
+    "teve2": "Teve2",
+    "beyaztv": "Beyaz TV",
+    "trt2": "TRT 2",
+    "cnbce": "CNBC-e",
+    "trthaber": "TRT Haber",
+    "ntv": "NTV",
+    "cnnturk": "CNN Türk",
+    "haberturktv": "Habertürk",
+    "haberglobal": "Haber Global",
+    "ahaber": "A Haber",
+    "tgrthaber": "TGRT Haber",
+    "tv100": "TV100",
+    "sozcutv": "Sözcü TV",
+    "halktv": "Halk TV",
+    "tele1": "TELE1",
+    "tvnet": "TVNET",
+    "ulketv": "Ülke TV",
+    "24tv": "24 TV",
+    "bloomberght": "Bloomberg HT",
+    "ekoturk": "EKOTÜRK",
+    "trtspor": "TRT Spor",
+    "trtsporyildiz": "TRT Spor Yıldız",
+    "aspor": "A Spor",
+    "htsportv": "HT Spor",
+    "tjktv": "TJK TV",
+    "trtbelgesel": "TRT Belgesel",
+    "dmax": "DMAX",
+    "tlc": "TLC",
+    "trtcocuk": "TRT Çocuk",
+    "disneyjunior": "Disney Junior",
+    "diyanettv": "Diyanet TV",
+    "trtmuzik": "TRT Müzik",
+    "dreamturk": "Dream Türk",
+    "powerturktv": "PowerTürk TV",
+    "powertv": "Power TV",
+    "bbcfirst": "BBC First",
+}
+
 IDENTITY_ALIASES = {
     "a2": "a2tv",
     "now": "nowtv",
@@ -211,7 +264,7 @@ def _fetch(url: str) -> str:
 
 @lru_cache(maxsize=1)
 def naming_catalogs() -> dict:
-    turksat = {}
+    turksat = dict(TURKSAT_CANONICAL_NAMES)
     digiturk = {}
 
     for url in TURKSAT_URLS:
