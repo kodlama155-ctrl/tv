@@ -324,7 +324,13 @@
     "url": "https://dogus-live.daioncdn.net/ntv/ntv.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "TV 8 (1080p) [Not 24/7]",
@@ -332,7 +338,13 @@
     "url": "https://tv8-live.daioncdn.net/tv8/tv8.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "AA Live (720p) [Not 24/7]",
@@ -340,7 +352,13 @@
     "url": "https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.smil/playlist.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "beIN Sports Haber (720p)",
@@ -351,7 +369,13 @@
     "manifest_latency_ms": 513,
     "status": "restricted",
     "reason": "segment HTTP 403",
-    "http_code": 200
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "segment HTTP 403",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Finans Turk TV (720p)",
@@ -359,7 +383,13 @@
     "url": "https://trs1.aynaott.com/Finans/index.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Habertürk TV (1080p)",
@@ -367,7 +397,13 @@
     "url": "https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Kudüs TV (480p) [Geo-blocked]",
@@ -375,7 +411,13 @@
     "url": "https://yayin.kudustv.com/981680400/kudustv/playlist.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "GEM Sport",
@@ -383,31 +425,79 @@
     "url": "https://steep-wildflower-284d.nhhwkiszzzvcuojxdo.workers.dev/?url=https://gg.hls2.xyz/live/IR+-+GEM+Sport/chunks.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "TJK TV 2 (1080p) [Not 24/7]",
     "category": "Spor",
     "url": "https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 401",
-    "http_code": 401
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "1920x1080",
+    "bandwidth": 6000000,
+    "manifest_latency_ms": 262,
+    "segment_latency_ms": 460,
+    "encrypted": false,
+    "vod": false,
+    "variants": 4,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "TRT Spor (1080p) [Geo-blocked]",
     "category": "Spor",
     "url": "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 403",
-    "http_code": 403
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "2560x1440",
+    "bandwidth": 11545600,
+    "manifest_latency_ms": 166,
+    "segment_latency_ms": 160,
+    "encrypted": false,
+    "vod": false,
+    "variants": 5,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "TRT Spor Yildiz (1080p) [Geo-blocked]",
     "category": "Spor",
     "url": "https://tv-trtspor2.medya.trt.com.tr/master.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 403",
-    "http_code": 403
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "2560x1440",
+    "bandwidth": 11545600,
+    "manifest_latency_ms": 210,
+    "segment_latency_ms": 132,
+    "encrypted": false,
+    "vod": false,
+    "variants": 5,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "TRT Spor Yildiz (1440p) [Geo-blocked]",
@@ -415,11 +505,21 @@
     "url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor",
     "resolution": "2560x1440",
     "bandwidth": 10489600,
-    "manifest_latency_ms": 656,
-    "status": "restricted",
-    "reason": "segment HTTP 403",
+    "manifest_latency_ms": 250,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
     "http_code": 200,
-    "variants": 5
+    "variants": 5,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "segment HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "segment_latency_ms": 206,
+    "encrypted": false,
+    "vod": false,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "Kanal 7 (1080p) [Not 24/7]",
@@ -427,11 +527,21 @@
     "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 753,
-    "status": "restricted",
-    "reason": "segment HTTP 401",
+    "manifest_latency_ms": 273,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
     "http_code": 200,
-    "variants": 4
+    "variants": 4,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "segment HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "segment_latency_ms": 474,
+    "encrypted": false,
+    "vod": false,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "Kral Pop TV (720p)",
@@ -442,23 +552,57 @@
     "http_code": 403,
     "resolution": "1280x720",
     "bandwidth": 1000000,
-    "variants": 3
+    "variants": 3,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "variant HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "variant HTTP 403"
   },
   {
     "name": "BabyTV Turkiye (1080p) [Geo-blocked]",
     "category": "Çocuk",
     "url": "https://saran-live.ercdn.net/babytv/index.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 401",
-    "http_code": 401
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "1920x1080",
+    "bandwidth": 3151472,
+    "manifest_latency_ms": 672,
+    "segment_latency_ms": 743,
+    "encrypted": false,
+    "vod": false,
+    "variants": 4,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "Disney Jr. (Turkiye) (1080p) [Geo-blocked]",
     "category": "Çocuk",
     "url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 401",
-    "http_code": 401
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "1920x1080",
+    "bandwidth": 3713176,
+    "manifest_latency_ms": 956,
+    "segment_latency_ms": 598,
+    "encrypted": false,
+    "vod": false,
+    "variants": 4,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "National Geographic (1080p) [Geo-blocked]",
@@ -466,7 +610,13 @@
     "url": "https://saran-live.ercdn.net/natgeohd/index.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 401",
-    "http_code": 401
+    "http_code": 401,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "unknown",
+    "tr_reason": "segment HTTP 404; segment HTTP 404; segment HTTP 404"
   },
   {
     "name": "National Geographic Wild (1080p) [Geo-blocked]",
@@ -474,15 +624,35 @@
     "url": "https://saran-live.ercdn.net/natgeowild/index.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 401",
-    "http_code": 401
+    "http_code": 401,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "unknown",
+    "tr_reason": "segment HTTP 404; segment HTTP 404; segment HTTP 404"
   },
   {
     "name": "TRT Belgesel (720p)",
     "category": "Belgesel",
     "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 403",
-    "http_code": 403
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "2560x1440",
+    "bandwidth": 11545600,
+    "manifest_latency_ms": 185,
+    "segment_latency_ms": 142,
+    "encrypted": false,
+    "vod": false,
+    "variants": 5,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "ATV Avrupa (576p) [Not 24/7]",
@@ -490,7 +660,13 @@
     "url": "https://streamer2.nexgen.bz/ATV/index.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Beyaz TV (1080p)",
@@ -498,7 +674,13 @@
     "url": "https://beyaztv.daioncdn.net/beyaztv/beyaztv.m3u8?app=fcd5c66b-da9d-44ba-a410-4f34805c397d&ce=3",
     "status": "restricted",
     "reason": "manifest HTTP 401",
-    "http_code": 401
+    "http_code": 401,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 401"
   },
   {
     "name": "Bloomberg HT (720p)",
@@ -506,15 +688,35 @@
     "url": "https://ciner-live.daioncdn.net/bloomberght/bloomberght.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "FX (1080p) [Geo-blocked]",
     "category": "Diğer",
     "url": "https://saran-live.ercdn.net/fx/index.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 401",
-    "http_code": 401
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "1920x1080",
+    "bandwidth": 3823392,
+    "manifest_latency_ms": 1278,
+    "segment_latency_ms": 528,
+    "encrypted": false,
+    "vod": false,
+    "variants": 4,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "like Gecko) Chrome/120.0.0.0 Safari/537.36 VLC/3.0.21 LibVLC/3.0.21\" group-title=\"Undefined\",TV 100 (Turkiye)",
@@ -525,7 +727,13 @@
     "manifest_latency_ms": 635,
     "status": "restricted",
     "reason": "segment HTTP 403",
-    "http_code": 200
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "segment HTTP 403",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Tarim TV (1080p)",
@@ -533,7 +741,13 @@
     "url": "https://content.tvkur.com/l/c7e1da7mm25p552d9u9g/master.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Teve2 (1080p)",
@@ -541,15 +755,35 @@
     "url": "https://demiroren-live.daioncdn.net/teve2/teve2.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "TRT 2 (1440p) [Geo-blocked]",
     "category": "Diğer",
     "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 403",
-    "http_code": 403
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "2560x1440",
+    "bandwidth": 11545600,
+    "manifest_latency_ms": 205,
+    "segment_latency_ms": 322,
+    "encrypted": false,
+    "vod": false,
+    "variants": 5,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "Ulke TV",
@@ -557,7 +791,13 @@
     "url": "http://217.174.229.138:8000/play/a0el",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "ATV Alanya (720p) [Not 24/7]",

@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T00:14:17.155104+00:00",
+  "updated_at_utc": "2026-09-29T00:14:46.920837+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -32,8 +32,8 @@
   "discovered_entries": 184,
   "unique_entries": 320,
   "filtered_private_style_entries": 352,
-  "verified_entries": 175,
-  "restricted_entries": 28,
+  "verified_entries": 185,
+  "restricted_entries": 18,
   "unknown_entries": 79,
   "unknown_retry_candidates": 79,
   "unknown_retry_recovered": 0,
@@ -45,30 +45,30 @@
   "categories_verified": {
     "Genel": 49,
     "Haber": 26,
-    "Spor": 4,
-    "Eğlence": 17,
+    "Spor": 8,
+    "Eğlence": 18,
     "Dizi / Film": 4,
     "Müzik": 15,
-    "Çocuk": 10,
-    "Belgesel": 2,
+    "Çocuk": 12,
+    "Belgesel": 3,
     "Yerel": 0,
     "Dini": 7,
     "Eğitim": 3,
-    "Diğer": 38
+    "Diğer": 40
   },
   "categories_restricted": {
     "Genel": 2,
     "Haber": 5,
-    "Spor": 5,
-    "Eğlence": 1,
+    "Spor": 1,
+    "Eğlence": 0,
     "Dizi / Film": 0,
     "Müzik": 1,
-    "Çocuk": 2,
-    "Belgesel": 3,
+    "Çocuk": 0,
+    "Belgesel": 2,
     "Yerel": 0,
     "Dini": 0,
     "Eğitim": 0,
-    "Diğer": 9
+    "Diğer": 7
   },
   "categories_unknown": {
     "Genel": 15,
@@ -83,5 +83,10 @@
     "Dini": 3,
     "Eğitim": 5,
     "Diğer": 23
-  }
+  },
+  "tr_recheck_candidates": 28,
+  "tr_verified_entries": 10,
+  "tr_still_restricted_entries": 18,
+  "tr_recheck_workers": 8,
+  "tr_recheck_at_utc": "2026-09-29T00:14:46.920837+00:00"
 }
