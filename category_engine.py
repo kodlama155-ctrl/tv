@@ -151,6 +151,14 @@ LOCAL_REFERENCE = {
     "tv52", "tvden", "urfanatiktv", "van65tv", "kadirgatv", "on6",
 }
 
+OFFICIAL_CONTENT_REFERENCE = {
+    # Used only when the channel is not placed by the professional-platform
+    # reference. These are channel-purpose facts from the broadcaster itself.
+    "ilketv": "Haber",
+    "zaroktv": "Çocuk",
+    "tbmmtv": "Haber",
+}
+
 INTERNATIONAL_REFERENCE = {
     "adatv", "afroturktv", "alzahratvturkic", "elsharqtv", "eurod",
     "imamhusseintv5", "kanal7avrupa", "kurdistantv", "luystv", "manastv",
@@ -341,12 +349,20 @@ def classify(meta: str) -> dict:
 
     # Clear regional/international station identity.
     if identity in LOCAL_REFERENCE:
-        scores["Yerel"] += 45
+        # A regional station stays Yerel even if its actual programming is
+        # news/music/general. Location is the defining category here.
+        scores["Yerel"] += 90
         evidence.append("regional-reference:Yerel")
 
     if identity in INTERNATIONAL_REFERENCE:
-        scores["Uluslararası"] += 45
+        # Same idea for explicitly international/overseas services.
+        scores["Uluslararası"] += 90
         evidence.append("international-reference:Uluslararası")
+
+    official_category = OFFICIAL_CONTENT_REFERENCE.get(identity)
+    if official_category:
+        scores[official_category] += 70
+        evidence.append(f"official-content:{official_category}")
 
     # Live machine-readable channel metadata from iptv-org.
     base = _tvg_base(meta).casefold()
@@ -363,6 +379,30 @@ def classify(meta: str) -> dict:
         mapped = GROUP_MAP[group]
         scores[mapped] += 8
         evidence.append(f"source-group:{group}->{mapped}")
+
+    # Strong words in the *channel name* beat broad metadata such as
+    # "general" or "entertainment". This prevents cases like "Kanal D Drama"
+    # being pushed into Ulusal merely because an upstream database calls it
+    # entertainment.
+    name_fold = fold(name)
+    strong_name_groups = [
+        ("Haber", ["haber", "news"]),
+        ("Spor", ["spor", "sport", "sports"]),
+        ("Film & Dizi", ["drama", "dizi", "film", "movie", "cinema", "sinema"]),
+        ("Çocuk", ["cocuk", "kids", "kid", "cartoon"]),
+        ("Belgesel", ["belgesel", "documentary"]),
+        ("Müzik", ["muzik", "music"]),
+    ]
+    for category, keywords in strong_name_groups:
+        if any(
+            re.search(
+                rf"(?<![a-z0-9]){re.escape(fold(keyword))}(?![a-z0-9])",
+                name_fold,
+            )
+            for keyword in keywords
+        ):
+            scores[category] += 40
+            evidence.append(f"channel-name:{category}")
 
     haystack = fold(f"{group} {name}")
     keyword_groups = [
@@ -419,6 +459,8 @@ def classify(meta: str) -> dict:
         source = "regional-reference"
     elif category == "Uluslararası" and identity in INTERNATIONAL_REFERENCE:
         source = "international-reference"
+    elif OFFICIAL_CONTENT_REFERENCE.get(identity) == category:
+        source = "official-content"
     elif group in GROUP_MAP and GROUP_MAP[group] == category:
         source = "source-group"
     else:
