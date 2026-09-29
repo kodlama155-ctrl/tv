@@ -1,0 +1,82 @@
+name: Quick HLS Probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "Optional channel name filter (for example TRT 2)"
+        required: false
+        type: string
+  push:
+    paths:
+      - "priority_sources.m3u"
+      - "quick_probe.py"
+      - "hls_validator.py"
+      - ".github/workflows/quick-probe.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quick-hls-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Probe priority candidates only
+        env:
+          CHANNEL_FILTER: ${{ github.event.inputs.channel || '' }}
+        run: |
+          if [ -n "$CHANNEL_FILTER" ]; then
+            python quick_probe.py --channel "$CHANNEL_FILTER"
+          else
+            python quick_probe.py
+          fi
+
+      - name: Write summary
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("quick_validation.json").read_text(encoding="utf-8"))
+          print("# Quick HLS Probe")
+          print()
+          print(f"Candidates tested: **{data['candidate_count']}**")
+          print()
+          counts = data.get("status_counts", {})
+          print(
+              "Status: "
+              f"verified **{counts.get('verified', 0)}**, "
+              f"restricted **{counts.get('restricted', 0)}**, "
+              f"unknown **{counts.get('unknown', 0)}**, "
+              f"dead **{counts.get('dead', 0)}**"
+          )
+          print()
+          print("| Channel | Candidates | Verified | Restricted | Unknown | Dead |")
+          print("|---|---:|---:|---:|---:|---:|")
+          for name, row in data.get("channels", {}).items():
+              print(
+                  f"| {name} | {row['candidates']} | {row['verified']} | "
+                  f"{row['restricted']} | {row['unknown']} | {row['dead']} |"
+              )
+          PY
+
+      - name: Upload probe report
+        uses: actions/upload-artifact@v4
+        with:
+          name: quick-hls-probe
+          path: quick_validation.json
+          retention-days: 7
