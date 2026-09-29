@@ -745,7 +745,13 @@
     "url": "https://streamer2.nexgen.bz/ATV/index.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Beyaz TV (1080p)",
@@ -783,13 +789,23 @@
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8",
-    "resolution": "1920x1080",
-    "bandwidth": 2200000,
-    "manifest_latency_ms": 601,
-    "status": "restricted",
-    "reason": "segment HTTP 401",
+    "resolution": "1280x720",
+    "bandwidth": 1050000,
+    "manifest_latency_ms": 296,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
     "http_code": 200,
-    "variants": 4
+    "variants": 4,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "segment HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "segment_latency_ms": 441,
+    "encrypted": false,
+    "vod": false,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "Show TV",
@@ -809,7 +825,13 @@
     "url": "https://ciner-live.daioncdn.net/showtv/showtv.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Tarim TV (1080p)",
@@ -826,7 +848,13 @@
     "url": "https://content.tvkur.com/l/c7e1da7mm25p552d9u9g/master.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Teve2",
@@ -846,7 +874,13 @@
     "url": "https://demiroren-live.daioncdn.net/teve2/teve2.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "TRT 2 (1440p) [Geo-blocked]",
@@ -863,9 +897,23 @@
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 403",
-    "http_code": 403
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "2560x1440",
+    "bandwidth": 11545600,
+    "manifest_latency_ms": 211,
+    "segment_latency_ms": 370,
+    "encrypted": false,
+    "vod": false,
+    "variants": 5,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "TV 8 (1080p) [Not 24/7]",
@@ -906,10 +954,20 @@
     "url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3",
     "resolution": null,
     "bandwidth": null,
-    "manifest_latency_ms": 911,
-    "status": "restricted",
-    "reason": "segment HTTP 401",
-    "http_code": 200
+    "manifest_latency_ms": 567,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "segment HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "segment_latency_ms": 614,
+    "encrypted": false,
+    "vod": false,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "AA Live (720p) [Not 24/7]",
@@ -930,7 +988,13 @@
     "url": "https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.smil/playlist.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Bloomberg HT (720p)",
@@ -977,7 +1041,13 @@
     "http_code": 403,
     "resolution": null,
     "bandwidth": 7680000,
-    "variants": 1
+    "variants": 1,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "variant HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "variant HTTP 403"
   },
   {
     "name": "Finans Turk TV (720p)",
@@ -1042,7 +1112,13 @@
     "url": "https://yayin.kudustv.com/981680400/kudustv/playlist.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "NTV (720p) [Not 24/7]",
@@ -1135,7 +1211,13 @@
     "manifest_latency_ms": 405,
     "status": "restricted",
     "reason": "segment HTTP 403",
-    "http_code": 200
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "segment HTTP 403",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "GEM Sport",
@@ -1157,7 +1239,13 @@
     "url": "https://steep-wildflower-284d.nhhwkiszzzvcuojxdo.workers.dev/?url=https://gg.hls2.xyz/live/IR+-+GEM+Sport/chunks.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "TJK TV 2 (1080p) [Not 24/7]",
@@ -1176,9 +1264,23 @@
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 401",
-    "http_code": 401
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "1920x1080",
+    "bandwidth": 6000000,
+    "manifest_latency_ms": 427,
+    "segment_latency_ms": 506,
+    "encrypted": false,
+    "vod": false,
+    "variants": 4,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "TRT Spor (1080p) [Geo-blocked]",
@@ -1200,9 +1302,23 @@
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 403",
-    "http_code": 403
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "2560x1440",
+    "bandwidth": 11545600,
+    "manifest_latency_ms": 231,
+    "segment_latency_ms": 412,
+    "encrypted": false,
+    "vod": false,
+    "variants": 5,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "TRT Spor Yildiz (1080p) [Geo-blocked]",
@@ -1250,11 +1366,21 @@
     "url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor",
     "resolution": "2560x1440",
     "bandwidth": 10489600,
-    "manifest_latency_ms": 847,
-    "status": "restricted",
-    "reason": "segment HTTP 403",
+    "manifest_latency_ms": 226,
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
     "http_code": 200,
-    "variants": 5
+    "variants": 5,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "segment HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "segment_latency_ms": 260,
+    "encrypted": false,
+    "vod": false,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "FX (1080p) [Geo-blocked]",
@@ -1272,9 +1398,23 @@
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://saran-live.ercdn.net/fx/index.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 401",
-    "http_code": 401
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "1920x1080",
+    "bandwidth": 3814608,
+    "manifest_latency_ms": 1175,
+    "segment_latency_ms": 513,
+    "encrypted": false,
+    "vod": false,
+    "variants": 4,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "BabyTV Turkiye (1080p) [Geo-blocked]",
@@ -1295,9 +1435,23 @@
       "country:uk->Uluslararası"
     ],
     "url": "https://saran-live.ercdn.net/babytv/index.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 401",
-    "http_code": 401
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "1920x1080",
+    "bandwidth": 3836568,
+    "manifest_latency_ms": 794,
+    "segment_latency_ms": 537,
+    "encrypted": false,
+    "vod": false,
+    "variants": 4,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "Disney Jr. (Turkiye) (1080p) [Geo-blocked]",
@@ -1318,9 +1472,23 @@
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 401",
-    "http_code": 401
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "1920x1080",
+    "bandwidth": 3217448,
+    "manifest_latency_ms": 767,
+    "segment_latency_ms": 470,
+    "encrypted": false,
+    "vod": false,
+    "variants": 4,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "National Geographic (1080p) [Geo-blocked]",
@@ -1341,7 +1509,13 @@
     "url": "https://saran-live.ercdn.net/natgeohd/index.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 401",
-    "http_code": 401
+    "http_code": 401,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "unknown",
+    "tr_reason": "segment HTTP 404; segment HTTP 404; segment HTTP 404"
   },
   {
     "name": "National Geographic Wild (1080p) [Geo-blocked]",
@@ -1362,7 +1536,13 @@
     "url": "https://saran-live.ercdn.net/natgeowild/index.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 401",
-    "http_code": 401
+    "http_code": 401,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 401",
+    "tr_status": "unknown",
+    "tr_reason": "segment HTTP 404; segment HTTP 404; segment HTTP 404"
   },
   {
     "name": "TRT Belgesel (720p)",
@@ -1384,9 +1564,23 @@
       "country:tr->Ulusal-fallback"
     ],
     "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
-    "status": "restricted",
-    "reason": "manifest HTTP 403",
-    "http_code": 403
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
+    "http_code": 200,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": "2560x1440",
+    "bandwidth": 11545600,
+    "manifest_latency_ms": 205,
+    "segment_latency_ms": 144,
+    "encrypted": false,
+    "vod": false,
+    "variants": 5,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "DMAX",
@@ -1409,7 +1603,13 @@
     "url": "https://dogus-live.daioncdn.net/dmax/dmax_720p.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "TLC",
@@ -1432,7 +1632,13 @@
     "url": "https://dogus-live.daioncdn.net/tlc/tlc.m3u8",
     "status": "restricted",
     "reason": "manifest HTTP 403",
-    "http_code": 403
+    "http_code": 403,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "manifest HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "manifest HTTP 403"
   },
   {
     "name": "Kral Pop TV (720p)",
@@ -1456,7 +1662,13 @@
     "http_code": 403,
     "resolution": "1280x720",
     "bandwidth": 1000000,
-    "variants": 3
+    "variants": 3,
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "restricted",
+    "hosted_reason": "variant HTTP 403",
+    "tr_status": "restricted",
+    "tr_reason": "variant HTTP 403"
   },
   {
     "name": "Al-Rafidain TV (720p) [Not 24/7]",
@@ -1477,7 +1689,13 @@
     "reason": "manifest HTTP 502",
     "http_code": 502,
     "retry_attempted": true,
-    "first_reason": "manifest HTTP 502"
+    "first_reason": "manifest HTTP 502",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest HTTP 502",
+    "tr_status": "unknown",
+    "tr_reason": "manifest HTTP 502"
   },
   {
     "name": "ATV Avrupa (576p)",
@@ -1534,7 +1752,13 @@
     "status": "unknown",
     "reason": "manifest RemoteDisconnected",
     "retry_attempted": true,
-    "first_reason": "manifest RemoteDisconnected"
+    "first_reason": "manifest RemoteDisconnected",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest RemoteDisconnected",
+    "tr_status": "unknown",
+    "tr_reason": "manifest ConnectionResetError"
   },
   {
     "name": "Bursa TV (720p) [Not 24/7]",
@@ -1552,7 +1776,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Cekmekoy TV (1080p)",
@@ -1572,7 +1802,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Cekmeköy TV (1080p)",
@@ -1612,7 +1848,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Flash TV (720p)",
@@ -1630,7 +1872,13 @@
     "status": "unknown",
     "reason": "manifest RemoteDisconnected",
     "retry_attempted": true,
-    "first_reason": "manifest RemoteDisconnected"
+    "first_reason": "manifest RemoteDisconnected",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest RemoteDisconnected",
+    "tr_status": "unknown",
+    "tr_reason": "manifest ConnectionResetError"
   },
   {
     "name": "IBB TV (1080p) [Not 24/7]",
@@ -1650,7 +1898,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Kanal 34 (720p)",
@@ -1670,7 +1924,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Kanal 34 (720p) [Not 24/7]",
@@ -1710,7 +1970,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Kanal 7 (720p)",
@@ -1752,7 +2018,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Kanal B (480p) [Not 24/7]",
@@ -1772,7 +2044,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Lalegül TV (720p) [Not 24/7]",
@@ -1834,7 +2112,13 @@
     "status": "unknown",
     "reason": "manifest TimeoutError",
     "retry_attempted": true,
-    "first_reason": "manifest TimeoutError"
+    "first_reason": "manifest TimeoutError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest TimeoutError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest TimeoutError"
   },
   {
     "name": "Natural TV (720p) [Not 24/7]",
@@ -1896,7 +2180,13 @@
     "reason": "manifest HTTP 500",
     "http_code": 500,
     "retry_attempted": true,
-    "first_reason": "manifest HTTP 500"
+    "first_reason": "manifest HTTP 500",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest HTTP 500",
+    "tr_status": "unknown",
+    "tr_reason": "manifest HTTP 500"
   },
   {
     "name": "Toprak TV (720p) [Not 24/7]",
@@ -1914,7 +2204,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "TRT 3 (720p)",
@@ -1933,7 +2229,13 @@
     "reason": "variant HTTP 404; variant HTTP 404",
     "variants": 2,
     "retry_attempted": true,
-    "first_reason": "variant HTTP 404; variant HTTP 404"
+    "first_reason": "variant HTTP 404; variant HTTP 404",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "variant HTTP 404; variant HTTP 404",
+    "tr_status": "unknown",
+    "tr_reason": "variant HTTP 404; variant HTTP 404"
   },
   {
     "name": "TRT EBA Ilkokul (720p)",
@@ -1954,7 +2256,13 @@
     "reason": "segment HTTP 404",
     "variants": 1,
     "retry_attempted": true,
-    "first_reason": "segment HTTP 404"
+    "first_reason": "segment HTTP 404",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "segment HTTP 404",
+    "tr_status": "unknown",
+    "tr_reason": "segment HTTP 404"
   },
   {
     "name": "TRT EBA Lise (720p)",
@@ -1975,7 +2283,13 @@
     "reason": "segment HTTP 404",
     "variants": 1,
     "retry_attempted": true,
-    "first_reason": "segment HTTP 404"
+    "first_reason": "segment HTTP 404",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "segment HTTP 404",
+    "tr_status": "unknown",
+    "tr_reason": "segment HTTP 404"
   },
   {
     "name": "TV 38 (360p) [Not 24/7]",
@@ -1993,7 +2307,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "TV 42",
@@ -2011,7 +2331,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "TYT Turk",
@@ -2029,7 +2355,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Üniversite TV (720p) [Not 24/7]",
@@ -2047,7 +2379,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "V TV (720p)",
@@ -2065,7 +2403,13 @@
     "status": "unknown",
     "reason": "manifest TimeoutError",
     "retry_attempted": true,
-    "first_reason": "manifest TimeoutError"
+    "first_reason": "manifest TimeoutError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest TimeoutError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest TimeoutError"
   },
   {
     "name": "Woman TV (1080p)",
@@ -2088,7 +2432,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "24 TV (1080p)",
@@ -2134,7 +2484,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Akit TV",
@@ -2182,7 +2538,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Benguturk TV (1080p)",
@@ -2249,7 +2611,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "CNN Türk",
@@ -2296,7 +2664,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Sözcü TV",
@@ -2320,7 +2694,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Sözcü TV",
@@ -2527,7 +2907,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "S Sport 2",
@@ -2574,7 +2960,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Sports TV (720p) [Geo-blocked]",
@@ -2598,7 +2990,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Tabii Spor 6 (720p) [Geo-blocked]",
@@ -2621,7 +3019,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "TRT Spor (720p)",
@@ -2690,7 +3094,13 @@
     "status": "unknown",
     "reason": "manifest ConnectionResetError",
     "retry_attempted": true,
-    "first_reason": "manifest ConnectionResetError"
+    "first_reason": "manifest ConnectionResetError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest ConnectionResetError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest ConnectionResetError"
   },
   {
     "name": "Timeless Dizi Channel (Poland) (1080p)",
@@ -2711,7 +3121,13 @@
     "status": "unknown",
     "reason": "manifest TimeoutError",
     "retry_attempted": true,
-    "first_reason": "manifest TimeoutError"
+    "first_reason": "manifest TimeoutError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest TimeoutError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest TimeoutError"
   },
   {
     "name": "Vive Kanal D Drama (1080p)",
@@ -2757,7 +3173,13 @@
     "status": "unknown",
     "reason": "manifest RemoteDisconnected",
     "retry_attempted": true,
-    "first_reason": "manifest RemoteDisconnected"
+    "first_reason": "manifest RemoteDisconnected",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest RemoteDisconnected",
+    "tr_status": "unknown",
+    "tr_reason": "manifest ConnectionResetError"
   },
   {
     "name": "Tarih TV",
@@ -2778,7 +3200,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "TGRT Belgesel (576p) [Not 24/7]",
@@ -2802,7 +3230,13 @@
     "reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404",
     "variants": 3,
     "retry_attempted": true,
-    "first_reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404"
+    "first_reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404",
+    "tr_status": "unknown",
+    "tr_reason": "variant HTTP 404; variant HTTP 404; variant HTTP 404"
   },
   {
     "name": "TGRT Belgesel TV (576p)",
@@ -2873,7 +3307,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Çiftçi TV (1080p) [Not 24/7]",
@@ -2916,7 +3356,13 @@
     "status": "unknown",
     "reason": "manifest URLError",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "unknown",
+    "tr_reason": "manifest URLError"
   },
   {
     "name": "Number 1 Türk (720p)",
@@ -2938,7 +3384,13 @@
     "status": "unknown",
     "reason": "manifest RemoteDisconnected",
     "retry_attempted": true,
-    "first_reason": "manifest RemoteDisconnected"
+    "first_reason": "manifest RemoteDisconnected",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest RemoteDisconnected",
+    "tr_status": "unknown",
+    "tr_reason": "manifest ConnectionResetError"
   },
   {
     "name": "Number 1 TV (720p)",
@@ -3279,10 +3731,24 @@
       "country:de->Uluslararası"
     ],
     "url": "https://media.finest.tv/hls/live.m3u8",
-    "status": "unknown",
-    "reason": "manifest URLError",
+    "status": "verified",
+    "reason": "2 media segment(s) verified",
     "retry_attempted": true,
-    "first_reason": "manifest URLError"
+    "first_reason": "manifest URLError",
+    "tr_recheck_attempted": true,
+    "tr_recheck_at_utc": "2026-09-29T01:33:01.938807+00:00",
+    "hosted_status": "unknown",
+    "hosted_reason": "manifest URLError",
+    "tr_status": "verified",
+    "tr_reason": "2 media segment(s) verified",
+    "resolution": null,
+    "bandwidth": null,
+    "manifest_latency_ms": 404,
+    "segment_latency_ms": 379,
+    "encrypted": false,
+    "vod": false,
+    "http_code": 200,
+    "verified_from": "tr-self-hosted"
   },
   {
     "name": "MC TV (720p)",
