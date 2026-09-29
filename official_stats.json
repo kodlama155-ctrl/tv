@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T15:04:59.579173+00:00",
+  "updated_at_utc": "2026-09-29T15:15:08.159916+00:00",
   "official_pages": 20,
   "pages_ok": 19,
   "pages_with_candidates": 8,
@@ -138,8 +138,8 @@
       "page_candidates": 2,
       "aux_scanned": 2,
       "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=Y3fDM3XcWf9LlonT0W0_FQ&e=1790708645",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=Y3fDM3XcWf9LlonT0W0_FQ&e=1790708645"
+        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=BjWAECKbO6NG-0s-AucYUQ&e=1790709122",
+        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=BjWAECKbO6NG-0s-AucYUQ&e=1790709122"
       ],
       "identity_rejected_candidates": 0
     },

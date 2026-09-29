@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T15:12:29.949518+00:00",
+  "updated_at_utc": "2026-09-29T15:22:16.359814+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -15,7 +15,7 @@
     {
       "url": "local:browser_discovered.m3u",
       "status": "ok",
-      "entries": 16
+      "entries": 12
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -43,27 +43,27 @@
       "entries": 184
     }
   ],
-  "raw_entries": 1197,
+  "raw_entries": 1193,
   "priority_entries": 19,
   "official_entries": 12,
-  "browser_official_entries": 16,
+  "browser_official_entries": 12,
   "discovered_entries": 184,
-  "unique_entries": 361,
-  "unique_stream_candidates": 361,
+  "unique_entries": 357,
+  "unique_stream_candidates": 357,
   "semantic_channels": 247,
-  "duplicate_stream_variants_collapsed": 114,
+  "duplicate_stream_variants_collapsed": 110,
   "filtered_private_style_entries": 352,
-  "header_aware_entries": 45,
+  "header_aware_entries": 41,
   "stream_validation_statuses": {
     "restricted": 39,
-    "unknown": 101,
-    "verified": 194,
-    "dead": 27
+    "unknown": 99,
+    "dead": 28,
+    "verified": 191
   },
-  "verified_entries": 155,
+  "verified_entries": 154,
   "restricted_entries": 23,
-  "unknown_entries": 51,
-  "unknown_retry_candidates": 102,
+  "unknown_entries": 52,
+  "unknown_retry_candidates": 100,
   "unknown_retry_recovered": 1,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
@@ -71,11 +71,11 @@
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 229,
   "core_channels_total": 56,
-  "core_channels_verified": 42,
-  "core_channels_not_verified": 14,
+  "core_channels_verified": 41,
+  "core_channels_not_verified": 15,
   "categories_verified": {
     "Ulusal": 12,
-    "Haber": 28,
+    "Haber": 27,
     "Spor": 3,
     "Film & Dizi": 4,
     "Çocuk": 6,
@@ -105,7 +105,7 @@
   },
   "categories_unknown": {
     "Ulusal": 0,
-    "Haber": 5,
+    "Haber": 6,
     "Spor": 5,
     "Film & Dizi": 7,
     "Çocuk": 0,
