@@ -91,10 +91,29 @@ def load_targets():
 
 def looks_like_stream_url(url: str) -> bool:
     low = url.lower()
-    if ".m3u8" not in low:
-        return False
     if any(token in low for token in BAD_URL_TOKENS):
         return False
+
+    try:
+        parsed = __import__("urllib.parse").parse.urlsplit(url)
+    except Exception:
+        return False
+
+    # Only keep actual HLS resources. Player/token wrapper endpoints may carry
+    # an m3u8 URL inside their query string but are not playable manifests.
+    if not parsed.path.lower().endswith(".m3u8"):
+        return False
+
+    query_keys = {
+        key.lower()
+        for key, _ in __import__("urllib.parse").parse.parse_qsl(
+            parsed.query,
+            keep_blank_values=True,
+        )
+    }
+    if query_keys & {"ppid", "dfp_paln"}:
+        return False
+
     return safe_candidate(url)
 
 
