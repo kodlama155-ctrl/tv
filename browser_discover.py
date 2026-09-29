@@ -5,6 +5,7 @@ import datetime as dt
 import json
 import re
 import time
+import urllib.parse
 from collections import Counter
 from pathlib import Path
 
@@ -95,7 +96,7 @@ def looks_like_stream_url(url: str) -> bool:
         return False
 
     try:
-        parsed = __import__("urllib.parse").parse.urlsplit(url)
+        parsed = urllib.parse.urlsplit(url)
     except Exception:
         return False
 
@@ -106,7 +107,7 @@ def looks_like_stream_url(url: str) -> bool:
 
     query_keys = {
         key.lower()
-        for key, _ in __import__("urllib.parse").parse.parse_qsl(
+        for key, _ in urllib.parse.parse_qsl(
             parsed.query,
             keep_blank_values=True,
         )
