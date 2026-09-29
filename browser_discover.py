@@ -60,6 +60,16 @@ PLAY_TEXTS = (
     "Canlı Yayın",
 )
 
+PLAYER_SELECTORS = (
+    ".vjs-big-play-button",
+    ".jw-icon-playback",
+    ".jw-display-icon-container",
+    ".plyr__control--overlaid",
+    "[aria-label*='play' i]",
+    "[title*='play' i]",
+    "video",
+)
+
 
 def _source_map():
     return {source["name"]: source for source in OFFICIAL_SOURCES}
@@ -122,6 +132,46 @@ def source_accepts_url(url: str, source: dict) -> bool:
     if not looks_like_stream_url(url):
         return False
     return candidate_matches_source(url, source)
+
+
+def scan_text_for_streams(text: str, base_url: str, source: dict, remember):
+    if not text:
+        return 0
+
+    hits = 0
+    for url in extract_m3u8(text, base_url):
+        if source_accepts_url(url, source):
+            remember(url, referer=source["page"], via="text-body")
+            hits += 1
+    return hits
+
+
+def trigger_player(page):
+    # Try common player controls first, then ask any HTML5 video element to play.
+    for selector in PLAYER_SELECTORS:
+        try:
+            locator = page.locator(selector)
+            if locator.count() > 0:
+                locator.first.click(timeout=1200, force=True)
+                break
+        except Exception:
+            pass
+
+    try:
+        page.evaluate(
+            """() => {
+                const videos = Array.from(document.querySelectorAll('video'));
+                for (const video of videos) {
+                    try {
+                        video.muted = true;
+                        const p = video.play();
+                        if (p && typeof p.catch === 'function') p.catch(() => {});
+                    } catch (_) {}
+                }
+            }"""
+        )
+    except Exception:
+        pass
 
 
 def dismiss_common_ui(page):
@@ -201,20 +251,20 @@ def scan_source(browser, source: dict):
             resource_type = response.request.resource_type
             content_type = (response.headers.get("content-type") or "").lower()
 
-            if resource_type not in {"xhr", "fetch"}:
-                return
-
-            if not any(
-                token in content_type
-                for token in (
-                    "json",
-                    "text",
-                    "javascript",
-                    "xml",
-                    "mpegurl",
-                    "octet-stream",
+            text_like = (
+                resource_type in {"xhr", "fetch", "document", "script"}
+                or any(
+                    token in content_type
+                    for token in (
+                        "json",
+                        "text",
+                        "javascript",
+                        "xml",
+                        "mpegurl",
+                    )
                 )
-            ):
+            )
+            if not text_like:
                 return
 
             body = response.text()
@@ -222,12 +272,11 @@ def scan_source(browser, source: dict):
                 return
 
             response_bodies_scanned += 1
-
             for url in extract_m3u8(body, response.url):
                 remember(
                     url,
                     referer=response.request.headers.get("referer") or source["page"],
-                    via="xhr-body",
+                    via=f"{resource_type}-body",
                 )
         except Exception:
             pass
@@ -252,17 +301,45 @@ def scan_source(browser, source: dict):
         )
 
         dismiss_common_ui(page)
+        trigger_player(page)
 
         try:
             page.wait_for_load_state("networkidle", timeout=5000)
         except Exception:
             pass
 
-        page.wait_for_timeout(SETTLE_MS)
+        page.wait_for_timeout(3500)
 
-        # Some players only start requesting HLS after an interaction.
+        # Some players create their config only after hydration or interaction.
+        trigger_player(page)
         dismiss_common_ui(page)
-        page.wait_for_timeout(2500)
+
+        try:
+            scan_text_for_streams(
+                page.content(),
+                page.url,
+                source,
+                remember,
+            )
+        except Exception:
+            pass
+
+        try:
+            resources = page.evaluate(
+                """() => performance.getEntriesByType('resource')
+                    .map(x => x.name)
+                    .filter(Boolean)"""
+            )
+            for url in resources or []:
+                remember(
+                    url,
+                    referer=page.url or source["page"],
+                    via="performance",
+                )
+        except Exception:
+            pass
+
+        page.wait_for_timeout(SETTLE_MS)
 
     except Exception as exc:
         result["status"] = "page_error"
