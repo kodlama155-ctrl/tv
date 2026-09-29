@@ -23,11 +23,11 @@ BROWSER_UA = (
     "Chrome/120.0.0.0 Safari/537.36"
 )
 
-HTTP_TIMEOUT = 12
+HTTP_TIMEOUT = 6
 MAX_PAGE_BYTES = 3_000_000
-MAX_AUX_RESOURCES = 4
+MAX_AUX_RESOURCES = 2
 MAX_CANDIDATES_PER_SOURCE = 5
-SOURCE_WORKERS = 8
+SOURCE_WORKERS = 12
 PROBE_WORKERS = 12
 
 # Only public stream URLs are retained. URLs that appear to carry credentials
