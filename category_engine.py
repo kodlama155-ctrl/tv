@@ -28,6 +28,8 @@ CATEGORY_ORDER = [
     "Çocuk",
     "Belgesel",
     "Yaşam",
+    "Dini",
+    "Eğitim",
     "Müzik",
     "Yerel",
     "Uluslararası",
@@ -35,6 +37,7 @@ CATEGORY_ORDER = [
 ]
 
 IPTV_ORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
+IPTV_ORG_FEEDS_URL = "https://iptv-org.github.io/api/feeds.json"
 
 # Only professional CATEGORY URLs are stored here; never channel lists.
 PLATFORM_PAGES = {
@@ -84,6 +87,8 @@ IPTV_CATEGORY_MAP = {
     "auto": "Yaşam",
     "outdoor": "Yaşam",
     "shop": "Yaşam",
+    "religious": "Dini",
+    "education": "Eğitim",
     "music": "Müzik",
 }
 
@@ -107,6 +112,12 @@ GROUP_MAP = {
     "documentary": "Belgesel",
     "yasam": "Yaşam",
     "lifestyle": "Yaşam",
+    "religious": "Dini",
+    "religion": "Dini",
+    "dini": "Dini",
+    "education": "Eğitim",
+    "educational": "Eğitim",
+    "egitim": "Eğitim",
     "muzik": "Müzik",
     "music": "Müzik",
     "yerel": "Yerel",
@@ -122,11 +133,33 @@ class _TextParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.parts: list[str] = []
+        self.channel_links: list[str] = []
+        self._channel_anchor = False
+        self._channel_anchor_parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs):
+        if tag.lower() != "a":
+            return
+        href = dict(attrs).get("href", "")
+        if "/kanallar/" in href:
+            self._channel_anchor = True
+            self._channel_anchor_parts = []
+
+    def handle_endtag(self, tag: str):
+        if tag.lower() != "a" or not self._channel_anchor:
+            return
+        label = " ".join(self._channel_anchor_parts).strip()
+        if label:
+            self.channel_links.append(label)
+        self._channel_anchor = False
+        self._channel_anchor_parts = []
 
     def handle_data(self, data: str):
         value = " ".join(data.split())
         if value:
             self.parts.append(value)
+            if self._channel_anchor:
+                self._channel_anchor_parts.append(value)
 
 
 def fold(text: str) -> str:
@@ -300,6 +333,7 @@ def _fetch_page(url: str) -> dict:
             "parts": parts,
             "visible": visible,
             "raw": raw_folded,
+            "channels": parser.channel_links,
         }
     except Exception as exc:
         return {
@@ -307,6 +341,7 @@ def _fetch_page(url: str) -> dict:
             "parts": [],
             "visible": "",
             "raw": "",
+            "channels": [],
             "error": type(exc).__name__,
         }
 
@@ -328,6 +363,19 @@ def _tivibu_catalog(url: str) -> tuple[str, ...]:
     page = _fetch_page(url)
     if not page["ok"]:
         return ()
+
+    # Prefer actual channel-card links. They are much safer than assuming
+    # every category page has exactly alternating channel/program text nodes.
+    linked_channels = []
+    linked_seen = set()
+    for label in page.get("channels", []):
+        clean = " ".join(str(label).split()).strip()
+        key = fold(clean)
+        if clean and key not in linked_seen:
+            linked_seen.add(key)
+            linked_channels.append(clean)
+    if linked_channels:
+        return tuple(linked_channels)
 
     parts: list[str] = page["parts"]
 
@@ -532,6 +580,42 @@ def _iptv_org_index() -> dict[str, list[str]]:
         return {}
 
 
+@lru_cache(maxsize=1)
+def _iptv_org_feed_areas() -> dict[str, tuple[str, ...]]:
+    try:
+        req = urllib.request.Request(
+            IPTV_ORG_FEEDS_URL,
+            headers={"User-Agent": UA, "Accept": "application/json,*/*"},
+        )
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read(20_000_000).decode("utf-8"))
+
+        out: dict[str, set[str]] = {}
+        for row in data:
+            channel_id = str(row.get("channel") or "").strip().casefold()
+            if not channel_id:
+                continue
+            areas = {
+                str(x).strip().lower()
+                for x in (row.get("broadcast_area") or [])
+                if str(x).strip()
+            }
+            if areas:
+                out.setdefault(channel_id, set()).update(areas)
+
+        return {
+            channel_id: tuple(sorted(areas))
+            for channel_id, areas in out.items()
+        }
+    except Exception:
+        return {}
+
+
+def _is_turkey_local_area(area: str) -> bool:
+    value = str(area or "").strip().lower()
+    return value.startswith("s/tr-") or value.startswith("ct/tr")
+
+
 @lru_cache(maxsize=4096)
 def classify(meta: str) -> dict:
     name = split_extinf(meta)[1]
@@ -554,16 +638,36 @@ def classify(meta: str) -> dict:
         evidence.append(f"{platform}:{category}:{confidence}")
 
     base = _tvg_base(meta).casefold()
+    raw_categories: list[str] = []
     if base:
-        for raw_category in _iptv_org_index().get(base, []):
+        raw_categories = list(_iptv_org_index().get(base, []))
+        for raw_category in raw_categories:
             mapped = IPTV_CATEGORY_MAP.get(raw_category)
-            if mapped:
-                scores[mapped] += 35
-                evidence.append(f"iptv-org:{raw_category}->{mapped}")
+            if not mapped:
+                continue
+
+            # Religious and education are thematic categories in EmirTV.
+            # They should not be swallowed by a provider's broad "Ulusal"
+            # bucket.
+            weight = 220 if mapped in {"Dini", "Eğitim"} else 35
+            scores[mapped] += weight
+            evidence.append(f"iptv-org:{raw_category}->{mapped}")
+
+        areas = _iptv_org_feed_areas().get(base, ())
+        local_areas = [area for area in areas if _is_turkey_local_area(area)]
+        if local_areas:
+            # Location scope outranks content type: a Bursa news station is
+            # Yerel first, not Haber.
+            scores["Yerel"] += 260
+            evidence.append(
+                "iptv-org-feed:local->Yerel:"
+                + ",".join(local_areas[:3])
+            )
 
     if group in GROUP_MAP:
         mapped = GROUP_MAP[group]
-        scores[mapped] += 18
+        group_weight = 90 if mapped in {"Dini", "Eğitim"} else 18
+        scores[mapped] += group_weight
         evidence.append(f"source-group:{group}->{mapped}")
 
     name_fold = fold(_clean_display_name(name))
@@ -574,6 +678,8 @@ def classify(meta: str) -> dict:
         ("Çocuk", ["cocuk", "kids", "kid", "cartoon"]),
         ("Belgesel", ["belgesel", "documentary"]),
         ("Yaşam", ["yasam", "lifestyle"]),
+        ("Dini", ["dini", "religious", "diyanet", "kuran", "quran", "islam"]),
+        ("Eğitim", ["egitim", "education", "eba", "universite"]),
         ("Müzik", ["muzik", "music", "radyo", "radio"]),
         ("Yerel", ["yerel", "local", "regional"]),
     ]
@@ -586,24 +692,34 @@ def classify(meta: str) -> dict:
             )
             for keyword in keywords
         ):
-            scores[category] += 25
+            weight = 120 if category in {"Dini", "Eğitim"} else 25
+            scores[category] += weight
             evidence.append(f"channel-name:{category}")
 
-    # Foreign origin is a fallback signal only. Strong platform/content
-    # evidence can still classify a foreign-origin Türkiye service as Çocuk,
-    # Film & Dizi, etc.
+    # Foreign origin alone is only weak evidence. A foreign-origin kids/movie
+    # service should stay in its strong thematic category.
     if country and country != "tr":
         scores["Uluslararası"] += 20
         evidence.append(f"country:{country}->Uluslararası")
 
-    # Strict Ulusal: ONLY a live professional Ulusal category match may create
-    # the category. No .tr/general/entertainment/religious fallback exists.
+    # Strict Ulusal: only a live professional Ulusal category match may create
+    # it. Broad .tr/general/entertainment metadata never creates Ulusal.
     has_ulusal_platform = any(
         category == "Ulusal"
         for _, category, _, _, _ in matches
     )
     if not has_ulusal_platform:
         scores.pop("Ulusal", None)
+
+    # Professional Global placement is stronger than generic news metadata.
+    # This keeps services such as TRT World / TRT Arabi under Uluslararası.
+    has_global_platform = any(
+        category == "Uluslararası"
+        for _, category, _, _, _ in matches
+    )
+    if has_global_platform:
+        scores["Uluslararası"] += 120
+        evidence.append("platform-scope:global->Uluslararası")
 
     if not scores:
         return {
@@ -615,10 +731,22 @@ def classify(meta: str) -> dict:
             "platform_matches": [],
         }
 
-    category = max(
-        CATEGORY_ORDER,
-        key=lambda c: (scores.get(c, 0), -CATEGORY_ORDER.index(c)),
-    )
+    top_score = max(scores.values())
+    leaders = [
+        c for c in CATEGORY_ORDER
+        if scores.get(c, 0) == top_score and top_score > 0
+    ]
+
+    # Do not turn ambiguous low-confidence API tags into an arbitrary category.
+    if len(leaders) > 1 and top_score <= 70:
+        category = "Diğer"
+        evidence.append("ambiguous-low-confidence->Diğer")
+        scores["Diğer"] = top_score
+    else:
+        category = max(
+            CATEGORY_ORDER,
+            key=lambda c: (scores.get(c, 0), -CATEGORY_ORDER.index(c)),
+        )
 
     platform_rows = [
         {
@@ -631,7 +759,9 @@ def classify(meta: str) -> dict:
         for platform, cat, position, confidence, url in matches
     ]
 
-    if any(row["category"] == category for row in platform_rows):
+    if any(e.startswith("iptv-org-feed:local->Yerel") for e in evidence) and category == "Yerel":
+        source = "iptv-org-feed"
+    elif any(row["category"] == category for row in platform_rows):
         source = "platform-live"
     elif any(
         e.startswith("iptv-org:") and e.endswith("->" + category)
