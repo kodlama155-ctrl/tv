@@ -323,6 +323,7 @@ def _variant_position(text: str, variants: list[str]) -> int | None:
     return best
 
 
+@lru_cache(maxsize=4096)
 def _platform_matches(meta: str) -> list[dict]:
     variants = _match_variants(meta)
     matches = []
@@ -395,6 +396,7 @@ def _digiturk_sections() -> dict[str, str]:
     return sections
 
 
+@lru_cache(maxsize=4096)
 def _digiturk_match(meta: str) -> list[dict]:
     variants = _match_variants(meta)
     out = []
@@ -436,10 +438,12 @@ def _iptv_org_index() -> dict[str, list[str]]:
         return {}
 
 
+@lru_cache(maxsize=4096)
 def _all_platform_matches(meta: str) -> list[dict]:
     return _platform_matches(meta) + _digiturk_match(meta)
 
 
+@lru_cache(maxsize=4096)
 def classify(meta: str) -> dict:
     name = split_extinf(meta)[1]
     group = fold(_attr(meta, "group-title")).strip()
@@ -534,6 +538,7 @@ def classify(meta: str) -> dict:
     }
 
 
+@lru_cache(maxsize=4096)
 def order_decision(meta: str, category: str | None = None) -> dict:
     if category is None:
         category = classify(meta)["category"]
