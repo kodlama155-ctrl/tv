@@ -11,6 +11,7 @@ on:
       - "sources.txt"
       - "priority_sources.m3u"
       - "channel_policy.py"
+      - "category_engine.py"
       - "tr_recheck.py"
       - ".github/workflows/update.yml"
   schedule:
