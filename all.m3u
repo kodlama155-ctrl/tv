@@ -117,8 +117,6 @@ https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8
 https://dogus-live.daioncdn.net/ntv/ntv.m3u8
 #EXTINF:-1 tvg-id="NTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/NTV_%28Turkey%29_logo.svg/960px-NTV_%28Turkey%29_logo.svg.png" group-title="Genel",NTV (Turkiye)
 https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
-#EXTINF:-1 tvg-id="OncuTV.tr@SD" tvg-logo="https://i.imgur.com/TGPNYrD.jpg" group-title="Genel",Öncü TV (1024p) [Not 24/7]
-https://edge1.socialsmart.tv/oncurtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="TGRTEurope.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/TGRT_EU.png/960px-TGRT_EU.png" group-title="Genel",TGRT Europe (576p)
 https://tv.ensonhaber.com/tv/tr/tgrteu/index.m3u8
 #EXTINF:-1 tvg-id="Tivi6.tr@SD" tvg-logo="https://i.imgur.com/Mbi0jbz.png" group-title="Genel",Tivi 6 (720p)

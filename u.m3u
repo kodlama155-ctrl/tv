@@ -133,8 +133,6 @@ https://powerturk.blutv.com/blutv_powerturk/powerturk_sd.smil/playlist.m3u8
 http://31.148.48.15/RTG_HD/index.m3u8
 #EXTINF:-1 tvg-id="SunRTV.tr@SD" tvg-logo="https://i.imgur.com/64tph9N.png" group-title="Diğer",Sun RTV (720p) [Not 24/7]
 https://tr.socialsmart.tv/suntv/bant1/chunks.m3u8
-#EXTINF:-1 tvg-id="Tele1.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/43/Tele1_logosu.png" group-title="Diğer",Tele 1 (1080p)
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 tvg-id="ToprakTV.tr@SD" tvg-logo="https://i.imgur.com/JGnS0qs.png" group-title="Diğer",Toprak TV (720p) [Not 24/7]
 https://59cba4d34b678.streamlock.net/canlitv/topraktv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Diğer",TRT 3 (720p)
