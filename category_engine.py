@@ -364,19 +364,6 @@ def _tivibu_catalog(url: str) -> tuple[str, ...]:
     if not page["ok"]:
         return ()
 
-    # Prefer actual channel-card links. They are much safer than assuming
-    # every category page has exactly alternating channel/program text nodes.
-    linked_channels = []
-    linked_seen = set()
-    for label in page.get("channels", []):
-        clean = " ".join(str(label).split()).strip()
-        key = fold(clean)
-        if clean and key not in linked_seen:
-            linked_seen.add(key)
-            linked_channels.append(clean)
-    if linked_channels:
-        return tuple(linked_channels)
-
     parts: list[str] = page["parts"]
 
     # Tivibu category page structure:
@@ -392,7 +379,17 @@ def _tivibu_catalog(url: str) -> tuple[str, ...]:
         if re.fullmatch(r"\d{2}\.\d{2}\.\d{4}", part.strip())
     ]
     if not date_indexes:
-        return ()
+        # Some category pages (notably Global) can omit the date rail in the
+        # server-rendered response. Only then fall back to channel-card links.
+        linked_channels = []
+        linked_seen = set()
+        for label in page.get("channels", []):
+            clean = " ".join(str(label).split()).strip()
+            key = fold(clean)
+            if clean and key not in linked_seen:
+                linked_seen.add(key)
+                linked_channels.append(clean)
+        return tuple(linked_channels[:200])
 
     i = date_indexes[-1] + 1
     while i < len(parts) and fold(parts[i]) in {"dun", "bugun", "yarin"}:
