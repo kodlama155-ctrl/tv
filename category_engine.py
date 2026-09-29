@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import html
+import concurrent.futures
 import json
 import re
 import unicodedata
@@ -289,7 +290,7 @@ def _fetch_page(url: str) -> dict:
                 "Accept": "text/html,application/xhtml+xml,*/*",
             },
         )
-        with urllib.request.urlopen(req, timeout=20) as response:
+        with urllib.request.urlopen(req, timeout=10) as response:
             raw = response.read(8_000_000).decode("utf-8", errors="replace")
         visible = _visible_text(raw)
         return {
@@ -323,8 +324,21 @@ def _variant_position(text: str, variants: list[str]) -> int | None:
     return best
 
 
+@lru_cache(maxsize=1)
+def _prefetch_platform_pages() -> bool:
+    urls = {DIGITURK_ALL_URL}
+    for category_pages in PLATFORM_PAGES.values():
+        for page_urls in category_pages.values():
+            urls.update(page_urls)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+        list(ex.map(_fetch_page, sorted(urls)))
+    return True
+
+
 @lru_cache(maxsize=4096)
 def _platform_matches(meta: str) -> list[dict]:
+    _prefetch_platform_pages()
     variants = _match_variants(meta)
     matches = []
 
@@ -367,6 +381,7 @@ def _platform_matches(meta: str) -> list[dict]:
 
 @lru_cache(maxsize=1)
 def _digiturk_sections() -> dict[str, str]:
+    _prefetch_platform_pages()
     page = _fetch_page(DIGITURK_ALL_URL)
     if not page["ok"]:
         return {}
