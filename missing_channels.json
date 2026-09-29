@@ -1,21 +1,14 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 56,
-  "core_channels_verified": 44,
-  "core_channels_not_verified": 12,
+  "core_channels_verified": 45,
+  "core_channels_not_verified": 11,
   "status_counts": {
-    "verified": 44,
-    "restricted": 11,
+    "verified": 45,
+    "restricted": 10,
     "unknown": 1
   },
   "missing_channels": [
-    {
-      "name": "TV8.5",
-      "expected_category": "Ulusal",
-      "status": "restricted",
-      "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401",
-      "candidate_url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3"
-    },
     {
       "name": "TRT 2",
       "expected_category": "Ulusal",
