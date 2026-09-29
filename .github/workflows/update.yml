@@ -41,10 +41,18 @@ jobs:
           python-version: "3.12"
 
       - name: Discover official live streams
-        run: python official_sources.py
+        run: |
+          timeout --signal=TERM 90s python official_sources.py || {
+            echo "Official source scan timed out/failed; continuing with last committed snapshot"
+            exit 0
+          }
 
       - name: Discover Turkuvaz player API streams
-        run: python turkuvaz_discover.py
+        run: |
+          timeout --signal=TERM 75s python turkuvaz_discover.py || {
+            echo "Turkuvaz discovery timed out/failed; continuing with last committed snapshot"
+            exit 0
+          }
 
       - name: Install Playwright browser fallback
         run: |
@@ -52,7 +60,11 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Browser fallback for official live streams
-        run: python browser_discover.py
+        run: |
+          timeout --signal=TERM 7m python browser_discover.py || {
+            echo "Browser fallback timed out/failed; continuing with last committed snapshot"
+            exit 0
+          }
 
       - name: Discover public M3U8 candidates
         env:
