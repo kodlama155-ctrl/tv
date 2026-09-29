@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import http.cookiejar
 import re
 import time
 import urllib.error
@@ -31,6 +32,7 @@ def _request(
     max_bytes: int,
     use_range: bool = False,
     request_headers: dict | None = None,
+    opener=None,
 ):
     headers = {
         "User-Agent": UA,
@@ -46,12 +48,19 @@ def _request(
         headers["User-Agent"] = custom_ua
     if referrer:
         headers["Referer"] = referrer
+        try:
+            ref = urllib.parse.urlsplit(referrer)
+            if ref.scheme and ref.netloc:
+                headers["Origin"] = f"{ref.scheme}://{ref.netloc}"
+        except Exception:
+            pass
     if use_range:
         headers["Range"] = f"bytes=0-{max_bytes - 1}"
 
     req = urllib.request.Request(url, headers=headers)
     started = time.monotonic()
-    with urllib.request.urlopen(req, timeout=timeout) as r:
+    client = opener.open if opener is not None else urllib.request.urlopen
+    with client(req, timeout=timeout) as r:
         status = getattr(r, "status", 200)
         data = r.read(max_bytes)
         elapsed_ms = round((time.monotonic() - started) * 1000)
@@ -171,7 +180,11 @@ def _media_details(text: str, base_url: str):
         "vod": "#EXT-X-ENDLIST" in text,
     }
 
-def _aux_reachable(url: str, request_headers: dict | None = None):
+def _aux_reachable(
+    url: str,
+    request_headers: dict | None = None,
+    opener=None,
+):
     try:
         code, data, _, _, _ = _request(
             url,
@@ -179,6 +192,7 @@ def _aux_reachable(url: str, request_headers: dict | None = None):
             32_000,
             use_range=True,
             request_headers=request_headers,
+            opener=opener,
         )
         return (200 <= code < 400 and len(data) > 0), None
     except urllib.error.HTTPError as e:
@@ -220,6 +234,7 @@ def _verify_media(
     manifest_latency_ms: int,
     variant: dict | None,
     request_headers: dict | None = None,
+    opener=None,
 ):
     info = _media_details(text, media_url)
 
@@ -233,12 +248,20 @@ def _verify_media(
         return {**base, "status": "drm", "reason": "DRM/SAMPLE-AES playlist"}
 
     if info["key_url"]:
-        ok, failure = _aux_reachable(info["key_url"], request_headers)
+        ok, failure = _aux_reachable(
+            info["key_url"],
+            request_headers,
+            opener=opener,
+        )
         if not ok:
             return {**base, "status": failure or "unknown", "reason": "AES-128 key unreachable"}
 
     if info["init_url"]:
-        ok, failure = _aux_reachable(info["init_url"], request_headers)
+        ok, failure = _aux_reachable(
+            info["init_url"],
+            request_headers,
+            opener=opener,
+        )
         if not ok:
             return {**base, "status": failure or "unknown", "reason": "init segment unreachable"}
 
@@ -270,6 +293,7 @@ def _verify_media(
                 MAX_SEGMENT_BYTES,
                 use_range=True,
                 request_headers=request_headers,
+                opener=opener,
             )
             if not (200 <= code < 400):
                 failures.append(("unknown", f"segment HTTP {code}"))
@@ -320,12 +344,18 @@ def validate_hls(
         "referrer": referrer,
     }
 
+    cookie_jar = http.cookiejar.CookieJar()
+    opener = urllib.request.build_opener(
+        urllib.request.HTTPCookieProcessor(cookie_jar)
+    )
+
     try:
         code, data, final_url, _, latency = _request(
             url,
             MANIFEST_TIMEOUT,
             MAX_MANIFEST_BYTES,
             request_headers=request_headers,
+            opener=opener,
         )
     except urllib.error.HTTPError as e:
         return {
@@ -353,6 +383,7 @@ def validate_hls(
             latency,
             None,
             request_headers=request_headers,
+            opener=opener,
         )
         result["http_code"] = code
         return result
@@ -374,6 +405,7 @@ def validate_hls(
                 MANIFEST_TIMEOUT,
                 MAX_MANIFEST_BYTES,
                 request_headers=request_headers,
+                opener=opener,
             )
             vtext = _text(vdata)
             if "#EXTM3U" not in vtext[:2048]:
@@ -386,6 +418,7 @@ def validate_hls(
                 vlatency,
                 variant,
                 request_headers=request_headers,
+                opener=opener,
             )
             result["http_code"] = vcode
             result["variants"] = len(variants)
