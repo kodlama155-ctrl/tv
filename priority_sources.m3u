@@ -157,3 +157,10 @@ https://tv85.blutv.com/blutv_tv8_5_live/live.m3u8
 #EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
 https://mn-nl.mncdn.com/blutv_trt2/live.m3u8
 
+
+# --- Quick-probe round 5: fresh TV8.5 SID ---
+
+# TV8.5 fresh SID observed in a recently crawled public list.
+#EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
+https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?sid=6b8vc9qda79i&app=bf58ab52-4865-4c81-b223-26b41009801e&ce=3
+
