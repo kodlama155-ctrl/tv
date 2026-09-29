@@ -475,6 +475,8 @@ def main():
 
         decision = category_decision(meta)
         naming = canonical_name_decision(meta)
+        raw_name = naming.get("original_name") or ""
+        geo_hint = "geo-blocked" in fold(raw_name) or "geo blocked" in fold(raw_name)
         normalized_meta, category, name = normalize_meta(meta)
         ordering = order_decision(normalized_meta, category)
         key = channel_key(normalized_meta, name)
@@ -490,6 +492,7 @@ def main():
             "name": name,
             "channel_key": key,
             "status": status,
+            "geo_hint": geo_hint,
             **result,
         }
         item["status"] = status
@@ -499,6 +502,7 @@ def main():
             "name": name,
             "original_name": naming.get("original_name"),
             "name_source": naming.get("source"),
+            "geo_hint": geo_hint,
             "tvg_id": tvg_id(normalized_meta),
             "channel_key": key,
             "category": category,
@@ -620,6 +624,9 @@ def main():
         "all_non_dead_non_drm_entries": len(all_candidates),
         "core_channels_total": coverage["core_channels_total"],
         "core_channels_verified": coverage["core_channels_verified"],
+        "core_channels_geo_restricted": coverage.get(
+            "core_channels_geo_restricted", 0
+        ),
         "core_channels_not_verified": coverage["core_channels_not_verified"],
         "categories_verified": {
             category: category_counts["verified"].get(category, 0)
