@@ -21,6 +21,12 @@ STATS = ROOT / "stats.json"
 
 MAX_WORKERS = 8
 
+CATEGORY_ORDER = [
+    "Genel", "Haber", "Spor", "Eğlence", "Dizi / Film", "Müzik",
+    "Çocuk", "Belgesel", "Yerel", "Dini", "Eğitim", "Diğer",
+]
+CATEGORY_INDEX = {name: i for i, name in enumerate(CATEGORY_ORDER)}
+
 
 def canonical(url: str) -> str:
     p = urllib.parse.urlsplit(url)
@@ -55,9 +61,23 @@ def category_from_meta(meta: str) -> str:
     return m.group(1).strip() if m else "Diğer"
 
 
+def channel_name(meta: str) -> str:
+    if "," not in meta:
+        return "Unknown"
+    return meta.rsplit(",", 1)[-1].strip() or "Unknown"
+
+
 def write_playlist(path: Path, entries):
+    ordered = sorted(
+        entries,
+        key=lambda item: (
+            CATEGORY_INDEX.get(category_from_meta(item["meta"]), 999),
+            channel_name(item["meta"]).casefold(),
+            canonical(item["url"]),
+        ),
+    )
     lines = ["#EXTM3U"]
-    for item in entries:
+    for item in ordered:
         lines.extend([item["meta"], item["url"]])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -187,21 +207,17 @@ def main():
     stats["tr_recheck_workers"] = MAX_WORKERS
     stats["tr_recheck_at_utc"] = now
 
-    known_categories = [
-        "Genel", "Haber", "Spor", "Eğlence", "Dizi / Film", "Müzik",
-        "Çocuk", "Belgesel", "Yerel", "Dini", "Eğitim", "Diğer",
-    ]
     stats["categories_verified"] = {
         category: categories_verified.get(category, 0)
-        for category in known_categories
+        for category in CATEGORY_ORDER
     }
     stats["categories_restricted"] = {
         category: categories_restricted.get(category, 0)
-        for category in known_categories
+        for category in CATEGORY_ORDER
     }
     stats["categories_unknown"] = {
         category: categories_unknown.get(category, 0)
-        for category in known_categories
+        for category in CATEGORY_ORDER
     }
 
     STATS.write_text(
