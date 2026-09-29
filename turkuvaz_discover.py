@@ -97,7 +97,7 @@ def extract_ids(text: str):
     tmd = TMD_PLAYER_RE.search(normalized)
     if tmd:
         fragment = html.unescape(tmd.group(2))
-        fragment = fragment.replace("\\"", '"').replace("\\'", "'")
+        fragment = fragment.replace(chr(92) + '"', '"').replace(chr(92) + "'", "'")
         match = ID_PAIR_RE.search(fragment)
         if match:
             return match.group(1), match.group(2)
