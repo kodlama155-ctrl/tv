@@ -194,6 +194,15 @@ def safe_candidate(url: str) -> bool:
     return True
 
 
+def _clean_option_value(value: str | None):
+    if value is None:
+        return None
+    value = value.strip()
+    if not value or "\r" in value or "\n" in value:
+        return None
+    return value
+
+
 def extract_entries(
     text: str,
     default_turkish: bool = False,
@@ -201,6 +210,7 @@ def extract_entries(
 ):
     entries = []
     last_meta = None
+    options = {}
     active_turkish = bool(
         default_turkish or path_turkish
     )
@@ -223,6 +233,24 @@ def extract_entries(
 
         if line.startswith("#EXTINF"):
             last_meta = line
+            options = {}
+            continue
+
+        if line.startswith("#EXTVLCOPT:"):
+            payload = line.split(":", 1)[1]
+            if "=" not in payload:
+                continue
+
+            key, value = payload.split("=", 1)
+            key = key.strip().lower()
+            value = _clean_option_value(value)
+
+            if not value:
+                continue
+            if key == "http-user-agent":
+                options["user_agent"] = value
+            elif key in {"http-referrer", "http-referer"}:
+                options["referrer"] = value
             continue
 
         if line.startswith("#"):
@@ -245,6 +273,7 @@ def extract_entries(
 
         if not active_turkish:
             last_meta = None
+            options = {}
             continue
 
         match = M3U8_RE.search(line)
@@ -255,14 +284,21 @@ def extract_entries(
 
         if not safe_candidate(url):
             last_meta = None
+            options = {}
             continue
 
         meta = (
             last_meta
             or '#EXTINF:-1 group-title="Discovered",Discovered stream'
         )
-        entries.append((meta, url))
+        entries.append((
+            meta,
+            url,
+            options.get("user_agent"),
+            options.get("referrer"),
+        ))
         last_meta = None
+        options = {}
 
     return entries
 
@@ -505,19 +541,42 @@ def main():
                             ),
                         })
 
-                        for meta, url in entries:
-                            found.setdefault(
-                                canonical(url),
-                                (
+                        for meta, url, user_agent, referrer in entries:
+                            key = canonical(url)
+                            existing = found.get(key)
+
+                            if existing is None:
+                                found[key] = (
                                     meta,
                                     url,
                                     full,
                                     path,
-                                    commit[
-                                        "date_raw"
-                                    ],
-                                ),
-                            )
+                                    commit["date_raw"],
+                                    user_agent,
+                                    referrer,
+                                )
+                            else:
+                                # İlk metadata/kaynak kaydı kalsın; aynı URL'nin
+                                # sonraki kopyasında eksik HTTP seçenekleri varsa
+                                # yalnız onları tamamla.
+                                (
+                                    old_meta,
+                                    old_url,
+                                    old_full,
+                                    old_path,
+                                    old_commit,
+                                    old_ua,
+                                    old_referrer,
+                                ) = existing
+                                found[key] = (
+                                    old_meta,
+                                    old_url,
+                                    old_full,
+                                    old_path,
+                                    old_commit,
+                                    old_ua or user_agent,
+                                    old_referrer or referrer,
+                                )
 
                     except Exception:
                         errors += 1
@@ -537,6 +596,8 @@ def main():
         full,
         path,
         last_commit,
+        user_agent,
+        referrer,
     ) in sorted(
         found.items(),
         key=lambda kv: kv[0],
@@ -548,6 +609,14 @@ def main():
             f"# SOURCE-UPDATED: {last_commit}"
         )
         lines.append(meta)
+        if referrer:
+            lines.append(
+                f"#EXTVLCOPT:http-referrer={referrer}"
+            )
+        if user_agent:
+            lines.append(
+                f"#EXTVLCOPT:http-user-agent={user_agent}"
+            )
         lines.append(url)
 
     OUTPUT.write_text(
@@ -572,6 +641,11 @@ def main():
         "fresh_files_scanned": fresh_files_scanned,
         "stale_files_skipped": stale_files_skipped,
         "unique_m3u8_candidates": len(found),
+        "header_aware_candidates": sum(
+            1
+            for value in found.values()
+            if value[5] or value[6]
+        ),
         "fresh_source_files": fresh_source_files,
         "errors": errors,
     }
