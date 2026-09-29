@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T00:05:23.327497+00:00",
+  "updated_at_utc": "2026-09-29T00:08:06.439698+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -32,19 +32,19 @@
   "discovered_entries": 184,
   "unique_entries": 320,
   "filtered_private_style_entries": 352,
-  "verified_entries": 177,
+  "verified_entries": 176,
   "restricted_entries": 28,
   "unknown_entries": 79,
   "unknown_retry_candidates": 79,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
-  "dead_entries": 36,
+  "dead_entries": 37,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 284,
+  "all_non_dead_non_drm_entries": 283,
   "categories_verified": {
-    "Genel": 50,
-    "Haber": 27,
+    "Genel": 49,
+    "Haber": 26,
     "Spor": 4,
     "Eğlence": 17,
     "Dizi / Film": 4,
@@ -52,7 +52,7 @@
     "Çocuk": 10,
     "Belgesel": 2,
     "Yerel": 0,
-    "Dini": 6,
+    "Dini": 7,
     "Eğitim": 3,
     "Diğer": 39
   },
