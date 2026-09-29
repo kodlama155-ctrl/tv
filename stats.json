@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T03:07:58.264190+00:00",
+  "updated_at_utc": "2026-09-29T03:53:10.041053+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
@@ -44,8 +44,8 @@
   "stream_validation_statuses": {
     "restricted": 33,
     "unknown": 86,
-    "dead": 38,
-    "verified": 180
+    "dead": 37,
+    "verified": 181
   },
   "verified_entries": 155,
   "restricted_entries": 24,
@@ -62,16 +62,16 @@
   "core_channels_not_verified": 16,
   "categories_verified": {
     "Ulusal": 10,
-    "Haber": 26,
+    "Haber": 27,
     "Spor": 3,
     "Film & Dizi": 5,
     "Çocuk": 7,
     "Belgesel": 1,
     "Yaşam": 2,
     "Müzik": 16,
-    "Yerel": 6,
+    "Yerel": 0,
     "Uluslararası": 10,
-    "Diğer": 69
+    "Diğer": 74
   },
   "categories_restricted": {
     "Ulusal": 4,
@@ -89,13 +89,13 @@
   "categories_unknown": {
     "Ulusal": 0,
     "Haber": 6,
-    "Spor": 3,
+    "Spor": 4,
     "Film & Dizi": 2,
     "Çocuk": 0,
     "Belgesel": 4,
     "Yaşam": 2,
     "Müzik": 2,
-    "Yerel": 1,
+    "Yerel": 0,
     "Uluslararası": 0,
     "Diğer": 22
   }
