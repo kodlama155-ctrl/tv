@@ -63,7 +63,7 @@ jobs:
   tr-recheck:
     name: Recheck non-verified streams from Türkiye
     needs: update
-    if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.actor == 'kodlama155-ctrl') }}
+    if: ${{ github.event_name == 'schedule' || ((github.event_name == 'workflow_dispatch' || github.event_name == 'push') && github.actor == 'kodlama155-ctrl') }}
     runs-on: [self-hosted, Windows, X64, tr]
     timeout-minutes: 15
 
