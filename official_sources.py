@@ -66,6 +66,7 @@ OFFICIAL_SOURCES = [
         "category": "Spor",
         "page": "https://www.trtspor.com.tr/canli-yayin-izle/trt-spor",
         "hints": ["trtspor", "trt-spor"],
+        "exclude_hints": ["yildiz", "radyo"],
     },
     {
         "name": "ATV",
@@ -205,6 +206,8 @@ def normalize_embedded_text(text: str) -> str:
     value = value.replace("\\/", "/")
     value = value.replace("\\u002F", "/").replace("\\u002f", "/")
     value = value.replace("\\u003A", ":").replace("\\u003a", ":")
+    value = value.replace("\\u0026", "&")
+    value = value.replace("\\u003D", "=").replace("\\u003d", "=")
     try:
         decoded = urllib.parse.unquote(value)
         if decoded != value:
@@ -299,6 +302,18 @@ def extract_aux_urls(text: str, base_url: str):
     return urls[:MAX_AUX_RESOURCES]
 
 
+def candidate_matches_source(url: str, source: dict) -> bool:
+    low = url.lower()
+    hints = [str(x).lower() for x in source.get("hints", [])]
+    excludes = [str(x).lower() for x in source.get("exclude_hints", [])]
+
+    if any(token in low for token in excludes):
+        return False
+    if hints and not any(token in low for token in hints):
+        return False
+    return True
+
+
 def candidate_score(url: str, hints: list[str]) -> int:
     low = url.lower()
     score = 0
@@ -364,8 +379,17 @@ def scan_source(source: dict):
         except Exception:
             continue
 
+    identity_matched = [
+        url
+        for url in found.values()
+        if candidate_matches_source(url, source)
+    ]
+    result["identity_rejected_candidates"] = (
+        len(found) - len(identity_matched)
+    )
+
     ordered = sorted(
-        found.values(),
+        identity_matched,
         key=lambda url: (
             candidate_score(url, source.get("hints", [])),
             1 if url.startswith("https://") else 0,
