@@ -11,7 +11,7 @@ from functools import lru_cache
 # EmirTV category engine.
 #
 # Decision order is evidence-based instead of one giant hand-written channel map:
-#   1) current professional-platform placement (Tivibu + TV+ reference)
+#   1) current professional-platform placement (Tivibu + TV+ + Digiturk reference)
 #   2) live iptv-org channel metadata (channels.json) by exact tvg-id
 #   3) regional/international identity signals
 #   4) source group-title and channel-name keywords
@@ -28,6 +28,11 @@ from functools import lru_cache
 #   https://www.tivibu.com.tr/canli-tv/muzik
 #   https://tvplus.com.tr/canli-tv
 #   https://tvplus.com.tr/destek/sss/tvplus-kanallari
+#   https://www.digiturk.com.tr/AllChannels
+# D-Smart's current public pages confirm the same broad taxonomy (ulusal,
+# haber, spor, film/dizi, belgesel, çocuk, müzik, yaşam) but do not expose a
+# reliable machine-readable per-channel category list, so we do not invent
+# channel votes from D-Smart.
 #
 # iptv-org is fetched live on every checker process (one request, cached in memory):
 IPTV_ORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
@@ -134,6 +139,23 @@ TVPLUS = {
     "Yerel": {
         "kadirgatv", "kontv", "kanal23", "kanalv", "kanal26", "kanal33",
         "on6",
+    },
+}
+
+
+# Digiturk current AllChannels page exposes explicit ULUSAL/HABER sections.
+# Only placements that are actually visible on the current page are included.
+# Conflicts are intentional: the voting system resolves them instead of
+# pretending every professional platform agrees.
+DIGITURK = {
+    "Ulusal": {
+        "trt1", "kanald", "atv", "showtv", "nowtv", "startv", "tv8",
+        "360", "kanal7", "a2tv", "beyaztv", "tv100", "halktv", "teve2",
+        "trteba", "gzt",
+    },
+    "Haber": {
+        "haberglobal", "akittv", "benguturktv", "turkhabertv", "cncbe",
+        "cnbce", "sozcutv", "trtworld",
     },
 }
 
@@ -326,7 +348,11 @@ def _iptv_org_index() -> dict[str, list[str]]:
 
 def _platform_votes(identity: str) -> list[tuple[str, str]]:
     votes = []
-    for platform, mapping in (("Tivibu", TIVIBU), ("TV+", TVPLUS)):
+    for platform, mapping in (
+        ("Tivibu", TIVIBU),
+        ("TV+", TVPLUS),
+        ("Digiturk", DIGITURK),
+    ):
         for category, ids in mapping.items():
             if identity in ids:
                 votes.append((platform, category))
