@@ -699,13 +699,37 @@ def classify(meta: str) -> dict:
         scores["Uluslararası"] += 20
         evidence.append(f"country:{country}->Uluslararası")
 
-    # Strict Ulusal: only a live professional Ulusal category match may create
-    # it. Broad .tr/general/entertainment metadata never creates Ulusal.
+    # Tivibu's dedicated /canli-tv/ulusal rail is the authoritative source
+    # for EmirTV's Ulusal bucket. Diyanet-branded services are intentionally
+    # excluded even if Tivibu places them in its broad Ulusal rail.
+    identity_text = " ".join(
+        part for part in (
+            _tvg_base(meta),
+            _clean_display_name(name),
+        )
+        if part
+    )
+    identity_fold = fold(identity_text)
+    is_diyanet = "diyanet" in identity_fold
+
+    tivibu_ulusal = any(
+        platform == "Tivibu" and category == "Ulusal"
+        for platform, category, _, _, _ in matches
+    )
     has_ulusal_platform = any(
         category == "Ulusal"
         for _, category, _, _, _ in matches
     )
-    if not has_ulusal_platform:
+
+    if tivibu_ulusal and not is_diyanet:
+        scores["Ulusal"] = max(scores.get("Ulusal", 0), 1000)
+        evidence.append("Tivibu:Ulusal:authoritative")
+    elif is_diyanet:
+        scores.pop("Ulusal", None)
+        # Preserve the user's explicit rule: Diyanet stays thematic, not Ulusal.
+        scores["Dini"] = max(scores.get("Dini", 0), 500)
+        evidence.append("Diyanet:exclude-Ulusal->Dini")
+    elif not has_ulusal_platform:
         scores.pop("Ulusal", None)
 
     # Professional Global placement is stronger than generic news metadata.
