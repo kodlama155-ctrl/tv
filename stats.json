@@ -1,11 +1,11 @@
 {
-  "updated_at_utc": "2026-09-29T00:56:30.951737+00:00",
+  "updated_at_utc": "2026-09-29T01:01:13.592635+00:00",
   "validation_mode": "HLS manifest + variant + real media segments",
   "sources": [
     {
       "url": "local:priority_sources.m3u",
       "status": "ok",
-      "entries": 17
+      "entries": 19
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -33,35 +33,35 @@
       "entries": 184
     }
   ],
-  "raw_entries": 1167,
-  "priority_entries": 17,
+  "raw_entries": 1169,
+  "priority_entries": 19,
   "discovered_entries": 184,
-  "unique_entries": 335,
-  "unique_stream_candidates": 335,
+  "unique_entries": 337,
+  "unique_stream_candidates": 337,
   "semantic_channels": 247,
-  "duplicate_stream_variants_collapsed": 88,
+  "duplicate_stream_variants_collapsed": 90,
   "filtered_private_style_entries": 352,
   "stream_validation_statuses": {
     "restricted": 33,
-    "unknown": 84,
-    "dead": 39,
-    "verified": 179
+    "unknown": 86,
+    "dead": 38,
+    "verified": 180
   },
-  "verified_entries": 154,
+  "verified_entries": 155,
   "restricted_entries": 24,
-  "unknown_entries": 41,
-  "unknown_retry_candidates": 85,
-  "unknown_retry_recovered": 1,
+  "unknown_entries": 42,
+  "unknown_retry_candidates": 86,
+  "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
-  "dead_entries": 28,
+  "dead_entries": 26,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 219,
+  "all_non_dead_non_drm_entries": 221,
   "core_channels_total": 56,
   "core_channels_verified": 40,
   "core_channels_not_verified": 16,
   "categories_verified": {
-    "Ulusal": 24,
+    "Ulusal": 25,
     "Haber": 23,
     "Spor": 3,
     "Film & Dizi": 5,
@@ -88,7 +88,7 @@
   },
   "categories_unknown": {
     "Ulusal": 24,
-    "Haber": 5,
+    "Haber": 6,
     "Spor": 4,
     "Film & Dizi": 1,
     "Çocuk": 0,
