@@ -52,12 +52,12 @@ PLATFORM_PAGES = {
         "Müzik": ["https://www.tivibu.com.tr/canli-tv/muzik"],
         "Uluslararası": ["https://www.tivibu.com.tr/canli-tv/global"],
     },
-    # TV+ has an explicit Yerel category. We use only that scoped page as a
-    # second professional source, again without storing individual channel IDs.
-    "TV+": {
-        "Yerel": ["https://tvplus.com.tr/canli-tv/kategori/yerel"],
-    },
 }
+
+# TV+ category pages are client-rendered and their static HTML also contains
+# unrelated footer/popular links. Searching the whole page can therefore
+# produce false category matches. Use TV+ only as a live lineup/order source.
+TVPLUS_ALL_URL = "https://tvplus.com.tr/canli-tv"
 
 UA = "Mozilla/5.0 (EmirTV-CategoryBot/4.0)"
 
@@ -377,6 +377,67 @@ def _tivibu_catalog(url: str) -> tuple[str, ...]:
     return tuple(channels)
 
 
+@lru_cache(maxsize=1)
+def _tvplus_catalog() -> tuple[str, ...]:
+    page = _fetch_page(TVPLUS_ALL_URL)
+    if not page["ok"]:
+        return ()
+
+    parts: list[str] = page["parts"]
+    folded = [fold(x) for x in parts]
+
+    try:
+        start = next(
+            i for i, value in enumerate(folded)
+            if value == "tum kanallar"
+        )
+    except StopIteration:
+        return ()
+
+    # The TV+ all-channel rail begins after the category selector. Starting
+    # after "KKTC Yerel" keeps category labels out of the channel catalog.
+    selector_end = None
+    for i in range(start + 1, min(len(parts), start + 100)):
+        if folded[i] == "kktc yerel":
+            selector_end = i + 1
+            break
+    if selector_end is None:
+        return ()
+
+    stop_labels = {
+        "tv+ta simdi ne var?",
+        "tv+'ta simdi ne var?",
+        "tv+’ta simdi ne var?",
+        "cihazlar",
+    }
+
+    channels: list[str] = []
+    seen: set[str] = set()
+    for part in parts[selector_end:]:
+        value = part.strip()
+        value_fold = fold(value)
+
+        if value_fold in stop_labels or value_fold.startswith("tv+ta simdi ne var"):
+            break
+        if not value or len(value) > 100:
+            continue
+
+        keys = _label_keys(value)
+        if not keys:
+            continue
+
+        primary = min(keys, key=len)
+        if primary in seen:
+            continue
+        seen.add(primary)
+        channels.append(value)
+
+        if len(channels) > 400:
+            break
+
+    return tuple(channels)
+
+
 def _catalog_position(meta: str, catalog: tuple[str, ...]) -> int | None:
     candidate_keys: set[str] = set()
     for variant in _match_variants(meta):
@@ -607,6 +668,20 @@ def order_decision(meta: str, category: str | None = None) -> dict:
                 "position": position,
                 "confidence": confidence,
                 "url": url,
+            }
+        )
+
+    # TV+ publishes a current all-channel lineup. It is valuable for ordering
+    # but not used as category evidence because its category pages are
+    # client-rendered and static HTML can contain unrelated footer links.
+    tvplus_position = _catalog_position(meta, _tvplus_catalog())
+    if tvplus_position is not None:
+        rows.append(
+            {
+                "platform": "TV+",
+                "position": tvplus_position,
+                "confidence": "global-catalog",
+                "url": TVPLUS_ALL_URL,
             }
         )
 
