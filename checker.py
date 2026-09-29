@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parent
 SOURCES = ROOT / "sources.txt"
 PRIORITY = ROOT / "priority_sources.m3u"
 OFFICIAL = ROOT / "official_discovered.m3u"
+TURKUVAZ_OFFICIAL = ROOT / "turkuvaz_discovered.m3u"
 BROWSER_OFFICIAL = ROOT / "browser_discovered.m3u"
 DISCOVERED = ROOT / "discovered.m3u"
 
@@ -225,6 +226,26 @@ def main():
         except Exception as e:
             source_report.append({
                 "url": "local:official_discovered.m3u",
+                "status": "error",
+                "error": type(e).__name__,
+            })
+
+    turkuvaz_official_entries = 0
+    if TURKUVAZ_OFFICIAL.exists():
+        try:
+            parsed = parse_playlist(
+                TURKUVAZ_OFFICIAL.read_text(encoding="utf-8")
+            )
+            turkuvaz_official_entries = len(parsed)
+            entries.extend(parsed)
+            source_report.append({
+                "url": "local:turkuvaz_discovered.m3u",
+                "status": "ok",
+                "entries": turkuvaz_official_entries,
+            })
+        except Exception as e:
+            source_report.append({
+                "url": "local:turkuvaz_discovered.m3u",
                 "status": "error",
                 "error": type(e).__name__,
             })
@@ -513,6 +534,7 @@ def main():
         "raw_entries": len(entries),
         "priority_entries": priority_entries,
         "official_entries": official_entries,
+        "turkuvaz_official_entries": turkuvaz_official_entries,
         "browser_official_entries": browser_official_entries,
         "discovered_entries": discovered_entries,
         "unique_entries": len(candidates),
