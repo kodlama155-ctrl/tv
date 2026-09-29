@@ -13,12 +13,12 @@ from html.parser import HTMLParser
 
 # EmirTV dynamic category/order engine.
 #
-# No channel is hard-coded into a category.
-# The bot learns current placement from professional platform category pages.
-# If a platform does not know the channel, content metadata is used.
-#
-# "Ulusal" is strict: a Turkish country code or "general" label alone is NOT
-# enough. A professional Ulusal-page match is required for Ulusal placement.
+# IMPORTANT:
+# - No individual channel is hard-coded into a category.
+# - The bot learns current placement/order from professional platform pages.
+# - A broad "general", ".tr", religious, education or culture tag does NOT
+#   automatically make a channel "Ulusal".
+# - If reliable category evidence is missing, the channel goes to "Diğer".
 
 CATEGORY_ORDER = [
     "Ulusal",
@@ -36,51 +36,34 @@ CATEGORY_ORDER = [
 
 IPTV_ORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
 
-# Current professional pages. Only category URLs are stored, never channel lists.
+# Only professional CATEGORY URLs are stored here; never channel lists.
 PLATFORM_PAGES = {
     "Tivibu": {
-        "Ulusal": [
-            "https://www.tivibu.com.tr/canli-tv/ulusal",
-        ],
-        "Haber": [
-            "https://www.tivibu.com.tr/canli-tv/haber",
-        ],
-        "Spor": [
-            "https://www.tivibu.com.tr/canli-tv/spor",
-        ],
+        "Ulusal": ["https://www.tivibu.com.tr/canli-tv/ulusal"],
+        "Haber": ["https://www.tivibu.com.tr/canli-tv/haber"],
+        "Spor": ["https://www.tivibu.com.tr/canli-tv/spor"],
         "Film & Dizi": [
             "https://www.tivibu.com.tr/canli-tv/dizi",
             "https://www.tivibu.com.tr/canli-tv/sinema",
         ],
-        "Çocuk": [
-            "https://www.tivibu.com.tr/canli-tv/cocuk",
-        ],
-        "Belgesel": [
-            "https://www.tivibu.com.tr/canli-tv/belgesel",
-        ],
-        "Yaşam": [
-            "https://www.tivibu.com.tr/canli-tv/yasam-stil",
-        ],
-        "Müzik": [
-            "https://www.tivibu.com.tr/canli-tv/muzik",
-        ],
-        "Uluslararası": [
-            "https://www.tivibu.com.tr/canli-tv/global",
-        ],
+        "Çocuk": ["https://www.tivibu.com.tr/canli-tv/cocuk"],
+        "Belgesel": ["https://www.tivibu.com.tr/canli-tv/belgesel"],
+        "Yaşam": ["https://www.tivibu.com.tr/canli-tv/yasam-stil"],
+        "Müzik": ["https://www.tivibu.com.tr/canli-tv/muzik"],
+        "Uluslararası": ["https://www.tivibu.com.tr/canli-tv/global"],
     },
-    # TV+ is especially useful for its explicit Yerel group. Its category page
-    # is checked as a second professional source without storing channel names.
+    # TV+ has an explicit Yerel category. We use only that scoped page as a
+    # second professional source, again without storing individual channel IDs.
     "TV+": {
-        "Yerel": [
-            "https://tvplus.com.tr/canli-tv/kategori/yerel",
-        ],
+        "Yerel": ["https://tvplus.com.tr/canli-tv/kategori/yerel"],
     },
 }
 
-UA = "Mozilla/5.0 (EmirTV-CategoryBot/3.0)"
+UA = "Mozilla/5.0 (EmirTV-CategoryBot/4.0)"
 
-# Broad tags are intentionally absent. "general", "entertainment",
-# "religious", "education", "culture" do not become Ulusal by themselves.
+# Strong content-type mappings only.
+# Broad tags such as general/entertainment/religious/education/culture are
+# intentionally NOT mapped to Ulusal.
 IPTV_CATEGORY_MAP = {
     "news": "Haber",
     "business": "Haber",
@@ -230,8 +213,8 @@ def _match_variants(meta: str) -> list[str]:
         base = base.rsplit(".", 1)[0]
 
     values = [display, _camel_words(base), base]
-    out = []
-    seen = set()
+    out: list[str] = []
+    seen: set[str] = set()
 
     for value in values:
         value = fold(value)
@@ -240,16 +223,26 @@ def _match_variants(meta: str) -> list[str]:
             continue
 
         variants = [value]
+
         for suffix in (" turkiye", " turkey", " hd", " sd"):
             if value.endswith(suffix):
                 variants.append(value[: -len(suffix)].strip())
 
-        # Generic trailing TV cleanup: Haberturk TV -> Haberturk.
+        # Generic trailing-TV cleanup: "Haberturk TV" -> "Haberturk".
         if value.endswith(" tv") and len(value) > 5 and not value.startswith("tv"):
             variants.append(value[:-3].strip())
 
+        compact = re.sub(r"\s+", "", value)
+        if compact.endswith("tv") and not compact.startswith("tv"):
+            short = compact[:-2]
+            if len(short) >= 2:
+                variants.append(short)
+
         for variant in variants:
-            if len(variant) < 3 or variant in seen:
+            compact_variant = re.sub(r"\s+", "", variant)
+            # Allow short alpha-numeric service names such as A2, but reject
+            # generic one-character matches.
+            if len(compact_variant) < 2 or variant in seen:
                 continue
             seen.add(variant)
             out.append(variant)
@@ -257,13 +250,24 @@ def _match_variants(meta: str) -> list[str]:
     return out
 
 
-def _visible_text(raw_html: str) -> str:
-    parser = _TextParser()
-    try:
-        parser.feed(raw_html)
-    except Exception:
-        pass
-    return " \n ".join(parser.parts)
+def _label_keys(value: str) -> set[str]:
+    value = fold(value)
+    value = re.sub(r"[^a-z0-9]+", " ", value).strip()
+    if not value:
+        return set()
+
+    keys = {value, re.sub(r"\s+", "", value)}
+
+    if value.endswith(" tv") and len(value) > 5 and not value.startswith("tv"):
+        short = value[:-3].strip()
+        keys.add(short)
+        keys.add(re.sub(r"\s+", "", short))
+
+    compact = re.sub(r"\s+", "", value)
+    if compact.endswith("tv") and not compact.startswith("tv") and len(compact[:-2]) >= 2:
+        keys.add(compact[:-2])
+
+    return {x for x in keys if x}
 
 
 @lru_cache(maxsize=32)
@@ -278,18 +282,29 @@ def _fetch_page(url: str) -> dict:
         )
         with urllib.request.urlopen(req, timeout=8) as response:
             raw = response.read(6_000_000).decode("utf-8", errors="replace")
-        visible = fold(html.unescape(_visible_text(raw)))
-        # TV+ may serialize channel cards in HTML/JSON even when not rendered as
-        # visible text. Keep raw only for TV+ Yerel as a low-confidence fallback.
+
+        parser = _TextParser()
+        try:
+            parser.feed(raw)
+        except Exception:
+            pass
+
+        parts = [html.unescape(x).strip() for x in parser.parts if x.strip()]
+        visible = fold(" \n ".join(parts))
+
+        # TV+ may serialize scoped channel cards in HTML/JSON.
         raw_folded = fold(html.unescape(raw)) if "tvplus.com.tr" in url else ""
+
         return {
             "ok": True,
+            "parts": parts,
             "visible": visible,
             "raw": raw_folded,
         }
     except Exception as exc:
         return {
             "ok": False,
+            "parts": [],
             "visible": "",
             "raw": "",
             "error": type(exc).__name__,
@@ -298,7 +313,7 @@ def _fetch_page(url: str) -> dict:
 
 @lru_cache(maxsize=1)
 def _prefetch_pages() -> bool:
-    urls = []
+    urls: list[str] = []
     for category_pages in PLATFORM_PAGES.values():
         for page_urls in category_pages.values():
             urls.extend(page_urls)
@@ -306,6 +321,75 @@ def _prefetch_pages() -> bool:
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
         list(ex.map(_fetch_page, sorted(set(urls))))
     return True
+
+
+@lru_cache(maxsize=32)
+def _tivibu_catalog(url: str) -> tuple[str, ...]:
+    page = _fetch_page(url)
+    if not page["ok"]:
+        return ()
+
+    parts: list[str] = page["parts"]
+
+    # Tivibu category page structure:
+    # date selector -> CHANNEL -> current programme -> CHANNEL -> programme...
+    # then the full EPG begins and contains clock ranges/arrow.
+    #
+    # We intentionally extract ONLY this first category rail. This avoids the
+    # old bug where a channel mentioned later in EPG data appeared to belong to
+    # every Tivibu category.
+    date_indexes = [
+        i
+        for i, part in enumerate(parts[:300])
+        if re.fullmatch(r"\d{2}\.\d{2}\.\d{4}", part.strip())
+    ]
+    if not date_indexes:
+        return ()
+
+    i = date_indexes[-1] + 1
+    while i < len(parts) and fold(parts[i]) in {"dun", "bugun", "yarin"}:
+        i += 1
+
+    channels: list[str] = []
+    while i < len(parts):
+        channel = parts[i].strip()
+
+        # First real EPG entry: stop before the programme grid.
+        if (
+            "→" in channel
+            or re.search(r"\b\d{1,2}:\d{2}\b", channel)
+            or ("canli" in fold(channel) and len(channels) >= 2)
+        ):
+            break
+
+        if not channel:
+            i += 1
+            continue
+
+        channels.append(channel)
+
+        # The rail alternates channel name / current programme title.
+        i += 2
+
+        if len(channels) > 150:
+            return ()
+
+    return tuple(channels)
+
+
+def _catalog_position(meta: str, catalog: tuple[str, ...]) -> int | None:
+    candidate_keys: set[str] = set()
+    for variant in _match_variants(meta):
+        candidate_keys.update(_label_keys(variant))
+
+    if not candidate_keys:
+        return None
+
+    for pos, label in enumerate(catalog):
+        if candidate_keys & _label_keys(label):
+            return pos
+
+    return None
 
 
 def _variant_position(text: str, variants: list[str]) -> int | None:
@@ -321,36 +405,43 @@ def _variant_position(text: str, variants: list[str]) -> int | None:
 @lru_cache(maxsize=4096)
 def _platform_matches(meta: str) -> tuple[tuple, ...]:
     _prefetch_pages()
-    variants = _match_variants(meta)
-    matches = []
+    matches: list[tuple] = []
 
     for platform, category_pages in PLATFORM_PAGES.items():
         for category, urls in category_pages.items():
             best = None
+
             for url in urls:
                 page = _fetch_page(url)
                 if not page["ok"]:
                     continue
 
-                pos = _variant_position(page["visible"], variants)
-                confidence = "visible"
-
-                # Only TV+ Yerel gets embedded-data fallback.
-                if pos is None and platform == "TV+":
-                    pos = _variant_position(page["raw"], variants)
-                    confidence = "embedded"
+                if platform == "Tivibu":
+                    pos = _catalog_position(meta, _tivibu_catalog(url))
+                    confidence = "catalog"
+                else:
+                    # TV+ page itself is scoped to Yerel, so visible/embedded
+                    # matching cannot leak a channel from another category page.
+                    variants = _match_variants(meta)
+                    pos = _variant_position(page["visible"], variants)
+                    confidence = "visible"
+                    if pos is None:
+                        pos = _variant_position(page["raw"], variants)
+                        confidence = "embedded"
 
                 if pos is not None and (best is None or pos < best[0]):
                     best = (pos, confidence, url)
 
             if best is not None:
-                matches.append((
-                    platform,
-                    category,
-                    best[0],
-                    best[1],
-                    best[2],
-                ))
+                matches.append(
+                    (
+                        platform,
+                        category,
+                        best[0],
+                        best[1],
+                        best[2],
+                    )
+                )
 
     return tuple(matches)
 
@@ -387,11 +478,17 @@ def classify(meta: str) -> dict:
     country = _country(meta)
 
     scores = Counter()
-    evidence = []
+    evidence: list[str] = []
 
     matches = _platform_matches(meta)
     for platform, category, position, confidence, url in matches:
-        weight = 120 if confidence == "visible" else 80
+        if confidence == "catalog":
+            weight = 160
+        elif confidence == "visible":
+            weight = 110
+        else:
+            weight = 80
+
         scores[category] += weight
         evidence.append(f"{platform}:{category}:{confidence}")
 
@@ -419,6 +516,7 @@ def classify(meta: str) -> dict:
         ("Müzik", ["muzik", "music", "radyo", "radio"]),
         ("Yerel", ["yerel", "local", "regional"]),
     ]
+
     for category, keywords in keyword_groups:
         if any(
             re.search(
@@ -430,12 +528,15 @@ def classify(meta: str) -> dict:
             scores[category] += 25
             evidence.append(f"channel-name:{category}")
 
+    # Foreign origin is a fallback signal only. Strong platform/content
+    # evidence can still classify a foreign-origin Türkiye service as Çocuk,
+    # Film & Dizi, etc.
     if country and country != "tr":
         scores["Uluslararası"] += 20
         evidence.append(f"country:{country}->Uluslararası")
 
-    # Strict Ulusal rule: only a live professional-platform Ulusal match can
-    # create Ulusal. No .tr/general fallback exists.
+    # Strict Ulusal: ONLY a live professional Ulusal category match may create
+    # the category. No .tr/general/entertainment/religious fallback exists.
     has_ulusal_platform = any(
         category == "Ulusal"
         for _, category, _, _, _ in matches
@@ -500,12 +601,14 @@ def order_decision(meta: str, category: str | None = None) -> dict:
     for platform, cat, position, confidence, url in _platform_matches(meta):
         if cat != category:
             continue
-        rows.append({
-            "platform": platform,
-            "position": position,
-            "confidence": confidence,
-            "url": url,
-        })
+        rows.append(
+            {
+                "platform": platform,
+                "position": position,
+                "confidence": confidence,
+                "url": url,
+            }
+        )
 
     if not rows:
         return {
@@ -539,6 +642,7 @@ def channel_sort_key(
         name = split_extinf(meta)[1]
 
     decision = order_decision(meta, category)
+
     return (
         0 if decision["known"] else 1,
         -decision["sources"],
