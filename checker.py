@@ -22,6 +22,7 @@ from channel_policy import (
     select_representatives,
     tvg_id,
 )
+from category_engine import channel_sort_key, order_decision
 from hls_validator import validate_hls
 
 ROOT = Path(__file__).resolve().parent
@@ -119,7 +120,11 @@ def write_playlist(path: Path, entries):
         entries,
         key=lambda x: (
             CATEGORY_INDEX.get(x["category"], 999),
-            fold(x["name"]),
+            *channel_sort_key(
+                x["meta"],
+                x["category"],
+                x["name"],
+            ),
             canonical(x["url"]),
         ),
     )
@@ -286,6 +291,7 @@ def main():
 
         decision = category_decision(meta)
         normalized_meta, category, name = normalize_meta(meta)
+        ordering = order_decision(normalized_meta, category)
         key = channel_key(normalized_meta, name)
 
         item = {
@@ -308,6 +314,10 @@ def main():
             "category_source": decision.get("source"),
             "category_votes": decision.get("votes", {}),
             "category_evidence": decision.get("evidence", []),
+            "order_known": ordering.get("known", False),
+            "order_score": ordering.get("score"),
+            "order_sources": ordering.get("sources", 0),
+            "order_evidence": ordering.get("evidence", []),
             "url": url,
             **result,
             "status": status,
@@ -356,6 +366,8 @@ def main():
         key=lambda x: (
             x.get("status", ""),
             CATEGORY_INDEX.get(x["category"], 999),
+            0 if x.get("order_known") else 1,
+            x.get("order_score", 999.0),
             fold(x["name"]),
         )
     )
