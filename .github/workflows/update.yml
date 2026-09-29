@@ -10,9 +10,9 @@ on:
       - "official_sources.py"
       - "turkuvaz_discover.py"
       - "browser_discover.py"
+      - "browser_needed.py"
       - "discover_queries.txt"
       - "sources.txt"
-      - "priority_sources.m3u"
       - "channel_policy.py"
       - "name_engine.py"
       - "category_engine.py"
@@ -55,17 +55,47 @@ jobs:
             exit 0
           }
 
+      - name: Check browser fallback need
+        id: browser_need
+        run: echo "needed=$(python browser_needed.py)" >> "$GITHUB_OUTPUT"
+
       - name: Install Playwright browser fallback
+        if: steps.browser_need.outputs.needed == 'true'
         run: |
           python -m pip install --disable-pip-version-check playwright
           python -m playwright install --with-deps chromium
 
       - name: Browser fallback for official live streams
+        if: steps.browser_need.outputs.needed == 'true'
         run: |
           timeout --signal=TERM 7m python browser_discover.py || {
             echo "Browser fallback timed out/failed; continuing with last committed snapshot"
             exit 0
           }
+
+      - name: Clear stale browser fallback when not needed
+        if: steps.browser_need.outputs.needed != 'true'
+        run: |
+          printf '#EXTM3U\n' > browser_discovered.m3u
+          python - <<'PY'
+          import datetime as dt
+          import json
+          from pathlib import Path
+          Path("browser_stats.json").write_text(
+              json.dumps({
+                  "updated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+                  "fallback_targets": 0,
+                  "pages_scanned": 0,
+                  "pages_with_candidates": 0,
+                  "raw_candidates": 0,
+                  "accepted_unique_candidates": 0,
+                  "probe_statuses": {},
+                  "sources": [],
+                  "note": "Browser fallback not needed; all configured official targets resolved earlier."
+              }, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
 
       - name: Discover public M3U8 candidates
         env:
