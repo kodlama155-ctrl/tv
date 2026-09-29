@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-09-29T06:38:53.801820+00:00",
+  "updated_at_utc": "2026-09-29T12:40:12.692929+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-09-15T06:38:53.801820+00:00",
+  "cutoff_utc": "2026-09-15T12:40:12.692929+00:00",
   "repos_per_query": 50,
   "queries": [
     {
@@ -63,6 +63,18 @@
   "unique_m3u8_candidates": 184,
   "fresh_source_files": [
     {
+      "repo": "FeridunN12/ibo-iptv-playlist",
+      "path": "combined.m3u",
+      "last_commit": "2026-09-29T09:20:58Z",
+      "entries_found": 144
+    },
+    {
+      "repo": "FeridunN12/ibo-iptv-playlist",
+      "path": "docs/combined.m3u",
+      "last_commit": "2026-09-29T09:20:58Z",
+      "entries_found": 144
+    },
+    {
       "repo": "K3rimoff/IPTV",
       "path": "Aze.m3u",
       "last_commit": "2026-09-29T04:34:51Z",
@@ -73,18 +85,6 @@
       "path": "public/TV-tr.m3u",
       "last_commit": "2026-09-28T10:44:42Z",
       "entries_found": 125
-    },
-    {
-      "repo": "FeridunN12/ibo-iptv-playlist",
-      "path": "combined.m3u",
-      "last_commit": "2026-09-28T09:12:27Z",
-      "entries_found": 147
-    },
-    {
-      "repo": "FeridunN12/ibo-iptv-playlist",
-      "path": "docs/combined.m3u",
-      "last_commit": "2026-09-28T09:12:27Z",
-      "entries_found": 147
     },
     {
       "repo": "akifdepoozel-crypto/car-tv-turkiye",
