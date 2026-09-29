@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-29T15:22:16.359814+00:00",
+  "updated_at_utc": "2026-09-29T16:09:34.420919+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -10,12 +10,12 @@
     {
       "url": "local:official_discovered.m3u",
       "status": "ok",
-      "entries": 12
+      "entries": 14
     },
     {
       "url": "local:browser_discovered.m3u",
       "status": "ok",
-      "entries": 12
+      "entries": 13
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -43,22 +43,22 @@
       "entries": 184
     }
   ],
-  "raw_entries": 1193,
+  "raw_entries": 1196,
   "priority_entries": 19,
-  "official_entries": 12,
-  "browser_official_entries": 12,
+  "official_entries": 14,
+  "browser_official_entries": 13,
   "discovered_entries": 184,
-  "unique_entries": 357,
-  "unique_stream_candidates": 357,
+  "unique_entries": 359,
+  "unique_stream_candidates": 359,
   "semantic_channels": 247,
-  "duplicate_stream_variants_collapsed": 110,
+  "duplicate_stream_variants_collapsed": 112,
   "filtered_private_style_entries": 352,
-  "header_aware_entries": 41,
+  "header_aware_entries": 44,
   "stream_validation_statuses": {
-    "restricted": 39,
+    "restricted": 43,
     "unknown": 99,
     "dead": 28,
-    "verified": 191
+    "verified": 189
   },
   "verified_entries": 154,
   "restricted_entries": 23,
@@ -71,14 +71,14 @@
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 229,
   "core_channels_total": 56,
-  "core_channels_verified": 41,
-  "core_channels_not_verified": 15,
+  "core_channels_verified": 42,
+  "core_channels_not_verified": 14,
   "categories_verified": {
-    "Ulusal": 12,
+    "Ulusal": 11,
     "Haber": 27,
     "Spor": 3,
     "Film & Dizi": 4,
-    "Çocuk": 6,
+    "Çocuk": 7,
     "Belgesel": 1,
     "Yaşam": 2,
     "Dini": 7,
@@ -89,11 +89,11 @@
     "Diğer": 65
   },
   "categories_restricted": {
-    "Ulusal": 2,
+    "Ulusal": 3,
     "Haber": 3,
     "Spor": 5,
     "Film & Dizi": 1,
-    "Çocuk": 3,
+    "Çocuk": 2,
     "Belgesel": 3,
     "Yaşam": 2,
     "Dini": 0,
