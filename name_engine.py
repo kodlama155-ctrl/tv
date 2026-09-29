@@ -21,6 +21,7 @@ DIGITURK_URL = "https://digiturk.net.tr/kanallar"
 
 IDENTITY_ALIASES = {
     "a2": "a2tv",
+    "now": "nowtv",
     "a2hd": "a2tv",
     "tv8bucuk": "tv85",
     "tv85hd": "tv85",
