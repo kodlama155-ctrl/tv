@@ -90,3 +90,18 @@ https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=bf58ab52-4865-4c81-b223-26b4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3
 
+
+# --- Quick-probe fallbacks discovered 2026-09-29 ---
+
+# TV8.5 public alternate distribution.
+#EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
+http://stream.tvcdn.net/eglence/tv8-5.m3u8
+
+# TV8.5 alternate Daion host seen in current public lists.
+#EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
+https://tv8-live.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8
+
+# TRT 2 public alternate distribution.
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+http://stream.tvcdn.net/eglence/trt-2.m3u8
+
