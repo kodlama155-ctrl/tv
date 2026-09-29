@@ -518,10 +518,18 @@ def main():
             "status": status,
         })
 
-    # Collapse multiple URLs/qualities of the same channel after all variants
-    # have been validated. A verified stream always beats a restricted/unknown
-    # one; within the same status, higher quality and more stable hosts win.
+    # Collapse multiple URLs/qualities of the same channel after validation.
+    # Selection order: status -> official/source trust -> resolution -> bitrate
+    # -> segment stability -> CDN quality -> latency.
     selected = select_representatives(variant_items)
+    selected_source_counts = Counter(
+        item.get("source_kind", "unknown")
+        for item in selected
+    )
+    name_source_counts = Counter(
+        row.get("name_source", "unknown")
+        for row in report
+    )
 
     buckets = {
         "verified": [],
@@ -597,6 +605,8 @@ def main():
         ),
         "filtered_private_style_entries": filtered_private_style,
         "header_aware_entries": header_aware_entries,
+        "selected_stream_sources": dict(selected_source_counts),
+        "channel_name_sources": dict(name_source_counts),
         "stream_validation_statuses": dict(raw_status_counts),
         "verified_entries": counts["verified"],
         "restricted_entries": counts["restricted"],
