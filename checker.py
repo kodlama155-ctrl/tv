@@ -15,6 +15,7 @@ from channel_policy import (
     CATEGORY_INDEX,
     CATEGORY_ORDER,
     build_missing_report,
+    category_decision,
     channel_key,
     fold,
     normalize_meta,
@@ -283,6 +284,7 @@ def main():
         if status not in {"verified", "restricted", "unknown", "dead", "drm"}:
             status = "unknown"
 
+        decision = category_decision(meta)
         normalized_meta, category, name = normalize_meta(meta)
         key = channel_key(normalized_meta, name)
 
@@ -303,6 +305,9 @@ def main():
             "tvg_id": tvg_id(normalized_meta),
             "channel_key": key,
             "category": category,
+            "category_source": decision.get("source"),
+            "category_votes": decision.get("votes", {}),
+            "category_evidence": decision.get("evidence", []),
             "url": url,
             **result,
             "status": status,
