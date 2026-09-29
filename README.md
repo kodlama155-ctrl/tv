@@ -8,14 +8,19 @@ Türkiye/Türkçe açık yayın listelerini toplar, yeni açık GitHub kaynaklar
 - `r.m3u` — GitHub sunucusundan 401/403/451 dönen, bölgesel/erişim kısıtlı olabilecek yayınlar
 - `u.m3u` — timeout, 429, geçici CDN hatası veya segment doğrulaması belirsiz yayınlar
 - `all.m3u` — verified + restricted + unknown birlikte
+- `tr.m3u` — **Türkiye cihaz listesi**; verified + yalnız geo-restricted resmî fallback yayınlar
 - `validation.json` — kanal bazında doğrulama sonucu, neden, çözünürlük ve gecikme bilgileri
 - `stats.json` — son çalışma özeti
 
 ## Ana M3U
 
-Raw GitHub:
+Raw GitHub strict:
 
 `https://raw.githubusercontent.com/kodlama155-ctrl/tv/main/a.m3u`
+
+Türkiye cihaz listesi:
+
+`https://raw.githubusercontent.com/kodlama155-ctrl/tv/main/tr.m3u`
 
 GitHub Pages etkinleştirildikten sonra kısa adres:
 
