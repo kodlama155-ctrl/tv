@@ -31,3 +31,24 @@ https://demiroren-live.daioncdn.net/teve2/teve2.m3u8
 
 #EXTINF:-1 tvg-id="AkitTV.tr@HD" group-title="Haber",Akit TV
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
+
+#EXTINF:-1 tvg-id="CNNTurk.tr@HD" group-title="Haber",CNN Türk
+https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8
+
+#EXTINF:-1 tvg-id="CNNTurk.tr@HD" group-title="Haber",CNN Türk
+https://ythls.kekikakademi.org/youtube/channel/UCV6zcRug6Hqp1UX_FdyUeBg.m3u8
+
+#EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber",Sözcü TV
+https://trn03.tulix.tv/gt-sozcu-tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber",Sözcü TV
+https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
+
+#EXTINF:-1 tvg-id="TGRTHaber.tr@HD" group-title="Haber",TGRT Haber
+https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber.m3u8
+
+#EXTINF:-1 tvg-id="TV100.tr@HD" group-title="Haber",TV100
+https://tv100.daioncdn.net/tv100/tv100_1080p.m3u8?app=web
+
+#EXTINF:-1 tvg-id="TV100.tr@HD" group-title="Haber",TV100
+https://ensonhaber-live.ercdn.net/tv100/tv100.m3u8
