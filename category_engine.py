@@ -508,6 +508,7 @@ def channel_sort_key(meta: str, category: str | None = None, name: str | None = 
     decision = order_decision(meta, category)
     return (
         0 if decision["known"] else 1,
+        -decision["sources"],
         decision["score"],
         fold(name),
         decision["identity"],
