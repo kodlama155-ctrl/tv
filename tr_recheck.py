@@ -16,6 +16,7 @@ from channel_policy import (
     existing_group,
     fold,
 )
+from category_engine import channel_sort_key
 from hls_validator import validate_hls
 
 ROOT = Path(__file__).resolve().parent
@@ -67,7 +68,11 @@ def write_playlist(path: Path, entries):
         entries,
         key=lambda item: (
             CATEGORY_INDEX.get(category_from_meta(item["meta"]), 999),
-            fold(channel_name(item["meta"])),
+            *channel_sort_key(
+                item["meta"],
+                category_from_meta(item["meta"]),
+                channel_name(item["meta"]),
+            ),
             canonical(item["url"]),
         ),
     )
