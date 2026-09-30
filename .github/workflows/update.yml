@@ -98,7 +98,7 @@ jobs:
         run: echo "mode=$(python browser_needed.py)" >> "$GITHUB_OUTPUT"
 
       - name: Install Playwright browser fallback
-        if: steps.update_mode.outputs.mode == 'full' && steps.browser_need.outputs.mode == 'run'
+        if: steps.update_mode.outputs.mode == 'full' && github.event_name != 'push' && steps.browser_need.outputs.mode == 'run'
         run: |
           python -m pip install --disable-pip-version-check playwright
           python -m playwright install --with-deps chromium
