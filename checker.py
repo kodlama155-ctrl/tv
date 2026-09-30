@@ -58,6 +58,10 @@ CREDENTIAL_PATH_RE = re.compile(
     r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
     flags=re.I,
 )
+SUSPICIOUS_IPTV_PATH_RE = re.compile(
+    r"/iptv/[A-Za-z0-9_-]{8,}/\\d{2,}/",
+    re.I,
+)
 SENSITIVE_QUERY_KEYS = {
     "token", "auth", "authorization", "password", "passwd", "username",
     "user", "key", "sig", "signature", "jwt", "session", "hdnts", "hdnea",
@@ -163,6 +167,8 @@ def safe_public_candidate(url: str) -> bool:
     if p.username or p.password:
         return False
     if CREDENTIAL_PATH_RE.search(p.path):
+        return False
+    if SUSPICIOUS_IPTV_PATH_RE.search(p.path):
         return False
 
     query_keys = {
