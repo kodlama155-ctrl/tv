@@ -186,8 +186,10 @@ jobs:
             exit 0
           fi
 
+          git stash push -m "stream-health-tr" -- tr.m3u
           git fetch origin main
           git rebase origin/main
+          git stash pop
           git add tr.m3u
           git commit -m "bot: repair verified stream links"
           git push origin HEAD:main
