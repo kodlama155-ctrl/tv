@@ -36,6 +36,9 @@ SENSITIVE_QUERY_KEYS = {
     "token", "auth", "authorization", "password", "passwd", "username",
     "user", "key", "sig", "signature", "jwt", "session", "hdnts", "hdnea",
 }
+EPHEMERAL_MEDIA_HOSTS = (
+    "googlevideo.com",
+)
 CREDENTIAL_PATH_RE = re.compile(
     r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
     re.I,
@@ -198,6 +201,96 @@ OFFICIAL_SOURCES = [
         "page": "https://www.benguturk.com/canli-yayin",
         "hints": ["benguturk", "bengu"],
     },
+    {
+        "name": "CNN Türk",
+        "category": "Haber",
+        "page": "https://www.cnnturk.com/canli-yayin",
+        "hints": ["cnnturk", "cnn-turk", "cnn_turk"],
+    },
+    {
+        "name": "AKİT TV",
+        "category": "Haber",
+        "page": "https://www.akittv.com.tr/canli-izle",
+        "hints": ["akittv", "akit"],
+    },
+    {
+        "name": "GZT",
+        "category": "Haber",
+        "page": "https://www.gzt.com/gzttv-canli-yayin",
+        "hints": ["gzttv", "gzt"],
+    },
+    {
+        "name": "TELE1",
+        "category": "Haber",
+        "page": "https://www.tele1.com.tr/canli-yayin",
+        "hints": ["tele1"],
+    },
+    {
+        "name": "KRT TV",
+        "category": "Haber",
+        "page": "https://www.krttv.com.tr/canli-yayin",
+        "hints": ["krttv", "krt"],
+    },
+    {
+        "name": "Sözcü TV",
+        "category": "Haber",
+        "page": "https://www.sozcu.com.tr/sozcu-tv-canli-yayin-wp7630113",
+        "hints": ["sozcu", "szctv"],
+    },
+    {
+        "name": "beIN Sports Haber",
+        "category": "Spor",
+        "page": "https://beinsports.com.tr/canli-yayin",
+        "hints": ["beinsports", "bein"],
+    },
+    {
+        "name": "TRT 3 Spor",
+        "category": "Spor",
+        "page": "https://www.trtspor.com.tr/canli-yayin-izle/trt-3-spor",
+        "hints": ["trt3", "trt-3"],
+    },
+    {
+        "name": "Habitat TV",
+        "category": "Belgesel",
+        "page": "https://www.habitattv.com.tr/home.php",
+        "hints": ["habitat", "habibattv"],
+    },
+    {
+        "name": "TLC",
+        "category": "Belgesel",
+        "page": "https://www.tlctv.com.tr/canli-izle",
+        "hints": ["tlctv", "tlc"],
+    },
+    {
+        "name": "DMAX",
+        "category": "Belgesel",
+        "page": "https://www.dmax.com.tr/canli-izle",
+        "hints": ["dmax"],
+    },
+    {
+        "name": "TGRT Belgesel",
+        "category": "Belgesel",
+        "page": "https://www.tgrtbelgesel.com.tr/canli-yayin",
+        "hints": ["tgrtbelgesel", "tgrt-belgesel"],
+    },
+    {
+        "name": "Yaban TV",
+        "category": "Belgesel",
+        "page": "https://www.yabantv.com/broadcast/",
+        "hints": ["yabantv", "yaban"],
+    },
+    {
+        "name": "Dream TV",
+        "category": "Müzik",
+        "page": "https://www.dreamtv.com.tr/",
+        "hints": ["dreamtv", "dream"],
+    },
+    {
+        "name": "Meltem TV",
+        "category": "Ulusal",
+        "page": "https://www.meltemtv.com.tr/canli-yayin",
+        "hints": ["meltemtv", "meltem"],
+    },
 ]
 
 
@@ -248,6 +341,9 @@ def safe_candidate(url: str) -> bool:
     if parsed.scheme not in ("http", "https") or not parsed.hostname:
         return False
     if parsed.username or parsed.password:
+        return False
+    host = (parsed.hostname or "").lower()
+    if any(host == suffix or host.endswith("." + suffix) for suffix in EPHEMERAL_MEDIA_HOSTS):
         return False
     if CREDENTIAL_PATH_RE.search(parsed.path):
         return False
