@@ -1,141 +1,199 @@
 {
-  "updated_at_utc": "2026-09-30T18:36:53.237479+00:00",
-  "fallback_targets": 7,
-  "pages_scanned": 7,
-  "pages_with_candidates": 3,
-  "raw_candidates": 11,
-  "accepted_unique_candidates": 8,
+  "updated_at_utc": "2026-09-30T21:39:49.698237+00:00",
+  "fallback_targets": 15,
+  "pages_scanned": 15,
+  "pages_with_candidates": 4,
+  "raw_candidates": 10,
+  "accepted_unique_candidates": 10,
   "probe_statuses": {
     "restricted": 1,
-    "dead": 1,
-    "verified": 9
+    "verified": 7,
+    "unknown": 2
   },
   "sources": [
     {
-      "name": "A2",
-      "page": "https://www.atv.com.tr/a2tv/canli-yayin",
+      "name": "CNN Türk",
+      "page": "https://www.cnnturk.com/canli-yayin",
       "status": "ok",
-      "network_events": 4,
-      "response_bodies_scanned": 967,
+      "network_events": 16,
+      "response_bodies_scanned": 337,
       "candidates": [
         {
-          "url": "https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758",
-          "referer": "https://www.atv.com.tr/",
+          "url": "https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/playlist.m3u8",
+          "referer": "https://www.cnnturk.com/canli-yayin",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
+          "via": "document-body"
         },
         {
-          "url": "https://trkvz-dev.daioncdn.net/atv/atv.m3u8?ce=3&app=8672c3cb-70f1-4686-9158-cc03a23c6b0f",
-          "referer": "https://www.atv.com.tr/",
+          "url": "https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/playlist.m3u8?&live=true&app=com.cnnturk&st=IllP4H7BZnFnwaDae4-ThQ&e=1790815197",
+          "referer": "https://www.cnnturk.com/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
+          "via": "request"
         },
         {
-          "url": "https://gcdn.2mdn.net/api/manifest/hls_variant/source/web_video_ads/id/c9929f109f625fbc/itag/0/playlist_type/LIVE/xpc/Eghovf3BOnoBAQ%3D%3D/ei/CfVjapuOFZ-N3rsP3Ym-mAI/susc/vsau/acao/yes/ctier/L/vprv/1/rqh/5/pacing/0/ip/0.0.0.0/ipbits/0/expire/3929383689/sparams/ip,ipbits,expire,source,id,itag,playlist_type,xpc,ei,susc,acao,ctier,vprv,rqh/signature/15B1C7439CB89E3855AA5BB7AD0A9C1A0DBC0BA9D3DC75E5B67380389AC3A3CE.483FD7490871024C4F21F69EAE19FB9107BEA25DF0F8E0D8874F9F8BD1F1A2E9/key/us0/file/index.m3u8",
-          "referer": "https://imasdk.googleapis.com/",
+          "url": "https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/track_0_192/playlist.m3u8?&live=true&app=com.cnnturk&st=IllP4H7BZnFnwaDae4-ThQ&e=1790815197",
+          "referer": "https://www.cnnturk.com/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "fetch-body"
+          "via": "request"
         },
         {
-          "url": "https://gcdn.2mdn.net/api/manifest/hls_variant/source/web_video_ads/id/c9929f109f625fbc/itag/0/playlist_type/LIVE/xpc/Eghovf3BOnoBAQ==/ei/CfVjapuOFZ-N3rsP3Ym-mAI/susc/vsau/acao/yes/ctier/L/vprv/1/rqh/5/pacing/0/ip/0.0.0.0/ipbits/0/expire/3929383689/sparams/ip,ipbits,expire,source,id,itag,playlist_type,xpc,ei,susc,acao,ctier,vprv,rqh/signature/15B1C7439CB89E3855AA5BB7AD0A9C1A0DBC0BA9D3DC75E5B67380389AC3A3CE.483FD7490871024C4F21F69EAE19FB9107BEA25DF0F8E0D8874F9F8BD1F1A2E9/key/us0/file/index.m3u8",
-          "referer": "https://imasdk.googleapis.com/",
+          "url": "https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/track_4_1000/playlist.m3u8?&live=true&app=com.cnnturk&st=IllP4H7BZnFnwaDae4-ThQ&e=1790815197",
+          "referer": "https://www.cnnturk.com/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "fetch-body"
+          "via": "request"
         }
       ]
     },
     {
-      "name": "BengüTürk",
-      "page": "https://www.benguturk.com/canli-yayin",
+      "name": "AKİT TV",
+      "page": "https://www.akittv.com.tr/canli-izle",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 30,
-      "candidates": []
-    },
-    {
-      "name": "EKOTÜRK",
-      "page": "https://www.ekoturk.com/canli-yayin/",
-      "status": "ok",
-      "network_events": 26,
       "response_bodies_scanned": 107,
-      "candidates": [
-        {
-          "url": "https://cdn.ekoturk.net/hls/master.m3u8",
-          "referer": "https://cdn.ekoturk.net/2.html?embed=1",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "request"
-        },
-        {
-          "url": "https://cdn.ekoturk.net/hls/240p.m3u8",
-          "referer": "https://cdn.ekoturk.net/2.html?embed=1",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "request"
-        },
-        {
-          "url": "https://cdn.ekoturk.net/hls/320p.m3u8",
-          "referer": "https://cdn.ekoturk.net/2.html?embed=1",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "request"
-        },
-        {
-          "url": "https://cdn.ekoturk.net/hls/720p.m3u8",
-          "referer": "https://cdn.ekoturk.net/2.html?embed=1",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "request"
-        }
-      ]
-    },
-    {
-      "name": "FB TV",
-      "page": "https://www.fenerbahce.org/fenerbahcetv/canliyayin",
-      "status": "ok",
-      "network_events": 0,
-      "response_bodies_scanned": 12,
       "candidates": []
     },
     {
-      "name": "Star TV",
-      "page": "https://www.startv.com.tr/canli-yayin",
+      "name": "GZT",
+      "page": "https://www.gzt.com/gzttv-canli-yayin",
       "status": "ok",
-      "network_events": 4,
+      "network_events": 0,
       "response_bodies_scanned": 129,
+      "candidates": []
+    },
+    {
+      "name": "TELE1",
+      "page": "https://www.tele1.com.tr/canli-yayin",
+      "status": "ok",
+      "network_events": 0,
+      "response_bodies_scanned": 98,
+      "candidates": []
+    },
+    {
+      "name": "KRT TV",
+      "page": "https://www.krttv.com.tr/canli-yayin",
+      "status": "ok",
+      "network_events": 0,
+      "response_bodies_scanned": 13,
+      "candidates": []
+    },
+    {
+      "name": "Sözcü TV",
+      "page": "https://www.sozcu.com.tr/sozcu-tv-canli-yayin-wp7630113",
+      "status": "ok",
+      "network_events": 0,
+      "response_bodies_scanned": 882,
+      "candidates": []
+    },
+    {
+      "name": "beIN Sports Haber",
+      "page": "https://beinsports.com.tr/canli-yayin",
+      "status": "ok",
+      "network_events": 0,
+      "response_bodies_scanned": 66,
+      "candidates": []
+    },
+    {
+      "name": "TRT 3 Spor",
+      "page": "https://www.trtspor.com.tr/canli-yayin-izle/trt-3-spor",
+      "status": "ok",
+      "network_events": 0,
+      "response_bodies_scanned": 144,
+      "candidates": []
+    },
+    {
+      "name": "Habitat TV",
+      "page": "https://www.habitattv.com.tr/home.php",
+      "status": "ok",
+      "network_events": 0,
+      "response_bodies_scanned": 10,
+      "candidates": []
+    },
+    {
+      "name": "TLC",
+      "page": "https://www.tlctv.com.tr/canli-izle",
+      "status": "ok",
+      "network_events": 6,
+      "response_bodies_scanned": 475,
       "candidates": [
         {
-          "url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9",
-          "referer": "https://www.startv.com.tr/",
+          "url": "https://dogus-blackout.daioncdn.net/tlctv_geoblock.smil/playlist.m3u8",
+          "referer": "https://www.tlctv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
+          "via": "request"
         },
         {
-          "url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=1740db13-3ee9-4858-8d2c-b1a9cfaa3718",
-          "referer": "https://www.startv.com.tr/",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "via": "script-body"
-        },
-        {
-          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8snnjb2sljiw&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
-          "referer": "https://www.startv.com.tr/",
+          "url": "https://dogus-blackout.daioncdn.net/tlctv_geoblock.smil/hlssubplaylist-qvbpo5g_qacpG7.m3u8",
+          "referer": "https://www.tlctv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
         }
       ]
     },
     {
-      "name": "TV100",
-      "page": "https://www.tv100.com/canli-yayin",
+      "name": "DMAX",
+      "page": "https://www.dmax.com.tr/canli-izle",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 12,
+      "response_bodies_scanned": 832,
       "candidates": []
     },
     {
-      "name": "TV8.5",
-      "page": "https://img.tv8bucuk.com/tv8-5-canli-yayin",
-      "status": "page_error",
+      "name": "TGRT Belgesel",
+      "page": "https://www.tgrtbelgesel.com.tr/canli-yayin",
+      "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 0,
-      "candidates": [],
-      "error": "Error"
+      "response_bodies_scanned": 80,
+      "candidates": []
+    },
+    {
+      "name": "Yaban TV",
+      "page": "https://www.yabantv.com/broadcast/",
+      "status": "ok",
+      "network_events": 8,
+      "response_bodies_scanned": 46,
+      "candidates": [
+        {
+          "url": "https://yayin1.canlitv.fun/canlitv/yabantv.stream/playlist.m3u8?hash=5bab81f2895a39f402df75bf4e715fcc",
+          "referer": "https://www.yabantv.com/",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "document-body"
+        },
+        {
+          "url": "https://yayin1.canlitv.fun/canlitv/yabantv.stream/chunklist_w1205449402.m3u8?hash=5bab81f2895a39f402df75bf4e715fcc",
+          "referer": "https://www.canlitv.you/",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "request"
+        }
+      ]
+    },
+    {
+      "name": "Dream TV",
+      "page": "https://www.dreamtv.com.tr/",
+      "status": "ok",
+      "network_events": 0,
+      "response_bodies_scanned": 26,
+      "candidates": []
+    },
+    {
+      "name": "Meltem TV",
+      "page": "https://www.meltemtv.com.tr/canli-yayin",
+      "status": "ok",
+      "network_events": 10,
+      "response_bodies_scanned": 57,
+      "candidates": [
+        {
+          "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
+          "referer": "https://www.meltemtv.com.tr/canli-yayin",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "document-body"
+        },
+        {
+          "url": "https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8",
+          "referer": "https://www.meltemtv.com.tr/",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "request"
+        }
+      ]
     }
   ]
 }
