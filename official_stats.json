@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-09-30T16:40:45.947891+00:00",
-  "official_pages": 22,
-  "pages_ok": 19,
+  "updated_at_utc": "2026-09-30T17:53:08.766006+00:00",
+  "official_pages": 23,
+  "pages_ok": 20,
   "pages_with_candidates": 10,
   "raw_candidates": 15,
   "accepted_unique_candidates": 15,
@@ -66,6 +66,16 @@
       "page": "https://www.atv.com.tr/canli-yayin",
       "status": "ok",
       "page_final_url": "https://www.atv.com.tr/canli-yayin",
+      "page_candidates": 0,
+      "aux_scanned": 0,
+      "candidates": [],
+      "identity_rejected_candidates": 0
+    },
+    {
+      "name": "ATV Avrupa",
+      "page": "https://www.atvavrupa.tv/webtv/canli-yayin",
+      "status": "ok",
+      "page_final_url": "https://www.atvavrupa.tv/webtv/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
@@ -148,8 +158,8 @@
       "page_candidates": 2,
       "aux_scanned": 2,
       "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=UyJooxCWgNF2M8bWfb1fWg&e=1790800629",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=UyJooxCWgNF2M8bWfb1fWg&e=1790800629"
+        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=5xQ2mBgsd_eUF838csa1TQ&e=1790805130",
+        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=5xQ2mBgsd_eUF838csa1TQ&e=1790805130"
       ],
       "identity_rejected_candidates": 0
     },

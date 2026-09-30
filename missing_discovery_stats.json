@@ -1,9 +1,14 @@
 {
-  "updated_at_utc": "2026-09-30T16:41:36.285844+00:00",
-  "catalog_channels": 194,
+  "updated_at_utc": "2026-09-30T17:54:13.025983+00:00",
+  "catalog_channels": 199,
   "channels_in_previous_tr": 193,
-  "missing_before_search": 1,
+  "missing_before_search": 6,
   "missing_names": [
+    "TRT 4K",
+    "FM TV",
+    "Dream TV",
+    "Euro Star",
+    "ATV Avrupa",
     "Kanal 1"
   ],
   "batch_size": 6,
@@ -11,13 +16,48 @@
   "search_batches": [
     {
       "names": [
+        "TRT 4K",
+        "FM TV",
+        "Dream TV",
+        "Euro Star",
+        "ATV Avrupa",
         "Kanal 1"
       ],
-      "query": "\"Kanal 1\" extension:m3u",
-      "search_results": 50
+      "query": "\"TRT 4K\" OR \"FM TV\" OR \"Dream TV\" OR \"Euro Star\" OR \"ATV Avrupa\" OR \"Kanal 1\" extension:m3u",
+      "search_results": 21
     }
   ],
   "target_report": [
+    {
+      "name": "TRT 4K",
+      "category": "Ulusal",
+      "files_matched": 2,
+      "candidates": 3
+    },
+    {
+      "name": "FM TV",
+      "category": "Dini",
+      "files_matched": 2,
+      "candidates": 4
+    },
+    {
+      "name": "Dream TV",
+      "category": "Müzik",
+      "files_matched": 1,
+      "candidates": 1
+    },
+    {
+      "name": "Euro Star",
+      "category": "Uluslararası",
+      "files_matched": 2,
+      "candidates": 5
+    },
+    {
+      "name": "ATV Avrupa",
+      "category": "Uluslararası",
+      "files_matched": 2,
+      "candidates": 2
+    },
     {
       "name": "Kanal 1",
       "category": "Ulusal",
@@ -25,8 +65,8 @@
       "candidates": 0
     }
   ],
-  "files_scanned": 50,
-  "unique_candidates_found": 0,
-  "errors": 0,
+  "files_scanned": 21,
+  "unique_candidates_found": 15,
+  "errors": 1,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }

@@ -1,1 +1,46 @@
 #EXTM3U
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="ATVAvrupa.tr@SD" group-title="Uluslararası",ATV Avrupa
+http://vavoo.to/play/3309985973/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="ATVAvrupa.tr@SD" group-title="Uluslararası",ATV Avrupa
+https://vavoo.to/play/3195910351/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik",Dream TV
+http://vavoo.to/play/3806170849/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star
+http://vavoo.to/play/2684871505/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star
+http://vavoo.to/play/826273845/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star
+http://vavoo.to/play/865390783/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star
+https://vavoo.to/play/2147614081/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star
+https://vavoo.to/play/3814521935/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://vavoo.to/play/1821985330/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://vavoo.to/play/2389766928/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://vavoo.to/play/3001887834/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+https://vavoo.to/play/4253863829/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
+http://vavoo.to/play/1478418519/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
+http://vavoo.to/play/416826877/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
+https://vavoo.to/play/3317656516/index.m3u8
