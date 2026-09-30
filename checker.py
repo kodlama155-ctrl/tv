@@ -36,6 +36,7 @@ OFFICIAL = ROOT / "official_discovered.m3u"
 TURKUVAZ_OFFICIAL = ROOT / "turkuvaz_discovered.m3u"
 BROWSER_OFFICIAL = ROOT / "browser_discovered.m3u"
 DISCOVERED = ROOT / "discovered.m3u"
+MISSING_DISCOVERED = ROOT / "missing_discovered.m3u"
 
 VERIFIED_OUTPUT = ROOT / "a.m3u"
 RESTRICTED_OUTPUT = ROOT / "r.m3u"
@@ -350,6 +351,28 @@ def main():
         except Exception as e:
             source_report.append({
                 "url": src,
+                "status": "error",
+                "error": type(e).__name__,
+            })
+
+    targeted_missing_entries = 0
+    if MISSING_DISCOVERED.exists():
+        try:
+            parsed = parse_playlist(
+                MISSING_DISCOVERED.read_text(encoding="utf-8"),
+                source_kind="github_discovery",
+                source_name="missing_discovered.m3u",
+            )
+            targeted_missing_entries = len(parsed)
+            entries.extend(parsed)
+            source_report.append({
+                "url": "local:missing_discovered.m3u",
+                "status": "ok",
+                "entries": targeted_missing_entries,
+            })
+        except Exception as e:
+            source_report.append({
+                "url": "local:missing_discovered.m3u",
                 "status": "error",
                 "error": type(e).__name__,
             })
@@ -777,6 +800,7 @@ def main():
         "turkuvaz_official_entries": turkuvaz_official_entries,
         "browser_official_entries": browser_official_entries,
         "discovered_entries": discovered_entries,
+        "targeted_missing_entries": targeted_missing_entries,
         "unique_entries": len(candidates),
         "unique_stream_candidates": len(candidates),
         "semantic_channels": len(selected),
