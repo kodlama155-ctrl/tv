@@ -1,9 +1,131 @@
 {
   "mode": "priority-delta",
-  "changed_channels": 0,
-  "candidates_tested": 0,
-  "applied_channels": 0,
-  "applied": [],
-  "kept_existing_channels": [],
-  "results": []
+  "changed_channels": 5,
+  "candidates_tested": 9,
+  "applied_channels": 1,
+  "applied": [
+    {
+      "channel_key": "kanal7avrupa",
+      "status": "verified",
+      "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
+      "reason": "real media segment verified"
+    }
+  ],
+  "kept_existing_channels": [
+    "atvavrupa",
+    "dreamtv",
+    "eurostar",
+    "trt4k"
+  ],
+  "results": [
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"TRT4K.tr\" group-title=\"Ulusal\",TRT 4K",
+      "url": "https://mn-nl.mncdn.com/blutv_trt4k/live.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "trt4k",
+      "device_hint": false,
+      "status": "unknown",
+      "reason": "manifest RemoteDisconnected"
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"TRT4K.tr\" group-title=\"Ulusal\",TRT 4K",
+      "url": "https://trn03.tulix.tv/gt-trt4k/index.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "trt4k",
+      "device_hint": false,
+      "status": "dead",
+      "reason": "manifest HTTP 404",
+      "http_code": 404
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"ATVAvrupa.tr@SD\" group-title=\"Uluslararası\",ATV Avrupa",
+      "url": "https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "atvavrupa",
+      "device_hint": false,
+      "status": "unknown",
+      "reason": "manifest HTTP 503",
+      "http_code": 503
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"DreamTV.tr@SD\" group-title=\"Müzik\",Dream TV",
+      "url": "https://mn-nl.mncdn.com/blutv_dream/smil:dream_hd.smil/chunklist.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "dreamtv",
+      "device_hint": false,
+      "status": "unknown",
+      "reason": "manifest RemoteDisconnected"
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"DreamTV.tr@SD\" group-title=\"Müzik\",Dream TV",
+      "url": "https://mn-nl.mncdn.com/blutv_dream/smil:dream_sd.smil/playlist.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "dreamtv",
+      "device_hint": false,
+      "status": "unknown",
+      "reason": "manifest RemoteDisconnected"
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"EuroStar.tr@SD\" group-title=\"Uluslararası\",Euro Star",
+      "url": "https://xrklj56s.rocketcdn.com/eurostar.stream_720p/chunklist.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "eurostar",
+      "device_hint": false,
+      "status": "unknown",
+      "reason": "manifest URLError"
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"EuroStar.tr@SD\" group-title=\"Uluslararası\",Euro Star",
+      "url": "https://xrklj56s.rocketcdn.com/eurostar.smil/chunklist.sltur.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "eurostar",
+      "device_hint": false,
+      "status": "unknown",
+      "reason": "manifest URLError"
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"Kanal7Avrupa.tr@SD\" group-title=\"Uluslararası\",Kanal 7 Avrupa",
+      "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "kanal7avrupa",
+      "device_hint": false,
+      "resolution": "1920x1080",
+      "bandwidth": 1412068,
+      "manifest_latency_ms": 578,
+      "status": "verified",
+      "reason": "real media segment verified",
+      "segment_latency_ms": 821,
+      "segment_probes": 1,
+      "encrypted": false,
+      "vod": false,
+      "http_code": 200,
+      "variants": 1
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"Kanal7Avrupa.tr@SD\" group-title=\"Uluslararası\",Kanal 7 Avrupa",
+      "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "kanal7avrupa",
+      "device_hint": false,
+      "resolution": null,
+      "bandwidth": null,
+      "manifest_latency_ms": 568,
+      "status": "verified",
+      "reason": "real media segment verified",
+      "segment_latency_ms": 815,
+      "segment_probes": 1,
+      "encrypted": false,
+      "vod": false,
+      "http_code": 200
+    }
+  ]
 }
