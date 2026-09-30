@@ -8,6 +8,7 @@ import urllib.request
 from pathlib import Path
 
 from channel_policy import SOURCE_PRIORITY, channel_key, split_extinf
+from checker import is_known_false_identity
 from hls_validator import validate_hls
 
 ROOT = Path(__file__).resolve().parent
@@ -225,6 +226,8 @@ def main():
 
     unique = {}
     for row in candidates:
+        if is_known_false_identity(row):
+            continue
         if (row["channel_key"], canonical(row["url"])) in old_urls:
             continue
         key = (
