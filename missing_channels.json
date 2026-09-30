@@ -1,15 +1,16 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
-  "core_channels_total": 64,
-  "core_channels_verified": 47,
+  "core_channels_total": 70,
+  "core_channels_verified": 48,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 3,
-  "core_channels_not_verified": 17,
+  "core_channels_not_verified": 22,
   "status_counts": {
-    "verified": 47,
+    "verified": 48,
     "geo-restricted": 7,
+    "absent": 3,
     "device-restricted": 3,
-    "unknown": 5,
+    "unknown": 7,
     "restricted": 2
   },
   "missing_channels": [
@@ -19,6 +20,27 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
+    },
+    {
+      "name": "FM TV",
+      "expected_category": "Dini",
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
+    },
+    {
+      "name": "Kanal 1",
+      "expected_category": "Ulusal",
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
+    },
+    {
+      "name": "Show Max",
+      "expected_category": "Ulusal",
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
     },
     {
       "name": "CNN Türk",
@@ -33,6 +55,20 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
+    },
+    {
+      "name": "Tele1",
+      "expected_category": "Haber",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
+    },
+    {
+      "name": "Kanal B",
+      "expected_category": "Haber",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "http://212.174.58.161/hls-live/livepkgr/_definst_/liveevent/kanalb.m3u8"
     },
     {
       "name": "TRT Spor",
