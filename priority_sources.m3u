@@ -130,3 +130,20 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-id="ASpor.tr@HD" group-title="Spor",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 
+
+# --- Durable Turkuvaz round 2 ---
+
+# A Para tokenless official CDN path.
+#EXTINF:-1 tvg-id="APara.tr@HD" group-title="Haber",A Para
+https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8
+
+# A News tokenless official CDN path.
+#EXTINF:-1 tvg-id="ANews.tr@HD" group-title="Haber",A News
+https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8
+
+# VAV TV official tokenless CDN path, kept as device fallback if runner blocks it.
+#EXTINF:-1 tvg-id="VavTV.tr@HD" group-title="Dini",VAV TV [Device-fallback]
+#EXTVLCOPT:http-referrer=https://www.vavtv.com.tr/canli-yayin
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8
+
