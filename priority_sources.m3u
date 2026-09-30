@@ -361,4 +361,10 @@ https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8?token=tmb_app_token_135
 https://tgrt-live.ercdn.net/tgrteu/tgrteu.m3u8
 #EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
 https://canli.tgrteu.com/tgrteu.m3u8
+#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
+https://ensonhaber-live.ercdn.net/tgrteu/tgrteu.m3u8
+#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
+https://tv.ensonhaber.com/tv/tr/tgrteu/index.m3u8
+#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
+https://canli.haber365.com.tr/tr/tgrteu/index.m3u8
 
