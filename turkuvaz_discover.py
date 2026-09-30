@@ -35,6 +35,7 @@ LIVE_HLS_OVERRIDES = {
 
 TARGET_NAMES = {
     "ATV",
+    "ATV Avrupa",
     "A Haber",
     "A Spor",
     "A Para",

@@ -81,6 +81,12 @@ OFFICIAL_SOURCES = [
         "hints": ["atv"],
     },
     {
+        "name": "ATV Avrupa",
+        "category": "Uluslararası",
+        "page": "https://www.atvavrupa.tv/webtv/canli-yayin",
+        "hints": ["atvavrupa", "atv-avrupa"],
+    },
+    {
         "name": "A2",
         "category": "Ulusal",
         "page": "https://www.atv.com.tr/a2tv/canli-yayin",
