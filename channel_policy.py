@@ -373,6 +373,14 @@ def representative_score(item: dict) -> tuple:
     status = item.get("status", "unknown")
     status_score = STATUS_PRIORITY.get(status, 2)
     source_score = _durable_source_score(item)
+    try:
+        domain_score = float(item.get("domain_score") or 0.0)
+    except (TypeError, ValueError):
+        domain_score = 0.0
+    try:
+        domain_samples = int(item.get("domain_samples") or 0)
+    except (TypeError, ValueError):
+        domain_samples = 0
     quality = _resolution_height(item)
 
     try:
@@ -387,6 +395,8 @@ def representative_score(item: dict) -> tuple:
     return (
         status_score,
         source_score,
+        domain_score,
+        min(domain_samples, 50),
         quality,
         bitrate,
         stability,
