@@ -14,12 +14,14 @@ from pathlib import Path
 from channel_policy import (
     CATEGORY_INDEX,
     CATEGORY_ORDER,
+    CORE_CHANNELS,
     SOURCE_PRIORITY,
     build_missing_report,
     canonical_name_decision,
     category_decision,
     channel_key,
     fold,
+    normalize_identity,
     normalize_meta,
     select_representatives,
     tvg_id,
@@ -47,8 +49,8 @@ MISSING_OUTPUT = ROOT / "missing_channels.json"
 UA = "Mozilla/5.0 (EmirTV-M3U-Bot/3.0)"
 PLAYLIST_TIMEOUT = 20
 MAX_WORKERS = 24
-RETRY_WORKERS = 8
-UNKNOWN_RETRY_DELAY = 15
+RETRY_WORKERS = 12
+UNKNOWN_RETRY_DELAY = 3
 
 CREDENTIAL_PATH_RE = re.compile(
     r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
@@ -57,6 +59,13 @@ CREDENTIAL_PATH_RE = re.compile(
 SENSITIVE_QUERY_KEYS = {
     "token", "auth", "authorization", "password", "passwd", "username",
     "user", "key", "sig", "signature", "jwt", "session", "hdnts", "hdnea",
+}
+
+CORE_RETRY_KEYS = {
+    normalize_identity(value)
+    for row in CORE_CHANNELS
+    for value in [row.get("id", ""), row.get("name", ""), *row.get("aliases", [])]
+    if normalize_identity(value)
 }
 
 
@@ -478,8 +487,8 @@ def main():
         entry
         for entry in initial_unknown_entries
         if (
-            not channel_key(entry["meta"])
-            or channel_key(entry["meta"]) not in verified_channel_keys
+            channel_key(entry["meta"]) in CORE_RETRY_KEYS
+            and channel_key(entry["meta"]) not in verified_channel_keys
         )
     ]
     unknown_retry_skipped_verified_sibling = (
