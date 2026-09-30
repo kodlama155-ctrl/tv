@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T11:45:04.031854+00:00",
+  "updated_at_utc": "2026-09-30T11:49:05.853929+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -10,7 +10,7 @@
     {
       "url": "local:official_discovered.m3u",
       "status": "ok",
-      "entries": 15
+      "entries": 14
     },
     {
       "url": "local:turkuvaz_discovered.m3u",
@@ -48,9 +48,9 @@
       "entries": 184
     }
   ],
-  "raw_entries": 1223,
+  "raw_entries": 1222,
   "priority_entries": 44,
-  "official_entries": 15,
+  "official_entries": 14,
   "turkuvaz_official_entries": 6,
   "browser_official_entries": 8,
   "discovered_entries": 184,
@@ -71,22 +71,21 @@
   },
   "channel_name_sources": {
     "turksat": 114,
-    "digiturk": 27,
-    "cleaned-source": 219,
-    "official-fallback": 17
+    "cleaned-source": 239,
+    "official-fallback": 24
   },
   "stream_validation_statuses": {
     "restricted": 41,
-    "unknown": 109,
-    "verified": 200,
-    "dead": 27
+    "unknown": 107,
+    "dead": 28,
+    "verified": 201
   },
   "verified_entries": 160,
   "restricted_entries": 21,
   "unknown_entries": 53,
-  "unknown_retry_candidates": 74,
-  "unknown_retry_skipped_verified_sibling": 35,
-  "unknown_retry_recovered": 0,
+  "unknown_retry_candidates": 75,
+  "unknown_retry_skipped_verified_sibling": 33,
+  "unknown_retry_recovered": 1,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
   "dead_entries": 18,
@@ -97,23 +96,22 @@
   "turkey_device_restricted_fallbacks": 8,
   "turkey_device_ephemeral_overrides": 2,
   "core_channels_total": 63,
-  "core_channels_verified": 46,
+  "core_channels_verified": 45,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 2,
-  "core_channels_not_verified": 17,
+  "core_channels_not_verified": 18,
   "categories_verified": {
     "Ulusal": 13,
-    "Haber": 31,
+    "Haber": 30,
     "Spor": 4,
     "Film & Dizi": 4,
     "Çocuk": 6,
-    "Belgesel": 1,
+    "Belgesel": 4,
     "Dini": 9,
-    "Eğitim": 3,
     "Müzik": 16,
     "Yerel": 0,
     "Uluslararası": 8,
-    "Diğer": 65
+    "Diğer": 66
   },
   "categories_restricted": {
     "Ulusal": 2,
@@ -123,7 +121,6 @@
     "Çocuk": 2,
     "Belgesel": 5,
     "Dini": 0,
-    "Eğitim": 0,
     "Müzik": 1,
     "Yerel": 0,
     "Uluslararası": 0,
@@ -131,16 +128,15 @@
   },
   "categories_unknown": {
     "Ulusal": 0,
-    "Haber": 5,
+    "Haber": 6,
     "Spor": 5,
     "Film & Dizi": 7,
     "Çocuk": 0,
-    "Belgesel": 8,
+    "Belgesel": 12,
     "Dini": 1,
-    "Eğitim": 4,
     "Müzik": 2,
     "Yerel": 0,
     "Uluslararası": 0,
-    "Diğer": 21
+    "Diğer": 20
   }
 }

@@ -1,6 +1,8 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="AkitTV.tr@HD" group-title="Haber" tvg-logo="https://i.imgur.com/oGto929.png",AKİT TV
+#EXTINF:-1 tvg-id="AkitTV.tr@HD" group-title="Haber" tvg-logo="https://i.imgur.com/oGto929.png",Akit TV
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
+#EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber",TELE1
+https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
 #EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber",Sözcü TV
 https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 tvg-id="ATurk.tr@SD" tvg-logo="https://i.imgur.com/je5wQ3G.png" group-title="Haber",A Türk Izmir
@@ -43,7 +45,7 @@ https://tv1.arectv30.sbs/live/tarihtv.m3u8
 #EXTINF:-1 tvg-id="ViasatHistory.tr@SD" tvg-logo="https://i.imgur.com/wRP9XA7.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Belgesel",Viasat History
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 https://nord.ayakkabiparti.lol/viasathistory/index.m3u8
-#EXTINF:-1 tvg-id="BBCEarth.uk@Turkiye" tvg-logo="https://i.imgur.com/nGSsUd4.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Belgesel",BBC Earth
+#EXTINF:-1 tvg-id="BBCEarth.uk@Turkiye" tvg-logo="https://i.imgur.com/nGSsUd4.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Belgesel",BBC Earth Turkiye
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 https://nord.ayakkabiparti.lol/bbc/index.m3u8
 #EXTINF:-1 tvg-id="HabitatTV.tr@HD" tvg-logo="https://wmxznm9feqh3.merlincdn.net/assets/f43178e5-e366-4ca5-80ce-30d900e2835f.png" group-title="Belgesel",Habitat TV
@@ -58,20 +60,20 @@ https://mn-nl.mncdn.com/dogusdyg_drone/cgtn/playlist.m3u8
 #EXTVLCOPT:http-referrer=https://www.tgrtbelgesel.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
+#EXTINF:-1 tvg-id="TRTEBAIlkokul.tr@SD" tvg-logo="https://i.imgur.com/CRBfZi4.png" group-title="Belgesel",TRT EBA Ilkokul
+https://tv-e-okul00.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="TRTEBALise.tr@SD" tvg-logo="https://i.imgur.com/vj2L2L2.png" group-title="Belgesel",TRT EBA Lise
+https://tv-e-okul02.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="UniversiteTV.tr@SD" tvg-logo="https://i.imgur.com/KeauaSh.png" group-title="Belgesel",Üniversite TV
+https://vdo.digitalbox.xyz:3986/live/unitvlive.m3u8
+#EXTINF:-1 tvg-id="WomanTV.tr@SD" tvg-logo="https://i.imgur.com/f2zGoV3.png" group-title="Belgesel",Woman TV
+https://embedlp.becdn.net/womantv.m3u8
 #EXTINF:-1 tvg-id="YabanTV.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Yaban_TV_logo.png/512px-Yaban_TV_logo.png" group-title="Belgesel",Yaban TV
 #EXTVLCOPT:http-referrer=https://www.yabantv.com/broadcast/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlRafidainTV.tr@SD" tvg-logo="https://i.imgur.com/rjXDCN5.png" group-title="Dini",Al-Rafidain TV
 https://arrafidain.tvplayer.online/arrafidaintv/source/playlist.m3u8
-#EXTINF:-1 tvg-id="TRTEBAIlkokul.tr@SD" tvg-logo="https://i.imgur.com/CRBfZi4.png" group-title="Eğitim",TRT EBA Ilkokul
-https://tv-e-okul00.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="TRTEBALise.tr@SD" tvg-logo="https://i.imgur.com/vj2L2L2.png" group-title="Eğitim",TRT EBA Lise
-https://tv-e-okul02.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="UniversiteTV.tr@SD" tvg-logo="https://i.imgur.com/KeauaSh.png" group-title="Eğitim",Üniversite TV
-https://vdo.digitalbox.xyz:3986/live/unitvlive.m3u8
-#EXTINF:-1 tvg-id="WomanTV.tr@SD" tvg-logo="https://i.imgur.com/f2zGoV3.png" group-title="Eğitim",Woman TV
-https://embedlp.becdn.net/womantv.m3u8
 #EXTINF:-1 tvg-id="Number1Turk.tr@SD" tvg-logo="https://i.imgur.com/18zjk3q.png" group-title="Müzik",Number 1 Türk
 https://mn-nl.mncdn.com/blutv_nr1turk2/live.m3u8
 #EXTINF:-1 tvg-id="FinestTV.de@SD" tvg-logo="https://i.imgur.com/1uoP10V.png" group-title="Müzik",Finest TV
@@ -80,8 +82,6 @@ https://media.finest.tv/hls/live.m3u8
 https://mn-nl.mncdn.com/blutv_bizimev/bizimev_sd.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TYTTurk.tr@SD" tvg-logo="https://tytturk.com/upload/tyt-logo.png" group-title="Diğer",TYT Turk
 https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
-#EXTINF:-1 tvg-id="MeltemTV.tr@SD" tvg-logo="https://i.imgur.com/C3m6w5S.png" group-title="Diğer",Meltem TV
-https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
 #EXTINF:-1 tvg-id="ArasTV.tr@SD" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="Diğer",Aras TV
 http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="BursaTV.tr@SD" tvg-logo="https://i.imgur.com/9cl1MR8.png" group-title="Diğer",Bursa TV
