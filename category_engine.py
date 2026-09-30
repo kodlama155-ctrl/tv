@@ -16,7 +16,7 @@ from html.parser import HTMLParser
 # IMPORTANT:
 # - No individual channel is hard-coded into a category.
 # - The bot learns current placement/order from professional platform pages.
-# - A broad "general", ".tr", religious, education or culture tag does NOT
+# - A broad "general", ".tr", religious or culture tag does NOT
 #   automatically make a channel "Ulusal".
 # - If reliable category evidence is missing, the channel goes to "Diğer".
 
@@ -28,7 +28,6 @@ CATEGORY_ORDER = [
     "Çocuk",
     "Belgesel",
     "Dini",
-    "Eğitim",
     "Müzik",
     "Yerel",
     "Uluslararası",
@@ -63,7 +62,7 @@ TVPLUS_ALL_URL = "https://tvplus.com.tr/canli-tv"
 UA = "Mozilla/5.0 (EmirTV-CategoryBot/4.0)"
 
 # Strong content-type mappings only.
-# Broad tags such as general/entertainment/religious/education/culture are
+# Broad tags such as general/entertainment/religious/culture are
 # intentionally NOT mapped to Ulusal.
 IPTV_CATEGORY_MAP = {
     "news": "Haber",
@@ -86,7 +85,7 @@ IPTV_CATEGORY_MAP = {
     "outdoor": "Diğer",
     "shop": "Diğer",
     "religious": "Dini",
-    "education": "Eğitim",
+    "education": "Belgesel",
     "music": "Müzik",
 }
 
@@ -113,9 +112,9 @@ GROUP_MAP = {
     "religious": "Dini",
     "religion": "Dini",
     "dini": "Dini",
-    "education": "Eğitim",
-    "educational": "Eğitim",
-    "egitim": "Eğitim",
+    "education": "Belgesel",
+    "educational": "Belgesel",
+    "egitim": "Belgesel",
     "muzik": "Müzik",
     "music": "Müzik",
     "yerel": "Yerel",
@@ -653,7 +652,7 @@ def classify(meta: str) -> dict:
             # Religious and education are thematic categories in EmirTV.
             # They should not be swallowed by a provider's broad "Ulusal"
             # bucket.
-            weight = 220 if mapped in {"Dini", "Eğitim"} else 35
+            weight = 220 if (mapped == "Dini" or raw_category == "education") else 35
             scores[mapped] += weight
             evidence.append(f"iptv-org:{raw_category}->{mapped}")
 
@@ -670,7 +669,7 @@ def classify(meta: str) -> dict:
 
     if group in GROUP_MAP:
         mapped = GROUP_MAP[group]
-        group_weight = 90 if mapped in {"Dini", "Eğitim"} else 18
+        group_weight = 90 if (mapped == "Dini" or group in {"education", "educational", "egitim"}) else 18
         scores[mapped] += group_weight
         evidence.append(f"source-group:{group}->{mapped}")
 
@@ -680,9 +679,8 @@ def classify(meta: str) -> dict:
         ("Spor", ["spor", "sport", "sports"]),
         ("Film & Dizi", ["drama", "dizi", "film", "movie", "cinema", "sinema"]),
         ("Çocuk", ["cocuk", "kids", "kid", "cartoon"]),
-        ("Belgesel", ["belgesel", "documentary"]),
+        ("Belgesel", ["belgesel", "documentary", "egitim", "education", "eba", "universite"]),
         ("Dini", ["dini", "religious", "diyanet", "kuran", "quran", "islam"]),
-        ("Eğitim", ["egitim", "education", "eba", "universite"]),
         ("Müzik", ["muzik", "music", "radyo", "radio"]),
         ("Yerel", ["yerel", "local", "regional"]),
     ]
@@ -695,7 +693,7 @@ def classify(meta: str) -> dict:
             )
             for keyword in keywords
         ):
-            weight = 120 if category in {"Dini", "Eğitim"} else 25
+            weight = 120 if category == "Dini" else 25
             scores[category] += weight
             evidence.append(f"channel-name:{category}")
 
