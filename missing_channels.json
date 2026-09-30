@@ -1,14 +1,14 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 58,
-  "core_channels_verified": 45,
+  "core_channels_verified": 46,
   "core_channels_geo_restricted": 6,
   "core_channels_device_restricted": 1,
-  "core_channels_not_verified": 13,
+  "core_channels_not_verified": 12,
   "status_counts": {
-    "verified": 45,
+    "verified": 46,
     "geo-restricted": 6,
-    "restricted": 5,
+    "restricted": 4,
     "unknown": 1,
     "device-restricted": 1
   },
@@ -61,13 +61,6 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
-    },
-    {
-      "name": "TRT Çocuk",
-      "expected_category": "Çocuk",
-      "status": "restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "BabyTV Türkiye",
