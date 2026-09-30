@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T12:35:50.149835+00:00",
+  "updated_at_utc": "2026-09-30T12:46:08.229527+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -63,8 +63,8 @@
   "header_aware_entries": 56,
   "selected_stream_sources": {
     "official_html": 8,
-    "priority": 25,
-    "upstream": 59,
+    "priority": 26,
+    "upstream": 58,
     "official_api": 2,
     "official_browser": 2,
     "iptv_org": 157
@@ -77,15 +77,15 @@
   },
   "stream_validation_statuses": {
     "restricted": 41,
-    "unknown": 109,
-    "verified": 202,
+    "unknown": 108,
+    "verified": 203,
     "dead": 26
   },
   "verified_entries": 162,
   "restricted_entries": 21,
   "unknown_entries": 53,
   "unknown_retry_candidates": 74,
-  "unknown_retry_skipped_verified_sibling": 35,
+  "unknown_retry_skipped_verified_sibling": 34,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
