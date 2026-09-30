@@ -34,6 +34,7 @@ IDENTITY_ALIASES = {
     "tv85hd": "tv85",
     "cnnturkhd": "cnnturk",
     "sozcutvtr": "sozcutv",
+    "flashhabertv": "flashtv",
 }
 
 CORE_CHANNELS = [
@@ -54,7 +55,12 @@ CORE_CHANNELS = [
     {"id": "TV4", "name": "TV4", "category": "Ulusal"},
     {"id": "TRT2", "name": "TRT 2", "category": "Ulusal"},
     {"id": "DiyanetTV", "name": "Diyanet TV", "category": "Dini"},
+    {"id": "FMTV", "name": "FM TV", "category": "Dini"},
     {"id": "CNBCe", "name": "CNBC-e", "category": "Ulusal"},
+    {"id": "Kanal1", "name": "Kanal 1", "category": "Ulusal"},
+    {"id": "ShowMax", "name": "Show Max", "category": "Ulusal"},
+    {"id": "MeltemTV", "name": "Meltem TV", "category": "Ulusal"},
+    {"id": "FlashTV", "name": "Flash TV", "category": "Ulusal", "aliases": ["Flash Haber TV"]},
 
     # Haber
     {"id": "TRTHaber", "name": "TRT Haber", "category": "Haber"},
@@ -75,6 +81,7 @@ CORE_CHANNELS = [
     {"id": "Ekoturk", "name": "Ekotürk", "category": "Haber"},
     {"id": "BenguturkTV", "name": "BengüTürk", "category": "Haber"},
     {"id": "EkolTV", "name": "Ekol TV", "category": "Haber"},
+    {"id": "KanalB", "name": "Kanal B", "category": "Haber"},
 
     # Spor
     {"id": "TRTSpor", "name": "TRT Spor", "category": "Spor"},
