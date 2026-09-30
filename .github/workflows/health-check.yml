@@ -60,6 +60,7 @@ jobs:
         run: |
           python - <<'PY'
           import json
+          import os
           from pathlib import Path
 
           deep = json.loads(Path("deep_probe.json").read_text(encoding="utf-8"))
