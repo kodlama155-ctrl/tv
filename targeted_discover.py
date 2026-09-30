@@ -36,12 +36,8 @@ SENSITIVE_QUERY_KEYS = {
     "token", "auth", "authorization", "password", "passwd", "username",
     "user", "key", "sig", "signature", "jwt", "session", "hdnts", "hdnea",
 }
-CREDENTIAL_PATH_RE = re.compile(
-    r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
-    flags=re.I,
-)
-SUSPICIOUS_IPTV_PATH_RE = re.compile(
-    r"/iptv/[A-Za-z0-9_-]{6,}/(?:[A-Za-z0-9_-]{2,}|\\d{2,})/",
+EXPLICIT_CREDENTIAL_PATH_RE = re.compile(
+    r"/(?:user(?:name)?|pass(?:word)?|token|auth(?:orization)?|session|jwt|key)(?:=|/)[^/?#]+",
     re.I,
 )
 
@@ -79,9 +75,7 @@ def safe_candidate(url: str) -> bool:
         return False
     if parsed.username or parsed.password:
         return False
-    if CREDENTIAL_PATH_RE.search(parsed.path):
-        return False
-    if SUSPICIOUS_IPTV_PATH_RE.search(parsed.path):
+    if EXPLICIT_CREDENTIAL_PATH_RE.search(parsed.path):
         return False
 
     keys = {
