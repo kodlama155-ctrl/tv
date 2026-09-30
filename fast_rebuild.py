@@ -8,6 +8,7 @@ from pathlib import Path
 
 from channel_policy import CATEGORY_INDEX, normalize_meta
 
+# Fast rebuild normalizes both catalog categories and canonical names.
 ROOT = Path(__file__).resolve().parent
 TR = ROOT / "tr.m3u"
 STATS = ROOT / "stats.json"
