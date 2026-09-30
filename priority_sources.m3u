@@ -221,3 +221,8 @@ https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
 #EXTINF:-1 tvg-id="TGRTBelgesel.tr@HD" tvg-logo="https://www.tgrtbelgesel.com.tr/wp-content/uploads/2021/08/TGRT_Belgesel_Logo.png" group-title="Belgesel",TGRT Belgesel
 https://tgrt-live.ercdn.net/tgrtbelgesel/tgrtbelgesel.m3u8
 
+
+# TGRT Belgesel current Ihlas Digital live candidate.
+#EXTINF:-1 tvg-id="TGRTBelgesel.tr@HD" tvg-logo="https://www.tgrtbelgesel.com.tr/wp-content/uploads/2021/08/TGRT_Belgesel_Logo.png" group-title="Belgesel",TGRT Belgesel
+https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
+
