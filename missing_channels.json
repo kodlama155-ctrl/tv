@@ -1,15 +1,15 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
-  "core_channels_total": 60,
-  "core_channels_verified": 44,
-  "core_channels_geo_restricted": 6,
+  "core_channels_total": 63,
+  "core_channels_verified": 45,
+  "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 2,
-  "core_channels_not_verified": 16,
+  "core_channels_not_verified": 18,
   "status_counts": {
-    "verified": 44,
-    "geo-restricted": 6,
-    "restricted": 5,
-    "unknown": 3,
+    "verified": 45,
+    "geo-restricted": 7,
+    "restricted": 4,
+    "unknown": 5,
     "device-restricted": 2
   },
   "missing_channels": [
@@ -33,13 +33,6 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
-    },
-    {
-      "name": "Tele1",
-      "expected_category": "Haber",
-      "status": "unknown",
-      "reason": "manifest URLError",
-      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",
@@ -107,9 +100,30 @@
     {
       "name": "TRT Belgesel",
       "expected_category": "Belgesel",
-      "status": "restricted",
+      "status": "geo-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8"
+    },
+    {
+      "name": "Habitat TV",
+      "expected_category": "Belgesel",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://59c7ea6bec1c6.streamlock.net/filbox/habibattv.stream/playlist.m3u8"
+    },
+    {
+      "name": "Yaban TV",
+      "expected_category": "Belgesel",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8"
+    },
+    {
+      "name": "TGRT Belgesel",
+      "expected_category": "Belgesel",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8"
     },
     {
       "name": "DMAX",
