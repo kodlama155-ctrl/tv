@@ -1,14 +1,14 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 63,
-  "core_channels_verified": 45,
+  "core_channels_verified": 46,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 2,
-  "core_channels_not_verified": 18,
+  "core_channels_not_verified": 17,
   "status_counts": {
-    "verified": 45,
+    "verified": 46,
     "geo-restricted": 7,
-    "restricted": 4,
+    "restricted": 3,
     "unknown": 5,
     "device-restricted": 2
   },
@@ -77,13 +77,6 @@
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
     },
     {
-      "name": "TRT Çocuk",
-      "expected_category": "Çocuk",
-      "status": "restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8"
-    },
-    {
       "name": "BabyTV Türkiye",
       "expected_category": "Çocuk",
       "status": "geo-restricted",
@@ -127,14 +120,14 @@
     },
     {
       "name": "DMAX",
-      "expected_category": "Yaşam",
+      "expected_category": "Belgesel",
       "status": "restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://dogus-live.daioncdn.net/dmax/dmax_720p.m3u8"
     },
     {
       "name": "TLC",
-      "expected_category": "Yaşam",
+      "expected_category": "Belgesel",
       "status": "restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://dogus-live.daioncdn.net/tlc/tlc.m3u8"

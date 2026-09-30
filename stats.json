@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T11:30:42.285521+00:00",
+  "updated_at_utc": "2026-09-30T11:45:04.031854+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -63,9 +63,9 @@
   "header_aware_entries": 56,
   "selected_stream_sources": {
     "official_html": 8,
-    "priority": 23,
+    "priority": 24,
     "upstream": 59,
-    "official_api": 3,
+    "official_api": 2,
     "iptv_org": 157,
     "official_browser": 2
   },
@@ -76,17 +76,17 @@
     "official-fallback": 17
   },
   "stream_validation_statuses": {
-    "restricted": 43,
-    "unknown": 108,
-    "verified": 199,
+    "restricted": 41,
+    "unknown": 109,
+    "verified": 200,
     "dead": 27
   },
   "verified_entries": 160,
-  "restricted_entries": 23,
-  "unknown_entries": 51,
+  "restricted_entries": 21,
+  "unknown_entries": 53,
   "unknown_retry_candidates": 74,
-  "unknown_retry_skipped_verified_sibling": 36,
-  "unknown_retry_recovered": 2,
+  "unknown_retry_skipped_verified_sibling": 35,
+  "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
   "dead_entries": 18,
@@ -97,18 +97,17 @@
   "turkey_device_restricted_fallbacks": 8,
   "turkey_device_ephemeral_overrides": 2,
   "core_channels_total": 63,
-  "core_channels_verified": 45,
+  "core_channels_verified": 46,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 2,
-  "core_channels_not_verified": 18,
+  "core_channels_not_verified": 17,
   "categories_verified": {
     "Ulusal": 13,
     "Haber": 31,
     "Spor": 4,
     "Film & Dizi": 4,
-    "Çocuk": 5,
+    "Çocuk": 6,
     "Belgesel": 1,
-    "Yaşam": 1,
     "Dini": 9,
     "Eğitim": 3,
     "Müzik": 16,
@@ -119,11 +118,10 @@
   "categories_restricted": {
     "Ulusal": 2,
     "Haber": 3,
-    "Spor": 6,
+    "Spor": 5,
     "Film & Dizi": 1,
-    "Çocuk": 3,
-    "Belgesel": 3,
-    "Yaşam": 2,
+    "Çocuk": 2,
+    "Belgesel": 5,
     "Dini": 0,
     "Eğitim": 0,
     "Müzik": 1,
@@ -138,12 +136,11 @@
     "Film & Dizi": 7,
     "Çocuk": 0,
     "Belgesel": 8,
-    "Yaşam": 1,
     "Dini": 1,
     "Eğitim": 4,
     "Müzik": 2,
     "Yerel": 0,
     "Uluslararası": 0,
-    "Diğer": 18
+    "Diğer": 21
   }
 }
