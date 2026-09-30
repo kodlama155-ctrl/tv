@@ -9,6 +9,7 @@ on:
       - "health_check.py"
       - "targeted_discover.py"
       - "targeted_repair.py"
+      - "deep_probe.py"
       - "hls_validator.py"
       - ".github/workflows/health-check.yml"
 
@@ -16,13 +17,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: emirtv-playlist-maintenance
-  cancel-in-progress: false
+  group: emirtv-stream-health
+  cancel-in-progress: true
 
 jobs:
   health:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -43,8 +44,14 @@ jobs:
           import json
           from pathlib import Path
           targets = json.loads(Path("repair_targets.json").read_text(encoding="utf-8"))
+          deep_targets = json.loads(Path("deep_targets.json").read_text(encoding="utf-8"))
           print(f"repair_count={len(targets)}")
+          print(f"deep_count={len(deep_targets)}")
           PY
+
+      - name: Deep-check only unknown or restricted channels
+        if: steps.health.outputs.deep_count != '0'
+        run: python deep_probe.py --targets deep_targets.json --output deep_probe.json
 
       - name: Search only confirmed dead channels
         if: steps.health.outputs.repair_count != '0'
@@ -74,6 +81,19 @@ jobs:
               f"dead **{counts.get('dead', 0)}**"
           )
           print(f"Confirmed dead after retry: **{health['confirmed_dead']}**")
+          print(f"Deep-test targets: **{health.get('deep_probe_targets', 0)}**")
+          deep = Path("deep_probe.json")
+          if deep.exists():
+              data = json.loads(deep.read_text(encoding="utf-8"))
+              print(
+                  f"Deep-test current links verified: **"
+                  f"{data.get('current_links_verified_after_deep', 0)} / "
+                  f"{data.get('channels_checked', 0)}**"
+              )
+              print(
+                  f"Verified alternatives found: **"
+                  f"{data.get('verified_alternative_available_for_unverified', 0)}**"
+              )
           repair = Path("repair_result.json")
           if repair.exists():
               data = json.loads(repair.read_text(encoding="utf-8"))
@@ -87,6 +107,8 @@ jobs:
           path: |
             health_status.json
             repair_targets.json
+            deep_targets.json
+            deep_probe.json
             repair_discovered.m3u
             repair_discovery_stats.json
             repair_result.json
