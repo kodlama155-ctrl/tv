@@ -2,12 +2,11 @@
 from __future__ import annotations
 
 import json
-import re
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from channel_policy import CATEGORY_INDEX, category_for, split_extinf
+from channel_policy import CATEGORY_INDEX, normalize_meta
 
 ROOT = Path(__file__).resolve().parent
 TR = ROOT / "tr.m3u"
@@ -47,11 +46,8 @@ def _parse_entries(text: str) -> list[dict]:
 
 
 def _apply_category(meta: str) -> tuple[str, str]:
-    category = category_for(meta)
-    head, label = split_extinf(meta)
-    head = re.sub(r'\s+group-title="[^"]*"', "", head, flags=re.I)
-    head = head.rstrip() + f' group-title="{category}"'
-    return f"{head},{label}", category
+    normalized_meta, category, _ = normalize_meta(meta)
+    return normalized_meta, category
 
 
 def main() -> None:
