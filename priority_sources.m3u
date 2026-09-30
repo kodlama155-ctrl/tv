@@ -109,12 +109,12 @@ https://mn-nl.mncdn.com/blutv_trt2/live.m3u8
 # --- Durable sports candidates ---
 
 # Ekol Sports: verified public ERCDN stream.
-#EXTINF:-1 tvg-id="EkolSports.tr@HD" group-title="Spor",Ekol Sports
+#EXTINF:-1 tvg-id="EkolSports.tr@HD" tvg-logo="https://feo.kablowebtv.com/resize/168A635D265A4328C2883FB4CD8FF/0/0/Vod/HLS/c4ca1fe1-e4ef-496a-9e97-b41a55910e43.png" group-title="Spor",Ekol Sports
 https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 
 # FB TV: official Fenerbahce CDN. GitHub runner receives 403, so this is
 # retained only as a device fallback and is never counted as strict verified.
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV [Device-fallback]
+#EXTINF:-1 tvg-id="FBTV.tr@SD" tvg-logo="https://i.imgur.com/9L9f0mA.png" group-title="Spor",FB TV [Device-fallback]
 #EXTVLCOPT:http-referrer=https://www.fenerbahce.org/fenerbahcetv/canliyayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
@@ -130,7 +130,7 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 
 # A Spor stable tokenless Turknet/ERCDN source.
-#EXTINF:-1 tvg-id="ASpor.tr@HD" group-title="Spor",A Spor
+#EXTINF:-1 tvg-id="ASpor.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/archive/e/e9/20140920094552%21A_Spor_logosu.png" group-title="Spor",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 
 # A Para stable tokenless Turknet/ERCDN source.
@@ -150,4 +150,26 @@ https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8
 #EXTVLCOPT:http-referrer=https://www.vavtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8
+
+
+# --- Sports expansion probes ---
+
+# beIN Sports Haber: official YouTube channel through public HLS relay.
+#EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber
+https://ythls.kekikakademi.org/youtube/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
+
+# beIN Sports Haber alternate public YouTube relay.
+#EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber
+https://ythls.armelin.one/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
+
+# TRT 3 Spor official TRT stream.
+#EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Spor",TRT 3 Spor
+https://tv-trt3.live.trt.com.tr/master.m3u8
+
+
+# TRT Spor official stream metadata with logo.
+#EXTINF:-1 tvg-id="TRTSpor.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/TRT_Spor_logo.svg/512px-TRT_Spor_logo.svg.png" group-title="Spor",TRT Spor [Geo-blocked]
+#EXTVLCOPT:http-referrer=https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
 
