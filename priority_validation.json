@@ -1,65 +1,41 @@
 {
   "mode": "priority-delta",
-  "changed_channels": 1,
-  "candidates_tested": 5,
-  "applied_channels": 0,
-  "applied": [],
+  "changed_channels": 6,
+  "candidates_tested": 1,
+  "applied_channels": 1,
+  "applied": [
+    {
+      "channel_key": "tmbtv",
+      "status": "verified",
+      "url": "https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8?token=tmb_app_token_13579",
+      "reason": "real media segment verified"
+    }
+  ],
   "kept_existing_channels": [
-    "tgrteu"
+    "kraltv",
+    "on4tv",
+    "sportstv",
+    "tgrteu",
+    "tytturk"
   ],
   "results": [
     {
-      "meta": "#EXTINF:-1 tvg-id=\"TGRTEU.tr\" group-title=\"Uluslararası\",TGRT EU",
-      "url": "https://tgrt-live.ercdn.net/tgrteu/tgrteu.m3u8",
+      "meta": "#EXTINF:-1 tvg-id=\"TMBTV.tr\" group-title=\"Uluslararası\",TMB TV",
+      "url": "https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8?token=tmb_app_token_13579",
       "user_agent": null,
       "referrer": null,
-      "channel_key": "tgrteu",
+      "channel_key": "tmbtv",
       "device_hint": false,
-      "status": "dead",
-      "reason": "manifest HTTP 404",
-      "http_code": 404
-    },
-    {
-      "meta": "#EXTINF:-1 tvg-id=\"TGRTEU.tr\" group-title=\"Uluslararası\",TGRT EU",
-      "url": "https://canli.tgrteu.com/tgrteu.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "tgrteu",
-      "device_hint": false,
-      "status": "unknown",
-      "reason": "manifest URLError"
-    },
-    {
-      "meta": "#EXTINF:-1 tvg-id=\"TGRTEU.tr\" group-title=\"Uluslararası\",TGRT EU",
-      "url": "https://ensonhaber-live.ercdn.net/tgrteu/tgrteu.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "tgrteu",
-      "device_hint": false,
-      "status": "unknown",
-      "reason": "manifest HTTP 500",
-      "http_code": 500
-    },
-    {
-      "meta": "#EXTINF:-1 tvg-id=\"TGRTEU.tr\" group-title=\"Uluslararası\",TGRT EU",
-      "url": "https://tv.ensonhaber.com/tv/tr/tgrteu/index.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "tgrteu",
-      "device_hint": false,
-      "status": "unknown",
-      "reason": "manifest HTTP 500",
-      "http_code": 500
-    },
-    {
-      "meta": "#EXTINF:-1 tvg-id=\"TGRTEU.tr\" group-title=\"Uluslararası\",TGRT EU",
-      "url": "https://canli.haber365.com.tr/tr/tgrteu/index.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "tgrteu",
-      "device_hint": false,
-      "status": "unknown",
-      "reason": "manifest URLError"
+      "resolution": null,
+      "bandwidth": null,
+      "manifest_latency_ms": 1103,
+      "status": "verified",
+      "reason": "real media segment verified",
+      "segment_latency_ms": 1585,
+      "segment_probes": 1,
+      "encrypted": false,
+      "vod": false,
+      "http_code": 200
     }
   ]
 }
