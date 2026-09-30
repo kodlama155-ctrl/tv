@@ -228,16 +228,7 @@ https://tv-trthaber.medya.trt.com.tr/master.m3u8
 https://cdn.ekoturk.net/hls/master.m3u8
 
 
-# --- Ulusal completion ---
 
-# Show Max: current public HLS candidate found in maintained Turkish TV lists.
-# The validator must verify a real media segment before it can enter tr.m3u.
-#EXTINF:-1 tvg-id="ShowMax.tr@HD" group-title="Ulusal",Show Max
-https://canlitvulusal.xyz/live/showmax/index.m3u8
-
-# Show Max secondary public candidate used by multiple maintained Turkish playlists.
-#EXTINF:-1 tvg-id="ShowMax.tr@HD" group-title="Ulusal",Show Max
-https://raw.githubusercontent.com/rideordie16/YouTube/main/ch/showmax.m3u8
 
 # Show Max direct TurkNet ERCDN HLS candidate.
 #EXTINF:-1 tvg-id="ShowMax.tr@HD" group-title="Ulusal",Show Max
