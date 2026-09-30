@@ -42,6 +42,7 @@ jobs:
           python health_check.py
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
+          import os
           from pathlib import Path
           targets = json.loads(Path("repair_targets.json").read_text(encoding="utf-8"))
           deep_targets = json.loads(Path("deep_targets.json").read_text(encoding="utf-8"))
@@ -78,7 +79,7 @@ jobs:
               encoding="utf-8",
           )
 
-          with open("$GITHUB_OUTPUT", "a", encoding="utf-8") as out:
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
               out.write(f"unknown_count={len(targets)}\n")
           print(json.dumps({
               "unknown_count": len(targets),
