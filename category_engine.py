@@ -11,6 +11,8 @@ from collections import Counter
 from functools import lru_cache
 from html.parser import HTMLParser
 
+from channel_catalog import category_for_channel
+
 # EmirTV dynamic category/order engine.
 #
 # IMPORTANT:
@@ -622,200 +624,28 @@ def _is_turkey_local_area(area: str) -> bool:
 @lru_cache(maxsize=4096)
 def classify(meta: str) -> dict:
     name = split_extinf(meta)[1]
-    group = fold(_attr(meta, "group-title")).strip()
-    country = _country(meta)
+    tvg = _attr(meta, "tvg-id")
 
-    scores = Counter()
-    evidence: list[str] = []
-
-    matches = _platform_matches(meta)
-    for platform, category, position, confidence, url in matches:
-        if confidence == "catalog":
-            weight = 160
-        elif confidence == "visible":
-            weight = 110
-        else:
-            weight = 80
-
-        scores[category] += weight
-        evidence.append(f"{platform}:{category}:{confidence}")
-
-    base = _tvg_base(meta).casefold()
-    raw_categories: list[str] = []
-    if base:
-        raw_categories = list(_iptv_org_index().get(base, []))
-        for raw_category in raw_categories:
-            mapped = IPTV_CATEGORY_MAP.get(raw_category)
-            if not mapped:
-                continue
-
-            # Religious and education are thematic categories in EmirTV.
-            # They should not be swallowed by a provider's broad "Ulusal"
-            # bucket.
-            weight = 220 if (mapped == "Dini" or raw_category == "education") else 35
-            scores[mapped] += weight
-            evidence.append(f"iptv-org:{raw_category}->{mapped}")
-
-        areas = _iptv_org_feed_areas().get(base, ())
-        local_areas = [area for area in areas if _is_turkey_local_area(area)]
-        if local_areas:
-            # Location scope outranks content type: a Bursa news station is
-            # Yerel first, not Haber.
-            scores["Yerel"] += 260
-            evidence.append(
-                "iptv-org-feed:local->Yerel:"
-                + ",".join(local_areas[:3])
-            )
-
-    if group in GROUP_MAP:
-        mapped = GROUP_MAP[group]
-        group_weight = 90 if (mapped == "Dini" or group in {"education", "educational", "egitim"}) else 18
-        scores[mapped] += group_weight
-        evidence.append(f"source-group:{group}->{mapped}")
-
-    name_fold = fold(_clean_display_name(name))
-    keyword_groups = [
-        ("Haber", ["haber", "news"]),
-        ("Spor", ["spor", "sport", "sports"]),
-        ("Film & Dizi", ["drama", "dizi", "film", "movie", "cinema", "sinema"]),
-        ("Çocuk", ["cocuk", "kids", "kid", "cartoon"]),
-        ("Belgesel", ["belgesel", "documentary", "egitim", "education", "eba", "universite"]),
-        ("Dini", ["dini", "religious", "diyanet", "kuran", "quran", "islam"]),
-        ("Müzik", ["muzik", "music", "radyo", "radio"]),
-        ("Yerel", ["yerel", "local", "regional"]),
-    ]
-
-    for category, keywords in keyword_groups:
-        if any(
-            re.search(
-                rf"(?<![a-z0-9]){re.escape(fold(keyword))}(?![a-z0-9])",
-                name_fold,
-            )
-            for keyword in keywords
-        ):
-            weight = 120 if category == "Dini" else 25
-            scores[category] += weight
-            evidence.append(f"channel-name:{category}")
-
-    # Foreign origin alone is only weak evidence. A foreign-origin kids/movie
-    # service should stay in its strong thematic category.
-    if country and country != "tr":
-        scores["Uluslararası"] += 20
-        evidence.append(f"country:{country}->Uluslararası")
-
-    # Tivibu's dedicated /canli-tv/ulusal rail is the authoritative source
-    # for EmirTV's Ulusal bucket. Diyanet-branded services are intentionally
-    # excluded even if Tivibu places them in its broad Ulusal rail.
-    identity_text = " ".join(
-        part for part in (
-            _tvg_base(meta),
-            _clean_display_name(name),
-        )
-        if part
-    )
-    identity_fold = fold(identity_text)
-    is_diyanet = "diyanet" in identity_fold
-
-    identity_keys = (
-        _label_keys(_tvg_base(meta))
-        | _label_keys(_clean_display_name(name))
-    )
-    is_dmax_or_tlc = bool(identity_keys & {"dmax", "tlc"})
-
-    tivibu_ulusal = any(
-        platform == "Tivibu" and category == "Ulusal"
-        for platform, category, _, _, _ in matches
-    )
-    has_ulusal_platform = any(
-        category == "Ulusal"
-        for _, category, _, _, _ in matches
-    )
-
-    if is_dmax_or_tlc:
-        # EmirTV groups DMAX and TLC with documentary channels.
-        scores["Belgesel"] = max(scores.get("Belgesel", 0), 1000)
-        evidence.append("EmirTV:DMAX-TLC->Belgesel")
-
-    if tivibu_ulusal and not is_diyanet:
-        scores["Ulusal"] = max(scores.get("Ulusal", 0), 1000)
-        evidence.append("Tivibu:Ulusal:authoritative")
-    elif is_diyanet:
-        scores.pop("Ulusal", None)
-        # Preserve the user's explicit rule: Diyanet stays thematic, not Ulusal.
-        scores["Dini"] = max(scores.get("Dini", 0), 500)
-        evidence.append("Diyanet:exclude-Ulusal->Dini")
-    elif not has_ulusal_platform:
-        scores.pop("Ulusal", None)
-
-    # Professional Global placement is stronger than generic news metadata.
-    # This keeps services such as TRT World / TRT Arabi under Uluslararası.
-    has_global_platform = any(
-        category == "Uluslararası"
-        for _, category, _, _, _ in matches
-    )
-    if has_global_platform:
-        scores["Uluslararası"] += 120
-        evidence.append("platform-scope:global->Uluslararası")
-
-    if not scores:
+    curated = category_for_channel(tvg, name)
+    if curated:
         return {
-            "category": "Diğer",
-            "source": "fallback",
-            "score": 0,
-            "votes": {},
-            "evidence": ["no-reliable-category-evidence"],
+            "category": curated,
+            "source": "emirtv-catalog",
+            "score": 1000,
+            "votes": {curated: 1000},
+            "evidence": ["EmirTV:authoritative-catalog"],
             "platform_matches": [],
         }
 
-    top_score = max(scores.values())
-    leaders = [
-        c for c in CATEGORY_ORDER
-        if scores.get(c, 0) == top_score and top_score > 0
-    ]
-
-    # Do not turn ambiguous low-confidence API tags into an arbitrary category.
-    if len(leaders) > 1 and top_score <= 70:
-        category = "Diğer"
-        evidence.append("ambiguous-low-confidence->Diğer")
-        scores["Diğer"] = top_score
-    else:
-        category = max(
-            CATEGORY_ORDER,
-            key=lambda c: (scores.get(c, 0), -CATEGORY_ORDER.index(c)),
-        )
-
-    platform_rows = [
-        {
-            "platform": platform,
-            "category": cat,
-            "position": position,
-            "confidence": confidence,
-            "url": url,
-        }
-        for platform, cat, position, confidence, url in matches
-    ]
-
-    if any(e.startswith("iptv-org-feed:local->Yerel") for e in evidence) and category == "Yerel":
-        source = "iptv-org-feed"
-    elif any(row["category"] == category for row in platform_rows):
-        source = "platform-live"
-    elif any(
-        e.startswith("iptv-org:") and e.endswith("->" + category)
-        for e in evidence
-    ):
-        source = "iptv-org"
-    elif group in GROUP_MAP and GROUP_MAP[group] == category:
-        source = "source-group"
-    else:
-        source = "fallback"
-
+    # Unknown channels are never promoted into a curated category from
+    # third-party metadata. External platforms remain discovery/order sources.
     return {
-        "category": category,
-        "source": source,
-        "score": scores[category],
-        "votes": dict(scores),
-        "evidence": evidence,
-        "platform_matches": platform_rows,
+        "category": "Diğer",
+        "source": "unreviewed",
+        "score": 0,
+        "votes": {},
+        "evidence": ["not-in-emirtv-catalog->Diğer"],
+        "platform_matches": [],
     }
 
 
