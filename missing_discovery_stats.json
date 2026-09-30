@@ -1,15 +1,19 @@
 {
-  "updated_at_utc": "2026-09-30T16:16:32.860003+00:00",
+  "updated_at_utc": "2026-09-30T16:27:31.996407+00:00",
   "catalog_channels": 194,
-  "channels_in_previous_tr": 187,
-  "missing_before_search": 7,
+  "channels_in_previous_tr": 183,
+  "missing_before_search": 11,
   "missing_names": [
     "DMAX",
     "TLC",
+    "Lalegul TV",
+    "FM TV",
     "Finest TV",
     "Kanal 1",
     "KRT TV",
+    "Ulusal Kanal",
     "TV5",
+    "Kanal B",
     "GZT"
   ],
   "batch_size": 6,
@@ -19,40 +23,56 @@
       "names": [
         "DMAX",
         "TLC",
+        "Lalegul TV",
+        "FM TV",
         "Finest TV",
-        "Kanal 1",
-        "KRT TV",
-        "TV5"
+        "Kanal 1"
       ],
-      "query": "\"DMAX\" OR \"TLC\" OR \"Finest TV\" OR \"Kanal 1\" OR \"KRT TV\" OR \"TV5\" extension:m3u",
-      "search_results": 44
+      "query": "\"DMAX\" OR \"TLC\" OR \"Lalegul TV\" OR \"FM TV\" OR \"Finest TV\" OR \"Kanal 1\" extension:m3u",
+      "search_results": 9
     },
     {
       "names": [
+        "KRT TV",
+        "Ulusal Kanal",
+        "TV5",
+        "Kanal B",
         "GZT"
       ],
-      "query": "\"GZT\" extension:m3u",
-      "search_results": 50
+      "query": "\"KRT TV\" OR \"Ulusal Kanal\" OR \"TV5\" OR \"Kanal B\" OR \"GZT\" extension:m3u",
+      "search_results": 49
     }
   ],
   "target_report": [
     {
       "name": "DMAX",
       "category": "Belgesel",
-      "files_matched": 25,
-      "candidates": 12
+      "files_matched": 13,
+      "candidates": 7
     },
     {
       "name": "TLC",
       "category": "Belgesel",
-      "files_matched": 25,
-      "candidates": 14
+      "files_matched": 13,
+      "candidates": 8
+    },
+    {
+      "name": "Lalegul TV",
+      "category": "Dini",
+      "files_matched": 10,
+      "candidates": 4
+    },
+    {
+      "name": "FM TV",
+      "category": "Dini",
+      "files_matched": 2,
+      "candidates": 2
     },
     {
       "name": "Finest TV",
       "category": "Uluslararası",
-      "files_matched": 23,
-      "candidates": 4
+      "files_matched": 8,
+      "candidates": 2
     },
     {
       "name": "Kanal 1",
@@ -63,14 +83,26 @@
     {
       "name": "KRT TV",
       "category": "Haber",
-      "files_matched": 26,
-      "candidates": 13
+      "files_matched": 12,
+      "candidates": 8
+    },
+    {
+      "name": "Ulusal Kanal",
+      "category": "Haber",
+      "files_matched": 12,
+      "candidates": 8
     },
     {
       "name": "TV5",
       "category": "Haber",
-      "files_matched": 18,
-      "candidates": 7
+      "files_matched": 6,
+      "candidates": 4
+    },
+    {
+      "name": "Kanal B",
+      "category": "Haber",
+      "files_matched": 12,
+      "candidates": 5
     },
     {
       "name": "GZT",
@@ -79,8 +111,8 @@
       "candidates": 2
     }
   ],
-  "files_scanned": 94,
-  "unique_candidates_found": 52,
-  "errors": 14,
+  "files_scanned": 56,
+  "unique_candidates_found": 50,
+  "errors": 1,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }

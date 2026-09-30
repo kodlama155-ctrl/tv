@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-09-30T16:12:00.164817+00:00",
+  "updated_at_utc": "2026-09-30T16:26:52.950197+00:00",
   "official_pages": 22,
-  "pages_ok": 18,
-  "pages_with_candidates": 9,
-  "raw_candidates": 14,
-  "accepted_unique_candidates": 14,
+  "pages_ok": 19,
+  "pages_with_candidates": 10,
+  "raw_candidates": 15,
+  "accepted_unique_candidates": 15,
   "probe_statuses": {
+    "verified": 10,
     "restricted": 4,
-    "verified": 9,
     "unknown": 1
   },
   "sources": [
@@ -148,8 +148,8 @@
       "page_candidates": 2,
       "aux_scanned": 2,
       "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=4hYVqqLdK7m9eDkLOU-IOg&e=1790799037",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=4hYVqqLdK7m9eDkLOU-IOg&e=1790799037"
+        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=RMooZ54YtsLUqHV5nhwAog&e=1790799940",
+        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=RMooZ54YtsLUqHV5nhwAog&e=1790799940"
       ],
       "identity_rejected_candidates": 0
     },
@@ -235,12 +235,14 @@
     {
       "name": "TVNET",
       "page": "https://www.tvnet.com.tr/canli-yayin",
-      "status": "page_error",
-      "page_final_url": null,
-      "page_candidates": 0,
-      "aux_scanned": 0,
-      "candidates": [],
-      "error": "TimeoutError"
+      "status": "ok",
+      "page_final_url": "https://www.tvnet.com.tr/canli-yayin",
+      "page_candidates": 1,
+      "aux_scanned": 2,
+      "candidates": [
+        "https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/playlist.m3u8"
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "Vav TV",
