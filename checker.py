@@ -47,6 +47,7 @@ TURKEY_OUTPUT = ROOT / "tr.m3u"
 STATS = ROOT / "stats.json"
 VALIDATION = ROOT / "validation.json"
 MISSING_OUTPUT = ROOT / "missing_channels.json"
+DOMAIN_SCORES = ROOT / "domain_scores.json"
 
 UA = "Mozilla/5.0 (EmirTV-M3U-Bot/3.0)"
 PLAYLIST_TIMEOUT = 20
@@ -183,6 +184,78 @@ def canonical(url: str) -> str:
     return urllib.parse.urlunsplit(
         (p.scheme.lower(), p.netloc.lower(), p.path, p.query, "")
     )
+
+
+DOMAIN_PRIOR_SCORE = 70.0
+DOMAIN_PRIOR_SAMPLES = 5.0
+
+
+def stream_domain(url: str) -> str:
+    try:
+        return (urllib.parse.urlsplit(url).hostname or "").lower()
+    except Exception:
+        return ""
+
+
+def build_domain_scores(items: list[dict]) -> dict[str, dict]:
+    grouped: dict[str, Counter] = {}
+    for item in items:
+        host = stream_domain(item.get("url", ""))
+        if not host:
+            continue
+        grouped.setdefault(host, Counter())[
+            item.get("status", "unknown")
+        ] += 1
+
+    result = {}
+    for host, counts in grouped.items():
+        verified = int(counts.get("verified", 0))
+        restricted = int(counts.get("restricted", 0))
+        unknown = int(counts.get("unknown", 0))
+        dead = int(counts.get("dead", 0))
+        drm = int(counts.get("drm", 0))
+        total = sum(counts.values())
+
+        # Verified is full credit. Restricted/unknown receive partial credit
+        # because the runner may be blocked even when a device can play them.
+        observed_points = (
+            verified
+            + restricted * 0.55
+            + unknown * 0.25
+        )
+        prior_points = (
+            DOMAIN_PRIOR_SAMPLES * DOMAIN_PRIOR_SCORE / 100.0
+        )
+        score = 100.0 * (
+            observed_points + prior_points
+        ) / (total + DOMAIN_PRIOR_SAMPLES)
+
+        result[host] = {
+            "score": round(score, 2),
+            "samples": total,
+            "verified": verified,
+            "restricted": restricted,
+            "unknown": unknown,
+            "dead": dead,
+            "drm": drm,
+            "verified_rate": round(
+                (100.0 * verified / total) if total else 0.0,
+                2,
+            ),
+        }
+
+    return result
+
+
+def attach_domain_scores(items: list[dict], scores: dict[str, dict]):
+    for item in items:
+        host = stream_domain(item.get("url", ""))
+        info = scores.get(host, {})
+        item["domain"] = host
+        item["domain_score"] = float(
+            info.get("score", DOMAIN_PRIOR_SCORE)
+        )
+        item["domain_samples"] = int(info.get("samples", 0))
 
 VALIDATION_REPORT_META_KEYS = {
     "name", "original_name", "name_source", "geo_hint", "device_hint",
@@ -791,9 +864,54 @@ def main():
             "status": status,
         })
 
+    # Build a reliability reputation for each stream domain from this run.
+    # Bayesian smoothing prevents a 1/1 domain from instantly scoring 100.
+    domain_scores = build_domain_scores(variant_items)
+    attach_domain_scores(variant_items, domain_scores)
+
+    report_by_url = {
+        canonical(row.get("url", "")): row
+        for row in report
+        if row.get("url")
+    }
+    for item in variant_items:
+        row = report_by_url.get(canonical(item.get("url", "")))
+        if row is not None:
+            row["stream_domain"] = item.get("domain", "")
+            row["domain_score"] = item.get("domain_score")
+            row["domain_samples"] = item.get("domain_samples", 0)
+
+    DOMAIN_SCORES.write_text(
+        json.dumps(
+            {
+                "updated_at_utc": dt.datetime.now(
+                    dt.timezone.utc
+                ).isoformat(),
+                "method": (
+                    "Bayesian-smoothed reliability: verified=1.0, "
+                    "restricted=0.55, unknown=0.25, dead/drm=0; "
+                    "prior=70 over 5 samples"
+                ),
+                "domains": dict(
+                    sorted(
+                        domain_scores.items(),
+                        key=lambda pair: (
+                            -pair[1]["score"],
+                            -pair[1]["samples"],
+                            pair[0],
+                        ),
+                    )
+                ),
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
+
     # Collapse multiple URLs/qualities of the same channel after validation.
-    # Selection order: status -> official/source trust -> resolution -> bitrate
-    # -> segment stability -> CDN quality -> latency.
+    # Selection order: status -> source trust -> domain reliability/confidence
+    # -> resolution -> bitrate -> segment stability -> CDN quality -> latency.
     selected = select_representatives(variant_items)
     selected_source_counts = Counter(
         item.get("source_kind", "unknown")
@@ -972,6 +1090,21 @@ def main():
         "validation_cache_hits": validation_cache_hits,
         "validation_fresh_checks": len(validation_fresh_entries),
         "selected_stream_sources": dict(selected_source_counts),
+        "domain_score_count": len(domain_scores),
+        "top_domain_scores": [
+            {
+                "domain": host,
+                **info,
+            }
+            for host, info in sorted(
+                domain_scores.items(),
+                key=lambda pair: (
+                    -pair[1]["score"],
+                    -pair[1]["samples"],
+                    pair[0],
+                ),
+            )[:20]
+        ],
         "channel_name_sources": dict(name_source_counts),
         "stream_validation_statuses": dict(raw_status_counts),
         "verified_entries": counts["verified"],
