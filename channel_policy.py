@@ -98,14 +98,14 @@ CORE_CHANNELS = [
     {"id": "BabyTV", "name": "BabyTV Türkiye", "category": "Çocuk"},
     {"id": "DisneyJr", "name": "Disney Junior", "category": "Çocuk"},
 
-    # Belgesel / Yaşam
+    # Belgesel
     {"id": "TRTBelgesel", "name": "TRT Belgesel", "category": "Belgesel"},
     {"id": "LoveNature", "name": "Love Nature", "category": "Belgesel"},
     {"id": "HabitatTV", "name": "Habitat TV", "category": "Belgesel"},
     {"id": "YabanTV", "name": "Yaban TV", "category": "Belgesel"},
     {"id": "TGRTBelgesel", "name": "TGRT Belgesel", "category": "Belgesel"},
-    {"id": "DMAX", "name": "DMAX", "category": "Yaşam"},
-    {"id": "TLC", "name": "TLC", "category": "Yaşam"},
+    {"id": "DMAX", "name": "DMAX", "category": "Belgesel"},
+    {"id": "TLC", "name": "TLC", "category": "Belgesel"},
 
     # Müzik
     {"id": "TRTMuzik", "name": "TRT Müzik", "category": "Müzik"},

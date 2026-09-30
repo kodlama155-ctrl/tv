@@ -27,7 +27,6 @@ CATEGORY_ORDER = [
     "Film & Dizi",
     "Çocuk",
     "Belgesel",
-    "Yaşam",
     "Dini",
     "Eğitim",
     "Müzik",
@@ -51,7 +50,6 @@ PLATFORM_PAGES = {
         ],
         "Çocuk": ["https://www.tivibu.com.tr/canli-tv/cocuk"],
         "Belgesel": ["https://www.tivibu.com.tr/canli-tv/belgesel"],
-        "Yaşam": ["https://www.tivibu.com.tr/canli-tv/yasam-stil"],
         "Müzik": ["https://www.tivibu.com.tr/canli-tv/muzik"],
         "Uluslararası": ["https://www.tivibu.com.tr/canli-tv/global"],
     },
@@ -81,12 +79,12 @@ IPTV_CATEGORY_MAP = {
     "documentary": "Belgesel",
     "science": "Belgesel",
     "history": "Belgesel",
-    "lifestyle": "Yaşam",
-    "cooking": "Yaşam",
-    "travel": "Yaşam",
-    "auto": "Yaşam",
-    "outdoor": "Yaşam",
-    "shop": "Yaşam",
+    "lifestyle": "Diğer",
+    "cooking": "Diğer",
+    "travel": "Diğer",
+    "auto": "Diğer",
+    "outdoor": "Diğer",
+    "shop": "Diğer",
     "religious": "Dini",
     "education": "Eğitim",
     "music": "Müzik",
@@ -110,8 +108,8 @@ GROUP_MAP = {
     "children": "Çocuk",
     "belgesel": "Belgesel",
     "documentary": "Belgesel",
-    "yasam": "Yaşam",
-    "lifestyle": "Yaşam",
+    "yasam": "Diğer",
+    "lifestyle": "Diğer",
     "religious": "Dini",
     "religion": "Dini",
     "dini": "Dini",
@@ -683,7 +681,6 @@ def classify(meta: str) -> dict:
         ("Film & Dizi", ["drama", "dizi", "film", "movie", "cinema", "sinema"]),
         ("Çocuk", ["cocuk", "kids", "kid", "cartoon"]),
         ("Belgesel", ["belgesel", "documentary"]),
-        ("Yaşam", ["yasam", "lifestyle"]),
         ("Dini", ["dini", "religious", "diyanet", "kuran", "quran", "islam"]),
         ("Eğitim", ["egitim", "education", "eba", "universite"]),
         ("Müzik", ["muzik", "music", "radyo", "radio"]),
@@ -721,6 +718,12 @@ def classify(meta: str) -> dict:
     identity_fold = fold(identity_text)
     is_diyanet = "diyanet" in identity_fold
 
+    identity_keys = (
+        _label_keys(_tvg_base(meta))
+        | _label_keys(_clean_display_name(name))
+    )
+    is_dmax_or_tlc = bool(identity_keys & {"dmax", "tlc"})
+
     tivibu_ulusal = any(
         platform == "Tivibu" and category == "Ulusal"
         for platform, category, _, _, _ in matches
@@ -729,6 +732,11 @@ def classify(meta: str) -> dict:
         category == "Ulusal"
         for _, category, _, _, _ in matches
     )
+
+    if is_dmax_or_tlc:
+        # EmirTV groups DMAX and TLC with documentary channels.
+        scores["Belgesel"] = max(scores.get("Belgesel", 0), 1000)
+        evidence.append("EmirTV:DMAX-TLC->Belgesel")
 
     if tivibu_ulusal and not is_diyanet:
         scores["Ulusal"] = max(scores.get("Ulusal", 0), 1000)

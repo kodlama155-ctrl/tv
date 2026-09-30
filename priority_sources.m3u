@@ -6,10 +6,10 @@
 #EXTINF:-1 tvg-id="ShowTV.tr@HD" group-title="Ulusal",Show TV
 https://ciner-live.daioncdn.net/showtv/showtv.m3u8
 
-#EXTINF:-1 tvg-id="DMAX.tr@HD" group-title="Yaşam",DMAX
+#EXTINF:-1 tvg-id="DMAX.tr@HD" group-title="Belgesel",DMAX
 https://dogus-live.daioncdn.net/dmax/dmax_720p.m3u8
 
-#EXTINF:-1 tvg-id="TLC.tr@HD" group-title="Yaşam",TLC
+#EXTINF:-1 tvg-id="TLC.tr@HD" group-title="Belgesel",TLC
 https://dogus-live.daioncdn.net/tlc/tlc.m3u8
 
 #EXTINF:-1 tvg-id="TV100.tr@HD" group-title="Haber",TV100
