@@ -53,6 +53,56 @@ jobs:
         if: steps.health.outputs.deep_count != '0'
         run: python deep_probe.py --targets deep_targets.json --output deep_probe.json
 
+      - name: Build unresolved unknown target list
+        if: steps.health.outputs.deep_count != '0'
+        id: unknowns
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          deep = json.loads(Path("deep_probe.json").read_text(encoding="utf-8"))
+          targets = []
+          for row in deep.get("results", []):
+              if row.get("final_current_status") != "unknown":
+                  continue
+              targets.append({
+                  "name": row.get("name"),
+                  "channel_key": row.get("channel_key"),
+                  "meta": "",
+                  "old_url": row.get("url"),
+              })
+
+          Path("unknown_targets.json").write_text(
+              json.dumps(targets, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+
+          with open("$GITHUB_OUTPUT", "a", encoding="utf-8") as out:
+              out.write(f"unknown_count={len(targets)}\n")
+          print(json.dumps({
+              "unknown_count": len(targets),
+              "names": [row["name"] for row in targets],
+          }, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Search only unresolved unknown channels
+        if: steps.unknowns.outputs.unknown_count != '0'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python targeted_discover.py \
+            --targets unknown_targets.json \
+            --output unknown_discovered.m3u \
+            --stats unknown_discovery_stats.json
+
+      - name: Replace unknown channels only with verified alternatives
+        if: steps.unknowns.outputs.unknown_count != '0'
+        run: |
+          python targeted_repair.py \
+            --targets unknown_targets.json \
+            --report unknown_repair_result.json
+
       - name: Search only confirmed dead channels
         if: steps.health.outputs.repair_count != '0'
         env:
@@ -94,10 +144,14 @@ jobs:
                   f"Verified alternatives found: **"
                   f"{data.get('verified_alternative_available_for_unverified', 0)}**"
               )
+          unknown_repair = Path("unknown_repair_result.json")
+          if unknown_repair.exists():
+              data = json.loads(unknown_repair.read_text(encoding="utf-8"))
+              print(f"Unknown-channel verified replacements: **{data.get('repaired', 0)}**")
           repair = Path("repair_result.json")
           if repair.exists():
               data = json.loads(repair.read_text(encoding="utf-8"))
-              print(f"Targeted repairs applied: **{data.get('repaired', 0)}**")
+              print(f"Dead-channel repairs applied: **{data.get('repaired', 0)}**")
           PY
 
       - name: Upload health report
@@ -109,25 +163,29 @@ jobs:
             repair_targets.json
             deep_targets.json
             deep_probe.json
+            unknown_targets.json
+            unknown_discovered.m3u
+            unknown_discovery_stats.json
+            unknown_repair_result.json
             repair_discovered.m3u
             repair_discovery_stats.json
             repair_result.json
           if-no-files-found: ignore
           retention-days: 3
 
-      - name: Commit repaired playlist only
-        if: steps.health.outputs.repair_count != '0'
+      - name: Commit verified targeted replacements
+        if: steps.health.outputs.repair_count != '0' || steps.unknowns.outputs.unknown_count != '0'
         run: |
           git config user.name "emirtv-bot"
           git config user.email "actions@users.noreply.github.com"
 
           if git diff --quiet -- tr.m3u; then
-            echo "No verified replacement found; playlist unchanged"
+            echo "No verified targeted replacement found; playlist unchanged"
             exit 0
           fi
 
           git fetch origin main
           git rebase origin/main
           git add tr.m3u
-          git commit -m "bot: repair dead stream links"
+          git commit -m "bot: repair verified stream links"
           git push origin HEAD:main
