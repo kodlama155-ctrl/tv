@@ -1,14 +1,11 @@
 {
-  "updated_at_utc": "2026-09-30T21:29:17.022768+00:00",
+  "updated_at_utc": "2026-09-30T22:14:46.589076+00:00",
   "catalog_channels": 210,
-  "channels_in_previous_tr": 201,
-  "missing_before_search": 9,
+  "channels_in_previous_tr": 204,
+  "missing_before_search": 6,
   "missing_names": [
     "Kanal 7",
-    "TYT Türk",
-    "Sports TV",
     "On4 TV",
-    "FM TV",
     "Number1 Rap TV",
     "TMB TV",
     "TGRT EU",
@@ -20,55 +17,28 @@
     {
       "names": [
         "Kanal 7",
-        "TYT Türk",
-        "Sports TV",
         "On4 TV",
-        "FM TV",
-        "Number1 Rap TV"
-      ],
-      "query": "\"Kanal 7\" OR \"TYT Türk\" OR \"Sports TV\" OR \"On4 TV\" OR \"FM TV\" OR \"Number1 Rap TV\" extension:m3u",
-      "search_results": 0
-    },
-    {
-      "names": [
+        "Number1 Rap TV",
         "TMB TV",
         "TGRT EU",
         "Kanal 1"
       ],
-      "query": "\"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
-      "search_results": 27
+      "query": "\"Kanal 7\" OR \"On4 TV\" OR \"Number1 Rap TV\" OR \"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
+      "error": "HTTPError"
     }
   ],
   "target_report": [
     {
       "name": "Kanal 7",
       "category": "Ulusal",
-      "files_matched": 10,
-      "candidates": 12
-    },
-    {
-      "name": "TYT Türk",
-      "category": "Ulusal",
-      "files_matched": 10,
-      "candidates": 5
-    },
-    {
-      "name": "Sports TV",
-      "category": "Spor",
-      "files_matched": 9,
-      "candidates": 11
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "On4 TV",
       "category": "Dini",
-      "files_matched": 8,
-      "candidates": 5
-    },
-    {
-      "name": "FM TV",
-      "category": "Dini",
-      "files_matched": 8,
-      "candidates": 7
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Number1 Rap TV",
@@ -79,14 +49,14 @@
     {
       "name": "TMB TV",
       "category": "Uluslararası",
-      "files_matched": 10,
-      "candidates": 10
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TGRT EU",
       "category": "Uluslararası",
-      "files_matched": 9,
-      "candidates": 8
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Kanal 1",
@@ -95,8 +65,8 @@
       "candidates": 0
     }
   ],
-  "files_scanned": 27,
-  "unique_candidates_found": 58,
+  "files_scanned": 0,
+  "unique_candidates_found": 0,
   "errors": 1,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }

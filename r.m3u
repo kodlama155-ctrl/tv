@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="ShowTV.tr@HD" group-title="Ulusal",Show TV
+https://ciner-live.daioncdn.net/showtv/showtv.m3u8
 #EXTINF:-1 group-title="Ulusal" tvg-logo="https://i.imgur.com/0gq9xOm.png",Kanal 7
 #EXTVLCOPT:http-referrer=https://www.kanal7.com/canli-izle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36

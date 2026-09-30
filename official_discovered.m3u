@@ -66,35 +66,11 @@ https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://kdlive.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
 # SOURCE: official:https://www.meltemtv.com.tr/canli-yayin
-# PROBE: unknown response is not HLS
+# PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",Meltem TV
 #EXTVLCOPT:http-referrer=https://www.meltemtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-# SOURCE: official:https://www.nowtv.com.tr/canli-yayin
-# PROBE: verified real media segment verified
-#EXTINF:-1 group-title="Ulusal",NOW TV
-#EXTVLCOPT:http-referrer=https://www.nowtv.com.tr/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=bQEYjHIN2sHEEAIqQxYchQ&e=1790818410
-# SOURCE: official:https://www.nowtv.com.tr/canli-yayin
-# PROBE: verified real media segment verified
-#EXTINF:-1 group-title="Ulusal",NOW TV
-#EXTVLCOPT:http-referrer=https://www.nowtv.com.tr/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=bQEYjHIN2sHEEAIqQxYchQ&e=1790818410
-# SOURCE: official:https://www.showtv.com.tr/canli-yayin
-# PROBE: verified real media segment verified
-#EXTINF:-1 group-title="Ulusal",Show TV
-#EXTVLCOPT:http-referrer=https://www.showtv.com.tr/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&st=RBzhSuGauna0OGld-DJUVA&e=1664766175&tv=1
-# SOURCE: official:https://www.tv8.com.tr/canli-yayin
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Ulusal",TV8
-#EXTVLCOPT:http-referrer=https://www.tv8.com.tr/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://tv8-tb-live.ercdn.net/tv8-geo/playlist.m3u8?st=BzpvJLJ9hDX-H3W1sQWquA&e=1639061641
 # SOURCE: official:https://www.tv8.com.tr/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",TV8

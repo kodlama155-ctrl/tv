@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-09-30T21:35:02.103342+00:00",
+  "updated_at_utc": "2026-09-30T22:13:39.914135+00:00",
   "official_pages": 38,
   "pages_ok": 34,
-  "pages_with_candidates": 12,
-  "raw_candidates": 17,
-  "accepted_unique_candidates": 17,
+  "pages_with_candidates": 10,
+  "raw_candidates": 13,
+  "accepted_unique_candidates": 13,
   "probe_statuses": {
-    "restricted": 5,
-    "verified": 10,
-    "unknown": 2
+    "verified": 8,
+    "restricted": 4,
+    "unknown": 1
   },
   "sources": [
     {
@@ -239,12 +239,9 @@
       "page": "https://www.nowtv.com.tr/canli-yayin",
       "status": "ok",
       "page_final_url": "https://www.nowtv.com.tr/canli-yayin",
-      "page_candidates": 2,
+      "page_candidates": 0,
       "aux_scanned": 2,
-      "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=bQEYjHIN2sHEEAIqQxYchQ&e=1790818410",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=bQEYjHIN2sHEEAIqQxYchQ&e=1790818410"
-      ],
+      "candidates": [],
       "identity_rejected_candidates": 0
     },
     {
@@ -252,12 +249,10 @@
       "page": "https://www.showtv.com.tr/canli-yayin",
       "status": "ok",
       "page_final_url": "https://www.showtv.com.tr/canli-yayin",
-      "page_candidates": 2,
+      "page_candidates": 0,
       "aux_scanned": 2,
-      "candidates": [
-        "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&st=RBzhSuGauna0OGld-DJUVA&e=1664766175&tv=1"
-      ],
-      "identity_rejected_candidates": 1
+      "candidates": [],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "Star TV",
@@ -358,10 +353,9 @@
       "page": "https://www.tv8.com.tr/canli-yayin",
       "status": "ok",
       "page_final_url": "https://www.tv8.com.tr/canli-yayin",
-      "page_candidates": 2,
+      "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://tv8-tb-live.ercdn.net/tv8-geo/playlist.m3u8?st=BzpvJLJ9hDX-H3W1sQWquA&e=1639061641",
         "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3"
       ],
       "identity_rejected_candidates": 0

@@ -1,13 +1,16 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="TYTTurk.tr@SD" tvg-logo="https://tytturk.com/upload/tyt-logo.png" group-title="Ulusal",TYT Turk
+https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
+#EXTINF:-1 group-title="Ulusal",Meltem TV
+#EXTVLCOPT:http-referrer=https://www.meltemtv.com.tr/canli-yayin
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
 https://mn-nl.mncdn.com/blutv_trt4k/live.m3u8
 #EXTINF:-1 tvg-id="AkitTV.tr@HD" tvg-logo="https://i.ibb.co/MBwzD2b/akit-tv.png" group-title="Haber",AKİT TV
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
 #EXTINF:-1 tvg-id="GZT.tr" group-title="Haber" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/GZT_logo.svg/960px-GZT_logo.svg.png",GZT
 https://mn-nl.mncdn.com/gzttv/gzttv/playlist.m3u8
-#EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber",TELE1
-#EXTVLCOPT:http-user-agent=Lavf53.32.100
-https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
 #EXTINF:-1 tvg-id="KRT.tr" group-title="Haber",KRT TV
 #EXTVLCOPT:http-user-agent=Lavf53.32.100
 https://krtdvr.blutv.com/blutv_krt_live_dvr/live_720p4350000kbps/index.m3u8
@@ -15,6 +18,8 @@ https://krtdvr.blutv.com/blutv_krt_live_dvr/live_720p4350000kbps/index.m3u8
 https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Spor",TRT 3 Spor
 https://tv-trt3.live.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="SportsTV.tr@SD" tvg-logo="https://i.imgur.com/tGTVcVe.jpg" group-title="Spor",Sports TV
+https://live.sportstv.com.tr/hls/low/sportstv.m3u8
 #EXTINF:-1 tvg-id="HabitatTV.tr@HD" tvg-logo="https://wmxznm9feqh3.merlincdn.net/assets/f43178e5-e366-4ca5-80ce-30d900e2835f.png" group-title="Belgesel",Habitat TV
 #EXTVLCOPT:http-referrer=https://habitattv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -27,18 +32,14 @@ https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
 #EXTVLCOPT:http-referrer=https://www.yabantv.com/broadcast/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
-#EXTINF:-1 group-title="Dini" tvg-logo="https://i.imgur.com/qGRa1KI.png",On4 TV
-http://yayin.netradyom.com:1935/live/on4/HasBahCa.m3u8
+#EXTINF:-1 tvg-id="SercemTV.tr@HD" tvg-logo="https://sercemtv.com.tr/sercemlogo.jpg" group-title="Dini",Sercem TV
+https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 #EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik",Dream TV
 https://mn-nl.mncdn.com/blutv_dream/smil:dream_hd.smil/chunklist.m3u8
-#EXTINF:-1 tvg-id="TMBTV.tr" group-title="Uluslararası",TMB TV
-https://ankara.tvizlehd.com/live/tmbtv.m3u8
 #EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/kb165Ot.png",Euro Star
 https://xrklj56s.rocketcdn.com/eurostar.stream_720p/chunklist.m3u8
 #EXTINF:-1 tvg-id="FinestTV.de@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/1uoP10V.png",Finest TV
 http://media.finest.tv/hls/live.m3u8
-#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
-https://canli.ensonhaber.com/tr/tgrteu/index.m3u8
 #EXTINF:-1 tvg-id="BizimevTV.tr@SD" tvg-logo="https://i.imgur.com/eJa6sFY.png" group-title="Diğer",Bizimev TV
 https://mn-nl.mncdn.com/blutv_bizimev/bizimev_sd.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="SSport.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="Diğer",S Sport
