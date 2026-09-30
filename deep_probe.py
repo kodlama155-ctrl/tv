@@ -8,6 +8,7 @@ from collections import Counter
 from pathlib import Path
 
 from channel_policy import SOURCE_PRIORITY, channel_key, split_extinf
+from checker import is_known_false_identity
 from hls_validator import validate_hls
 
 ROOT = Path(__file__).resolve().parent
@@ -173,6 +174,8 @@ def collect_alternatives(targets):
 
     for filename, kind in LOCAL_SOURCES:
         for row in parse_playlist(ROOT / filename, kind):
+            if is_known_false_identity(row):
+                continue
             if row["channel_key"] not in wanted:
                 continue
             if (row["channel_key"], canonical(row["url"])) in current_urls:
