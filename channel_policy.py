@@ -314,13 +314,32 @@ def _latency_score(item: dict) -> int:
     return -sum(values)
 
 
-def representative_score(item: dict) -> tuple:
-    status = item.get("status", "unknown")
-    status_score = STATUS_PRIORITY.get(status, 2)
-    source_score = SOURCE_PRIORITY.get(
+def _durable_source_score(item: dict) -> int:
+    score = SOURCE_PRIORITY.get(
         item.get("source_kind", "unknown"),
         SOURCE_PRIORITY["unknown"],
     )
+
+    # Signed Turkuvaz-style URLs are valid at probe time but expire later.
+    # Prefer a durable verified source for playlists consumed by devices.
+    try:
+        query = urllib.parse.parse_qs(
+            urllib.parse.urlsplit(item.get("url", "")).query
+        )
+    except Exception:
+        query = {}
+
+    keys = {str(key).lower() for key in query}
+    if "st" in keys and "e" in keys:
+        score -= 45
+
+    return score
+
+
+def representative_score(item: dict) -> tuple:
+    status = item.get("status", "unknown")
+    status_score = STATUS_PRIORITY.get(status, 2)
+    source_score = _durable_source_score(item)
     quality = _resolution_height(item)
 
     try:

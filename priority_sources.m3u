@@ -118,3 +118,15 @@ https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 #EXTVLCOPT:http-referrer=https://www.fenerbahce.org/fenerbahcetv/canliyayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
+
+
+# --- Durable Turkuvaz device sources ---
+
+# ATV stable tokenless Turknet/ERCDN source.
+#EXTINF:-1 tvg-id="ATV.tr@HD" group-title="Ulusal",ATV
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
+
+# A Spor stable tokenless Turknet/ERCDN source.
+#EXTINF:-1 tvg-id="ASpor.tr@HD" group-title="Spor",A Spor
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
+
