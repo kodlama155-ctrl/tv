@@ -159,7 +159,12 @@ jobs:
 
       - name: Validate streams and build playlists
         if: steps.update_mode.outputs.mode == 'full' || steps.update_mode.outputs.mode == 'validate'
-        run: python checker.py
+        run: |
+          if [ "${{ steps.update_mode.outputs.mode }}" = "validate" ]; then
+            CHECKER_REUSE_VALIDATION=1 python checker.py
+          else
+            python checker.py
+          fi
 
       - name: Commit changes
         run: |
