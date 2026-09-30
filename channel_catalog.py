@@ -144,6 +144,7 @@ CHANNELS = [
     {"id": "Sat7Turk.cy@SD", "name": "Sat 7 Turk", "category": "Uluslararası"},
     {"id": "WestAzerbaijanTV.ir@SD", "name": "West Azerbaijan TV", "category": "Uluslararası"},
     {"id": "YOLTV.de@SD", "name": "YOL TV", "category": "Uluslararası"},
+    {"id": "FinestTV.de@SD", "name": "Finest TV", "category": "Uluslararası"},
     {"id": "TV4.tr@SD", "name": "TV4", "category": "Ulusal"},
     {"id": "Tivi6.tr@SD", "name": "Tivi 6", "category": "Ulusal"},
     {"id": "TRTTurk.tr@SD", "name": "TRT Türk", "category": "Uluslararası"},
