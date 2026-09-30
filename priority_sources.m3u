@@ -24,13 +24,13 @@ https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8
 #EXTINF:-1 tvg-id="UlkeTV.tr@HD" group-title="Haber",Ülke TV
 https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8
 
-#EXTINF:-1 tvg-id="AkitTV.tr@HD" group-title="Haber",Akit TV
+#EXTINF:-1 tvg-id="AkitTV.tr@HD" tvg-logo="https://i.imgur.com/8KkK9Xx.png" group-title="Haber",Akit TV [Device-fallback]
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
 
 #EXTINF:-1 tvg-id="CNNTurk.tr@HD" group-title="Haber",CNN Türk
 https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8
 
-#EXTINF:-1 tvg-id="CNNTurk.tr@HD" group-title="Haber",CNN Türk
+#EXTINF:-1 tvg-id="CNNTurk.tr@HD" tvg-logo="https://i.imgur.com/TPAwEBC.png" group-title="Haber",CNN Türk [Device-fallback]
 https://ythls.kekikakademi.org/youtube/channel/UCV6zcRug6Hqp1UX_FdyUeBg.m3u8
 
 #EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber",Sözcü TV
@@ -51,7 +51,7 @@ https://ensonhaber-live.ercdn.net/tv100/tv100.m3u8
 #EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber",Tele1
 https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
 
-#EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber",Sözcü TV
+#EXTINF:-1 tvg-id="SozcuTV.tr@HD" tvg-logo="https://www.evrensel.net/upload/dosya/231375.jpg" group-title="Haber",Sözcü TV [Device-fallback]
 https://ythls.kekikakademi.org/youtube/channel/UCOulx_rep5O4i9y6AyDqVvw.m3u8
 
 #EXTINF:-1 tvg-id="Teve2.tr@HD" group-title="Ulusal",Teve2
@@ -146,7 +146,7 @@ https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 
 # A Haber stable tokenless Turknet/ERCDN source.
-#EXTINF:-1 tvg-id="AHaber.tr@HD" group-title="Haber",A Haber
+#EXTINF:-1 tvg-id="AHaber.tr@HD" tvg-logo="https://i.imgur.com/f1Z6Jmg.png" group-title="Haber",A Haber
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 
 # A Spor stable tokenless Turknet/ERCDN source.
@@ -154,12 +154,12 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 
 # A Para stable tokenless Turknet/ERCDN source.
-#EXTINF:-1 tvg-id="APara.tr@HD" group-title="Haber",A Para
+#EXTINF:-1 tvg-id="APara.tr@HD" tvg-logo="https://i.imgur.com/5nJQk1A.png" group-title="Haber",A Para
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/apara/apara.m3u8
 
 # A News official tokenless CDN. GitHub runner receives 403; Turkey devices
 # use it instead of the expiring st/e URL.
-#EXTINF:-1 tvg-id="ANews.tr@HD" group-title="Haber",A News [Device-fallback]
+#EXTINF:-1 tvg-id="ANews.tr@HD" tvg-logo="https://i.imgur.com/zoV1YV8.png" group-title="Haber",A News [Device-fallback]
 #EXTVLCOPT:http-referrer=https://www.anews.com.tr/webtv/live-broadcast
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8
@@ -206,3 +206,24 @@ https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
 #EXTVLCOPT:http-referrer=https://www.tgrtbelgesel.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
+
+
+# --- Haber completion ---
+
+# BengüTürk: verified public stream; Tivibu currently carries the channel
+# alongside the national news lineup.
+#EXTINF:-1 tvg-id="BenguturkTV.tr@HD" tvg-logo="https://i.ibb.co/0MHPk8y/benguturk.png" group-title="Haber",BengüTürk
+https://tv.ensonhaber.com/benguturk/benguturk.m3u8
+
+# Ekol TV: current public ERCDN stream.
+#EXTINF:-1 tvg-id="EkolTV.tr@HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/ekol-tv.png" group-title="Haber",Ekol TV
+https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
+
+# TRT Haber metadata/logo on the official stream.
+#EXTINF:-1 tvg-id="TRTHaber.tr@HD" tvg-logo="https://i.imgur.com/1Z1Z1Z1.png" group-title="Haber",TRT Haber
+https://tv-trthaber.medya.trt.com.tr/master.m3u8
+
+# EKOTÜRK metadata/logo on the verified official browser-discovered stream.
+#EXTINF:-1 tvg-id="Ekoturk.tr@HD" tvg-logo="https://i.imgur.com/9J4uF7V.png" group-title="Haber",EKOTÜRK
+https://cdn.ekoturk.net/hls/master.m3u8
+

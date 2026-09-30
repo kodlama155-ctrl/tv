@@ -74,6 +74,7 @@ CORE_CHANNELS = [
     {"id": "BloombergHT", "name": "Bloomberg HT", "category": "Haber"},
     {"id": "Ekoturk", "name": "Ekotürk", "category": "Haber"},
     {"id": "BenguturkTV", "name": "BengüTürk", "category": "Haber"},
+    {"id": "EkolTV", "name": "Ekol TV", "category": "Haber"},
 
     # Spor
     {"id": "TRTSpor", "name": "TRT Spor", "category": "Spor"},
