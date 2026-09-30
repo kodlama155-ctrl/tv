@@ -40,6 +40,10 @@ CREDENTIAL_PATH_RE = re.compile(
     r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
     re.I,
 )
+SUSPICIOUS_IPTV_PATH_RE = re.compile(
+    r"/iptv/[A-Za-z0-9_-]{8,}/\\d{2,}/",
+    re.I,
+)
 
 M3U8_RE = re.compile(
     r'https?://[^\s"\'<>]+?\.m3u8(?:\?[^\s"\'<>]*)?',
@@ -246,6 +250,8 @@ def safe_candidate(url: str) -> bool:
     if parsed.username or parsed.password:
         return False
     if CREDENTIAL_PATH_RE.search(parsed.path):
+        return False
+    if SUSPICIOUS_IPTV_PATH_RE.search(parsed.path):
         return False
 
     query_keys = {
