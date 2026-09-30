@@ -106,3 +106,23 @@ https://trt2.blutv.com/blutv_trt2/live.m3u8
 #EXTVLCOPT:http-user-agent=Lavf53.32.100
 https://mn-nl.mncdn.com/blutv_trt2/live.m3u8
 
+
+# --- Sports targeted probe ---
+
+# FB TV public candidates.
+#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
+https://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
+http://stream.tvcdn.net/spor/fb-tv.m3u8
+
+# TRT 3 / TRT 3 Spor public TRT candidates.
+#EXTINF:-1 tvg-id="TRT3.tr@SD" group-title="Spor",TRT 3
+https://tv-trt3.live.trt.com.tr/master.m3u8
+
+#EXTINF:-1 tvg-id="TRT3.tr@SD" group-title="Spor",TRT 3
+https://tv-trt3.medya.trt.com.tr/master.m3u8
+
+#EXTINF:-1 tvg-id="TRT3.tr@SD" group-title="Spor",TRT 3
+https://tv-trt3.medya.trt.com.tr/master_720.m3u8
+
