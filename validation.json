@@ -766,6 +766,48 @@
     "http_code": 404
   },
   {
+    "name": "ATV",
+    "original_name": "ATV",
+    "name_source": "turksat",
+    "geo_hint": false,
+    "device_hint": false,
+    "tvg_id": "",
+    "channel_key": "atv",
+    "category": "Ulusal",
+    "category_source": "emirtv-catalog",
+    "category_votes": {
+      "Ulusal": 1000
+    },
+    "category_evidence": [
+      "EmirTV:authoritative-catalog"
+    ],
+    "order_known": true,
+    "order_score": 10.0,
+    "order_sources": 2,
+    "order_evidence": [
+      {
+        "platform": "Tivibu",
+        "position": 2,
+        "confidence": "catalog",
+        "url": "https://www.tivibu.com.tr/canli-tv/ulusal"
+      },
+      {
+        "platform": "TV+",
+        "position": 18,
+        "confidence": "global-catalog",
+        "url": "https://tvplus.com.tr/canli-tv"
+      }
+    ],
+    "url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=p9IfQcDNmRGA2d4JdTxWyw&e=1790831665",
+    "stream_source_kind": "official_api",
+    "stream_source_name": "turkuvaz_discovered.m3u",
+    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "http_referrer": "https://www.atv.com.tr/canli-yayin",
+    "status": "restricted",
+    "reason": "manifest HTTP 403",
+    "http_code": 403
+  },
+  {
     "name": "Show TV",
     "original_name": "Show TV",
     "name_source": "turksat",
@@ -1486,6 +1528,48 @@
     "http_code": 403
   },
   {
+    "name": "A Para",
+    "original_name": "A Para",
+    "name_source": "digiturk",
+    "geo_hint": false,
+    "device_hint": false,
+    "tvg_id": "",
+    "channel_key": "apara",
+    "category": "Haber",
+    "category_source": "emirtv-catalog",
+    "category_votes": {
+      "Haber": 1000
+    },
+    "category_evidence": [
+      "EmirTV:authoritative-catalog"
+    ],
+    "order_known": true,
+    "order_score": 29.5,
+    "order_sources": 2,
+    "order_evidence": [
+      {
+        "platform": "Tivibu",
+        "position": 11,
+        "confidence": "catalog",
+        "url": "https://www.tivibu.com.tr/canli-tv/haber"
+      },
+      {
+        "platform": "TV+",
+        "position": 48,
+        "confidence": "global-catalog",
+        "url": "https://tvplus.com.tr/canli-tv"
+      }
+    ],
+    "url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=ocj7lRqrOKasYHFes8IEiw&e=1790831673",
+    "stream_source_kind": "official_api",
+    "stream_source_name": "turkuvaz_discovered.m3u",
+    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "http_referrer": "https://www.apara.com.tr/canli-yayin",
+    "status": "restricted",
+    "reason": "manifest HTTP 403",
+    "http_code": 403
+  },
+  {
     "name": "Ülke TV",
     "original_name": "Ulke TV",
     "name_source": "turksat",
@@ -1557,6 +1641,42 @@
     "url": "https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8",
     "stream_source_kind": "priority",
     "stream_source_name": "priority_sources.m3u",
+    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "http_referrer": "https://www.anews.com.tr/webtv/live-broadcast",
+    "status": "restricted",
+    "reason": "manifest HTTP 403",
+    "http_code": 403
+  },
+  {
+    "name": "A News",
+    "original_name": "A News",
+    "name_source": "official-fallback",
+    "geo_hint": false,
+    "device_hint": false,
+    "tvg_id": "",
+    "channel_key": "anews",
+    "category": "Haber",
+    "category_source": "emirtv-catalog",
+    "category_votes": {
+      "Haber": 1000
+    },
+    "category_evidence": [
+      "EmirTV:authoritative-catalog"
+    ],
+    "order_known": true,
+    "order_score": 104.0,
+    "order_sources": 1,
+    "order_evidence": [
+      {
+        "platform": "TV+",
+        "position": 104,
+        "confidence": "global-catalog",
+        "url": "https://tvplus.com.tr/canli-tv"
+      }
+    ],
+    "url": "https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=2yhKSt6bHN7svE42PdJFUw&e=1790831675",
+    "stream_source_kind": "official_api",
+    "stream_source_name": "turkuvaz_discovered.m3u",
     "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "http_referrer": "https://www.anews.com.tr/webtv/live-broadcast",
     "status": "restricted",
@@ -1701,6 +1821,48 @@
     "stream_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
     "http_user_agent": null,
     "http_referrer": null,
+    "status": "restricted",
+    "reason": "manifest HTTP 403",
+    "http_code": 403
+  },
+  {
+    "name": "A Spor",
+    "original_name": "A Spor",
+    "name_source": "turksat",
+    "geo_hint": false,
+    "device_hint": false,
+    "tvg_id": "",
+    "channel_key": "aspor",
+    "category": "Spor",
+    "category_source": "emirtv-catalog",
+    "category_votes": {
+      "Spor": 1000
+    },
+    "category_evidence": [
+      "EmirTV:authoritative-catalog"
+    ],
+    "order_known": true,
+    "order_score": 35.5,
+    "order_sources": 2,
+    "order_evidence": [
+      {
+        "platform": "Tivibu",
+        "position": 7,
+        "confidence": "catalog",
+        "url": "https://www.tivibu.com.tr/canli-tv/spor"
+      },
+      {
+        "platform": "TV+",
+        "position": 64,
+        "confidence": "global-catalog",
+        "url": "https://tvplus.com.tr/canli-tv"
+      }
+    ],
+    "url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=yPAY9zQUa2yWA-GAAknG8Q&e=1790831670",
+    "stream_source_kind": "official_api",
+    "stream_source_name": "turkuvaz_discovered.m3u",
+    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "http_referrer": "https://www.aspor.com.tr/webtv/canli-yayin",
     "status": "restricted",
     "reason": "manifest HTTP 403",
     "http_code": 403
@@ -2220,6 +2382,42 @@
     "url": "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8",
     "stream_source_kind": "official_html",
     "stream_source_name": "official_discovered.m3u",
+    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "http_referrer": "https://www.vavtv.com.tr/canli-yayin",
+    "status": "restricted",
+    "reason": "manifest HTTP 403",
+    "http_code": 403
+  },
+  {
+    "name": "VAV TV",
+    "original_name": "Vav TV",
+    "name_source": "digiturk",
+    "geo_hint": false,
+    "device_hint": false,
+    "tvg_id": "",
+    "channel_key": "vavtv",
+    "category": "Dini",
+    "category_source": "emirtv-catalog",
+    "category_votes": {
+      "Dini": 1000
+    },
+    "category_evidence": [
+      "EmirTV:authoritative-catalog"
+    ],
+    "order_known": true,
+    "order_score": 35.0,
+    "order_sources": 1,
+    "order_evidence": [
+      {
+        "platform": "TV+",
+        "position": 35,
+        "confidence": "global-catalog",
+        "url": "https://tvplus.com.tr/canli-tv"
+      }
+    ],
+    "url": "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=2_fuvnMMqMQnRu08wjwn_w&e=1790831679",
+    "stream_source_kind": "official_api",
+    "stream_source_name": "turkuvaz_discovered.m3u",
     "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "http_referrer": "https://www.vavtv.com.tr/canli-yayin",
     "status": "restricted",
@@ -6235,56 +6433,6 @@
   },
   {
     "name": "ATV",
-    "original_name": "ATV",
-    "name_source": "turksat",
-    "geo_hint": false,
-    "device_hint": false,
-    "tvg_id": "",
-    "channel_key": "atv",
-    "category": "Ulusal",
-    "category_source": "emirtv-catalog",
-    "category_votes": {
-      "Ulusal": 1000
-    },
-    "category_evidence": [
-      "EmirTV:authoritative-catalog"
-    ],
-    "order_known": true,
-    "order_score": 10.0,
-    "order_sources": 2,
-    "order_evidence": [
-      {
-        "platform": "Tivibu",
-        "position": 2,
-        "confidence": "catalog",
-        "url": "https://www.tivibu.com.tr/canli-tv/ulusal"
-      },
-      {
-        "platform": "TV+",
-        "position": 18,
-        "confidence": "global-catalog",
-        "url": "https://tvplus.com.tr/canli-tv"
-      }
-    ],
-    "url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=p9IfQcDNmRGA2d4JdTxWyw&e=1790831665",
-    "stream_source_kind": "official_api",
-    "stream_source_name": "turkuvaz_discovered.m3u",
-    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "http_referrer": "https://www.atv.com.tr/canli-yayin",
-    "resolution": "1920x1080",
-    "bandwidth": 2000000,
-    "manifest_latency_ms": 394,
-    "status": "verified",
-    "reason": "real media segment verified",
-    "segment_latency_ms": 817,
-    "segment_probes": 1,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 4
-  },
-  {
-    "name": "ATV",
     "original_name": "ATV (360p)",
     "name_source": "turksat",
     "geo_hint": false,
@@ -6372,10 +6520,10 @@
     "http_referrer": "https://www.showtv.com.tr/canli-yayin",
     "resolution": "1920x1080",
     "bandwidth": 2200000,
-    "manifest_latency_ms": 478,
+    "manifest_latency_ms": 603,
     "status": "verified",
     "reason": "real media segment verified",
-    "segment_latency_ms": 883,
+    "segment_latency_ms": 1622,
     "segment_probes": 1,
     "encrypted": false,
     "vod": false,
@@ -6718,10 +6866,10 @@
     "http_referrer": "https://www.nowtv.com.tr/canli-yayin",
     "resolution": "1280x720",
     "bandwidth": 1050000,
-    "manifest_latency_ms": 522,
+    "manifest_latency_ms": 890,
     "status": "verified",
     "reason": "real media segment verified",
-    "segment_latency_ms": 848,
+    "segment_latency_ms": 1516,
     "segment_probes": 1,
     "encrypted": false,
     "vod": false,
@@ -6768,10 +6916,10 @@
     "http_referrer": "https://www.nowtv.com.tr/canli-yayin",
     "resolution": "1280x720",
     "bandwidth": 1050000,
-    "manifest_latency_ms": 709,
+    "manifest_latency_ms": 834,
     "status": "verified",
     "reason": "real media segment verified",
-    "segment_latency_ms": 1099,
+    "segment_latency_ms": 1667,
     "segment_probes": 1,
     "encrypted": false,
     "vod": false,
@@ -7883,10 +8031,10 @@
     "http_referrer": "https://www.ahaber.com.tr/video/canli-yayin",
     "resolution": "1536x864",
     "bandwidth": 1200000,
-    "manifest_latency_ms": 470,
+    "manifest_latency_ms": 906,
     "status": "verified",
     "reason": "real media segment verified",
-    "segment_latency_ms": 830,
+    "segment_latency_ms": 1424,
     "segment_probes": 1,
     "encrypted": false,
     "vod": false,
@@ -8287,56 +8435,6 @@
     "status": "verified",
     "reason": "real media segment verified",
     "segment_latency_ms": 1280,
-    "segment_probes": 1,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 4
-  },
-  {
-    "name": "A Para",
-    "original_name": "A Para",
-    "name_source": "digiturk",
-    "geo_hint": false,
-    "device_hint": false,
-    "tvg_id": "",
-    "channel_key": "apara",
-    "category": "Haber",
-    "category_source": "emirtv-catalog",
-    "category_votes": {
-      "Haber": 1000
-    },
-    "category_evidence": [
-      "EmirTV:authoritative-catalog"
-    ],
-    "order_known": true,
-    "order_score": 29.5,
-    "order_sources": 2,
-    "order_evidence": [
-      {
-        "platform": "Tivibu",
-        "position": 11,
-        "confidence": "catalog",
-        "url": "https://www.tivibu.com.tr/canli-tv/haber"
-      },
-      {
-        "platform": "TV+",
-        "position": 48,
-        "confidence": "global-catalog",
-        "url": "https://tvplus.com.tr/canli-tv"
-      }
-    ],
-    "url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=ocj7lRqrOKasYHFes8IEiw&e=1790831673",
-    "stream_source_kind": "official_api",
-    "stream_source_name": "turkuvaz_discovered.m3u",
-    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "http_referrer": "https://www.apara.com.tr/canli-yayin",
-    "resolution": "1280x720",
-    "bandwidth": 1200000,
-    "manifest_latency_ms": 582,
-    "status": "verified",
-    "reason": "real media segment verified",
-    "segment_latency_ms": 795,
     "segment_probes": 1,
     "encrypted": false,
     "vod": false,
@@ -9124,50 +9222,6 @@
     "variants": 1
   },
   {
-    "name": "A News",
-    "original_name": "A News",
-    "name_source": "official-fallback",
-    "geo_hint": false,
-    "device_hint": false,
-    "tvg_id": "",
-    "channel_key": "anews",
-    "category": "Haber",
-    "category_source": "emirtv-catalog",
-    "category_votes": {
-      "Haber": 1000
-    },
-    "category_evidence": [
-      "EmirTV:authoritative-catalog"
-    ],
-    "order_known": true,
-    "order_score": 104.0,
-    "order_sources": 1,
-    "order_evidence": [
-      {
-        "platform": "TV+",
-        "position": 104,
-        "confidence": "global-catalog",
-        "url": "https://tvplus.com.tr/canli-tv"
-      }
-    ],
-    "url": "https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=2yhKSt6bHN7svE42PdJFUw&e=1790831675",
-    "stream_source_kind": "official_api",
-    "stream_source_name": "turkuvaz_discovered.m3u",
-    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "http_referrer": "https://www.anews.com.tr/webtv/live-broadcast",
-    "resolution": "1280x720",
-    "bandwidth": 1200000,
-    "manifest_latency_ms": 577,
-    "status": "verified",
-    "reason": "real media segment verified",
-    "segment_latency_ms": 857,
-    "segment_probes": 1,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 4
-  },
-  {
     "name": "Almahriah TV",
     "original_name": "Almahriah TV (576p)",
     "name_source": "cleaned-source",
@@ -9506,56 +9560,6 @@
     "status": "verified",
     "reason": "real media segment verified",
     "segment_latency_ms": 1090,
-    "segment_probes": 1,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 4
-  },
-  {
-    "name": "A Spor",
-    "original_name": "A Spor",
-    "name_source": "turksat",
-    "geo_hint": false,
-    "device_hint": false,
-    "tvg_id": "",
-    "channel_key": "aspor",
-    "category": "Spor",
-    "category_source": "emirtv-catalog",
-    "category_votes": {
-      "Spor": 1000
-    },
-    "category_evidence": [
-      "EmirTV:authoritative-catalog"
-    ],
-    "order_known": true,
-    "order_score": 35.5,
-    "order_sources": 2,
-    "order_evidence": [
-      {
-        "platform": "Tivibu",
-        "position": 7,
-        "confidence": "catalog",
-        "url": "https://www.tivibu.com.tr/canli-tv/spor"
-      },
-      {
-        "platform": "TV+",
-        "position": 64,
-        "confidence": "global-catalog",
-        "url": "https://tvplus.com.tr/canli-tv"
-      }
-    ],
-    "url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=yPAY9zQUa2yWA-GAAknG8Q&e=1790831670",
-    "stream_source_kind": "official_api",
-    "stream_source_name": "turkuvaz_discovered.m3u",
-    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "http_referrer": "https://www.aspor.com.tr/webtv/canli-yayin",
-    "resolution": "1920x1080",
-    "bandwidth": 2200000,
-    "manifest_latency_ms": 733,
-    "status": "verified",
-    "reason": "real media segment verified",
-    "segment_latency_ms": 952,
     "segment_probes": 1,
     "encrypted": false,
     "vod": false,
@@ -10750,50 +10754,6 @@
     "encrypted": false,
     "vod": false,
     "http_code": 200
-  },
-  {
-    "name": "VAV TV",
-    "original_name": "Vav TV",
-    "name_source": "digiturk",
-    "geo_hint": false,
-    "device_hint": false,
-    "tvg_id": "",
-    "channel_key": "vavtv",
-    "category": "Dini",
-    "category_source": "emirtv-catalog",
-    "category_votes": {
-      "Dini": 1000
-    },
-    "category_evidence": [
-      "EmirTV:authoritative-catalog"
-    ],
-    "order_known": true,
-    "order_score": 35.0,
-    "order_sources": 1,
-    "order_evidence": [
-      {
-        "platform": "TV+",
-        "position": 35,
-        "confidence": "global-catalog",
-        "url": "https://tvplus.com.tr/canli-tv"
-      }
-    ],
-    "url": "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=2_fuvnMMqMQnRu08wjwn_w&e=1790831679",
-    "stream_source_kind": "official_api",
-    "stream_source_name": "turkuvaz_discovered.m3u",
-    "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "http_referrer": "https://www.vavtv.com.tr/canli-yayin",
-    "resolution": "1280x720",
-    "bandwidth": 1200000,
-    "manifest_latency_ms": 660,
-    "status": "verified",
-    "reason": "real media segment verified",
-    "segment_latency_ms": 747,
-    "segment_probes": 1,
-    "encrypted": false,
-    "vod": false,
-    "http_code": 200,
-    "variants": 4
   },
   {
     "name": "TRT Diyanet Cocuk",
