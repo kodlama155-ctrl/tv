@@ -1,14 +1,16 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
-  "core_channels_total": 56,
-  "core_channels_verified": 45,
+  "core_channels_total": 58,
+  "core_channels_verified": 44,
   "core_channels_geo_restricted": 6,
-  "core_channels_not_verified": 11,
+  "core_channels_device_restricted": 1,
+  "core_channels_not_verified": 14,
   "status_counts": {
-    "verified": 45,
+    "verified": 44,
     "geo-restricted": 6,
-    "restricted": 4,
-    "unknown": 1
+    "restricted": 5,
+    "unknown": 2,
+    "device-restricted": 1
   },
   "missing_channels": [
     {
@@ -33,6 +35,13 @@
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
     },
     {
+      "name": "Tele1",
+      "expected_category": "Haber",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
+    },
+    {
       "name": "TRT Spor",
       "expected_category": "Spor",
       "status": "geo-restricted",
@@ -47,11 +56,25 @@
       "candidate_url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor"
     },
     {
+      "name": "FB TV",
+      "expected_category": "Spor",
+      "status": "device-restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8"
+    },
+    {
       "name": "FX",
       "expected_category": "Film & Dizi",
       "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
+    },
+    {
+      "name": "TRT Çocuk",
+      "expected_category": "Çocuk",
+      "status": "restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "BabyTV Türkiye",

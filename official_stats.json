@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-09-30T06:39:15.507426+00:00",
-  "official_pages": 21,
+  "updated_at_utc": "2026-09-30T10:29:29.183431+00:00",
+  "official_pages": 22,
   "pages_ok": 19,
   "pages_with_candidates": 10,
   "raw_candidates": 15,
   "accepted_unique_candidates": 15,
   "probe_statuses": {
-    "verified": 11,
-    "restricted": 3,
+    "verified": 10,
+    "restricted": 4,
     "unknown": 1
   },
   "sources": [
@@ -92,6 +92,16 @@
       "identity_rejected_candidates": 0
     },
     {
+      "name": "FB TV",
+      "page": "https://www.fenerbahce.org/fenerbahcetv/canliyayin",
+      "status": "page_error",
+      "page_final_url": null,
+      "page_candidates": 0,
+      "aux_scanned": 0,
+      "candidates": [],
+      "error": "HTTPError"
+    },
+    {
       "name": "Habertürk",
       "page": "https://www.haberturk.com/canliyayin",
       "status": "ok",
@@ -138,8 +148,8 @@
       "page_candidates": 2,
       "aux_scanned": 2,
       "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=fCIWLsChgeuu4ls1MXhXkg&e=1790764715",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=fCIWLsChgeuu4ls1MXhXkg&e=1790764715"
+        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=5-dZsqvhheI1Sg5K3_8BXA&e=1790778528",
+        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=5-dZsqvhheI1Sg5K3_8BXA&e=1790778528"
       ],
       "identity_rejected_candidates": 0
     },
