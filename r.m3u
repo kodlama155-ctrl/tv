@@ -9,6 +9,8 @@ https://tv-trt2.medya.trt.com.tr/master.m3u8
 https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8
 #EXTINF:-1 tvg-id="AnadoluAgency.tr@SD" tvg-logo="https://i.imgur.com/dWElJll.png" group-title="Haber",AA Live
 https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="FinansTurkTV.tr@SD" tvg-logo="https://i.ibb.co/wBwmB1T/iY0osc7.png" group-title="Haber",Finans Turk TV
+https://trs1.aynaott.com/Finans/index.m3u8
 #EXTINF:-1 tvg-id="KudusTV.tr@SD" tvg-logo="https://i.imgur.com/lwRA84B.png" group-title="Haber",Kudüs TV
 https://yayin.kudustv.com/981680400/kudustv/playlist.m3u8
 #EXTINF:-1 group-title="Spor",TRT Spor
@@ -25,14 +27,12 @@ https://steep-wildflower-284d.nhhwkiszzzvcuojxdo.workers.dev/?url=https://gg.hls
 https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8
 #EXTINF:-1 tvg-id="FX.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/960px-FX_International_logo.svg.png" group-title="Film & Dizi",FX
 https://saran-live.ercdn.net/fx/index.m3u8
-#EXTINF:-1 tvg-id="TimelessDiziChannel.pl@SD" tvg-logo="https://i.imgur.com/s3Sqd4L.png" group-title="Film & Dizi",Timeless Dizi Channel (Poland)
-http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8
 #EXTINF:-1 tvg-id="DisneyJr.tr@SD" tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png" group-title="Çocuk",Disney Junior
 https://saran-live.ercdn.net/disneyjunior/index.m3u8
 #EXTINF:-1 tvg-id="BabyTV.uk@Turkiye" tvg-logo="https://i.imgur.com/4BDJ5FT.png" group-title="Çocuk",BabyTV
 https://saran-live.ercdn.net/babytv/index.m3u8
 #EXTINF:-1 tvg-id="TRTBelgesel.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Belgesel_logo_%282019-%29.svg/960px-TRT_Belgesel_logo_%282019-%29.svg.png" group-title="Belgesel",TRT Belgesel
-http://hls127.freeott.top:8080/TRT_BELGESEL_TR/video.m3u8
+https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="NationalGeographic.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Belgesel",National Geographic
 https://saran-live.ercdn.net/natgeohd/index.m3u8
 #EXTINF:-1 tvg-id="NationalGeographicWild.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png" group-title="Belgesel",National Geographic Wild

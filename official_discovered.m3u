@@ -30,7 +30,7 @@ https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/playlist.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
 # SOURCE: official:https://www.kanal7.com/canli-izle
-# PROBE: restricted segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401
+# PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",Kanal 7
 #EXTVLCOPT:http-referrer=https://www.kanal7.com/canli-izle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -64,13 +64,13 @@ https://kdlive.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
 #EXTINF:-1 group-title="Ulusal",NOW TV
 #EXTVLCOPT:http-referrer=https://www.nowtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=6Pbsj0YbkG9Pyvwm_s2kyw&e=1790743174
+https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=fCIWLsChgeuu4ls1MXhXkg&e=1790764715
 # SOURCE: official:https://www.nowtv.com.tr/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",NOW TV
 #EXTVLCOPT:http-referrer=https://www.nowtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=6Pbsj0YbkG9Pyvwm_s2kyw&e=1790743174
+https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=fCIWLsChgeuu4ls1MXhXkg&e=1790764715
 # SOURCE: official:https://www.showtv.com.tr/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",Show TV

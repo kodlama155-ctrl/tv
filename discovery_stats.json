@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-09-30T00:42:29.943609+00:00",
+  "updated_at_utc": "2026-09-30T06:39:50.473311+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-09-16T00:42:29.943609+00:00",
+  "cutoff_utc": "2026-09-16T06:39:50.473311+00:00",
   "repos_per_query": 50,
   "queries": [
     {
@@ -64,6 +64,12 @@
   "header_aware_candidates": 1,
   "fresh_source_files": [
     {
+      "repo": "K3rimoff/IPTV",
+      "path": "Aze.m3u",
+      "last_commit": "2026-09-30T04:18:09Z",
+      "entries_found": 0
+    },
+    {
       "repo": "FeridunN12/ibo-iptv-playlist",
       "path": "combined.m3u",
       "last_commit": "2026-09-29T09:20:58Z",
@@ -74,12 +80,6 @@
       "path": "docs/combined.m3u",
       "last_commit": "2026-09-29T09:20:58Z",
       "entries_found": 144
-    },
-    {
-      "repo": "K3rimoff/IPTV",
-      "path": "Aze.m3u",
-      "last_commit": "2026-09-29T04:34:51Z",
-      "entries_found": 0
     },
     {
       "repo": "GhostFelina/cortexia-tv-public",

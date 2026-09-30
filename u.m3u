@@ -1,8 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="AkitTV.tr@HD" group-title="Haber",AKİT TV
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
-#EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber",TELE1
-https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
 #EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber",Sözcü TV
 https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 tvg-id="ATurk.tr@SD" tvg-logo="https://i.imgur.com/je5wQ3G.png" group-title="Haber",A Türk Izmir
@@ -38,6 +36,8 @@ https://nord.ayakkabiparti.lol/bsaction1/index.m3u8
 https://nord.ayakkabiparti.lol/bsturk/index.m3u8
 #EXTINF:-1 tvg-id="MovieSmartTurk.tr@SD" tvg-logo="https://i.imgur.com/DWN9ulT.png" group-title="Film & Dizi",MovieSmart Turk
 http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174
+#EXTINF:-1 tvg-id="TimelessDiziChannel.pl@SD" tvg-logo="https://i.imgur.com/s3Sqd4L.png" group-title="Film & Dizi",Timeless Dizi Channel (Poland)
+http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8
 #EXTINF:-1 tvg-id="TarihTV.tr@SD" tvg-logo="https://i.imgur.com/HbIGZUt.png" group-title="Belgesel",Tarih TV
 https://tv1.arectv30.sbs/live/tarihtv.m3u8
 #EXTINF:-1 tvg-id="ViasatHistory.tr@SD" tvg-logo="https://i.imgur.com/wRP9XA7.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Belgesel",Viasat History
@@ -72,6 +72,8 @@ https://media.finest.tv/hls/live.m3u8
 https://mn-nl.mncdn.com/blutv_bizimev/bizimev_sd.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TYTTurk.tr@SD" tvg-logo="https://tytturk.com/upload/tyt-logo.png" group-title="Diğer",TYT Turk
 https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
+#EXTINF:-1 tvg-id="MeltemTV.tr@SD" tvg-logo="https://i.imgur.com/C3m6w5S.png" group-title="Diğer",Meltem TV
+https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Diğer",TRT 3
 https://tv-trt3.live.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="BursaTV.tr@SD" tvg-logo="https://i.imgur.com/9cl1MR8.png" group-title="Diğer",Bursa TV
