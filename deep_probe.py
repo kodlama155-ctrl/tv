@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import concurrent.futures
 import json
 import time
@@ -20,6 +21,7 @@ LOCAL_SOURCES = [
     ("official_discovered.m3u", "official_html"),
     ("turkuvaz_discovered.m3u", "official_api"),
     ("browser_discovered.m3u", "official_browser"),
+    ("repair_discovered.m3u", "github_discovery"),
     ("discovered.m3u", "github_discovery"),
     ("missing_discovered.m3u", "github_discovery"),
     ("a.m3u", "unknown"),
@@ -211,7 +213,26 @@ def probe_alternative(row):
 
 
 def main():
-    rows = parse_playlist(TR, "current")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--playlist", default=str(TR))
+    parser.add_argument("--targets", default="")
+    parser.add_argument("--output", default=str(OUT))
+    args = parser.parse_args()
+
+    rows = parse_playlist(Path(args.playlist), "current")
+
+    if args.targets:
+        target_path = Path(args.targets)
+        targets = json.loads(target_path.read_text(encoding="utf-8"))
+        wanted = {
+            (row.get("channel_key", ""), canonical(row.get("old_url", "")))
+            for row in targets
+            if row.get("channel_key") and row.get("old_url")
+        }
+        rows = [
+            row for row in rows
+            if (row["channel_key"], canonical(row["url"])) in wanted
+        ]
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_INITIAL_WORKERS) as ex:
         initial = list(ex.map(initial_probe, rows))
@@ -318,7 +339,7 @@ def main():
         "results": results,
     }
 
-    OUT.write_text(
+    Path(args.output).write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
