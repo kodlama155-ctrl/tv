@@ -1,14 +1,15 @@
 {
-  "updated_at_utc": "2026-09-30T17:54:13.025983+00:00",
-  "catalog_channels": 199,
-  "channels_in_previous_tr": 193,
-  "missing_before_search": 6,
+  "updated_at_utc": "2026-09-30T18:39:41.140515+00:00",
+  "catalog_channels": 210,
+  "channels_in_previous_tr": 203,
+  "missing_before_search": 7,
   "missing_names": [
-    "TRT 4K",
+    "TYT Türk",
+    "Sports TV",
+    "On4 TV",
     "FM TV",
-    "Dream TV",
-    "Euro Star",
-    "ATV Avrupa",
+    "Number1 Rap TV",
+    "TGRT EU",
     "Kanal 1"
   ],
   "batch_size": 6,
@@ -16,47 +17,60 @@
   "search_batches": [
     {
       "names": [
-        "TRT 4K",
+        "TYT Türk",
+        "Sports TV",
+        "On4 TV",
         "FM TV",
-        "Dream TV",
-        "Euro Star",
-        "ATV Avrupa",
+        "Number1 Rap TV",
+        "TGRT EU"
+      ],
+      "query": "\"TYT Türk\" OR \"Sports TV\" OR \"On4 TV\" OR \"FM TV\" OR \"Number1 Rap TV\" OR \"TGRT EU\" extension:m3u",
+      "error": "HTTPError"
+    },
+    {
+      "names": [
         "Kanal 1"
       ],
-      "query": "\"TRT 4K\" OR \"FM TV\" OR \"Dream TV\" OR \"Euro Star\" OR \"ATV Avrupa\" OR \"Kanal 1\" extension:m3u",
-      "search_results": 21
+      "query": "\"Kanal 1\" extension:m3u",
+      "error": "HTTPError"
     }
   ],
   "target_report": [
     {
-      "name": "TRT 4K",
+      "name": "TYT Türk",
       "category": "Ulusal",
-      "files_matched": 2,
-      "candidates": 3
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Sports TV",
+      "category": "Spor",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "On4 TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "FM TV",
       "category": "Dini",
-      "files_matched": 2,
-      "candidates": 4
+      "files_matched": 0,
+      "candidates": 0
     },
     {
-      "name": "Dream TV",
+      "name": "Number1 Rap TV",
       "category": "Müzik",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
-      "name": "Euro Star",
+      "name": "TGRT EU",
       "category": "Uluslararası",
-      "files_matched": 2,
-      "candidates": 5
-    },
-    {
-      "name": "ATV Avrupa",
-      "category": "Uluslararası",
-      "files_matched": 2,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Kanal 1",
@@ -65,8 +79,8 @@
       "candidates": 0
     }
   ],
-  "files_scanned": 21,
-  "unique_candidates_found": 15,
-  "errors": 1,
+  "files_scanned": 0,
+  "unique_candidates_found": 0,
+  "errors": 2,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }

@@ -1,17 +1,17 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 50,
+  "core_channels_verified": 48,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 5,
-  "core_channels_not_verified": 20,
+  "core_channels_not_verified": 22,
   "status_counts": {
-    "verified": 50,
+    "verified": 48,
     "geo-restricted": 7,
-    "dead": 1,
-    "absent": 1,
-    "unknown": 6,
-    "device-restricted": 5
+    "absent": 2,
+    "unknown": 7,
+    "device-restricted": 5,
+    "restricted": 1
   },
   "missing_channels": [
     {
@@ -24,9 +24,9 @@
     {
       "name": "FM TV",
       "expected_category": "Dini",
-      "status": "dead",
-      "reason": "manifest HTTP 404",
-      "candidate_url": "http://vavoo.to/play/1821985330/index.m3u8"
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
     },
     {
       "name": "Kanal 1",
@@ -55,6 +55,13 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
+    },
+    {
+      "name": "Tele1",
+      "expected_category": "Haber",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",
@@ -97,6 +104,13 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
+    },
+    {
+      "name": "TRT Çocuk",
+      "expected_category": "Çocuk",
+      "status": "restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "BabyTV Türkiye",
