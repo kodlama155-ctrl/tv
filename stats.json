@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T21:11:36.884388+00:00",
+  "updated_at_utc": "2026-09-30T21:31:18.335879+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -10,7 +10,7 @@
     {
       "url": "local:official_discovered.m3u",
       "status": "ok",
-      "entries": 14
+      "entries": 17
     },
     {
       "url": "local:turkuvaz_discovered.m3u",
@@ -45,7 +45,7 @@
     {
       "url": "local:missing_discovered.m3u",
       "status": "ok",
-      "entries": 0
+      "entries": 58
     },
     {
       "url": "local:discovered.m3u",
@@ -53,60 +53,61 @@
       "entries": 184
     }
   ],
-  "raw_entries": 1253,
+  "raw_entries": 1314,
   "priority_entries": 74,
   "reuse_validation_mode": false,
   "cached_output_entries": 0,
   "cached_turkey_entries": 0,
-  "official_entries": 14,
+  "official_entries": 17,
   "turkuvaz_official_entries": 7,
   "browser_official_entries": 8,
   "discovered_entries": 184,
-  "targeted_missing_entries": 0,
-  "unique_entries": 400,
-  "unique_stream_candidates": 400,
-  "semantic_channels": 263,
-  "duplicate_stream_variants_collapsed": 137,
+  "targeted_missing_entries": 58,
+  "unique_entries": 450,
+  "unique_stream_candidates": 450,
+  "semantic_channels": 266,
+  "duplicate_stream_variants_collapsed": 184,
   "filtered_private_style_entries": 353,
   "filtered_false_identity_entries": 5,
-  "header_aware_entries": 58,
+  "header_aware_entries": 60,
   "validation_cache_enabled": false,
   "validation_cache_hits": 0,
-  "validation_fresh_checks": 400,
+  "validation_fresh_checks": 450,
   "selected_stream_sources": {
-    "official_html": 8,
-    "priority": 43,
-    "upstream": 54,
+    "official_html": 10,
+    "priority": 41,
+    "upstream": 52,
     "official_api": 3,
     "official_browser": 2,
-    "iptv_org": 153
+    "iptv_org": 152,
+    "github_discovery": 6
   },
   "channel_name_sources": {
-    "turksat": 121,
-    "digiturk": 31,
-    "cleaned-source": 229,
+    "turksat": 138,
+    "digiturk": 41,
+    "cleaned-source": 252,
     "official-fallback": 19
   },
   "stream_validation_statuses": {
-    "restricted": 41,
-    "unknown": 117,
-    "verified": 215,
-    "dead": 27
+    "restricted": 42,
+    "unknown": 160,
+    "dead": 31,
+    "verified": 217
   },
-  "verified_entries": 174,
+  "verified_entries": 176,
   "restricted_entries": 20,
-  "unknown_entries": 53,
-  "unknown_retry_candidates": 21,
-  "unknown_retry_skipped_verified_sibling": 96,
-  "unknown_retry_recovered": 0,
+  "unknown_entries": 55,
+  "unknown_retry_candidates": 31,
+  "unknown_retry_skipped_verified_sibling": 130,
+  "unknown_retry_recovered": 1,
   "unknown_retry_delay_seconds": 3,
   "unknown_retry_workers": 12,
-  "dead_entries": 16,
+  "dead_entries": 15,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 247,
-  "turkey_device_entries": 201,
+  "all_non_dead_non_drm_entries": 251,
+  "turkey_device_entries": 204,
   "turkey_device_geo_fallbacks": 10,
-  "turkey_device_restricted_fallbacks": 23,
+  "turkey_device_restricted_fallbacks": 24,
   "turkey_device_ephemeral_overrides": 2,
   "core_channels_total": 70,
   "core_channels_verified": 50,
@@ -114,13 +115,13 @@
   "core_channels_device_restricted": 5,
   "core_channels_not_verified": 20,
   "categories_verified": {
-    "Ulusal": 21,
-    "Haber": 30,
-    "Spor": 5,
+    "Ulusal": 22,
+    "Haber": 29,
+    "Spor": 6,
     "Film & Dizi": 5,
     "Çocuk": 7,
     "Belgesel": 4,
-    "Dini": 10,
+    "Dini": 11,
     "Müzik": 18,
     "Yerel": 52,
     "Uluslararası": 22,
@@ -140,16 +141,16 @@
     "Diğer": 3
   },
   "categories_unknown": {
-    "Ulusal": 2,
-    "Haber": 4,
-    "Spor": 2,
+    "Ulusal": 1,
+    "Haber": 5,
+    "Spor": 1,
     "Film & Dizi": 0,
     "Çocuk": 0,
     "Belgesel": 3,
-    "Dini": 0,
+    "Dini": 1,
     "Müzik": 1,
     "Yerel": 0,
-    "Uluslararası": 2,
+    "Uluslararası": 4,
     "Diğer": 39
   }
 }

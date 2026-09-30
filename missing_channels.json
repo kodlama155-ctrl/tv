@@ -9,9 +9,9 @@
     "verified": 50,
     "restricted": 1,
     "geo-restricted": 7,
-    "absent": 2,
+    "absent": 1,
     "device-restricted": 5,
-    "unknown": 5
+    "unknown": 6
   },
   "missing_channels": [
     {
@@ -27,13 +27,6 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
-    },
-    {
-      "name": "FM TV",
-      "expected_category": "Dini",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
     },
     {
       "name": "Kanal 1",
@@ -55,6 +48,13 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
+    },
+    {
+      "name": "Tele1",
+      "expected_category": "Haber",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",
