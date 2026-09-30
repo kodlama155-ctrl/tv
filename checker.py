@@ -343,6 +343,28 @@ def main():
                 "error": type(e).__name__,
             })
 
+    cached_turkey_entries = 0
+    if reuse_validation_mode and TURKEY_OUTPUT.exists():
+        try:
+            parsed = parse_playlist(
+                TURKEY_OUTPUT.read_text(encoding="utf-8"),
+                source_kind="cached_output",
+                source_name="tr.m3u",
+            )
+            cached_turkey_entries = len(parsed)
+            entries.extend(parsed)
+            source_report.append({
+                "url": "local:tr.m3u",
+                "status": "cached",
+                "entries": cached_turkey_entries,
+            })
+        except Exception as e:
+            source_report.append({
+                "url": "local:tr.m3u",
+                "status": "error",
+                "error": type(e).__name__,
+            })
+
     official_entries = 0
     if not reuse_validation_mode and OFFICIAL.exists():
         try:
@@ -899,6 +921,7 @@ def main():
         "priority_entries": priority_entries,
         "reuse_validation_mode": reuse_validation_mode,
         "cached_output_entries": cached_output_entries,
+        "cached_turkey_entries": cached_turkey_entries,
         "official_entries": official_entries,
         "turkuvaz_official_entries": turkuvaz_official_entries,
         "browser_official_entries": browser_official_entries,
