@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parent
 DEFAULT_PLAYLIST = ROOT / "tr.m3u"
 DEFAULT_REPORT = ROOT / "health_status.json"
 DEFAULT_TARGETS = ROOT / "repair_targets.json"
+DEFAULT_DEEP_TARGETS = ROOT / "deep_targets.json"
 
 MAX_WORKERS = 24
 RETRY_WORKERS = 8
@@ -101,6 +102,7 @@ def main():
     parser.add_argument("--playlist", default=str(DEFAULT_PLAYLIST))
     parser.add_argument("--report", default=str(DEFAULT_REPORT))
     parser.add_argument("--targets", default=str(DEFAULT_TARGETS))
+    parser.add_argument("--deep-targets", default=str(DEFAULT_DEEP_TARGETS))
     args = parser.parse_args()
 
     rows = parse_playlist(Path(args.playlist))
@@ -116,6 +118,7 @@ def main():
 
     final_rows = []
     targets = []
+    deep_targets = []
 
     for row in initial:
         retry = retry_by_url.get(row["url"])
@@ -139,6 +142,18 @@ def main():
 
         final_rows.append(final)
 
+        if final["status"] in {"unknown", "restricted"} and not confirmed_dead:
+            deep_targets.append({
+                "name": row["name"],
+                "channel_key": row["channel_key"],
+                "meta": row["meta"],
+                "old_url": row["url"],
+                "user_agent": row.get("user_agent"),
+                "referrer": row.get("referrer"),
+                "health_status": final["status"],
+                "health_reason": final.get("reason"),
+            })
+
         if confirmed_dead:
             targets.append({
                 "name": row["name"],
@@ -161,6 +176,8 @@ def main():
         "confirmed_dead": len(targets),
         "dead_retry_delay_seconds": DEAD_RETRY_DELAY_SECONDS,
         "repair_target_names": [row["name"] for row in targets],
+        "deep_probe_targets": len(deep_targets),
+        "deep_probe_target_names": [row["name"] for row in deep_targets],
         "results": final_rows,
     }
 
@@ -172,6 +189,10 @@ def main():
         json.dumps(targets, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    Path(args.deep_targets).write_text(
+        json.dumps(deep_targets, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     print(json.dumps({
         "channels_checked": len(rows),
@@ -179,6 +200,8 @@ def main():
         "initial_dead": len(initial_dead),
         "confirmed_dead": len(targets),
         "repair_target_names": [row["name"] for row in targets],
+        "deep_probe_targets": len(deep_targets),
+        "deep_probe_target_names": [row["name"] for row in deep_targets],
     }, ensure_ascii=False, indent=2))
 
 
