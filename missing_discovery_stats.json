@@ -1,64 +1,32 @@
 {
-  "updated_at_utc": "2026-09-30T16:37:09.257946+00:00",
+  "updated_at_utc": "2026-09-30T16:41:36.285844+00:00",
   "catalog_channels": 194,
-  "channels_in_previous_tr": 189,
-  "missing_before_search": 5,
+  "channels_in_previous_tr": 193,
+  "missing_before_search": 1,
   "missing_names": [
-    "FM TV",
-    "Kanal 1",
-    "Ulusal Kanal",
-    "TV5",
-    "Kanal B"
+    "Kanal 1"
   ],
   "batch_size": 6,
   "search_delay_seconds": 7,
   "search_batches": [
     {
       "names": [
-        "FM TV",
-        "Kanal 1",
-        "Ulusal Kanal",
-        "TV5",
-        "Kanal B"
+        "Kanal 1"
       ],
-      "query": "\"FM TV\" OR \"Kanal 1\" OR \"Ulusal Kanal\" OR \"TV5\" OR \"Kanal B\" extension:m3u",
+      "query": "\"Kanal 1\" extension:m3u",
       "search_results": 50
     }
   ],
   "target_report": [
     {
-      "name": "FM TV",
-      "category": "Dini",
-      "files_matched": 11,
-      "candidates": 12
-    },
-    {
       "name": "Kanal 1",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
-    },
-    {
-      "name": "Ulusal Kanal",
-      "category": "Haber",
-      "files_matched": 15,
-      "candidates": 20
-    },
-    {
-      "name": "TV5",
-      "category": "Haber",
-      "files_matched": 12,
-      "candidates": 14
-    },
-    {
-      "name": "Kanal B",
-      "category": "Haber",
-      "files_matched": 16,
-      "candidates": 11
     }
   ],
   "files_scanned": 50,
-  "unique_candidates_found": 57,
-  "errors": 3,
+  "unique_candidates_found": 0,
+  "errors": 0,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }

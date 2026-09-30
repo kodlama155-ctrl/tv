@@ -1,11 +1,10 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="MeltemTV.tr@SD" group-title="Ulusal",Meltem TV
+https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
 #EXTINF:-1 tvg-id="AkitTV.tr@HD" tvg-logo="https://i.ibb.co/MBwzD2b/akit-tv.png" group-title="Haber",AKİT TV
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
 #EXTINF:-1 tvg-id="GZT.tr" group-title="Haber" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/GZT_logo.svg/960px-GZT_logo.svg.png",GZT
 https://mn-nl.mncdn.com/gzttv/gzttv/playlist.m3u8
-#EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber",TELE1
-#EXTVLCOPT:http-user-agent=Lavf53.32.100
-https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
 #EXTINF:-1 tvg-id="KRT.tr" group-title="Haber",KRT TV
 #EXTVLCOPT:http-user-agent=Lavf53.32.100
 https://krtdvr.blutv.com/blutv_krt_live_dvr/live_720p4350000kbps/index.m3u8

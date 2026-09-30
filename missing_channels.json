@@ -1,16 +1,16 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 51,
+  "core_channels_verified": 50,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 5,
-  "core_channels_not_verified": 19,
+  "core_channels_not_verified": 20,
   "status_counts": {
-    "verified": 51,
+    "verified": 50,
     "geo-restricted": 7,
-    "absent": 1,
-    "device-restricted": 5,
-    "unknown": 6
+    "absent": 2,
+    "unknown": 6,
+    "device-restricted": 5
   },
   "missing_channels": [
     {
@@ -21,11 +21,25 @@
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
     },
     {
+      "name": "FM TV",
+      "expected_category": "Dini",
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
+    },
+    {
       "name": "Kanal 1",
       "expected_category": "Ulusal",
       "status": "absent",
       "reason": "No candidate found in current sources",
       "candidate_url": ""
+    },
+    {
+      "name": "Meltem TV",
+      "expected_category": "Ulusal",
+      "status": "unknown",
+      "reason": "response is not HLS",
+      "candidate_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
     },
     {
       "name": "CNN Türk",
@@ -40,13 +54,6 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
-    },
-    {
-      "name": "Tele1",
-      "expected_category": "Haber",
-      "status": "unknown",
-      "reason": "manifest URLError",
-      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",
