@@ -21,14 +21,14 @@ on:
       - "fast_rebuild.py"
       - ".github/workflows/update.yml"
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 2 * * *"
 
 permissions:
   contents: write
 
 concurrency:
-  group: update-m3u-v4
-  cancel-in-progress: true
+  group: emirtv-playlist-maintenance
+  cancel-in-progress: false
 
 jobs:
   update:
