@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-09-30T15:59:24.268935+00:00",
+  "updated_at_utc": "2026-09-30T16:12:00.164817+00:00",
   "official_pages": 22,
   "pages_ok": 18,
   "pages_with_candidates": 9,
   "raw_candidates": 14,
   "accepted_unique_candidates": 14,
   "probe_statuses": {
-    "verified": 12,
-    "restricted": 1,
+    "restricted": 4,
+    "verified": 9,
     "unknown": 1
   },
   "sources": [
@@ -148,8 +148,8 @@
       "page_candidates": 2,
       "aux_scanned": 2,
       "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=YHqNfqshUJqkYKmIMXZuvQ&e=1790798217",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=YHqNfqshUJqkYKmIMXZuvQ&e=1790798217"
+        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=4hYVqqLdK7m9eDkLOU-IOg&e=1790799037",
+        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=4hYVqqLdK7m9eDkLOU-IOg&e=1790799037"
       ],
       "identity_rejected_candidates": 0
     },
@@ -235,24 +235,24 @@
     {
       "name": "TVNET",
       "page": "https://www.tvnet.com.tr/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.tvnet.com.tr/canli-yayin",
-      "page_candidates": 1,
-      "aux_scanned": 2,
-      "candidates": [
-        "https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/playlist.m3u8"
-      ],
-      "identity_rejected_candidates": 0
-    },
-    {
-      "name": "Vav TV",
-      "page": "https://www.vavtv.com.tr/canli-yayin",
       "status": "page_error",
       "page_final_url": null,
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
       "error": "TimeoutError"
+    },
+    {
+      "name": "Vav TV",
+      "page": "https://www.vavtv.com.tr/canli-yayin",
+      "status": "ok",
+      "page_final_url": "https://www.vavtv.com.tr/canli-yayin",
+      "page_candidates": 19,
+      "aux_scanned": 0,
+      "candidates": [
+        "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8"
+      ],
+      "identity_rejected_candidates": 18
     }
   ]
 }

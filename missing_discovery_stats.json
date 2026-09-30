@@ -1,20 +1,15 @@
 {
-  "updated_at_utc": "2026-09-30T16:00:29.222257+00:00",
+  "updated_at_utc": "2026-09-30T16:16:32.860003+00:00",
   "catalog_channels": 194,
-  "channels_in_previous_tr": 182,
-  "missing_before_search": 12,
+  "channels_in_previous_tr": 187,
+  "missing_before_search": 7,
   "missing_names": [
-    "TRT Çocuk",
     "DMAX",
     "TLC",
-    "FM TV",
     "Finest TV",
     "Kanal 1",
-    "Meltem TV",
     "KRT TV",
-    "Ulusal Kanal",
     "TV5",
-    "Kanal B",
     "GZT"
   ],
   "batch_size": 6,
@@ -22,59 +17,42 @@
   "search_batches": [
     {
       "names": [
-        "TRT Çocuk",
         "DMAX",
         "TLC",
-        "FM TV",
         "Finest TV",
-        "Kanal 1"
+        "Kanal 1",
+        "KRT TV",
+        "TV5"
       ],
-      "query": "\"TRT Çocuk\" OR \"DMAX\" OR \"TLC\" OR \"FM TV\" OR \"Finest TV\" OR \"Kanal 1\" extension:m3u",
-      "search_results": 18
+      "query": "\"DMAX\" OR \"TLC\" OR \"Finest TV\" OR \"Kanal 1\" OR \"KRT TV\" OR \"TV5\" extension:m3u",
+      "search_results": 44
     },
     {
       "names": [
-        "Meltem TV",
-        "KRT TV",
-        "Ulusal Kanal",
-        "TV5",
-        "Kanal B",
         "GZT"
       ],
-      "query": "\"Meltem TV\" OR \"KRT TV\" OR \"Ulusal Kanal\" OR \"TV5\" OR \"Kanal B\" OR \"GZT\" extension:m3u",
-      "search_results": 16
+      "query": "\"GZT\" extension:m3u",
+      "search_results": 50
     }
   ],
   "target_report": [
     {
-      "name": "TRT Çocuk",
-      "category": "Çocuk",
-      "files_matched": 18,
-      "candidates": 11
-    },
-    {
       "name": "DMAX",
       "category": "Belgesel",
-      "files_matched": 15,
-      "candidates": 10
+      "files_matched": 25,
+      "candidates": 12
     },
     {
       "name": "TLC",
       "category": "Belgesel",
-      "files_matched": 15,
-      "candidates": 12
-    },
-    {
-      "name": "FM TV",
-      "category": "Dini",
-      "files_matched": 7,
-      "candidates": 5
+      "files_matched": 25,
+      "candidates": 14
     },
     {
       "name": "Finest TV",
       "category": "Uluslararası",
-      "files_matched": 11,
-      "candidates": 2
+      "files_matched": 23,
+      "candidates": 4
     },
     {
       "name": "Kanal 1",
@@ -83,34 +61,16 @@
       "candidates": 0
     },
     {
-      "name": "Meltem TV",
-      "category": "Ulusal",
-      "files_matched": 13,
-      "candidates": 9
-    },
-    {
       "name": "KRT TV",
       "category": "Haber",
-      "files_matched": 15,
-      "candidates": 10
-    },
-    {
-      "name": "Ulusal Kanal",
-      "category": "Haber",
-      "files_matched": 15,
-      "candidates": 11
+      "files_matched": 26,
+      "candidates": 13
     },
     {
       "name": "TV5",
       "category": "Haber",
-      "files_matched": 10,
-      "candidates": 6
-    },
-    {
-      "name": "Kanal B",
-      "category": "Haber",
-      "files_matched": 14,
-      "candidates": 5
+      "files_matched": 18,
+      "candidates": 7
     },
     {
       "name": "GZT",
@@ -119,8 +79,8 @@
       "candidates": 2
     }
   ],
-  "files_scanned": 31,
-  "unique_candidates_found": 83,
-  "errors": 4,
+  "files_scanned": 94,
+  "unique_candidates_found": 52,
+  "errors": 14,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }
