@@ -101,6 +101,9 @@ CORE_CHANNELS = [
     # Belgesel / Yaşam
     {"id": "TRTBelgesel", "name": "TRT Belgesel", "category": "Belgesel"},
     {"id": "LoveNature", "name": "Love Nature", "category": "Belgesel"},
+    {"id": "HabitatTV", "name": "Habitat TV", "category": "Belgesel"},
+    {"id": "YabanTV", "name": "Yaban TV", "category": "Belgesel"},
+    {"id": "TGRTBelgesel", "name": "TGRT Belgesel", "category": "Belgesel"},
     {"id": "DMAX", "name": "DMAX", "category": "Yaşam"},
     {"id": "TLC", "name": "TLC", "category": "Yaşam"},
 
