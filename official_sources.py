@@ -39,6 +39,12 @@ SENSITIVE_QUERY_KEYS = {
 EPHEMERAL_MEDIA_HOSTS = (
     "googlevideo.com",
 )
+UNTRUSTED_STREAM_HOSTS = (
+    "canlitv.fun",
+)
+EPHEMERAL_QUERY_KEYS = {
+    "st", "e", "hash", "expire", "expires",
+}
 CREDENTIAL_PATH_RE = re.compile(
     r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
     re.I,
@@ -345,6 +351,8 @@ def safe_candidate(url: str) -> bool:
     host = (parsed.hostname or "").lower()
     if any(host == suffix or host.endswith("." + suffix) for suffix in EPHEMERAL_MEDIA_HOSTS):
         return False
+    if any(host == suffix or host.endswith("." + suffix) for suffix in UNTRUSTED_STREAM_HOSTS):
+        return False
     if CREDENTIAL_PATH_RE.search(parsed.path):
         return False
     if SUSPICIOUS_IPTV_PATH_RE.search(parsed.path):
@@ -358,6 +366,8 @@ def safe_candidate(url: str) -> bool:
         )
     }
     if query_keys & SENSITIVE_QUERY_KEYS:
+        return False
+    if query_keys & EPHEMERAL_QUERY_KEYS:
         return False
 
     return True
