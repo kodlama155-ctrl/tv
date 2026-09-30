@@ -15,6 +15,7 @@ on:
       - "discover_queries.txt"
       - "sources.txt"
       - "priority_sources.m3u"
+      - "priority_refresh.py"
       - "channel_policy.py"
       - "channel_catalog.py"
       - "name_engine.py"
@@ -157,14 +158,15 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: python missing_discover.py
 
+      - name: Validate priority source delta
+        if: steps.update_mode.outputs.mode == 'validate'
+        env:
+          PRIORITY_BEFORE_SHA: ${{ github.event.before }}
+        run: python priority_refresh.py
+
       - name: Validate streams and build playlists
-        if: steps.update_mode.outputs.mode == 'full' || steps.update_mode.outputs.mode == 'validate'
-        run: |
-          if [ "${{ steps.update_mode.outputs.mode }}" = "validate" ]; then
-            CHECKER_REUSE_VALIDATION=1 python checker.py
-          else
-            python checker.py
-          fi
+        if: steps.update_mode.outputs.mode == 'full'
+        run: python checker.py
 
       - name: Commit changes
         run: |
@@ -183,8 +185,7 @@ jobs:
           if [ "${{ steps.update_mode.outputs.mode }}" = "fast" ]; then
             git add tr.m3u stats.json
           elif [ "${{ steps.update_mode.outputs.mode }}" = "validate" ]; then
-            git add a.m3u r.m3u u.m3u all.m3u tr.m3u \
-              stats.json validation.json missing_channels.json
+            git add tr.m3u priority_validation.json
           else
             git add a.m3u r.m3u u.m3u all.m3u tr.m3u \
               stats.json validation.json missing_channels.json \
