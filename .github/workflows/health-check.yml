@@ -1,0 +1,111 @@
+name: Smart Stream Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7,37 * * * *"
+  push:
+    paths:
+      - "health_check.py"
+      - "targeted_discover.py"
+      - "targeted_repair.py"
+      - "hls_validator.py"
+      - ".github/workflows/health-check.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: emirtv-playlist-maintenance
+  cancel-in-progress: false
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check current tr.m3u only
+        id: health
+        run: |
+          python health_check.py
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          targets = json.loads(Path("repair_targets.json").read_text(encoding="utf-8"))
+          print(f"repair_count={len(targets)}")
+          PY
+
+      - name: Search only confirmed dead channels
+        if: steps.health.outputs.repair_count != '0'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python targeted_discover.py
+
+      - name: Repair only confirmed dead channels
+        if: steps.health.outputs.repair_count != '0'
+        run: python targeted_repair.py
+
+      - name: Write summary
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          health = json.loads(Path("health_status.json").read_text(encoding="utf-8"))
+          print("# EmirTV stream health")
+          print()
+          print(f"Current links checked: **{health['channels_checked']}**")
+          counts = health.get("status_counts", {})
+          print(
+              "Status: "
+              f"verified **{counts.get('verified', 0)}**, "
+              f"restricted **{counts.get('restricted', 0)}**, "
+              f"unknown **{counts.get('unknown', 0)}**, "
+              f"dead **{counts.get('dead', 0)}**"
+          )
+          print(f"Confirmed dead after retry: **{health['confirmed_dead']}**")
+          repair = Path("repair_result.json")
+          if repair.exists():
+              data = json.loads(repair.read_text(encoding="utf-8"))
+              print(f"Targeted repairs applied: **{data.get('repaired', 0)}**")
+          PY
+
+      - name: Upload health report
+        uses: actions/upload-artifact@v4
+        with:
+          name: stream-health-${{ github.run_id }}
+          path: |
+            health_status.json
+            repair_targets.json
+            repair_discovered.m3u
+            repair_discovery_stats.json
+            repair_result.json
+          if-no-files-found: ignore
+          retention-days: 3
+
+      - name: Commit repaired playlist only
+        if: steps.health.outputs.repair_count != '0'
+        run: |
+          git config user.name "emirtv-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          if git diff --quiet -- tr.m3u; then
+            echo "No verified replacement found; playlist unchanged"
+            exit 0
+          fi
+
+          git fetch origin main
+          git rebase origin/main
+          git add tr.m3u
+          git commit -m "bot: repair dead stream links"
+          git push origin HEAD:main
