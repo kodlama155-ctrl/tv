@@ -7,9 +7,7 @@ import os
 import subprocess
 from pathlib import Path
 
-from category_engine import channel_sort_key
 from channel_policy import (
-    CATEGORY_INDEX,
     channel_key,
     normalize_meta,
     split_extinf,
@@ -165,6 +163,8 @@ def normalized_output_row(row):
 
 
 def write_tr(rows):
+    # Preserve the existing Turkey playlist order. Priority-only edits are
+    # stream replacements, not a reason to re-fetch platform ordering.
     normalized = []
     for row in rows:
         meta, category, name = normalize_meta(row["meta"])
@@ -175,13 +175,6 @@ def write_tr(rows):
             "name": name,
             "channel_key": channel_key(meta, name),
         })
-
-    normalized.sort(
-        key=lambda r: (
-            CATEGORY_INDEX.get(r["category"], 999),
-            *channel_sort_key(r["meta"], r["category"], r["name"]),
-        )
-    )
 
     lines = ["#EXTM3U"]
     for row in normalized:
@@ -211,6 +204,23 @@ def main():
         row for row in current
         if row["channel_key"] in changed_keys
     ]
+
+    if not changed_keys:
+        payload = {
+            "mode": "priority-delta",
+            "changed_channels": 0,
+            "candidates_tested": 0,
+            "applied_channels": 0,
+            "applied": [],
+            "kept_existing_channels": [],
+            "results": [],
+        }
+        REPORT.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        return
 
     if changed_candidates:
         with concurrent.futures.ThreadPoolExecutor(
