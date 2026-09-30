@@ -173,7 +173,7 @@ jobs:
             git add tr.m3u stats.json
           else
             git add a.m3u r.m3u u.m3u all.m3u tr.m3u \
-              stats.json validation.json missing_channels.json \
+              stats.json validation.json missing_channels.json domain_scores.json \
               official_discovered.m3u official_stats.json \
               turkuvaz_discovered.m3u turkuvaz_stats.json \
               browser_discovered.m3u browser_stats.json \
