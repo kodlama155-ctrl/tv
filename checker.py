@@ -174,6 +174,28 @@ def canonical(url: str) -> str:
     )
 
 
+def is_ephemeral_signed_url(url: str) -> bool:
+    try:
+        keys = {
+            key.lower()
+            for key, _ in urllib.parse.parse_qsl(
+                urllib.parse.urlsplit(url).query,
+                keep_blank_values=True,
+            )
+        }
+    except Exception:
+        return False
+    return "st" in keys and "e" in keys
+
+
+def is_known_false_identity(entry: dict) -> bool:
+    key = channel_key(entry.get("meta", ""))
+    url = fold(entry.get("url", ""))
+    # iptv-org currently maps VAV TV to KLTR Sanat TV. Do not allow a
+    # technically working but semantically wrong stream to win selection.
+    return key == "vavtv" and "kltr-sanat-tv" in url
+
+
 def write_playlist(path: Path, entries):
     ordered = sorted(
         entries,
@@ -347,10 +369,14 @@ def main():
 
     unique = {}
     filtered_private_style = 0
+    filtered_false_identity = 0
     header_aware_entries = 0
 
     for entry in entries:
         url = entry["url"]
+        if is_known_false_identity(entry):
+            filtered_false_identity += 1
+            continue
         if not safe_public_candidate(url):
             filtered_private_style += 1
             continue
@@ -626,13 +652,53 @@ def main():
 
     # Türkiye cihaz listesi: strict verified yayınlara ek olarak
     # geo-restricted ve açıkça işaretlenmiş resmî device-fallback yayınları
-    # dahil eder. Bunlar strict verified sayılmaz.
-    turkey_candidates = list(buckets["verified"])
-    turkey_candidates.extend(
-        item
-        for item in buckets["restricted"]
-        if item.get("geo_restricted") or item.get("device_fallback")
-    )
+    # dahil eder. Süreli st/e URL seçilmişse aynı kanalın tokensiz resmî
+    # device-fallback'i cihaz listesinde tercih edilir.
+    variants_by_channel = {}
+    for item in variant_items:
+        variants_by_channel.setdefault(item.get("channel_key", ""), []).append(item)
+
+    turkey_candidates = []
+    turkey_ephemeral_overrides = 0
+    for item in selected:
+        status = item.get("status", "unknown")
+        include = (
+            status == "verified"
+            or (
+                status == "restricted"
+                and (item.get("geo_restricted") or item.get("device_fallback"))
+            )
+        )
+        if not include:
+            continue
+
+        chosen = item
+        if status == "verified" and is_ephemeral_signed_url(item.get("url", "")):
+            fallbacks = [
+                row
+                for row in variants_by_channel.get(item.get("channel_key", ""), [])
+                if (
+                    row.get("device_hint")
+                    and row.get("status") in {"verified", "restricted"}
+                    and not is_ephemeral_signed_url(row.get("url", ""))
+                )
+            ]
+            if fallbacks:
+                chosen = max(
+                    fallbacks,
+                    key=lambda row: (
+                        1 if row.get("status") == "verified" else 0,
+                        SOURCE_PRIORITY.get(
+                            row.get("source_kind", "unknown"),
+                            SOURCE_PRIORITY["unknown"],
+                        ),
+                        1 if row.get("url", "").startswith("https://") else 0,
+                    ),
+                )
+                turkey_ephemeral_overrides += 1
+
+        turkey_candidates.append(chosen)
+
     write_playlist(TURKEY_OUTPUT, turkey_candidates)
 
     report.sort(
@@ -674,6 +740,7 @@ def main():
             0, len(candidates) - len(selected)
         ),
         "filtered_private_style_entries": filtered_private_style,
+        "filtered_false_identity_entries": filtered_false_identity,
         "header_aware_entries": header_aware_entries,
         "selected_stream_sources": dict(selected_source_counts),
         "channel_name_sources": dict(name_source_counts),
@@ -696,8 +763,11 @@ def main():
             1 for item in turkey_candidates if item.get("geo_restricted")
         ),
         "turkey_device_restricted_fallbacks": sum(
-            1 for item in turkey_candidates if item.get("device_fallback")
+            1
+            for item in turkey_candidates
+            if item.get("device_hint") or item.get("device_fallback")
         ),
+        "turkey_device_ephemeral_overrides": turkey_ephemeral_overrides,
         "core_channels_total": coverage["core_channels_total"],
         "core_channels_verified": coverage["core_channels_verified"],
         "core_channels_geo_restricted": coverage.get(
