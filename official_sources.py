@@ -45,12 +45,8 @@ UNTRUSTED_STREAM_HOSTS = (
 EPHEMERAL_QUERY_KEYS = {
     "st", "e", "hash", "expire", "expires",
 }
-CREDENTIAL_PATH_RE = re.compile(
-    r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
-    re.I,
-)
-SUSPICIOUS_IPTV_PATH_RE = re.compile(
-    r"/iptv/[A-Za-z0-9_-]{6,}/(?:[A-Za-z0-9_-]{2,}|\\d{2,})/",
+EXPLICIT_CREDENTIAL_PATH_RE = re.compile(
+    r"/(?:user(?:name)?|pass(?:word)?|token|auth(?:orization)?|session|jwt|key)(?:=|/)[^/?#]+",
     re.I,
 )
 
@@ -353,9 +349,7 @@ def safe_candidate(url: str) -> bool:
         return False
     if any(host == suffix or host.endswith("." + suffix) for suffix in UNTRUSTED_STREAM_HOSTS):
         return False
-    if CREDENTIAL_PATH_RE.search(parsed.path):
-        return False
-    if SUSPICIOUS_IPTV_PATH_RE.search(parsed.path):
+    if EXPLICIT_CREDENTIAL_PATH_RE.search(parsed.path):
         return False
 
     query_keys = {
