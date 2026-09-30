@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T13:15:40.047461+00:00",
+  "updated_at_utc": "2026-09-30T13:19:20.107624+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -81,18 +81,18 @@
     "verified": 207,
     "dead": 26
   },
-  "verified_entries": 164,
+  "verified_entries": 163,
   "restricted_entries": 21,
-  "unknown_entries": 50,
-  "unknown_retry_candidates": 71,
-  "unknown_retry_skipped_verified_sibling": 36,
+  "unknown_entries": 51,
+  "unknown_retry_candidates": 72,
+  "unknown_retry_skipped_verified_sibling": 35,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
   "dead_entries": 17,
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 235,
-  "turkey_device_entries": 183,
+  "turkey_device_entries": 182,
   "turkey_device_geo_fallbacks": 10,
   "turkey_device_restricted_fallbacks": 11,
   "turkey_device_ephemeral_overrides": 2,
@@ -112,7 +112,7 @@
     "Müzik": 16,
     "Yerel": 52,
     "Uluslararası": 19,
-    "Diğer": 1
+    "Diğer": 0
   },
   "categories_restricted": {
     "Ulusal": 2,
@@ -137,7 +137,7 @@
     "Dini": 0,
     "Müzik": 0,
     "Yerel": 0,
-    "Uluslararası": 0,
+    "Uluslararası": 1,
     "Diğer": 42
   }
 }

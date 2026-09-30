@@ -46,7 +46,7 @@
       "name": "Meltem TV",
       "expected_category": "Ulusal",
       "status": "unknown",
-      "reason": "response is not HLS",
+      "reason": "ValueError",
       "candidate_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
     },
     {
