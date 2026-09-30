@@ -154,6 +154,17 @@ jobs:
           git config user.name "emirtv-bot"
           git config user.email "actions@users.noreply.github.com"
 
+          # Never rebase stale generated output on top of newer source changes.
+          # If main advanced while this run was working, the newer run owns the push.
+          git fetch origin main
+          remote_sha="$(git rev-parse origin/main)"
+          trigger_sha="${{ github.sha }}"
+          if [ "$remote_sha" != "$trigger_sha" ]; then
+            echo "main advanced during this run; skipping stale output commit"
+            echo "trigger=$trigger_sha remote=$remote_sha"
+            exit 0
+          fi
+
           if [ "${{ steps.update_mode.outputs.mode }}" = "fast" ]; then
             git add tr.m3u stats.json
           else
@@ -173,6 +184,5 @@ jobs:
             else
               git commit -m "bot: validate HLS streams and update playlists"
             fi
-            git pull --rebase origin main
             git push origin HEAD:main
           fi
