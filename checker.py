@@ -219,9 +219,8 @@ def load_validation_cache():
         if not url or status not in {"verified", "restricted", "unknown", "dead", "drm"}:
             continue
 
-        # Signed URLs may expire; always re-check them even in validate mode.
-        if is_ephemeral_signed_url(url):
-            continue
+        # Validate-only mode may reuse signed URLs too. The scheduled full
+        # scan still re-checks every stream and refreshes expired signatures.
 
         key = validation_cache_key(
             url,
