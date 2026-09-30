@@ -50,7 +50,7 @@ CREDENTIAL_PATH_RE = re.compile(
     re.I,
 )
 SUSPICIOUS_IPTV_PATH_RE = re.compile(
-    r"/iptv/[A-Za-z0-9_-]{8,}/\\d{2,}/",
+    r"/iptv/[A-Za-z0-9_-]{6,}/(?:[A-Za-z0-9_-]{2,}|\\d{2,})/",
     re.I,
 )
 
