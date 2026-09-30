@@ -83,6 +83,8 @@ CORE_CHANNELS = [
     {"id": "TJKTV", "name": "TJK TV", "category": "Spor"},
     {"id": "FBTV", "name": "FB TV", "category": "Spor"},
     {"id": "EkolSports", "name": "Ekol Sports", "category": "Spor"},
+    {"id": "beINSportsHaber", "name": "beIN Sports Haber", "category": "Spor"},
+    {"id": "TRT3", "name": "TRT 3 Spor", "category": "Spor", "aliases": ["TRT 3"]},
 
     # Film/Dizi
     {"id": "FX", "name": "FX", "category": "Film & Dizi"},
@@ -192,6 +194,26 @@ def tvg_id(meta: str) -> str:
 def existing_group(meta: str) -> str:
     m = re.search(r'group-title="([^"]*)"', meta, flags=re.I)
     return m.group(1).strip() if m else ""
+
+
+def tvg_logo(meta: str) -> str:
+    m = re.search(r'tvg-logo="([^"]*)"', meta, flags=re.I)
+    return m.group(1).strip() if m else ""
+
+
+def _set_meta_attr(meta: str, attr: str, value: str) -> str:
+    if not value:
+        return meta
+    head, label = split_extinf(meta)
+    head = re.sub(
+        rf'\s+{re.escape(attr)}="[^"]*"',
+        "",
+        head,
+        flags=re.I,
+    )
+    safe = str(value).replace('"', "%22")
+    head = head.rstrip() + f' {attr}="{safe}"'
+    return f"{head},{label}"
 
 
 def channel_key(meta: str, name: str | None = None) -> str:
@@ -385,9 +407,31 @@ def select_representatives(items: list[dict]) -> list[dict]:
             and any(bool(row.get("geo_hint")) for row in variants)
         )
         copy["device_fallback"] = (
-            copy.get("status") == "restricted"
+            copy.get("status") in {"restricted", "unknown"}
             and any(bool(row.get("device_hint")) for row in variants)
         )
+
+        # Preserve artwork even when the best stream variant lacks metadata.
+        # Prefer logos from higher-trust variants.
+        if not tvg_logo(copy.get("meta", "")):
+            artwork_variants = sorted(
+                variants,
+                key=lambda row: SOURCE_PRIORITY.get(
+                    row.get("source_kind", "unknown"),
+                    SOURCE_PRIORITY["unknown"],
+                ),
+                reverse=True,
+            )
+            for row in artwork_variants:
+                logo = tvg_logo(row.get("meta", ""))
+                if logo:
+                    copy["meta"] = _set_meta_attr(
+                        copy.get("meta", ""),
+                        "tvg-logo",
+                        logo,
+                    )
+                    break
+
         selected.append(copy)
 
     return selected

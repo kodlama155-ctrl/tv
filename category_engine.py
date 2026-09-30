@@ -296,6 +296,10 @@ def _label_keys(value: str) -> set[str]:
     if compact_alias in {"tv2", "teve2"}:
         keys.update({"tv2", "teve2"})
 
+    # Tivibu labels the TRT 3 feed as "TRT 3 SPOR".
+    if compact_alias in {"trt3", "trt3spor"}:
+        keys.update({"trt3", "trt3spor"})
+
     if value.endswith(" tv") and len(value) > 5 and not value.startswith("tv"):
         short = value[:-3].strip()
         keys.add(short)

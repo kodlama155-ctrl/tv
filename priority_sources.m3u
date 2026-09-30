@@ -119,6 +119,26 @@ https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
 
+
+# --- Sports expansion ---
+
+# beIN Sports Haber: official beIN live page embeds its public YouTube live.
+# GitHub runner cannot reach the relay, so Turkey devices try this fallback.
+#EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber [Device-fallback]
+https://ythls.kekikakademi.org/youtube/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
+
+# TRT 3 Spor: currently listed as a separate sports channel on Tivibu.
+# Official TRT HLS is retained as a Turkey-device fallback.
+#EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Spor",TRT 3 Spor [Device-fallback]
+https://tv-trt3.live.trt.com.tr/master.m3u8
+
+# TRT Spor official stream metadata with logo.
+#EXTINF:-1 tvg-id="TRTSpor.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/TRT_Spor_logo.svg/512px-TRT_Spor_logo.svg.png" group-title="Spor",TRT Spor [Geo-blocked]
+#EXTVLCOPT:http-referrer=https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
+
+
 # --- Durable Turkuvaz device sources ---
 
 # ATV stable tokenless Turknet/ERCDN source.
@@ -151,36 +171,9 @@ https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8
 
-
-# --- Sports expansion probes ---
-
-# beIN Sports Haber: official YouTube channel through public HLS relay.
-#EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber
-https://ythls.kekikakademi.org/youtube/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
-
-# beIN Sports Haber alternate public YouTube relay.
-#EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber
-https://ythls.armelin.one/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
-
-# TRT 3 Spor official TRT stream.
-#EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Spor",TRT 3 Spor
-https://tv-trt3.live.trt.com.tr/master.m3u8
-
-
 # TRT Spor official stream metadata with logo.
 #EXTINF:-1 tvg-id="TRTSpor.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/TRT_Spor_logo.svg/512px-TRT_Spor_logo.svg.png" group-title="Spor",TRT Spor [Geo-blocked]
 #EXTVLCOPT:http-referrer=https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
-
-
-# --- beIN Sports Haber direct/public probes ---
-
-# Generated public HLS for beIN Sports Haber's official YouTube live.
-#EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber
-https://raw.githubusercontent.com/ZazerConer/YouTube-to-M3U8/main/beinsports-haber.m3u8
-
-# Public TVCDN fallback for beIN Sports Haber.
-#EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber
-http://stream.tvcdn.net/spor/bein-sports-haber.m3u8
 
