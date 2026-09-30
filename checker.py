@@ -232,6 +232,10 @@ def load_validation_cache():
             for k, v in row.items()
             if k not in VALIDATION_REPORT_META_KEYS
         }
+        result["_cached_order_known"] = bool(row.get("order_known"))
+        result["_cached_order_score"] = row.get("order_score", 999999999.0)
+        result["_cached_order_sources"] = int(row.get("order_sources") or 0)
+        result["_cached_order_evidence"] = row.get("order_evidence", [])
         cache[key] = result
 
     return cache
@@ -264,11 +268,15 @@ def write_playlist(path: Path, entries):
         entries,
         key=lambda x: (
             CATEGORY_INDEX.get(x["category"], 999),
-            *channel_sort_key(
-                x["meta"],
-                x["category"],
-                x["name"],
+            0 if x.get("order_known") else 1,
+            -int(x.get("order_sources") or 0),
+            float(
+                x.get("order_score")
+                if x.get("order_score") is not None
+                else 999999999.0
             ),
+            fold(x.get("name", "")),
+            normalize_identity(tvg_id(x.get("meta", "")) or x.get("name", "")),
             canonical(x["url"]),
         ),
     )
@@ -697,10 +705,14 @@ def main():
     for entry in candidates:
         meta = entry["meta"]
         url = entry["url"]
-        result = validation_results.get(
+        result = dict(validation_results.get(
             canonical(url),
             {"status": "unknown", "reason": "missing result"},
-        )
+        ))
+        cached_order_known = bool(result.pop("_cached_order_known", False))
+        cached_order_score = result.pop("_cached_order_score", 999999999.0)
+        cached_order_sources = int(result.pop("_cached_order_sources", 0) or 0)
+        cached_order_evidence = result.pop("_cached_order_evidence", [])
         status = result.get("status", "unknown")
         if status not in {"verified", "restricted", "unknown", "dead", "drm"}:
             status = "unknown"
@@ -717,7 +729,15 @@ def main():
             or "device fallback" in fold(raw_name)
         )
         normalized_meta, category, name = normalize_meta(meta)
-        ordering = order_decision(normalized_meta, category)
+        if reuse_validation_mode:
+            ordering = {
+                "known": cached_order_known,
+                "score": cached_order_score,
+                "sources": cached_order_sources,
+                "evidence": cached_order_evidence,
+            }
+        else:
+            ordering = order_decision(normalized_meta, category)
         key = channel_key(normalized_meta, name)
 
         item = {
@@ -733,6 +753,10 @@ def main():
             "status": status,
             "geo_hint": geo_hint,
             "device_hint": device_hint,
+            "order_known": ordering.get("known", False),
+            "order_score": ordering.get("score", 999999999.0),
+            "order_sources": ordering.get("sources", 0),
+            "order_evidence": ordering.get("evidence", []),
             **result,
         }
         item["status"] = status
