@@ -1,0 +1,54 @@
+name: Deep Stream Probe
+
+on:
+  push:
+    paths:
+      - "deep_probe.py"
+      - ".github/workflows/deep-probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deep-stream-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Deep-check current ambiguous links
+        run: python deep_probe.py
+
+      - name: Write summary
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          d = json.loads(Path("deep_probe.json").read_text(encoding="utf-8"))
+          print("# Deep stream verification")
+          print()
+          print(f"Channels checked: **{d['channels_checked']}**")
+          print(f"Initial ambiguous: **{d['initial_ambiguous']}**")
+          print(f"Current links verified after deep test: **{d['current_links_verified_after_deep']}**")
+          print(f"Current links still unverified: **{d['current_links_still_unverified']}**")
+          print(f"Verified alternatives available: **{d['verified_alternative_available_for_unverified']}**")
+          PY
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: deep-stream-probe-${{ github.run_id }}
+          path: deep_probe.json
+          retention-days: 3
