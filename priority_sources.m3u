@@ -285,9 +285,9 @@ https://ip252.ozelip.com:1936/protv5/protv5/playlist.m3u8
 # --- Major broadcaster completion candidates (2026-09-30) ---
 
 # TRT 4K - widely mirrored BluTV/MNCDN feed, advertised as 2160p.
-#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
+#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K [Device-fallback]
 https://mn-nl.mncdn.com/blutv_trt4k/live.m3u8
-#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
+#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K [Device-fallback]
 https://trn03.tulix.tv/gt-trt4k/index.m3u8
 
 # ATV Avrupa - dynamic public proxy for Turkuvaz's tokenized web feed.
@@ -295,15 +295,15 @@ https://trn03.tulix.tv/gt-trt4k/index.m3u8
 https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
 
 # Dream TV - BluTV/MNCDN variants.
-#EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik",Dream TV
+#EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik",Dream TV [Device-fallback]
 https://mn-nl.mncdn.com/blutv_dream/smil:dream_hd.smil/chunklist.m3u8
-#EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik",Dream TV
+#EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik",Dream TV [Device-fallback]
 https://mn-nl.mncdn.com/blutv_dream/smil:dream_sd.smil/playlist.m3u8
 
 # Euro Star - RocketCDN 720p and SMIL variants.
-#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star
+#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star [Device-fallback]
 https://xrklj56s.rocketcdn.com/eurostar.stream_720p/chunklist.m3u8
-#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star
+#EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası",Euro Star [Device-fallback]
 https://xrklj56s.rocketcdn.com/eurostar.smil/chunklist.sltur.m3u8
 
 # Kanal 7 Avrupa - public Kanal 7 group feed.
