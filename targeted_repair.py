@@ -8,7 +8,7 @@ import urllib.request
 from pathlib import Path
 
 from channel_policy import SOURCE_PRIORITY, channel_key, split_extinf
-from checker import is_known_false_identity
+from checker import is_known_false_identity, safe_public_candidate
 from checker import is_known_false_identity, safe_public_candidate
 from hls_validator import validate_hls
 
@@ -218,6 +218,8 @@ def main():
 
     for filename, source_kind in LOCAL_CANDIDATE_FILES:
         for row in parse_file(ROOT / filename, source_kind):
+            if not safe_public_candidate(row["url"]):
+                continue
             if is_known_false_identity(row):
                 continue
             if row["channel_key"] in target_keys:
