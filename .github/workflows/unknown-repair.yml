@@ -1,5 +1,5 @@
 name: Unknown Stream Repair
-# trigger-ready
+# safe-repair-v2
 
 on:
   workflow_dispatch:
@@ -112,8 +112,12 @@ jobs:
             exit 0
           fi
 
+          cp tr.m3u /tmp/emirtv-tr.m3u
+          git reset --hard HEAD
+          git clean -fd
           git fetch origin main
           git rebase origin/main
+          cp /tmp/emirtv-tr.m3u tr.m3u
           git add tr.m3u
           git commit -m "bot: replace unknown streams with verified alternatives"
           git push origin HEAD:main
