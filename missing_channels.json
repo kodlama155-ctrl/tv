@@ -1,16 +1,16 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
-  "core_channels_total": 63,
-  "core_channels_verified": 45,
+  "core_channels_total": 64,
+  "core_channels_verified": 46,
   "core_channels_geo_restricted": 7,
-  "core_channels_device_restricted": 2,
+  "core_channels_device_restricted": 3,
   "core_channels_not_verified": 18,
   "status_counts": {
-    "verified": 45,
+    "verified": 46,
     "geo-restricted": 7,
-    "restricted": 3,
+    "device-restricted": 3,
     "unknown": 6,
-    "device-restricted": 2
+    "restricted": 2
   },
   "missing_channels": [
     {
@@ -23,7 +23,7 @@
     {
       "name": "CNN Türk",
       "expected_category": "Haber",
-      "status": "restricted",
+      "status": "device-restricted",
       "reason": "variant HTTP 403",
       "candidate_url": "https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8"
     },
