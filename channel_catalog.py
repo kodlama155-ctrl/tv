@@ -55,7 +55,7 @@ CHANNELS = [
     {"id": "TGRTHaber.tr@HD", "name": "TGRT Haber", "category": "Haber"},
     {"id": "", "name": "TVNET", "category": "Haber"},
     {"id": "AkitTV.tr@HD", "name": "AKİT TV", "category": "Haber"},
-    {"id": "FlashHaberTV.tr@SD", "name": "Flash Haber TV", "category": "Haber"},
+    {"id": "FlashHaberTV.tr@SD", "name": "Flash TV", "category": "Ulusal"},
     {"id": "ASTV.tr@SD", "name": "AS TV", "category": "Yerel"},
     {"id": "EkolTV.tr@HD", "name": "EKOL TV", "category": "Haber"},
     {"id": "TurkHaberTV.tr@SD", "name": "TurkHaber TV", "category": "Haber"},
@@ -119,6 +119,7 @@ CHANNELS = [
     {"id": "ImamHusseinTV5.iq@SD", "name": "Imam Hussein TV 5", "category": "Dini"},
     {"id": "LalegulTV.tr@SD", "name": "Lalegul TV", "category": "Dini"},
     {"id": "SercemTV.tr@HD", "name": "Sercem TV", "category": "Dini"},
+    {"id": "FMTV.tr", "name": "FM TV", "category": "Dini"},
     {"id": "DreamTurk.tr@SD", "name": "Dream Türk", "category": "Müzik"},
     {"id": "PowerTV.tr@SD", "name": "Power TV", "category": "Müzik"},
     {"id": "TRTMuzik.tr@SD", "name": "TRT Müzik", "category": "Müzik"},
@@ -178,6 +179,9 @@ CHANNELS = [
     {"id": "HunatTV.tr@SD", "name": "Hunat TV", "category": "Yerel"},
     {"id": "IcelTV.tr@SD", "name": "Icel TV", "category": "Yerel"},
     {"id": "IlkeTV.tr@HD", "name": "Ilke TV", "category": "Ulusal"},
+    {"id": "Kanal1.tr", "name": "Kanal 1", "category": "Ulusal"},
+    {"id": "ShowMax.tr", "name": "Show Max", "category": "Ulusal"},
+    {"id": "MeltemTV.tr@SD", "name": "Meltem TV", "category": "Ulusal"},
     {"id": "Kanal12.tr@SD", "name": "Kanal 12", "category": "Yerel"},
     {"id": "Kanal15.tr@SD", "name": "Kanal 15", "category": "Yerel"},
     {"id": "Kanal3.tr@SD", "name": "Kanal 3", "category": "Yerel"},
@@ -212,6 +216,7 @@ CHANNELS = [
     {"id": "KRT.tr", "name": "KRT TV", "category": "Haber"},
     {"id": "UlusalKanal.tr", "name": "Ulusal Kanal", "category": "Haber"},
     {"id": "TV5.tr", "name": "TV5", "category": "Haber"},
+    {"id": "KanalB.tr@SD", "name": "Kanal B", "category": "Haber"},
     {"id": "GZT.tr", "name": "GZT", "category": "Haber"},
 ]
 
@@ -268,6 +273,7 @@ ALIASES = {
     "benguturk": "benguturktv",
     "powerturk": "powerturktv",
     "tr24tv": "24tv",
+    "flashhabertv": "flashtv",
 }
 
 
