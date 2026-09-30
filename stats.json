@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T13:09:36.209851+00:00",
+  "updated_at_utc": "2026-09-30T13:15:40.047461+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -63,8 +63,8 @@
   "header_aware_entries": 56,
   "selected_stream_sources": {
     "official_html": 8,
-    "priority": 25,
-    "upstream": 58,
+    "priority": 26,
+    "upstream": 57,
     "official_api": 2,
     "official_browser": 2,
     "iptv_org": 157
@@ -76,23 +76,23 @@
     "official-fallback": 17
   },
   "stream_validation_statuses": {
-    "restricted": 41,
-    "unknown": 109,
-    "dead": 27,
-    "verified": 201
+    "restricted": 38,
+    "unknown": 107,
+    "verified": 207,
+    "dead": 26
   },
-  "verified_entries": 162,
+  "verified_entries": 164,
   "restricted_entries": 21,
-  "unknown_entries": 52,
-  "unknown_retry_candidates": 75,
-  "unknown_retry_skipped_verified_sibling": 35,
-  "unknown_retry_recovered": 1,
+  "unknown_entries": 50,
+  "unknown_retry_candidates": 71,
+  "unknown_retry_skipped_verified_sibling": 36,
+  "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 15,
   "unknown_retry_workers": 8,
   "dead_entries": 17,
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 235,
-  "turkey_device_entries": 181,
+  "turkey_device_entries": 183,
   "turkey_device_geo_fallbacks": 10,
   "turkey_device_restricted_fallbacks": 11,
   "turkey_device_ephemeral_overrides": 2,
@@ -102,17 +102,17 @@
   "core_channels_device_restricted": 3,
   "core_channels_not_verified": 22,
   "categories_verified": {
-    "Ulusal": 20,
-    "Haber": 24,
+    "Ulusal": 19,
+    "Haber": 26,
     "Spor": 5,
     "Film & Dizi": 5,
     "Çocuk": 7,
     "Belgesel": 4,
     "Dini": 10,
     "Müzik": 16,
-    "Yerel": 50,
+    "Yerel": 52,
     "Uluslararası": 19,
-    "Diğer": 2
+    "Diğer": 1
   },
   "categories_restricted": {
     "Ulusal": 2,
@@ -128,16 +128,16 @@
     "Diğer": 5
   },
   "categories_unknown": {
-    "Ulusal": 0,
-    "Haber": 4,
+    "Ulusal": 1,
+    "Haber": 3,
     "Spor": 1,
     "Film & Dizi": 0,
     "Çocuk": 0,
     "Belgesel": 3,
     "Dini": 0,
     "Müzik": 0,
-    "Yerel": 1,
+    "Yerel": 0,
     "Uluslararası": 0,
-    "Diğer": 43
+    "Diğer": 42
   }
 }
