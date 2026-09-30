@@ -7,6 +7,7 @@ on:
       - "checker.py"
       - "hls_validator.py"
       - "discover.py"
+      - "missing_discover.py"
       - "official_sources.py"
       - "turkuvaz_discover.py"
       - "browser_discover.py"
@@ -145,6 +146,12 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: python discover.py
 
+      - name: Target missing catalog channels
+        if: steps.update_mode.outputs.mode == 'full'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python missing_discover.py
+
       - name: Validate streams and build playlists
         if: steps.update_mode.outputs.mode == 'full'
         run: python checker.py
@@ -173,7 +180,8 @@ jobs:
               official_discovered.m3u official_stats.json \
               turkuvaz_discovered.m3u turkuvaz_stats.json \
               browser_discovered.m3u browser_stats.json \
-              discovered.m3u discovery_stats.json
+              discovered.m3u discovery_stats.json \\
+              missing_discovered.m3u missing_discovery_stats.json
           fi
 
           if git diff --cached --quiet; then
