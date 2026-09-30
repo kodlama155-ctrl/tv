@@ -11,8 +11,6 @@ https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
 https://krtdvr.blutv.com/blutv_krt_live_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber" tvg-logo="https://www.evrensel.net/upload/dosya/231375.jpg",Sözcü TV
 https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
-#EXTINF:-1 tvg-id="KanalB.tr@SD" tvg-logo="https://i.imgur.com/bUsbxTQ.png" group-title="Haber",Kanal B
-http://212.174.58.161/hls-live/livepkgr/_definst_/liveevent/kanalb.m3u8
 #EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Spor",TRT 3 Spor
 https://tv-trt3.live.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="HabitatTV.tr@HD" tvg-logo="https://wmxznm9feqh3.merlincdn.net/assets/f43178e5-e366-4ca5-80ce-30d900e2835f.png" group-title="Belgesel",Habitat TV

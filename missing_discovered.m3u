@@ -1,41 +1,172 @@
 #EXTM3U
+# SOURCE: github-targeted:hhdblog/TR/hhd_tr.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://176.65.146.136:6005/play/a01o/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://463758a0.ucomist.net/iptv/V4ZVP6G52HVXDE/6789/index.m3u8
 # SOURCE: github-targeted:UzunMuhalefet/Free-IPTV/Lists/TR-STD.m3u
-#EXTINF:-1 tvg-id="MeltemTV.tr@SD" group-title="Ulusal",Meltem TV
-http://mugla.tvizlehd.com/live/meltemtv.m3u8
-# SOURCE: github-targeted:Lunedor/iptvTR/index.m3u
-#EXTINF:-1 tvg-id="MeltemTV.tr@SD" group-title="Ulusal",Meltem TV
-https://stream.tvcdn.net/dini/meltem-tv.m3u8
-# SOURCE: github-targeted:hayatiptv/iptv/BDNLTR.m3u
-#EXTINF:-1 tvg-id="MeltemTV.tr@SD" group-title="Ulusal",Meltem TV
-https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8
-# SOURCE: github-targeted:iptv-org/iptv/streams/tr.m3u
-#EXTINF:-1 tvg-id="MeltemTV.tr@SD" group-title="Ulusal",Meltem TV
-https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-# SOURCE: github-targeted:Lunedor/iptvTR/index.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-https://ancient-shape-c20a.yedekbirkankam.workers.dev/https://canlitvulusal.xyz/live/tele1/index.m3u8
-# SOURCE: github-targeted:tecobaba/tecom3u/guncel.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-https://cdn.tecostream.xyz/Tele_1.m3u8
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://mugla.tvizlehd.com/live/fmtv.m3u8
+# SOURCE: github-targeted:jrgmayo/m3u_Links/TURK_1TAMLISTE.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://mugla.tvizlehd.com/live/fmtv.m3u8?HasBahCa.m3u8
+# SOURCE: github-targeted:AkcaMvlt/iptv/0-Ulusal.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://stream.tvcdn.net/dini/fm-tv.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://vavoo.to/play/1821985330/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://vavoo.to/play/2389766928/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://vavoo.to/play/3001887834/index.m3u8
+# SOURCE: github-targeted:junaid33/dark/hls/turkeya.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://yayin2.tvizlehd.com/fmtv.m3u8
+# SOURCE: github-targeted:bplaytv/IPTV-LIST/HasBahCa_Turkey_TURKiYE.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+https://livesx.canlitv.center/fmtv.m3u8
+# SOURCE: github-targeted:hhdblog/TR/tr.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+https://streams.uzunmuhalefet.com/stream/93997de4-5a95-48f5-b101-923d54084daf.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+https://vavoo.to/play/4253863829/index.m3u8
 # SOURCE: github-targeted:UzunMuhalefet/Free-IPTV/Lists/TR-STD.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-https://mn-nl.mncdn.com/blutv_tele1_dvr/live_720p2000000/index.m3u8
-# SOURCE: github-targeted:Lunedor/iptvTR/index.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-https://stream.tvcdn.net/haber/tele-1.m3u8
-# SOURCE: github-targeted:iptv-org/iptv/streams/tr.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
-# SOURCE: github-targeted:hayatiptv/iptv/BDNLTR.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-https://tele1-live.ercdn.net/tele1/tele1_1080p.m3u8
-# SOURCE: github-targeted:hayatiptv/iptv/index.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-#EXTVLCOPT:http-user-agent=Lavf53.32.100
-https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
-# SOURCE: github-targeted:zaeboba/portable_config/iptv/Turkish.tur.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-https://ythls.armelin.one/channel/UCoHnRpOS5rL62jTmSDO5Npw.m3u8
-# SOURCE: github-targeted:ql-fa/A/streams/tr.m3u
-#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
-https://ythls.onrender.com/channel/UCoHnRpOS5rL62jTmSDO5Npw.m3u8
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+http://212.174.58.161/hls-live/livepkgr/_definst_/liveevent/kanalb.m3u8
+# SOURCE: github-targeted:AkcaMvlt/iptv/0-Ulusal.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+http://stream.tvcdn.net/diger/kanal-b.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+http://vavoo.to/play/3746952620/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+http://vavoo.to/play/4056883849/index.m3u8
+# SOURCE: github-targeted:FredCem/L/_List.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+https://baskentaudiovideo.xyz/LiveApp/streams/mUE22idl26lA1683879097431.m3u8
+# SOURCE: github-targeted:bplaytv/IPTV-LIST/HasBahCa_Turkey_TURKiYE.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+https://mn-nl.mncdn.com/blutv_kanalb2/live.m3u8
+# SOURCE: github-targeted:bplaytv/IPTV-LIST/HasBahCa_Turkey_TURKiYE.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+https://mn-nl.mncdn.com/blutv_kanalb2/live_720p2000000kbps/index.m3u8
+# SOURCE: github-targeted:hhdblog/TR/tr.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+https://streams.uzunmuhalefet.com/stream/b423d14d-685e-47fe-948f-d96825274fb4.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+https://tv.kanalb.tr/hls/kanalb/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+https://vavoo.to/play/2190296321/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+https://vavoo.to/play/2555658748/index.m3u8
+# SOURCE: github-targeted:junaid33/dark/hls/turkeya.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+http://213.115.248.46:9000/TR_-_TV_5/video.m3u8
+# SOURCE: github-targeted:bplaytv/IPTV-LIST/HasBahCa_Turkey_TURKiYE.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+http://iptvmasterlink.dyndns.org:8080/Tv5/playlist.m3u8
+# SOURCE: github-targeted:jrgmayo/m3u_Links/TURK_1TAMLISTE.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+http://iptvmasterlink.dyndns.org:8080/Tv5/playlist.m3u8?HasBahCa.m3u8
+# SOURCE: github-targeted:AkcaMvlt/iptv/0-Ulusal.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+http://stream.tvcdn.net/dini/tv-5.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+http://vavoo.to/play/2858728514/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+http://vavoo.to/play/4237037321/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+http://vavoo.to/play/661497311/index.m3u8
+# SOURCE: github-targeted:UzunMuhalefet/Free-IPTV/Lists/TR-STD.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+https://59cba4d34b678.streamlock.net/canlitv/tv5/chunklist.m3u8
+# SOURCE: github-targeted:hhdblog/TR/hhd_tr.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+https://ip252.ozelip.com:1936/protv5/protv5/playlist.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+https://raw.githubusercontent.com/bnyusuf31-lab/tr_github.m3u/refs/heads/main/streams/Tv_5.m3u8
+# SOURCE: github-targeted:hhdblog/TR/tr.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+https://streams.uzunmuhalefet.com/stream/e12ae805-19c9-4c7f-ac92-cdd89d953d10.m3u8
+# SOURCE: github-targeted:FredCem/L/_List.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+https://tv5-live.ercdn.net/tv5/tv5.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+https://vavoo.to/play/122135384/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="TV5.tr" group-title="Haber",TV5
+https://vavoo.to/play/2055199683/index.m3u8
+# SOURCE: github-targeted:junaid33/dark/hls/turkeya.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://213.115.248.46:9000/TR_-_ULUSAL_KANAL/video.m3u8
+# SOURCE: github-targeted:junaid33/dark/hls/turkeya.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://iptvmasterlink.dyndns.org:5566/Entry/ulusalkanal_yeni.m3u8
+# SOURCE: github-targeted:bplaytv/IPTV-LIST/HasBahCa_Turkey_TURKiYE.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://iptvmasterlink.dyndns.org:8080/UlusalKanal/playlist.m3u8
+# SOURCE: github-targeted:jrgmayo/m3u_Links/TURK_1TAMLISTE.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://mugla.tvizlehd.com/live/ulusal.m3u8?HasBahCa.m3u8
+# SOURCE: github-targeted:AkcaMvlt/iptv/0-Ulusal.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://stream.tvcdn.net/haber/ulusal-kanal.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://vavoo.to/play/1083295164/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://vavoo.to/play/3434361345/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://vavoo.to/play/3686895386/index.m3u8
+# SOURCE: github-targeted:knxwille/FilmTv/turkiye.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+http://vavoo.to/play/764190897/index.m3u8
+# SOURCE: github-targeted:junaid33/dark/hls/turkeya.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://av.livestreamlive.xyz/hls/ulusal.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://internettv.guventechnology.com/hls/ulusaltv/index.m3u8
+# SOURCE: github-targeted:hhdblog/TR/hhd_tr.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://live.canlitvulusal.xyz/live/ulusalkanal/index.m3u8
+# SOURCE: github-targeted:bplaytv/IPTV-LIST/HasBahCa_Turkey_TURKiYE.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://livex458745.livestreamlive.xyz/ulusal.m3u8
+# SOURCE: github-targeted:bplaytv/IPTV-LIST/HasBahCa_Turkey_TURKiYE.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://mn-nl.mncdn.com/blutv_ulusalkanal/blutv_ulusalkanal.smil/playlist.m3u8
+# SOURCE: github-targeted:UzunMuhalefet/Free-IPTV/Lists/TR-STD.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://mn-nl.mncdn.com/blutv_ulusalkanal/smil:blutv_ulusalkanal.smil/chunklist_b2096000.m3u8
+# SOURCE: github-targeted:ahmetatas/open/Turkey.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://mn-nl.mncdn.com/blutv_ulusalkanal/smil:blutv_ulusalkanal.smil/playlist.m3u8
+# SOURCE: github-targeted:alicesur1/1/iptvorg.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://stream.guventechnology.com:19360/ulusaltv/ulusaltv.m3u8
+# SOURCE: github-targeted:hhdblog/TR/tr.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://streams.uzunmuhalefet.com/stream/e8b425ad-571d-475d-a657-37bca8985836.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://vavoo.to/play/2249801655/index.m3u8
+# SOURCE: github-targeted:GitLatte/temporarylists/tospecial/voturk.m3u
+#EXTINF:-1 tvg-id="UlusalKanal.tr" group-title="Haber",Ulusal Kanal
+https://vavoo.to/play/885453469/index.m3u8

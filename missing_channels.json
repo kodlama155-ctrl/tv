@@ -1,16 +1,16 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 49,
+  "core_channels_verified": 51,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 5,
-  "core_channels_not_verified": 21,
+  "core_channels_not_verified": 19,
   "status_counts": {
-    "verified": 49,
+    "verified": 51,
     "geo-restricted": 7,
-    "absent": 2,
+    "absent": 1,
     "device-restricted": 5,
-    "unknown": 7
+    "unknown": 6
   },
   "missing_channels": [
     {
@@ -19,13 +19,6 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
-    },
-    {
-      "name": "FM TV",
-      "expected_category": "Dini",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
     },
     {
       "name": "Kanal 1",
@@ -54,13 +47,6 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
-    },
-    {
-      "name": "Kanal B",
-      "expected_category": "Haber",
-      "status": "unknown",
-      "reason": "manifest URLError",
-      "candidate_url": "http://212.174.58.161/hls-live/livepkgr/_definst_/liveevent/kanalb.m3u8"
     },
     {
       "name": "TRT Spor",
