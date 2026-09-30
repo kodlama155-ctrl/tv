@@ -205,9 +205,9 @@ https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playl
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://59c7ea6bec1c6.streamlock.net/filbox/habibattv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="TLC.tr" group-title="Belgesel",TLC
-https://pa9agxjg.rocketcdn.com/tlctv.smil/chunklist.sltur.m3u8
+https://lord.mariuannastluisborg.autos/tlc/index.m3u8
 #EXTINF:-1 tvg-id="DMAX.tr" group-title="Belgesel",DMAX
-https://jviqfbc2.rocketcdn.com/dmax.smil/chunklist.sltur.m3u8
+https://lord.mariuannastluisborg.autos/dmax/index.m3u8
 #EXTINF:-1 tvg-id="CiftciTV.tr@SD" tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="Belgesel",Ciftci TV
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRTEBA.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/TRT_EBA_TV_logo.svg/960px-TRT_EBA_TV_logo.svg.png" group-title="Belgesel",TRT EBA
