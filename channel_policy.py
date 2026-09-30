@@ -47,7 +47,7 @@ CORE_CHANNELS = [
     {"id": "TV8", "name": "TV8", "category": "Ulusal"},
     {"id": "TV85", "name": "TV8.5", "category": "Ulusal", "aliases": ["TV8 Bucuk"]},
     {"id": "Kanal7", "name": "Kanal 7", "category": "Ulusal"},
-    {"id": "360", "name": "360", "category": "Haber"},
+    {"id": "360", "name": "360", "category": "Ulusal"},
     {"id": "A2TV", "name": "A2", "category": "Ulusal"},
     {"id": "Teve2", "name": "Teve2", "category": "Ulusal"},
     {"id": "BeyazTV", "name": "Beyaz TV", "category": "Ulusal"},
