@@ -314,49 +314,51 @@ https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8
 
 # --- 2026 broadcaster expansion candidates ---
 
-# Bi Kanal
+# Verified first-pass channels
 #EXTINF:-1 group-title="Ulusal",Bi Kanal
 https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8
-#EXTINF:-1 group-title="Ulusal",Bi Kanal
-https://live.artidijitalmedya.com/artidijital_bikanal/bikanal/playlist.m3u8
 
-# Kral Pop TV
-#EXTINF:-1 tvg-id="KralPopTV.tr@SD" group-title="Müzik",Kral Pop TV
-https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
-
-# Number1 Türk TV
 #EXTINF:-1 group-title="Müzik",Number1 Türk TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8
 
-# Fashion One TV
-#EXTINF:-1 group-title="Uluslararası",Fashion One TV
-https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e2ee690051.smil/playlist.m3u8
 #EXTINF:-1 group-title="Uluslararası",Fashion One TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8
 
-# On4 TV
-#EXTINF:-1 group-title="Dini",On4 TV
-https://edge1.socialsmart.tv/on4/bant1/playlist.m3u8
-
-# Lider Haber TV
 #EXTINF:-1 group-title="Haber",Lider Haber TV
 http://nrttn172.kesintisizyayin.com:29010/lidertv/lidertv/playlist.m3u8
-#EXTINF:-1 group-title="Haber",Lider Haber TV
-http://nrttn172.kesintisizyayin.com:29010/lidertv/lidertv/sec-f5-v1-a1.m3u8
 
-# Sports TV
+# Kral Pop TV / Kral TV - current Doğuş web-app endpoints
+#EXTINF:-1 tvg-id="KralPopTV.tr@SD" group-title="Müzik",Kral Pop TV
+https://dogus.daioncdn.net/kralpoptv/kralpoptv.m3u8?app=kralpoptv_web
+#EXTINF:-1 group-title="Müzik",Kral TV
+https://dogus.daioncdn.net/kraltv/kraltv.m3u8?app=kraltv_web
+
+# On4 TV - current segment endpoint alternatives
+#EXTINF:-1 group-title="Dini",On4 TV
+https://edge1.socialsmart.tv/on4/bant1/chunks.m3u8
+#EXTINF:-1 group-title="Dini",On4 TV
+https://edge1.taksimbilisim.com/on4/bant1/chunks.m3u8
+
+# Sports TV - broadcaster endpoint + platform backup
 #EXTINF:-1 tvg-id="SportsTV.tr" group-title="Spor",Sports TV
 https://live.sportstv.com.tr/hls/low/sportstv_hd/index.m3u8
 #EXTINF:-1 tvg-id="SportsTV.tr" group-title="Spor",Sports TV
-https://live.sportstv.com.tr/hls/low/sportstv_sd/index.m3u8
+#EXTVLCOPT:http-user-agent=Lavf53.32.100
+https://sportstv.blutv.com/blutv_sportstv2/live_720p2000000kbps/index.m3u8
 
 # TYT Türk
 #EXTINF:-1 group-title="Ulusal",TYT Türk
-https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
-#EXTINF:-1 group-title="Ulusal",TYT Türk
-https://cdn4.yayin.com.tr/tytturk/index.m3u8
+https://cdn-tytturk.yayin.com.tr/tytturk/tracks-v1a1/mono.m3u8
 
 # TMB TV
 #EXTINF:-1 tvg-id="TMBTV.tr" group-title="Uluslararası",TMB TV
-https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8
+https://str.yodacdn.net/tmb_tr_app/index.m3u8
+#EXTINF:-1 tvg-id="TMBTV.tr" group-title="Uluslararası",TMB TV
+https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8?token=tmb_app_token_13579
+
+# TGRT EU
+#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
+https://tgrt-live.ercdn.net/tgrteu/tgrteu.m3u8
+#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
+https://canli.tgrteu.com/tgrteu.m3u8
 
