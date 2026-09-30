@@ -28,7 +28,8 @@ UA = "EmirTV-Missing-Discovery/1.0"
 # Search a rotating subset on each 6-hour full run instead of slowing every
 # update with minute-long rate-limit sleeps.
 MAX_TARGET_SEARCHES = 8
-MAX_RESULTS_PER_TARGET = 10
+MAX_RESULTS_PER_TARGET = 8
+SEARCH_DELAY_SECONDS = 7
 MAX_FILE_BYTES = 2_000_000
 
 M3U8_RE = re.compile(
@@ -244,7 +245,10 @@ def main():
     target_report = []
     errors = 0
 
-    for row in targets:
+    for target_index, row in enumerate(targets):
+        if target_index:
+            time.sleep(SEARCH_DELAY_SECONDS)
+
         report = {
             "name": row["name"],
             "category": row["category"],
@@ -316,6 +320,7 @@ def main():
         "missing_before_search": len(missing),
         "missing_names": [row["name"] for row in missing],
         "max_target_searches_per_run": MAX_TARGET_SEARCHES,
+        "search_delay_seconds": SEARCH_DELAY_SECONDS,
         "cursor": next_cursor,
         "targets_searched": len(target_report),
         "target_report": target_report,
