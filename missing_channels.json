@@ -1,14 +1,14 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 48,
+  "core_channels_verified": 49,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 3,
-  "core_channels_not_verified": 22,
+  "core_channels_not_verified": 21,
   "status_counts": {
-    "verified": 48,
+    "verified": 49,
     "geo-restricted": 7,
-    "absent": 3,
+    "absent": 2,
     "unknown": 7,
     "device-restricted": 3,
     "restricted": 2
@@ -30,13 +30,6 @@
     },
     {
       "name": "Kanal 1",
-      "expected_category": "Ulusal",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
-    },
-    {
-      "name": "Show Max",
       "expected_category": "Ulusal",
       "status": "absent",
       "reason": "No candidate found in current sources",
