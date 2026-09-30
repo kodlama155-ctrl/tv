@@ -54,12 +54,8 @@ MAX_WORKERS = 24
 RETRY_WORKERS = 12
 UNKNOWN_RETRY_DELAY = 3
 
-CREDENTIAL_PATH_RE = re.compile(
-    r"/(?:iptv|live)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}/",
-    flags=re.I,
-)
-SUSPICIOUS_IPTV_PATH_RE = re.compile(
-    r"/iptv/[A-Za-z0-9_-]{8,}/\\d{2,}/",
+EXPLICIT_CREDENTIAL_PATH_RE = re.compile(
+    r"/(?:user(?:name)?|pass(?:word)?|token|auth(?:orization)?|session|jwt|key)(?:=|/)[^/?#]+",
     re.I,
 )
 SENSITIVE_QUERY_KEYS = {
@@ -166,9 +162,7 @@ def safe_public_candidate(url: str) -> bool:
         return False
     if p.username or p.password:
         return False
-    if CREDENTIAL_PATH_RE.search(p.path):
-        return False
-    if SUSPICIOUS_IPTV_PATH_RE.search(p.path):
+    if EXPLICIT_CREDENTIAL_PATH_RE.search(p.path):
         return False
 
     query_keys = {
