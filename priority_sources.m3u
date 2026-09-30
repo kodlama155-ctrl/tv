@@ -162,3 +162,20 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/anews/anews.m3u8
 #EXTINF:-1 tvg-id="VavTV.tr@HD" group-title="Dini",VAV TV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/vavtv/vavtv.m3u8
 
+
+# --- Turkuvaz final fallback probes ---
+
+# A News official YouTube channel through public HLS relays.
+#EXTINF:-1 tvg-id="ANews.tr@HD" group-title="Haber",A News
+https://ythls.armelin.one/channel/UC-LRBEUet4xX2fRB3JitFxg.m3u8
+
+#EXTINF:-1 tvg-id="ANews.tr@HD" group-title="Haber",A News
+https://ythls.kekikakademi.org/youtube/channel/UC-LRBEUet4xX2fRB3JitFxg.m3u8
+
+# VAV TV public TVCDN alternatives.
+#EXTINF:-1 tvg-id="VavTV.tr@HD" group-title="Dini",VAV TV
+http://stream.tvcdn.net/dini/vav-tv.m3u8
+
+#EXTINF:-1 tvg-id="VavTV.tr@HD" group-title="Dini",VAV TV
+https://stream.tvcdn.net/dini/vav-tv.m3u8
+
