@@ -7,12 +7,6 @@ on:
         description: "Optional channel name filter (for example TRT 2)"
         required: false
         type: string
-  push:
-    paths:
-      - "priority_sources.m3u"
-      - "quick_probe.py"
-      - "hls_validator.py"
-      - ".github/workflows/quick-probe.yml"
 
 permissions:
   contents: read
