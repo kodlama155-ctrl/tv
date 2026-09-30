@@ -1,0 +1,60 @@
+name: Priority Refresh
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "priority_sources.m3u"
+      - "priority_refresh.py"
+      - ".github/workflows/priority-refresh.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: priority-refresh-v1
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate changed priority channels
+        env:
+          PRIORITY_BEFORE_SHA: ${{ github.event.before }}
+        run: python priority_refresh.py
+
+      - name: Commit refreshed playlist
+        run: |
+          git config user.name "emirtv-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          git fetch origin main
+          remote_sha="$(git rev-parse origin/main)"
+          trigger_sha="${{ github.sha }}"
+
+          if [ "$remote_sha" != "$trigger_sha" ]; then
+            echo "main advanced; skipping stale priority result"
+            exit 0
+          fi
+
+          git add tr.m3u priority_validation.json
+
+          if git diff --cached --quiet; then
+            echo "No playlist changes"
+          else
+            git commit -m "bot: refresh changed priority channels"
+            git push origin HEAD:main
+          fi
