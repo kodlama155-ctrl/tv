@@ -258,9 +258,13 @@ def is_ephemeral_signed_url(url: str) -> bool:
 def is_known_false_identity(entry: dict) -> bool:
     key = channel_key(entry.get("meta", ""))
     url = fold(entry.get("url", ""))
-    # iptv-org currently maps VAV TV to KLTR Sanat TV. Do not allow a
-    # technically working but semantically wrong stream to win selection.
-    return key == "vavtv" and "kltr-sanat-tv" in url
+    # Known technically-working but semantically wrong mappings must never
+    # win selection.
+    if key == "vavtv" and "kltr-sanat-tv" in url:
+        return True
+    if key == "kanal7" and ("kanal7avr" in url or "kanal7avrupa" in url):
+        return True
+    return False
 
 
 def write_playlist(path: Path, entries):
