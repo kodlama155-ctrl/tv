@@ -81,6 +81,8 @@ CORE_CHANNELS = [
     {"id": "ASpor", "name": "A Spor", "category": "Spor"},
     {"id": "HTSporTV", "name": "HT Spor", "category": "Spor"},
     {"id": "TJKTV", "name": "TJK TV", "category": "Spor"},
+    {"id": "FBTV", "name": "FB TV", "category": "Spor"},
+    {"id": "EkolSports", "name": "Ekol Sports", "category": "Spor"},
 
     # Film/Dizi
     {"id": "FX", "name": "FX", "category": "Film & Dizi"},
@@ -363,6 +365,10 @@ def select_representatives(items: list[dict]) -> list[dict]:
             copy.get("status") == "restricted"
             and any(bool(row.get("geo_hint")) for row in variants)
         )
+        copy["device_fallback"] = (
+            copy.get("status") == "restricted"
+            and any(bool(row.get("device_hint")) for row in variants)
+        )
         selected.append(copy)
 
     return selected
@@ -404,6 +410,11 @@ def build_missing_report(validation_report: list[dict], output_path: Path) -> di
                 and any(bool(row.get("geo_hint")) for row in matches)
             ):
                 status = "geo-restricted"
+            elif (
+                status == "restricted"
+                and any(bool(row.get("device_hint")) for row in matches)
+            ):
+                status = "device-restricted"
             reason = best.get("reason", "")
             url = best.get("url", "")
         else:
@@ -429,6 +440,7 @@ def build_missing_report(validation_report: list[dict], output_path: Path) -> di
         "core_channels_total": len(CORE_CHANNELS),
         "core_channels_verified": verified_count,
         "core_channels_geo_restricted": status_counts.get("geo-restricted", 0),
+        "core_channels_device_restricted": status_counts.get("device-restricted", 0),
         "core_channels_not_verified": len(CORE_CHANNELS) - verified_count,
         "status_counts": dict(status_counts),
         "missing_channels": missing,

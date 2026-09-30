@@ -130,6 +130,10 @@ def parse_playlist(
                     "geo-blocked" in fold(meta_value)
                     or "geo blocked" in fold(meta_value)
                 ),
+                "device_hint": (
+                    "device-fallback" in fold(meta_value)
+                    or "device fallback" in fold(meta_value)
+                ),
             })
             meta = None
             options = {}
@@ -375,6 +379,9 @@ def main():
                 merged["geo_hint"] = bool(
                     merged.get("geo_hint") or existing.get("geo_hint")
                 )
+                merged["device_hint"] = bool(
+                    merged.get("device_hint") or existing.get("device_hint")
+                )
                 unique[key] = merged
                 existing = merged
             else:
@@ -384,6 +391,9 @@ def main():
                     existing["referrer"] = entry["referrer"]
                 existing["geo_hint"] = bool(
                     existing.get("geo_hint") or entry.get("geo_hint")
+                )
+                existing["device_hint"] = bool(
+                    existing.get("device_hint") or entry.get("device_hint")
                 )
 
     candidates = list(unique.values())
@@ -516,6 +526,10 @@ def main():
             "geo-blocked" in fold(raw_name)
             or "geo blocked" in fold(raw_name)
         )
+        device_hint = bool(entry.get("device_hint")) or (
+            "device-fallback" in fold(raw_name)
+            or "device fallback" in fold(raw_name)
+        )
         normalized_meta, category, name = normalize_meta(meta)
         ordering = order_decision(normalized_meta, category)
         key = channel_key(normalized_meta, name)
@@ -532,6 +546,7 @@ def main():
             "channel_key": key,
             "status": status,
             "geo_hint": geo_hint,
+            "device_hint": device_hint,
             **result,
         }
         item["status"] = status
@@ -542,6 +557,7 @@ def main():
             "original_name": naming.get("original_name"),
             "name_source": naming.get("source"),
             "geo_hint": geo_hint,
+            "device_hint": device_hint,
             "tvg_id": tvg_id(normalized_meta),
             "channel_key": key,
             "category": category,
@@ -608,15 +624,14 @@ def main():
     )
     write_playlist(ALL_OUTPUT, all_candidates)
 
-    # Türkiye cihaz listesi: strict verified yayınlara ek olarak yalnızca
-    # doğrulanmış geo-hint taşıyan restricted resmî yayınları dahil eder.
-    # Bu sayede GitHub'ın yurt dışı runner'ı TRT 2 gibi Türkiye'ye açık
-    # yayınları 403 gördüğünde kanal cihaz listesinden tamamen kaybolmaz.
+    # Türkiye cihaz listesi: strict verified yayınlara ek olarak
+    # geo-restricted ve açıkça işaretlenmiş resmî device-fallback yayınları
+    # dahil eder. Bunlar strict verified sayılmaz.
     turkey_candidates = list(buckets["verified"])
     turkey_candidates.extend(
         item
         for item in buckets["restricted"]
-        if item.get("geo_restricted")
+        if item.get("geo_restricted") or item.get("device_fallback")
     )
     write_playlist(TURKEY_OUTPUT, turkey_candidates)
 
@@ -680,10 +695,16 @@ def main():
         "turkey_device_geo_fallbacks": sum(
             1 for item in turkey_candidates if item.get("geo_restricted")
         ),
+        "turkey_device_restricted_fallbacks": sum(
+            1 for item in turkey_candidates if item.get("device_fallback")
+        ),
         "core_channels_total": coverage["core_channels_total"],
         "core_channels_verified": coverage["core_channels_verified"],
         "core_channels_geo_restricted": coverage.get(
             "core_channels_geo_restricted", 0
+        ),
+        "core_channels_device_restricted": coverage.get(
+            "core_channels_device_restricted", 0
         ),
         "core_channels_not_verified": coverage["core_channels_not_verified"],
         "categories_verified": {

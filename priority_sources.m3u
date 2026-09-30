@@ -106,67 +106,15 @@ https://trt2.blutv.com/blutv_trt2/live.m3u8
 #EXTVLCOPT:http-user-agent=Lavf53.32.100
 https://mn-nl.mncdn.com/blutv_trt2/live.m3u8
 
+# --- Durable sports candidates ---
 
-# --- Sports targeted probe ---
-
-# FB TV public candidates.
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
-https://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
-
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
-http://stream.tvcdn.net/spor/fb-tv.m3u8
-
-# TRT 3 / TRT 3 Spor public TRT candidates.
-#EXTINF:-1 tvg-id="TRT3.tr@SD" group-title="Spor",TRT 3
-https://tv-trt3.live.trt.com.tr/master.m3u8
-
-#EXTINF:-1 tvg-id="TRT3.tr@SD" group-title="Spor",TRT 3
-https://tv-trt3.medya.trt.com.tr/master.m3u8
-
-#EXTINF:-1 tvg-id="TRT3.tr@SD" group-title="Spor",TRT 3
-https://tv-trt3.medya.trt.com.tr/master_720.m3u8
-
-
-# --- Sports public direct candidates ---
-
-# FB TV direct Fenerbahce-owned CDN.
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
-https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
-
-# Ekol Sports public ERCDN.
+# Ekol Sports: verified public ERCDN stream.
 #EXTINF:-1 tvg-id="EkolSports.tr@HD" group-title="Spor",Ekol Sports
 https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 
-# TRT Spor current public media host.
-#EXTINF:-1 tvg-id="TRTSpor.tr@HD" group-title="Spor",TRT Spor
-https://tv-trtspor1.medya.trt.com.tr/master.m3u8
-
-# TRT Spor Yildiz current public media host.
-#EXTINF:-1 tvg-id="TRTSporYildiz.tr@HD" group-title="Spor",TRT Spor Yıldız
-https://tv-trtspor2.medya.trt.com.tr/master.m3u8
-
-# Sports TV public site stream.
-#EXTINF:-1 tvg-id="SportsTV.tr@SD" group-title="Spor",Sports TV
-https://live.sportstv.com.tr/hls/low/sportstv_hd/index.m3u8
-
-
-# FB TV official header-aware candidate.
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
+# FB TV: official Fenerbahce CDN. GitHub runner receives 403, so this is
+# retained only as a device fallback and is never counted as strict verified.
+#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV [Device-fallback]
 #EXTVLCOPT:http-referrer=https://www.fenerbahce.org/fenerbahcetv/canliyayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
-
-# FB TV HTTP form with official referer.
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
-#EXTVLCOPT:http-referrer=https://www.fenerbahce.org/fenerbahcetv/canliyayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-http://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
-
-
-# FB TV open public relay candidates.
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
-https://trn10.tulix.tv/gt-fbtv/index.m3u8
-
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
-https://gineu8.bozztv.com/gin-36bay2/gin-fbtv1/tracks-v1a1/mono.m3u8
-

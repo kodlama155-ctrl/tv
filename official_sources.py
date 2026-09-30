@@ -69,6 +69,12 @@ OFFICIAL_SOURCES = [
         "exclude_hints": ["yildiz", "radyo"],
     },
     {
+        "name": "FB TV",
+        "category": "Spor",
+        "page": "https://www.fenerbahce.org/fenerbahcetv/canliyayin",
+        "hints": ["fbtv", "fenerbahce", "fenerbahcetv"],
+    },
+    {
         "name": "ATV",
         "category": "Ulusal",
         "page": "https://www.atv.com.tr/canli-yayin",
