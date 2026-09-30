@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T17:00:47.396280+00:00",
+  "updated_at_utc": "2026-09-30T17:04:17.697883+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -36,8 +36,8 @@
   "filtered_false_identity_entries": 0,
   "header_aware_entries": 33,
   "validation_cache_enabled": true,
-  "validation_cache_hits": 258,
-  "validation_fresh_checks": 1,
+  "validation_cache_hits": 259,
+  "validation_fresh_checks": 0,
   "selected_stream_sources": {
     "cached_output": 202,
     "priority": 38
