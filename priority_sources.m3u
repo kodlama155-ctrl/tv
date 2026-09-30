@@ -126,3 +126,26 @@ https://tv-trt3.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRT3.tr@SD" group-title="Spor",TRT 3
 https://tv-trt3.medya.trt.com.tr/master_720.m3u8
 
+
+# --- Sports public direct candidates ---
+
+# FB TV direct Fenerbahce-owned CDN.
+#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
+https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
+
+# Ekol Sports public ERCDN.
+#EXTINF:-1 tvg-id="EkolSports.tr@HD" group-title="Spor",Ekol Sports
+https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
+
+# TRT Spor current public media host.
+#EXTINF:-1 tvg-id="TRTSpor.tr@HD" group-title="Spor",TRT Spor
+https://tv-trtspor1.medya.trt.com.tr/master.m3u8
+
+# TRT Spor Yildiz current public media host.
+#EXTINF:-1 tvg-id="TRTSporYildiz.tr@HD" group-title="Spor",TRT Spor Yıldız
+https://tv-trtspor2.medya.trt.com.tr/master.m3u8
+
+# Sports TV public site stream.
+#EXTINF:-1 tvg-id="SportsTV.tr@SD" group-title="Spor",Sports TV
+https://live.sportstv.com.tr/hls/low/sportstv_hd/index.m3u8
+
