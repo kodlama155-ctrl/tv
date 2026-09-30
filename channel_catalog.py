@@ -6,7 +6,7 @@ import unicodedata
 
 # EmirTV authoritative channel/category catalog.
 #
-# Category placement is owned by this file. External platforms may still be
+# Category placement is owned by this file. Category-only edits use fast_rebuild.py.\n# External platforms may still be
 # used for discovery and ordering, but they must not move a known channel to a
 # different category. Unknown channels intentionally fall back to "Diğer" so
 # they can be reviewed before being promoted into a curated category.
