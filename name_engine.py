@@ -313,6 +313,7 @@ def naming_catalogs() -> dict:
 
 def canonical_channel_name(meta_tvg_id: str, source_name: str) -> tuple[str, str]:
     raw_id = str(meta_tvg_id or "").strip().lower().split("@", 1)[0]
+    # TRT 4K is a channel identity; "4K" must not be stripped as a quality suffix.
     if raw_id in {"trt4k", "trt4k.tr"}:
         return "TRT 4K", "official-fallback"
 
