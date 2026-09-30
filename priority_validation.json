@@ -1,8 +1,8 @@
 {
   "mode": "priority-delta",
-  "changed_channels": 9,
+  "changed_channels": 10,
   "candidates_tested": 14,
-  "applied_channels": 4,
+  "applied_channels": 5,
   "applied": [
     {
       "channel_key": "bikanal",
@@ -17,23 +17,29 @@
       "reason": "real media segment verified"
     },
     {
+      "channel_key": "kralpoptv",
+      "status": "verified",
+      "url": "https://dogus.daioncdn.net/kralpoptv/kralpoptv.m3u8?app=kralpoptv_web",
+      "reason": "real media segment verified"
+    },
+    {
       "channel_key": "liderhabertv",
       "status": "verified",
       "url": "http://nrttn172.kesintisizyayin.com:29010/lidertv/lidertv/playlist.m3u8",
       "reason": "real media segment verified"
     },
     {
-      "channel_key": "number1turktv",
+      "channel_key": "tmbtv",
       "status": "verified",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8",
+      "url": "https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8?token=tmb_app_token_13579",
       "reason": "real media segment verified"
     }
   ],
   "kept_existing_channels": [
-    "kralpoptv",
+    "kraltv",
     "on4tv",
     "sportstv",
-    "tmbtv",
+    "tgrteu",
     "tytturk"
   ],
   "results": [
@@ -46,75 +52,15 @@
       "device_hint": false,
       "resolution": null,
       "bandwidth": 3000000,
-      "manifest_latency_ms": 654,
+      "manifest_latency_ms": 692,
       "status": "verified",
       "reason": "real media segment verified",
-      "segment_latency_ms": 1157,
+      "segment_latency_ms": 1040,
       "segment_probes": 1,
       "encrypted": false,
       "vod": false,
       "http_code": 200,
       "variants": 3
-    },
-    {
-      "meta": "#EXTINF:-1 group-title=\"Ulusal\",Bi Kanal",
-      "url": "https://live.artidijitalmedya.com/artidijital_bikanal/bikanal/playlist.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "bikanal",
-      "device_hint": false,
-      "status": "dead",
-      "reason": "manifest HTTP 404",
-      "http_code": 404
-    },
-    {
-      "meta": "#EXTINF:-1 tvg-id=\"KralPopTV.tr@SD\" group-title=\"Müzik\",Kral Pop TV",
-      "url": "https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "kralpoptv",
-      "device_hint": false,
-      "status": "restricted",
-      "reason": "variant HTTP 403; variant HTTP 403; variant HTTP 403",
-      "variants": 3
-    },
-    {
-      "meta": "#EXTINF:-1 group-title=\"Müzik\",Number1 Türk TV",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "number1turktv",
-      "device_hint": false,
-      "resolution": null,
-      "bandwidth": 400000,
-      "manifest_latency_ms": 915,
-      "status": "verified",
-      "reason": "real media segment verified",
-      "segment_latency_ms": 1146,
-      "segment_probes": 1,
-      "encrypted": false,
-      "vod": false,
-      "http_code": 200,
-      "variants": 1
-    },
-    {
-      "meta": "#EXTINF:-1 group-title=\"Uluslararası\",Fashion One TV",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e2ee690051.smil/playlist.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "fashiononetv",
-      "device_hint": false,
-      "resolution": null,
-      "bandwidth": 400000,
-      "manifest_latency_ms": 814,
-      "status": "verified",
-      "reason": "real media segment verified",
-      "segment_latency_ms": 1414,
-      "segment_probes": 1,
-      "encrypted": false,
-      "vod": false,
-      "http_code": 200,
-      "variants": 1
     },
     {
       "meta": "#EXTINF:-1 group-title=\"Uluslararası\",Fashion One TV",
@@ -124,27 +70,16 @@
       "channel_key": "fashiononetv",
       "device_hint": false,
       "resolution": "1280x720",
-      "bandwidth": 1555512,
-      "manifest_latency_ms": 672,
+      "bandwidth": 1566792,
+      "manifest_latency_ms": 723,
       "status": "verified",
       "reason": "real media segment verified",
-      "segment_latency_ms": 1351,
+      "segment_latency_ms": 1200,
       "segment_probes": 1,
       "encrypted": false,
       "vod": false,
       "http_code": 200,
       "variants": 1
-    },
-    {
-      "meta": "#EXTINF:-1 group-title=\"Dini\",On4 TV",
-      "url": "https://edge1.socialsmart.tv/on4/bant1/playlist.m3u8",
-      "user_agent": null,
-      "referrer": null,
-      "channel_key": "on4tv",
-      "device_hint": false,
-      "status": "dead",
-      "reason": "manifest HTTP 404",
-      "http_code": 404
     },
     {
       "meta": "#EXTINF:-1 group-title=\"Haber\",Lider Haber TV",
@@ -154,11 +89,11 @@
       "channel_key": "liderhabertv",
       "device_hint": false,
       "resolution": "1280x720",
-      "bandwidth": 1710348,
-      "manifest_latency_ms": 464,
+      "bandwidth": 1703881,
+      "manifest_latency_ms": 500,
       "status": "verified",
       "reason": "real media segment verified",
-      "segment_latency_ms": 754,
+      "segment_latency_ms": 816,
       "segment_probes": 1,
       "encrypted": false,
       "vod": false,
@@ -166,23 +101,57 @@
       "variants": 1
     },
     {
-      "meta": "#EXTINF:-1 group-title=\"Haber\",Lider Haber TV",
-      "url": "http://nrttn172.kesintisizyayin.com:29010/lidertv/lidertv/sec-f5-v1-a1.m3u8",
+      "meta": "#EXTINF:-1 tvg-id=\"KralPopTV.tr@SD\" group-title=\"Müzik\",Kral Pop TV",
+      "url": "https://dogus.daioncdn.net/kralpoptv/kralpoptv.m3u8?app=kralpoptv_web",
       "user_agent": null,
       "referrer": null,
-      "channel_key": "liderhabertv",
+      "channel_key": "kralpoptv",
       "device_hint": false,
       "resolution": "1280x720",
-      "bandwidth": 1710348,
-      "manifest_latency_ms": 523,
+      "bandwidth": 1000000,
+      "manifest_latency_ms": 1368,
       "status": "verified",
       "reason": "real media segment verified",
-      "segment_latency_ms": 918,
+      "segment_latency_ms": 1181,
       "segment_probes": 1,
       "encrypted": false,
       "vod": false,
       "http_code": 200,
-      "variants": 1
+      "variants": 3
+    },
+    {
+      "meta": "#EXTINF:-1 group-title=\"Müzik\",Kral TV",
+      "url": "https://dogus.daioncdn.net/kraltv/kraltv.m3u8?app=kraltv_web",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "kraltv",
+      "device_hint": false,
+      "status": "unknown",
+      "reason": "response is not HLS",
+      "http_code": 200,
+      "manifest_latency_ms": 1235
+    },
+    {
+      "meta": "#EXTINF:-1 group-title=\"Dini\",On4 TV",
+      "url": "https://edge1.socialsmart.tv/on4/bant1/chunks.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "on4tv",
+      "device_hint": false,
+      "status": "dead",
+      "reason": "manifest HTTP 404",
+      "http_code": 404
+    },
+    {
+      "meta": "#EXTINF:-1 group-title=\"Dini\",On4 TV",
+      "url": "https://edge1.taksimbilisim.com/on4/bant1/chunks.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "on4tv",
+      "device_hint": false,
+      "status": "dead",
+      "reason": "manifest HTTP 404",
+      "http_code": 404
     },
     {
       "meta": "#EXTINF:-1 tvg-id=\"SportsTV.tr\" group-title=\"Spor\",Sports TV",
@@ -196,8 +165,8 @@
     },
     {
       "meta": "#EXTINF:-1 tvg-id=\"SportsTV.tr\" group-title=\"Spor\",Sports TV",
-      "url": "https://live.sportstv.com.tr/hls/low/sportstv_sd/index.m3u8",
-      "user_agent": null,
+      "url": "https://sportstv.blutv.com/blutv_sportstv2/live_720p2000000kbps/index.m3u8",
+      "user_agent": "Lavf53.32.100",
       "referrer": null,
       "channel_key": "sportstv",
       "device_hint": false,
@@ -206,7 +175,7 @@
     },
     {
       "meta": "#EXTINF:-1 group-title=\"Ulusal\",TYT Türk",
-      "url": "https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8",
+      "url": "https://cdn-tytturk.yayin.com.tr/tytturk/tracks-v1a1/mono.m3u8",
       "user_agent": null,
       "referrer": null,
       "channel_key": "tytturk",
@@ -215,26 +184,54 @@
       "reason": "manifest URLError"
     },
     {
-      "meta": "#EXTINF:-1 group-title=\"Ulusal\",TYT Türk",
-      "url": "https://cdn4.yayin.com.tr/tytturk/index.m3u8",
+      "meta": "#EXTINF:-1 tvg-id=\"TMBTV.tr\" group-title=\"Uluslararası\",TMB TV",
+      "url": "https://str.yodacdn.net/tmb_tr_app/index.m3u8",
       "user_agent": null,
       "referrer": null,
-      "channel_key": "tytturk",
+      "channel_key": "tmbtv",
+      "device_hint": false,
+      "status": "restricted",
+      "reason": "variant HTTP 403",
+      "variants": 1
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"TMBTV.tr\" group-title=\"Uluslararası\",TMB TV",
+      "url": "https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8?token=tmb_app_token_13579",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "tmbtv",
+      "device_hint": false,
+      "resolution": null,
+      "bandwidth": null,
+      "manifest_latency_ms": 1062,
+      "status": "verified",
+      "reason": "real media segment verified",
+      "segment_latency_ms": 1731,
+      "segment_probes": 1,
+      "encrypted": false,
+      "vod": false,
+      "http_code": 200
+    },
+    {
+      "meta": "#EXTINF:-1 tvg-id=\"TGRTEU.tr\" group-title=\"Uluslararası\",TGRT EU",
+      "url": "https://tgrt-live.ercdn.net/tgrteu/tgrteu.m3u8",
+      "user_agent": null,
+      "referrer": null,
+      "channel_key": "tgrteu",
       "device_hint": false,
       "status": "dead",
       "reason": "manifest HTTP 404",
       "http_code": 404
     },
     {
-      "meta": "#EXTINF:-1 tvg-id=\"TMBTV.tr\" group-title=\"Uluslararası\",TMB TV",
-      "url": "https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8",
+      "meta": "#EXTINF:-1 tvg-id=\"TGRTEU.tr\" group-title=\"Uluslararası\",TGRT EU",
+      "url": "https://canli.tgrteu.com/tgrteu.m3u8",
       "user_agent": null,
       "referrer": null,
-      "channel_key": "tmbtv",
+      "channel_key": "tgrteu",
       "device_hint": false,
-      "status": "restricted",
-      "reason": "manifest HTTP 403",
-      "http_code": 403
+      "status": "unknown",
+      "reason": "manifest URLError"
     }
   ]
 }
