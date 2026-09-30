@@ -8,6 +8,7 @@ import urllib.request
 from pathlib import Path
 
 from channel_policy import SOURCE_PRIORITY, channel_key, split_extinf
+from checker import is_known_false_identity
 from checker import is_known_false_identity, safe_public_candidate
 from hls_validator import validate_hls
 
@@ -23,6 +24,7 @@ LOCAL_CANDIDATE_FILES = [
     ("turkuvaz_discovered.m3u", "official_api"),
     ("browser_discovered.m3u", "official_browser"),
     ("repair_discovered.m3u", "github_discovery"),
+    ("unknown_discovered.m3u", "github_discovery"),
     ("missing_discovered.m3u", "github_discovery"),
     ("discovered.m3u", "github_discovery"),
     ("a.m3u", "unknown"),
@@ -216,6 +218,8 @@ def main():
 
     for filename, source_kind in LOCAL_CANDIDATE_FILES:
         for row in parse_file(ROOT / filename, source_kind):
+            if is_known_false_identity(row):
+                continue
             if row["channel_key"] in target_keys:
                 candidates.append(row)
 
