@@ -135,7 +135,6 @@ CHANNELS = [
     {"id": "Number1TV.tr@SD", "name": "Number 1 TV", "category": "Müzik"},
     {"id": "", "name": "Number1 Rap TV", "category": "Müzik"},
     {"id": "KralPopTV.tr@SD", "name": "Kral Pop TV", "category": "Müzik"},
-    {"id": "", "name": "Kral TV", "category": "Müzik"},
     {"id": "", "name": "Number1 Türk TV", "category": "Müzik"},
     {"id": "KNMusicTV.az@SD", "name": "KN Music TV", "category": "Müzik"},
     {"id": "MedMuzik.tr@SD", "name": "Med Muzik", "category": "Müzik"},
