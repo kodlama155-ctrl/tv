@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import os
 import re
 import time
 import urllib.parse
@@ -77,6 +78,18 @@ def _source_map():
 
 
 def load_targets():
+    force_raw = os.environ.get("BROWSER_FORCE_NAMES", "").strip()
+    if force_raw:
+        wanted = {
+            name.strip().casefold()
+            for name in force_raw.split(",")
+            if name.strip()
+        }
+        return [
+            source for source in OFFICIAL_SOURCES
+            if source["name"].casefold() in wanted
+        ]
+
     if not OFFICIAL_STATS.exists():
         return list(OFFICIAL_SOURCES)
 
