@@ -9,7 +9,6 @@ from pathlib import Path
 
 from channel_policy import SOURCE_PRIORITY, channel_key, split_extinf
 from checker import is_known_false_identity, safe_public_candidate
-from checker import is_known_false_identity, safe_public_candidate
 from hls_validator import validate_hls
 
 ROOT = Path(__file__).resolve().parent
