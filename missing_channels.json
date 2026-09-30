@@ -2,15 +2,16 @@
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
   "core_channels_verified": 50,
-  "core_channels_geo_restricted": 7,
+  "core_channels_geo_restricted": 3,
   "core_channels_device_restricted": 5,
   "core_channels_not_verified": 20,
   "status_counts": {
     "verified": 50,
-    "geo-restricted": 7,
+    "geo-restricted": 3,
     "absent": 2,
     "unknown": 6,
-    "device-restricted": 5
+    "device-restricted": 5,
+    "restricted": 4
   },
   "missing_channels": [
     {
@@ -65,7 +66,7 @@
     {
       "name": "TRT Spor Yıldız",
       "expected_category": "Spor",
-      "status": "geo-restricted",
+      "status": "restricted",
       "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
       "candidate_url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor"
     },
@@ -93,21 +94,21 @@
     {
       "name": "FX",
       "expected_category": "Film & Dizi",
-      "status": "geo-restricted",
+      "status": "restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
     },
     {
       "name": "BabyTV Türkiye",
       "expected_category": "Çocuk",
-      "status": "geo-restricted",
+      "status": "restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/babytv/index.m3u8"
     },
     {
       "name": "Disney Junior",
       "expected_category": "Çocuk",
-      "status": "geo-restricted",
+      "status": "restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8"
     },

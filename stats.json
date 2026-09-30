@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T16:50:01.062050+00:00",
+  "updated_at_utc": "2026-09-30T16:53:11.704983+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -8,105 +8,64 @@
       "entries": 59
     },
     {
-      "url": "local:official_discovered.m3u",
-      "status": "ok",
-      "entries": 15
-    },
-    {
-      "url": "local:turkuvaz_discovered.m3u",
-      "status": "ok",
-      "entries": 6
-    },
-    {
-      "url": "local:browser_discovered.m3u",
-      "status": "ok",
-      "entries": 10
-    },
-    {
-      "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "status": "ok",
-      "entries": 175
-    },
-    {
-      "url": "https://iptv-org.github.io/iptv/languages/tur.m3u",
-      "status": "ok",
-      "entries": 177
-    },
-    {
-      "url": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
-      "status": "ok",
-      "entries": 326
-    },
-    {
-      "url": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "status": "ok",
-      "entries": 288
-    },
-    {
-      "url": "local:missing_discovered.m3u",
-      "status": "ok",
-      "entries": 0
-    },
-    {
-      "url": "local:discovered.m3u",
-      "status": "ok",
-      "entries": 184
+      "url": "local:all.m3u",
+      "status": "cached",
+      "entries": 240
     }
   ],
-  "raw_entries": 1240,
+  "raw_entries": 299,
   "priority_entries": 59,
-  "official_entries": 15,
-  "turkuvaz_official_entries": 6,
-  "browser_official_entries": 10,
-  "discovered_entries": 184,
+  "reuse_validation_mode": true,
+  "cached_output_entries": 240,
+  "official_entries": 0,
+  "turkuvaz_official_entries": 0,
+  "browser_official_entries": 0,
+  "discovered_entries": 0,
   "targeted_missing_entries": 0,
-  "unique_entries": 388,
-  "unique_stream_candidates": 388,
-  "semantic_channels": 256,
-  "duplicate_stream_variants_collapsed": 132,
-  "filtered_private_style_entries": 352,
-  "filtered_false_identity_entries": 4,
-  "header_aware_entries": 59,
+  "unique_entries": 259,
+  "unique_stream_candidates": 259,
+  "semantic_channels": 240,
+  "duplicate_stream_variants_collapsed": 19,
+  "filtered_private_style_entries": 0,
+  "filtered_false_identity_entries": 0,
+  "header_aware_entries": 33,
   "validation_cache_enabled": true,
-  "validation_cache_hits": 378,
-  "validation_fresh_checks": 10,
+  "validation_cache_hits": 258,
+  "validation_fresh_checks": 1,
   "selected_stream_sources": {
-    "official_html": 8,
-    "priority": 34,
-    "upstream": 57,
-    "official_browser": 3,
-    "iptv_org": 154
+    "cached_output": 202,
+    "priority": 38
   },
   "channel_name_sources": {
-    "turksat": 123,
-    "digiturk": 30,
-    "cleaned-source": 218,
-    "official-fallback": 17
+    "turksat": 69,
+    "digiturk": 23,
+    "cleaned-source": 161,
+    "official-fallback": 6
   },
   "stream_validation_statuses": {
-    "restricted": 46,
-    "unknown": 113,
-    "verified": 203,
-    "dead": 26
+    "restricted": 27,
+    "unknown": 65,
+    "verified": 166,
+    "dead": 1
   },
   "verified_entries": 165,
   "restricted_entries": 23,
   "unknown_entries": 52,
   "unknown_retry_candidates": 0,
-  "unknown_retry_skipped_verified_sibling": 113,
+  "unknown_retry_skipped_verified_sibling": 65,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 3,
   "unknown_retry_workers": 12,
-  "dead_entries": 16,
+  "dead_entries": 0,
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 240,
-  "turkey_device_entries": 192,
-  "turkey_device_geo_fallbacks": 10,
+  "turkey_device_entries": 185,
+  "turkey_device_geo_fallbacks": 3,
   "turkey_device_restricted_fallbacks": 20,
   "turkey_device_ephemeral_overrides": 0,
   "core_channels_total": 70,
   "core_channels_verified": 50,
-  "core_channels_geo_restricted": 7,
+  "core_channels_geo_restricted": 3,
   "core_channels_device_restricted": 5,
   "core_channels_not_verified": 20,
   "categories_verified": {
