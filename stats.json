@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T16:53:11.704983+00:00",
+  "updated_at_utc": "2026-09-30T16:56:01.915532+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -11,12 +11,18 @@
       "url": "local:all.m3u",
       "status": "cached",
       "entries": 240
+    },
+    {
+      "url": "local:tr.m3u",
+      "status": "cached",
+      "entries": 192
     }
   ],
-  "raw_entries": 299,
+  "raw_entries": 491,
   "priority_entries": 59,
   "reuse_validation_mode": true,
   "cached_output_entries": 240,
+  "cached_turkey_entries": 192,
   "official_entries": 0,
   "turkuvaz_official_entries": 0,
   "browser_official_entries": 0,
