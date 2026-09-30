@@ -1,14 +1,16 @@
 {
-  "updated_at_utc": "2026-09-30T18:39:41.140515+00:00",
+  "updated_at_utc": "2026-09-30T21:09:47.965676+00:00",
   "catalog_channels": 210,
-  "channels_in_previous_tr": 203,
-  "missing_before_search": 7,
+  "channels_in_previous_tr": 201,
+  "missing_before_search": 9,
   "missing_names": [
     "TYT Türk",
     "Sports TV",
+    "TRT Çocuk",
     "On4 TV",
     "FM TV",
     "Number1 Rap TV",
+    "TMB TV",
     "TGRT EU",
     "Kanal 1"
   ],
@@ -19,19 +21,21 @@
       "names": [
         "TYT Türk",
         "Sports TV",
+        "TRT Çocuk",
         "On4 TV",
         "FM TV",
-        "Number1 Rap TV",
-        "TGRT EU"
+        "Number1 Rap TV"
       ],
-      "query": "\"TYT Türk\" OR \"Sports TV\" OR \"On4 TV\" OR \"FM TV\" OR \"Number1 Rap TV\" OR \"TGRT EU\" extension:m3u",
+      "query": "\"TYT Türk\" OR \"Sports TV\" OR \"TRT Çocuk\" OR \"On4 TV\" OR \"FM TV\" OR \"Number1 Rap TV\" extension:m3u",
       "error": "HTTPError"
     },
     {
       "names": [
+        "TMB TV",
+        "TGRT EU",
         "Kanal 1"
       ],
-      "query": "\"Kanal 1\" extension:m3u",
+      "query": "\"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
       "error": "HTTPError"
     }
   ],
@@ -45,6 +49,12 @@
     {
       "name": "Sports TV",
       "category": "Spor",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TRT Çocuk",
+      "category": "Çocuk",
       "files_matched": 0,
       "candidates": 0
     },
@@ -63,6 +73,12 @@
     {
       "name": "Number1 Rap TV",
       "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TMB TV",
+      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },

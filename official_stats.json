@@ -1,12 +1,12 @@
 {
-  "updated_at_utc": "2026-09-30T18:35:41.363518+00:00",
+  "updated_at_utc": "2026-09-30T21:09:02.953653+00:00",
   "official_pages": 23,
-  "pages_ok": 20,
-  "pages_with_candidates": 10,
-  "raw_candidates": 15,
-  "accepted_unique_candidates": 15,
+  "pages_ok": 19,
+  "pages_with_candidates": 9,
+  "raw_candidates": 14,
+  "accepted_unique_candidates": 14,
   "probe_statuses": {
-    "restricted": 4,
+    "restricted": 3,
     "verified": 10,
     "unknown": 1
   },
@@ -55,7 +55,7 @@
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.atv.com.tr/canli-yayin",
+      "page_final_url": "https://www.atv.com.tr/a2tv/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
@@ -158,8 +158,8 @@
       "page_candidates": 2,
       "aux_scanned": 2,
       "candidates": [
-        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=bwraPjYjlCE6cUuPzAVJog&e=1790807652",
-        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=bwraPjYjlCE6cUuPzAVJog&e=1790807652"
+        "https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=GP2JvaMIAbuVQqW3AYaYKQ&e=1790816882",
+        "https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=GP2JvaMIAbuVQqW3AYaYKQ&e=1790816882"
       ],
       "identity_rejected_candidates": 0
     },
@@ -257,14 +257,12 @@
     {
       "name": "Vav TV",
       "page": "https://www.vavtv.com.tr/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.vavtv.com.tr/canli-yayin",
-      "page_candidates": 19,
+      "status": "page_error",
+      "page_final_url": null,
+      "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": [
-        "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8"
-      ],
-      "identity_rejected_candidates": 18
+      "candidates": [],
+      "error": "TimeoutError"
     }
   ]
 }

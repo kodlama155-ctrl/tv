@@ -1,10 +1,4 @@
 #EXTM3U
-# SOURCE: official:https://www.vavtv.com.tr/canli-yayin
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Dini",Vav TV
-#EXTVLCOPT:http-referrer=https://www.vavtv.com.tr/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8
 # SOURCE: official:https://www.haberturk.com/canliyayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Haber",Habertürk
@@ -64,13 +58,13 @@ https://kdlive.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
 #EXTINF:-1 group-title="Ulusal",NOW TV
 #EXTVLCOPT:http-referrer=https://www.nowtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=bwraPjYjlCE6cUuPzAVJog&e=1790807652
+https://nowtv-live-ad.ercdn.net/nowtv/playlist.m3u8?st=GP2JvaMIAbuVQqW3AYaYKQ&e=1790816882
 # SOURCE: official:https://www.nowtv.com.tr/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",NOW TV
 #EXTVLCOPT:http-referrer=https://www.nowtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=bwraPjYjlCE6cUuPzAVJog&e=1790807652
+https://nowtv.daioncdn.net/nowtv/nowtv.m3u8?ce=3&app=65fa8997-2b2f-4529-85ea-84318628a608&st=GP2JvaMIAbuVQqW3AYaYKQ&e=1790816882
 # SOURCE: official:https://www.showtv.com.tr/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Ulusal",Show TV

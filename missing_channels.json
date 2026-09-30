@@ -1,19 +1,26 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 48,
+  "core_channels_verified": 50,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 5,
-  "core_channels_not_verified": 22,
+  "core_channels_not_verified": 20,
   "status_counts": {
-    "verified": 48,
+    "verified": 50,
+    "restricted": 1,
     "geo-restricted": 7,
     "absent": 2,
-    "unknown": 7,
     "device-restricted": 5,
-    "restricted": 1
+    "unknown": 5
   },
   "missing_channels": [
+    {
+      "name": "Kanal 7",
+      "expected_category": "Ulusal",
+      "status": "restricted",
+      "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401",
+      "candidate_url": "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8?app=f99587ad-1637-494d-8255-da35b09d17a1&ce=3"
+    },
     {
       "name": "TRT 2",
       "expected_category": "Ulusal",
@@ -36,13 +43,6 @@
       "candidate_url": ""
     },
     {
-      "name": "Meltem TV",
-      "expected_category": "Ulusal",
-      "status": "unknown",
-      "reason": "response is not HLS",
-      "candidate_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
-    },
-    {
       "name": "CNN Türk",
       "expected_category": "Haber",
       "status": "device-restricted",
@@ -55,13 +55,6 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
-    },
-    {
-      "name": "Tele1",
-      "expected_category": "Haber",
-      "status": "unknown",
-      "reason": "manifest URLError",
-      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",
@@ -104,13 +97,6 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
-    },
-    {
-      "name": "TRT Çocuk",
-      "expected_category": "Çocuk",
-      "status": "restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "BabyTV Türkiye",
