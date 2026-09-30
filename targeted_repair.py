@@ -34,6 +34,32 @@ PLAYLIST_TIMEOUT = 20
 MAX_PLAYLIST_BYTES = 8_000_000
 MAX_WORKERS = 8
 
+PERSISTENT_BLOCKED_QUERY_KEYS = {
+    "st", "e", "hash", "expire", "expires",
+}
+PERSISTENT_BLOCKED_HOSTS = {
+    "canlitv.fun",
+}
+
+
+def persistent_candidate(url: str) -> bool:
+    from urllib.parse import parse_qsl, urlsplit
+    try:
+        parsed = urlsplit(url)
+        host = (parsed.hostname or "").lower()
+        keys = {
+            key.lower()
+            for key, _ in parse_qsl(parsed.query, keep_blank_values=True)
+        }
+    except Exception:
+        return False
+
+    if any(host == suffix or host.endswith("." + suffix) for suffix in PERSISTENT_BLOCKED_HOSTS):
+        return False
+    if keys & PERSISTENT_BLOCKED_QUERY_KEYS:
+        return False
+    return True
+
 
 def canonical(url: str) -> str:
     from urllib.parse import urlsplit, urlunsplit
@@ -227,6 +253,8 @@ def main():
     unique = {}
     for row in candidates:
         if not safe_public_candidate(row["url"]):
+            continue
+        if not persistent_candidate(row["url"]):
             continue
         if is_known_false_identity(row):
             continue
