@@ -694,6 +694,16 @@ def main():
     turkey_ephemeral_overrides = 0
     for item in selected:
         status = item.get("status", "unknown")
+        device_variants = [
+            row
+            for row in variants_by_channel.get(item.get("channel_key", ""), [])
+            if (
+                row.get("device_hint")
+                and row.get("status") in {"verified", "restricted", "unknown"}
+            )
+        ]
+        has_device_fallback = bool(device_variants)
+
         include = (
             status == "verified"
             or (
@@ -702,7 +712,7 @@ def main():
             )
             or (
                 status in {"restricted", "unknown"}
-                and item.get("device_fallback")
+                and has_device_fallback
             )
         )
         if not include:
@@ -710,35 +720,24 @@ def main():
 
         chosen = item
 
-        # If a channel is explicitly retained as a device fallback, publish
-        # the actual marked fallback variant instead of an unrelated unknown
-        # sibling selected only by generic scoring.
-        if (
-            status in {"restricted", "unknown"}
-            and item.get("device_fallback")
-        ):
-            device_variants = [
-                row
-                for row in variants_by_channel.get(item.get("channel_key", ""), [])
-                if (
-                    row.get("device_hint")
-                    and row.get("status") in {"verified", "restricted", "unknown"}
-                )
-            ]
-            if device_variants:
-                chosen = max(
-                    device_variants,
-                    key=lambda row: (
-                        2 if row.get("status") == "verified"
-                        else 1 if row.get("status") == "restricted"
-                        else 0,
-                        SOURCE_PRIORITY.get(
-                            row.get("source_kind", "unknown"),
-                            SOURCE_PRIORITY["unknown"],
-                        ),
-                        1 if row.get("url", "").startswith("https://") else 0,
+        # If any variant of this channel is explicitly marked as a
+        # device-fallback, retain that curated public variant for Turkey
+        # devices when the GitHub runner can only classify the channel as
+        # restricted/unknown.
+        if status in {"restricted", "unknown"} and has_device_fallback:
+            chosen = max(
+                device_variants,
+                key=lambda row: (
+                    2 if row.get("status") == "verified"
+                    else 1 if row.get("status") == "restricted"
+                    else 0,
+                    SOURCE_PRIORITY.get(
+                        row.get("source_kind", "unknown"),
+                        SOURCE_PRIORITY["unknown"],
                     ),
-                )
+                    1 if row.get("url", "").startswith("https://") else 0,
+                ),
+            )
 
         if status == "verified" and is_ephemeral_signed_url(item.get("url", "")):
             fallbacks = [
