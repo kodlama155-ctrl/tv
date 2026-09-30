@@ -285,7 +285,10 @@ def write_playlist(path: Path, entries):
 
 
 def main():
-    source_urls = [
+    reuse_validation_mode = (
+        os.environ.get("CHECKER_REUSE_VALIDATION") == "1"
+    )
+    source_urls = [] if reuse_validation_mode else [
         x.strip()
         for x in SOURCES.read_text(encoding="utf-8").splitlines()
         if x.strip() and not x.lstrip().startswith("#")
@@ -318,8 +321,30 @@ def main():
                 "error": type(e).__name__,
             })
 
+    cached_output_entries = 0
+    if reuse_validation_mode and ALL_OUTPUT.exists():
+        try:
+            parsed = parse_playlist(
+                ALL_OUTPUT.read_text(encoding="utf-8"),
+                source_kind="cached_output",
+                source_name="all.m3u",
+            )
+            cached_output_entries = len(parsed)
+            entries.extend(parsed)
+            source_report.append({
+                "url": "local:all.m3u",
+                "status": "cached",
+                "entries": cached_output_entries,
+            })
+        except Exception as e:
+            source_report.append({
+                "url": "local:all.m3u",
+                "status": "error",
+                "error": type(e).__name__,
+            })
+
     official_entries = 0
-    if OFFICIAL.exists():
+    if not reuse_validation_mode and OFFICIAL.exists():
         try:
             parsed = parse_playlist(
                 OFFICIAL.read_text(encoding="utf-8"),
@@ -341,7 +366,7 @@ def main():
             })
 
     turkuvaz_official_entries = 0
-    if TURKUVAZ_OFFICIAL.exists():
+    if not reuse_validation_mode and TURKUVAZ_OFFICIAL.exists():
         try:
             parsed = parse_playlist(
                 TURKUVAZ_OFFICIAL.read_text(encoding="utf-8"),
@@ -363,7 +388,7 @@ def main():
             })
 
     browser_official_entries = 0
-    if BROWSER_OFFICIAL.exists():
+    if not reuse_validation_mode and BROWSER_OFFICIAL.exists():
         try:
             parsed = parse_playlist(
                 BROWSER_OFFICIAL.read_text(encoding="utf-8"),
@@ -410,7 +435,7 @@ def main():
             })
 
     targeted_missing_entries = 0
-    if MISSING_DISCOVERED.exists():
+    if not reuse_validation_mode and MISSING_DISCOVERED.exists():
         try:
             parsed = parse_playlist(
                 MISSING_DISCOVERED.read_text(encoding="utf-8"),
@@ -432,7 +457,7 @@ def main():
             })
 
     discovered_entries = 0
-    if DISCOVERED.exists():
+    if not reuse_validation_mode and DISCOVERED.exists():
         try:
             parsed = parse_playlist(
                 DISCOVERED.read_text(encoding="utf-8"),
@@ -872,6 +897,8 @@ def main():
         "sources": source_report,
         "raw_entries": len(entries),
         "priority_entries": priority_entries,
+        "reuse_validation_mode": reuse_validation_mode,
+        "cached_output_entries": cached_output_entries,
         "official_entries": official_entries,
         "turkuvaz_official_entries": turkuvaz_official_entries,
         "browser_official_entries": browser_official_entries,
