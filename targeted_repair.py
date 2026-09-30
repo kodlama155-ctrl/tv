@@ -16,6 +16,7 @@ DEFAULT_PLAYLIST = ROOT / "tr.m3u"
 DEFAULT_TARGETS = ROOT / "repair_targets.json"
 DEFAULT_REPORT = ROOT / "repair_result.json"
 SOURCES = ROOT / "sources.txt"
+DOMAIN_SCORES = ROOT / "domain_scores.json"
 
 LOCAL_CANDIDATE_FILES = [
     ("priority_sources.m3u", "priority"),
@@ -41,6 +42,29 @@ PERSISTENT_BLOCKED_QUERY_KEYS = {
 PERSISTENT_BLOCKED_HOSTS = {
     "canlitv.fun",
 }
+
+
+def load_domain_scores():
+    if not DOMAIN_SCORES.exists():
+        return {}
+    try:
+        payload = json.loads(DOMAIN_SCORES.read_text(encoding="utf-8"))
+        return payload.get("domains", {}) if isinstance(payload, dict) else {}
+    except Exception:
+        return {}
+
+
+def domain_reputation(url: str, scores: dict):
+    from urllib.parse import urlsplit
+    try:
+        host = (urlsplit(url).hostname or "").lower()
+    except Exception:
+        host = ""
+    info = scores.get(host, {})
+    return (
+        float(info.get("score", 70.0)),
+        min(int(info.get("samples", 0)), 50),
+    )
 
 
 def persistent_candidate(url: str) -> bool:
@@ -168,7 +192,7 @@ def probe(row: dict):
     return out
 
 
-def choose_verified(rows):
+def choose_verified(rows, domain_scores):
     verified = [row for row in rows if row["status"] == "verified"]
     if not verified:
         return None
@@ -177,6 +201,7 @@ def choose_verified(rows):
         verified,
         key=lambda row: (
             SOURCE_PRIORITY.get(row.get("source_kind", "unknown"), 0),
+            *domain_reputation(row["url"], domain_scores),
             int(row.get("height") or 0),
             int(row.get("bandwidth") or 0),
             1 if row["url"].startswith("https://") else 0,
@@ -193,6 +218,7 @@ def main():
     args = parser.parse_args()
 
     playlist_path = Path(args.playlist)
+    domain_scores = load_domain_scores()
     targets = json.loads(Path(args.targets).read_text(encoding="utf-8"))
     targets = [row for row in targets if row.get("channel_key")]
 
@@ -298,7 +324,7 @@ def main():
     unresolved = []
 
     for key, target in target_by_key.items():
-        chosen = choose_verified(by_key.get(key, []))
+        chosen = choose_verified(by_key.get(key, []), domain_scores)
         if chosen is None:
             unresolved.append({
                 "name": target.get("name"),
@@ -319,6 +345,9 @@ def main():
             "bandwidth": chosen.get("bandwidth"),
             "manifest_latency_ms": chosen.get("manifest_latency_ms"),
             "segment_latency_ms": chosen.get("segment_latency_ms"),
+            "domain_score": domain_reputation(
+                chosen["url"], domain_scores
+            )[0],
         })
 
     if replacements:
