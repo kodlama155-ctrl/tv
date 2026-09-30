@@ -14,7 +14,6 @@ on:
       - "browser_needed.py"
       - "discover_queries.txt"
       - "sources.txt"
-      - "priority_sources.m3u"
       - "priority_refresh.py"
       - "channel_policy.py"
       - "channel_catalog.py"
