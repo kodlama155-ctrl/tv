@@ -236,6 +236,7 @@ https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8
 
 # --- Curated missing-channel fallbacks (2026-09-30) ---
 # Public candidates are still subject to checker.py real-segment validation.
+# Validate-only updates reuse cached results for unchanged streams.
 
 # DMAX Turkey - Turkish RocketCDN feed.
 #EXTINF:-1 tvg-id="DMAX.tr" group-title="Belgesel",DMAX [Device-fallback]
