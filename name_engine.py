@@ -70,6 +70,12 @@ TURKSAT_CANONICAL_NAMES = {
     "powerturktv": "PowerTürk TV",
     "powertv": "Power TV",
     "bbcfirst": "BBC First",
+    "flashtv": "Flash TV",
+    "kanal1": "Kanal 1",
+    "showmax": "Show Max",
+    "meltemtv": "Meltem TV",
+    "kanalb": "Kanal B",
+    "fmtv": "FM TV",
 }
 
 IDENTITY_ALIASES = {
@@ -89,6 +95,7 @@ IDENTITY_ALIASES = {
     "ntvturkiye": "ntv",
     "tr24tv": "24tv",
     "sozcutvtr": "sozcutv",
+    "flashhabertv": "flashtv",
 }
 
 # Exact display spelling/casing we want after Türksat/Digiturk identity matching.
@@ -151,6 +158,12 @@ PRETTY_NAMES = {
     "anews": "A News",
     "apara": "A Para",
     "vavtv": "VAV TV",
+    "flashtv": "Flash TV",
+    "kanal1": "Kanal 1",
+    "showmax": "Show Max",
+    "meltemtv": "Meltem TV",
+    "kanalb": "Kanal B",
+    "fmtv": "FM TV",
 }
 
 NOISE_BRACKET_RE = re.compile(r"\s*\[[^\]]*\]\s*")
