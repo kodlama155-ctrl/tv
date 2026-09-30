@@ -1,0 +1,118 @@
+name: Unknown Stream Repair
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/unknown-repair.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: emirtv-playlist-maintenance
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Recheck current playlist
+        run: python health_check.py
+
+      - name: Build unknown-only target list
+        id: targets
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+
+          rows = json.loads(Path("deep_targets.json").read_text(encoding="utf-8"))
+          unknown = [row for row in rows if row.get("health_status") == "unknown"]
+          Path("unknown_targets.json").write_text(
+              json.dumps(unknown, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          print(f"count={len(unknown)}")
+          print("names=" + ", ".join(row.get("name", "") for row in unknown))
+          PY
+
+      - name: Discover alternatives only for unknown channels
+        if: steps.targets.outputs.count != '0'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python targeted_discover.py \
+            --targets unknown_targets.json \
+            --output repair_discovered.m3u \
+            --stats repair_discovery_stats.json
+
+      - name: Validate alternatives and replace only verified streams
+        if: steps.targets.outputs.count != '0'
+        run: |
+          python targeted_repair.py \
+            --targets unknown_targets.json \
+            --report unknown_repair.json
+
+      - name: Write summary
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+
+          targets = json.loads(Path("unknown_targets.json").read_text(encoding="utf-8"))
+          print("# Unknown stream repair")
+          print()
+          print(f"Unknown targets: **{len(targets)}**")
+          print()
+
+          report = Path("unknown_repair.json")
+          if report.exists():
+              data = json.loads(report.read_text(encoding="utf-8"))
+              print(f"Verified replacements applied: **{data.get('repaired', 0)}**")
+              print(f"Still unresolved: **{len(data.get('unresolved', []))}**")
+              print()
+              for row in data.get("replacements", []):
+                  print(f"- {row.get('name')}: replacement verified")
+          PY
+
+      - name: Upload repair report
+        uses: actions/upload-artifact@v4
+        with:
+          name: unknown-stream-repair-${{ github.run_id }}
+          path: |
+            health_status.json
+            unknown_targets.json
+            repair_discovered.m3u
+            repair_discovery_stats.json
+            unknown_repair.json
+          if-no-files-found: ignore
+          retention-days: 3
+
+      - name: Commit verified replacements
+        run: |
+          git config user.name "emirtv-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          if git diff --quiet -- tr.m3u; then
+            echo "No verified replacement changed tr.m3u"
+            exit 0
+          fi
+
+          git fetch origin main
+          git rebase origin/main
+          git add tr.m3u
+          git commit -m "bot: replace unknown streams with verified alternatives"
+          git push origin HEAD:main
