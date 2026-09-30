@@ -6,7 +6,8 @@ import unicodedata
 
 # EmirTV authoritative channel/category catalog.
 #
-# Category placement is owned by this file. Category-only edits use fast_rebuild.py.\n# External platforms may still be
+# Category placement is owned by this file. Category-only edits use fast_rebuild.py.
+# External platforms may still be
 # used for discovery and ordering, but they must not move a known channel to a
 # different category. Unknown channels intentionally fall back to "Diğer" so
 # they can be reviewed before being promoted into a curated category.
@@ -27,6 +28,7 @@ CATEGORY_ORDER = [
 
 CHANNELS = [
     {"id": "TRT1.tr@SD", "name": "TRT 1", "category": "Ulusal"},
+    {"id": "TRT4K.tr", "name": "TRT 4K", "category": "Ulusal"},
     {"id": "", "name": "Kanal D", "category": "Ulusal"},
     {"id": "ATV.tr@HD", "name": "ATV", "category": "Ulusal"},
     {"id": "", "name": "Show TV", "category": "Ulusal"},
@@ -121,6 +123,7 @@ CHANNELS = [
     {"id": "SercemTV.tr@HD", "name": "Sercem TV", "category": "Dini"},
     {"id": "FMTV.tr", "name": "FM TV", "category": "Dini"},
     {"id": "DreamTurk.tr@SD", "name": "Dream Türk", "category": "Müzik"},
+    {"id": "DreamTV.tr@SD", "name": "Dream TV", "category": "Müzik"},
     {"id": "PowerTV.tr@SD", "name": "Power TV", "category": "Müzik"},
     {"id": "TRTMuzik.tr@SD", "name": "TRT Müzik", "category": "Müzik"},
     {"id": "PowerTurkTV.tr@SD", "name": "PowerTürk TV", "category": "Müzik"},
@@ -176,6 +179,9 @@ CHANNELS = [
     {"id": "ETVKayseri.tr@SD", "name": "ETV Kayseri", "category": "Yerel"},
     {"id": "ETVManisa.tr@SD", "name": "ETV Manisa", "category": "Yerel"},
     {"id": "EuroD.tr@SD", "name": "Euro D", "category": "Uluslararası"},
+    {"id": "EuroStar.tr@SD", "name": "Euro Star", "category": "Uluslararası"},
+    {"id": "ATVAvrupa.tr@SD", "name": "ATV Avrupa", "category": "Uluslararası"},
+    {"id": "Kanal7Avrupa.tr@SD", "name": "Kanal 7 Avrupa", "category": "Uluslararası"},
     {"id": "FortunaTV.tr@SD", "name": "Fortuna TV", "category": "Ulusal"},
     {"id": "HunatTV.tr@SD", "name": "Hunat TV", "category": "Yerel"},
     {"id": "IcelTV.tr@SD", "name": "Icel TV", "category": "Yerel"},
