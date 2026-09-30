@@ -151,7 +151,7 @@ def deep_probe_current(row):
         final = "restricted"
     elif statuses.get("dead") == len(attempts):
         final = "dead"
-    elif statuses.get("restricted") > statuses.get("unknown"):
+    elif statuses.get("restricted", 0) > statuses.get("unknown", 0):
         final = "restricted"
     else:
         final = "unknown"
