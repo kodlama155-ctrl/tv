@@ -22,13 +22,12 @@ STATS = ROOT / "missing_discovery_stats.json"
 
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
-UA = "EmirTV-Missing-Discovery/1.0"
+UA = "EmirTV-Missing-Discovery/2.0"
 
-# GitHub's authenticated code-search bucket is intentionally small.
-# Search a rotating subset on each 6-hour full run instead of slowing every
-# update with minute-long rate-limit sleeps.
-MAX_TARGET_SEARCHES = 8
-MAX_RESULTS_PER_TARGET = 8
+# GitHub code search supports OR. Six channel names per query keeps the query
+# compact and uses only two search requests for a typical 12-channel gap.
+BATCH_SIZE = 6
+MAX_RESULTS_PER_BATCH = 50
 SEARCH_DELAY_SECONDS = 7
 MAX_FILE_BYTES = 2_000_000
 
@@ -46,7 +45,7 @@ CREDENTIAL_PATH_RE = re.compile(
 )
 
 
-def request_json(url: str):
+def request_json(url: str, retry_429: bool = False):
     headers = {
         "User-Agent": UA,
         "Accept": "application/vnd.github+json",
@@ -54,9 +53,19 @@ def request_json(url: str):
     }
     if TOKEN:
         headers["Authorization"] = f"Bearer {TOKEN}"
-    req = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(req, timeout=25) as response:
-        return json.loads(response.read().decode("utf-8", errors="replace"))
+
+    def once():
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=25) as response:
+            return json.loads(response.read().decode("utf-8", errors="replace"))
+
+    try:
+        return once()
+    except urllib.error.HTTPError as exc:
+        if retry_429 and exc.code in {403, 429}:
+            time.sleep(12)
+            return once()
+        raise
 
 
 def safe_candidate(url: str) -> bool:
@@ -88,6 +97,7 @@ def parse_playlist(text: str):
     entries = []
     meta = None
     options = {}
+
     for raw in text.splitlines():
         line = raw.strip()
         if not line:
@@ -111,6 +121,7 @@ def parse_playlist(text: str):
             continue
         if not meta:
             continue
+
         match = M3U8_RE.search(line)
         if match:
             url = match.group(0).rstrip("),;")
@@ -121,8 +132,10 @@ def parse_playlist(text: str):
                     "user_agent": options.get("user_agent"),
                     "referrer": options.get("referrer"),
                 })
+
         meta = None
         options = {}
+
     return entries
 
 
@@ -186,19 +199,7 @@ def strong_match(row: dict, entry: dict, item: dict) -> bool:
     if source_id and target_id and source_id == target_id:
         return True
 
-    # Name-only matches are accepted only from Turkish-context playlists.
     return source_is_turkish(item, entry["meta"])
-
-
-def search_target(row: dict):
-    name = str(row.get("name") or "").strip()
-    query = f'"{name}" extension:m3u'
-    encoded = urllib.parse.urlencode({
-        "q": query,
-        "per_page": str(MAX_RESULTS_PER_TARGET),
-    })
-    data = request_json(f"{API}/search/code?{encoded}")
-    return query, data.get("items", [])
 
 
 def fetch_search_file(item: dict):
@@ -212,6 +213,11 @@ def fetch_search_file(item: dict):
     return raw.decode("utf-8", errors="replace")
 
 
+def batches(items, size):
+    for i in range(0, len(items), size):
+        yield items[i:i + size]
+
+
 def main():
     now = dt.datetime.now(dt.timezone.utc)
     present = existing_keys()
@@ -220,81 +226,88 @@ def main():
         if not (target_keys(row) & present)
     ]
 
-    previous = {}
-    if STATS.exists():
-        try:
-            previous = json.loads(STATS.read_text(encoding="utf-8"))
-        except Exception:
-            previous = {}
-
-    previous_cursor = int(previous.get("cursor") or 0)
-    if missing:
-        start = previous_cursor % len(missing)
-        ordered = missing[start:] + missing[:start]
-    else:
-        start = 0
-        ordered = []
-
-    targets = ordered[:MAX_TARGET_SEARCHES]
-    next_cursor = (
-        (start + len(targets)) % len(missing)
-        if missing else 0
-    )
-
-    found = {}
-    target_report = []
-    errors = 0
-
-    for target_index, row in enumerate(targets):
-        if target_index:
-            time.sleep(SEARCH_DELAY_SECONDS)
-
-        report = {
+    reports = {
+        row["name"]: {
             "name": row["name"],
             "category": row["category"],
-            "search_results": 0,
-            "files_scanned": 0,
+            "files_matched": 0,
             "candidates": 0,
         }
+        for row in missing
+    }
+
+    found = {}
+    seen_files = set()
+    batch_report = []
+    errors = 0
+
+    for batch_index, batch in enumerate(batches(missing, BATCH_SIZE)):
+        if batch_index:
+            time.sleep(SEARCH_DELAY_SECONDS)
+
+        query = " OR ".join(f'"{row["name"]}"' for row in batch) + " extension:m3u"
+        encoded = urllib.parse.urlencode({
+            "q": query,
+            "per_page": str(MAX_RESULTS_PER_BATCH),
+        })
+
         try:
-            query, items = search_target(row)
-            report["query"] = query
-            report["search_results"] = len(items)
-
-            for item in items:
-                try:
-                    text = fetch_search_file(item)
-                    if not text:
-                        continue
-                    report["files_scanned"] += 1
-                    for entry in parse_playlist(text):
-                        if not strong_match(row, entry, item):
-                            continue
-                        key = canonical_url(entry["url"])
-                        if key in found:
-                            continue
-                        found[key] = {
-                            **entry,
-                            "target": row,
-                            "repo": (item.get("repository") or {}).get("full_name", ""),
-                            "path": item.get("path", ""),
-                        }
-                        report["candidates"] += 1
-                except Exception:
-                    errors += 1
-
-        except urllib.error.HTTPError as exc:
-            report["error"] = f"HTTP {exc.code}"
-            errors += 1
-            if exc.code in {403, 429}:
-                # Avoid hammering the search bucket after rate limiting.
-                target_report.append(report)
-                break
+            data = request_json(
+                f"{API}/search/code?{encoded}",
+                retry_429=True,
+            )
+            items = data.get("items", [])
+            batch_report.append({
+                "names": [row["name"] for row in batch],
+                "query": query,
+                "search_results": len(items),
+            })
         except Exception as exc:
-            report["error"] = type(exc).__name__
             errors += 1
+            batch_report.append({
+                "names": [row["name"] for row in batch],
+                "query": query,
+                "error": type(exc).__name__,
+            })
+            continue
 
-        target_report.append(report)
+        for item in items:
+            file_key = item.get("url") or ""
+            if not file_key or file_key in seen_files:
+                continue
+            seen_files.add(file_key)
+
+            try:
+                text = fetch_search_file(item)
+                if not text:
+                    continue
+                entries = parse_playlist(text)
+            except Exception:
+                errors += 1
+                continue
+
+            matched_names = set()
+
+            for row in missing:
+                for entry in entries:
+                    if not strong_match(row, entry, item):
+                        continue
+
+                    matched_names.add(row["name"])
+                    key = canonical_url(entry["url"])
+                    if key in found:
+                        continue
+
+                    found[key] = {
+                        **entry,
+                        "target": row,
+                        "repo": (item.get("repository") or {}).get("full_name", ""),
+                        "path": item.get("path", ""),
+                    }
+                    reports[row["name"]]["candidates"] += 1
+
+            for name in matched_names:
+                reports[name]["files_matched"] += 1
 
     lines = ["#EXTM3U"]
     for item in sorted(found.values(), key=lambda row: (row["target"]["name"], row["url"])):
@@ -319,18 +332,19 @@ def main():
         "channels_in_previous_tr": len(CHANNELS) - len(missing),
         "missing_before_search": len(missing),
         "missing_names": [row["name"] for row in missing],
-        "max_target_searches_per_run": MAX_TARGET_SEARCHES,
+        "batch_size": BATCH_SIZE,
         "search_delay_seconds": SEARCH_DELAY_SECONDS,
-        "cursor": next_cursor,
-        "targets_searched": len(target_report),
-        "target_report": target_report,
+        "search_batches": batch_report,
+        "target_report": list(reports.values()),
+        "files_scanned": len(seen_files),
         "unique_candidates_found": len(found),
         "errors": errors,
         "note": (
-            "Searches only catalog channels absent from the previous tr.m3u. "
-            "Candidates are still validated by checker.py before entering tr.m3u."
+            "Only channels absent from the previous tr.m3u are searched. "
+            "Candidates must still pass checker.py HLS validation."
         ),
     }
+
     STATS.write_text(
         json.dumps(stats, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
