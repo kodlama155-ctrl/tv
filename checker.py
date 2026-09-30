@@ -4,6 +4,7 @@ from __future__ import annotations
 import concurrent.futures
 import datetime as dt
 import json
+import os
 import re
 import time
 import urllib.parse
@@ -182,6 +183,59 @@ def canonical(url: str) -> str:
     return urllib.parse.urlunsplit(
         (p.scheme.lower(), p.netloc.lower(), p.path, p.query, "")
     )
+
+VALIDATION_REPORT_META_KEYS = {
+    "name", "original_name", "name_source", "geo_hint", "device_hint",
+    "tvg_id", "channel_key", "category", "category_source",
+    "category_votes", "category_evidence", "order_known", "order_score",
+    "order_sources", "order_evidence", "url", "stream_source_kind",
+    "stream_source_name", "http_user_agent", "http_referrer",
+}
+
+
+def validation_cache_key(url: str, user_agent=None, referrer=None) -> str:
+    return "\n".join([
+        canonical(url),
+        user_agent or "",
+        referrer or "",
+    ])
+
+
+def load_validation_cache():
+    if os.environ.get("CHECKER_REUSE_VALIDATION") != "1":
+        return {}
+    if not VALIDATION.exists():
+        return {}
+
+    try:
+        rows = json.loads(VALIDATION.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+    cache = {}
+    for row in rows if isinstance(rows, list) else []:
+        url = row.get("url")
+        status = row.get("status")
+        if not url or status not in {"verified", "restricted", "unknown", "dead", "drm"}:
+            continue
+
+        # Signed URLs may expire; always re-check them even in validate mode.
+        if is_ephemeral_signed_url(url):
+            continue
+
+        key = validation_cache_key(
+            url,
+            row.get("http_user_agent"),
+            row.get("http_referrer"),
+        )
+        result = {
+            k: v
+            for k, v in row.items()
+            if k not in VALIDATION_REPORT_META_KEYS
+        }
+        cache[key] = result
+
+    return cache
 
 
 def is_ephemeral_signed_url(url: str) -> bool:
@@ -461,7 +515,29 @@ def main():
         if entry.get("user_agent") or entry.get("referrer")
     )
 
+    validation_cache = load_validation_cache()
     validation_results = {}
+    validation_cache_hits = 0
+    validation_fresh_entries = []
+
+    for entry in candidates:
+        cache_key = validation_cache_key(
+            entry["url"],
+            entry.get("user_agent"),
+            entry.get("referrer"),
+        )
+        cached = validation_cache.get(cache_key)
+        if cached is not None:
+            validation_results[canonical(entry["url"])] = dict(cached)
+            validation_cache_hits += 1
+        else:
+            validation_fresh_entries.append(entry)
+
+    fresh_validation_keys = {
+        canonical(entry["url"])
+        for entry in validation_fresh_entries
+    }
+
     with concurrent.futures.ThreadPoolExecutor(
         max_workers=MAX_WORKERS
     ) as ex:
@@ -472,7 +548,7 @@ def main():
                 user_agent=entry.get("user_agent"),
                 referrer=entry.get("referrer"),
             ): entry
-            for entry in candidates
+            for entry in validation_fresh_entries
         }
         for fut in concurrent.futures.as_completed(future_map):
             entry = future_map[fut]
@@ -510,7 +586,8 @@ def main():
         entry
         for entry in initial_unknown_entries
         if (
-            channel_key(entry["meta"]) in CORE_RETRY_KEYS
+            canonical(entry["url"]) in fresh_validation_keys
+            and channel_key(entry["meta"]) in CORE_RETRY_KEYS
             and channel_key(entry["meta"]) not in verified_channel_keys
         )
     ]
@@ -809,6 +886,9 @@ def main():
         "filtered_private_style_entries": filtered_private_style,
         "filtered_false_identity_entries": filtered_false_identity,
         "header_aware_entries": header_aware_entries,
+        "validation_cache_enabled": bool(validation_cache),
+        "validation_cache_hits": validation_cache_hits,
+        "validation_fresh_checks": len(validation_fresh_entries),
         "selected_stream_sources": dict(selected_source_counts),
         "channel_name_sources": dict(name_source_counts),
         "stream_validation_statuses": dict(raw_status_counts),
