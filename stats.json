@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-09-30T16:56:01.915532+00:00",
+  "updated_at_utc": "2026-09-30T17:00:47.396280+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -65,14 +65,14 @@
   "dead_entries": 0,
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 240,
-  "turkey_device_entries": 185,
-  "turkey_device_geo_fallbacks": 3,
-  "turkey_device_restricted_fallbacks": 20,
+  "turkey_device_entries": 192,
+  "turkey_device_geo_fallbacks": 0,
+  "turkey_device_restricted_fallbacks": 192,
   "turkey_device_ephemeral_overrides": 0,
   "core_channels_total": 70,
   "core_channels_verified": 50,
   "core_channels_geo_restricted": 3,
-  "core_channels_device_restricted": 5,
+  "core_channels_device_restricted": 9,
   "core_channels_not_verified": 20,
   "categories_verified": {
     "Ulusal": 20,
