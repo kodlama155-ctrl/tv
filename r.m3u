@@ -13,13 +13,13 @@ https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.
 https://trs1.aynaott.com/Finans/index.m3u8
 #EXTINF:-1 tvg-id="KudusTV.tr@SD" tvg-logo="https://i.imgur.com/lwRA84B.png" group-title="Haber",Kudüs TV
 https://yayin.kudustv.com/981680400/kudustv/playlist.m3u8
-#EXTINF:-1 group-title="Spor",TRT Spor
+#EXTINF:-1 group-title="Spor" tvg-logo="https://i.imgur.com/6tv0zxh.png",TRT Spor
 #EXTVLCOPT:http-referrer=https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
 #EXTINF:-1 tvg-id="TRTSporYildiz.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg/960px-TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg.png" group-title="Spor",TRT Spor Yıldız
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
+#EXTINF:-1 tvg-id="FBTV.tr@SD" tvg-logo="https://i.imgur.com/qBVqtYd.png" group-title="Spor",FB TV
 #EXTVLCOPT:http-referrer=https://www.fenerbahce.org/fenerbahcetv/canliyayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
@@ -35,6 +35,8 @@ https://saran-live.ercdn.net/fx/index.m3u8
 https://saran-live.ercdn.net/disneyjunior/index.m3u8
 #EXTINF:-1 tvg-id="BabyTV.uk@Turkiye" tvg-logo="https://i.imgur.com/4BDJ5FT.png" group-title="Çocuk",BabyTV
 https://saran-live.ercdn.net/babytv/index.m3u8
+#EXTINF:-1 tvg-id="TRTCocuk.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Çocuk",TRT Çocuk
+https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTBelgesel.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Belgesel_logo_%282019-%29.svg/960px-TRT_Belgesel_logo_%282019-%29.svg.png" group-title="Belgesel",TRT Belgesel
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="NationalGeographic.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Belgesel",National Geographic
