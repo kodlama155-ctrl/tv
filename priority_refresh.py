@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent
 PRIORITY = ROOT / "priority_sources.m3u"
 TR = ROOT / "tr.m3u"
 REPORT = ROOT / "priority_validation.json"
+DOMAIN_SCORES = ROOT / "domain_scores.json"
 
 
 def parse_playlist_text(text: str):
@@ -101,6 +102,29 @@ def signatures(rows):
     return out
 
 
+def load_domain_scores():
+    if not DOMAIN_SCORES.exists():
+        return {}
+    try:
+        payload = json.loads(DOMAIN_SCORES.read_text(encoding="utf-8"))
+        return payload.get("domains", {}) if isinstance(payload, dict) else {}
+    except Exception:
+        return {}
+
+
+def domain_reputation(url: str, scores: dict):
+    from urllib.parse import urlsplit
+    try:
+        host = (urlsplit(url).hostname or "").lower()
+    except Exception:
+        host = ""
+    info = scores.get(host, {})
+    return (
+        float(info.get("score", 70.0)),
+        min(int(info.get("samples", 0)), 50),
+    )
+
+
 def probe(row):
     try:
         result = validate_hls(
@@ -120,12 +144,13 @@ def probe(row):
     return item
 
 
-def choose_variant(rows):
+def choose_variant(rows, domain_scores):
     verified = [r for r in rows if r["status"] == "verified"]
     if verified:
         return max(
             verified,
             key=lambda r: (
+                *domain_reputation(r["url"], domain_scores),
                 int(r.get("height") or 0),
                 int(r.get("bandwidth") or 0),
                 1 if r["url"].startswith("https://") else 0,
@@ -142,6 +167,7 @@ def choose_variant(rows):
             fallbacks,
             key=lambda r: (
                 1 if r["status"] == "restricted" else 0,
+                *domain_reputation(r["url"], domain_scores),
                 1 if r["url"].startswith("https://") else 0,
             ),
         )
@@ -189,6 +215,7 @@ def write_tr(rows):
 
 
 def main():
+    domain_scores = load_domain_scores()
     current = parse_file(PRIORITY)
     previous = parse_playlist_text(previous_priority_text())
     current_sig = signatures(current)
@@ -246,7 +273,7 @@ def main():
 
     for key in changed_keys:
         variants = results_by_channel.get(key, [])
-        chosen = choose_variant(variants)
+        chosen = choose_variant(variants, domain_scores)
         if chosen is None:
             unchanged.append(key)
             continue
@@ -257,6 +284,9 @@ def main():
             "status": chosen["status"],
             "url": chosen["url"],
             "reason": chosen.get("reason"),
+            "domain_score": domain_reputation(
+                chosen["url"], domain_scores
+            )[0],
         })
 
     write_tr(list(existing_by_key.values()))
