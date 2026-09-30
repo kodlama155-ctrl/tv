@@ -162,3 +162,11 @@ https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
 
+
+# FB TV open public relay candidates.
+#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
+https://trn10.tulix.tv/gt-fbtv/index.m3u8
+
+#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
+https://gineu8.bozztv.com/gin-36bay2/gin-fbtv1/tracks-v1a1/mono.m3u8
+
