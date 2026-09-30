@@ -351,6 +351,11 @@ def main():
                 source_kind="cached_output",
                 source_name="tr.m3u",
             )
+            # Validate-only updates must never drop a channel that is already
+            # in the Turkey device playlist. Full scans still decide whether
+            # these fallbacks remain valid.
+            for row in parsed:
+                row["device_hint"] = True
             cached_turkey_entries = len(parsed)
             entries.extend(parsed)
             source_report.append({
