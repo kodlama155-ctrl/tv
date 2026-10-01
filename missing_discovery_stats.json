@@ -1,14 +1,18 @@
 {
-  "updated_at_utc": "2026-10-01T02:27:23.209224+00:00",
+  "updated_at_utc": "2026-10-01T02:42:41.158080+00:00",
   "catalog_channels": 210,
-  "channels_in_previous_tr": 203,
-  "missing_before_search": 7,
+  "channels_in_previous_tr": 199,
+  "missing_before_search": 11,
   "missing_names": [
-    "Kanal 7",
-    "Haber61 TV",
-    "Sercem TV",
+    "TYT Türk",
+    "Sports TV",
+    "National Geographic",
+    "National Geographic Wild",
     "On4 TV",
+    "FM TV",
     "Number1 Rap TV",
+    "West Azerbaijan TV",
+    "TMB TV",
     "TGRT EU",
     "Kanal 1"
   ],
@@ -17,45 +21,61 @@
   "search_batches": [
     {
       "names": [
-        "Kanal 7",
-        "Haber61 TV",
-        "Sercem TV",
+        "TYT Türk",
+        "Sports TV",
+        "National Geographic",
+        "National Geographic Wild",
         "On4 TV",
-        "Number1 Rap TV",
-        "TGRT EU"
+        "FM TV"
       ],
-      "query": "\"Kanal 7\" OR \"Haber61 TV\" OR \"Sercem TV\" OR \"On4 TV\" OR \"Number1 Rap TV\" OR \"TGRT EU\" extension:m3u",
-      "search_results": 0
+      "query": "\"TYT Türk\" OR \"Sports TV\" OR \"National Geographic\" OR \"National Geographic Wild\" OR \"On4 TV\" OR \"FM TV\" extension:m3u",
+      "search_results": 1
     },
     {
       "names": [
+        "Number1 Rap TV",
+        "West Azerbaijan TV",
+        "TMB TV",
+        "TGRT EU",
         "Kanal 1"
       ],
-      "query": "\"Kanal 1\" extension:m3u",
-      "search_results": 50
+      "query": "\"Number1 Rap TV\" OR \"West Azerbaijan TV\" OR \"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
+      "search_results": 0
     }
   ],
   "target_report": [
     {
-      "name": "Kanal 7",
+      "name": "TYT Türk",
       "category": "Ulusal",
       "files_matched": 1,
-      "candidates": 2
+      "candidates": 1
     },
     {
-      "name": "Haber61 TV",
-      "category": "Yerel",
+      "name": "Sports TV",
+      "category": "Spor",
       "files_matched": 1,
-      "candidates": 2
+      "candidates": 1
     },
     {
-      "name": "Sercem TV",
-      "category": "Dini",
+      "name": "National Geographic",
+      "category": "Belgesel",
+      "files_matched": 1,
+      "candidates": 1
+    },
+    {
+      "name": "National Geographic Wild",
+      "category": "Belgesel",
       "files_matched": 1,
       "candidates": 1
     },
     {
       "name": "On4 TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "FM TV",
       "category": "Dini",
       "files_matched": 1,
       "candidates": 1
@@ -67,10 +87,22 @@
       "candidates": 0
     },
     {
-      "name": "TGRT EU",
+      "name": "West Azerbaijan TV",
       "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
+    },
+    {
+      "name": "TMB TV",
+      "category": "Uluslararası",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TGRT EU",
+      "category": "Uluslararası",
+      "files_matched": 1,
+      "candidates": 1
     },
     {
       "name": "Kanal 1",
@@ -79,7 +111,7 @@
       "candidates": 0
     }
   ],
-  "files_scanned": 50,
+  "files_scanned": 1,
   "unique_candidates_found": 6,
   "errors": 0,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
