@@ -1,15 +1,15 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 52,
+  "core_channels_verified": 51,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 18,
+  "core_channels_not_verified": 19,
   "status_counts": {
-    "verified": 52,
+    "verified": 51,
     "restricted": 1,
     "geo-restricted": 7,
-    "absent": 1,
+    "absent": 2,
     "unknown": 5,
     "device-restricted": 4
   },
@@ -27,6 +27,13 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
+    },
+    {
+      "name": "FM TV",
+      "expected_category": "Dini",
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
     },
     {
       "name": "Kanal 1",

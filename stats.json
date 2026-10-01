@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-01T01:33:29.458931+00:00",
+  "updated_at_utc": "2026-10-01T01:55:16.180238+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -10,7 +10,7 @@
     {
       "url": "local:official_discovered.m3u",
       "status": "ok",
-      "entries": 14
+      "entries": 15
     },
     {
       "url": "local:turkuvaz_discovered.m3u",
@@ -53,35 +53,35 @@
       "entries": 322
     }
   ],
-  "raw_entries": 1396,
+  "raw_entries": 1397,
   "priority_entries": 81,
   "reuse_validation_mode": false,
   "cached_output_entries": 0,
   "cached_turkey_entries": 0,
-  "official_entries": 14,
+  "official_entries": 15,
   "turkuvaz_official_entries": 7,
   "browser_official_entries": 0,
   "discovered_entries": 322,
   "targeted_missing_entries": 6,
-  "unique_entries": 885,
-  "unique_stream_candidates": 885,
-  "semantic_channels": 588,
-  "duplicate_stream_variants_collapsed": 297,
+  "unique_entries": 881,
+  "unique_stream_candidates": 881,
+  "semantic_channels": 586,
+  "duplicate_stream_variants_collapsed": 295,
   "filtered_private_style_entries": 0,
   "filtered_false_identity_entries": 5,
   "header_aware_entries": 52,
   "validation_cache_enabled": false,
   "validation_cache_hits": 0,
-  "validation_fresh_checks": 885,
+  "validation_fresh_checks": 881,
   "selected_stream_sources": {
-    "github_discovery": 55,
+    "github_discovery": 50,
     "priority": 44,
-    "upstream": 327,
+    "upstream": 328,
     "official_html": 8,
     "official_api": 2,
-    "iptv_org": 152
+    "iptv_org": 154
   },
-  "domain_score_count": 224,
+  "domain_score_count": 222,
   "top_domain_scores": [
     {
       "domain": "iptv.prosto.tv",
@@ -249,17 +249,6 @@
       "verified_rate": 100.0
     },
     {
-      "domain": "463758a0.ucomist.net",
-      "score": 78.57,
-      "samples": 2,
-      "verified": 2,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
       "domain": "bantel-cdn1.iptvperu.tv",
       "score": 78.57,
       "samples": 2,
@@ -302,50 +291,61 @@
       "dead": 0,
       "drm": 0,
       "verified_rate": 100.0
+    },
+    {
+      "domain": "host.onlineradyotv.net",
+      "score": 78.57,
+      "samples": 2,
+      "verified": 2,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
     }
   ],
   "channel_name_sources": {
-    "turksat": 195,
-    "digiturk": 38,
-    "cleaned-source": 632,
+    "turksat": 194,
+    "digiturk": 37,
+    "cleaned-source": 630,
     "official-fallback": 20
   },
   "stream_validation_statuses": {
     "restricted": 410,
-    "unknown": 148,
-    "verified": 300,
+    "unknown": 143,
+    "verified": 301,
     "dead": 27
   },
-  "verified_entries": 218,
+  "verified_entries": 217,
   "restricted_entries": 294,
-  "unknown_entries": 60,
+  "unknown_entries": 59,
   "unknown_retry_candidates": 32,
-  "unknown_retry_skipped_verified_sibling": 116,
+  "unknown_retry_skipped_verified_sibling": 111,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 3,
   "unknown_retry_workers": 12,
   "dead_entries": 16,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 572,
-  "turkey_device_entries": 244,
+  "all_non_dead_non_drm_entries": 570,
+  "turkey_device_entries": 243,
   "turkey_device_geo_fallbacks": 10,
   "turkey_device_restricted_fallbacks": 22,
   "turkey_device_ephemeral_overrides": 2,
   "core_channels_total": 70,
-  "core_channels_verified": 52,
+  "core_channels_verified": 51,
   "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 18,
+  "core_channels_not_verified": 19,
   "categories_verified": {
-    "Ulusal": 23,
+    "Ulusal": 22,
     "Haber": 32,
-    "Spor": 6,
+    "Spor": 5,
     "Film & Dizi": 5,
     "Çocuk": 7,
     "Belgesel": 4,
     "Dini": 10,
     "Müzik": 18,
-    "Yerel": 51,
+    "Yerel": 52,
     "Uluslararası": 23,
     "Diğer": 39
   },
@@ -363,16 +363,16 @@
     "Diğer": 278
   },
   "categories_unknown": {
-    "Ulusal": 1,
+    "Ulusal": 2,
     "Haber": 4,
-    "Spor": 1,
+    "Spor": 2,
     "Film & Dizi": 0,
     "Çocuk": 0,
     "Belgesel": 3,
-    "Dini": 1,
+    "Dini": 0,
     "Müzik": 1,
-    "Yerel": 1,
-    "Uluslararası": 3,
+    "Yerel": 0,
+    "Uluslararası": 2,
     "Diğer": 45
   }
 }
