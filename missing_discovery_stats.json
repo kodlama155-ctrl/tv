@@ -1,11 +1,16 @@
 {
-  "updated_at_utc": "2026-09-30T22:14:46.589076+00:00",
+  "updated_at_utc": "2026-10-01T00:02:11.505389+00:00",
   "catalog_channels": 210,
-  "channels_in_previous_tr": 204,
-  "missing_before_search": 6,
+  "channels_in_previous_tr": 199,
+  "missing_before_search": 11,
   "missing_names": [
+    "Show TV",
     "Kanal 7",
+    "TYT Türk",
+    "Sports TV",
+    "Sercem TV",
     "On4 TV",
+    "FM TV",
     "Number1 Rap TV",
     "TMB TV",
     "TGRT EU",
@@ -16,18 +21,35 @@
   "search_batches": [
     {
       "names": [
+        "Show TV",
         "Kanal 7",
-        "On4 TV",
+        "TYT Türk",
+        "Sports TV",
+        "Sercem TV",
+        "On4 TV"
+      ],
+      "query": "\"Show TV\" OR \"Kanal 7\" OR \"TYT Türk\" OR \"Sports TV\" OR \"Sercem TV\" OR \"On4 TV\" extension:m3u",
+      "error": "HTTPError"
+    },
+    {
+      "names": [
+        "FM TV",
         "Number1 Rap TV",
         "TMB TV",
         "TGRT EU",
         "Kanal 1"
       ],
-      "query": "\"Kanal 7\" OR \"On4 TV\" OR \"Number1 Rap TV\" OR \"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
-      "error": "HTTPError"
+      "query": "\"FM TV\" OR \"Number1 Rap TV\" OR \"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
+      "search_results": 0
     }
   ],
   "target_report": [
+    {
+      "name": "Show TV",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
     {
       "name": "Kanal 7",
       "category": "Ulusal",
@@ -35,7 +57,31 @@
       "candidates": 0
     },
     {
+      "name": "TYT Türk",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Sports TV",
+      "category": "Spor",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Sercem TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "On4 TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "FM TV",
       "category": "Dini",
       "files_matched": 0,
       "candidates": 0

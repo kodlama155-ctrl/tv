@@ -10,8 +10,8 @@
     "restricted": 2,
     "geo-restricted": 7,
     "absent": 2,
-    "unknown": 6,
-    "device-restricted": 5
+    "device-restricted": 5,
+    "unknown": 6
   },
   "missing_channels": [
     {
@@ -50,13 +50,6 @@
       "candidate_url": ""
     },
     {
-      "name": "Meltem TV",
-      "expected_category": "Ulusal",
-      "status": "unknown",
-      "reason": "response is not HLS",
-      "candidate_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
-    },
-    {
       "name": "CNN Türk",
       "expected_category": "Haber",
       "status": "device-restricted",
@@ -69,6 +62,13 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
+    },
+    {
+      "name": "Tele1",
+      "expected_category": "Haber",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",

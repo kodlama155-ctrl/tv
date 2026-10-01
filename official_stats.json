@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-09-30T22:13:39.914135+00:00",
+  "updated_at_utc": "2026-10-01T00:01:12.201972+00:00",
   "official_pages": 38,
-  "pages_ok": 34,
+  "pages_ok": 33,
   "pages_with_candidates": 10,
   "raw_candidates": 13,
   "accepted_unique_candidates": 13,
   "probe_statuses": {
-    "verified": 8,
     "restricted": 4,
+    "verified": 8,
     "unknown": 1
   },
   "sources": [
@@ -136,12 +136,12 @@
     {
       "name": "EKOTÜRK",
       "page": "https://www.ekoturk.com/canli-yayin/",
-      "status": "ok",
-      "page_final_url": "https://www.ekoturk.com/canli-yayin/",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 2,
+      "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "URLError"
     },
     {
       "name": "FB TV",
