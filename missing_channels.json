@@ -1,33 +1,16 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 50,
-  "core_channels_geo_restricted": 7,
-  "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 20,
+  "core_channels_verified": 61,
+  "core_channels_geo_restricted": 0,
+  "core_channels_device_restricted": 0,
+  "core_channels_not_verified": 9,
   "status_counts": {
-    "verified": 50,
-    "restricted": 1,
-    "geo-restricted": 7,
+    "verified": 61,
     "absent": 2,
-    "unknown": 6,
-    "device-restricted": 4
+    "unknown": 7
   },
   "missing_channels": [
-    {
-      "name": "Kanal 7",
-      "expected_category": "Ulusal",
-      "status": "restricted",
-      "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401",
-      "candidate_url": "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8?app=f99587ad-1637-494d-8255-da35b09d17a1&ce=3"
-    },
-    {
-      "name": "TRT 2",
-      "expected_category": "Ulusal",
-      "status": "geo-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
-    },
     {
       "name": "FM TV",
       "expected_category": "Dini",
@@ -57,32 +40,11 @@
       "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
-      "name": "TRT Spor",
-      "expected_category": "Spor",
-      "status": "geo-restricted",
-      "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
-      "candidate_url": "https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor"
-    },
-    {
-      "name": "TRT Spor Yıldız",
-      "expected_category": "Spor",
-      "status": "geo-restricted",
-      "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
-      "candidate_url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor"
-    },
-    {
-      "name": "FB TV",
-      "expected_category": "Spor",
-      "status": "device-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8"
-    },
-    {
       "name": "beIN Sports Haber",
       "expected_category": "Spor",
-      "status": "device-restricted",
-      "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403",
-      "candidate_url": "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8"
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://ythls.kekikakademi.org/youtube/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8"
     },
     {
       "name": "TRT 3 Spor",
@@ -90,34 +52,6 @@
       "status": "unknown",
       "reason": "variant HTTP 404; variant HTTP 404",
       "candidate_url": "https://tv-trt3.live.trt.com.tr/master.m3u8"
-    },
-    {
-      "name": "FX",
-      "expected_category": "Film & Dizi",
-      "status": "geo-restricted",
-      "reason": "manifest HTTP 401",
-      "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
-    },
-    {
-      "name": "BabyTV Türkiye",
-      "expected_category": "Çocuk",
-      "status": "geo-restricted",
-      "reason": "manifest HTTP 401",
-      "candidate_url": "https://saran-live.ercdn.net/babytv/index.m3u8"
-    },
-    {
-      "name": "Disney Junior",
-      "expected_category": "Çocuk",
-      "status": "geo-restricted",
-      "reason": "manifest HTTP 401",
-      "candidate_url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8"
-    },
-    {
-      "name": "TRT Belgesel",
-      "expected_category": "Belgesel",
-      "status": "geo-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "Habitat TV",
@@ -139,20 +73,6 @@
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8"
-    },
-    {
-      "name": "DMAX",
-      "expected_category": "Belgesel",
-      "status": "device-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://dogus-live.daioncdn.net/dmax/dmax_720p.m3u8"
-    },
-    {
-      "name": "TLC",
-      "expected_category": "Belgesel",
-      "status": "device-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://dogus-live.daioncdn.net/tlc/tlc.m3u8"
     }
   ]
 }

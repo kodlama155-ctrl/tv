@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-10-01T00:20:28.582759+00:00",
+  "updated_at_utc": "2026-10-01T01:24:19.310215+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-09-17T00:20:28.582759+00:00",
+  "cutoff_utc": "2026-09-17T01:24:19.310215+00:00",
   "repos_per_query": 50,
   "queries": [
     {
@@ -135,7 +135,7 @@
   "playlist_file_candidates": 18,
   "fresh_files_scanned": 8,
   "stale_files_skipped": 10,
-  "unique_m3u8_candidates": 303,
+  "unique_m3u8_candidates": 322,
   "header_aware_candidates": 3,
   "fresh_source_files": [
     {
@@ -166,7 +166,7 @@
       "repo": "Yusufdkci/iptv",
       "path": "liste.m3u",
       "last_commit": "2026-09-27T23:08:19Z",
-      "entries_found": 135
+      "entries_found": 154
     },
     {
       "repo": "akifdepoozel-crypto/car-tv-turkiye",

@@ -35,10 +35,7 @@ M3U8_RE = re.compile(
     r'https?://[^\s"\'<>]+?\.m3u8(?:\?[^\s"\'<>]*)?',
     re.I,
 )
-SENSITIVE_QUERY_KEYS = {
-    "token", "auth", "authorization", "password", "passwd", "username",
-    "user", "key", "sig", "signature", "jwt", "session", "hdnts", "hdnea",
-}
+SENSITIVE_QUERY_KEYS: set[str] = set()
 EXPLICIT_CREDENTIAL_PATH_RE = re.compile(
     r"/(?:user(?:name)?|pass(?:word)?|token|auth(?:orization)?|session|jwt|key)(?:=|/)[^/?#]+",
     re.I,

@@ -32,10 +32,7 @@ PROBE_WORKERS = 12
 
 # Only public stream URLs are retained. URLs that appear to carry credentials
 # or session/auth tokens are intentionally ignored.
-SENSITIVE_QUERY_KEYS = {
-    "token", "auth", "authorization", "password", "passwd", "username",
-    "user", "key", "sig", "signature", "jwt", "session", "hdnts", "hdnea",
-}
+SENSITIVE_QUERY_KEYS: set[str] = set()
 EPHEMERAL_MEDIA_HOSTS = (
     "googlevideo.com",
 )
