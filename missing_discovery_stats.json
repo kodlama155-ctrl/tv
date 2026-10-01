@@ -1,14 +1,13 @@
 {
-  "updated_at_utc": "2026-10-01T00:02:11.505389+00:00",
+  "updated_at_utc": "2026-10-01T00:20:59.838144+00:00",
   "catalog_channels": 210,
-  "channels_in_previous_tr": 199,
-  "missing_before_search": 11,
+  "channels_in_previous_tr": 200,
+  "missing_before_search": 10,
   "missing_names": [
     "Show TV",
     "Kanal 7",
     "TYT Türk",
     "Sports TV",
-    "Sercem TV",
     "On4 TV",
     "FM TV",
     "Number1 Rap TV",
@@ -25,22 +24,21 @@
         "Kanal 7",
         "TYT Türk",
         "Sports TV",
-        "Sercem TV",
-        "On4 TV"
+        "On4 TV",
+        "FM TV"
       ],
-      "query": "\"Show TV\" OR \"Kanal 7\" OR \"TYT Türk\" OR \"Sports TV\" OR \"Sercem TV\" OR \"On4 TV\" extension:m3u",
+      "query": "\"Show TV\" OR \"Kanal 7\" OR \"TYT Türk\" OR \"Sports TV\" OR \"On4 TV\" OR \"FM TV\" extension:m3u",
       "error": "HTTPError"
     },
     {
       "names": [
-        "FM TV",
         "Number1 Rap TV",
         "TMB TV",
         "TGRT EU",
         "Kanal 1"
       ],
-      "query": "\"FM TV\" OR \"Number1 Rap TV\" OR \"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
-      "search_results": 0
+      "query": "\"Number1 Rap TV\" OR \"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
+      "error": "HTTPError"
     }
   ],
   "target_report": [
@@ -65,12 +63,6 @@
     {
       "name": "Sports TV",
       "category": "Spor",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Sercem TV",
-      "category": "Dini",
       "files_matched": 0,
       "candidates": 0
     },
@@ -113,6 +105,6 @@
   ],
   "files_scanned": 0,
   "unique_candidates_found": 0,
-  "errors": 1,
+  "errors": 2,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }

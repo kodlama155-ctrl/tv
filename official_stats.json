@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-01T00:01:12.201972+00:00",
+  "updated_at_utc": "2026-10-01T00:19:34.319665+00:00",
   "official_pages": 38,
   "pages_ok": 33,
   "pages_with_candidates": 10,
@@ -7,8 +7,8 @@
   "accepted_unique_candidates": 13,
   "probe_statuses": {
     "restricted": 4,
-    "verified": 8,
-    "unknown": 1
+    "verified": 7,
+    "unknown": 2
   },
   "sources": [
     {
@@ -136,12 +136,12 @@
     {
       "name": "EKOTÜRK",
       "page": "https://www.ekoturk.com/canli-yayin/",
-      "status": "page_error",
-      "page_final_url": null,
+      "status": "ok",
+      "page_final_url": "https://www.ekoturk.com/canli-yayin/",
       "page_candidates": 0,
-      "aux_scanned": 0,
+      "aux_scanned": 2,
       "candidates": [],
-      "error": "URLError"
+      "identity_rejected_candidates": 0
     },
     {
       "name": "FB TV",
@@ -267,12 +267,12 @@
     {
       "name": "Sözcü TV",
       "page": "https://www.sozcu.com.tr/sozcu-tv-canli-yayin-wp7630113",
-      "status": "ok",
-      "page_final_url": "https://www.sozcu.com.tr/sozcu-tv-canli-yayin-wp7630113",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 2,
+      "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "HTTPError"
     },
     {
       "name": "TELE1",

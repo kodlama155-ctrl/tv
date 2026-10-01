@@ -1,14 +1,14 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="TRT1.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/960px-TRT_1_logo_%282021-%29.svg.png" group-title="Ulusal",TRT 1
 https://tv-trt1.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="Ulusal",Kanal D
+#EXTINF:-1 group-title="Ulusal" tvg-logo="https://itv224234.tmp.tivibu.com.tr:6430/images/poster/20250801838833.png",Kanal D
 #EXTVLCOPT:http-referrer=https://www.kanald.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
 #EXTINF:-1 tvg-id="ATV.tr@HD" group-title="Ulusal" tvg-logo="https://i0.wp.com/resim.yayins.com/ulusal/atv.png",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
-#EXTINF:-1 tvg-id="ShowTV.tr@HD" group-title="Ulusal" tvg-logo="https://i0.wp.com/resim.yayins.com/ulusal/showtv.png",Show TV
-https://ciner-live.daioncdn.net/showtv/showtv.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/BrGNZJ4/showtv.png" group-title="Ulusal",Show TV
+https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558
 #EXTINF:-1 tvg-id="StarTV.tr@SD" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="Ulusal",Star TV
 https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
 #EXTINF:-1 tvg-id="NOWTV.tr@SD" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="Ulusal",NOW TV
@@ -32,7 +32,9 @@ https://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
 #EXTINF:-1 tvg-id="tv2.tr@SD" tvg-logo="https://i.imgur.com/rsoSLih.png" group-title="Ulusal",Teve2
 https://demiroren-live.daioncdn.net/teve2/teve2.m3u8
 #EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal" tvg-logo="https://i0.wp.com/resim.yayins.com/ulusal/tv85.png",TV8.5
-https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk_1080p.m3u8
+#EXTVLCOPT:http-referrer=https://www.tv8.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=bf58ab52-4865-4c81-b223-26b41009801e&ce=3
 #EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
 #EXTVLCOPT:http-referrer=https://www.trt2.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -59,17 +61,17 @@ https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8
 https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
 #EXTINF:-1 tvg-id="ShowMax.tr@HD" group-title="Ulusal",Show Max
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8
+#EXTINF:-1 tvg-logo="http://ginikoturkish.com/channels/logo/trt-4k.jpg" group-title="Ulusal",TRT
+http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/4001/index.m3u8
 #EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
 https://ch.iptvmate.net/ebba59f748ffa980b43912d9354e6905.m3u8
 #EXTINF:-1 tvg-id="TV100.tr@HD" group-title="Haber" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/0/0f/TV100_logo.png/960px-TV100_logo.png",TV100
 https://ensonhaber-live.ercdn.net/tv100/tv100.m3u8
 #EXTINF:-1 tvg-id="NTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/NTV_%28Turkey%29_logo.svg/960px-NTV_%28Turkey%29_logo.svg.png" group-title="Haber",NTV
 https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
-#EXTINF:-1 group-title="Haber" tvg-logo="https://i.imgur.com/TPAwEBC.png",CNN Türk
-#EXTVLCOPT:http-referrer=https://www.cnnturk.com/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/playlist.m3u8
-#EXTINF:-1 group-title="Haber",TRT Haber
+#EXTINF:-1 tvg-id="CNN.TÜRK.tr" tvg-name="CNN TÜRK" tvg-logo="https://i.ibb.co/LdzKYB1c/MG-6446.jpg" group-title="Haber",CNN Türk
+http://46.32.176.50/cnnturk/playlist.m3u8
+#EXTINF:-1 group-title="Haber" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/8971102.png",TRT Haber
 #EXTVLCOPT:http-referrer=https://www.trthaber.com/canli-yayin-izle.html
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
@@ -79,6 +81,8 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 #EXTVLCOPT:http-referrer=https://www.haberturk.com/canliyayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://ciner.daioncdn.net/haberturktv/haberturktv.m3u8?app=c98ab0b0-50cc-495b-bb37-778e91f5ff5b&ce=3
+#EXTINF:-1 tvg-id="24" tvg-name="24" tvg-logo="https://cdn.technettv.com/channel/29534/logo_256_1733832490.jpg" group-title="Haber",24 TV
+https://ensonhaber-live.ercdn.net/tv24/tv24.m3u8
 #EXTINF:-1 tvg-id="24TV.tr@SD" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="Haber",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
 #EXTINF:-1 tvg-id="BloombergHT.tr@SD" tvg-logo="https://i.imgur.com/bmkXfIE.png" group-title="Haber",Bloomberg HT
@@ -124,7 +128,7 @@ https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 group-title="Haber" tvg-logo="https://i.imgur.com/6tWCzTp.png",A News
 #EXTVLCOPT:http-referrer=https://www.anews.com.tr/webtv/live-broadcast
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=Vm9Lw_k9ixtPs9IsipCFlA&e=1790858109
+https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=hO8lOIrjlAcKca82LXsaLw&e=1790859218
 #EXTINF:-1 tvg-id="AlmahriahTV.tr@SD" tvg-logo="https://i.imgur.com/GgEeTNr.png" group-title="Haber",Almahriah TV
 https://starmenajo.com/hls/almahriah/index.m3u8
 #EXTINF:-1 tvg-id="BirTV.tr@SD" tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="Haber",Bir TV
@@ -176,7 +180,7 @@ https://saran-live.ercdn.net/fx/index.m3u8
 #EXTINF:-1 tvg-id="BBCFirst.uk@Turkiye" tvg-logo="https://i.imgur.com/UBoBYUI.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Film & Dizi",BBC First
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.15.29/live/bbc_first/index.m3u8
-#EXTINF:-1 tvg-id="Cine1.tr@SD" tvg-logo="" group-title="Film & Dizi",Cine 1
+#EXTINF:-1 tvg-id="Cine1.tr@SD" group-title="Film & Dizi" tvg-logo="https://cine1.com.tr/images/cine1tvas.png",Cine 1
 https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
 #EXTINF:-1 tvg-id="GEMPixel.tr@SD" tvg-logo="https://i.ibb.co/Q3tkbPrn/icon-27.png" group-title="Film & Dizi",GEM Pixel
 https://glserver1.tamashaland.com/live/aBCH96886YznRbGOiqTnnQ__/stream_0.m3u8
@@ -217,7 +221,7 @@ https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
 #EXTVLCOPT:http-referrer=https://habitattv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://59c7ea6bec1c6.streamlock.net/filbox/habibattv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="TLC.tr@HD" group-title="Belgesel",TLC
+#EXTINF:-1 tvg-id="TLC.tr@HD" group-title="Belgesel" tvg-logo="https://yt3.ggpht.com/7uTWS1ZIhWMlKkvEKCCdfhAG9gf9PmkZ8RTz-6Zxmxlzfr0dN6uM6iaoZWNHz3_AQ0AggW3z5w",TLC
 https://dogus-live.daioncdn.net/tlc/tlc.m3u8
 #EXTINF:-1 tvg-id="DMAX.tr@HD" group-title="Belgesel",DMAX
 https://dogus-live.daioncdn.net/dmax/dmax_720p.m3u8
@@ -238,7 +242,7 @@ https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
 #EXTINF:-1 group-title="Dini",VAV TV
 #EXTVLCOPT:http-referrer=https://www.vavtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=Z2DS1AWOMmN3eVtwjGWYmA&e=1790858113
+https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=7x7fy-ZCgQdIr_nrUdtIVg&e=1790859225
 #EXTINF:-1 tvg-id="TRTDiyanetCocuk.tr@SD" tvg-logo="https://i.imgur.com/8PmXz9t.png" group-title="Dini",TRT Diyanet Cocuk
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="DiyanetTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Diyanet_TV_logo.svg/960px-Diyanet_TV_logo.svg.png" group-title="Dini",Diyanet TV
@@ -418,7 +422,7 @@ https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8
 #EXTINF:-1 group-title="Uluslararası" tvg-logo="https://i.tmgrup.com.tr/aav/site/v1/i/atv-avrupa-logo.png",ATV Avrupa
 #EXTVLCOPT:http-referrer=https://www.atvavrupa.tv/webtv/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvavrupa/atvavrupa.m3u8?st=Or8sn95HrICu4PRKRwjHuw&e=1790858098
+https://trkvz-live.ercdn.net/atvavrupa/atvavrupa.m3u8?st=L0oI7fRQI0EVTDusZgb4_g&e=1790859204
 #EXTINF:-1 tvg-id="ElsharqTV.tr@SD" tvg-logo="https://i.imgur.com/8vmfZb5.png" group-title="Uluslararası",Elsharq TV
 https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8
 #EXTINF:-1 tvg-id="EuroD.tr@SD" tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="Uluslararası",Euro D
@@ -465,16 +469,22 @@ https://nord.ayakkabiparti.lol/bbc/index.m3u8
 #EXTINF:-1 tvg-id="ViasatHistory.tr@SD" tvg-logo="https://i.imgur.com/wRP9XA7.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Diğer",Viasat History
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 https://nord.ayakkabiparti.lol/viasathistory/index.m3u8
+#EXTINF:-1 tvg-id="DISCOVERY.CHANNEL.tr" tvg-name="DISCOVERY CHANNEL" tvg-logo="https://itv224234.tmp.tivibu.com.tr:6430/images/poster/20250801838478.png" group-title="Diğer",Discovery Channel
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3H98G67KZ9HAS9/6861/index.m3u8
 #EXTINF:-1 tvg-id="Number1Turk.tr@SD" tvg-logo="https://i.imgur.com/18zjk3q.png" group-title="Diğer",Number 1 Türk
 https://mn-nl.mncdn.com/blutv_nr1turk2/live.m3u8
 #EXTINF:-1 tvg-id="TarimTV.tr@SD" tvg-logo="https://i.imgur.com/q30sFms.png" group-title="Diğer",Tarim TV
 https://content.tvkur.com/l/c7e1da7mm25p552d9u9g/master.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/33860/logo_256.png" group-title="Diğer",A Spor test
+http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_1080p.m3u8
 #EXTINF:-1 tvg-id="ATurk.tr@SD" tvg-logo="https://i.imgur.com/je5wQ3G.png" group-title="Diğer",A Türk Izmir
 https://vdo.digitalbox.xyz:3807/stream/play.m3u8
 #EXTINF:-1 tvg-id="AnadoluAgency.tr@SD" tvg-logo="https://i.imgur.com/dWElJll.png" group-title="Diğer",AA Live
 https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AlRafidainTV.tr@SD" tvg-logo="https://i.imgur.com/rjXDCN5.png" group-title="Diğer",Al-Rafidain TV
 https://arrafidain.tvplayer.online/arrafidaintv/source/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",ANIMALS
+http://iptv.prosto.tv:7000/ch316/video.m3u8?secret=191yc7ul
 #EXTINF:-1 tvg-id="beINBoxOffice1.tr@SD" tvg-logo="https://i.imgur.com/MGrJFVN.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Diğer",beIN Box Office 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 https://nord.ayakkabiparti.lol/box1/index.m3u8
@@ -490,14 +500,26 @@ https://nord.ayakkabiparti.lol/bsaction1/index.m3u8
 #EXTINF:-1 tvg-id="beINMoviesTurk.tr@SD" tvg-logo="https://i.imgur.com/nw8Sa2z.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Diğer",beIN Movies Turk
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 https://nord.ayakkabiparti.lol/bsturk/index.m3u8
+#EXTINF:-1 tvg-logo="https://1.bp.blogspot.com/-bwERD1EYUso/XjHTaAko5tI/AAAAAAAAA-M/MpTKAtCF0rUt9cvpn-Chpk3PKth9aEWJwCLcBGAsYHQ/s200/33.png" group-title="Diğer",BeIN Sports 1 kapalı
+#EXTVLCOPT:http-referrer=https://trgoals1514.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://56r.d72577a9dd0ec17.sbs/yayin1.m3u8
+#EXTINF:-1 tvg-logo="https://bit.ly/3f86zet" group-title="Diğer",BeIN Sports vpn
+https://andro.evrenesoglu57.click/checklist/androstreamlivebs1.m3u8
 #EXTINF:-1 tvg-id="BursaTV.tr@SD" tvg-logo="https://i.imgur.com/9cl1MR8.png" group-title="Diğer",Bursa TV
 https://cdn-bursatv.yayin.com.tr/bursatv/bursatv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",CAILLOU
+https://catcast.ismailturret.workers.dev/fanatikkidscaillou.m3u8
 #EXTINF:-1 tvg-id="CanTV.tr@SD" tvg-logo="https://i.imgur.com/oIMtuwB.png" group-title="Diğer",Can TV
 https://livetv.canbroadcast.com:7443/canlican/tv.m3u8
 #EXTINF:-1 tvg-id="CekmekoyTV.tr@SD" tvg-logo="https://i.imgur.com/sjAGFWu.png" group-title="Diğer",Cekmekoy TV
 https://cdn-cekmekoybeltv.yayin.com.tr/cekmekoybeltv/cekmekoybeltv_1080p/playlist.m3u8
 #EXTINF:-1 tvg-id="CGTNDocumentary.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/CGTN_Documentary_logo.png/960px-CGTN_Documentary_logo.png" group-title="Diğer",CGTN Documentary
 https://mn-nl.mncdn.com/dogusdyg_drone/cgtn/playlist.m3u8
+#EXTINF:-1 tvg-logo="http://imgss.ct.ws/denizpostasi.png" group-title="Diğer",Deniz Postası
+https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/30HzeQe.png" group-title="Diğer",Ed Stafford
+https://catcast.ismailturret.workers.dev/fanatikprimeEdStafford.m3u8
 #EXTINF:-1 tvg-id="IBBTV.tr@SD" tvg-logo="https://i.imgur.com/aXxAz84.png" group-title="Diğer",IBB TV
 https://npserver1.ibb.gov.tr/webtv/webtv_wowza1/playlist.m3u8
 #EXTINF:-1 tvg-id="Kanal34.tr@SD" tvg-logo="https://i.imgur.com/SIaI6Sj.png" group-title="Diğer",Kanal 34
@@ -512,18 +534,84 @@ https://sosyoapp-live.cdnnew.com/sosyo/buraya-bir-isim-verin.m3u8
 http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174
 #EXTINF:-1 tvg-id="OnMedyaTV.tr@SD" tvg-logo="https://i.imgur.com/thvk3Py.png" group-title="Diğer",ON Medya Haber
 http://live.arkumedia.com:1935/marmaratv/marmaratv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://zoostreamtv.com/wp-content/uploads/2023/10/cropped-5.png" group-title="Diğer",OO Stream
+http://iptv.prosto.tv:7000/ch319/video.m3u8?secret=7va3b5tb
+#EXTINF:-1 tvg-logo="https://americanaoutdoors.com/wp-content/uploads/2023/01/Pursuit-Channel-705x705.jpg" group-title="Diğer",PursuitUP
+http://linear-205.frequency.stream/dist/glewedtv/205/hls/master/playlist_1280x720.m3u8
 #EXTINF:-1 tvg-id="QafTV.tr@SD" tvg-logo="https://i.imgur.com/hrk7Uce.png" group-title="Diğer",Qaf TV
 https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",rahatla 21
+http://185.57.68.33:8091/232/tracks-v1a1/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",rahatla 22 Relax baraza
+https://rtmp.streams.ovh:1936/barazarelax/barazarelax/chunklist_w63326066.m3u8
+#EXTINF:-1 tvg-logo="https://avatars.mds.yandex.net/get-pdb/3946622/f25f8a24-de20-4c9e-8f05-98db50810075/orig" group-title="Diğer",rahatla 23
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=6195
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00514.jpg" group-title="Diğer",relax 1 Горы
+http://iptv.prosto.tv:7000/ch340/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",relax 10
+https://iptv.prosto.tv/ch336/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00563.jpg" group-title="Diğer",relax 11 Просто Украина
+http://iptv.prosto.tv:7000/ch303/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",relax 12 Дожди
+http://iptv.prosto.tv:7000/ch304/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00492.jpg" group-title="Diğer",relax 13 Комната RAHATLA
+http://iptv.prosto.tv:7000/ch328/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00555.jpg" group-title="Diğer",relax 14 Ночь
+http://iptv.prosto.tv:7000/ch349/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",relax 15 Огонь
+http://iptv.prosto.tv:7000/ch331/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00505.jpg" group-title="Diğer",relax 16 Пляж
+http://iptv.prosto.tv:7000/ch332/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00508.jpg" group-title="Diğer",relax 17 Тропики
+http://iptv.prosto.tv:7000/ch335/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00532.jpg" group-title="Diğer",relax 18 Рыбалка
+http://iptv.prosto.tv:7000/ch344/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00512.jpg" group-title="Diğer",relax 19 Река
+http://iptv.prosto.tv:7000/ch338/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00533.jpg" group-title="Diğer",relax 2 Бассейн
+http://iptv.prosto.tv:7000/ch345/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00537.jpg" group-title="Diğer",relax 20 Сад
+http://iptv.prosto.tv:7000/ch347/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",relax 3
+http://iptv.prosto.tv:7000/ch346/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00515.jpg" group-title="Diğer",relax 4 Озеро
+http://iptv.prosto.tv:7000/ch341/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00513.jpg" group-title="Diğer",relax 5 Джунгли
+http://iptv.prosto.tv:7000/ch339/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",relax 6 Парк
+http://iptv.prosto.tv:7000/ch350/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00307.jpg" group-title="Diğer",relax 7 Relaxon
+http://iptv.prosto.tv:7000/ch317/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",relax 8
+http://iptv.prosto.tv:7000/ch318/video.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00522.jpg" group-title="Diğer",relax 9 Пейзаж
+http://iptv.prosto.tv:7000/ch343/video.m3u8
 #EXTINF:-1 tvg-id="RTGTV.ru@SD" tvg-logo="https://i.imgur.com/ZMKPAho.png" group-title="Diğer",RTG TV
 http://31.148.48.15/RTG_HD/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/30HzeQe.png" group-title="Diğer",SALON PREMIUM 2
+https://catcast.ismailturret.workers.dev/playercinema-premium2.m3u8
+#EXTINF:-1 tvg-logo="https://www.sdmtv.com.tr/images/sdm-tv-sinema-keyfi.png" group-title="Diğer",SDM Sinema
+https://host.onlineradyotv.net:8081/sdmtv/index.m3u8
+#EXTINF:-1 tvg-id="Sinema 1" tvg-name="Sinema 1" tvg-logo="https://e7.pngegg.com/pngimages/879/420/png-clipart-film-video-production-television-graphy-cine-miscellaneous-label-thumbnail.png" group-title="Diğer",Sinema 1
+https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",ŞÖMİNE
+http://iptv.prosto.tv:7000/ch331/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00318.png" group-title="Diğer",Stream City
+http://iptv.prosto.tv:7000/ch321/video.m3u8
 #EXTINF:-1 tvg-id="TabiiSpor6.tr@SD" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w300/43020.jpeg" group-title="Diğer",Tabii Spor 6
 https://vbtob9hyq58eiophct5qctxr2.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-logo="https://bit.ly/3f86zet" group-title="Diğer",test3 Spor Kanalı kapalı
+#EXTVLCOPT:http-referrer=https://site-adresi.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://api.codetabs.com/v1/proxy/?quest=https://yayin-linki.m3u8
 #EXTINF:-1 tvg-id="TGRTEurope.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/TGRT_EU.png/960px-TGRT_EU.png" group-title="Diğer",TGRT Europe
 https://tv.ensonhaber.com/tv/tr/tgrteu/index.m3u8
 #EXTINF:-1 tvg-id="TimelessDiziChannel.pl@SD" tvg-logo="https://i.imgur.com/s3Sqd4L.png" group-title="Diğer",Timeless Dizi Channel (Poland)
 http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8
 #EXTINF:-1 tvg-id="TJKTV2.tr@SD" tvg-logo="https://i.imgur.com/3zHdkYG.png" group-title="Diğer",TJK TV 2
 https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",TOM & JERRY
+https://catcast.ismailturret.workers.dev/playercizgifilm-tomvejerry.m3u8
 #EXTINF:-1 tvg-id="ToprakTV.tr@SD" tvg-logo="https://i.imgur.com/JGnS0qs.png" group-title="Diğer",Toprak TV
 https://59cba4d34b678.streamlock.net/canlitv/topraktv/playlist.m3u8
 #EXTINF:-1 tvg-name="TR:A HABER UHD" tvg-logo="https://i0.wp.com/resim.yayins.com/haber/ahaber.png" group-title="Diğer",TR:A HABER
@@ -1028,6 +1116,8 @@ http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/7e405eb1-368e-464e-bf8e-3565c83
 https://tv-e-okul00.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTEBALise.tr@SD" tvg-logo="https://i.imgur.com/vj2L2L2.png" group-title="Diğer",TRT EBA Lise
 https://tv-e-okul02.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s83724_dark_360w_270h.png" group-title="Diğer",TRT1 test
+https://trt.daioncdn.net/trt-1/master.m3u8?app=clean
 #EXTINF:-1 tvg-id="TV38.tr@SD" tvg-logo="https://i.imgur.com/KDBXLqn.png" group-title="Diğer",TV 38
 https://59cba4d34b678.streamlock.net/live/tv38/playlist.m3u8
 #EXTINF:-1 tvg-id="TV42.tr@SD" tvg-logo="https://www.tv42.com.tr/logo.png" group-title="Diğer",TV 42
@@ -1037,5 +1127,13 @@ https://vdo.digitalbox.xyz:3986/live/unitvlive.m3u8
 #EXTINF:-1 tvg-id="VTV.tr@SD" tvg-logo="https://www.vtv.net.tr/uploads/logo/sitelogo_4.jpg" referrer="https://www.vtv.net.tr/" group-title="Diğer",V TV
 #EXTVLCOPT:http-referrer=https://www.vtv.net.tr/
 https://serdar.tiviplayer.com/player/m3u8/65aae71c9b93f0965aaed3a92660d98b/65aae71c9b93f0965aaed3a92660d98b.m3u8
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/uo3MBDwn3o32GJzFyClm7r1ierb.jpg" group-title="Diğer",Wasabi Asabi Polis 2001
+https://vs3.photour.org/v/az3664215h9p/master.m3u8
 #EXTINF:-1 tvg-id="WomanTV.tr@SD" tvg-logo="https://i.imgur.com/f2zGoV3.png" group-title="Diğer",Woman TV
 https://embedlp.becdn.net/womantv.m3u8
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00302.png" group-title="Diğer",Горная долина
+http://iptv.prosto.tv:7000/ch302/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",Катастрофы
+http://iptv.prosto.tv:7000/ch312/video.m3u8
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="Diğer",Лес
+http://iptv.prosto.tv:7000/ch330/video.m3u8

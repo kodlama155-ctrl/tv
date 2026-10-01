@@ -7,6 +7,10 @@ http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
 # SOURCE-UPDATED: 2026-09-22T09:53:02Z
 #EXTINF:-1 group-title="08-DİĞER",Bric ve Satranc TV (480p) [Not 24/7]
 http://139.162.182.79/live/test/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",rahatla 21
+http://185.57.68.33:8091/232/tracks-v1a1/index.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="KanalDDrama.tr@SD" tvg-logo="https://i.imgur.com/WIeZMKT.png" group-title="Entertainment",Kanal D Drama (1080p)
@@ -19,6 +23,18 @@ http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="ManasTV.kg@SD" tvg-logo="https://i.ibb.co/2Kvcj5Q/manas.jpg" group-title="Culture;Education;Entertainment",Manas TV (1080p)
 http://212.42.111.152:8080/hls/manas.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png" group-title="YEDEKLER",A HABER
+http://46.32.176.50/ahaber/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="A.SPOR.tr" tvg-name="A SPOR" tvg-logo="https://i.imgur.com/ZhkZzLf.png" group-title="GENEL",A Spor
+http://46.32.176.50/aspor/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="CNN.TÜRK.tr" tvg-name="CNN TÜRK" tvg-logo="https://i.ibb.co/LdzKYB1c/MG-6446.jpg" group-title="GENEL",CNN TÜRK
+http://46.32.176.50/cnnturk/playlist.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="https://i.imgur.com/gtUFmCD.png" group-title="TR · eglence",Med Muzik
@@ -27,14 +43,30 @@ http://54.36.110.140/live3/live3.m3u8
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="https://i.imgur.com/UBoBYUI.png" group-title="TR · eglence",BBC First Turkiye
 http://88.212.15.29/live/bbc_first/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/Ar9s9sZNclvmZN1l7GfIdnAQjh_ZkVhGMx6Dy5PHbq2keR9ijkPMFkk9VxZnIEnTf0MrXfSU4g" group-title="YEDEKLER",TRT1
+http://89.187.191.41/TRT-1-HD-TR/tracks-v1a1/mono.ts.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="" group-title="TR · eglence",Kanal D Drama
 http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/KanalD_principal_SRT/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="http://ginikoturkish.com/channels/logo/trt-4k.jpg" group-title="YEDEKLER",TRT 4K
+http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/4001/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://itv224234.tmp.tivibu.com.tr:6430/images/poster/20250801838833.png" group-title="YEDEKLER",Kanal D
+http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/6926/index.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TVDen.tr@SD" tvg-logo="https://i.imgur.com/Uhg95Ze.png" group-title="Undefined",TV Den (576p) [Not 24/7]
 http://canli.tvden.com.tr/hls/live.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/BrGNZJ4/showtv.png" group-title="YEDEKLER",Show Tv
+http://ciner.daioncdn.net/showtv/showtv.m3u8?app=showtv_web
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="TR · eglence",Star TV (Turkiye)
@@ -43,14 +75,154 @@ http://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26
 # SOURCE-UPDATED: 2026-09-18T05:42:18Z
 #EXTINF:-1 tvg-id="TRTBelgesel.tr" tvg-name="TRT Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Belgesel_logo_%282019-%29.svg/960px-TRT_Belgesel_logo_%282019-%29.svg.png" group-title="Belgesel",TRT Belgesel
 http://hls127.freeott.top:8080/TRT_BELGESEL_TR/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00302.png" group-title="7/24 Yayın",Горная долина
+http://iptv.prosto.tv:7000/ch302/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00563.jpg" group-title="7/24 Yayın",relax 11 Просто Украина
+http://iptv.prosto.tv:7000/ch303/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",relax 12 Дожди
+http://iptv.prosto.tv:7000/ch304/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",Катастрофы
+http://iptv.prosto.tv:7000/ch312/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",ANIMALS 4K
+http://iptv.prosto.tv:7000/ch316/video.m3u8?secret=191yc7ul
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00307.jpg" group-title="7/24 Yayın",relax 7 Relaxon
+http://iptv.prosto.tv:7000/ch317/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",relax 8
+http://iptv.prosto.tv:7000/ch318/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://zoostreamtv.com/wp-content/uploads/2023/10/cropped-5.png" group-title="7/24 Yayın",OO Stream
+http://iptv.prosto.tv:7000/ch319/video.m3u8?secret=7va3b5tb
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00318.png" group-title="7/24 Yayın",Stream City
+http://iptv.prosto.tv:7000/ch321/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",Stream CITY 4K
+http://iptv.prosto.tv:7000/ch321/video.m3u8?secret=191yc7ul
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00492.jpg" group-title="7/24 Yayın",relax 13 Комната RAHATLA
+http://iptv.prosto.tv:7000/ch328/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",Лес
+http://iptv.prosto.tv:7000/ch330/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",ŞÖMİNE
+http://iptv.prosto.tv:7000/ch331/tracks-v1a1/mono.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",relax 15 Огонь
+http://iptv.prosto.tv:7000/ch331/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00505.jpg" group-title="7/24 Yayın",relax 16 Пляж
+http://iptv.prosto.tv:7000/ch332/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00508.jpg" group-title="7/24 Yayın",relax 17 Тропики
+http://iptv.prosto.tv:7000/ch335/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00512.jpg" group-title="7/24 Yayın",relax 19 Река
+http://iptv.prosto.tv:7000/ch338/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00513.jpg" group-title="7/24 Yayın",relax 5 Джунгли
+http://iptv.prosto.tv:7000/ch339/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00514.jpg" group-title="7/24 Yayın",relax 1 Горы
+http://iptv.prosto.tv:7000/ch340/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00515.jpg" group-title="7/24 Yayın",relax 4 Озеро
+http://iptv.prosto.tv:7000/ch341/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00522.jpg" group-title="7/24 Yayın",relax 9 Пейзаж
+http://iptv.prosto.tv:7000/ch343/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00532.jpg" group-title="7/24 Yayın",relax 18 Рыбалка
+http://iptv.prosto.tv:7000/ch344/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00533.jpg" group-title="7/24 Yayın",relax 2 Бассейн
+http://iptv.prosto.tv:7000/ch345/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",relax 3
+http://iptv.prosto.tv:7000/ch346/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00537.jpg" group-title="7/24 Yayın",relax 20 Сад
+http://iptv.prosto.tv:7000/ch347/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://img.prosto.tv/storage/channel/logo/ch00555.jpg" group-title="7/24 Yayın",relax 14 Ночь
+http://iptv.prosto.tv:7000/ch349/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",relax 6 Парк
+http://iptv.prosto.tv:7000/ch350/video.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://americanaoutdoors.com/wp-content/uploads/2023/01/Pursuit-Channel-705x705.jpg" group-title="7/24 Yayın",PursuitUP
+http://linear-205.frequency.stream/dist/glewedtv/205/hls/master/playlist_1280x720.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="ImamHusseinTV5.iq@SD" tvg-logo="https://i.imgur.com/Oq2Ve7C.png" group-title="Religious",Imam Hussein TV 5 (720p)
 http://live.al-zahratv.com/live/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/kanal_d_logo.png" group-title="YEDEKLER",Kanal D
+http://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/kanal_d_logo.png" group-title="YEDEKLER",Kanal D
+http://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/track_4_1250/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/33860/logo_256.png" group-title="YEDEKLER",A Spor test
+http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_1080p.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DwFJ0vn/atv.png" group-title="YEDEKLER",Atv
+http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="" group-title="TR · cocuk",Minika Go
 http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8a/MinikaGO.png" group-title="GENEL",Minika Go
+http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago_720p.m3u8?tv=1
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="DISCOVERY.CHANNEL.tr" tvg-name="DISCOVERY CHANNEL" tvg-logo="https://itv224234.tmp.tivibu.com.tr:6430/images/poster/20250801838478.png" group-title="Belgesel",Dıscovery Channel DISCOVERY
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3H98G67KZ9HAS9/6861/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="http://ginikoturkish.com/channels/logo/trt-4k.jpg" group-title="YEDEKLER",TRT 4K
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/HW7DHBZQE4ZYG9/4001/index.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="https://i.imgur.com/3zHdkYG.png" group-title="TR · spor",TJK TV
@@ -75,6 +247,12 @@ http://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="TR · eglence",NOW TV
 http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://1.bp.blogspot.com/-bwERD1EYUso/XjHTaAko5tI/AAAAAAAAA-M/MpTKAtCF0rUt9cvpn-Chpk3PKth9aEWJwCLcBGAsYHQ/s200/33.png" group-title="SPOR",BeIN Sports 1 kapalı
+#EXTVLCOPT:http-referrer=https://trgoals1514.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://56r.d72577a9dd0ec17.sbs/yayin1.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="KurdistanTV.iq@SD" tvg-logo="https://i.imgur.com/mjQptpc.png" group-title="General",Kurdistan TV (720p) [Not 24/7]
@@ -88,14 +266,36 @@ https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
 #EXTINF:-1 tvg-id="TV100.tr" tvg-name="TV100" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/0/0f/TV100_logo.png/960px-TV100_logo.png" group-title="Ulusal",TV100
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 VLC/3.0.21 LibVLC/3.0.21
 https://7nyaler.streamhostingcdn.top/stream/46/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/kanal_d_logo.png" group-title="YEDEKLER",Kanal D
+https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/kanald/kanald.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="LoveNature.ca@SD" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="Outdoor",Love Nature (1080p)
 https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://bit.ly/3f86zet" group-title="SPOR",BeIN Sports vpn
+https://andro.226503.xyz/checklist/androstreamlivebiraz1.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://bit.ly/3f86zet" group-title="SPOR",BeIN Sports vpn
+https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://bit.ly/3f86zet" group-title="SPOR",BeIN Sports vpn
+https://andro.evrenesoglu57.click/checklist/androstreamlivebs1.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="AlanyaPostaTV.tr@SD" tvg-logo="https://i.imgur.com/a3w9eFe.png" group-title="General",Alanya Posta TV (1080p)
 https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://bit.ly/3f86zet" group-title="SPOR",test3 Spor Kanalı kapalı
+#EXTVLCOPT:http-referrer=https://site-adresi.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://api.codetabs.com/v1/proxy/?quest=https://yayin-linki.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TV264.tr@SD" tvg-logo="https://i.imgur.com/tudXdOZ.png" group-title="Undefined",TV 264 (1080p)
@@ -132,6 +332,22 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe46
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="FlashHaberTV.tr@SD" tvg-logo="" group-title="News",Flash Haber TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1mftzTP/beyaz-tv.png" group-title="YEDEKLER",Beyaz Tv
+https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://www.beyaztv.com.tr/images/logo.png" group-title="YEDEKLER",Beyaz Tv
+https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="BEYAZ.TV.tr" tvg-name="BEYAZ TV" tvg-logo="https://www.beyaztv.com.tr/images/logo.png" group-title="GENEL",BEYAZ TV
+https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_720p.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1mftzTP/beyaz-tv.png" group-title="YEDEKLER",Beyaz Tv
+https://beyaztv.daioncdn.net/beyaztv/beyaztv_1080p.m3u8?=&sid=5ycze02og8jy&app=fcd5c66b-da9d-44ba-a410-4f34805c397d&ce=3&dfp_paln=AQzzBGQEykY8pruWqyuh83klikIL7h25FdwAN4mmgSspaC8m84-Y2434d0YpNVWIIe7gMddQA0e9Gg8MG8rXu3-MN7H6rlbNdAZu5A-UCb2WAgWH1ntuJ5SLdQ97JAq39Ox4yLVSpEl6HNC13Q_PK3gvh8l4eGNshTbgS72gyNKLtP5WrNFfZHOO25C9Nl9dEywobD0QwBOjQh_n4RoVrqVjFQtDW1EW1zqiN8HBeRIfk_K3OqzJNjbxoweQvYcGzyEuXyfhPzdBCkIKI0l920hExvAyztM0P34jBPDP4uiH1Ymc75TKROpFNJDEIA8DrUSejmir866Cfdp7gp1KZD97pER0hM0cYY9QKb7TCGaWMGfwtng3Ewb08yzitrmxjp7Dcuy04rBO7yhs53ypdL91S-LWZld1C1Ypsn6B6xic-IZ6S9Wji0MxwAZTGYln5cREtvjm5fRsQtbKmluwnyxPRv0GlPMbWWtd61jO3UrZ14YZFB8WkeazBS_VKB6NbML4cvPT4UVDkgATZ43UlI-nQSfBUehvbay3Mmf3RzdOKMAioRUHNXiDmezIqsUsieEBerx3KQ05dSUunbNx2iiOf8XFXQfOaYKfFheWULb69ph6KT4bq38twpjxuq36A12spAgnehyNTvSSsvt6GG59DAsjHMLX6z1QQEjSY2Lb-ioHukaK-Ht8S3dTUqnGKQWkFXcjS7G8KCj7_M0aFy97txYRFxQvpICpuZ4Yk2b1uXP2lEY_iqJh9MxPajNAroumzJ_jwM-AwXkPwwb8i28LMOoo_Y0DUdJfcyvxHQCGyjffBgCuUcsILznoJAkz9fDhtqS8AqmRZxkmMJDhUGTyCghx5IqCt21ZCENwNAPB-_rTgEWieDPmHjzr0lUFYb5b6oIle1FXeAvtmuGQ7V8V9GWquktZEfvmxfXweCqVi4AOAuZtjxfvQ-WzmuLwAzTuL-hYeE7iQai7ev06h9WpRbzxMfg-gvn_HzxxkegJk20YjnR9NqBjCJyssEtlULa_ZLbvG04d5BT9TJ3cAR2mEOcfhEbFQMgSvxc4-TnMTleVgNl2Xz_7WlRMRpI.
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="EdessaTV.tr@SD" tvg-logo="https://i.imgur.com/rhU6j9I.png" group-title="Entertainment",Edessa TV (1080p)
@@ -144,6 +360,34 @@ https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TGRTHaber.tr@SD" tvg-logo="https://i.imgur.com/PrxwKDw.png" group-title="News",TGRT Haber (720p)
 https://canli.tgrthaber.com/tgrt.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="CİNE1" tvg-name="CİNE1" tvg-logo="https://cine1.com.tr/images/cine1tvas.png" group-title="GENEL",CİNE1
+https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="CİNE1" tvg-name="CİNE1" tvg-logo="https://cine1.com.tr/images/cine1tvas.png" group-title="YEDEKLER",CİNE1
+https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8?autoplay=1
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",CAILLOU
+https://catcast.ismailturret.workers.dev/fanatikkidscaillou.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.imgur.com/30HzeQe.png" group-title="Belgesel",Ed Stafford
+https://catcast.ismailturret.workers.dev/fanatikprimeEdStafford.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.imgur.com/30HzeQe.png" group-title="SİNEMALAR",SALON PREMIUM 2
+https://catcast.ismailturret.workers.dev/playercinema-premium2.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",TOM & JERRY
+https://catcast.ismailturret.workers.dev/playercizgifilm-tomvejerry.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",TOM & JERRY
+https://catcast.ismailturret.workers.dev/tomandjerry.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="ATVAlanya.tr@SD" tvg-logo="https://i.imgur.com/bUwarR0.png" group-title="General",ATV Alanya (1080p)
@@ -180,10 +424,34 @@ https://ciner-live.daioncdn.net/bloomberght/bloomberght.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="HTSporTV.tr@SD" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="Sports",HTSpor TV (1080p)
 https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/BrGNZJ4/showtv.png" group-title="YEDEKLER",Show Tv
+https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/BrGNZJ4/showtv.png" group-title="YEDEKLER",Show Tv
+https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&st=RBzhSuGauna0OGld-DJUVA&e=1664766175&tv=1
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://bit.ly/3f86zet" group-title="SPOR",BeIN Sports vpn
+https://corestream.ardastream.live//beintv/tracks-v1a1/mono.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-09-18T05:42:18Z
 #EXTINF:-1 tvg-id="TRTSpor.tr" tvg-name="TRT Spor" tvg-logo="https://i.imgur.com/6tv0zxh.png" group-title="Spor",TRT Spor
 https://corestream.siteyaptim.live/trt-spor/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/kanal_d_logo.png" group-title="YEDEKLER",Kanal D
+https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=da2109ea-5dfe-4107-89ab-23593336ed61
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/kanal_d_logo.png" group-title="YEDEKLER",Kanal D
+https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/kanal_d_logo.png" group-title="YEDEKLER",Kanal D
+https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&amp;ce=3
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="KanalD.tr@SD" tvg-logo="https://i.imgur.com/9o1atM6.png" group-title="General",Kanal D (Turkiye) (1080p)
@@ -196,10 +464,18 @@ https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="NTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/NTV_%28Turkey%29_logo.svg/960px-NTV_%28Turkey%29_logo.svg.png" group-title="General",NTV (Turkiye)
 https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTODT1C4SB518JljOlb7etd8VRmpGQJSyiFVw&s" group-title="YEDEKLER",star tv
+https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="StarTV.tr@SD" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="Undefined",Star TV (Turkiye) (720p)
 https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://yt3.ggpht.com/7uTWS1ZIhWMlKkvEKCCdfhAG9gf9PmkZ8RTz-6Zxmxlzfr0dN6uM6iaoZWNHz3_AQ0AggW3z5w" group-title="YEDEKLER",Tlc
+https://dogus.daioncdn.net/tlc/tlc.m3u8?app=1aca0aa1-06e3-41ff-a8e5-38d7df475469
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="DostTV.tr@SD" tvg-logo="https://dosttv.com/wp-content/uploads/2022/02/dost_logo.png" group-title="Religious",Dost TV (576p)
@@ -264,6 +540,14 @@ https://edge1.socialsmart.tv/tv1/bant1/playlist.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TV52.tr@SD" tvg-logo="https://i.imgur.com/k4R5CzO.png" group-title="Undefined",TV 52 (720p) [Not 24/7]
 https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/22926/logo_256_1707397437.png" group-title="GENEL",TV 100
+https://ensonhaber-live.ercdn.net/tv100/tv100.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="24" tvg-name="24" tvg-logo="https://cdn.technettv.com/channel/29534/logo_256_1733832490.jpg" group-title="YEDEKLER",24 TV
+https://ensonhaber-live.ercdn.net/tv24/tv24.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="DiyanetTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Diyanet_TV_logo.svg/960px-Diyanet_TV_logo.svg.png" group-title="Religious",Diyanet TV (1080p)
@@ -292,6 +576,18 @@ https://hls.4utv.live/hls/stream.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="CNBCe.tr@SD" tvg-logo="https://s.cnbce.com/dist/images/logo-nav.png" group-title="Business;Series",CNBC-e
 https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://www.sdmtv.com.tr/images/sdm-tv-sinema-keyfi.png" group-title="SİNEMALAR",SDM Sinema
+https://host.onlineradyotv.net:8081/sdmtv/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="Sinema 1" tvg-name="Sinema 1" tvg-logo="https://e7.pngegg.com/pngimages/879/420/png-clipart-film-video-production-television-graphy-cine-miscellaneous-label-thumbnail.png" group-title="SİNEMALAR",Sinema 1
+https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",relax 10
+https://iptv.prosto.tv/ch336/video.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-09-18T05:42:18Z
 #EXTINF:-1 tvg-id="Kanal7.tr" tvg-name="Kanal 7" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Ulusal",Kanal 7
@@ -328,6 +624,10 @@ https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="CiftciTV.tr@SD" tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="Culture;Education",Ciftci TV (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="http://imgss.ct.ws/denizpostasi.png" group-title="SİNEMALAR",Deniz Postası
+https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/chunks.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="DenizPostasiTV.tr@SD" tvg-logo="https://i.imgur.com/Mm8hdfx.png" group-title="General",Deniz Postasi TV (720p) [Not 24/7]
@@ -428,6 +728,10 @@ https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TempoTV.tr@SD" tvg-logo="https://i.imgur.com/tZpx32y.png" group-title="Undefined",Tempo TV (720p)
 https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/sRNHKjS/tivi622.png" group-title="SİNEMALAR",Tivi 6
+https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/chunks.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="Tivi6.tr@SD" tvg-logo="https://i.imgur.com/Mbi0jbz.png" group-title="General",Tivi 6 (720p)
@@ -456,6 +760,14 @@ https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="EuroD.tr@SD" tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="General",Euro D (720p)
 https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://itv224234.tmp.tivibu.com.tr:6430/images/poster/20250801838833.png" group-title="YEDEKLER",Kanal D
+https://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/kanal_d_logo.png" group-title="YEDEKLER",Kanal D
+https://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/track_4_1250/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="YOLTV.de@SD" tvg-logo="https://i.imgur.com/rTBX6lS.png" group-title="General",YOL TV
@@ -556,10 +868,22 @@ https://nord.ayakkabiparti.lol/natgeowild/index.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="ViasatHistory.tr@SD" tvg-logo="https://i.imgur.com/wRP9XA7.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Documentary",Viasat History (Turkiye) (720p)
 https://nord.ayakkabiparti.lol/viasathistory/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/bnBf3_3Nw-sQkrjyj0U1Gb68Od0em3yzm9_VzgHqyxPvYyP069gRuRW-QdLI5qJ8QFl3m-y6Mw" group-title="YEDEKLER",TRT Belgesel
+https://ornek1.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="VavTV.tr@SD" tvg-logo="https://i.imgur.com/jw0gB8L.png" group-title="Undefined",Vav TV
 https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://itv224234.tmp.tivibu.com.tr:6430/images/poster/20250801839204.png" group-title="YEDEKLER",tv8.5
+https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/BrGNZJ4/showtv.png" group-title="YEDEKLER",Show Tv
+https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="A2TV.tr@SD" tvg-logo="https://iatv.tmgrup.com.tr/site/v2/a2tv/i/a2tv-logo.png" group-title="General",A2TV (1080p)
@@ -572,14 +896,42 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="ASpor.tr@SD" tvg-logo="https://i.imgur.com/ZhkZzLf.png" group-title="Sports",A Spor SD (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="A Spor" tvg-name="A Spor" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/archive/e/e9/20140920094552%21A_Spor_logosu.png" group-title="YEDEKLER",A Spor Yedek
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_1080p.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/33860/logo_256.png" group-title="YEDEKLER",A Spor
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_480p.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/33860/logo_256.png" group-title="YEDEKLER",A Spor
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_720p.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="ATV" tvg-name="ATV" tvg-logo="https://i.ibb.co/DwFJ0vn/atv.png" group-title="YEDEKLER",ATV
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
 # SOURCE: github:akifdepoozel-crypto/car-tv-turkiye/CAR_TV_Turkiye_Tum_130_Calisan_Final.m3u
 # SOURCE-UPDATED: 2026-09-22T09:53:02Z
 #EXTINF:-1 group-title="02-ULUSAL",ATV (Turkiye) (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DwFJ0vn/atv.png" group-title="YEDEKLER",Atv
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_480p.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="ATV.tr" tvg-name="ATV" tvg-logo="https://i.ibb.co/n1SCYqN/atv.png" group-title="GENEL",ATV
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_720p.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="MinikaGo.tr@SD" tvg-logo="https://i.imgur.com/qIoipDq.png" group-title="Kids",Minika Go (720p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8a/MinikaGO.png" group-title="YEDEKLER",Minika Go
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago_480p.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="MinikaCocuk.tr@SD" tvg-logo="https://i.imgur.com/VCywMTv.png" group-title="Kids",Minika Cocuk (720p)
@@ -588,14 +940,42 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="MCTV.de@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/c/ca/MC_TV_logosu.png" group-title="Entertainment",MC TV (720p)
 https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&output=playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.hizliresim.com/i21k4te.png" group-title="7/24 Yayın",rahatla 22 Relax baraza
+https://rtmp.streams.ovh:1936/barazarelax/barazarelax/chunklist_w63326066.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.imgur.com/g8nOhhj.png" group-title="SİNEMALAR",FX
+https://saran-live.ercdn.net/fx/index.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="https://i.imgur.com/GgEeTNr.png" group-title="TR · haber",Almahriah TV
 https://starmenajo.com/hls/almahriah/index.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://avatars.mds.yandex.net/get-pdb/3946622/f25f8a24-de20-4c9e-8f05-98db50810075/orig" group-title="7/24 Yayın",rahatla 23
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=6195
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="IlkeTV.tr@HD" tvg-logo="https://ilketv.com.tr/wp-content/uploads/2024/06/logo.png" group-title="Undefined",Ilke TV (1080p)
 https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/33860/logo_256.png" group-title="YEDEKLER",A Spor
+https://streams.uzunmuhalefet.com/stream/0d7bcd25-1301-4ebf-bc8f-ccb7dec31577.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://yt3.ggpht.com/6_jhTr2aolmOP8qNq24ReRalaiu8LNSX-OD4fh9wWcIALv67la_kYKHDe-2QjmGJ3GqH8UULVQ" group-title="YEDEKLER",TRT Çocuk
+https://streams.uzunmuhalefet.com/stream/6ad16f63-33f5-45bd-9742-1b98a71ce6ed.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Cm1kp8f/sat7turk.png" group-title="GENEL",SAT 7 TÜRK
+https://svs.itworkscdn.net/sat7turklive/sat7turk.smil/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DwFJ0vn/atv.png" group-title="YEDEKLER",Atv
+https://sweet-truth-729d.han686314.workers.dev/?url=https://helga.iptv2022.com/sh/ATV_tr/index.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="KanalHayat.tr@SD" tvg-logo="https://i.imgur.com/eikZj19.png" group-title="General",Kanal Hayat (1080p)
@@ -604,14 +984,58 @@ https://tbn02a.ltnschedule.com/hls/nx21i.m3u8
 # SOURCE-UPDATED: 2026-09-22T09:53:02Z
 #EXTINF:-1 group-title="03-HABER",Tele 1 (1080p)
 https://tele1-live.ercdn.net/tele1/tele1.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://bit.ly/3f86zet" group-title="SPOR",BeIN Sports vpn
+https://tinyurl.com/Fiat-linea-multijet/yula/ceydub1.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TJKTV.tr@SD" tvg-logo="https://i.imgur.com/3zHdkYG.png" group-title="Sports",TJK TV (1080p)
 https://tjktv-live.tjk.org/tjktv.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png" group-title="YEDEKLER",A HABER
+https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s83724_dark_360w_270h.png" group-title="YEDEKLER",TRT1 test
+https://trt.daioncdn.net/trt-1/master.m3u8?app=clean
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/Ar9s9sZNclvmZN1l7GfIdnAQjh_ZkVhGMx6Dy5PHbq2keR9ijkPMFkk9VxZnIEnTf0MrXfSU4g" group-title="YEDEKLER",TRT1
+https://trt.daioncdn.net/trt-1/master.m3u8?app=e435840d-2653-45a3-afef-082d4ea998f3
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/Ar9s9sZNclvmZN1l7GfIdnAQjh_ZkVhGMx6Dy5PHbq2keR9ijkPMFkk9VxZnIEnTf0MrXfSU4g" group-title="YEDEKLER",TRT1
+https://trt.daioncdn.net/trt-1/master.m3u8?app=ed3904e8-737b-4a5e-856a-1b0d7a0a94e2
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/Ar9s9sZNclvmZN1l7GfIdnAQjh_ZkVhGMx6Dy5PHbq2keR9ijkPMFkk9VxZnIEnTf0MrXfSU4g" group-title="YEDEKLER",TRT1
+https://trt.daioncdn.net/trt-1/master.m3u8?app=web
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/19958/logo_256_1699961525.png" group-title="YEDEKLER",TRT1 test
+https://trt.daioncdn.net/trt-1/master_1080p.m3u8?&sid=7lt9umlk1uqx&app=ed3904e8-737b-4a5e-856a-1b0d7a0a94e2&ce=2
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s83724_dark_360w_270h.png" group-title="YEDEKLER",TRT1
+https://trt.daioncdn.net/trt-1/master_1080p.m3u8?app=web
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="TRT.1.tr" tvg-name="TRT 1" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/10660277.png" group-title="YEDEKLER",TRT1
+https://trt.daioncdn.net/trt-1/master_720p.m3u8?&sid=6skm73ev5hwn&app=ed3904e8-737b-4a5e-856a-1b0d7a0a94e2&ce=2
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="TRT.1.tr" tvg-name="TRT 1" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/10660277.png" group-title="GENEL",TRT1
+https://trt.daioncdn.net/trt-1/master_720p.m3u8?app=web
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRTSporYildiz.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg/960px-TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg.png" group-title="Sports",TRT Spor Yildiz (1440p) [Geo-blocked]
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="TRT.SPOR.tr" tvg-name="TRT SPOR" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/13687983.png" group-title="GENEL",TRT SPOR
+https://trt.daioncdn.net/trtspor/master_480p.m3u8?platform=trtspor&sid=6sknaoigvegn&app=9b65474e-8197-4899-aabb-321fcf6dd9eb&ce=2
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="PersianaTurkiye.fr@SD" tvg-logo="" group-title="Entertainment",Persiana Turkiye
@@ -620,10 +1044,18 @@ https://turkhls.persiana.live/hls/stream.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="24TV.tr@SD" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="News",24 TV (720p)
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="24.TV.tr" tvg-name="24 TV" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/archive/e/e9/20091218163738%21Kanal_24.png" group-title="GENEL",24 TV
+https://turkmedya-live.ercdn.net/tv24/tv24_720p.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="360.tr@SD" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="News",360 (720p) [Not 24/7]
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="360.tr" tvg-name="360" tvg-logo="https://i.ibb.co/s3gJCGL/360.png" group-title="GENEL",360
+https://turkmedya-live.ercdn.net/tv360/tv360_720p.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TV4.tr@SD" tvg-logo="https://i.imgur.com/UpsQsbd.png" group-title="Undefined",TV 4 (720p)
@@ -640,6 +1072,10 @@ https://tv-e-okul01.medya.trt.com.tr/master.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRTEBALise.tr@SD" tvg-logo="https://i.imgur.com/vj2L2L2.png" group-title="Education",TRT EBA Lise (720p)
 https://tv-e-okul02.medya.trt.com.tr/master.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/Ar9s9sZNclvmZN1l7GfIdnAQjh_ZkVhGMx6Dy5PHbq2keR9ijkPMFkk9VxZnIEnTf0MrXfSU4g" group-title="YEDEKLER",TRT1
+https://tv-trt1-esdai.medya.trt.com.tr/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRT1.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/960px-TRT_1_logo_%282021-%29.svg.png" group-title="Undefined",TRT 1 (1440p)
@@ -660,10 +1096,22 @@ https://tv-trtarabi.medya.trt.com.tr/master.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRTAvaz.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TRT_Avaz_logo.svg/960px-TRT_Avaz_logo.svg.png" group-title="Undefined",TRT Avaz (720p)
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="TRT.BELGESEL.tr" tvg-name="TRT BELGESEL" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/8114410.png" group-title="GENEL",TRT BELGESEL
+https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="TRT BELGESEL" tvg-name="TRT BELGESEL" tvg-logo="https://cdn.technettv.com/channel/20609/logo_256_1699961655.png" group-title="YEDEKLER",TRT BELGESEL
+https://tv-trtbelgesel.medya.trt.com.tr/master_720.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRTCocuk.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Kids",TRT Cocuk (1440p)
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="TRT.ÇOCUK.tr" tvg-name="TRT ÇOCUK" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/13060701.png" group-title="GENEL",TRT ÇOCUK
+https://tv-trtcocuk.medya.trt.com.tr/master_720.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRTDiyanetCocuk.tr@SD" tvg-logo="https://i.imgur.com/8PmXz9t.png" group-title="Kids",TRT Diyanet Cocuk (720p)
@@ -676,6 +1124,10 @@ https://tv-trtgenc.medya.trt.com.tr/master.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRTHaber.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png" group-title="News",TRT Haber (720p)
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="TRT.HABER.tr" tvg-name="TRT HABER" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/8971102.png" group-title="GENEL",TRT HABER
+https://tv-trthaber.medya.trt.com.tr/master_720.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
 # SOURCE-UPDATED: 2026-09-28T10:44:42Z
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/TRT_Kurd%C3%AE_logo.svg/960px-TRT_Kurd%C3%AE_logo.svg.png" group-title="TR · eglence",TRT Kurdi
@@ -684,6 +1136,14 @@ https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-logo="https://i.imgur.com/JgUzRH8.png" group-title="Music",TRT Muzik (720p)
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/20770/logo_256_1699963394.png" group-title="YEDEKLER",TRT Spor
+https://tv-trtspor1.medya.trt.com.tr/master.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://cdn.technettv.com/channel/20770/logo_256_1699963394.png" group-title="YEDEKLER",TRT Spor
+https://tv-trtspor1.medya.trt.com.tr/master_720.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TRTTurk.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/TRT_T%C3%BCrk_logo.svg/960px-TRT_T%C3%BCrk_logo.svg.png" group-title="Undefined",TRT Turk (720p)
@@ -704,10 +1164,26 @@ https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="HaberturkTV.tr@SD" tvg-logo="https://i.imgur.com/6Tw3rUp.png" group-title="News",Haberturk TV (720p) [Not 24/7]
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="http://imgss.ct.ws/tv100hd.png" group-title="YEDEKLER",TV 100
+https://tv.ensonhaber.com/tv100/tv100.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-id="24" tvg-name="24" tvg-logo="https://yt3.ggpht.com/gWxG3v8R74BMB5GWgX0v9HoFKmKLtTl533CgLfoHcRfRXQPTTcAYgvrnplkwqOmq4GZnmOLkbw" group-title="YEDEKLER",24 TV
+https://tv.ensonhaber.com/tv24/tv24.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="TV8.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png" group-title="General",TV8 (Turkiye) (1080p)
 https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/tr/6/68/Tv8_Yeni_Logo.png" group-title="YEDEKLER",tv8
+https://tv8.daioncdn.net/tv8/tv8_1080p.m3u8?&sid=7gh1m93ubvgf&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://itv224234.tmp.tivibu.com.tr:6430/images/poster/20250801839204.png" group-title="YEDEKLER",tv8.5
+https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web
 # SOURCE: github:akifdepoozel-crypto/car-tv-turkiye/CAR_TV_Turkiye_Tum_130_Calisan_Final.m3u
 # SOURCE-UPDATED: 2026-09-22T09:53:02Z
 #EXTINF:-1 group-title="03-HABER",TVNET (Turkiye) (1080p)
@@ -720,6 +1196,10 @@ https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="MeltemTV.tr@SD" tvg-logo="https://i.imgur.com/C3m6w5S.png" group-title="General",Meltem TV (1080p)
 https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
+# SOURCE: github:Yusufdkci/iptv/liste.m3u
+# SOURCE-UPDATED: 2026-09-27T23:08:19Z
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/uo3MBDwn3o32GJzFyClm7r1ierb.jpg" group-title="Filmler",Wasabi Asabi Polis 2001
+https://vs3.photour.org/v/az3664215h9p/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
 # SOURCE-UPDATED: 2026-09-30T09:11:24Z
 #EXTINF:-1 tvg-id="ErzurumWebTV.tr@SD" tvg-logo="https://i.imgur.com/HF7N4Li.png" group-title="General",Erzurum Web TV (720p)
