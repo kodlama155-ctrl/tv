@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-01T01:55:16.180238+00:00",
+  "updated_at_utc": "2026-10-01T02:29:41.440132+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -260,6 +260,17 @@
       "verified_rate": 100.0
     },
     {
+      "domain": "c3921155.edmonst.net",
+      "score": 78.57,
+      "samples": 2,
+      "verified": 2,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    {
       "domain": "canliyayin.cine1.com.tr",
       "score": 78.57,
       "samples": 2,
@@ -291,17 +302,6 @@
       "dead": 0,
       "drm": 0,
       "verified_rate": 100.0
-    },
-    {
-      "domain": "host.onlineradyotv.net",
-      "score": 78.57,
-      "samples": 2,
-      "verified": 2,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
     }
   ],
   "channel_name_sources": {
@@ -312,22 +312,22 @@
   },
   "stream_validation_statuses": {
     "restricted": 410,
-    "unknown": 143,
-    "verified": 301,
+    "unknown": 142,
+    "verified": 302,
     "dead": 27
   },
-  "verified_entries": 217,
+  "verified_entries": 216,
   "restricted_entries": 294,
-  "unknown_entries": 59,
+  "unknown_entries": 60,
   "unknown_retry_candidates": 32,
-  "unknown_retry_skipped_verified_sibling": 111,
+  "unknown_retry_skipped_verified_sibling": 110,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 3,
   "unknown_retry_workers": 12,
   "dead_entries": 16,
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 570,
-  "turkey_device_entries": 243,
+  "turkey_device_entries": 242,
   "turkey_device_geo_fallbacks": 10,
   "turkey_device_restricted_fallbacks": 22,
   "turkey_device_ephemeral_overrides": 2,
@@ -345,7 +345,7 @@
     "Belgesel": 4,
     "Dini": 10,
     "Müzik": 18,
-    "Yerel": 52,
+    "Yerel": 51,
     "Uluslararası": 23,
     "Diğer": 39
   },
@@ -371,22 +371,8 @@
     "Belgesel": 3,
     "Dini": 0,
     "Müzik": 1,
-    "Yerel": 0,
+    "Yerel": 1,
     "Uluslararası": 2,
     "Diğer": 45
-  },
-  "last_fast_rebuild_utc": "2026-10-01T02:25:01.860877+00:00",
-  "fast_rebuild_categories": {
-    "Ulusal": 24,
-    "Haber": 37,
-    "Spor": 11,
-    "Film & Dizi": 6,
-    "Çocuk": 9,
-    "Belgesel": 12,
-    "Dini": 10,
-    "Müzik": 19,
-    "Yerel": 51,
-    "Uluslararası": 25,
-    "Diğer": 40
   }
 }

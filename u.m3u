@@ -1,13 +1,13 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="TYTTurk.tr@SD" tvg-logo="https://tytturk.com/upload/tyt-logo.png" group-title="Ulusal",TYT Turk
 https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
-#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
+#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/TRT_4K.svg/960px-TRT_4K.svg.png",TRT 4K
 https://ch.iptvmate.net/ebba59f748ffa980b43912d9354e6905.m3u8
 #EXTINF:-1 tvg-id="AkitTV.tr@HD" tvg-logo="https://i.ibb.co/MBwzD2b/akit-tv.png" group-title="Haber",AKİT TV
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
 #EXTINF:-1 tvg-id="GZT.tr" group-title="Haber" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/GZT_logo.svg/960px-GZT_logo.svg.png",GZT
 https://mn-nl.mncdn.com/gzttv/gzttv/playlist.m3u8
-#EXTINF:-1 tvg-id="KRT.tr" group-title="Haber",KRT TV
+#EXTINF:-1 tvg-id="KRT.tr" group-title="Haber" tvg-logo="https://i.imgur.com/9ZKqdQJ.png",KRT TV
 #EXTVLCOPT:http-user-agent=Lavf53.32.100
 https://krtdvr.blutv.com/blutv_krt_live_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber" tvg-logo="https://www.evrensel.net/upload/dosya/231375.jpg",Sözcü TV
@@ -28,8 +28,10 @@ https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
 #EXTVLCOPT:http-referrer=https://www.yabantv.com/broadcast/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
-#EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik",Dream TV
+#EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik" tvg-logo="https://i.imgur.com/4hH7nZs.png",Dream TV
 https://mn-nl.mncdn.com/blutv_dream/smil:dream_hd.smil/chunklist.m3u8
+#EXTINF:-1 tvg-id="Haber61TV.tr@SD" tvg-logo="https://i.imgur.com/2a2XUKl.png" group-title="Yerel",Haber61 TV
+https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
 #EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/kb165Ot.png",Euro Star
 https://xrklj56s.rocketcdn.com/eurostar.stream_720p/chunklist.m3u8
 #EXTINF:-1 tvg-id="FinestTV.de@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/1uoP10V.png",Finest TV
