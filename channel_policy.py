@@ -212,6 +212,45 @@ def tvg_logo(meta: str) -> str:
     return m.group(1).strip() if m else ""
 
 
+DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
+    "trt2": "https://i.imgur.com/iOCQdyD.png",
+    "trt2tv": "https://i.imgur.com/iOCQdyD.png",
+    "trt4k": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/TRT_4K.svg/960px-TRT_4K.svg.png",
+    "teve2": "https://i.imgur.com/rsoSLih.png",
+    "tlc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
+    "tlctv": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
+    "dmax": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png",
+    "dmaxtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png",
+    "tele1": "https://i.imgur.com/b9JcIqF.png",
+    "tele1tv": "https://i.imgur.com/b9JcIqF.png",
+    "krt": "https://i.imgur.com/9ZKqdQJ.png",
+    "krttv": "https://i.imgur.com/9ZKqdQJ.png",
+    "ulusalkanal": "https://i.imgur.com/EwSg612.png",
+    "tv5": "https://i.imgur.com/Oq2Ve7C.png",
+    "liderhabertv": "https://i.imgur.com/5B42KwY.png",
+    "liderhaber": "https://i.imgur.com/5B42KwY.png",
+    "meltemtv": "https://i.imgur.com/C3m6w5S.png",
+    "showmax": "https://i.imgur.com/456FWA7.png",
+    "vavtv": "https://i.imgur.com/jw0gB8L.png",
+    "fmtv": "https://i.imgur.com/nCzpHWM.png",
+    "gzt": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/GZT_logo.svg/960px-GZT_logo.svg.png",
+    "eurostar": "https://i.imgur.com/kb165Ot.png",
+    "kanal7avrupa": "https://i.imgur.com/wlfyj5l.png",
+    "dreamtv": "https://i.imgur.com/4hH7nZs.png",
+    "number1turktv": "https://i.imgur.com/02cDIBi.png",
+    "number1turk": "https://i.imgur.com/02cDIBi.png",
+    "number1": "https://i.imgur.com/02cDIBi.png",
+    "tgrteu": "https://i.imgur.com/L13Q8n9.png",
+    "finesttv": "https://i.imgur.com/1uoP10V.png",
+    "tmbtv": "https://i.imgur.com/G53gTsp.png",
+    "fashiononetv": "https://i.imgur.com/8QpZb7x.png",
+    "bikanal": "https://i.imgur.com/XqTj9M3.png",
+    "kanal32": "https://i.imgur.com/W2oN0qf.png",
+    "grandcinema": "https://i.imgur.com/xO7uM9c.png",
+    "persianaturkiye": "https://i.imgur.com/7p3j0hF.png",
+}
+
+
 def _set_meta_attr(meta: str, attr: str, value: str) -> str:
     if not value:
         return meta
@@ -274,6 +313,14 @@ def normalize_meta(meta: str) -> tuple[str, str, str]:
     # Collapse duplicate group-title attributes left by malformed source metadata.
     head = re.sub(r'\s+group-title="[^"]*"', "", head, flags=re.I)
     head = head.rstrip() + f' group-title="{category}"'
+
+    current_logo = tvg_logo(head)
+    if not current_logo:
+        key = channel_key(meta, label)
+        default_logo = DEFAULT_CHANNEL_LOGOS.get(key)
+        if default_logo:
+            head = re.sub(r'\s+tvg-logo="[^"]*"', "", head, flags=re.I)
+            head = head.rstrip() + f' tvg-logo="{default_logo}"'
 
     return f"{head},{label}", category, label
 
@@ -452,6 +499,16 @@ def select_representatives(items: list[dict]) -> list[dict]:
                         logo,
                     )
                     break
+
+        if not tvg_logo(copy.get("meta", "")):
+            key = channel_key(copy.get("meta", ""), copy.get("name", ""))
+            default_logo = DEFAULT_CHANNEL_LOGOS.get(key)
+            if default_logo:
+                copy["meta"] = _set_meta_attr(
+                    copy.get("meta", ""),
+                    "tvg-logo",
+                    default_logo,
+                )
 
         selected.append(copy)
 

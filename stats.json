@@ -374,5 +374,19 @@
     "Yerel": 0,
     "Uluslararası": 2,
     "Diğer": 45
+  },
+  "last_fast_rebuild_utc": "2026-10-01T02:25:01.860877+00:00",
+  "fast_rebuild_categories": {
+    "Ulusal": 24,
+    "Haber": 37,
+    "Spor": 11,
+    "Film & Dizi": 6,
+    "Çocuk": 9,
+    "Belgesel": 12,
+    "Dini": 10,
+    "Müzik": 19,
+    "Yerel": 51,
+    "Uluslararası": 25,
+    "Diğer": 40
   }
 }
