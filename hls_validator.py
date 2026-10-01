@@ -334,7 +334,7 @@ def _verify_media(
         "vod": info["vod"],
     }
 
-def validate_hls(
+def _validate_hls_attempt(
     url: str,
     user_agent: str | None = None,
     referrer: str | None = None,
@@ -452,3 +452,21 @@ def validate_hls(
         "reason": "; ".join(reason for _, reason in failures[:3]) or "no playable variant",
         "variants": len(variants),
     }
+
+
+VLC_FALLBACK_UA = "VLC/3.0.21 LibVLC/3.0.21"
+
+
+def validate_hls(
+    url: str,
+    user_agent: str | None = None,
+    referrer: str | None = None,
+):
+    result = _validate_hls_attempt(url, user_agent=user_agent, referrer=referrer)
+    if result.get("status") == "unknown" and not user_agent:
+        # Paced retry with VLC player UA for IPTV/streaming servers that throttle standard browser headers
+        vlc_result = _validate_hls_attempt(url, user_agent=VLC_FALLBACK_UA, referrer=referrer)
+        if vlc_result.get("status") == "verified":
+            vlc_result["fallback_user_agent"] = VLC_FALLBACK_UA
+            return vlc_result
+    return result

@@ -109,12 +109,21 @@ def main():
     initial = probe_many(rows, MAX_WORKERS)
 
     initial_dead = [row for row in initial if row["status"] == "dead"]
+    initial_unknown = [row for row in initial if row["status"] == "unknown"]
     retry_by_url = {}
 
     if initial_dead:
         time.sleep(DEAD_RETRY_DELAY_SECONDS)
         retried = probe_many(initial_dead, RETRY_WORKERS)
-        retry_by_url = {row["url"]: row for row in retried}
+        retry_by_url.update({row["url"]: row for row in retried})
+
+    if initial_unknown:
+        time.sleep(1)
+        # Calm, paced retry (workers=4) for servers that rate-limit parallel bursts
+        unknown_retried = probe_many(initial_unknown, workers=4)
+        for row in unknown_retried:
+            if row.get("status") == "verified":
+                retry_by_url[row["url"]] = row
 
     final_rows = []
     targets = []
