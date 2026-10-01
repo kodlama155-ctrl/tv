@@ -977,10 +977,7 @@ def main():
 
         include = (
             status == "verified"
-            or (
-                status == "restricted"
-                and item.get("geo_restricted")
-            )
+            or status == "restricted"
             or (
                 status in {"restricted", "unknown"}
                 and has_device_fallback
@@ -1119,7 +1116,7 @@ def main():
         "all_non_dead_non_drm_entries": len(all_candidates),
         "turkey_device_entries": len(turkey_candidates),
         "turkey_device_geo_fallbacks": sum(
-            1 for item in turkey_candidates if item.get("geo_restricted")
+            1 for item in turkey_candidates if item.get("status") == "restricted" or item.get("geo_restricted")
         ),
         "turkey_device_restricted_fallbacks": sum(
             1

@@ -16,6 +16,14 @@ https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
 https://tv-trt3.live.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="SportsTV.tr@SD" tvg-logo="https://i.imgur.com/tGTVcVe.jpg" group-title="Spor",Sports TV
 https://live.sportstv.com.tr/hls/low/sportstv.m3u8
+#EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber
+https://ythls.kekikakademi.org/youtube/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
+#EXTINF:-1 tvg-id="NationalGeographic.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Belgesel",National Geographic
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+https://nord.ayakkabiparti.lol/natgeo/index.m3u8
+#EXTINF:-1 tvg-id="NationalGeographicWild.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Belgesel",National Geographic Wild
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+https://nord.ayakkabiparti.lol/natgeowild/index.m3u8
 #EXTINF:-1 tvg-id="HabitatTV.tr@HD" tvg-logo="https://wmxznm9feqh3.merlincdn.net/assets/f43178e5-e366-4ca5-80ce-30d900e2835f.png" group-title="Belgesel",Habitat TV
 #EXTVLCOPT:http-referrer=https://habitattv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -30,12 +38,12 @@ https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
 https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
 #EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik" tvg-logo="https://i.imgur.com/4hH7nZs.png",Dream TV
 https://mn-nl.mncdn.com/blutv_dream/smil:dream_hd.smil/chunklist.m3u8
-#EXTINF:-1 tvg-id="Haber61TV.tr@SD" tvg-logo="https://i.imgur.com/2a2XUKl.png" group-title="Yerel",Haber61 TV
-https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
+#EXTINF:-1 tvg-id="TMBTV.tr" group-title="Uluslararası" tvg-logo="https://i.imgur.com/G53gTsp.png",TMB TV
+https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8?token=tmb_app_token_13579
 #EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/kb165Ot.png",Euro Star
 https://xrklj56s.rocketcdn.com/eurostar.stream_720p/chunklist.m3u8
-#EXTINF:-1 tvg-id="FinestTV.de@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/1uoP10V.png",Finest TV
-http://media.finest.tv/hls/live.m3u8
+#EXTINF:-1 tvg-id="WestAzerbaijanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/2/21/Urmia_TV.svg/960px-Urmia_TV.svg.png" group-title="Uluslararası",West Azerbaijan TV
+https://ncdn.telewebion.ir/azarbayjangharbi/live/playlist.m3u8
 #EXTINF:-1 tvg-id="BizimevTV.tr@SD" tvg-logo="https://i.imgur.com/eJa6sFY.png" group-title="Diğer",Bizimev TV
 https://mn-nl.mncdn.com/blutv_bizimev/bizimev_sd.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="SSport.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="Diğer",S Sport
@@ -123,6 +131,56 @@ http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8
 https://catcast.ismailturret.workers.dev/playercizgifilm-tomvejerry.m3u8
 #EXTINF:-1 tvg-id="ToprakTV.tr@SD" tvg-logo="https://i.imgur.com/JGnS0qs.png" group-title="Diğer",Toprak TV
 https://59cba4d34b678.streamlock.net/canlitv/topraktv/playlist.m3u8
+#EXTINF:-1 tvg-name="TR:BEIN BOX OFFICE 1 HD" tvg-logo="https://i0.wp.com/resim.yayins.com/sinema/beinboxoffice1.png" group-title="Diğer",TR:BEIN BOX OFFICE 1
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/b3f77183-35d6-454d-aa33-4d705b523836.m3u
+#EXTINF:-1 tvg-name="TR:BEIN MOVIES PREMIERE 1 HD" tvg-logo="https://i0.wp.com/resim.yayins.com/sinema/beinmoviepremeire.png" group-title="Diğer",TR:BEIN MOVIES PREMIERE 1
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/a54e7db4-03c7-45b6-bf55-8c31f0b7a209.m3u
+#EXTINF:-1 tvg-name="TR:BEIN MOVIES PREMIERE 2 HD" tvg-logo="https://i0.wp.com/resim.yayins.com/ek1/beinmoviepremier2.png" group-title="Diğer",TR:BEIN MOVIES PREMIERE 2
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/240769ea-3656-4814-b292-c28372393ce9.m3u
+#EXTINF:-1 tvg-name="TR:BEIN SERIES 3 HD" tvg-logo="https://i0.wp.com/resim.yayins.com/sinema/beinseriesvice.png" group-title="Diğer",TR:BEIN SERIES 3
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/61dc4033-b65e-481d-9373-2460d26be826.m3u
+#EXTINF:-1 tvg-name="TR:BEINSPORTS 1 HD (50FPS)" tvg-logo="https://i0.wp.com/resim.yayins.com/spor/bein1.png" group-title="Diğer",TR:BEINSPORTS 1 HD (50FPS)
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/83fef809-135f-4ee5-9e13-5eb6f5d5231e.m3u
+#EXTINF:-1 tvg-name="TR:BEINSPORTS 1 HQ (VODAFONE-TURKCELL-TURKIYE)" tvg-logo="https://i0.wp.com/resim.yayins.com/spor/bein1.png" group-title="Diğer",TR:BEINSPORTS 1 HQ
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/1102157e-18c6-466c-a4a1-aa89d657064e.m3u
+#EXTINF:-1 tvg-name="TR:BEINSPORTS 1 SD (DUSUK KALITE)" tvg-logo="https://i0.wp.com/resim.yayins.com/spor/bein1.png" group-title="Diğer",TR:BEINSPORTS 1 SD (DUSUK KALITE)
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/40948810-a4ed-4975-8c81-13e1aeb39f6d.m3u
+#EXTINF:-1 tvg-name="TR:BEINSPORTS 4K (MAC ZAMANI)" tvg-logo="https://i0.wp.com/resim.yayins.com/ek1/bein4Kmac.png" group-title="Diğer",TR:BEINSPORTS 4K (MAC ZAMANI)
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/553f6670-08c6-412f-b7c8-51ef5ec5a95d.m3u
+#EXTINF:-1 tvg-name="TR:CINE YESILCAM 5 HD" tvg-logo="https://i0.wp.com/resim.yayins.com/cine/cineyesilcam5.png" group-title="Diğer",TR:CINE YESILCAM 5
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/99e797b1-73b6-4ce9-940c-57bda8d162ff.m3u
+#EXTINF:-1 tvg-name="TR:COCUK SMART UHD" tvg-logo="https://i0.wp.com/resim.yayins.com/cocuk/smarttv.png" group-title="Diğer",TR:COCUK SMART
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/b39e156a-aa7c-4995-a739-3953c3bfdc14.m3u
+#EXTINF:-1 tvg-name="TR:DISCOVERY CHANNEL UHD" tvg-logo="https://i0.wp.com/resim.yayins.com/belgesel/discovery.png" group-title="Diğer",TR:DISCOVERY CHANNEL
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/db3008c7-02fb-41af-8b99-34e10d569f12.m3u
+#EXTINF:-1 tvg-name="TR:DIZISMART PREMIUM HD" tvg-logo="https://i0.wp.com/resim.yayins.com/sinema/dizismartpremium.png" group-title="Diğer",TR:DIZISMART PREMIUM
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/9e5c54cb-c3b6-45cd-bb3a-4fd057725bae.m3u
+#EXTINF:-1 tvg-name="TR:EXXEN SPORT 1 HD" tvg-logo="https://i0.wp.com/resim.yayins.com/spor/exen1.png" group-title="Diğer",TR:EXXEN SPORT 1
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/a875d20f-db08-4b01-a69d-14e6ca01939d.m3u
+#EXTINF:-1 tvg-name="TR:EXXEN SPORT 1 HQ" tvg-logo="https://i0.wp.com/resim.yayins.com/spor/exen1.png" group-title="Diğer",TR:EXXEN SPORT 1 HQ
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/e2eeeb04-f2c7-4027-aaf8-ec739927c9e9.m3u
+#EXTINF:-1 tvg-name="TR:EXXEN SPORT 1 UHD (FEED YAYIN)" tvg-logo="https://i0.wp.com/resim.yayins.com/spor/exen1.png" group-title="Diğer",TR:EXXEN SPORT 1 UHD (FEED YAYIN)
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/02e51445-4d08-405e-bb1a-e4f49cae9b7b.m3u
+#EXTINF:-1 tvg-name="TR:EXXEN SPORT 7 UHD" tvg-logo="https://i0.wp.com/resim.yayins.com/spor/exxen7.png" group-title="Diğer",TR:EXXEN SPORT 7
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/003024fa-e3b8-4053-9cec-0b8bedb7ce3c.m3u
+#EXTINF:-1 tvg-name="TR:KANAL 24 HD" tvg-logo="https://i0.wp.com/resim.yayins.com/ek1/kanal24.png" group-title="Diğer",TR:KANAL 24
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/8cb08358-d164-4fb3-97ed-92c6185ec1e3.m3u
+#EXTINF:-1 tvg-name="TR:MOOBUG KIDS HD" tvg-logo="https://i0.wp.com/resim.yayins.com/cocuk/moonbug-kids.png" group-title="Diğer",TR:MOOBUG KIDS
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/b78f0b86-d399-4b65-8458-1f632d0637b7.m3u
+#EXTINF:-1 tvg-name="TR:NR1 TURK HD" tvg-logo="https://i0.wp.com/resim.yayins.com/muzik/n1turk.png" group-title="Diğer",TR:NR1 TURK
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/56764e52-57d8-4781-8e9f-3ad68493104b.m3u
+#EXTINF:-1 tvg-name="TR:NTV HD" tvg-logo="https://i0.wp.com/resim.yayins.com/haber/ntv.png" group-title="Diğer",TR:NTV
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/100b0317-1c11-4a8b-b74c-1cf1f03eb86e.m3u
+#EXTINF:-1 tvg-name="TR:POWER TV HD" tvg-logo="https://i0.wp.com/resim.yayins.com/muzik/powertv.png" group-title="Diğer",TR:POWER TV
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/e0c2980c-bc96-435c-a05a-e9006c831a0c.m3u
+#EXTINF:-1 tvg-name="TR:S SPORT PLUS 10 UHD (MAC ZAMANI)" tvg-logo="https://i0.wp.com/resim.yayins.com/spor/ssport10.png" group-title="Diğer",TR:S SPORT PLUS 10 UHD (MAC ZAMANI)
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/5007306f-b802-45e6-a8d0-73bec4c68d62.m3u
+#EXTINF:-1 tvg-name="TR:TELE 1 HD" tvg-logo="https://i0.wp.com/resim.yayins.com/haber/tele1.png" group-title="Diğer",TR:TELE 1
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/496ed485-9019-4ce0-8043-28274d94558b.m3u
+#EXTINF:-1 tvg-name="TR:TRACE SPORT STARS HD" tvg-logo="https://i0.wp.com/resim.yayins.com/2/tracesportstars.png" group-title="Diğer",TR:TRACE SPORT STARS
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/6b56ef65-45a1-4be3-9297-867b3c1d0a72.m3u
+#EXTINF:-1 tvg-name="TR:ULUSAL TV HD" tvg-logo="https://i0.wp.com/resim.yayins.com/haber/ulusaltv.png" group-title="Diğer",TR:ULUSAL TV
+http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/1da369b1-9739-43c6-a864-992a87c5268d.m3u
 #EXTINF:-1 tvg-id="TRTEBAIlkokul.tr@SD" tvg-logo="https://i.imgur.com/CRBfZi4.png" group-title="Diğer",TRT EBA Ilkokul
 https://tv-e-okul00.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTEBALise.tr@SD" tvg-logo="https://i.imgur.com/vj2L2L2.png" group-title="Diğer",TRT EBA Lise
