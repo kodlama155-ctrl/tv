@@ -1,16 +1,17 @@
 {
-  "updated_at_utc": "2026-10-01T00:20:59.838144+00:00",
+  "updated_at_utc": "2026-10-01T01:31:36.974355+00:00",
   "catalog_channels": 210,
-  "channels_in_previous_tr": 200,
-  "missing_before_search": 10,
+  "channels_in_previous_tr": 199,
+  "missing_before_search": 11,
   "missing_names": [
-    "Show TV",
-    "Kanal 7",
     "TYT Türk",
     "Sports TV",
+    "National Geographic",
+    "National Geographic Wild",
     "On4 TV",
     "FM TV",
     "Number1 Rap TV",
+    "West Azerbaijan TV",
     "TMB TV",
     "TGRT EU",
     "Kanal 1"
@@ -20,51 +21,52 @@
   "search_batches": [
     {
       "names": [
-        "Show TV",
-        "Kanal 7",
         "TYT Türk",
         "Sports TV",
+        "National Geographic",
+        "National Geographic Wild",
         "On4 TV",
         "FM TV"
       ],
-      "query": "\"Show TV\" OR \"Kanal 7\" OR \"TYT Türk\" OR \"Sports TV\" OR \"On4 TV\" OR \"FM TV\" extension:m3u",
-      "error": "HTTPError"
+      "query": "\"TYT Türk\" OR \"Sports TV\" OR \"National Geographic\" OR \"National Geographic Wild\" OR \"On4 TV\" OR \"FM TV\" extension:m3u",
+      "search_results": 1
     },
     {
       "names": [
         "Number1 Rap TV",
+        "West Azerbaijan TV",
         "TMB TV",
         "TGRT EU",
         "Kanal 1"
       ],
-      "query": "\"Number1 Rap TV\" OR \"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
-      "error": "HTTPError"
+      "query": "\"Number1 Rap TV\" OR \"West Azerbaijan TV\" OR \"TMB TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
+      "search_results": 0
     }
   ],
   "target_report": [
     {
-      "name": "Show TV",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Kanal 7",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "TYT Türk",
       "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
+      "files_matched": 1,
+      "candidates": 1
     },
     {
       "name": "Sports TV",
       "category": "Spor",
-      "files_matched": 0,
-      "candidates": 0
+      "files_matched": 1,
+      "candidates": 1
+    },
+    {
+      "name": "National Geographic",
+      "category": "Belgesel",
+      "files_matched": 1,
+      "candidates": 1
+    },
+    {
+      "name": "National Geographic Wild",
+      "category": "Belgesel",
+      "files_matched": 1,
+      "candidates": 1
     },
     {
       "name": "On4 TV",
@@ -75,12 +77,18 @@
     {
       "name": "FM TV",
       "category": "Dini",
-      "files_matched": 0,
-      "candidates": 0
+      "files_matched": 1,
+      "candidates": 1
     },
     {
       "name": "Number1 Rap TV",
       "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "West Azerbaijan TV",
+      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },
@@ -93,8 +101,8 @@
     {
       "name": "TGRT EU",
       "category": "Uluslararası",
-      "files_matched": 0,
-      "candidates": 0
+      "files_matched": 1,
+      "candidates": 1
     },
     {
       "name": "Kanal 1",
@@ -103,8 +111,8 @@
       "candidates": 0
     }
   ],
-  "files_scanned": 0,
-  "unique_candidates_found": 0,
-  "errors": 2,
+  "files_scanned": 1,
+  "unique_candidates_found": 6,
+  "errors": 0,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }

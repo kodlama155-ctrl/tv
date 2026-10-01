@@ -1,1 +1,19 @@
 #EXTM3U
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://463758a0.ucomist.net/iptv/V4ZVP6G52HVXDE/6789/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="NationalGeographic.tr@SD" group-title="Belgesel",National Geographic
+https://saran-live.ercdn.net/natgeohd/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="NationalGeographicWild.tr@SD" group-title="Belgesel",National Geographic Wild
+https://saran-live.ercdn.net/natgeowild/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="SportsTV.tr" group-title="Spor",Sports TV
+http://463758a0.ucomist.net/iptv/V4ZVP6G52HVXDE/6828/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
+https://raw.githubusercontent.com/bnyusuf31-lab/tr_github.m3u/refs/heads/main/streams/Tgrt_Eu.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 group-title="Ulusal",TYT Türk
+https://tytturk-live.ercdn.net/tytturk/tytturk.m3u8

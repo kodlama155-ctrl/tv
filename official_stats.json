@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-10-01T01:23:35.421319+00:00",
+  "updated_at_utc": "2026-10-01T01:30:41.075470+00:00",
   "official_pages": 38,
-  "pages_ok": 35,
-  "pages_with_candidates": 12,
-  "raw_candidates": 15,
-  "accepted_unique_candidates": 15,
+  "pages_ok": 33,
+  "pages_with_candidates": 11,
+  "raw_candidates": 14,
+  "accepted_unique_candidates": 14,
   "probe_statuses": {
-    "unknown": 2,
-    "verified": 11,
-    "restricted": 2
+    "verified": 8,
+    "restricted": 3,
+    "unknown": 3
   },
   "sources": [
     {
@@ -24,12 +24,12 @@
     {
       "name": "A News",
       "page": "https://www.anews.com.tr/webtv/live-broadcast",
-      "status": "page_error",
-      "page_final_url": null,
+      "status": "ok",
+      "page_final_url": "https://www.anews.com.tr/webtv/live-broadcast",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
-      "error": "URLError"
+      "identity_rejected_candidates": 0
     },
     {
       "name": "A Para",
@@ -55,7 +55,7 @@
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.atv.com.tr/a2tv/canli-yayin",
+      "page_final_url": "https://www.atv.com.tr/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=MnNkMm9mYUpTcmhkanhjOThYMmdNK2lqRW5vUXQ2ZlYrT21MSXo1VEg2bz0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=Q0RsUVVJN3lEYmY5QVpwU2pwS0p5TXNsZTRqSEZmWWEyaStzNnFvcGxuOD0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -190,12 +190,12 @@
     {
       "name": "KRT TV",
       "page": "https://www.krttv.com.tr/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.krttv.com.tr/canli-yayin",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 2,
+      "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "HTTPError"
     },
     {
       "name": "Kanal 7",
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=U0pvVnNrdkRKU2E2Q1YzK2s0RUtUdWRONXBjTXZ5bTRES0tLaDZJZGlsaz0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=RlBIeE0zTEtKRE5Qd0krV0h2T2lhSzJya3BqdStkVFlTUC9nOGdrN1RHUT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -345,12 +345,12 @@
     {
       "name": "TV100",
       "page": "https://www.tv100.com/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.tv100.com/canli-yayin",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 2,
+      "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "HTTPError"
     },
     {
       "name": "TV8",
@@ -389,14 +389,12 @@
     {
       "name": "Vav TV",
       "page": "https://www.vavtv.com.tr/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.vavtv.com.tr/canli-yayin",
-      "page_candidates": 19,
+      "status": "page_error",
+      "page_final_url": null,
+      "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": [
-        "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8"
-      ],
-      "identity_rejected_candidates": 18
+      "candidates": [],
+      "error": "TimeoutError"
     },
     {
       "name": "Yaban TV",
