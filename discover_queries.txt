@@ -1,6 +1,6 @@
 # Public GitHub repository discovery queries.
-# Repositories are additionally filtered by pushed date, and each playlist
-# file must have its own commit within the last 14 days.
+# Only fresh repositories/files are accepted by discover.py (14-day window).
+# Broad query coverage; stale sources are intentionally excluded.
 iptv turkey m3u
 turkey m3u8 playlist
 turkish iptv playlist
@@ -11,3 +11,18 @@ turkiye tv m3u
 turkey live tv
 turkish live tv
 turkiye canli tv
+turkey channels m3u
+turkiye channels m3u
+turkish channels m3u
+turk m3u
+turk m3u8
+turkey playlist m3u
+turkiye playlist m3u
+canli tv m3u
+canli yayin m3u
+canli yayin m3u8
+turkish live m3u8
+turkey live m3u8
+turkiye live m3u8
+tr channels m3u
+tr live tv m3u
