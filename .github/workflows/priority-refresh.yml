@@ -5,6 +5,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: emirtv-playlist-writes
@@ -53,3 +54,8 @@ jobs:
             git commit -m "bot: refresh changed priority channels"
             git push origin HEAD:main
           fi
+
+      - name: Queue full validation sync
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run update.yml --ref main
