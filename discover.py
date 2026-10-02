@@ -9,10 +9,13 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+from channel_catalog import category_for_channel
+
 ROOT = Path(__file__).resolve().parent
 QUERIES = ROOT / "discover_queries.txt"
 OUTPUT = ROOT / "discovered.m3u"
 STATS = ROOT / "discovery_stats.json"
+REVIEW = ROOT / "review_candidates.json"
 
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
@@ -298,6 +301,59 @@ def extract_entries(
 
     return entries
 
+def _meta_attr(meta: str, name: str) -> str:
+    m = re.search(rf'{re.escape(name)}="([^"]*)"', meta, flags=re.I)
+    return m.group(1).strip() if m else ""
+
+
+def _meta_label(meta: str) -> str:
+    quoted = False
+    for i, ch in enumerate(meta):
+        if ch == '"':
+            quoted = not quoted
+        elif ch == "," and not quoted:
+            return meta[i + 1:].strip()
+    return ""
+
+
+def _fold(text: str) -> str:
+    value = str(text or "").replace("ı", "i").replace("İ", "I").lower()
+    return re.sub(r"[^a-z0-9çğıöşü]+", " ", value).strip()
+
+
+def discovery_decision(meta: str, url: str) -> tuple[str, str]:
+    name = _meta_label(meta)
+    tvg = _meta_attr(meta, "tvg-id")
+    low = _fold(name)
+
+    try:
+        host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    except Exception:
+        host = ""
+
+    if host.endswith("prosto.tv") or host.endswith("europlayiptv.de"):
+        return "reject", "noisy-provider"
+
+    if re.search(r"(?:^|\s)(?:test|vpn|backup|yedek)(?:$|\s)", low, flags=re.I):
+        return "reject", "test-or-backup"
+
+    if re.search(r"[\u0400-\u04ff]", name):
+        return "reject", "non-turkish-script"
+
+    if re.search(r"\b(?:film|movie|polis|smackdown|fight pass)\b", low, flags=re.I):
+        return "reject", "vod-or-event-like"
+
+    if category_for_channel(tvg, name):
+        return "accept", "catalog"
+
+    # Keep plausible Turkish channels visible for review without spending
+    # validation time on them until they are curated.
+    if re.search(r"\.tr(?:@|$)", tvg, flags=re.I):
+        return "review", "uncatalogued-tr-identity"
+
+    return "reject", "uncatalogued"
+
+
 def canonical(url: str) -> str:
     p = urllib.parse.urlsplit(url)
 
@@ -374,6 +430,8 @@ def main():
     repo_seen = set()
     file_seen = set()
     found = {}
+    review_candidates = {}
+    discovery_rejections = {}
 
     query_report = []
     repo_count = 0
@@ -538,7 +596,28 @@ def main():
                         })
 
                         for meta, url, user_agent, referrer in entries:
+                            decision, reason = discovery_decision(meta, url)
+
+                            if decision == "reject":
+                                discovery_rejections[reason] = (
+                                    discovery_rejections.get(reason, 0) + 1
+                                )
+                                continue
+
                             key = canonical(url)
+
+                            if decision == "review":
+                                review_candidates.setdefault(key, {
+                                    "name": _meta_label(meta),
+                                    "tvg_id": _meta_attr(meta, "tvg-id"),
+                                    "url": url,
+                                    "source_repo": full,
+                                    "source_path": path,
+                                    "source_updated": commit["date_raw"],
+                                    "reason": reason,
+                                })
+                                continue
+
                             existing = found.get(key)
 
                             if existing is None:
@@ -625,6 +704,25 @@ def main():
         reverse=True,
     )
 
+    REVIEW.write_text(
+        json.dumps(
+            {
+                "updated_at_utc": now.isoformat(),
+                "count": len(review_candidates),
+                "candidates": sorted(
+                    review_candidates.values(),
+                    key=lambda row: (
+                        str(row.get("name") or "").lower(),
+                        str(row.get("url") or ""),
+                    ),
+                ),
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
+
     stats = {
         "updated_at_utc": now.isoformat(),
         "max_file_age_days": MAX_FILE_AGE_DAYS,
@@ -637,6 +735,8 @@ def main():
         "fresh_files_scanned": fresh_files_scanned,
         "stale_files_skipped": stale_files_skipped,
         "unique_m3u8_candidates": len(found),
+        "review_candidates": len(review_candidates),
+        "discovery_rejections": discovery_rejections,
         "header_aware_candidates": sum(
             1
             for value in found.values()
