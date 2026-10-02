@@ -157,7 +157,7 @@ http://345f89f7.ottrast.com/iptv/N452PD2NQGMCCD/31245/index.m3u8
 #EXTINF:-1 tvg-id="HTSporTV.tr@SD" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="Spor",HT Spor
 https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
 #EXTINF:-1 tvg-id="beINSportsHaber.tr@HD" tvg-logo="https://i.ibb.co/BfM21nC/beinhaber.png" group-title="Spor",beIN Sports Haber
-https://ythls.kekikakademi.org/youtube/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
+https://cdn.codenet.work/streamgo/stremgo123/4869.m3u8
 #EXTINF:-1 tvg-id="BricveSatrancTV.tr@SD" tvg-logo="https://i.imgur.com/TXDV1ty.png" group-title="Spor",Bric ve Satranc TV
 http://139.162.182.79/live/test/index.m3u8
 #EXTINF:-1 tvg-id="EkolSports.tr@HD" tvg-logo="https://feo.kablowebtv.com/resize/168A635D265A4328C2883FB4CD8FF/0/0/Vod/HLS/c4ca1fe1-e4ef-496a-9e97-b41a55910e43.png" group-title="Spor",Ekol Sports
