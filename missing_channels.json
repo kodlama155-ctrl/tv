@@ -9,9 +9,9 @@
     "verified": 50,
     "restricted": 1,
     "geo-restricted": 7,
-    "absent": 2,
-    "device-restricted": 5,
-    "unknown": 5
+    "absent": 1,
+    "unknown": 6,
+    "device-restricted": 5
   },
   "missing_channels": [
     {
@@ -29,18 +29,18 @@
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
     },
     {
-      "name": "FM TV",
-      "expected_category": "Dini",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
-    },
-    {
       "name": "Kanal 1",
       "expected_category": "Ulusal",
       "status": "absent",
       "reason": "No candidate found in current sources",
       "candidate_url": ""
+    },
+    {
+      "name": "Meltem TV",
+      "expected_category": "Ulusal",
+      "status": "unknown",
+      "reason": "response is not HLS",
+      "candidate_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
     },
     {
       "name": "CNN Türk",
