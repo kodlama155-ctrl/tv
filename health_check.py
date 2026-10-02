@@ -17,6 +17,8 @@ DEFAULT_PLAYLIST = ROOT / "tr.m3u"
 DEFAULT_REPORT = ROOT / "health_status.json"
 DEFAULT_TARGETS = ROOT / "repair_targets.json"
 DEFAULT_DEEP_TARGETS = ROOT / "deep_targets.json"
+DEFAULT_FALLBACKS = ROOT / "fallbacks.json"
+DEFAULT_FALLBACK_REPAIRS = ROOT / "fallback_repairs.json"
 
 MAX_WORKERS = 24
 RETRY_WORKERS = 8
@@ -97,12 +99,56 @@ def probe_many(rows, workers):
         return list(executor.map(probe, rows))
 
 
+def load_fallbacks(path: Path) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    channels = payload.get("channels", {}) if isinstance(payload, dict) else {}
+    return channels if isinstance(channels, dict) else {}
+
+
+def try_ready_fallback(target: dict, fallback: dict) -> dict | None:
+    url = fallback.get("fallback_url")
+    if not url:
+        return None
+    try:
+        result = validate_hls(
+            url,
+            user_agent=fallback.get("fallback_user_agent"),
+            referrer=fallback.get("fallback_referrer"),
+        )
+    except Exception as exc:
+        result = {
+            "status": "unknown",
+            "reason": type(exc).__name__,
+        }
+    if result.get("status") != "verified":
+        return None
+
+    return {
+        "name": target.get("name"),
+        "channel_key": target.get("channel_key"),
+        "old_url": target.get("old_url"),
+        "new_url": url,
+        "user_agent": fallback.get("fallback_user_agent"),
+        "referrer": fallback.get("fallback_referrer"),
+        "source_kind": fallback.get("fallback_source_kind"),
+        "source_name": fallback.get("fallback_source_name"),
+        "reason": "precomputed fallback verified",
+    }
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--playlist", default=str(DEFAULT_PLAYLIST))
     parser.add_argument("--report", default=str(DEFAULT_REPORT))
     parser.add_argument("--targets", default=str(DEFAULT_TARGETS))
     parser.add_argument("--deep-targets", default=str(DEFAULT_DEEP_TARGETS))
+    parser.add_argument("--fallbacks", default=str(DEFAULT_FALLBACKS))
+    parser.add_argument("--fallback-repairs", default=str(DEFAULT_FALLBACK_REPAIRS))
     args = parser.parse_args()
 
     rows = parse_playlist(Path(args.playlist))
@@ -184,6 +230,20 @@ def main():
                 "retry_reason": retry.get("reason") if retry else None,
             })
 
+    fallbacks = load_fallbacks(Path(args.fallbacks))
+    fallback_repairs = []
+    remaining_targets = []
+
+    for target in targets:
+        fallback = fallbacks.get(target.get("channel_key", ""))
+        repair = try_ready_fallback(target, fallback or {})
+        if repair is not None:
+            fallback_repairs.append(repair)
+        else:
+            remaining_targets.append(target)
+
+    targets = remaining_targets
+
     counts = Counter(row["status"] for row in final_rows)
     restriction_counts = Counter(
         row.get("restriction_kind")
@@ -197,9 +257,11 @@ def main():
         "status_counts": dict(counts),
         "restriction_counts": dict(restriction_counts),
         "initial_dead": len(initial_dead),
-        "confirmed_dead": len(targets),
+        "confirmed_dead": len(targets) + len(fallback_repairs),
+        "ready_fallback_repairs": len(fallback_repairs),
         "dead_retry_delay_seconds": DEAD_RETRY_DELAY_SECONDS,
         "repair_target_names": [row["name"] for row in targets],
+        "fallback_repair_names": [row["name"] for row in fallback_repairs],
         "deep_probe_targets": len(deep_targets),
         "deep_probe_target_names": [row["name"] for row in deep_targets],
         "results": final_rows,
@@ -213,6 +275,10 @@ def main():
         json.dumps(targets, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    Path(args.fallback_repairs).write_text(
+        json.dumps(fallback_repairs, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     Path(args.deep_targets).write_text(
         json.dumps(deep_targets, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -223,7 +289,8 @@ def main():
         "status_counts": dict(counts),
         "restriction_counts": dict(restriction_counts),
         "initial_dead": len(initial_dead),
-        "confirmed_dead": len(targets),
+        "confirmed_dead": len(targets) + len(fallback_repairs),
+        "ready_fallback_repairs": len(fallback_repairs),
         "repair_target_names": [row["name"] for row in targets],
         "deep_probe_targets": len(deep_targets),
         "deep_probe_target_names": [row["name"] for row in deep_targets],
