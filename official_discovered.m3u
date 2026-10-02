@@ -4,13 +4,19 @@
 #EXTINF:-1 group-title="Belgesel",DMAX
 #EXTVLCOPT:http-referrer=https://www.dmax.com.tr/canli-izle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=UmdobldBVVRiSUs5cDlSR043d1JYL3VZc05NU1A0TjJ3L2J0dWVUVzVUOD0=
+https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=bHA5YXk0ZVpvS2JiK0lYYXVCOEsxUUdBYVFOSGJHYmdldTFPcEdpbVp0QT0=
 # SOURCE: official:https://www.tlctv.com.tr/canli-izle
 # PROBE: unknown variant HTTP 500
 #EXTINF:-1 group-title="Belgesel",TLC
 #EXTVLCOPT:http-referrer=https://www.tlctv.com.tr/canli-izle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=ajl5c3pZRDltRjd6SXQ3TnJpNXN0TzZtcG1CWVFGYlM0QkhZLzdlMVJRWT0=
+https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=dDB0a0NXZldNeWxpMEJPNHFobDY5MmUzWFZIcXJHL1VFcGJJRlFCVWNmRT0=
+# SOURCE: official:https://www.vavtv.com.tr/canli-yayin
+# PROBE: restricted manifest HTTP 403
+#EXTINF:-1 group-title="Dini",Vav TV
+#EXTVLCOPT:http-referrer=https://www.vavtv.com.tr/canli-yayin
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8
 # SOURCE: official:https://www.cnnturk.com/canli-yayin
 # PROBE: restricted manifest HTTP 403
 #EXTINF:-1 group-title="Haber",CNN Türk
@@ -29,12 +35,6 @@ https://ciner.daioncdn.net/haberturktv/haberturktv.m3u8?app=c98ab0b0-50cc-495b-b
 #EXTVLCOPT:http-referrer=https://www.trthaber.com/canli-yayin-izle.html
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
-# SOURCE: official:https://www.tvnet.com.tr/canli-yayin
-# PROBE: verified real media segment verified
-#EXTINF:-1 group-title="Haber",TVNET
-#EXTVLCOPT:http-referrer=https://www.tvnet.com.tr/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/playlist.m3u8
 # SOURCE: official:https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
 # PROBE: restricted segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403
 #EXTINF:-1 group-title="Spor",TRT Spor
@@ -72,7 +72,7 @@ https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://kdlive.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
 # SOURCE: official:https://www.meltemtv.com.tr/canli-yayin
-# PROBE: verified real media segment verified
+# PROBE: unknown ValueError
 #EXTINF:-1 group-title="Ulusal",Meltem TV
 #EXTVLCOPT:http-referrer=https://www.meltemtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36

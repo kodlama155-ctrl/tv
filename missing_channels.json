@@ -1,17 +1,18 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 52,
+  "core_channels_verified": 49,
   "core_channels_geo_restricted": 7,
-  "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 18,
+  "core_channels_device_restricted": 5,
+  "core_channels_not_verified": 21,
   "status_counts": {
-    "verified": 52,
+    "verified": 49,
     "restricted": 1,
     "geo-restricted": 7,
-    "absent": 1,
+    "absent": 2,
+    "device-restricted": 5,
     "unknown": 5,
-    "device-restricted": 4
+    "dead": 1
   },
   "missing_channels": [
     {
@@ -29,6 +30,13 @@
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
     },
     {
+      "name": "FM TV",
+      "expected_category": "Dini",
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
+    },
+    {
       "name": "Kanal 1",
       "expected_category": "Ulusal",
       "status": "absent",
@@ -36,11 +44,25 @@
       "candidate_url": ""
     },
     {
+      "name": "CNN Türk",
+      "expected_category": "Haber",
+      "status": "device-restricted",
+      "reason": "variant HTTP 403",
+      "candidate_url": "https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8"
+    },
+    {
       "name": "Sözcü TV",
       "expected_category": "Haber",
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
+    },
+    {
+      "name": "TVNET",
+      "expected_category": "Haber",
+      "status": "dead",
+      "reason": "manifest HTTP 404",
+      "candidate_url": "https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8"
     },
     {
       "name": "TRT Spor",
