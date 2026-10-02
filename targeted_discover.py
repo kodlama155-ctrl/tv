@@ -142,6 +142,22 @@ def parse_playlist(text: str):
     return entries
 
 
+def source_is_turkish(item: dict, meta: str) -> bool:
+    repo = item.get("repository", {}) or {}
+    text = " ".join([
+        str(repo.get("full_name") or ""),
+        str(repo.get("description") or ""),
+        str(item.get("path") or ""),
+        str(meta or ""),
+    ]).lower()
+    hints = (
+        "turkey", "turkiye", "türkiye", "turkish", "türk",
+        "tr.m3u", "tr.m3u8", "/tr/", "_tr.", "-tr.",
+        'tvg-country="tr"', ".tr@", ".tr\"",
+    )
+    return any(token in text for token in hints)
+
+
 def fetch_search_file(item: dict):
     data = request_json(item["url"])
     if data.get("encoding") != "base64":
@@ -267,6 +283,11 @@ def main():
             for entry in entries:
                 target = target_by_key.get(entry["channel_key"])
                 if target is None:
+                    continue
+                # Common names (TV 1, Kanal 1, Can TV, etc.) collide across
+                # countries. Require Turkish source/metadata evidence before
+                # admitting a GitHub repair candidate.
+                if not source_is_turkish(item, entry["meta"]):
                     continue
                 if canonical_url(entry["url"]) == canonical_url(target["old_url"]):
                     continue
