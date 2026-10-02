@@ -983,6 +983,12 @@ def main():
                 and has_device_fallback
             )
         )
+
+        # tr.m3u is the curated Turkey device playlist. Unreviewed discoveries
+        # belong in validation/all outputs, not in the device list.
+        if item.get("category") == "Diğer":
+            include = False
+
         if not include:
             continue
 
