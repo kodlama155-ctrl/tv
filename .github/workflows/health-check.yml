@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - "health_check.py"
+      - "apply_fallbacks.py"
       - "targeted_discover.py"
       - "targeted_repair.py"
       - "deep_probe.py"
@@ -46,8 +47,10 @@ jobs:
           from pathlib import Path
           targets = json.loads(Path("repair_targets.json").read_text(encoding="utf-8"))
           deep_targets = json.loads(Path("deep_targets.json").read_text(encoding="utf-8"))
+          fallback_repairs = json.loads(Path("fallback_repairs.json").read_text(encoding="utf-8"))
           print(f"repair_count={len(targets)}")
           print(f"deep_count={len(deep_targets)}")
+          print(f"fallback_count={len(fallback_repairs)}")
           PY
 
       - name: Deep-check only unknown or restricted channels
@@ -153,6 +156,10 @@ jobs:
           if unknown_repair.exists():
               data = json.loads(unknown_repair.read_text(encoding="utf-8"))
               print(f"Unknown-channel verified replacements: **{data.get('repaired', 0)}**")
+          fallback = Path("fallback_apply_result.json")
+          if fallback.exists():
+              data = json.loads(fallback.read_text(encoding="utf-8"))
+              print(f"Ready fallback replacements: **{data.get('applied', 0)}**")
           repair = Path("repair_result.json")
           if repair.exists():
               data = json.loads(repair.read_text(encoding="utf-8"))
@@ -181,7 +188,7 @@ jobs:
           retention-days: 3
 
       - name: Commit verified targeted replacements
-        if: steps.health.outputs.repair_count != '0' || steps.unknowns.outputs.unknown_count != '0'
+        if: steps.health.outputs.repair_count != '0' || steps.unknowns.outputs.unknown_count != '0' || steps.health.outputs.fallback_count != '0'
         run: |
           git config user.name "emirtv-bot"
           git config user.email "actions@users.noreply.github.com"
