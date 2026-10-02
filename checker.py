@@ -1,3 +1,4 @@
+# Manual full scan trigger: verified-only audit rerun.
 # Strict verified-only Turkey playlist rerun.
 # Full scan marker: rerun after health-repair branch advance.
 #!/usr/bin/env python3
