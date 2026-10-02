@@ -370,7 +370,7 @@ def turkey_device_decision(item: dict) -> tuple[bool, str]:
     name = item.get("name") or channel_name(meta)
     source_name = item.get("source_name") or ""
     source_kind = item.get("source_kind") or "unknown"
-    original_group = existing_group(meta)
+    original_group = item.get("source_group") or existing_group(meta)
     country = country_from_tvg_id(meta)
 
     # Curated catalog decisions are authoritative.
@@ -393,12 +393,21 @@ def turkey_device_decision(item: dict) -> tuple[bool, str]:
     # verified/restricted live HLS candidate. This recovers legitimate new/local
     # Turkish channels without accepting anonymous provider aliases.
     if country == "tr":
-        if source_kind in {"github_discovery", "upstream"}:
-            host = stream_domain(item.get("url", ""))
-            # Common noisy provider dumps may still be searched for alternatives,
-            # but unknown channels from them are not promoted into the device list.
-            if host.endswith("europlayiptv.de") or host.endswith("prosto.tv"):
-                return False, "noisy-provider"
+        host = stream_domain(item.get("url", ""))
+        if host.endswith("europlayiptv.de") or host.endswith("prosto.tv"):
+            return False, "noisy-provider"
+
+        trusted_source = source_kind in {
+            "priority", "official_html", "official_api",
+            "official_browser", "iptv_org",
+        }
+        categorized_source = original_group in TURKEY_DEVICE_GROUPS
+
+        # For broad GitHub/upstream discovery, .tr alone is not enough because
+        # some provider dumps carry incorrect country suffixes.
+        if not trusted_source and not categorized_source:
+            return False, "weak-tr-identity"
+
         return True, "strong-tr-identity"
 
     # If an upstream explicitly supplied a known EmirTV group and the service
@@ -892,6 +901,8 @@ def main():
 
         item = {
             "meta": normalized_meta,
+            "source_meta": meta,
+            "source_group": existing_group(meta),
             "url": url,
             "user_agent": entry.get("user_agent"),
             "referrer": entry.get("referrer"),
