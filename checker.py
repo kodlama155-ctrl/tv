@@ -51,6 +51,7 @@ STATS = ROOT / "stats.json"
 VALIDATION = ROOT / "validation.json"
 MISSING_OUTPUT = ROOT / "missing_channels.json"
 DOMAIN_SCORES = ROOT / "domain_scores.json"
+REVIEW_CANDIDATES = ROOT / "review_candidates.json"
 
 UA = "Mozilla/5.0 (EmirTV-M3U-Bot/3.0)"
 PLAYLIST_TIMEOUT = 20
@@ -264,6 +265,49 @@ VALIDATION_REPORT_META_KEYS = {
     "order_sources", "order_evidence", "url", "stream_source_kind",
     "stream_source_name", "http_user_agent", "http_referrer",
 }
+
+
+def prevalidation_candidate_decision(entry: dict) -> tuple[str, str]:
+    meta = entry.get("meta", "")
+    decision = category_decision(meta)
+    category = decision.get("category", "Diğer")
+
+    if category != "Diğer":
+        return "accept", "catalog"
+
+    source_kind = entry.get("source_kind", "unknown")
+    if source_kind in {"priority", "official_html", "official_api", "official_browser"}:
+        return "accept", "trusted-source"
+
+    name = channel_name(meta)
+    tvg = tvg_id(meta)
+    folded = fold(name)
+
+    if re.search(r"[\u0400-\u04ff]", name):
+        return "reject", "non-turkish-script"
+
+    if re.search(
+        r"(?:^|\s)(?:test|vpn|backup|yedek)(?:$|\s)",
+        folded,
+        flags=re.I,
+    ):
+        return "reject", "test-or-backup"
+
+    if re.search(
+        r"\b(?:film|movie|polis|smackdown|fight pass)\b",
+        folded,
+        flags=re.I,
+    ):
+        return "reject", "vod-or-event-like"
+
+    host = stream_domain(entry.get("url", ""))
+    if host.endswith("prosto.tv") or host.endswith("europlayiptv.de"):
+        return "reject", "noisy-provider"
+
+    if re.search(r"\.tr(?:@|$)", tvg, flags=re.I):
+        return "review", "uncatalogued-tr-identity"
+
+    return "reject", "uncatalogued"
 
 
 def validation_cache_key(url: str, user_agent=None, referrer=None) -> str:
@@ -726,7 +770,64 @@ def main():
                     existing.get("device_hint") or entry.get("device_hint")
                 )
 
-    candidates = list(unique.values())
+    raw_candidates = list(unique.values())
+    candidates = []
+    prevalidation_rejected = Counter()
+    prevalidation_review = []
+
+    for entry in raw_candidates:
+        decision, reason = prevalidation_candidate_decision(entry)
+        if decision == "accept":
+            candidates.append(entry)
+            continue
+
+        if decision == "review":
+            prevalidation_review.append({
+                "name": channel_name(entry.get("meta", "")),
+                "tvg_id": tvg_id(entry.get("meta", "")),
+                "url": entry.get("url", ""),
+                "source_kind": entry.get("source_kind", ""),
+                "source_name": entry.get("source_name", ""),
+                "reason": reason,
+            })
+            continue
+
+        prevalidation_rejected[reason] += 1
+
+    # Merge review candidates produced by discover.py with candidates found in
+    # configured upstream lists. Review items are never promoted automatically.
+    existing_review = []
+    if REVIEW_CANDIDATES.exists():
+        try:
+            payload = json.loads(REVIEW_CANDIDATES.read_text(encoding="utf-8"))
+            existing_review = payload.get("candidates", []) if isinstance(payload, dict) else []
+        except Exception:
+            existing_review = []
+
+    review_by_url = {
+        row.get("url", ""): row
+        for row in existing_review + prevalidation_review
+        if row.get("url")
+    }
+    REVIEW_CANDIDATES.write_text(
+        json.dumps(
+            {
+                "updated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+                "count": len(review_by_url),
+                "candidates": sorted(
+                    review_by_url.values(),
+                    key=lambda row: (
+                        fold(row.get("name", "")),
+                        row.get("url", ""),
+                    ),
+                ),
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
+
     header_aware_entries = sum(
         1
         for entry in candidates
@@ -1166,6 +1267,9 @@ def main():
         "targeted_missing_entries": targeted_missing_entries,
         "unique_entries": len(candidates),
         "unique_stream_candidates": len(candidates),
+        "prevalidation_raw_candidates": len(raw_candidates),
+        "prevalidation_rejected": dict(prevalidation_rejected),
+        "prevalidation_review_candidates": len(prevalidation_review),
         "semantic_channels": len(selected),
         "turkey_device_channels": len(turkey_candidates),
         "turkey_device_reasons": dict(Counter(
