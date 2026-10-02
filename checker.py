@@ -1122,7 +1122,7 @@ def main():
     for key, variants in variants_by_key.items():
         usable = [
             row for row in variants
-            if row.get("status") in {"verified", "restricted"}
+            if row.get("status") == "verified"
         ]
         if len(usable) < 2:
             continue
@@ -1215,10 +1215,9 @@ def main():
     )
     write_playlist(ALL_OUTPUT, all_candidates)
 
-    # Türkiye cihaz listesi: strict verified yayınlara ek olarak
-    # geo-restricted ve açıkça işaretlenmiş resmî device-fallback yayınları
-    # dahil eder. Süreli st/e URL seçilmişse aynı kanalın tokensiz resmî
-    # device-fallback'i cihaz listesinde tercih edilir.
+    # Türkiye cihaz listesi yalnız gerçek medya segmenti doğrulanmış
+    # yayınlardan oluşur. Unknown/restricted/device-fallback kayıtları teşhis
+    # dosyalarında kalır ve missing_discover.py tarafından alternatif için aranır.
     variants_by_channel = {}
     for item in variant_items:
         variants_by_channel.setdefault(item.get("channel_key", ""), []).append(item)
@@ -1226,77 +1225,29 @@ def main():
     turkey_candidates = []
     turkey_ephemeral_overrides = 0
     for item in selected:
-        status = item.get("status", "unknown")
-        device_variants = [
-            row
-            for row in variants_by_channel.get(item.get("channel_key", ""), [])
-            if (
-                row.get("device_hint")
-                and row.get("status") in {"verified", "restricted", "unknown"}
-            )
-        ]
-        has_device_fallback = bool(device_variants)
-
-        include = (
-            status == "verified"
-            or status == "restricted"
-            or (
-                status in {"restricted", "unknown"}
-                and has_device_fallback
-            )
-        )
+        if item.get("status") != "verified":
+            continue
 
         device_ok, device_reason = turkey_device_decision(item)
         item["turkey_device_reason"] = device_reason
         if not device_ok:
-            include = False
-
-        if not include:
             continue
 
         chosen = item
 
-        # If any variant of this channel is explicitly marked as a
-        # device-fallback, retain that curated public variant for Turkey
-        # devices when the GitHub runner can only classify the channel as
-        # restricted/unknown.
-        if status in {"restricted", "unknown"} and has_device_fallback:
-            chosen = max(
-                device_variants,
-                key=lambda row: (
-                    2 if row.get("status") == "verified"
-                    else 1 if row.get("status") == "restricted"
-                    else 0,
-                    SOURCE_PRIORITY.get(
-                        row.get("source_kind", "unknown"),
-                        SOURCE_PRIORITY["unknown"],
-                    ),
-                    1 if row.get("url", "").startswith("https://") else 0,
-                ),
-            )
-
-        if status == "verified" and is_ephemeral_signed_url(item.get("url", "")):
+        # Süreli/signed ana URL varsa yalnız verified ve kalıcı bir alternatifle
+        # değiştir; restricted/unknown hiçbir zaman cihaz listesine girmez.
+        if is_ephemeral_signed_url(item.get("url", "")):
             fallbacks = [
                 row
                 for row in variants_by_channel.get(item.get("channel_key", ""), [])
                 if (
-                    row.get("device_hint")
-                    and row.get("status") in {"verified", "restricted"}
+                    row.get("status") == "verified"
                     and not is_ephemeral_signed_url(row.get("url", ""))
                 )
             ]
             if fallbacks:
-                chosen = max(
-                    fallbacks,
-                    key=lambda row: (
-                        1 if row.get("status") == "verified" else 0,
-                        SOURCE_PRIORITY.get(
-                            row.get("source_kind", "unknown"),
-                            SOURCE_PRIORITY["unknown"],
-                        ),
-                        1 if row.get("url", "").startswith("https://") else 0,
-                    ),
-                )
+                chosen = max(fallbacks, key=representative_score)
                 turkey_ephemeral_overrides += 1
 
         turkey_candidates.append(chosen)
@@ -1392,14 +1343,8 @@ def main():
         "drm_entries": counts["drm"],
         "all_non_dead_non_drm_entries": len(all_candidates),
         "turkey_device_entries": len(turkey_candidates),
-        "turkey_device_geo_fallbacks": sum(
-            1 for item in turkey_candidates if item.get("status") == "restricted" or item.get("geo_restricted")
-        ),
-        "turkey_device_restricted_fallbacks": sum(
-            1
-            for item in turkey_candidates
-            if item.get("device_hint") or item.get("device_fallback")
-        ),
+        "turkey_device_geo_fallbacks": 0,
+        "turkey_device_restricted_fallbacks": 0,
         "turkey_device_ephemeral_overrides": turkey_ephemeral_overrides,
         "core_channels_total": coverage["core_channels_total"],
         "core_channels_verified": coverage["core_channels_verified"],
