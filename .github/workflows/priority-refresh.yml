@@ -12,8 +12,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: priority-refresh-v1
-  cancel-in-progress: true
+  group: emirtv-playlist-writes
+  cancel-in-progress: false
 
 jobs:
   refresh:
