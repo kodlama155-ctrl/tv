@@ -1,3 +1,4 @@
+# Strict verified-only Turkey playlist rerun.
 # Full scan marker: rerun after health-repair branch advance.
 #!/usr/bin/env python3
 from __future__ import annotations
