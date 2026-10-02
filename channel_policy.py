@@ -21,6 +21,8 @@ CATEGORY_INDEX = {name: i for i, name in enumerate(CATEGORY_ORDER)}
 IDENTITY_ALIASES = {
     "a2": "a2tv",
     "now": "nowtv",
+    "tv2": "teve2",
+    "24": "24tv",
     "trt3trtspor": "trtspor",
     "bbcfirstturkiye": "bbcfirst",
     "ntvturkiye": "ntv",
