@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-10-02T19:43:57.520184+00:00",
+  "updated_at_utc": "2026-10-02T20:42:19.169405+00:00",
   "official_pages": 38,
-  "pages_ok": 31,
-  "pages_with_candidates": 11,
-  "raw_candidates": 14,
-  "accepted_unique_candidates": 14,
+  "pages_ok": 34,
+  "pages_with_candidates": 12,
+  "raw_candidates": 15,
+  "accepted_unique_candidates": 15,
   "probe_statuses": {
-    "restricted": 2,
-    "verified": 9,
+    "restricted": 4,
+    "verified": 8,
     "unknown": 3
   },
   "sources": [
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=elBGaFN1Z043d0M5bFQxMDFjdXIzZ0tIcjhEY2tFSU9jWlNIQnhpSUh1UT0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=WDZOTHRmQm0xRm45UHZRcUV5ZW5qQnEzS09zUUpKcFVQbUZhaG84RWxJRT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -138,12 +138,12 @@
     {
       "name": "EKOTÜRK",
       "page": "https://www.ekoturk.com/canli-yayin/",
-      "status": "page_error",
-      "page_final_url": null,
+      "status": "ok",
+      "page_final_url": "https://www.ekoturk.com/canli-yayin/",
       "page_candidates": 0,
-      "aux_scanned": 0,
+      "aux_scanned": 2,
       "candidates": [],
-      "error": "URLError"
+      "identity_rejected_candidates": 0
     },
     {
       "name": "FB TV",
@@ -180,12 +180,12 @@
     {
       "name": "Habitat TV",
       "page": "https://www.habitattv.com.tr/home.php",
-      "status": "page_error",
-      "page_final_url": null,
+      "status": "ok",
+      "page_final_url": "https://www.habitattv.com.tr/home.php",
       "page_candidates": 0,
-      "aux_scanned": 0,
+      "aux_scanned": 2,
       "candidates": [],
-      "error": "URLError"
+      "identity_rejected_candidates": 0
     },
     {
       "name": "KRT TV",
@@ -227,12 +227,14 @@
     {
       "name": "Meltem TV",
       "page": "https://www.meltemtv.com.tr/canli-yayin",
-      "status": "page_error",
-      "page_final_url": null,
-      "page_candidates": 0,
-      "aux_scanned": 0,
-      "candidates": [],
-      "error": "HTTPError"
+      "status": "ok",
+      "page_final_url": "https://www.meltemtv.com.tr/canli-yayin",
+      "page_candidates": 1,
+      "aux_scanned": 1,
+      "candidates": [
+        "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "NOW TV",
@@ -302,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=SFRTT0hyazlUd3p2MWc0VjFVaUJBYmJXRFRzTkhWNVcvblhJbTdYc0dGMD0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=TDZSQXRXbUg2Z0tOdmJBay9FSGZVQ0ZVdkFVTkFSS2p1dW9oRnlKY29Saz0="
       ],
       "identity_rejected_candidates": 0
     },
