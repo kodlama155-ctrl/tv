@@ -129,6 +129,19 @@ def deep_probe_current(row):
         ("vlc", VLC_UA, "keep"),
     ]
 
+    # If no explicit referrer exists, a conservative same-origin referrer
+    # can satisfy public CDN hotlink protection without inventing a third-party site.
+    if not row.get("referrer"):
+        try:
+            from urllib.parse import urlsplit
+            parsed = urlsplit(row["url"])
+            if parsed.scheme and parsed.netloc:
+                profiles.append(
+                    ("chrome_same_origin", CHROME_UA, f"{parsed.scheme}://{parsed.netloc}/")
+                )
+        except Exception:
+            pass
+
     for round_no in range(1, ROUNDS + 1):
         if round_no > 1:
             time.sleep(ROUND_DELAY)
