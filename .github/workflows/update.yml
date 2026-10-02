@@ -177,7 +177,7 @@ jobs:
               official_discovered.m3u official_stats.json \
               turkuvaz_discovered.m3u turkuvaz_stats.json \
               browser_discovered.m3u browser_stats.json \
-              discovered.m3u discovery_stats.json \
+              discovered.m3u discovery_stats.json review_candidates.json \
               missing_discovered.m3u missing_discovery_stats.json
           fi
 
