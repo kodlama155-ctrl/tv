@@ -126,6 +126,14 @@ jobs:
         if: steps.health.outputs.repair_count != '0'
         run: python targeted_repair.py
 
+      - name: Remove unresolved confirmed dead channels
+        if: steps.health.outputs.repair_count != '0'
+        run: |
+          python prune_unverified.py \
+            --targets repair_targets.json \
+            --repair-report repair_result.json \
+            --report prune_dead_result.json
+
       - name: Write summary
         run: |
           python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
@@ -169,6 +177,10 @@ jobs:
           if pruned.exists():
               data = json.loads(pruned.read_text(encoding="utf-8"))
               print(f"Unresolved unverified channels removed: **{data.get('removed', 0)}**")
+          dead_pruned = Path("prune_dead_result.json")
+          if dead_pruned.exists():
+              data = json.loads(dead_pruned.read_text(encoding="utf-8"))
+              print(f"Unresolved confirmed-dead channels removed: **{data.get('removed', 0)}**")
           repair = Path("repair_result.json")
           if repair.exists():
               data = json.loads(repair.read_text(encoding="utf-8"))
@@ -194,6 +206,7 @@ jobs:
             fallback_repairs.json
             fallback_apply_result.json
             prune_unverified_result.json
+            prune_dead_result.json
           if-no-files-found: ignore
           retention-days: 3
 
