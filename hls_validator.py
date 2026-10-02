@@ -212,6 +212,19 @@ def _aux_reachable(
 def _payload_looks_media(url: str, data: bytes, ctype: str, encrypted: bool) -> bool:
     if len(data) < 64:
         return False
+
+    ctype_lower = (ctype or "").lower()
+    head_lower = data[:512].lstrip().lower()
+    if (
+        ctype_lower.startswith("text/")
+        or "application/json" in ctype_lower
+        or "application/xml" in ctype_lower
+        or head_lower.startswith((b"<html", b"<!doctype html", b"<?xml", b"{", b"["))
+    ):
+        return False
+
+    # AES-128 media is opaque by design; after the key was proven reachable,
+    # a non-text binary body is sufficient evidence for the encrypted segment.
     if encrypted:
         return True
 
