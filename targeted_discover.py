@@ -205,14 +205,46 @@ def main():
             batch_report.append({
                 "names": [row["name"] for row in batch],
                 "search_results": len(items),
+                "fallback_individual": False,
             })
         except Exception as exc:
+            # A failed OR batch must not silently skip every channel in it.
+            # Retry each target independently and merge the successful results.
             errors += 1
+            items = []
+            individual = []
+            for row in batch:
+                time.sleep(2)
+                single_query = f'"{row["name"]}" extension:m3u'
+                single_encoded = urllib.parse.urlencode({
+                    "q": single_query,
+                    "per_page": str(MAX_RESULTS_PER_BATCH),
+                })
+                try:
+                    single = request_json(
+                        f"{API}/search/code?{single_encoded}",
+                        retry_limited=True,
+                    )
+                    single_items = single.get("items", [])
+                    items.extend(single_items)
+                    individual.append({
+                        "name": row["name"],
+                        "search_results": len(single_items),
+                    })
+                except Exception as single_exc:
+                    errors += 1
+                    individual.append({
+                        "name": row["name"],
+                        "error": type(single_exc).__name__,
+                    })
+
             batch_report.append({
                 "names": [row["name"] for row in batch],
                 "error": type(exc).__name__,
+                "fallback_individual": True,
+                "individual": individual,
+                "search_results": len(items),
             })
-            continue
 
         for item in items:
             file_key = item.get("url") or ""
