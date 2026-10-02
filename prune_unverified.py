@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
@@ -45,19 +46,31 @@ def parse_playlist(path: Path):
 
 
 def main():
-    if not PLAYLIST.exists() or not UNKNOWN_TARGETS.exists():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--playlist", default=str(PLAYLIST))
+    parser.add_argument("--targets", default=str(UNKNOWN_TARGETS))
+    parser.add_argument("--repair-report", default=str(UNKNOWN_REPAIR))
+    parser.add_argument("--report", default=str(REPORT))
+    args = parser.parse_args()
+
+    playlist_path = Path(args.playlist)
+    targets_path = Path(args.targets)
+    repair_path = Path(args.repair_report)
+    report_path = Path(args.report)
+
+    if not playlist_path.exists() or not targets_path.exists():
         payload = {"targets": 0, "removed": 0, "removed_names": []}
-        REPORT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        report_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(payload, ensure_ascii=False, indent=2))
         return
 
-    targets = json.loads(UNKNOWN_TARGETS.read_text(encoding="utf-8"))
+    targets = json.loads(targets_path.read_text(encoding="utf-8"))
     target_keys = {row.get("channel_key") for row in targets if row.get("channel_key")}
 
     repaired_keys = set()
-    if UNKNOWN_REPAIR.exists():
+    if repair_path.exists():
         try:
-            repair = json.loads(UNKNOWN_REPAIR.read_text(encoding="utf-8"))
+            repair = json.loads(repair_path.read_text(encoding="utf-8"))
             for row in repair.get("replacements", []):
                 if row.get("channel_key"):
                     repaired_keys.add(row["channel_key"])
@@ -65,7 +78,7 @@ def main():
             pass
 
     unresolved = target_keys - repaired_keys
-    rows = parse_playlist(PLAYLIST)
+    rows = parse_playlist(playlist_path)
     kept = []
     removed = []
 
@@ -81,7 +94,7 @@ def main():
             lines.append(row["meta"])
             lines.extend(row["options"])
             lines.append(row["url"])
-        PLAYLIST.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        playlist_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     payload = {
         "targets": len(target_keys),
@@ -89,7 +102,7 @@ def main():
         "removed": len(removed),
         "removed_names": [row["name"] for row in removed],
     }
-    REPORT.write_text(
+    report_path.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
