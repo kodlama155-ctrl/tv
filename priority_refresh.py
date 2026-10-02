@@ -145,34 +145,21 @@ def probe(row):
 
 
 def choose_variant(rows, domain_scores):
+    # Turkey playlist is strict verified-only. Restricted/unknown variants
+    # remain diagnostic candidates but can never be written to tr.m3u.
     verified = [r for r in rows if r["status"] == "verified"]
-    if verified:
-        return max(
-            verified,
-            key=lambda r: (
-                *domain_reputation(r["url"], domain_scores),
-                int(r.get("height") or 0),
-                int(r.get("bandwidth") or 0),
-                1 if r["url"].startswith("https://") else 0,
-            ),
-        )
+    if not verified:
+        return None
 
-    fallbacks = [
-        r for r in rows
-        if r.get("device_hint")
-        and r["status"] in {"restricted", "unknown"}
-    ]
-    if fallbacks:
-        return max(
-            fallbacks,
-            key=lambda r: (
-                1 if r["status"] == "restricted" else 0,
-                *domain_reputation(r["url"], domain_scores),
-                1 if r["url"].startswith("https://") else 0,
-            ),
-        )
-
-    return None
+    return max(
+        verified,
+        key=lambda r: (
+            *domain_reputation(r["url"], domain_scores),
+            int(r.get("height") or 0),
+            int(r.get("bandwidth") or 0),
+            1 if r["url"].startswith("https://") else 0,
+        ),
+    )
 
 
 def normalized_output_row(row):
@@ -275,6 +262,9 @@ def main():
         variants = results_by_channel.get(key, [])
         chosen = choose_variant(variants, domain_scores)
         if chosen is None:
+            # A changed priority channel with no verified candidate must not
+            # leave an older restricted/unknown row behind in tr.m3u.
+            existing_by_key.pop(key, None)
             unchanged.append(key)
             continue
 
