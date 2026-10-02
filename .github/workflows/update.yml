@@ -29,7 +29,7 @@ permissions:
 
 concurrency:
   group: emirtv-playlist-writes
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update:
