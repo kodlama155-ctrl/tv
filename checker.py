@@ -52,6 +52,7 @@ VALIDATION = ROOT / "validation.json"
 MISSING_OUTPUT = ROOT / "missing_channels.json"
 DOMAIN_SCORES = ROOT / "domain_scores.json"
 REVIEW_CANDIDATES = ROOT / "review_candidates.json"
+FALLBACKS = ROOT / "fallbacks.json"
 
 UA = "Mozilla/5.0 (EmirTV-M3U-Bot/3.0)"
 PLAYLIST_TIMEOUT = 20
@@ -1094,6 +1095,65 @@ def main():
         encoding="utf-8",
     )
 
+    # Build one ready-to-use fallback per semantic channel. The fallback
+    # is not published as a duplicate row in tr.m3u; it is stored separately
+    # for fast health-check failover.
+    fallback_map = {}
+    variants_by_key = {}
+    for item in variant_items:
+        key = item.get("channel_key") or ""
+        if key:
+            variants_by_key.setdefault(key, []).append(item)
+
+    for key, variants in variants_by_key.items():
+        usable = [
+            row for row in variants
+            if row.get("status") in {"verified", "restricted"}
+        ]
+        if len(usable) < 2:
+            continue
+
+        ranked = sorted(
+            usable,
+            key=representative_score,
+            reverse=True,
+        )
+        primary = ranked[0]
+        backup = next(
+            (
+                row for row in ranked[1:]
+                if canonical(row.get("url", "")) != canonical(primary.get("url", ""))
+            ),
+            None,
+        )
+        if backup is None:
+            continue
+
+        fallback_map[key] = {
+            "channel_key": key,
+            "name": primary.get("name", ""),
+            "primary_url": primary.get("url", ""),
+            "fallback_url": backup.get("url", ""),
+            "fallback_status": backup.get("status", "unknown"),
+            "fallback_source_kind": backup.get("source_kind", "unknown"),
+            "fallback_source_name": backup.get("source_name", ""),
+            "fallback_user_agent": backup.get("user_agent"),
+            "fallback_referrer": backup.get("referrer"),
+        }
+
+    FALLBACKS.write_text(
+        json.dumps(
+            {
+                "updated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+                "count": len(fallback_map),
+                "channels": dict(sorted(fallback_map.items())),
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
+
     # Collapse multiple URLs/qualities of the same channel after validation.
     # Selection order: status -> source trust -> domain reliability/confidence
     # -> resolution -> bitrate -> segment stability -> CDN quality -> latency.
@@ -1271,6 +1331,7 @@ def main():
         "prevalidation_rejected": dict(prevalidation_rejected),
         "prevalidation_review_candidates": len(prevalidation_review),
         "semantic_channels": len(selected),
+        "fallback_channels": len(fallback_map),
         "turkey_device_channels": len(turkey_candidates),
         "turkey_device_reasons": dict(Counter(
             item.get("turkey_device_reason", "curated-category")
