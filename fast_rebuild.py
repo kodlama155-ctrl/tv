@@ -22,6 +22,7 @@ from channel_policy import (
 ROOT = Path(__file__).resolve().parent
 TR = ROOT / "tr.m3u"
 ALL = ROOT / "all.m3u"
+VERIFIED = ROOT / "a.m3u"
 STATS = ROOT / "stats.json"
 
 JUNK_NAME_RE = re.compile(
@@ -131,7 +132,8 @@ def _score(item: dict) -> tuple:
 
 
 def main() -> None:
-    source = ALL if ALL.exists() else TR
+    # Fast rebuild must never re-introduce restricted/unknown streams.
+    source = VERIFIED if VERIFIED.exists() else TR
     if not source.exists():
         raise SystemExit("No playlist source found")
 
