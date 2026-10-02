@@ -132,8 +132,9 @@ def _score(item: dict) -> tuple:
 
 
 def main() -> None:
-    # Fast rebuild must never re-introduce restricted/unknown streams.
-    source = VERIFIED if VERIFIED.exists() else TR
+    # Fast rebuild is metadata-only: preserve the already curated verified
+    # Turkey membership. New channel admission belongs to the full checker.
+    source = TR if TR.exists() else VERIFIED
     if not source.exists():
         raise SystemExit("No playlist source found")
 
