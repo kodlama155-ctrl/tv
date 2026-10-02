@@ -114,13 +114,9 @@ def _admit(meta: str, category: str, url: str) -> tuple[bool, str]:
 
     # Anything the catalog/category engine recognizes is accepted.
     if category != "Diğer":
+        if fold(name).strip() == "trt":
+            return False, "ambiguous-placeholder"
         return True, "recognized"
-
-    # For new/uncatalogued channels, require an explicit Turkish tvg identity.
-    # This keeps legitimate newly discovered/local stations while rejecting
-    # anonymous provider aliases and unrelated streams.
-    if country_from_tvg_id(meta) == "tr":
-        return True, "new-tr-channel"
 
     return False, "unreviewed"
 
