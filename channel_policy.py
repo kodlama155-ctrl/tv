@@ -161,7 +161,19 @@ def fold(text: str) -> str:
 
 
 def normalize_identity(text: str) -> str:
-    value = fold(text)
+    # Provider playlists often prefix display names with country markers such
+    # as "TR:ATV" and append transport/quality labels such as "HQ", "test"
+    # or "vpn". Those are stream-variant labels, not channel identities.
+    raw = str(text or "").strip()
+    raw = re.sub(r"^\s*tr\s*[:|_-]\s*", "", raw, flags=re.I)
+    raw = re.sub(
+        r"(?:\s+|[-_/])(?:test|vpn|hq|backup|yedek)\s*$",
+        "",
+        raw,
+        flags=re.I,
+    )
+
+    value = fold(raw)
     value = re.sub(r"@[^@]+$", "", value)
     value = re.sub(r"\.(?:tr|cy|uk|de|fr|az|iq|ir|ca|us|kg)$", "", value)
     value = re.sub(r"\[[^\]]*\]", "", value)
