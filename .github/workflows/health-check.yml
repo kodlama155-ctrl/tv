@@ -19,8 +19,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: emirtv-stream-health
-  cancel-in-progress: true
+  group: emirtv-playlist-writes
+  cancel-in-progress: false
 
 jobs:
   health:
