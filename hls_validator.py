@@ -17,6 +17,12 @@ MAX_SEGMENT_BYTES = 128_000
 RESTRICTED_CODES = {401, 403, 451}
 DEAD_CODES = {404, 410}
 
+RESTRICTION_KINDS = {
+    401: "auth_required",
+    403: "forbidden",
+    451: "geo_restricted",
+}
+
 def _safe_header_value(value):
     if value is None:
         return None
@@ -72,6 +78,9 @@ def _failure_for_http(code: int) -> str:
     if code in DEAD_CODES:
         return "dead"
     return "unknown"
+
+def _restriction_kind(code: int) -> str | None:
+    return RESTRICTION_KINDS.get(code)
 
 def _text(data: bytes) -> str:
     return data.decode("utf-8", errors="replace").lstrip("\ufeff")
@@ -296,10 +305,10 @@ def _verify_media(
                 opener=opener,
             )
             if not (200 <= code < 400):
-                failures.append(("unknown", f"segment HTTP {code}"))
+                failures.append(("unknown", f"segment HTTP {code}", None))
                 continue
             if not _payload_looks_media(final_url, data, ctype, info["encrypted"]):
-                failures.append(("unknown", "segment payload invalid"))
+                failures.append(("unknown", "segment payload invalid", None))
                 continue
 
             return {
@@ -313,11 +322,11 @@ def _verify_media(
             }
 
         except urllib.error.HTTPError as e:
-            failures.append((_failure_for_http(e.code), f"segment HTTP {e.code}"))
+            failures.append((_failure_for_http(e.code), f"segment HTTP {e.code}", _restriction_kind(e.code)))
         except Exception as e:
-            failures.append(("unknown", f"segment {type(e).__name__}"))
+            failures.append(("unknown", f"segment {type(e).__name__}", None))
 
-    failure_statuses = [status for status, _ in failures]
+    failure_statuses = [status for status, _, _ in failures]
     if failure_statuses and all(status == "restricted" for status in failure_statuses):
         final_status = "restricted"
     else:
@@ -328,7 +337,8 @@ def _verify_media(
     return {
         **base,
         "status": final_status,
-        "reason": "; ".join(reason for _, reason in failures[:3]) or "no playable segment",
+        "reason": "; ".join(reason for _, reason, _ in failures[:3]) or "no playable segment",
+        "restriction_kind": next((kind for status, _, kind in failures if status == "restricted" and kind), None),
         "segment_probes": len(failures),
         "encrypted": info["encrypted"],
         "vod": info["vod"],
@@ -360,6 +370,7 @@ def _validate_hls_attempt(
     except urllib.error.HTTPError as e:
         return {
             "status": _failure_for_http(e.code),
+            "restriction_kind": _restriction_kind(e.code),
             "reason": f"manifest HTTP {e.code}",
             "http_code": e.code,
         }
@@ -409,7 +420,7 @@ def _validate_hls_attempt(
             )
             vtext = _text(vdata)
             if "#EXTM3U" not in vtext[:2048]:
-                failures.append("variant not HLS")
+                failures.append(("unknown", "variant not HLS", None))
                 continue
 
             result = _verify_media(
@@ -429,17 +440,19 @@ def _validate_hls_attempt(
             failures.append((
                 result.get("status", "unknown"),
                 result.get("reason", result.get("status", "unknown")),
+                result.get("restriction_kind"),
             ))
 
         except urllib.error.HTTPError as e:
             failures.append((
                 _failure_for_http(e.code),
                 f"variant HTTP {e.code}",
+                _restriction_kind(e.code),
             ))
         except Exception as e:
-            failures.append(("unknown", type(e).__name__))
+            failures.append(("unknown", type(e).__name__, None))
 
-    statuses = [status for status, _ in failures]
+    statuses = [status for status, _, _ in failures]
     if statuses and all(status == "restricted" for status in statuses):
         final_status = "restricted"
     elif statuses and all(status == "drm" for status in statuses):
@@ -449,7 +462,8 @@ def _validate_hls_attempt(
 
     return {
         "status": final_status,
-        "reason": "; ".join(reason for _, reason in failures[:3]) or "no playable variant",
+        "reason": "; ".join(reason for _, reason, _ in failures[:3]) or "no playable variant",
+        "restriction_kind": next((kind for status, _, kind in failures if status == "restricted" and kind), None),
         "variants": len(variants),
     }
 
@@ -463,10 +477,52 @@ def validate_hls(
     referrer: str | None = None,
 ):
     result = _validate_hls_attempt(url, user_agent=user_agent, referrer=referrer)
-    if result.get("status") == "unknown" and not user_agent:
-        # Paced retry with VLC player UA for IPTV/streaming servers that throttle standard browser headers
-        vlc_result = _validate_hls_attempt(url, user_agent=VLC_FALLBACK_UA, referrer=referrer)
+
+    # Unknown responses and plain 403 responses deserve one browser/player retry.
+    # 401 (auth) and 451 (geo/legal) are kept as-is instead of wasting repeated probes.
+    should_retry = (
+        result.get("status") == "unknown"
+        or (
+            result.get("status") == "restricted"
+            and result.get("restriction_kind") == "forbidden"
+        )
+    )
+
+    if should_retry and not user_agent:
+        vlc_result = _validate_hls_attempt(
+            url,
+            user_agent=VLC_FALLBACK_UA,
+            referrer=referrer,
+        )
         if vlc_result.get("status") == "verified":
             vlc_result["fallback_user_agent"] = VLC_FALLBACK_UA
             return vlc_result
+
+        # Some CDNs reject requests without Referer/Origin even when the stream
+        # itself is public. When no explicit referrer exists, try the stream
+        # origin as a conservative same-origin fallback.
+        if (
+            result.get("restriction_kind") == "forbidden"
+            and not referrer
+        ):
+            try:
+                parsed = urllib.parse.urlsplit(url)
+                inferred_referrer = (
+                    f"{parsed.scheme}://{parsed.netloc}/"
+                    if parsed.scheme and parsed.netloc
+                    else None
+                )
+            except Exception:
+                inferred_referrer = None
+
+            if inferred_referrer:
+                browser_result = _validate_hls_attempt(
+                    url,
+                    user_agent=UA,
+                    referrer=inferred_referrer,
+                )
+                if browser_result.get("status") == "verified":
+                    browser_result["fallback_referrer"] = inferred_referrer
+                    return browser_result
+
     return result
