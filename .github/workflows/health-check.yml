@@ -12,7 +12,6 @@ on:
       - "targeted_discover.py"
       - "targeted_repair.py"
       - "deep_probe.py"
-      - "hls_validator.py"
       - ".github/workflows/health-check.yml"
 
 permissions:
