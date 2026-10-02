@@ -32,6 +32,7 @@ from channel_policy import (
     tvg_id,
 )
 from category_engine import channel_sort_key, order_decision
+from channel_catalog import category_for_channel
 from hls_validator import validate_hls
 
 ROOT = Path(__file__).resolve().parent
@@ -271,18 +272,29 @@ VALIDATION_REPORT_META_KEYS = {
 
 def prevalidation_candidate_decision(entry: dict) -> tuple[str, str]:
     meta = entry.get("meta", "")
+    name = channel_name(meta)
+    tvg = tvg_id(meta)
+
+    # Direct catalog identity check comes first. This avoids dropping known
+    # channels when an upstream supplies odd group-title/category metadata.
+    catalog_category = category_for_channel(tvg, name)
+    if catalog_category:
+        if fold(name).strip() == "trt":
+            return "reject", "ambiguous-placeholder"
+        return "accept", "catalog-identity"
+
     decision = category_decision(meta)
     category = decision.get("category", "Diğer")
 
     if category != "Diğer":
-        return "accept", "catalog"
+        if fold(name).strip() == "trt":
+            return "reject", "ambiguous-placeholder"
+        return "accept", "category-engine"
 
     source_kind = entry.get("source_kind", "unknown")
     if source_kind in {"priority", "official_html", "official_api", "official_browser"}:
         return "accept", "trusted-source"
 
-    name = channel_name(meta)
-    tvg = tvg_id(meta)
     folded = fold(name)
 
     if re.search(r"[\u0400-\u04ff]", name):
