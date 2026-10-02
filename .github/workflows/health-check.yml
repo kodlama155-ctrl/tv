@@ -105,6 +105,9 @@ jobs:
             --targets unknown_targets.json \
             --report unknown_repair_result.json
 
+      - name: Apply ready verified fallbacks
+        run: python apply_fallbacks.py
+
       - name: Search only confirmed dead channels
         if: steps.health.outputs.repair_count != '0'
         env:
@@ -172,6 +175,8 @@ jobs:
             repair_discovered.m3u
             repair_discovery_stats.json
             repair_result.json
+            fallback_repairs.json
+            fallback_apply_result.json
           if-no-files-found: ignore
           retention-days: 3
 
