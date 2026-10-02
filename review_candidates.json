@@ -1,0 +1,390 @@
+{
+  "updated_at_utc": "2026-10-02T19:19:53.317728+00:00",
+  "count": 48,
+  "candidates": [
+    {
+      "name": "Al-Rafidain TV (720p) [Not 24/7]",
+      "tvg_id": "AlRafidainTV.tr@SD",
+      "url": "https://arrafidain.tvplayer.online/arrafidaintv/source/playlist.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Box Office 1",
+      "tvg_id": "beINBoxOffice1.tr@SD",
+      "url": "https://nord.ayakkabiparti.lol/box1/index.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Box Office 2",
+      "tvg_id": "beINBoxOffice2.tr@SD",
+      "url": "https://nord.ayakkabiparti.lol/box2/index.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Box Office 3",
+      "tvg_id": "beINBoxOffice3.tr@SD",
+      "url": "https://nord.ayakkabiparti.lol/box3/index.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Movies Stars",
+      "tvg_id": "beINMoviesStars.tr@SD",
+      "url": "https://nord.ayakkabiparti.lol/bsaction1/index.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Movies Turk",
+      "tvg_id": "beINMoviesTurk.tr@SD",
+      "url": "https://nord.ayakkabiparti.lol/bsturk/index.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Berat TV (720p) [Not 24/7]",
+      "tvg_id": "BeratTV.tr@SD",
+      "url": "https://cdn-berattv.yayin.com.tr/berattv/berattv/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Bizimev TV (720p)",
+      "tvg_id": "BizimevTV.tr@SD",
+      "url": "https://mn-nl.mncdn.com/blutv_bizimev/bizimev_sd.smil/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "CGTN Documentary",
+      "tvg_id": "CGTNDocumentary.tr@SD",
+      "url": "https://mn-nl.mncdn.com/dogusdyg_drone/cgtn/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Deha TV (720p) [Geo-blocked]",
+      "tvg_id": "DehaTV.tr@SD",
+      "url": "https://live.artidijitalmedya.com/artidijital_dehatv/dehatv/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM 24B",
+      "tvg_id": "GEM24B.tr@SD",
+      "url": "https://ca-rt.onetv.app/gem24b/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Bollywood",
+      "tvg_id": "GEMBollywood.tr@SD",
+      "url": "https://ca-rt.onetv.app/gembollywood/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Classic",
+      "tvg_id": "GEMClassic.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemclassic/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Comedy",
+      "tvg_id": "GEMComedy.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemcomedy/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Drama",
+      "tvg_id": "GEMDrama.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemdrama/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Drama Plus",
+      "tvg_id": "GEMDramaPlus.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemdramaplus/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Entertainment",
+      "tvg_id": "GEMEntertainment.tr@SD",
+      "url": "https://ca-rt.onetv.app/gementertainment/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Fit",
+      "tvg_id": "GEMFit.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemfit/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Food",
+      "tvg_id": "GEMFood.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemfood/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Junior",
+      "tvg_id": "GEMJunior.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemjunior/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Kids",
+      "tvg_id": "GEMKids.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemkids/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Life",
+      "tvg_id": "GEMLife.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemlife/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Mifa",
+      "tvg_id": "GEMMifa.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemmifa/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Mifa Plus",
+      "tvg_id": "GEMMifaPlus.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemmifaplus/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Nature",
+      "tvg_id": "GEMNature.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemnature/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Onyx",
+      "tvg_id": "GEMOnyx.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemonyx/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM River",
+      "tvg_id": "GEMRiver.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemriver/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM River Plus",
+      "tvg_id": "GEMRiverPlus.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemriverplus/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Rubix",
+      "tvg_id": "GEMRubix.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemrubix/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Rubix Plus",
+      "tvg_id": "GEMRubixPlus.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemrubixplus/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Series",
+      "tvg_id": "GEMSeries.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemseries/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Series Plus",
+      "tvg_id": "GEMSeriesPlus.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemseriesplus/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM Sport",
+      "tvg_id": "GEMSport.tr@SD",
+      "url": "https://steep-wildflower-284d.nhhwkiszzzvcuojxdo.workers.dev/?url=https://gg.hls2.xyz/live/IR+-+GEM+Sport/chunks.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM TV",
+      "tvg_id": "GEMTV.tr@SD",
+      "url": "https://ca-rt.onetv.app/gem/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GEM TV Plus",
+      "tvg_id": "GEMTVPlus.tr@SD",
+      "url": "https://ca-rt.onetv.app/gemtvplus/index-0.m3u8?token=onetv202",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "GRT (900p)",
+      "tvg_id": "GRT.tr@SD",
+      "url": "https://live.artidijitalmedya.com/artidijital_grt/grt1/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Kanal 68 (720p) [Not 24/7]",
+      "tvg_id": "Kanal68.tr@SD",
+      "url": "https://live.artidijitalmedya.com/artidijital_kanal68/kanal68/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Kanal Z (1080p) [Geo-blocked]",
+      "tvg_id": "KanalZ.tr@SD",
+      "url": "https://live.artidijitalmedya.com/artidijital_kanalz/kanalz/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "MovieSmart Turk (576p)",
+      "tvg_id": "MovieSmartTurk.tr@SD",
+      "url": "http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "On 6 (1080p)",
+      "tvg_id": "On6.tr@SD",
+      "url": "https://live.artidijitalmedya.com/artidijital_kanal16/kanal16/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Qaf TV (1080p)",
+      "tvg_id": "QafTV.tr@SD",
+      "url": "https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Show Turk (1080p)",
+      "tvg_id": "ShowTurk.tr@SD",
+      "url": "https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Tatlises TV (1080p) [Not 24/7]",
+      "tvg_id": "TatlisesTV.tr@SD",
+      "url": "https://live.artidijitalmedya.com/artidijital_tatlisestv/tatlisestv/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "TMB",
+      "tvg_id": "TMB.tr@SD",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/tmb-tv.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Trabzon Buyuksehir Belediyesi TV (1080p)",
+      "tvg_id": "TrabzonBuyuksehirBelediyesiTV.tr@FHD",
+      "url": "https://tv191.radyotelekom.com.tr:3612/stream/play.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Trakya Türk TV (720p)",
+      "tvg_id": "TrakyaTurk.tr@SD",
+      "url": "https://live.artidijitalmedya.com/artidijital_trakyaturk/trakyaturk/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "ÜÜ TV Üsküdar Üniversitesi TV (1080p) [Not 24/7]",
+      "tvg_id": "UUTV2.tr@SD",
+      "url": "https://uskudarunv.mediatriple.net/uskudarunv/uskudar2/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Vizyon 58 TV (720p) [Geo-blocked]",
+      "tvg_id": "Vizyon58TV.tr@SD",
+      "url": "https://live.artidijitalmedya.com/artidijital_vizyon58/vizyon58/playlist.m3u8",
+      "source_kind": "upstream",
+      "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    }
+  ]
+}

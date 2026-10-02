@@ -1,13 +1,18 @@
 {
-  "updated_at_utc": "2026-10-02T02:37:24.774728+00:00",
-  "catalog_channels": 210,
-  "channels_in_previous_tr": 206,
-  "missing_before_search": 4,
+  "updated_at_utc": "2026-10-02T19:19:21.214194+00:00",
+  "catalog_channels": 240,
+  "channels_in_previous_tr": 231,
+  "missing_before_search": 9,
   "missing_names": [
     "On4 TV",
+    "FM TV",
     "Number1 Rap TV",
+    "Elsharq TV",
     "TGRT EU",
-    "Kanal 1"
+    "Kanal 1",
+    "MTurk TV",
+    "Öncü TV",
+    "TV5"
   ],
   "batch_size": 6,
   "search_delay_seconds": 7,
@@ -15,12 +20,23 @@
     {
       "names": [
         "On4 TV",
+        "FM TV",
         "Number1 Rap TV",
+        "Elsharq TV",
         "TGRT EU",
         "Kanal 1"
       ],
-      "query": "\"On4 TV\" OR \"Number1 Rap TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
-      "search_results": 0
+      "query": "\"On4 TV\" OR \"FM TV\" OR \"Number1 Rap TV\" OR \"Elsharq TV\" OR \"TGRT EU\" OR \"Kanal 1\" extension:m3u",
+      "error": "HTTPError"
+    },
+    {
+      "names": [
+        "MTurk TV",
+        "Öncü TV",
+        "TV5"
+      ],
+      "query": "\"MTurk TV\" OR \"Öncü TV\" OR \"TV5\" extension:m3u",
+      "error": "HTTPError"
     }
   ],
   "target_report": [
@@ -31,8 +47,20 @@
       "candidates": 0
     },
     {
+      "name": "FM TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Number1 Rap TV",
       "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Elsharq TV",
+      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },
@@ -47,10 +75,28 @@
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
+    },
+    {
+      "name": "MTurk TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Öncü TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TV5",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
     }
   ],
   "files_scanned": 0,
   "unique_candidates_found": 0,
-  "errors": 0,
+  "errors": 2,
   "note": "Only channels absent from the previous tr.m3u are searched. Candidates must still pass checker.py HLS validation."
 }

@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-10-02T02:37:06.129982+00:00",
+  "updated_at_utc": "2026-10-02T19:19:03.359889+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-09-18T02:37:06.129982+00:00",
+  "cutoff_utc": "2026-09-18T19:19:03.359889+00:00",
   "repos_per_query": 50,
   "queries": [
     {
@@ -133,28 +133,35 @@
   "repos_scanned": 23,
   "stale_repos_skipped": 0,
   "playlist_file_candidates": 14,
-  "fresh_files_scanned": 8,
-  "stale_files_skipped": 6,
-  "unique_m3u8_candidates": 323,
-  "header_aware_candidates": 3,
+  "fresh_files_scanned": 7,
+  "stale_files_skipped": 7,
+  "unique_m3u8_candidates": 257,
+  "review_candidates": 5,
+  "discovery_rejections": {
+    "uncatalogued": 19,
+    "test-or-backup": 9,
+    "vod-or-event-like": 1,
+    "noisy-provider": 28
+  },
+  "header_aware_candidates": 0,
   "fresh_source_files": [
+    {
+      "repo": "K3rimoff/IPTV",
+      "path": "Aze.m3u",
+      "last_commit": "2026-10-02T11:58:56Z",
+      "entries_found": 0
+    },
     {
       "repo": "FeridunN12/ibo-iptv-playlist",
       "path": "combined.m3u",
-      "last_commit": "2026-10-01T09:39:02Z",
-      "entries_found": 145
+      "last_commit": "2026-10-02T09:13:03Z",
+      "entries_found": 148
     },
     {
       "repo": "FeridunN12/ibo-iptv-playlist",
       "path": "docs/combined.m3u",
-      "last_commit": "2026-10-01T09:39:02Z",
-      "entries_found": 145
-    },
-    {
-      "repo": "K3rimoff/IPTV",
-      "path": "Aze.m3u",
-      "last_commit": "2026-09-30T21:55:31Z",
-      "entries_found": 0
+      "last_commit": "2026-10-02T09:13:03Z",
+      "entries_found": 148
     },
     {
       "repo": "GhostFelina/cortexia-tv-public",
@@ -173,12 +180,6 @@
       "path": "CAR_TV_Turkiye_Tum_130_Calisan_Final.m3u",
       "last_commit": "2026-09-22T09:53:02Z",
       "entries_found": 130
-    },
-    {
-      "repo": "YananHelena/iptvson",
-      "path": "playlist.m3u",
-      "last_commit": "2026-09-18T05:42:18Z",
-      "entries_found": 36
     }
   ],
   "errors": 0
