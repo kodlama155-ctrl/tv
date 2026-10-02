@@ -27,6 +27,7 @@ from channel_policy import (
     fold,
     normalize_identity,
     normalize_meta,
+    representative_score,
     select_representatives,
     tvg_id,
 )
