@@ -73,11 +73,9 @@ https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?app=tv8bucuk_web&ce=3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://tv-trt2.medya.trt.com.tr/master.m3u8
 
-
 # TV8.5 stable direct CDN candidate (Turknet/ERCDN, no SID/app token).
 #EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal",TV8.5
 https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk_1080p.m3u8
-
 
 # --- TRT 2 targeted probe round ---
 
@@ -92,7 +90,6 @@ https://tv-trt2-dai.medya.trt.com.tr/master.m3u8
 # BluTV DVR distribution for TRT 2.
 #EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
 https://trt2dvr.blutv.com/blutv_trt2_dvr/live.m3u8
-
 
 # --- TRT 2 BluTV header-aware probe ---
 
@@ -119,7 +116,6 @@ https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
 
-
 # --- Sports expansion ---
 
 # beIN Sports Haber: official beIN live page embeds its public YouTube live.
@@ -137,7 +133,6 @@ https://tv-trt3.live.trt.com.tr/master.m3u8
 #EXTVLCOPT:http-referrer=https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
-
 
 # --- Durable Turkuvaz device sources ---
 
@@ -207,7 +202,6 @@ https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
 
-
 # --- Haber completion ---
 
 # BengüTürk: verified public stream; Tivibu currently carries the channel
@@ -226,9 +220,6 @@ https://tv-trthaber.medya.trt.com.tr/master.m3u8
 # EKOTÜRK metadata/logo on the verified official browser-discovered stream.
 #EXTINF:-1 tvg-id="Ekoturk.tr@HD" tvg-logo="https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65" group-title="Haber",EKOTÜRK
 https://cdn.ekoturk.net/hls/master.m3u8
-
-
-
 
 # Show Max direct TurkNet ERCDN HLS candidate.
 #EXTINF:-1 tvg-id="ShowMax.tr@HD" group-title="Ulusal",Show Max
@@ -285,10 +276,6 @@ https://ip252.ozelip.com:1936/protv5/protv5/playlist.m3u8
 # --- Major broadcaster completion candidates (2026-09-30) ---
 
 # TRT 4K - widely mirrored BluTV/MNCDN feed, advertised as 2160p.
-#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K [Device-fallback]
-https://mn-nl.mncdn.com/blutv_trt4k/live.m3u8
-#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K [Device-fallback]
-https://trn03.tulix.tv/gt-trt4k/index.m3u8
 
 # ATV Avrupa - dynamic public proxy for Turkuvaz's tokenized web feed.
 #EXTINF:-1 tvg-id="ATVAvrupa.tr@SD" group-title="Uluslararası",ATV Avrupa
@@ -341,8 +328,6 @@ https://str.yodacdn.net/tmb_tr_app/tracks-v1a1/mono.m3u8?token=tmb_app_token_135
 
 # Public third-party fallbacks. No embedded username/password/token.
 # These are only promoted when hls_validator verifies a real media segment.
-#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal",TRT 4K
-https://ch.iptvmate.net/ebba59f748ffa980b43912d9354e6905.m3u8
 
 #EXTINF:-1 tvg-id="CNNTurk.tr@HD" group-title="Haber",CNN Türk
 https://ch.iptvmate.net/cf9f314c11f9d1df6e629926a55db4e2.m3u8
