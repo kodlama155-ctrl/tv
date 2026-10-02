@@ -27,7 +27,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: emirtv-playlist-maintenance
+  group: emirtv-playlist-writes
   cancel-in-progress: false
 
 jobs:
