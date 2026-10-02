@@ -8,6 +8,7 @@ on:
     paths:
       - "health_check.py"
       - "apply_fallbacks.py"
+      - "prune_unverified.py"
       - "targeted_discover.py"
       - "targeted_repair.py"
       - "deep_probe.py"
@@ -111,6 +112,10 @@ jobs:
       - name: Apply ready verified fallbacks
         run: python apply_fallbacks.py
 
+      - name: Remove unresolved unknown channels
+        if: steps.unknowns.outputs.unknown_count != '0'
+        run: python prune_unverified.py
+
       - name: Search only confirmed dead channels
         if: steps.health.outputs.repair_count != '0'
         env:
@@ -160,6 +165,10 @@ jobs:
           if fallback.exists():
               data = json.loads(fallback.read_text(encoding="utf-8"))
               print(f"Ready fallback replacements: **{data.get('applied', 0)}**")
+          pruned = Path("prune_unverified_result.json")
+          if pruned.exists():
+              data = json.loads(pruned.read_text(encoding="utf-8"))
+              print(f"Unresolved unknown channels removed: **{data.get('removed', 0)}**")
           repair = Path("repair_result.json")
           if repair.exists():
               data = json.loads(repair.read_text(encoding="utf-8"))
@@ -184,6 +193,7 @@ jobs:
             repair_result.json
             fallback_repairs.json
             fallback_apply_result.json
+            prune_unverified_result.json
           if-no-files-found: ignore
           retention-days: 3
 
