@@ -151,7 +151,15 @@ def main():
 
         final_rows.append(final)
 
-        if final["status"] in {"unknown", "restricted"} and not confirmed_dead:
+        should_deep_probe = (
+            final["status"] == "unknown"
+            or (
+                final["status"] == "restricted"
+                and final.get("restriction_kind") == "forbidden"
+            )
+        )
+
+        if should_deep_probe and not confirmed_dead:
             deep_targets.append({
                 "name": row["name"],
                 "channel_key": row["channel_key"],
@@ -161,6 +169,7 @@ def main():
                 "referrer": row.get("referrer"),
                 "health_status": final["status"],
                 "health_reason": final.get("reason"),
+                "restriction_kind": final.get("restriction_kind"),
             })
 
         if confirmed_dead:
@@ -176,11 +185,17 @@ def main():
             })
 
     counts = Counter(row["status"] for row in final_rows)
+    restriction_counts = Counter(
+        row.get("restriction_kind")
+        for row in final_rows
+        if row.get("status") == "restricted" and row.get("restriction_kind")
+    )
     payload = {
         "mode": "current-playlist-health",
         "playlist": str(Path(args.playlist).name),
         "channels_checked": len(rows),
         "status_counts": dict(counts),
+        "restriction_counts": dict(restriction_counts),
         "initial_dead": len(initial_dead),
         "confirmed_dead": len(targets),
         "dead_retry_delay_seconds": DEAD_RETRY_DELAY_SECONDS,
@@ -206,6 +221,7 @@ def main():
     print(json.dumps({
         "channels_checked": len(rows),
         "status_counts": dict(counts),
+        "restriction_counts": dict(restriction_counts),
         "initial_dead": len(initial_dead),
         "confirmed_dead": len(targets),
         "repair_target_names": [row["name"] for row in targets],
