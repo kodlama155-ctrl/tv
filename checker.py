@@ -21,6 +21,9 @@ from channel_policy import (
     canonical_name_decision,
     category_decision,
     channel_key,
+    channel_name,
+    country_from_tvg_id,
+    existing_group,
     fold,
     normalize_identity,
     normalize_meta,
@@ -335,6 +338,79 @@ def is_known_false_identity(entry: dict) -> bool:
     if key == "kanal7" and ("kanal7avr" in url or "kanal7avrupa" in url):
         return True
     return False
+
+
+TURKEY_DEVICE_GROUPS = {
+    "Ulusal", "Haber", "Spor", "Film & Dizi", "Çocuk",
+    "Belgesel", "Dini", "Müzik", "Yerel", "Uluslararası",
+}
+
+JUNK_NAME_RE = re.compile(
+    r"(?:^|[ _:/-])(?:test|vpn|backup|yedek|mac zamani|dusus?k kalite)(?:$|[ _:/-])",
+    re.I,
+)
+
+NON_CHANNEL_NAME_RE = re.compile(
+    r"(?:\b(?:film|movie|polis|smackdown|fight pass)\b|"
+    r"^[0-9]+$|"
+    r"[\u0400-\u04ff])",
+    re.I,
+)
+
+PROVIDER_VARIANT_RE = re.compile(
+    r"^\s*TR\s*[:|_-]|\b(?:HQ|UHD|FHD|50FPS)\b",
+    re.I,
+)
+
+
+def turkey_device_decision(item: dict) -> tuple[bool, str]:
+    """Decide whether a selected stream belongs in the curated Turkey device list."""
+    category = item.get("category") or ""
+    meta = item.get("meta") or ""
+    name = item.get("name") or channel_name(meta)
+    source_name = item.get("source_name") or ""
+    source_kind = item.get("source_kind") or "unknown"
+    original_group = existing_group(meta)
+    country = country_from_tvg_id(meta)
+
+    # Curated catalog decisions are authoritative.
+    if category in TURKEY_DEVICE_GROUPS and category != "Diğer":
+        return True, "curated-category"
+
+    folded_name = fold(name)
+    if (
+        JUNK_NAME_RE.search(name)
+        or NON_CHANNEL_NAME_RE.search(name)
+        or PROVIDER_VARIANT_RE.search(name)
+    ):
+        return False, "junk-or-provider-variant"
+
+    # Discovery/provider dumps with no stable channel identity do not enter tr.m3u.
+    if not tvg_id(meta):
+        return False, "no-stable-tvg-id"
+
+    # A .tr channel identity is a strong signal, but only for an actually
+    # verified/restricted live HLS candidate. This recovers legitimate new/local
+    # Turkish channels without accepting anonymous provider aliases.
+    if country == "tr":
+        if source_kind in {"github_discovery", "upstream"}:
+            host = stream_domain(item.get("url", ""))
+            # Common noisy provider dumps may still be searched for alternatives,
+            # but unknown channels from them are not promoted into the device list.
+            if host.endswith("europlayiptv.de") or host.endswith("prosto.tv"):
+                return False, "noisy-provider"
+        return True, "strong-tr-identity"
+
+    # If an upstream explicitly supplied a known EmirTV group and the service
+    # identity is Turkish-labelled by name/source metadata, allow it cautiously.
+    if original_group in TURKEY_DEVICE_GROUPS and (
+        "turk" in folded_name
+        or "turkiye" in folded_name
+        or "tr@" in fold(tvg_id(meta))
+    ):
+        return True, "strong-turkey-metadata"
+
+    return False, "unreviewed"
 
 
 def write_playlist(path: Path, entries):
@@ -984,9 +1060,9 @@ def main():
             )
         )
 
-        # tr.m3u is the curated Turkey device playlist. Unreviewed discoveries
-        # belong in validation/all outputs, not in the device list.
-        if item.get("category") == "Diğer":
+        device_ok, device_reason = turkey_device_decision(item)
+        item["turkey_device_reason"] = device_reason
+        if not device_ok:
             include = False
 
         if not include:
@@ -1080,6 +1156,11 @@ def main():
         "unique_entries": len(candidates),
         "unique_stream_candidates": len(candidates),
         "semantic_channels": len(selected),
+        "turkey_device_channels": len(turkey_candidates),
+        "turkey_device_reasons": dict(Counter(
+            item.get("turkey_device_reason", "curated-category")
+            for item in turkey_candidates
+        )),
         "duplicate_stream_variants_collapsed": max(
             0, len(candidates) - len(selected)
         ),
