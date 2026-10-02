@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "checker.py"
+      - "priority_sources.m3u"
       - "hls_validator.py"
       - "discover.py"
       - "missing_discover.py"
