@@ -197,13 +197,10 @@ def main():
 
         final_rows.append(final)
 
-        should_deep_probe = (
-            final["status"] == "unknown"
-            or (
-                final["status"] == "restricted"
-                and final.get("restriction_kind") == "forbidden"
-            )
-        )
+        # tr.m3u is verified-only. Any current link that falls back to
+        # unknown or restricted must be deep-checked and either replaced with
+        # a verified alternative or removed from the device playlist.
+        should_deep_probe = final["status"] in {"unknown", "restricted"}
 
         if should_deep_probe and not confirmed_dead:
             deep_targets.append({
