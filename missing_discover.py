@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parent
 TR = ROOT / "tr.m3u"
 OUTPUT = ROOT / "missing_discovered.m3u"
 STATS = ROOT / "missing_discovery_stats.json"
+VALIDATION = ROOT / "validation.json"
 
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
@@ -169,6 +170,35 @@ def existing_keys() -> set[str]:
     return keys
 
 
+def prior_validation_health() -> dict[str, dict[str, bool]]:
+    """Return per identity whether prior validation saw it and verified it."""
+    if not VALIDATION.exists():
+        return {}
+    try:
+        rows = json.loads(VALIDATION.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+    health: dict[str, dict[str, bool]] = {}
+    for row in rows if isinstance(rows, list) else []:
+        keys = {
+            key
+            for key in (
+                normalize_identity(row.get("channel_key", "")),
+                normalize_identity(row.get("tvg_id", "")),
+                normalize_identity(row.get("name", "")),
+                normalize_identity(row.get("original_name", "")),
+            )
+            if key
+        }
+        for key in keys:
+            state = health.setdefault(key, {"seen": False, "verified": False})
+            state["seen"] = True
+            if row.get("status") == "verified":
+                state["verified"] = True
+    return health
+
+
 def source_is_turkish(item: dict, meta: str) -> bool:
     repo = item.get("repository", {}) or {}
     text = " ".join([
@@ -218,10 +248,26 @@ def batches(items, size):
 def main():
     now = dt.datetime.now(dt.timezone.utc)
     present = existing_keys()
-    missing = [
-        row for row in CHANNELS
-        if not (target_keys(row) & present)
-    ]
+    prior_health = prior_validation_health()
+
+    def needs_search(row: dict) -> bool:
+        keys = target_keys(row)
+        if not (keys & present):
+            return True
+
+        matched_states = [
+            prior_health[key]
+            for key in keys
+            if key in prior_health
+        ]
+        # If the previous full validation actually tested this channel and
+        # none of its variants reached a real media segment, search again
+        # even though an old row still exists in tr.m3u.
+        if matched_states and not any(state["verified"] for state in matched_states):
+            return True
+        return False
+
+    missing = [row for row in CHANNELS if needs_search(row)]
 
     reports = {
         row["name"]: {
@@ -328,6 +374,7 @@ def main():
         "catalog_channels": len(CHANNELS),
         "channels_in_previous_tr": len(CHANNELS) - len(missing),
         "missing_before_search": len(missing),
+        "prior_validation_aware": True,
         "missing_names": [row["name"] for row in missing],
         "batch_size": BATCH_SIZE,
         "search_delay_seconds": SEARCH_DELAY_SECONDS,
@@ -337,8 +384,9 @@ def main():
         "unique_candidates_found": len(found),
         "errors": errors,
         "note": (
-            "Only channels absent from the previous tr.m3u are searched. "
-            "Candidates must still pass checker.py HLS validation."
+            "Channels absent from tr.m3u or present but lacking any verified "
+            "variant in the previous validation are searched. Candidates must "
+            "still pass checker.py HLS validation."
         ),
     }
 
