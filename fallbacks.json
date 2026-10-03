@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-02T21:57:04.361404+00:00",
-  "count": 44,
+  "updated_at_utc": "2026-10-03T03:00:58.210885+00:00",
+  "count": 42,
   "channels": {
     "24tv": {
       "channel_key": "24tv",
@@ -28,7 +28,7 @@
       "channel_key": "ahaber",
       "name": "A Haber",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=NUwDdE1EAKBNOthWtkxtmg&e=1791021705",
+      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=6s2VWWe5iXnEguPbXcNUow&e=1791040249",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -39,7 +39,7 @@
       "channel_key": "apara",
       "name": "A Para",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/apara/apara.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=ISFjzTvWYeaWG0Fl3bMTig&e=1791021711",
+      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=6Su-ypWt3xadlSpVRefm9g&e=1791040255",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -50,7 +50,7 @@
       "channel_key": "aspor",
       "name": "A Spor",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
-      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=MbjnwHVhZXUvGXhgARyArw&e=1791021708",
+      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=bUUT8Zgt_Htmo7i8_Q0BMw&e=1791040252",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -65,6 +65,17 @@
       "fallback_status": "verified",
       "fallback_source_kind": "upstream",
       "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
+    },
+    "babytv": {
+      "channel_key": "babytv",
+      "name": "BabyTV",
+      "primary_url": "http://138.121.15.230:9002/BABY-TV/index.m3u8",
+      "fallback_url": "http://181.78.12.119:16123/play/ch01/index.m3u8",
+      "fallback_status": "verified",
+      "fallback_source_kind": "github_discovery",
+      "fallback_source_name": "missing_discovered.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -112,17 +123,6 @@
       "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       "fallback_referrer": "https://cdn.ekoturk.net/2.html?embed=1"
     },
-    "fmtv": {
-      "channel_key": "fmtv",
-      "name": "FM TV",
-      "primary_url": "https://s2.tvdatta.com:3307/hybrid/play.m3u8",
-      "fallback_url": "http://463758a0.ucomist.net/iptv/V4ZVP6G52HVXDE/6789/index.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "haber61tv": {
       "channel_key": "haber61tv",
       "name": "Haber61 TV",
@@ -156,17 +156,6 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
-    "kanal34": {
-      "channel_key": "kanal34",
-      "name": "Kanal 34",
-      "primary_url": "https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8",
-      "fallback_url": "https://live.euromediacenter.com/kanal34/tracks-v1a1/mono.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "kanal7avrupa": {
       "channel_key": "kanal7avrupa",
       "name": "Kanal 7 Avrupa",
@@ -175,17 +164,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "priority",
       "fallback_source_name": "priority_sources.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "kanalavrupa": {
-      "channel_key": "kanalavrupa",
-      "name": "Kanal Avrupa",
-      "primary_url": "https://api-tv27.yayin.com.tr/kanalavrupa/index.m3u8",
-      "fallback_url": "http://cdn-kanalavrupa.yayin.com.tr/kanalavrupa/index.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -365,6 +343,17 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
+    "trt": {
+      "channel_key": "trt",
+      "name": "TRT",
+      "primary_url": "http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/4001/index.m3u8",
+      "fallback_url": "http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/HW7DHBZQE4ZYG9/4001/index.m3u8",
+      "fallback_status": "verified",
+      "fallback_source_kind": "github_discovery",
+      "fallback_source_name": "discovered.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
+    },
     "trt1": {
       "channel_key": "trt1",
       "name": "TRT 1",
@@ -373,17 +362,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "github_discovery",
       "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "trt4k": {
-      "channel_key": "trt4k",
-      "name": "TRT 4K",
-      "primary_url": "http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/4001/index.m3u8",
-      "fallback_url": "http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/HW7DHBZQE4ZYG9/4001/index.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
