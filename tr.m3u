@@ -87,8 +87,6 @@ https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/playlist.m3u8
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
 #EXTINF:-1 tvg-id="HalkTV.tr@SD" tvg-logo="https://i.imgur.com/xM0HA30.png" group-title="Haber",Halk TV
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber" tvg-logo="https://i.imgur.com/b9JcIqF.png",TELE1
-https://tele1-live.ercdn.net/tele1/tele1_1080p.m3u8
 #EXTINF:-1 group-title="Haber" tvg-logo="https://i.ibb.co/F4csSTY/ekoturk.png",EKOTÜRK
 #EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -134,8 +132,6 @@ https://tjktv-live.tjk.org/tjktv.m3u8
 #EXTINF:-1 tvg-id="BBCFirst.uk@Turkiye" tvg-logo="https://i.imgur.com/UBoBYUI.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Film & Dizi",BBC First
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.15.29/live/bbc_first/index.m3u8
-#EXTINF:-1 tvg-id="Cine1.tr@SD" group-title="Film & Dizi" tvg-logo="https://cine1.com.tr/images/cine1tvas.png",Cine 1
-https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
 #EXTINF:-1 tvg-id="GEMPixel.tr@SD" tvg-logo="https://i.ibb.co/Q3tkbPrn/icon-27.png" group-title="Film & Dizi",GEM Pixel
 https://glserver1.tamashaland.com/live/aBCH96886YznRbGOiqTnnQ__/stream_0.m3u8
 #EXTINF:-1 tvg-id="GrandCinema.tr@SD" group-title="Film & Dizi" tvg-logo="https://i.imgur.com/xO7uM9c.png",Grand Cinema
