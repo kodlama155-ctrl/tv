@@ -127,8 +127,6 @@ http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/2145/index.m3u8
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 #EXTINF:-1 tvg-id="HTSporTV.tr@SD" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="Spor",HT Spor
 https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
-#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor" tvg-logo="https://i.imgur.com/qBVqtYd.png",FB TV
-https://1hskrdto.rocketcdn.com/fenerbahcetv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="SportsTV.tr" group-title="Spor" tvg-logo="https://i.imgur.com/tGTVcVe.jpg",Sports TV
 http://463758a0.ucomist.net/iptv/V4ZVP6G52HVXDE/6828/index.m3u8
 #EXTINF:-1 tvg-id="BricveSatrancTV.tr@SD" tvg-logo="https://i.imgur.com/TXDV1ty.png" group-title="Spor",Bric ve Satranc TV
