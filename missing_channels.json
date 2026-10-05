@@ -1,17 +1,17 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 59,
+  "core_channels_verified": 57,
   "core_channels_geo_restricted": 5,
-  "core_channels_device_restricted": 1,
-  "core_channels_not_verified": 11,
+  "core_channels_device_restricted": 2,
+  "core_channels_not_verified": 13,
   "status_counts": {
-    "verified": 59,
+    "verified": 57,
     "restricted": 1,
     "geo-restricted": 5,
-    "absent": 1,
-    "unknown": 3,
-    "device-restricted": 1
+    "absent": 2,
+    "device-restricted": 2,
+    "unknown": 3
   },
   "missing_channels": [
     {
@@ -29,6 +29,13 @@
       "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
     },
     {
+      "name": "FM TV",
+      "expected_category": "Dini",
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
+    },
+    {
       "name": "Kanal 1",
       "expected_category": "Ulusal",
       "status": "absent",
@@ -36,18 +43,18 @@
       "candidate_url": ""
     },
     {
+      "name": "CNN Türk",
+      "expected_category": "Haber",
+      "status": "device-restricted",
+      "reason": "variant HTTP 403",
+      "candidate_url": "https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8"
+    },
+    {
       "name": "Sözcü TV",
       "expected_category": "Haber",
       "status": "unknown",
       "reason": "manifest URLError",
       "candidate_url": "https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8"
-    },
-    {
-      "name": "TRT Spor",
-      "expected_category": "Spor",
-      "status": "geo-restricted",
-      "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
-      "candidate_url": "https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor"
     },
     {
       "name": "beIN Sports Haber",
@@ -76,6 +83,13 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/babytv/index.m3u8"
+    },
+    {
+      "name": "Disney Junior",
+      "expected_category": "Çocuk",
+      "status": "geo-restricted",
+      "reason": "manifest HTTP 401",
+      "candidate_url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8"
     },
     {
       "name": "TRT Belgesel",

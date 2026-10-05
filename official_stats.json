@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-10-04T04:08:54.422160+00:00",
+  "updated_at_utc": "2026-10-05T02:31:42.572298+00:00",
   "official_pages": 38,
-  "pages_ok": 34,
+  "pages_ok": 33,
   "pages_with_candidates": 12,
   "raw_candidates": 15,
   "accepted_unique_candidates": 15,
   "probe_statuses": {
-    "verified": 7,
     "restricted": 4,
-    "unknown": 4
+    "verified": 8,
+    "unknown": 3
   },
   "sources": [
     {
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=QXNxMUUvTDhNVS9LakZhOFFvK0J0ZGlxVDN3c3ZUNUlvSVR3WWdaOTBvMD0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=YXFsbi9pdC9KZVBJeUwxVlc3eS9EcmRkNmM1NUxoWEJmUHRpd2c5aUhwZz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -269,12 +269,12 @@
     {
       "name": "Sözcü TV",
       "page": "https://www.sozcu.com.tr/sozcu-tv-canli-yayin-wp7630113",
-      "status": "ok",
-      "page_final_url": "https://www.sozcu.com.tr/sozcu-tv-canli-yayin-wp7630113",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 2,
+      "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "HTTPError"
     },
     {
       "name": "TELE1",
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=eENkSmFLZldKcmhaaFVYek1ERlNoTWhFWkRINXdwMW4yVTYvYmhLOVpSND0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=SUxrdjVFK095VjFjemdXOU93WGtCRDFMVFl3aUZvbGNNUE5HQ3lTWTVDcz0="
       ],
       "identity_rejected_candidates": 0
     },

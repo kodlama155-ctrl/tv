@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-04T04:25:17.272865+00:00",
+  "updated_at_utc": "2026-10-05T02:56:51.695624+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -45,15 +45,15 @@
     {
       "url": "local:missing_discovered.m3u",
       "status": "ok",
-      "entries": 455
+      "entries": 671
     },
     {
       "url": "local:discovered.m3u",
       "status": "ok",
-      "entries": 348
+      "entries": 366
     }
   ],
-  "raw_entries": 1877,
+  "raw_entries": 2111,
   "priority_entries": 78,
   "reuse_validation_mode": false,
   "cached_output_entries": 0,
@@ -61,40 +61,40 @@
   "official_entries": 15,
   "turkuvaz_official_entries": 7,
   "browser_official_entries": 8,
-  "discovered_entries": 348,
-  "targeted_missing_entries": 455,
-  "unique_entries": 878,
-  "unique_stream_candidates": 878,
-  "prevalidation_raw_candidates": 1247,
+  "discovered_entries": 366,
+  "targeted_missing_entries": 671,
+  "unique_entries": 1077,
+  "unique_stream_candidates": 1077,
+  "prevalidation_raw_candidates": 1446,
   "prevalidation_rejected": {
     "uncatalogued": 4,
     "noisy-provider": 314,
     "vod-or-event-like": 3
   },
   "prevalidation_review_candidates": 48,
-  "semantic_channels": 241,
-  "fallback_channels": 66,
-  "turkey_device_channels": 174,
+  "semantic_channels": 240,
+  "fallback_channels": 67,
+  "turkey_device_channels": 179,
   "turkey_device_reasons": {
-    "curated-category": 174
+    "curated-category": 179
   },
-  "duplicate_stream_variants_collapsed": 637,
+  "duplicate_stream_variants_collapsed": 837,
   "filtered_private_style_entries": 0,
-  "filtered_false_identity_entries": 6,
-  "header_aware_entries": 64,
+  "filtered_false_identity_entries": 8,
+  "header_aware_entries": 75,
   "validation_cache_enabled": false,
   "validation_cache_hits": 0,
-  "validation_fresh_checks": 878,
+  "validation_fresh_checks": 1077,
   "selected_stream_sources": {
-    "github_discovery": 26,
-    "priority": 34,
-    "upstream": 33,
+    "github_discovery": 33,
+    "priority": 33,
     "official_html": 7,
+    "upstream": 36,
     "official_api": 3,
     "official_browser": 2,
-    "iptv_org": 136
+    "iptv_org": 126
   },
-  "domain_score_count": 289,
+  "domain_score_count": 308,
   "top_domain_scores": [
     {
       "domain": "rnttwmjcin.turknet.ercdn.net",
@@ -106,17 +106,6 @@
       "dead": 1,
       "drm": 0,
       "verified_rate": 95.45
-    },
-    {
-      "domain": "live.artidijitalmedya.com",
-      "score": 89.42,
-      "samples": 47,
-      "verified": 43,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 4,
-      "drm": 0,
-      "verified_rate": 91.49
     },
     {
       "domain": "livetv.powerapp.com.tr",
@@ -141,17 +130,6 @@
       "verified_rate": 100.0
     },
     {
-      "domain": "tv8.daioncdn.net",
-      "score": 88.46,
-      "samples": 8,
-      "verified": 8,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
       "domain": "turkmedya-live.ercdn.net",
       "score": 87.5,
       "samples": 7,
@@ -163,10 +141,32 @@
       "verified_rate": 100.0
     },
     {
+      "domain": "live.artidijitalmedya.com",
+      "score": 86.11,
+      "samples": 49,
+      "verified": 43,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 6,
+      "drm": 0,
+      "verified_rate": 87.76
+    },
+    {
+      "domain": "live.duhnet.tv",
+      "score": 85.79,
+      "samples": 14,
+      "verified": 12,
+      "restricted": 1,
+      "unknown": 1,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 85.71
+    },
+    {
       "domain": "c3921155.edmonst.net",
-      "score": 86.36,
-      "samples": 6,
-      "verified": 6,
+      "score": 85.0,
+      "samples": 5,
+      "verified": 5,
       "restricted": 0,
       "unknown": 0,
       "dead": 0,
@@ -185,7 +185,40 @@
       "verified_rate": 100.0
     },
     {
-      "domain": "463758a0.ucomist.net",
+      "domain": "edge.taksimbilisim.com",
+      "score": 85.0,
+      "samples": 5,
+      "verified": 5,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    {
+      "domain": "edge2.taksimbilisim.com",
+      "score": 85.0,
+      "samples": 5,
+      "verified": 5,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    {
+      "domain": "tv-trtcocuk.medya.trt.com.tr",
+      "score": 85.0,
+      "samples": 5,
+      "verified": 5,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    {
+      "domain": "canliyayin.cine1.com.tr",
       "score": 83.33,
       "samples": 4,
       "verified": 4,
@@ -240,17 +273,6 @@
       "verified_rate": 100.0
     },
     {
-      "domain": "tv-trtcocuk.medya.trt.com.tr",
-      "score": 83.33,
-      "samples": 4,
-      "verified": 4,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
       "domain": "trkvz-live.ercdn.net",
       "score": 82.86,
       "samples": 9,
@@ -273,40 +295,18 @@
       "verified_rate": 100.0
     },
     {
+      "domain": "andro.evrenesoglu121.click",
+      "score": 81.25,
+      "samples": 3,
+      "verified": 3,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    {
       "domain": "beyaztv-live.daioncdn.net",
-      "score": 81.25,
-      "samples": 3,
-      "verified": 3,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
-      "domain": "edge.taksimbilisim.com",
-      "score": 81.25,
-      "samples": 3,
-      "verified": 3,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
-      "domain": "ensonhaber-live.ercdn.net",
-      "score": 81.25,
-      "samples": 3,
-      "verified": 3,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
-      "domain": "livetv.radyotvonline.net",
       "score": 81.25,
       "samples": 3,
       "verified": 3,
@@ -318,57 +318,57 @@
     }
   ],
   "channel_name_sources": {
-    "turksat": 361,
-    "digiturk": 93,
-    "cleaned-source": 396,
-    "official-fallback": 28
+    "turksat": 411,
+    "digiturk": 123,
+    "cleaned-source": 510,
+    "official-fallback": 33
   },
   "stream_validation_statuses": {
-    "restricted": 90,
-    "unknown": 421,
-    "verified": 318,
-    "dead": 49
+    "restricted": 110,
+    "unknown": 486,
+    "verified": 323,
+    "dead": 158
   },
-  "verified_entries": 174,
-  "restricted_entries": 17,
-  "unknown_entries": 49,
-  "unknown_retry_candidates": 66,
-  "unknown_retry_skipped_verified_sibling": 355,
+  "verified_entries": 179,
+  "restricted_entries": 21,
+  "unknown_entries": 38,
+  "unknown_retry_candidates": 71,
+  "unknown_retry_skipped_verified_sibling": 415,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 3,
   "unknown_retry_workers": 12,
-  "dead_entries": 1,
+  "dead_entries": 2,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 240,
-  "turkey_device_entries": 174,
+  "all_non_dead_non_drm_entries": 238,
+  "turkey_device_entries": 179,
   "turkey_device_geo_fallbacks": 0,
   "turkey_device_restricted_fallbacks": 0,
   "turkey_device_ephemeral_overrides": 0,
   "core_channels_total": 70,
-  "core_channels_verified": 59,
+  "core_channels_verified": 57,
   "core_channels_geo_restricted": 5,
-  "core_channels_device_restricted": 1,
-  "core_channels_not_verified": 11,
+  "core_channels_device_restricted": 2,
+  "core_channels_not_verified": 13,
   "categories_verified": {
-    "Ulusal": 23,
+    "Ulusal": 22,
     "Haber": 32,
-    "Spor": 8,
-    "Film & Dizi": 5,
-    "Çocuk": 7,
-    "Belgesel": 11,
-    "Dini": 10,
+    "Spor": 11,
+    "Film & Dizi": 4,
+    "Çocuk": 6,
+    "Belgesel": 10,
+    "Dini": 9,
     "Müzik": 18,
-    "Yerel": 39,
-    "Uluslararası": 21,
+    "Yerel": 45,
+    "Uluslararası": 22,
     "Diğer": 0
   },
   "categories_restricted": {
     "Ulusal": 2,
-    "Haber": 2,
-    "Spor": 4,
-    "Film & Dizi": 1,
-    "Çocuk": 2,
-    "Belgesel": 4,
+    "Haber": 4,
+    "Spor": 2,
+    "Film & Dizi": 2,
+    "Çocuk": 3,
+    "Belgesel": 6,
     "Dini": 0,
     "Müzik": 0,
     "Yerel": 0,
@@ -377,14 +377,14 @@
   },
   "categories_unknown": {
     "Ulusal": 1,
-    "Haber": 5,
-    "Spor": 3,
+    "Haber": 3,
+    "Spor": 2,
     "Film & Dizi": 0,
     "Çocuk": 0,
-    "Belgesel": 7,
+    "Belgesel": 6,
     "Dini": 2,
     "Müzik": 3,
-    "Yerel": 23,
+    "Yerel": 16,
     "Uluslararası": 5,
     "Diğer": 0
   }
