@@ -119,8 +119,6 @@ https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
 http://463758a0.ucomist.net/iptv/V4ZVP6G52HVXDE/6828/index.m3u8
 #EXTINF:-1 tvg-id="TRT3.tr@SD" group-title="Spor" tvg-logo="https://i.imgur.com/JrWFwBd.png",TRT 3 Spor
 https://node1-az-baku-delta.streamy.group/stream/5pfgxirw74q3netzz4tyj64v5tzfkfxn3f9xgx3n8dpuezqutzwcfg27rkw8rdmju24pm6ue3u8p3xwn7qxx4zdfqbbkc2d9e6wc6u2cggj8t7yuhh6ywpafyq66vrzwte59up87r6xxt7wc5ez48ibvv7jnkbv7jgz6vici7e======.m3u8
-#EXTINF:-1 tvg-id="BricveSatrancTV.tr@SD" tvg-logo="https://i.imgur.com/TXDV1ty.png" group-title="Spor",Bric ve Satranc TV
-http://139.162.182.79/live/test/index.m3u8
 #EXTINF:-1 tvg-id="EkolSports.tr@HD" tvg-logo="https://feo.kablowebtv.com/resize/168A635D265A4328C2883FB4CD8FF/0/0/Vod/HLS/c4ca1fe1-e4ef-496a-9e97-b41a55910e43.png" group-title="Spor",Ekol Sports
 https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 #EXTINF:-1 tvg-id="TJKTV.tr@SD" tvg-logo="https://i.imgur.com/3zHdkYG.png" group-title="Spor",TJK TV
