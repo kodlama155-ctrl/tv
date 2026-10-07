@@ -101,10 +101,6 @@ https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 https://internettv.guventechnology.com/hls/ulusaltv/index.m3u8
 #EXTINF:-1 tvg-id="TV5.tr" group-title="Haber" tvg-logo="https://i.imgur.com/Oq2Ve7C.png",TV5
 https://ip252.ozelip.com:1936/protv5/protv5/playlist.m3u8
-#EXTINF:-1 group-title="Haber" tvg-logo="https://i.imgur.com/6tWCzTp.png",A News
-#EXTVLCOPT:http-referrer=https://www.anews.com.tr/webtv/live-broadcast
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=WOeQP4BxrvhvZOdpnPnlVQ&e=1791385587
 #EXTINF:-1 tvg-id="AnadoluAgency.tr@SD" tvg-logo="https://i.imgur.com/dWElJll.png" group-title="Haber",AA Live
 https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AlmahriahTV.tr@SD" tvg-logo="https://i.imgur.com/GgEeTNr.png" group-title="Haber",Almahriah TV
@@ -163,8 +159,6 @@ https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
 https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
 #EXTINF:-1 tvg-id="NationalGeographic.tr@SD" group-title="Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",National Geographic
 http://212.5.144.156:8080/natgeo/index.m3u8
-#EXTINF:-1 tvg-id="DISCOVERY.CHANNEL.tr" tvg-name="DISCOVERY CHANNEL" tvg-logo="https://itv224234.tmp.tivibu.com.tr:6430/images/poster/20250801838478.png" group-title="Belgesel",Discovery Channel
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3H98G67KZ9HAS9/6861/index.m3u8
 #EXTINF:-1 tvg-id="LoveNature.ca@SD" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="Belgesel",Love Nature
 https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 #EXTINF:-1 tvg-id="TLC.tr" group-title="Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",TLC
@@ -181,10 +175,6 @@ http://212.42.111.152:8080/hls/manas.m3u8
 http://463758a0.ucomist.net/iptv/42L7TCH8YYKLBRHNPV52HBRN/6860/index.m3u8
 #EXTINF:-1 tvg-id="YabanTV.tr@HD" group-title="Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Yaban_TV_logo.png/512px-Yaban_TV_logo.png",Yaban TV
 http://463758a0.ucomist.net/iptv/42L7TCH8YYKLBRHNPV52HBRN/6868/index.m3u8
-#EXTINF:-1 group-title="Dini" tvg-logo="https://i.imgur.com/jw0gB8L.png",VAV TV
-#EXTVLCOPT:http-referrer=https://www.vavtv.com.tr/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=wPonjZSxOOJm7m0fYuYx9Q&e=1791385591
 #EXTINF:-1 tvg-id="TRTDiyanetCocuk.tr@SD" tvg-logo="https://i.imgur.com/8PmXz9t.png" group-title="Dini",TRT Diyanet Cocuk
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="DiyanetTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Diyanet_TV_logo.svg/960px-Diyanet_TV_logo.svg.png" group-title="Dini",Diyanet TV
@@ -351,10 +341,6 @@ https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 https://hls.4utv.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AdaTV.cy@SD" tvg-logo="https://i.imgur.com/YWmkUWU.png" group-title="Uluslararası",Ada TV
 https://yayin1.canlitv.fun/live/kibrisadatv.stream/playlist.m3u8
-#EXTINF:-1 group-title="Uluslararası" tvg-logo="https://i.tmgrup.com.tr/aav/site/v1/i/atv-avrupa-logo.png",ATV Avrupa
-#EXTVLCOPT:http-referrer=https://www.atvavrupa.tv/webtv/canli-yayin
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvavrupa/atvavrupa.m3u8?st=0Jwy71KssLU9E4swdyBLxg&e=1791385575
 #EXTINF:-1 tvg-id="ElsharqTV.tr@SD" tvg-logo="https://i.imgur.com/8vmfZb5.png" group-title="Uluslararası",Elsharq TV
 https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8
 #EXTINF:-1 tvg-id="EuroD.tr@SD" tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="Uluslararası",Euro D
