@@ -105,8 +105,6 @@ https://starmenajo.com/hls/almahriah/index.m3u8
 https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="DHA.tr@SD" tvg-logo="https://i.imgur.com/VZhag2x.png" group-title="Haber",DHA
 https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
-#EXTINF:-1 tvg-id="FinansTurkTV.tr@SD" tvg-logo="https://i.ibb.co/wBwmB1T/iY0osc7.png" group-title="Haber",Finans Turk TV
-https://yayin30.haber100.com/live/finansturk/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber" tvg-logo="https://i.imgur.com/bUsbxTQ.png",Kanal B
 https://tv.kanalb.tr/hls/kanalb/index.m3u8
 #EXTINF:-1 tvg-id="KudusTV.tr@SD" group-title="Haber" tvg-logo="https://i.imgur.com/lwRA84B.png",Kudüs TV
