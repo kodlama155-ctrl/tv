@@ -12,6 +12,13 @@ https://cdn.ekoturk.net/hls/240p.m3u8
 #EXTINF:-1 group-title="Haber",EKOTÜRK
 #EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://cdn.ekoturk.net/hls/320p.m3u8
+# SOURCE: official-browser:https://www.ekoturk.com/canli-yayin/
+# DISCOVERY: request
+# PROBE: verified real media segment verified
+#EXTINF:-1 group-title="Haber",EKOTÜRK
+#EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://cdn.ekoturk.net/hls/720p.m3u8
 # SOURCE: official-browser:https://www.ekoturk.com/canli-yayin/
 # DISCOVERY: request
@@ -47,4 +54,4 @@ https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-2
 #EXTINF:-1 group-title="Ulusal",Star TV
 #EXTVLCOPT:http-referrer=https://www.startv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8ta8zu7udamb&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3
+https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8tid8z4jftt9&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3

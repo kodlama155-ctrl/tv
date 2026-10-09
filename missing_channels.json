@@ -1,17 +1,17 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 56,
-  "core_channels_geo_restricted": 4,
-  "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 14,
+  "core_channels_verified": 53,
+  "core_channels_geo_restricted": 6,
+  "core_channels_device_restricted": 5,
+  "core_channels_not_verified": 17,
   "status_counts": {
-    "verified": 56,
+    "verified": 53,
     "restricted": 2,
-    "absent": 2,
-    "device-restricted": 4,
-    "geo-restricted": 4,
-    "unknown": 2
+    "geo-restricted": 6,
+    "absent": 1,
+    "device-restricted": 5,
+    "unknown": 3
   },
   "missing_channels": [
     {
@@ -22,11 +22,11 @@
       "candidate_url": "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8?app=f99587ad-1637-494d-8255-da35b09d17a1&ce=3"
     },
     {
-      "name": "FM TV",
-      "expected_category": "Dini",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
+      "name": "TRT 2",
+      "expected_category": "Ulusal",
+      "status": "geo-restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "Kanal 1",
@@ -36,18 +36,18 @@
       "candidate_url": ""
     },
     {
-      "name": "CNN Türk",
-      "expected_category": "Haber",
-      "status": "device-restricted",
-      "reason": "variant HTTP 403",
-      "candidate_url": "https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/ytbe/cnnturk.m3u8"
-    },
-    {
       "name": "Sözcü TV",
       "expected_category": "Haber",
       "status": "device-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://ottcdn.kablowebtv.net/live_turksat_sub3/szctv_stream/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDkvMTIvMjAyNSAwODozMjowMyBBTSZoYXNoX3ZhbHVlPWRhdzNqU2QzbGJvd0I0YmY4WU82T3c9PSZ2YWxpZG1pbnV0ZXM9Mjg4MCZpZD0xNTJiZDUzOS02MjIwLTQ0MjctYTkxNS1iZjRiZDA2OGQ3ZTgmY2xpZW50X2lwPTU3LjE1MS4xMjguMTMyJmNoZWNraXA9dHJ1ZQ=="
+    },
+    {
+      "name": "Tele1",
+      "expected_category": "Haber",
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",
@@ -62,6 +62,13 @@
       "status": "geo-restricted",
       "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
       "candidate_url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor"
+    },
+    {
+      "name": "FB TV",
+      "expected_category": "Spor",
+      "status": "device-restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8"
     },
     {
       "name": "beIN Sports Haber",
@@ -92,6 +99,13 @@
       "candidate_url": "https://ottcdn.kablowebtv.net/live_turksat_sub3/babytv_stream/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDkvMTIvMjAyNSAwODozMjowMyBBTSZoYXNoX3ZhbHVlPWRhdzNqU2QzbGJvd0I0YmY4WU82T3c9PSZ2YWxpZG1pbnV0ZXM9Mjg4MCZpZD0xNTJiZDUzOS02MjIwLTQ0MjctYTkxNS1iZjRiZDA2OGQ3ZTgmY2xpZW50X2lwPTU3LjE1MS4xMjguMTMyJmNoZWNraXA9dHJ1ZQ=="
     },
     {
+      "name": "Disney Junior",
+      "expected_category": "Çocuk",
+      "status": "geo-restricted",
+      "reason": "manifest HTTP 401",
+      "candidate_url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8"
+    },
+    {
       "name": "TRT Belgesel",
       "expected_category": "Belgesel",
       "status": "geo-restricted",
@@ -111,6 +125,13 @@
       "status": "device-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://dogus-live.daioncdn.net/dmax/dmax_720p.m3u8"
+    },
+    {
+      "name": "TLC",
+      "expected_category": "Belgesel",
+      "status": "device-restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "https://dogus-live.daioncdn.net/tlc/tlc.m3u8"
     }
   ]
 }
