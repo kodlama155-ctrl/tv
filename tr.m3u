@@ -47,8 +47,6 @@ https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
 https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
 #EXTINF:-1 tvg-id="ShowMax.tr@HD" group-title="Ulusal" tvg-logo="https://i.imgur.com/456FWA7.png",Show Max
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8
-#EXTINF:-1 tvg-logo="http://ginikoturkish.com/channels/logo/trt-4k.jpg" group-title="Ulusal",TRT
-http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/4001/index.m3u8
 #EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/TRT_4K.svg/960px-TRT_4K.svg.png",TRT 4K
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/HW7DHBZQE4ZYG9/4001/index.m3u8
 #EXTINF:-1 tvg-id="TV100.tr@HD" group-title="Haber" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/0/0f/TV100_logo.png/960px-TV100_logo.png",TV100
@@ -124,7 +122,7 @@ http://b53f0300.kazaktelekom.com/iptv/P6AFYASUFXQF7MFC4S3K6QE5/19072/index.m3u8
 #EXTINF:-1 tvg-id="ASpor.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/archive/e/e9/20140920094552%21A_Spor_logosu.png" group-title="Spor",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 #EXTINF:-1 Yedek="https://tgn.bozztv.com/dvrfl05/gin-trtspor2/playlist.m3u8" Yedek2="http://162.212.179.33:80/dvrfl05/gin-trtspor2/playlist.m3u8" Yedek3="http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/2145/index.m3u8" Yedek4="https://iptv-worker.mark-clark.workers.dev/?ID=54" tvg-id="TRT SPOR YILDIZ.tr" tvg-logo="https://vectorseek.com/wp-content/uploads/2025/12/TRT-SPOR-Yildiz-Logo-PNG-SVG-Vector.png" group-title="Spor",TRT Spor Yıldız
-http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/2145/index.m3u8
+https://node1-az-baku-delta.streamy.group/stream/5pfgxirw74q3netzz4tyj64v5tzfkfxn3f9xgx3n8dpuezqutzwcfg27rkw8rdmju24pm6ue3u8p3xwn7qxx4zdfqbbkc2d9e6wc6u2cggj8t7yuhh6ywpafyq66vrzwte59up87r6xxt7wc5ez48ibvv7jnkbv7jgz6vici7e======.m3u8
 #EXTINF:-1 tvg-id="HTSporTV.tr@SD" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="Spor",HT Spor
 https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
 #EXTINF:-1 tvg-id="BricveSatrancTV.tr@SD" tvg-logo="https://i.imgur.com/TXDV1ty.png" group-title="Spor",Bric ve Satranc TV
@@ -163,10 +161,6 @@ https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3H98G67KZ9HAS9/6861/index.m3u8
 #EXTINF:-1 tvg-id="LoveNature.ca@SD" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="Belgesel",Love Nature
 https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
-#EXTINF:-1 Yedek="https://dogus-live.daioncdn.net/tlc/tlc_720p.m3u8" Yedek2="http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/6915/index.m3u8" Yedek3="https://trn03.tulix.tv/gt-tlc-tv/index.m3u8" tvg-id="TLC.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/92/Tlc_logo_discovery.jpg" group-title="Belgesel",TLC
-http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/6915/index.m3u8
-#EXTINF:-1 Yedek1="http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/2290/index.m3u8" Yedek2="http://176.65.146.104:9981/stream/channelid/1060934145?profile=pass" tvg-id="DMAX HD.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/25/DMAX_Logo_16_05_2011.jpg" group-title="Belgesel",DMAX
-http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/2290/index.m3u8
 #EXTINF:-1 tvg-id="TarimTV.tr@SD" tvg-logo="https://i.imgur.com/q30sFms.png" group-title="Belgesel",Tarim TV
 https://content.tvkur.com/l/c7e1da7mm25p552d9u9g/master.m3u8
 #EXTINF:-1 tvg-id="CiftciTV.tr@SD" tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="Belgesel",Ciftci TV
@@ -273,8 +267,6 @@ https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8
 #EXTINF:-1 tvg-id="Kanal3.tr@SD" tvg-logo="https://i.imgur.com/eXErSv0.png" group-title="Yerel",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
-#EXTINF:-1 tvg-name="Kanal 34" group-title="Yerel" tvg-logo="https://i.imgur.com/SIaI6Sj.png",Kanal 34
-https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-id="Kanal58.tr@SD" tvg-logo="https://i.imgur.com/Rgc66sv.png" group-title="Yerel",Kanal 58
 https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalFirat.tr@SD" tvg-logo="https://i.imgur.com/3o8Rokp.png" group-title="Yerel",Kanal Firat
