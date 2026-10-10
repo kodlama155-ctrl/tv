@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-09T09:08:46.944714+00:00",
+  "updated_at_utc": "2026-10-10T08:32:10.702872+00:00",
   "official_pages": 38,
   "pages_ok": 34,
   "pages_with_candidates": 12,
@@ -55,7 +55,7 @@
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.atv.com.tr/canli-yayin",
+      "page_final_url": "https://www.atv.com.tr/a2tv/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=ZEpQRG1nR1JTRmNYSmt6S2lFRnFTSmJlenFZbTBRVUdBeGh2YkpqaFluYz0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=Z1ZESS9heVBqdjdtWGxoQ0RLYzJ4UUhhYWJmaXdlK3A0OXp6L1pEVU1aUT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=RWxOK2VFSXplVUEwQnVXZXd1S0hxMWZjNHdvOWN0c1lFWlhzK0F5N0NoYz0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=dURyWktTQXJUaTArck5pZlRrcUtQVlk1NndWeHo1dzU1NFIvRGJ4TEp2WT0="
       ],
       "identity_rejected_candidates": 0
     },
