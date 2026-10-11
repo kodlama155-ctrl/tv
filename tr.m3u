@@ -142,8 +142,6 @@ https://gcinemahls.wns.live/hls/stream.m3u8
 http://190.93.224.42/KANAL-D-DRAMA/index.m3u8
 #EXTINF:-1 tvg-id="DisneyJr.tr@SD" group-title="Çocuk" tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png",Disney Junior
 http://151.80.18.177:86/Disney_Junior_HD/index.m3u8
-#EXTINF:-1 tvg-id="TRTCocuk.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Çocuk",TRT Çocuk
-https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="MinikaCocuk.tr@SD" tvg-logo="https://i.imgur.com/VCywMTv.png" group-title="Çocuk",Minika Çocuk
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
 #EXTINF:-1 tvg-id="MinikaGo.tr@SD" tvg-logo="https://i.imgur.com/qIoipDq.png" group-title="Çocuk",Minika GO
@@ -327,8 +325,6 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee
 https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8
 #EXTINF:-1 group-title="Uluslararası" tvg-logo="https://i.imgur.com/bIGk6RN.png",KANAL AVRUPA
 https://api-tv27.yayin.com.tr/kanalavrupa/index.m3u8
-#EXTINF:-1 tvg-id="KurdistanTV.iq@SD" tvg-logo="https://i.imgur.com/mjQptpc.png" group-title="Uluslararası",Kurdistan TV
-https://5a3ed7a72ed4b.streamlock.net/live/SMIL:myStream.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="LuysTV.tr@SD" tvg-logo="https://i.imgur.com/9EruWIQ.png" group-title="Uluslararası",Luys TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="MC.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/archive/c/ca/20210921131744%21MC_TV_logosu.png" group-title="Uluslararası",MC TV
