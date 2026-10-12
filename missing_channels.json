@@ -1,17 +1,17 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 56,
-  "core_channels_geo_restricted": 3,
+  "core_channels_verified": 55,
+  "core_channels_geo_restricted": 4,
   "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 14,
+  "core_channels_not_verified": 15,
   "status_counts": {
-    "verified": 56,
-    "restricted": 2,
-    "geo-restricted": 3,
-    "absent": 2,
+    "verified": 55,
+    "restricted": 3,
+    "absent": 1,
     "device-restricted": 4,
-    "unknown": 3
+    "unknown": 3,
+    "geo-restricted": 4
   },
   "missing_channels": [
     {
@@ -20,20 +20,6 @@
       "status": "restricted",
       "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401",
       "candidate_url": "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8?app=f99587ad-1637-494d-8255-da35b09d17a1&ce=3"
-    },
-    {
-      "name": "TRT 2",
-      "expected_category": "Ulusal",
-      "status": "geo-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
-    },
-    {
-      "name": "FM TV",
-      "expected_category": "Dini",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
     },
     {
       "name": "Kanal 1",
@@ -64,6 +50,13 @@
       "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
+      "name": "TRT Spor",
+      "expected_category": "Spor",
+      "status": "geo-restricted",
+      "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403; segment HTTP 403",
+      "candidate_url": "https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor"
+    },
+    {
       "name": "FB TV",
       "expected_category": "Spor",
       "status": "device-restricted",
@@ -92,11 +85,25 @@
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
     },
     {
+      "name": "TRT Çocuk",
+      "expected_category": "Çocuk",
+      "status": "restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8"
+    },
+    {
       "name": "BabyTV Türkiye",
       "expected_category": "Çocuk",
       "status": "restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://ottcdn.kablowebtv.net/live_turksat_sub3/babytv_stream/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDkvMTIvMjAyNSAwODozMjowMyBBTSZoYXNoX3ZhbHVlPWRhdzNqU2QzbGJvd0I0YmY4WU82T3c9PSZ2YWxpZG1pbnV0ZXM9Mjg4MCZpZD0xNTJiZDUzOS02MjIwLTQ0MjctYTkxNS1iZjRiZDA2OGQ3ZTgmY2xpZW50X2lwPTU3LjE1MS4xMjguMTMyJmNoZWNraXA9dHJ1ZQ=="
+    },
+    {
+      "name": "Disney Junior",
+      "expected_category": "Çocuk",
+      "status": "geo-restricted",
+      "reason": "manifest HTTP 401",
+      "candidate_url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8"
     },
     {
       "name": "TRT Belgesel",
