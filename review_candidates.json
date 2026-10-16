@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-13T09:45:04.017172+00:00",
-  "count": 80,
+  "updated_at_utc": "2026-10-16T07:37:33.447826+00:00",
+  "count": 81,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
@@ -647,6 +647,14 @@
       "source_repo": "emrecemal/my-iptv-playlist",
       "source_path": "playlist.m3u",
       "source_updated": "2026-10-04T23:24:58Z",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Turksat Tanitim (1080p) [Geo-blocked]",
+      "tvg_id": "TurksatTanitim.tr@SD",
+      "url": "http://176.65.153.26:6004/play/a02s/index.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
       "reason": "uncatalogued-tr-identity"
     },
     {
