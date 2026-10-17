@@ -294,8 +294,6 @@ https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalFirat.tr@SD" tvg-logo="https://i.imgur.com/3o8Rokp.png" group-title="Yerel",Kanal Firat
 https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8
-#EXTINF:-1 tvg-id="KayTV.tr@SD" tvg-logo="https://i.imgur.com/MymuDJ1.png" group-title="Yerel",Kay TV
-https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
 #EXTINF:-1 tvg-id="KentTurk.tr@SD" tvg-logo="https://i.imgur.com/FQKPjsm.png" group-title="Yerel",Kent Turk
 https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8
 #EXTINF:-1 tvg-id="KocaeliTV.tr@SD" tvg-logo="https://i.imgur.com/LeTP4zq.png" group-title="Yerel",Kocaeli TV
