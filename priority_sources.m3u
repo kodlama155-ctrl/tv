@@ -106,7 +106,7 @@ https://mn-nl.mncdn.com/blutv_trt2/live.m3u8
 # --- Durable sports candidates ---
 
 # Ekol Sports: verified public ERCDN stream.
-#EXTINF:-1 tvg-id="EkolSports.tr@HD" tvg-logo="https://feo.kablowebtv.com/resize/168A635D265A4328C2883FB4CD8FF/0/0/Vod/HLS/c4ca1fe1-e4ef-496a-9e97-b41a55910e43.png" group-title="Spor",Ekol Sports
+#EXTINF:-1 tvg-id="EkolSports.tr@HD" tvg-logo="https://i.ibb.co/Y4tR1tTm/Ekolsports.jpg" group-title="Spor",Ekol Sports
 https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 
 # FB TV: official Fenerbahce CDN. GitHub runner receives 403, so this is
@@ -129,7 +129,7 @@ https://ythls.kekikakademi.org/youtube/channel/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
 https://tv-trt3.live.trt.com.tr/master.m3u8
 
 # TRT Spor official stream metadata with logo.
-#EXTINF:-1 tvg-id="TRTSpor.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/TRT_Spor_logo.svg/512px-TRT_Spor_logo.svg.png" group-title="Spor",TRT Spor [Geo-blocked]
+#EXTINF:-1 tvg-id="TRTSpor.tr@HD" tvg-logo="https://i.imgur.com/6tv0zxh.png" group-title="Spor",TRT Spor [Geo-blocked]
 #EXTVLCOPT:http-referrer=https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
@@ -167,7 +167,7 @@ https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8
 https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8
 
 # TRT Spor official stream metadata with logo.
-#EXTINF:-1 tvg-id="TRTSpor.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/TRT_Spor_logo.svg/512px-TRT_Spor_logo.svg.png" group-title="Spor",TRT Spor [Geo-blocked]
+#EXTINF:-1 tvg-id="TRTSpor.tr@HD" tvg-logo="https://i.imgur.com/6tv0zxh.png" group-title="Spor",TRT Spor [Geo-blocked]
 #EXTVLCOPT:http-referrer=https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
@@ -183,14 +183,14 @@ https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 
 # Habitat TV: active public channel; runner cannot reach the current Filbox
 # distribution reliably, so Turkey devices try it directly.
-#EXTINF:-1 tvg-id="HabitatTV.tr@HD" tvg-logo="https://wmxznm9feqh3.merlincdn.net/assets/f43178e5-e366-4ca5-80ce-30d900e2835f.png" group-title="Belgesel",Habitat TV [Device-fallback]
+#EXTINF:-1 tvg-id="HabitatTV.tr@HD" tvg-logo="https://i.imgur.com/uC5rJ0W.png" group-title="Belgesel",Habitat TV [Device-fallback]
 #EXTVLCOPT:http-referrer=https://habitattv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://59c7ea6bec1c6.streamlock.net/filbox/habibattv.stream/playlist.m3u8
 
 # Yaban TV: official channel is active on yabantv.com; retain the public
 # Streamlock distribution for Turkey-device playback.
-#EXTINF:-1 tvg-id="YabanTV.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Yaban_TV_logo.png/512px-Yaban_TV_logo.png" group-title="Belgesel",Yaban TV [Device-fallback]
+#EXTINF:-1 tvg-id="YabanTV.tr@HD" tvg-logo="https://i.imgur.com/Kq5UfQO.png" group-title="Belgesel",Yaban TV [Device-fallback]
 #EXTVLCOPT:http-referrer=https://www.yabantv.com/broadcast/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
@@ -210,11 +210,11 @@ https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 
 # Ekol TV: current public ERCDN stream.
-#EXTINF:-1 tvg-id="EkolTV.tr@HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/ekol-tv.png" group-title="Haber",Ekol TV
+#EXTINF:-1 tvg-id="EkolTV.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/62/Ekol_TV_Kanal%C4%B1n%C4%B1n_Logosu.png" group-title="Haber",Ekol TV
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
 
 # TRT Haber metadata/logo on the official stream.
-#EXTINF:-1 tvg-id="TRTHaber.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/1200px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png" group-title="Haber",TRT Haber
+#EXTINF:-1 tvg-id="TRTHaber.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png" group-title="Haber",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
 
 # EKOTÜRK metadata/logo on the verified official browser-discovered stream.

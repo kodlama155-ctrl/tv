@@ -305,15 +305,45 @@ def tvg_logo(meta: str) -> str:
     return m.group(1).strip() if m else ""
 
 
+BROKEN_LOGO_INDICATORS: tuple[str, ...] = (
+    "assets.tvcdn.net",
+    "feo.kablowebtv.com",
+    "lyngsat.com",
+    "s.cnbce.com",
+    "countries/turkey/ekol-tv.png",
+    "merlincdn.net",
+)
+
+
+def is_broken_or_unreliable_logo(logo: str) -> bool:
+    if not logo:
+        return True
+    return any(ind in logo.lower() for ind in BROKEN_LOGO_INDICATORS)
+
+
 DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
+    # TRT
+    "trthaber": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png",
+    "trthabertv": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png",
+    "trtspor": "https://i.imgur.com/6tv0zxh.png",
+    "trtspor1": "https://i.imgur.com/6tv0zxh.png",
+    "trtsportv": "https://i.imgur.com/6tv0zxh.png",
     "trt2": "https://i.imgur.com/iOCQdyD.png",
     "trt2tv": "https://i.imgur.com/iOCQdyD.png",
     "trt4k": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/TRT_4K.svg/960px-TRT_4K.svg.png",
+    # Ulusal
+    "kanald": "https://i.imgur.com/WIeZMKT.png",
+    "kanaldtv": "https://i.imgur.com/WIeZMKT.png",
+    "showtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Show_TV_logo.svg/1280px-Show_TV_logo.svg.png",
+    "showtvtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Show_TV_logo.svg/1280px-Show_TV_logo.svg.png",
+    "cnbce": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/CNBC-e_2024.svg/1280px-CNBC-e_2024.svg.png",
+    "cnbcetv": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/CNBC-e_2024.svg/1280px-CNBC-e_2024.svg.png",
     "teve2": "https://i.imgur.com/rsoSLih.png",
-    "tlc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
-    "tlctv": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
-    "dmax": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png",
-    "dmaxtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png",
+    # Haber
+    "ekoltv": "https://upload.wikimedia.org/wikipedia/commons/6/62/Ekol_TV_Kanal%C4%B1n%C4%B1n_Logosu.png",
+    "ekoltvtv": "https://upload.wikimedia.org/wikipedia/commons/6/62/Ekol_TV_Kanal%C4%B1n%C4%B1n_Logosu.png",
+    "ekoturk": "https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65",
+    "ekoturktv": "https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65",
     "tele1": "https://i.imgur.com/b9JcIqF.png",
     "tele1tv": "https://i.imgur.com/b9JcIqF.png",
     "krt": "https://i.imgur.com/9ZKqdQJ.png",
@@ -322,6 +352,18 @@ DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
     "tv5": "https://i.imgur.com/Oq2Ve7C.png",
     "liderhabertv": "https://i.imgur.com/5B42KwY.png",
     "liderhaber": "https://i.imgur.com/5B42KwY.png",
+    # Spor
+    "ekolsports": "https://i.ibb.co/Y4tR1tTm/Ekolsports.jpg",
+    "ekolsportstv": "https://i.ibb.co/Y4tR1tTm/Ekolsports.jpg",
+    # Belgesel & Diğer
+    "tlc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
+    "tlctv": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
+    "dmax": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png",
+    "dmaxtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png",
+    "habitattv": "https://i.imgur.com/uC5rJ0W.png",
+    "habitat": "https://i.imgur.com/uC5rJ0W.png",
+    "yabantv": "https://i.imgur.com/Kq5UfQO.png",
+    "yaban": "https://i.imgur.com/Kq5UfQO.png",
     "meltemtv": "https://i.imgur.com/C3m6w5S.png",
     "showmax": "https://i.imgur.com/456FWA7.png",
     "vavtv": "https://i.imgur.com/jw0gB8L.png",
@@ -341,6 +383,10 @@ DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
     "kanal32": "https://i.imgur.com/W2oN0qf.png",
     "grandcinema": "https://i.imgur.com/xO7uM9c.png",
     "persianaturkiye": "https://i.imgur.com/7p3j0hF.png",
+    "cine1": "https://i.imgur.com/agn47sQ.png",
+    "cine1tv": "https://i.imgur.com/agn47sQ.png",
+    "babytv": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/BabyTV_text_logo.svg/1280px-BabyTV_text_logo.svg.png",
+    "babytvtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/BabyTV_text_logo.svg/1280px-BabyTV_text_logo.svg.png",
 }
 
 
@@ -408,8 +454,8 @@ def normalize_meta(meta: str) -> tuple[str, str, str]:
     head = head.rstrip() + f' group-title="{category}"'
 
     current_logo = tvg_logo(head)
-    if not current_logo:
-        key = channel_key(meta, label)
+    key = channel_key(meta, label)
+    if not current_logo or is_broken_or_unreliable_logo(current_logo):
         default_logo = DEFAULT_CHANNEL_LOGOS.get(key)
         if default_logo:
             head = re.sub(r'\s+tvg-logo="[^"]*"', "", head, flags=re.I)
@@ -581,8 +627,9 @@ def select_representatives(items: list[dict]) -> list[dict]:
         )
 
         # Preserve artwork even when the best stream variant lacks metadata.
-        # Prefer logos from higher-trust variants.
-        if not tvg_logo(copy.get("meta", "")):
+        # Prefer logos from higher-trust variants and reject broken/dead URLs.
+        current_art = tvg_logo(copy.get("meta", ""))
+        if not current_art or is_broken_or_unreliable_logo(current_art):
             artwork_variants = sorted(
                 variants,
                 key=lambda row: SOURCE_PRIORITY.get(
@@ -593,7 +640,7 @@ def select_representatives(items: list[dict]) -> list[dict]:
             )
             for row in artwork_variants:
                 logo = tvg_logo(row.get("meta", ""))
-                if logo:
+                if logo and not is_broken_or_unreliable_logo(logo):
                     copy["meta"] = _set_meta_attr(
                         copy.get("meta", ""),
                         "tvg-logo",
@@ -601,7 +648,8 @@ def select_representatives(items: list[dict]) -> list[dict]:
                     )
                     break
 
-        if not tvg_logo(copy.get("meta", "")):
+        final_art = tvg_logo(copy.get("meta", ""))
+        if not final_art or is_broken_or_unreliable_logo(final_art):
             key = channel_key(copy.get("meta", ""), copy.get("name", ""))
             default_logo = DEFAULT_CHANNEL_LOGOS.get(key)
             if default_logo:
