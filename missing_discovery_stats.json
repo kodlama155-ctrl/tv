@@ -1,52 +1,46 @@
 {
-  "updated_at_utc": "2026-10-18T08:05:33.192747+00:00",
+  "updated_at_utc": "2026-10-18T09:50:30.166980+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 161,
-  "missing_before_search": 79,
+  "channels_in_previous_tr": 167,
+  "missing_before_search": 73,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
-    "Kanal 7",
-    "TRT 2",
+    "TYT Türk",
     "AKİT TV",
     "Sözcü TV",
+    "A News",
     "DİM TV",
     "Guneydogu TV",
     "Kudüs TV",
-    "TRT Spor",
-    "TRT Spor Yıldız",
-    "FB TV",
     "TRT 3 Spor",
+    "beIN Sports Haber",
     "Sports TV",
-    "FX",
     "GEM Pixel",
-    "Disney Junior",
-    "BabyTV",
-    "TRT Genc",
-    "TRT Belgesel",
     "National Geographic",
     "National Geographic Wild",
     "Habitat TV",
     "TGRT Belgesel",
     "Yaban TV",
-    "DMAX",
-    "TLC",
+    "VAV TV",
+    "Imam Hussein TV 5",
     "Sercem TV",
     "On4 TV",
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
-    "Number1 Türk TV",
     "Ada TV",
     "Kurdistan TV",
+    "MC TV",
+    "MyZen TV",
     "West Azerbaijan TV",
     "Afroturk TV",
     "Edessa TV",
     "ETV Manisa",
     "Euro Star",
     "TGRT EU",
+    "ATV Avrupa",
     "Kanal 1",
-    "Meltem TV",
     "Kanal 32",
     "Kanal Hayat",
     "MTurk TV",
@@ -55,11 +49,11 @@
     "TV 1",
     "TV 264",
     "Aras TV",
+    "TELE1",
     "KRT TV",
     "GZT",
     "S Sport",
     "S Sport 2",
-    "TJK TV 2",
     "Tabii Spor 6",
     "Discovery Channel",
     "Tarih TV",
@@ -87,157 +81,7 @@
   ],
   "batch_size": 8,
   "search_delay_seconds": 3,
-  "search_batches": [
-    {
-      "names": [
-        "TRT 4K",
-        "Kanal 7",
-        "TRT 2",
-        "AKİT TV",
-        "Sözcü TV",
-        "DİM TV",
-        "Guneydogu TV",
-        "Kudüs TV"
-      ],
-      "query": "\"TRT 4K\" OR \"Kanal 7\" OR \"TRT 2\" OR \"AKİT TV\" OR \"Sözcü TV\" OR \"DİM TV\" OR \"Guneydogu TV\" OR \"Kudüs TV\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "TRT Spor",
-        "TRT Spor Yıldız",
-        "FB TV",
-        "TRT 3 Spor",
-        "Sports TV",
-        "FX",
-        "GEM Pixel",
-        "Disney Junior"
-      ],
-      "query": "\"TRT Spor\" OR \"TRT Spor Yıldız\" OR \"FB TV\" OR \"TRT 3 Spor\" OR \"Sports TV\" OR \"FX\" OR \"GEM Pixel\" OR \"Disney Junior\" extension:m3u",
-      "search_results": 1,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "BabyTV",
-        "TRT Genc",
-        "TRT Belgesel",
-        "National Geographic",
-        "National Geographic Wild",
-        "Habitat TV",
-        "TGRT Belgesel",
-        "Yaban TV"
-      ],
-      "query": "\"BabyTV\" OR \"TRT Genc\" OR \"TRT Belgesel\" OR \"National Geographic\" OR \"National Geographic Wild\" OR \"Habitat TV\" OR \"TGRT Belgesel\" OR \"Yaban TV\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "DMAX",
-        "TLC",
-        "Sercem TV",
-        "On4 TV",
-        "FM TV",
-        "Dream TV",
-        "Number1 Rap TV",
-        "Number1 Türk TV"
-      ],
-      "query": "\"DMAX\" OR \"TLC\" OR \"Sercem TV\" OR \"On4 TV\" OR \"FM TV\" OR \"Dream TV\" OR \"Number1 Rap TV\" OR \"Number1 Türk TV\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "Ada TV",
-        "Kurdistan TV",
-        "West Azerbaijan TV",
-        "Afroturk TV",
-        "Edessa TV",
-        "ETV Manisa",
-        "Euro Star",
-        "TGRT EU"
-      ],
-      "query": "\"Ada TV\" OR \"Kurdistan TV\" OR \"West Azerbaijan TV\" OR \"Afroturk TV\" OR \"Edessa TV\" OR \"ETV Manisa\" OR \"Euro Star\" OR \"TGRT EU\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "Kanal 1",
-        "Meltem TV",
-        "Kanal 32",
-        "Kanal Hayat",
-        "MTurk TV",
-        "Natural TV",
-        "Öncü TV",
-        "TV 1"
-      ],
-      "query": "\"Kanal 1\" OR \"Meltem TV\" OR \"Kanal 32\" OR \"Kanal Hayat\" OR \"MTurk TV\" OR \"Natural TV\" OR \"Öncü TV\" OR \"TV 1\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "TV 264",
-        "Aras TV",
-        "KRT TV",
-        "GZT",
-        "S Sport",
-        "S Sport 2",
-        "TJK TV 2",
-        "Tabii Spor 6"
-      ],
-      "query": "\"TV 264\" OR \"Aras TV\" OR \"KRT TV\" OR \"GZT\" OR \"S Sport\" OR \"S Sport 2\" OR \"TJK TV 2\" OR \"Tabii Spor 6\" extension:m3u",
-      "search_results": 2,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "Discovery Channel",
-        "Tarih TV",
-        "Toprak TV",
-        "Viasat Explore",
-        "Viasat History",
-        "TRT EBA Ilkokul",
-        "TRT EBA Lise",
-        "Üniversite TV"
-      ],
-      "query": "\"Discovery Channel\" OR \"Tarih TV\" OR \"Toprak TV\" OR \"Viasat Explore\" OR \"Viasat History\" OR \"TRT EBA Ilkokul\" OR \"TRT EBA Lise\" OR \"Üniversite TV\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "Woman TV",
-        "Number 1 Türk",
-        "Milyon TV",
-        "ON Medya Haber",
-        "A Türk Izmir",
-        "Bursa TV",
-        "Can TV",
-        "Cekmekoy TV"
-      ],
-      "query": "\"Woman TV\" OR \"Number 1 Türk\" OR \"Milyon TV\" OR \"ON Medya Haber\" OR \"A Türk Izmir\" OR \"Bursa TV\" OR \"Can TV\" OR \"Cekmekoy TV\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "IBB TV",
-        "Kanal 38",
-        "TV 38",
-        "TV 42",
-        "V TV",
-        "Kanal Avrupa",
-        "TGRT Europe"
-      ],
-      "query": "\"IBB TV\" OR \"Kanal 38\" OR \"TV 38\" OR \"TV 42\" OR \"V TV\" OR \"Kanal Avrupa\" OR \"TGRT Europe\" extension:m3u",
-      "search_results": 5,
-      "fallback_individual": false
-    }
-  ],
+  "search_batches": [],
   "target_report": [
     {
       "name": "TRT 4K",
@@ -246,124 +90,82 @@
       "candidates": 0
     },
     {
-      "name": "Kanal 7",
+      "name": "TYT Türk",
       "category": "Ulusal",
-      "files_matched": 5,
-      "candidates": 2
-    },
-    {
-      "name": "TRT 2",
-      "category": "Ulusal",
-      "files_matched": 2,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "AKİT TV",
       "category": "Haber",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Sözcü TV",
       "category": "Haber",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "A News",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "DİM TV",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Guneydogu TV",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Kudüs TV",
       "category": "Haber",
-      "files_matched": 5,
-      "candidates": 1
-    },
-    {
-      "name": "TRT Spor",
-      "category": "Spor",
-      "files_matched": 5,
-      "candidates": 1
-    },
-    {
-      "name": "TRT Spor Yıldız",
-      "category": "Spor",
-      "files_matched": 6,
-      "candidates": 2
-    },
-    {
-      "name": "FB TV",
-      "category": "Spor",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TRT 3 Spor",
       "category": "Spor",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "beIN Sports Haber",
+      "category": "Spor",
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Sports TV",
       "category": "Spor",
-      "files_matched": 6,
-      "candidates": 2
-    },
-    {
-      "name": "FX",
-      "category": "Film & Dizi",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "GEM Pixel",
       "category": "Film & Dizi",
-      "files_matched": 2,
-      "candidates": 2
-    },
-    {
-      "name": "Disney Junior",
-      "category": "Çocuk",
-      "files_matched": 5,
-      "candidates": 1
-    },
-    {
-      "name": "BabyTV",
-      "category": "Çocuk",
-      "files_matched": 1,
-      "candidates": 1
-    },
-    {
-      "name": "TRT Genc",
-      "category": "Çocuk",
-      "files_matched": 1,
-      "candidates": 1
-    },
-    {
-      "name": "TRT Belgesel",
-      "category": "Belgesel",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "National Geographic",
       "category": "Belgesel",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "National Geographic Wild",
       "category": "Belgesel",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Habitat TV",
@@ -374,50 +176,50 @@
     {
       "name": "TGRT Belgesel",
       "category": "Belgesel",
-      "files_matched": 6,
-      "candidates": 3
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Yaban TV",
       "category": "Belgesel",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
-      "name": "DMAX",
-      "category": "Belgesel",
-      "files_matched": 1,
-      "candidates": 1
+      "name": "VAV TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
     },
     {
-      "name": "TLC",
-      "category": "Belgesel",
-      "files_matched": 1,
-      "candidates": 1
+      "name": "Imam Hussein TV 5",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Sercem TV",
       "category": "Dini",
-      "files_matched": 4,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "On4 TV",
       "category": "Dini",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "FM TV",
       "category": "Dini",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Dream TV",
       "category": "Müzik",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Number1 Rap TV",
@@ -426,19 +228,25 @@
       "candidates": 0
     },
     {
-      "name": "Number1 Türk TV",
-      "category": "Müzik",
+      "name": "Ada TV",
+      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },
     {
-      "name": "Ada TV",
+      "name": "Kurdistan TV",
       "category": "Uluslararası",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
-      "name": "Kurdistan TV",
+      "name": "MC TV",
+      "category": "Uluslararası",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "MyZen TV",
       "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
@@ -452,32 +260,38 @@
     {
       "name": "Afroturk TV",
       "category": "Uluslararası",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Edessa TV",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "ETV Manisa",
       "category": "Yerel",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Euro Star",
       "category": "Uluslararası",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TGRT EU",
       "category": "Uluslararası",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "ATV Avrupa",
+      "category": "Uluslararası",
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Kanal 1",
@@ -486,118 +300,112 @@
       "candidates": 0
     },
     {
-      "name": "Meltem TV",
-      "category": "Ulusal",
-      "files_matched": 6,
-      "candidates": 2
-    },
-    {
       "name": "Kanal 32",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Kanal Hayat",
       "category": "Yerel",
-      "files_matched": 4,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "MTurk TV",
       "category": "Yerel",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Natural TV",
       "category": "Uluslararası",
-      "files_matched": 5,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Öncü TV",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TV 1",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TV 264",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Aras TV",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TELE1",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "KRT TV",
       "category": "Haber",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "GZT",
       "category": "Haber",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "S Sport",
       "category": "Spor",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "S Sport 2",
       "category": "Spor",
-      "files_matched": 6,
-      "candidates": 2
-    },
-    {
-      "name": "TJK TV 2",
-      "category": "Spor",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Tabii Spor 6",
       "category": "Spor",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Discovery Channel",
       "category": "Belgesel",
-      "files_matched": 1,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Tarih TV",
       "category": "Belgesel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Toprak TV",
       "category": "Belgesel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Viasat Explore",
       "category": "Belgesel",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Viasat History",
@@ -608,114 +416,114 @@
     {
       "name": "TRT EBA Ilkokul",
       "category": "Belgesel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TRT EBA Lise",
       "category": "Belgesel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Üniversite TV",
       "category": "Belgesel",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Woman TV",
       "category": "Belgesel",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Number 1 Türk",
       "category": "Müzik",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Milyon TV",
       "category": "Müzik",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "ON Medya Haber",
       "category": "Haber",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "A Türk Izmir",
       "category": "Yerel",
-      "files_matched": 6,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Bursa TV",
       "category": "Yerel",
-      "files_matched": 6,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Can TV",
       "category": "Yerel",
-      "files_matched": 6,
-      "candidates": 3
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Cekmekoy TV",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 2
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "IBB TV",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Kanal 38",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TV 38",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TV 42",
       "category": "Yerel",
-      "files_matched": 4,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "V TV",
       "category": "Yerel",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "Kanal Avrupa",
       "category": "Uluslararası",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     },
     {
       "name": "TGRT Europe",
       "category": "Uluslararası",
-      "files_matched": 5,
-      "candidates": 1
+      "files_matched": 0,
+      "candidates": 0
     }
   ],
-  "files_scanned": 7,
-  "unique_candidates_found": 94,
+  "files_scanned": 0,
+  "unique_candidates_found": 0,
   "errors": 1,
   "note": "Channels absent from tr.m3u or present but lacking any verified variant in the previous validation are searched. Candidates must still pass checker.py HLS validation."
 }

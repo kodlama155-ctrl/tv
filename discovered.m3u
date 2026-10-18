@@ -68,7 +68,7 @@ http://tjktv-live.tjk.org/tjktv.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="TR · eglence",NOW TV
 http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Aras TV
 https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
@@ -136,7 +136,7 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c05
 #EXTINF:-1 tvg-id="BEYAZ.TV.HD.tr" tvg-logo="http://assets.tvcdn.net/60d7aaf4-817b-46be-bbab-68f8b30de8fb.png" group-title="Haber",Beyaz TV
 https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Bi Kanal" group-title="TÜM KANALLAR (A-Z Sıralı)",Bi Kanal
 https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -152,7 +152,7 @@ https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 #EXTINF:-1 tvg-id="TGRTHaber.tr@SD" tvg-logo="https://i.imgur.com/PrxwKDw.png" group-title="News",TGRT Haber (720p)
 https://canli.tgrthaber.com/tgrt.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="TGRT Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/TGRT_Haber_logo.svg/512px-TGRT_Haber_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TGRT Belgesel
 https://canli.tgrthaber.com/tgrtbelgesel.m3u8
 # SOURCE: github:emrecemal/my-iptv-playlist/playlist.m3u
@@ -160,11 +160,11 @@ https://canli.tgrthaber.com/tgrtbelgesel.m3u8
 #EXTINF:-1 tvg-id="TV42.tr@SD" tvg-logo="https://www.tv42.com.tr/logo.png" group-title="Genel",TV 42
 https://canli.tv42.com.tr/memfs/d936e417-c4bd-4d42-89a2-02f289892d1d.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="TV Den" tvg-logo="https://i.imgur.com/Uhg95Ze.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TV Den
 https://canli.tvden.com.tr/hls/live.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Cine 1" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Cine 1
 https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -244,7 +244,7 @@ https://dogus.daioncdn.net/kralpoptv/kralpoptv.m3u8?app=kralpoptv_web
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/NTV_%28Turkey%29_logo.svg/960px-NTV_%28Turkey%29_logo.svg.png" group-title="TR · eglence",NTV (Turkiye)
 https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-id="NTV.HD.tr" tvg-name="NTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/NTV_logo.svg/512px-NTV_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",NTV
 https://dogus.daioncdn.net/ntv/ntv_720p.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -264,7 +264,7 @@ https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="TR · eglence",Bir TV
 https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Cay TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Cay TV
 https://edge.taksimbilisim.com/caytv/bant1/playlist.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -332,39 +332,39 @@ https://edge1.socialsmart.tv/tv1/bant1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/k4R5CzO.png" group-title="TR · eglence",TV 52
 https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Altas TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Altas TV
 https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Icel TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Icel TV
 https://edge1.taksimbilisim.com/iceltv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Bir TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Bir TV
 https://edge2.taksimbilisim.com/birtv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Fortuna TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Fortuna TV
 https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Kanal 33" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 33
 https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Kocaeli TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Kocaeli TV
 https://edge2.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-id="LINETV.tr" tvg-name="Line TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Line TV
 https://edge2.taksimbilisim.com/linetv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="TurkHaber TV" group-title="TÜM KANALLAR (A-Z Sıralı)",TurkHaber TV
 https://edge2.taksimbilisim.com/turkhaber/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="TV 52" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 52
 https://edge2.taksimbilisim.com/tv52/bant1/chunks.m3u8
 # SOURCE: github:emrecemal/my-iptv-playlist/playlist.m3u
@@ -372,7 +372,7 @@ https://edge2.taksimbilisim.com/tv52/bant1/chunks.m3u8
 #EXTINF:-1 tvg-id="EkolSportsTV.tr" tvg-logo="https://i.ibb.co/Y4tR1tTm/Ekolsports.jpg" group-title="Spor",Ekol Sports
 https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Ekol TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Ekol TV
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -572,7 +572,7 @@ https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="TR · eglence",Euro D
 https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Kanal 34" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -592,7 +592,7 @@ https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/XSL1gd7.png" group-title="TR · eglence",Power TV (Turkiye)
 https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="PowerTurk TV" group-title="TÜM KANALLAR (A-Z Sıralı)",PowerTurk TV
 https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -648,7 +648,7 @@ https://ncdn.telewebion.ir/azarbayjangharbi/live/playlist.m3u8
 #EXTINF:-1 tvg-id="VavTV.tr@SD" tvg-logo="https://i.imgur.com/jw0gB8L.png" group-title="Undefined",Vav TV
 https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="Show Max" group-title="TÜM KANALLAR (A-Z Sıralı)",Show Max
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -668,7 +668,7 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 #EXTINF:-1 tvg-id="A.SPOR.HD.tr" tvg-logo="http://assets.tvcdn.net/14f4941c-00e7-4662-9a21-8203dc37b51a.png" group-title="Spor",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_720p.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-id="ATV.HD.tr" tvg-name="ATV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ATV_logo.svg/512px-ATV_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -792,7 +792,7 @@ https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/8PmXz9t.png" group-title="TR · cocuk",TRT Diyanet Cocuk
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="TRT Genc" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Genc
 https://tv-trtgenc.medya.trt.com.tr/master.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -808,7 +808,7 @@ https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/JgUzRH8.png" group-title="TR · eglence",TRT Muzik
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-id="TRT.SPOR.HD.tr" tvg-name="TRT Spor" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/TRT_Spor_logo_2021.svg/512px-TRT_Spor_logo_2021.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Spor
 https://tv-trtspor1.medya.trt.com.tr/master.m3u8
 # SOURCE: github:emrecemal/my-iptv-playlist/playlist.m3u
@@ -828,7 +828,7 @@ https://tv-trtworld.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="BENGÜ.TÜRK.tr" tvg-logo="http://assets.tvcdn.net/a8fd43de-872a-4e58-9f07-ff22d21a6c24.png" group-title="Haber",Benguturk TV
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-id="BLOOMBERG.HT.HD.tr" tvg-name="Bloomberg HT" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bloomberg_HT_logo.svg/512px-Bloomberg_HT_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Bloomberg HT
 https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8
 # SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
@@ -840,7 +840,7 @@ https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/6Tw3rUp.png" group-title="TR · haber",Haberturk TV
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="TV100" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TV100_logosu.svg/512px-TV100_logosu.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TV100
 https://tv.ensonhaber.com/tv100/tv100.m3u8
 # SOURCE: github:emrecemal/my-iptv-playlist/playlist.m3u
@@ -848,7 +848,7 @@ https://tv.ensonhaber.com/tv100/tv100.m3u8
 #EXTINF:-1 tvg-id="24.TV.HD.tr" tvg-logo="http://assets.tvcdn.net/49267a8f-6313-43f9-bab4-9d5f109bad1b.png" group-title="Haber",24 TV
 https://tv.ensonhaber.com/tv24/tv24.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-id="KANAL.B.tr" tvg-name="Kanal B" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal B
 https://tv.kanalb.tr/hls/kanalb/index.m3u8
 # SOURCE: github:emrecemal/my-iptv-playlist/playlist.m3u
@@ -864,7 +864,7 @@ https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&c
 #EXTINF:-1 tvg-id="TV8.5.HD.tr"tvg-logo="https://i.ibb.co/dgj3MTh/tv85.png" group-title="Ulusal,TV8 5
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-17T08:27:01Z
+# SOURCE-UPDATED: 2026-10-18T08:45:31Z
 #EXTINF:-1 tvg-name="TV8.5" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/c/cf/Tv8_bucuk_logo.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TV8.5
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3#all
 # SOURCE: github:YananHelena/iptvson/playlist.m3u

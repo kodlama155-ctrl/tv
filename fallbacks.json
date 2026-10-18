@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-18T09:48:32.383402+00:00",
-  "count": 43,
+  "updated_at_utc": "2026-10-18T09:52:26.732829+00:00",
+  "count": 38,
   "channels": {
     "24tv": {
       "channel_key": "24tv",
@@ -17,32 +17,43 @@
       "channel_key": "ahaber",
       "name": "A Haber",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=5VaU4HuWUUmwqPItSYtx7Q&e=1792355904",
+      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=v1n8W-GB2_bZwNKYqaBGKw&e=1792362208",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
       "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       "fallback_referrer": "https://www.ahaber.com.tr/video/canli-yayin"
     },
+    "apara": {
+      "channel_key": "apara",
+      "name": "A Para",
+      "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/apara/apara.m3u8",
+      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=6QuRTWIDn1TRHNcC9JXIoA&e=1792362213",
+      "fallback_status": "verified",
+      "fallback_source_kind": "official_api",
+      "fallback_source_name": "turkuvaz_discovered.m3u",
+      "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "fallback_referrer": "https://www.apara.com.tr/canli-yayin"
+    },
     "aspor": {
       "channel_key": "aspor",
       "name": "A Spor",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
-      "fallback_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_720p.m3u8",
+      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=9Xj9tUW4SQEwYwzao5YvLw&e=1792362210",
       "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
+      "fallback_source_kind": "official_api",
+      "fallback_source_name": "turkuvaz_discovered.m3u",
+      "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "fallback_referrer": "https://www.aspor.com.tr/webtv/canli-yayin"
     },
     "atv": {
       "channel_key": "atv",
       "name": "ATV",
-      "primary_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
-      "fallback_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8",
+      "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
+      "fallback_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
       "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "discovered.m3u",
+      "fallback_source_kind": "upstream",
+      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -90,17 +101,6 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
-    "dmax": {
-      "channel_key": "dmax",
-      "name": "DMAX",
-      "primary_url": "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=RXE2VEgrYm1KeHZUWXFaUm41MnVkVGxhMXJZU1FMaithMmNXNVNuejJNST0=",
-      "fallback_url": "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "ekoturk": {
       "channel_key": "ekoturk",
       "name": "EKOTÜRK",
@@ -120,28 +120,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "github_discovery",
       "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "fbtv": {
-      "channel_key": "fbtv",
-      "name": "FB TV",
-      "primary_url": "https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8",
-      "fallback_url": "http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "iptv_org",
-      "fallback_source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "finesttv": {
-      "channel_key": "finesttv",
-      "name": "Finest TV",
-      "primary_url": "http://media.finest.tv/hls/live.m3u8",
-      "fallback_url": "https://media.finest.tv/hls/live.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "iptv_org",
-      "fallback_source_name": "https://iptv-org.github.io/iptv/languages/tur.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -194,17 +172,6 @@
       "name": "Kanal 23",
       "primary_url": "https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8",
       "fallback_url": "https://live.artidijitalmedya.com/artidijital_kanal23/kanal23/playlist.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "kanal7": {
-      "channel_key": "kanal7",
-      "name": "Kanal 7",
-      "primary_url": "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8?app=f99587ad-1637-494d-8255-da35b09d17a1&ce=3",
-      "fallback_url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8",
       "fallback_status": "verified",
       "fallback_source_kind": "upstream",
       "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
@@ -324,8 +291,8 @@
     "startv": {
       "channel_key": "startv",
       "name": "Star TV",
-      "primary_url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=1740db13-3ee9-4858-8d2c-b1a9cfaa3718",
-      "fallback_url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9",
+      "primary_url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9",
+      "fallback_url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=1740db13-3ee9-4858-8d2c-b1a9cfaa3718",
       "fallback_status": "verified",
       "fallback_source_kind": "official_browser",
       "fallback_source_name": "browser_discovered.m3u",
@@ -365,17 +332,6 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
-    "tlc": {
-      "channel_key": "tlc",
-      "name": "TLC",
-      "primary_url": "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=Zk5HbWt2aThtSWt6N1U2dkpwa0NWdk9MNnZyVEF6ZFN3NEN0bEVWNUpBcz0=",
-      "fallback_url": "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "trt1": {
       "channel_key": "trt1",
       "name": "TRT 1",
@@ -403,28 +359,6 @@
       "name": "TRT Müzik",
       "primary_url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
       "fallback_url": "https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "trtspor": {
-      "channel_key": "trtspor",
-      "name": "TRT Spor",
-      "primary_url": "https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor",
-      "fallback_url": "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "trtsporyildiz": {
-      "channel_key": "trtsporyildiz",
-      "name": "TRT Spor Yıldız",
-      "primary_url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor",
-      "fallback_url": "https://tv-trtspor2.medya.trt.com.tr/master.m3u8",
       "fallback_status": "verified",
       "fallback_source_kind": "upstream",
       "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
@@ -472,6 +406,17 @@
       "fallback_status": "verified",
       "fallback_source_kind": "priority",
       "fallback_source_name": "priority_sources.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
+    },
+    "tvden": {
+      "channel_key": "tvden",
+      "name": "TV Den",
+      "primary_url": "http://canli.tvden.com.tr/hls/live.m3u8",
+      "fallback_url": "https://canli.tvden.com.tr/hls/live.m3u8",
+      "fallback_status": "verified",
+      "fallback_source_kind": "github_discovery",
+      "fallback_source_name": "discovered.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     }
