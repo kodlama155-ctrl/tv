@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-17T07:25:36.237957+00:00",
-  "count": 81,
+  "updated_at_utc": "2026-10-18T07:58:36.863204+00:00",
+  "count": 73,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
@@ -46,6 +46,46 @@
       "name": "beIN Movies Turk",
       "tvg_id": "beINMoviesTurk.tr@SD",
       "url": "https://nord.ayakkabiparti.lol/bsturk/index.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Sports 1 Turk",
+      "tvg_id": "beINSports1Turk.tr@SD",
+      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs1.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Sports 2 Turk",
+      "tvg_id": "beINSports2Turk.tr@SD",
+      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs2.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Sports 3 Turk",
+      "tvg_id": "beINSports3Turk.tr@SD",
+      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs3.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Sports 4 Turk",
+      "tvg_id": "beINSports4Turk.tr@SD",
+      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs4.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Sports 5 Turk",
+      "tvg_id": "beINSports5Turk.tr@SD",
+      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs5.m3u8",
       "source_kind": "iptv_org",
       "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
       "reason": "uncatalogued-tr-identity"
@@ -396,15 +436,6 @@
       "reason": "uncatalogued-tr-identity"
     },
     {
-      "name": "Moviesmart Türk HD",
-      "tvg_id": "MovieSmart Turk.tr",
-      "url": "https://ds.ayakkabiparti.lol/mvturk/index.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
       "name": "Mukabele TV",
       "tvg_id": "Mukabele.tr",
       "url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/mukabele-tv/playlist.m3u8",
@@ -480,114 +511,6 @@
       "url": "https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8",
       "source_kind": "iptv_org",
       "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA 1001",
-      "tvg_id": "SiNEMA Tv 1001.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=http://65.108.239.207/sinema1001/index.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA 1002",
-      "tvg_id": "SiNEMA Tv 1002.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=https://goldvod.org/live/hpgdisco/123456/175.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA Aile",
-      "tvg_id": "SiNEMA Tv Aile.tr",
-      "url": "http://65.108.239.207/sinemaaile/index.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA Aile 2",
-      "tvg_id": "SiNEMA Tv Aile 2.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=http://apx-me.com:8880/live/live:persian_share/Hs6guU9ziF/49302.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA Aksiyon",
-      "tvg_id": "SiNEMA Tv Aksiyon.tr",
-      "url": "http://65.108.239.207/sinemaaksiyon/tracks-v1a1/mono.ts.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA Aksiyon 2",
-      "tvg_id": "SiNEMA Tv Aksiyon 2.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=http://65.108.239.207/sinemaaksiyon2/index.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA Komedi",
-      "tvg_id": "SiNEMA Tv Comedy.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=http://65.108.239.207/sinemakomedi/index.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA Komedi 2",
-      "tvg_id": "SiNEMA Tv Comedy 2.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=http://apx-me.com:8880/live/live:persian_share/Hs6guU9ziF/49306.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA TV",
-      "tvg_id": "SiNEMA Tv.tr",
-      "url": "http://65.108.239.207/sinema/index.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA TV 2",
-      "tvg_id": "SiNEMA Tv 2.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=http://65.108.239.207/sinema2/index.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA Yerli",
-      "tvg_id": "SİNEMA YERLİ HD.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=http://apx-me.com:8880/live/live:persian_share/Hs6guU9ziF/49303.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SiNEMA Yerli 2",
-      "tvg_id": "SİNEMA YERLİ 2 HD.tr",
-      "url": "https://m3u8-proxy-1-urh0.onrender.com/proxy?url=http://apx-me.com:8880/live/live:persian_share/Hs6guU9ziF/49293.m3u8",
-      "source_repo": "hayatiptv/iptv",
-      "source_path": "BDNLTR.m3u",
-      "source_updated": "2026-10-03T17:34:33Z",
       "reason": "uncatalogued-tr-identity"
     },
     {

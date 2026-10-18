@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-10-17T06:59:21.153656+00:00",
+  "updated_at_utc": "2026-10-18T07:38:27.486984+00:00",
   "official_pages": 38,
-  "pages_ok": 33,
-  "pages_with_candidates": 11,
-  "raw_candidates": 14,
-  "accepted_unique_candidates": 14,
+  "pages_ok": 34,
+  "pages_with_candidates": 12,
+  "raw_candidates": 15,
+  "accepted_unique_candidates": 15,
   "probe_statuses": {
-    "restricted": 3,
-    "unknown": 3,
-    "verified": 8
+    "verified": 7,
+    "restricted": 4,
+    "unknown": 4
   },
   "sources": [
     {
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=ajIwL25zdmxmcWp5Z01rVHBVTUptMWpRWU5odTVndU1VS1Q5RWhnL2toTT0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=bDJIdWVtZmpaVXY2ZHdkc1NCbGJjTjQ1VTk3SkZxR0NicU5GRzRPNkFFYz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=WjNMRytNRlNkTlo5d3M2dks5MmtRQmdEMFBlQUxMSkp0L3BqQmVpYjdUVT0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=cTZBUjA5U0I4ZEwyYzNMSjg0QnFWMC9wVkNZU2lFOEFheUtWRTYzN3hSND0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -389,12 +389,14 @@
     {
       "name": "Vav TV",
       "page": "https://www.vavtv.com.tr/canli-yayin",
-      "status": "page_error",
-      "page_final_url": null,
-      "page_candidates": 0,
+      "status": "ok",
+      "page_final_url": "https://www.vavtv.com.tr/canli-yayin",
+      "page_candidates": 19,
       "aux_scanned": 0,
-      "candidates": [],
-      "error": "TimeoutError"
+      "candidates": [
+        "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8"
+      ],
+      "identity_rejected_candidates": 18
     },
     {
       "name": "Yaban TV",
