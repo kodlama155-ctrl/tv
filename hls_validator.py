@@ -32,6 +32,18 @@ def _safe_header_value(value):
     return value
 
 
+try:
+    import urllib3
+    # Suppress insecure request warnings if encountered
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    _URLLIB3_POOL: urllib3.PoolManager | None = urllib3.PoolManager(
+        maxsize=64,
+        retries=False,
+    )
+except ImportError:
+    _URLLIB3_POOL = None
+
+
 def _request(
     url: str,
     timeout: int,
@@ -62,6 +74,32 @@ def _request(
             pass
     if use_range:
         headers["Range"] = f"bytes=0-{max_bytes - 1}"
+
+    # Accelerated Keep-Alive connection pool path
+    if _URLLIB3_POOL is not None:
+        started = time.monotonic()
+        r = _URLLIB3_POOL.request(
+            "GET",
+            url,
+            headers=headers,
+            timeout=float(timeout),
+            preload_content=False,
+            redirect=True,
+        )
+        try:
+            status = r.status
+            raw_target = r.geturl() if hasattr(r, "geturl") else (getattr(r, "url", None) or url)
+            final_url = urllib.parse.urljoin(url, raw_target)
+            ctype = (r.headers.get("Content-Type") or "").lower()
+            data = r.read(max_bytes)
+            elapsed_ms = round((time.monotonic() - started) * 1000)
+
+            if status >= 400:
+                raise urllib.error.HTTPError(final_url, status, f"HTTP {status}", r.headers, None)
+
+            return status, data, final_url, ctype, elapsed_ms
+        finally:
+            r.release_conn()
 
     req = urllib.request.Request(url, headers=headers)
     started = time.monotonic()

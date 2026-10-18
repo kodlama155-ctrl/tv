@@ -4,7 +4,12 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from channel_policy import channel_key, split_extinf
+from channel_policy import (
+    channel_key,
+    format_m3u_headers,
+    is_noisy_or_private_provider,
+    split_extinf,
+)
 
 ROOT = Path(__file__).resolve().parent
 PLAYLIST = ROOT / "tr.m3u"
@@ -58,10 +63,7 @@ def write_playlist(path: Path, rows):
     lines = ["#EXTM3U"]
     for row in rows:
         lines.append(row["meta"])
-        if row.get("referrer"):
-            lines.append(f'#EXTVLCOPT:http-referrer={row["referrer"]}')
-        if row.get("user_agent"):
-            lines.append(f'#EXTVLCOPT:http-user-agent={row["user_agent"]}')
+        lines.extend(format_m3u_headers(row.get("referrer"), row.get("user_agent")))
         lines.append(row["url"])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -91,7 +93,7 @@ def main():
 
     for row in rows:
         repair = by_key.get(row["channel_key"])
-        if not repair:
+        if not repair or is_noisy_or_private_provider(repair.get("new_url", "")):
             continue
 
         old_url = row["url"]

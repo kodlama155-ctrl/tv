@@ -28,6 +28,8 @@ from channel_policy import (
     country_from_tvg_id,
     existing_group,
     fold,
+    format_m3u_headers,
+    is_noisy_or_private_provider,
     normalize_identity,
     normalize_meta,
     representative_score,
@@ -161,6 +163,9 @@ def parse_playlist(
 
 
 def safe_public_candidate(url: str) -> bool:
+    if is_noisy_or_private_provider(url):
+        return False
+
     try:
         p = urllib.parse.urlsplit(url)
     except Exception:
@@ -390,13 +395,19 @@ def is_ephemeral_signed_url(url: str) -> bool:
 
 
 def is_known_false_identity(entry: dict) -> bool:
-    key = channel_key(entry.get("meta", ""))
+    meta = entry.get("meta", "")
+    name = entry.get("name", "")
+    key = entry.get("channel_key") or channel_key(meta, name)
     url = fold(entry.get("url", ""))
     # Known technically-working but semantically wrong mappings must never
     # win selection.
     if key == "vavtv" and "kltr-sanat-tv" in url:
         return True
     if key == "kanal7" and ("kanal7avr" in url or "kanal7avrupa" in url):
+        return True
+    if key == "cnnturk" and ("etv" in url or "artidijital" in url):
+        return True
+    if key not in {"etvkayseri", "etvmanisa"} and "artidijital_etv" in url:
         return True
     return False
 
@@ -503,10 +514,7 @@ def write_playlist(path: Path, entries):
     lines = ["#EXTM3U"]
     for item in ordered:
         lines.append(item["meta"])
-        if item.get("referrer"):
-            lines.append(f'#EXTVLCOPT:http-referrer={item["referrer"]}')
-        if item.get("user_agent"):
-            lines.append(f'#EXTVLCOPT:http-user-agent={item["user_agent"]}')
+        lines.extend(format_m3u_headers(item.get("referrer"), item.get("user_agent")))
         lines.append(item["url"])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -1125,6 +1133,8 @@ def main():
         usable = [
             row for row in variants
             if row.get("status") == "verified"
+            and not is_noisy_or_private_provider(row.get("url", ""))
+            and not is_known_false_identity(row)
         ]
         if len(usable) < 2:
             continue
@@ -1265,8 +1275,17 @@ def main():
             fold(x["name"]),
         )
     )
+    # Minified compact serialization to eliminate massive 40,000+ line Git diff churn.
+    clean_report = []
+    for item in report:
+        row = dict(item)
+        row.pop("category_evidence", None)
+        row.pop("order_evidence", None)
+        row.pop("category_votes", None)
+        clean_report.append(row)
+
     VALIDATION.write_text(
-        json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(clean_report, ensure_ascii=False, separators=(",", ":")) + "\n",
         encoding="utf-8",
     )
 

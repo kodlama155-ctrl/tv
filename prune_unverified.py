@@ -26,7 +26,11 @@ def parse_playlist(path: Path):
             meta = line
             options = []
             continue
-        if meta and line.startswith("#EXTVLCOPT:"):
+        if meta and (
+            line.startswith("#EXTVLCOPT:")
+            or line.startswith("#EXTHTTP:")
+            or line.startswith("#KODIPROP:")
+        ):
             options.append(line)
             continue
         if line.startswith("#"):

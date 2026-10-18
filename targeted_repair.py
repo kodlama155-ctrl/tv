@@ -7,7 +7,12 @@ import json
 import urllib.request
 from pathlib import Path
 
-from channel_policy import SOURCE_PRIORITY, channel_key, split_extinf
+from channel_policy import (
+    SOURCE_PRIORITY,
+    channel_key,
+    format_m3u_headers,
+    split_extinf,
+)
 from checker import is_known_false_identity, safe_public_candidate
 from hls_validator import validate_hls
 
@@ -168,10 +173,7 @@ def write_playlist(path: Path, rows):
     lines = ["#EXTM3U"]
     for row in rows:
         lines.append(row["meta"])
-        if row.get("referrer"):
-            lines.append(f'#EXTVLCOPT:http-referrer={row["referrer"]}')
-        if row.get("user_agent"):
-            lines.append(f'#EXTVLCOPT:http-user-agent={row["user_agent"]}')
+        lines.extend(format_m3u_headers(row.get("referrer"), row.get("user_agent")))
         lines.append(row["url"])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

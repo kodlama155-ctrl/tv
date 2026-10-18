@@ -10,6 +10,7 @@ import urllib.request
 from pathlib import Path
 
 from channel_catalog import category_for_channel
+from channel_policy import is_noisy_or_private_provider
 
 ROOT = Path(__file__).resolve().parent
 QUERIES = ROOT / "discover_queries.txt"
@@ -326,12 +327,7 @@ def discovery_decision(meta: str, url: str) -> tuple[str, str]:
     tvg = _meta_attr(meta, "tvg-id")
     low = _fold(name)
 
-    try:
-        host = (urllib.parse.urlsplit(url).hostname or "").lower()
-    except Exception:
-        host = ""
-
-    if host.endswith("prosto.tv") or host.endswith("europlayiptv.de"):
+    if is_noisy_or_private_provider(url):
         return "reject", "noisy-provider"
 
     if re.search(r"(?:^|\s)(?:test|vpn|backup|yedek)(?:$|\s)", low, flags=re.I):

@@ -15,6 +15,8 @@ from channel_policy import (
     country_from_tvg_id,
     existing_group,
     fold,
+    is_known_false_identity,
+    is_noisy_or_private_provider,
     normalize_meta,
     tvg_id,
 )
@@ -52,7 +54,11 @@ def _parse_entries(text: str) -> list[dict]:
             meta = line
             options = []
             continue
-        if meta and line.startswith("#EXTVLCOPT:"):
+        if meta and (
+            line.startswith("#EXTVLCOPT:")
+            or line.startswith("#EXTHTTP:")
+            or line.startswith("#KODIPROP:")
+        ):
             options.append(line)
             continue
         if meta and line.startswith(("http://", "https://")):
@@ -101,8 +107,7 @@ def _host(url: str) -> str:
 
 
 def _is_noisy_provider(url: str) -> bool:
-    host = _host(url)
-    return host.endswith("europlayiptv.de") or host.endswith("prosto.tv")
+    return is_noisy_or_private_provider(url)
 
 
 def _admit(meta: str, category: str, url: str) -> tuple[bool, str]:
@@ -112,6 +117,8 @@ def _admit(meta: str, category: str, url: str) -> tuple[bool, str]:
         return False, "junk-name"
     if _is_noisy_provider(url):
         return False, "noisy-provider"
+    if is_known_false_identity({"meta": meta, "name": name, "url": url}):
+        return False, "false-identity"
 
     # Anything the catalog/category engine recognizes is accepted.
     if category != "Diğer":

@@ -9,7 +9,11 @@ import time
 from collections import Counter
 from pathlib import Path
 
-from channel_policy import channel_key, split_extinf
+from channel_policy import (
+    channel_key,
+    is_noisy_or_private_provider,
+    split_extinf,
+)
 from hls_validator import validate_hls
 
 ROOT = Path(__file__).resolve().parent
@@ -112,7 +116,7 @@ def load_fallbacks(path: Path) -> dict[str, dict]:
 
 def try_ready_fallback(target: dict, fallback: dict) -> dict | None:
     url = fallback.get("fallback_url")
-    if not url:
+    if not url or is_noisy_or_private_provider(url):
         return None
     try:
         result = validate_hls(
@@ -265,7 +269,7 @@ def main():
     }
 
     Path(args.report).write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n",
         encoding="utf-8",
     )
     Path(args.targets).write_text(

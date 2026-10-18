@@ -9,6 +9,8 @@ from pathlib import Path
 
 from channel_policy import (
     channel_key,
+    format_m3u_headers,
+    is_noisy_or_private_provider,
     normalize_meta,
     split_extinf,
 )
@@ -191,11 +193,10 @@ def write_tr(rows):
 
     lines = ["#EXTM3U"]
     for row in normalized:
+        if is_noisy_or_private_provider(row["url"]):
+            continue
         lines.append(row["meta"])
-        if row.get("referrer"):
-            lines.append(f'#EXTVLCOPT:http-referrer={row["referrer"]}')
-        if row.get("user_agent"):
-            lines.append(f'#EXTVLCOPT:http-user-agent={row["user_agent"]}')
+        lines.extend(format_m3u_headers(row.get("referrer"), row.get("user_agent")))
         lines.append(row["url"])
 
     TR.write_text("\n".join(lines) + "\n", encoding="utf-8")

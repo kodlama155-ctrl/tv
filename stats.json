@@ -386,5 +386,28 @@
     "Yerel": 17,
     "Uluslararası": 6,
     "Diğer": 0
+  },
+  "last_fast_rebuild_utc": "2026-10-18T07:13:02.602032+00:00",
+  "fast_rebuild_source": "tr.m3u",
+  "fast_rebuild_raw_channels": 160,
+  "fast_rebuild_channels": 158,
+  "fast_rebuild_duplicates_collapsed": 0,
+  "fast_rebuild_categories": {
+    "Ulusal": 22,
+    "Haber": 30,
+    "Spor": 5,
+    "Film & Dizi": 4,
+    "Çocuk": 5,
+    "Belgesel": 5,
+    "Dini": 8,
+    "Müzik": 18,
+    "Yerel": 41,
+    "Uluslararası": 20
+  },
+  "fast_rebuild_admission": {
+    "recognized": 158
+  },
+  "fast_rebuild_rejected": {
+    "noisy-provider": 2
   }
 }

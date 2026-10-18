@@ -1,6 +1,6 @@
 {
   "updated_at_utc": "2026-10-17T07:28:44.823075+00:00",
-  "count": 72,
+  "count": 60,
   "channels": {
     "24tv": {
       "channel_key": "24tv",
@@ -10,17 +10,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "upstream",
       "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "360": {
-      "channel_key": "360",
-      "name": "360",
-      "primary_url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
-      "fallback_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/d34204b7-8ccc-42b7-84c8-60446c440146.m3u",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -79,17 +68,6 @@
       "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       "fallback_referrer": "https://www.aspor.com.tr/webtv/canli-yayin"
     },
-    "atv": {
-      "channel_key": "atv",
-      "name": "ATV",
-      "primary_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/8f46cd5d-e996-4ba3-a71c-198480f5e288.m3u",
-      "fallback_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "benguturktv": {
       "channel_key": "benguturktv",
       "name": "BengüTürk",
@@ -98,17 +76,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "github_discovery",
       "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "beyaztv": {
-      "channel_key": "beyaztv",
-      "name": "Beyaz TV",
-      "primary_url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8",
-      "fallback_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/37cbf863-1460-4b5b-90d3-ffdab6145a58.m3u",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -153,17 +120,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "github_discovery",
       "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "cnnturk": {
-      "channel_key": "cnnturk",
-      "name": "CNN Türk",
-      "primary_url": "http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/6926/index.m3u8",
-      "fallback_url": "http://176.65.153.35:6005/play/a020/index.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -387,17 +343,6 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
-    "lifetv": {
-      "channel_key": "lifetv",
-      "name": "Life TV",
-      "primary_url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
-      "fallback_url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8?checkedby:iptvcat.com",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "lovenature": {
       "channel_key": "lovenature",
       "name": "Love Nature",
@@ -439,17 +384,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "upstream",
       "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "nowtv": {
-      "channel_key": "nowtv",
-      "name": "NOW TV",
-      "primary_url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
-      "fallback_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/ae1ebbbd-b523-4ea0-9a17-4abfddb1203d.m3u",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -563,17 +497,6 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
-    "showtv": {
-      "channel_key": "showtv",
-      "name": "Show TV",
-      "primary_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/8967ed39-36de-4918-aab1-cd2cc89ea714.m3u",
-      "fallback_url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "startv": {
       "channel_key": "startv",
       "name": "Star TV",
@@ -640,28 +563,6 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
-    "trt1": {
-      "channel_key": "trt1",
-      "name": "TRT 1",
-      "primary_url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
-      "fallback_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/05ef32a4-827d-4e20-87f8-37892492aec6.m3u",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "trt4k": {
-      "channel_key": "trt4k",
-      "name": "TRT 4K",
-      "primary_url": "http://c3921155.edmonst.net/iptv/DVHP2VB5QXL7UC/4001/index.m3u8",
-      "fallback_url": "http://96a6b6a3.ottolok.net/iptv/URFPS4QVV53QPF/4001/index.m3u8?checkedby:iptvcat.com",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "trtavaz": {
       "channel_key": "trtavaz",
       "name": "TRT Avaz",
@@ -717,17 +618,6 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
-    "trtturk": {
-      "channel_key": "trtturk",
-      "name": "TRT Turk",
-      "primary_url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
-      "fallback_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/1f3f9277-e733-4b64-b3c5-14ed80bc54d6.m3u",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "trtworld": {
       "channel_key": "trtworld",
       "name": "TRT World",
@@ -758,28 +648,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "github_discovery",
       "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "tv8": {
-      "channel_key": "tv8",
-      "name": "TV8",
-      "primary_url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
-      "fallback_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/91683518-cc66-4ec5-9b96-895f5ca21fd6.m3u",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "tv85": {
-      "channel_key": "tv85",
-      "name": "TV8.5",
-      "primary_url": "https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk_1080p.m3u8",
-      "fallback_url": "http://europlayiptv.de/live/alinihsan/da9Cmdy3n2/7d6b0ed1-410e-4028-a7d7-bf65b4e63345.m3u",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },

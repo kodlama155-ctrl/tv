@@ -155,6 +155,85 @@ PREFERRED_HOST_SUFFIXES = (
     "socialsmart.tv",
 )
 
+NOISY_HOST_SUFFIXES = (
+    "europlayiptv.de",
+    "prosto.tv",
+    "ottolok.net",
+    "iptvcat.com",
+    "tulix.tv",
+    "siauliairsavlt.pw",
+    "ginikoturkish.com",
+    "prectv5.sbs",
+    "edmonst.net",
+    "ucomist.net",
+)
+
+XTREAM_PANEL_RE = re.compile(
+    r"(?:/live/[^/]+/[^/]+/(?:[^\s/]+\.m3u8?|[0-9]+))|"
+    r"(?:/iptv/[^/]+/[0-9]+)|"
+    r"(?:checkedby:iptvcat)",
+    re.I,
+)
+
+
+def is_noisy_or_private_provider(url: str) -> bool:
+    if not url:
+        return True
+    try:
+        p = urllib.parse.urlsplit(url)
+        host = (p.hostname or "").lower()
+    except Exception:
+        return True
+
+    if any(host == s or host.endswith("." + s) for s in NOISY_HOST_SUFFIXES):
+        return True
+
+    if XTREAM_PANEL_RE.search(url):
+        return True
+
+    return False
+
+
+def format_m3u_headers(referrer: str | None, user_agent: str | None) -> list[str]:
+    lines = []
+    ref = referrer.strip() if referrer else None
+    ua = user_agent.strip() if user_agent else None
+
+    if ref:
+        lines.append(f"#EXTVLCOPT:http-referrer={ref}")
+        lines.append(f"#EXTVLCOPT:http-referer={ref}")
+    if ua:
+        lines.append(f"#EXTVLCOPT:http-user-agent={ua}")
+
+    headers_dict = {}
+    if ua:
+        headers_dict["User-Agent"] = ua
+    if ref:
+        headers_dict["Referer"] = ref
+    if headers_dict:
+        lines.append(f"#EXTHTTP:{json.dumps(headers_dict, separators=(',', ':'))}")
+        kodi_headers = "&".join(f"{k}={v}" for k, v in headers_dict.items())
+        lines.append(f"#KODIPROP:inputstream.adaptive.manifest_headers={kodi_headers}")
+
+    return lines
+
+
+def is_known_false_identity(entry: dict) -> bool:
+    meta = entry.get("meta", "")
+    name = entry.get("name", "")
+    key = entry.get("channel_key") or channel_key(meta, name)
+    url = fold(entry.get("url", ""))
+
+    if key == "vavtv" and "kltr-sanat-tv" in url:
+        return True
+    if key == "kanal7" and ("kanal7avr" in url or "kanal7avrupa" in url):
+        return True
+    if key == "cnnturk" and ("etv" in url or "artidijital" in url):
+        return True
+    if key not in {"etvkayseri", "etvmanisa"} and "artidijital_etv" in url:
+        return True
+    return False
+
 
 def fold(text: str) -> str:
     text = str(text or "").replace("ı", "i").replace("İ", "I")
@@ -355,6 +434,9 @@ def _resolution_height(item: dict) -> int:
 
 
 def _host_quality(url: str) -> int:
+    if is_noisy_or_private_provider(url):
+        return -500
+
     try:
         host = (urllib.parse.urlsplit(url).hostname or "").lower()
     except Exception:
@@ -479,7 +561,12 @@ def select_representatives(items: list[dict]) -> list[dict]:
         grouped.setdefault(key, []).append(item)
 
     selected = []
-    for key, variants in grouped.items():
+    for key, raw_variants in grouped.items():
+        clean_variants = [
+            v for v in raw_variants
+            if not is_known_false_identity(v) and not is_noisy_or_private_provider(v.get("url", ""))
+        ]
+        variants = clean_variants if clean_variants else raw_variants
         best = max(variants, key=representative_score)
         copy = dict(best)
         copy["channel_key"] = key

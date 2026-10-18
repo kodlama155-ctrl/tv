@@ -156,6 +156,16 @@ jobs:
         if: steps.update_mode.outputs.mode == 'full'
         run: python checker.py
 
+      - name: Archive validation report artifact
+        if: steps.update_mode.outputs.mode == 'full'
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-diagnostics
+          path: |
+            validation.json
+            stats.json
+          retention-days: 14
+
       - name: Commit changes
         run: |
           git config user.name "emirtv-bot"
