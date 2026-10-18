@@ -318,19 +318,36 @@ BROKEN_LOGO_INDICATORS: tuple[str, ...] = (
 def is_broken_or_unreliable_logo(logo: str) -> bool:
     if not logo:
         return True
-    return any(ind in logo.lower() for ind in BROKEN_LOGO_INDICATORS)
+    lower = logo.lower()
+    # Encoded parentheses (%28, %29) and parens break many IPTV player parsers (e.g. TiviMate, Smart IPTV)
+    if "%28" in lower or "%29" in lower or "(" in lower or ")" in lower:
+        return True
+    return any(ind in lower for ind in BROKEN_LOGO_INDICATORS)
 
 
 DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
     # TRT
-    "trthaber": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png",
-    "trthabertv": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png",
-    "trtspor": "https://i.imgur.com/6tv0zxh.png",
-    "trtspor1": "https://i.imgur.com/6tv0zxh.png",
-    "trtsportv": "https://i.imgur.com/6tv0zxh.png",
+    "trt1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-1-tr.png",
+    "trt1tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-1-tr.png",
+    "trthaber": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-haber-tr.png",
+    "trthabertv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-haber-tr.png",
+    "trtspor": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-spor-tr.png",
+    "trtspor1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-spor-tr.png",
+    "trtsportv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-spor-tr.png",
+    "trtsporyildiz": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-spor-yildiz-tr.png",
+    "trtcocuk": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-cocuk-tr.png",
+    "trtcocuktv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-cocuk-tr.png",
+    "trtbelgesel": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-belgesel-tr.png",
+    "trtbelgeseltv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-belgesel-tr.png",
+    "trtturk": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-turk-tr.png",
+    "trtavaz": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-avaz-tr.png",
+    "trtkurdi": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-kurdi-tr.png",
+    "trtworld": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-world-tr.png",
     "trt2": "https://i.imgur.com/iOCQdyD.png",
     "trt2tv": "https://i.imgur.com/iOCQdyD.png",
-    "trt4k": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/TRT_4K.svg/960px-TRT_4K.svg.png",
+    "trt4k": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-4k-tr.png",
+    "ntv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/ntv-tr.png",
+    "ntvtv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/ntv-tr.png",
     # Ulusal
     "kanald": "https://i.imgur.com/WIeZMKT.png",
     "kanaldtv": "https://i.imgur.com/WIeZMKT.png",

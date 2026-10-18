@@ -3,6 +3,9 @@
 # All URLs are validated by the normal HLS validator before publication.
 # Keep this file small: only durable primary/fallback candidates belong here.
 
+#EXTINF:-1 tvg-id="TRT1.tr@HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-1-tr.png" group-title="Ulusal",TRT 1
+https://tv-trt1.medya.trt.com.tr/master.m3u8
+
 #EXTINF:-1 tvg-id="ShowTV.tr@HD" group-title="Ulusal",Show TV
 https://ciner-live.daioncdn.net/showtv/showtv.m3u8
 
