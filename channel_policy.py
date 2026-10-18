@@ -312,6 +312,8 @@ BROKEN_LOGO_INDICATORS: tuple[str, ...] = (
     "s.cnbce.com",
     "countries/turkey/ekol-tv.png",
     "merlincdn.net",
+    "wikimedia.org",
+    "wikipedia.org",
 )
 
 
@@ -319,8 +321,8 @@ def is_broken_or_unreliable_logo(logo: str) -> bool:
     if not logo:
         return True
     lower = logo.lower()
-    # Encoded parentheses (%28, %29) and parens break many IPTV player parsers (e.g. TiviMate, Smart IPTV)
-    if "%28" in lower or "%29" in lower or "(" in lower or ")" in lower:
+    # Encoded characters (%21, %28, %29) and parens break many IPTV player parsers (e.g. TiviMate, Smart IPTV)
+    if any(ch in lower for ch in ("%21", "%28", "%29", "(", ")", "!")):
         return True
     return any(ind in lower for ind in BROKEN_LOGO_INDICATORS)
 
@@ -343,22 +345,46 @@ DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
     "trtavaz": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-avaz-tr.png",
     "trtkurdi": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-kurdi-tr.png",
     "trtworld": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-world-tr.png",
+    "trteba": "https://i.imgur.com/CRBfZi4.png",
+    "trtebatv": "https://i.imgur.com/CRBfZi4.png",
     "trt2": "https://i.imgur.com/iOCQdyD.png",
     "trt2tv": "https://i.imgur.com/iOCQdyD.png",
     "trt4k": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-4k-tr.png",
     "ntv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/ntv-tr.png",
     "ntvtv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/ntv-tr.png",
-    # Ulusal
+    # Turkuvaz & Ulusal
+    "aspor": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-spor-tr.png",
+    "asportv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-spor-tr.png",
+    "ahaber": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-haber-tr.png",
+    "ahabertv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-haber-tr.png",
+    "apara": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-para-tr.png",
+    "aparatv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-para-tr.png",
+    "atv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/atv-tr.png",
+    "atvtv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/atv-tr.png",
+    "atvavrupa": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/atv-avrupa-tr.png",
+    "atvavrupatv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/atv-avrupa-tr.png",
+    "tv8": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tv8-tr.png",
+    "tv8tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tv8-tr.png",
+    "tv85": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tv85-tr.png",
+    "tv85tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tv85-tr.png",
+    "tv100": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tv100-tr.png",
+    "tv100tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tv100-tr.png",
     "kanald": "https://i.imgur.com/WIeZMKT.png",
     "kanaldtv": "https://i.imgur.com/WIeZMKT.png",
-    "showtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Show_TV_logo.svg/1280px-Show_TV_logo.svg.png",
-    "showtvtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Show_TV_logo.svg/1280px-Show_TV_logo.svg.png",
-    "cnbce": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/CNBC-e_2024.svg/1280px-CNBC-e_2024.svg.png",
-    "cnbcetv": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/CNBC-e_2024.svg/1280px-CNBC-e_2024.svg.png",
+    "showtv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/show-tr.png",
+    "showtvtv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/show-tr.png",
+    "cnbce": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/cnbc-e-tr.png",
+    "cnbcetv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/cnbc-e-tr.png",
     "teve2": "https://i.imgur.com/rsoSLih.png",
+    "tbmmtv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tbmm-tv-tr.png",
+    "tbmm": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tbmm-tv-tr.png",
+    "diyanettv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/diyanet-tv-tr.png",
+    "diyanet": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/diyanet-tv-tr.png",
+    "fx": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/fx-tr.png",
+    "fxtv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/fx-tr.png",
     # Haber
-    "ekoltv": "https://upload.wikimedia.org/wikipedia/commons/6/62/Ekol_TV_Kanal%C4%B1n%C4%B1n_Logosu.png",
-    "ekoltvtv": "https://upload.wikimedia.org/wikipedia/commons/6/62/Ekol_TV_Kanal%C4%B1n%C4%B1n_Logosu.png",
+    "ekoltv": "https://raw.githubusercontent.com/kodlama155-ctrl/tv/main/logos/ekol-tv.png",
+    "ekoltvtv": "https://raw.githubusercontent.com/kodlama155-ctrl/tv/main/logos/ekol-tv.png",
     "ekoturk": "https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65",
     "ekoturktv": "https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65",
     "tele1": "https://i.imgur.com/b9JcIqF.png",
@@ -373,10 +399,10 @@ DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
     "ekolsports": "https://i.ibb.co/Y4tR1tTm/Ekolsports.jpg",
     "ekolsportstv": "https://i.ibb.co/Y4tR1tTm/Ekolsports.jpg",
     # Belgesel & Diğer
-    "tlc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
-    "tlctv": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
-    "dmax": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png",
-    "dmaxtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png",
+    "tlc": "https://i.imgur.com/AXlHsla.png",
+    "tlctv": "https://i.imgur.com/AXlHsla.png",
+    "dmax": "https://i.imgur.com/qmvMUq6.png",
+    "dmaxtv": "https://i.imgur.com/qmvMUq6.png",
     "habitattv": "https://i.imgur.com/uC5rJ0W.png",
     "habitat": "https://i.imgur.com/uC5rJ0W.png",
     "yabantv": "https://i.imgur.com/Kq5UfQO.png",
@@ -385,7 +411,6 @@ DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
     "showmax": "https://i.imgur.com/456FWA7.png",
     "vavtv": "https://i.imgur.com/jw0gB8L.png",
     "fmtv": "https://i.imgur.com/nCzpHWM.png",
-    "gzt": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/GZT_logo.svg/960px-GZT_logo.svg.png",
     "eurostar": "https://i.imgur.com/kb165Ot.png",
     "kanal7avrupa": "https://i.imgur.com/wlfyj5l.png",
     "dreamtv": "https://i.imgur.com/4hH7nZs.png",
@@ -402,8 +427,10 @@ DEFAULT_CHANNEL_LOGOS: dict[str, str] = {
     "persianaturkiye": "https://i.imgur.com/7p3j0hF.png",
     "cine1": "https://i.imgur.com/agn47sQ.png",
     "cine1tv": "https://i.imgur.com/agn47sQ.png",
-    "babytv": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/BabyTV_text_logo.svg/1280px-BabyTV_text_logo.svg.png",
-    "babytvtv": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/BabyTV_text_logo.svg/1280px-BabyTV_text_logo.svg.png",
+    "babytv": "https://i.imgur.com/4BDJ5FT.png",
+    "babytvtv": "https://i.imgur.com/4BDJ5FT.png",
+    "spacetoonturkey": "https://raw.githubusercontent.com/kodlama155-ctrl/tv/main/logos/spacetoon.png",
+    "spacetoon": "https://raw.githubusercontent.com/kodlama155-ctrl/tv/main/logos/spacetoon.png",
 }
 
 

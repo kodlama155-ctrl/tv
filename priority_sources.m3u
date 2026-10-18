@@ -144,11 +144,11 @@ https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 
 # A Haber stable tokenless Turknet/ERCDN source.
-#EXTINF:-1 tvg-id="AHaber.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png" group-title="Haber",A Haber
+#EXTINF:-1 tvg-id="AHaber.tr@HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-haber-tr.png" group-title="Haber",A Haber
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 
 # A Spor stable tokenless Turknet/ERCDN source.
-#EXTINF:-1 tvg-id="ASpor.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/archive/e/e9/20140920094552%21A_Spor_logosu.png" group-title="Spor",A Spor
+#EXTINF:-1 tvg-id="ASpor.tr@HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-spor-tr.png" group-title="Spor",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 
 # A Para stable tokenless Turknet/ERCDN source.
@@ -179,7 +179,7 @@ https://trt.daioncdn.net/trtspor/master.m3u8?app=web&platform=trtspor
 
 # TRT Belgesel: official TRT HLS. GitHub runner is blocked/restricted,
 # so Turkey devices retain the official source as a geo fallback.
-#EXTINF:-1 tvg-id="TRTBelgesel.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Belgesel_logo_%282019-%29.svg/960px-TRT_Belgesel_logo_%282019-%29.svg.png" group-title="Belgesel",TRT Belgesel [Geo-blocked]
+#EXTINF:-1 tvg-id="TRTBelgesel.tr@HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-belgesel-tr.png" group-title="Belgesel",TRT Belgesel [Geo-blocked]
 #EXTVLCOPT:http-referrer=https://www.trtbelgesel.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
@@ -213,11 +213,11 @@ https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 
 # Ekol TV: current public ERCDN stream.
-#EXTINF:-1 tvg-id="EkolTV.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/62/Ekol_TV_Kanal%C4%B1n%C4%B1n_Logosu.png" group-title="Haber",Ekol TV
+#EXTINF:-1 tvg-id="EkolTV.tr@HD" tvg-logo="https://raw.githubusercontent.com/kodlama155-ctrl/tv/main/logos/ekol-tv.png" group-title="Haber",Ekol TV
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
 
 # TRT Haber metadata/logo on the official stream.
-#EXTINF:-1 tvg-id="TRTHaber.tr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png" group-title="Haber",TRT Haber
+#EXTINF:-1 tvg-id="TRTHaber.tr@HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-haber-tr.png" group-title="Haber",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
 
 # EKOTÜRK metadata/logo on the verified official browser-discovered stream.
