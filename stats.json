@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-18T10:10:56.131819+00:00",
+  "updated_at_utc": "2026-10-18T10:14:23.538279+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -72,10 +72,10 @@
   },
   "prevalidation_review_candidates": 54,
   "semantic_channels": 236,
-  "fallback_channels": 40,
-  "turkey_device_channels": 166,
+  "fallback_channels": 37,
+  "turkey_device_channels": 163,
   "turkey_device_reasons": {
-    "curated-category": 166
+    "curated-category": 163
   },
   "duplicate_stream_variants_collapsed": 165,
   "filtered_private_style_entries": 327,
@@ -86,11 +86,12 @@
   "validation_fresh_checks": 401,
   "selected_stream_sources": {
     "priority": 43,
-    "github_discovery": 12,
-    "official_html": 11,
+    "github_discovery": 11,
+    "iptv_org": 131,
+    "official_html": 8,
+    "official_api": 3,
     "official_browser": 2,
-    "upstream": 37,
-    "iptv_org": 131
+    "upstream": 38
   },
   "domain_score_count": 193,
   "top_domain_scores": [
@@ -99,17 +100,6 @@
       "score": 91.18,
       "samples": 12,
       "verified": 12,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
-      "domain": "dogus.daioncdn.net",
-      "score": 90.0,
-      "samples": 10,
-      "verified": 10,
       "restricted": 0,
       "unknown": 0,
       "dead": 0,
@@ -132,17 +122,6 @@
       "score": 87.5,
       "samples": 7,
       "verified": 7,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
-      "domain": "tv8.daioncdn.net",
-      "score": 86.36,
-      "samples": 6,
-      "verified": 6,
       "restricted": 0,
       "unknown": 0,
       "dead": 0,
@@ -227,28 +206,6 @@
       "verified_rate": 100.0
     },
     {
-      "domain": "tjktv-live.tjk.org",
-      "score": 81.25,
-      "samples": 3,
-      "verified": 3,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
-      "domain": "trt.daioncdn.net",
-      "score": 81.25,
-      "samples": 3,
-      "verified": 3,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    {
       "domain": "turkmedya-live.ercdn.net",
       "score": 81.25,
       "samples": 3,
@@ -258,6 +215,28 @@
       "dead": 0,
       "drm": 0,
       "verified_rate": 100.0
+    },
+    {
+      "domain": "dogus.daioncdn.net",
+      "score": 80.0,
+      "samples": 10,
+      "verified": 8,
+      "restricted": 0,
+      "unknown": 2,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 80.0
+    },
+    {
+      "domain": "trkvz-live.ercdn.net",
+      "score": 79.64,
+      "samples": 9,
+      "verified": 6,
+      "restricted": 3,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 66.67
     },
     {
       "domain": "bantel-cdn1.iptvperu.tv",
@@ -272,6 +251,17 @@
     },
     {
       "domain": "beyaztv-live.daioncdn.net",
+      "score": 78.57,
+      "samples": 2,
+      "verified": 2,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    {
+      "domain": "canli.tvden.com.tr",
       "score": 78.57,
       "samples": 2,
       "verified": 2,
@@ -304,7 +294,18 @@
       "verified_rate": 100.0
     },
     {
-      "domain": "media.finest.tv",
+      "domain": "live.al-zahratv.com",
+      "score": 78.57,
+      "samples": 2,
+      "verified": 2,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    {
+      "domain": "mumbai-edge.smartplaytv.in",
       "score": 78.57,
       "samples": 2,
       "verified": 2,
@@ -322,68 +323,68 @@
     "official-fallback": 16
   },
   "stream_validation_statuses": {
-    "verified": 219,
-    "restricted": 27,
-    "unknown": 141,
-    "dead": 14
+    "verified": 214,
+    "restricted": 40,
+    "unknown": 134,
+    "dead": 13
   },
-  "verified_entries": 166,
-  "restricted_entries": 5,
-  "unknown_entries": 60,
-  "unknown_retry_candidates": 14,
-  "unknown_retry_skipped_verified_sibling": 127,
+  "verified_entries": 163,
+  "restricted_entries": 15,
+  "unknown_entries": 53,
+  "unknown_retry_candidates": 20,
+  "unknown_retry_skipped_verified_sibling": 114,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 3,
   "unknown_retry_workers": 12,
   "dead_entries": 5,
   "drm_entries": 0,
   "all_non_dead_non_drm_entries": 231,
-  "turkey_device_entries": 166,
+  "turkey_device_entries": 163,
   "turkey_device_geo_fallbacks": 0,
   "turkey_device_restricted_fallbacks": 0,
   "turkey_device_ephemeral_overrides": 0,
   "core_channels_total": 70,
-  "core_channels_verified": 61,
-  "core_channels_geo_restricted": 0,
-  "core_channels_device_restricted": 0,
-  "core_channels_not_verified": 9,
+  "core_channels_verified": 53,
+  "core_channels_geo_restricted": 5,
+  "core_channels_device_restricted": 3,
+  "core_channels_not_verified": 17,
   "categories_verified": {
-    "Ulusal": 23,
-    "Haber": 30,
-    "Spor": 9,
-    "Film & Dizi": 5,
-    "Çocuk": 9,
-    "Belgesel": 8,
-    "Dini": 7,
-    "Müzik": 17,
+    "Ulusal": 21,
+    "Haber": 32,
+    "Spor": 6,
+    "Film & Dizi": 4,
+    "Çocuk": 7,
+    "Belgesel": 5,
+    "Dini": 9,
+    "Müzik": 18,
     "Yerel": 42,
-    "Uluslararası": 16,
+    "Uluslararası": 19,
     "Diğer": 0
   },
   "categories_restricted": {
-    "Ulusal": 0,
-    "Haber": 2,
-    "Spor": 0,
-    "Film & Dizi": 1,
-    "Çocuk": 0,
-    "Belgesel": 0,
-    "Dini": 1,
+    "Ulusal": 1,
+    "Haber": 1,
+    "Spor": 4,
+    "Film & Dizi": 2,
+    "Çocuk": 2,
+    "Belgesel": 5,
+    "Dini": 0,
     "Müzik": 0,
     "Yerel": 0,
-    "Uluslararası": 1,
+    "Uluslararası": 0,
     "Diğer": 0
   },
   "categories_unknown": {
-    "Ulusal": 1,
-    "Haber": 6,
-    "Spor": 6,
+    "Ulusal": 2,
+    "Haber": 5,
+    "Spor": 5,
     "Film & Dizi": 0,
     "Çocuk": 0,
-    "Belgesel": 13,
-    "Dini": 3,
-    "Müzik": 4,
+    "Belgesel": 11,
+    "Dini": 2,
+    "Müzik": 3,
     "Yerel": 17,
-    "Uluslararası": 10,
+    "Uluslararası": 8,
     "Diğer": 0
   }
 }

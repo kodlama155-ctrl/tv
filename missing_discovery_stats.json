@@ -1,8 +1,8 @@
 {
-  "updated_at_utc": "2026-10-18T09:50:30.166980+00:00",
+  "updated_at_utc": "2026-10-18T10:12:16.332392+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 167,
-  "missing_before_search": 73,
+  "channels_in_previous_tr": 166,
+  "missing_before_search": 74,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
@@ -29,6 +29,7 @@
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
+    "Number1 Türk TV",
     "Ada TV",
     "Kurdistan TV",
     "MC TV",
@@ -223,6 +224,12 @@
     },
     {
       "name": "Number1 Rap TV",
+      "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Number1 Türk TV",
       "category": "Müzik",
       "files_matched": 0,
       "candidates": 0
