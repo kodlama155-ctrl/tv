@@ -144,13 +144,21 @@ jobs:
         if: steps.update_mode.outputs.mode == 'full'
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python discover.py
+        run: |
+          timeout --signal=TERM 90s python discover.py || {
+            echo "Public discovery timed out/rate-limited; continuing with existing candidates"
+            exit 0
+          }
 
       - name: Target missing catalog channels
         if: steps.update_mode.outputs.mode == 'full'
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python missing_discover.py
+        run: |
+          timeout --signal=TERM 90s python missing_discover.py || {
+            echo "Missing discovery timed out/rate-limited; continuing with existing candidates"
+            exit 0
+          }
 
       - name: Validate streams and build playlists
         if: steps.update_mode.outputs.mode == 'full'

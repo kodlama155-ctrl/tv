@@ -27,10 +27,10 @@ UA = "EmirTV-Missing-Discovery/2.0"
 
 # GitHub code search supports OR. Six channel names per query keeps the query
 # compact and uses only two search requests for a typical 12-channel gap.
-BATCH_SIZE = 6
-MAX_RESULTS_PER_BATCH = 50
-SEARCH_DELAY_SECONDS = 7
-MAX_FILE_BYTES = 2_000_000
+BATCH_SIZE = 8
+MAX_RESULTS_PER_BATCH = 15
+SEARCH_DELAY_SECONDS = 3
+MAX_FILE_BYTES = 500_000
 
 M3U8_RE = re.compile(
     r'https?://[^\s"\'<>]+?\.m3u8(?:\?[^\s"\'<>]*)?',
@@ -306,45 +306,15 @@ def main():
                 "search_results": len(items),
                 "fallback_individual": False,
             })
-        except Exception as exc:
-            # A failed OR batch must not silently skip every channel in it.
-            # Retry each target independently and merge the successful results.
+        except urllib.error.HTTPError as exc:
             errors += 1
-            items = []
-            individual = []
-            for row in batch:
-                time.sleep(2)
-                single_query = f'"{row["name"]}" extension:m3u'
-                single_encoded = urllib.parse.urlencode({
-                    "q": single_query,
-                    "per_page": str(MAX_RESULTS_PER_BATCH),
-                })
-                try:
-                    single = request_json(
-                        f"{API}/search/code?{single_encoded}",
-                        retry_429=True,
-                    )
-                    single_items = single.get("items", [])
-                    items.extend(single_items)
-                    individual.append({
-                        "name": row["name"],
-                        "search_results": len(single_items),
-                    })
-                except Exception as single_exc:
-                    errors += 1
-                    individual.append({
-                        "name": row["name"],
-                        "error": type(single_exc).__name__,
-                    })
-
-            batch_report.append({
-                "names": [row["name"] for row in batch],
-                "query": query,
-                "error": type(exc).__name__,
-                "fallback_individual": True,
-                "individual": individual,
-                "search_results": len(items),
-            })
+            if exc.code in {403, 429}:
+                print(f"GitHub Search rate limit reached ({exc.code}); stopping missing channel search early.")
+                break
+            continue
+        except Exception as exc:
+            errors += 1
+            continue
 
         for item in items:
             file_key = item.get("url") or ""
