@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-18T10:28:38.682257+00:00",
-  "count": 73,
+  "updated_at_utc": "2026-10-19T07:58:47.083498+00:00",
+  "count": 54,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
@@ -120,33 +120,6 @@
       "url": "https://live.artidijitalmedya.com/artidijital_dehatv/dehatv/playlist.m3u8",
       "source_kind": "upstream",
       "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Dizi TV",
-      "tvg_id": "Dizi.tr",
-      "url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/dizi-tv/playlist/0.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Ekol Haber",
-      "tvg_id": "EkolHaber.tr",
-      "url": "https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "FLASH HABER",
-      "tvg_id": "FlashHaber.tr",
-      "url": "https://flashhaber-live.ercdn.net/flashhaber/flashhaber.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
       "reason": "uncatalogued-tr-identity"
     },
     {
@@ -358,38 +331,11 @@
       "reason": "uncatalogued-tr-identity"
     },
     {
-      "name": "Isvicre TV",
-      "tvg_id": "Isvicre.tr",
-      "url": "https://i41.ozelip.com:3269/hybrid/play.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
       "name": "Kanal 68 (720p) [Not 24/7]",
       "tvg_id": "Kanal68.tr@SD",
       "url": "https://live.artidijitalmedya.com/artidijital_kanal68/kanal68/playlist.m3u8",
       "source_kind": "upstream",
       "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Kanal Plus",
-      "tvg_id": "KanalPlus.tr",
-      "url": "https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Kanal Urfa",
-      "tvg_id": "KanalUrfa.tr",
-      "url": "https://edge1.socialsmart.tv/kanalurfa/bant1/playlist.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
       "reason": "uncatalogued-tr-identity"
     },
     {
@@ -401,56 +347,11 @@
       "reason": "uncatalogued-tr-identity"
     },
     {
-      "name": "Medine TV",
-      "tvg_id": "AL.SUNNAH.AL.NABAWIYAH.tr",
-      "url": "https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/saudi_sunnah-avc1_600000=2-mp4a_145600_ara=3.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Mekke TV Canli",
-      "tvg_id": "SAUDI.QURAN.tr",
-      "url": "https://live.kwikmotion.com/sbrksaquranradiolive/srpksaquranradio/playlist.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Metropol TV",
-      "tvg_id": "Metropol.tr",
-      "url": "https://edge1.socialsmart.tv/metropoltv/smil/metropoltv/bant1/chunks.m3u8?app=supersatforum",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
       "name": "MovieSmart Turk (576p)",
       "tvg_id": "MovieSmartTurk.tr@SD",
       "url": "http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174",
       "source_kind": "iptv_org",
       "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Mukabele TV",
-      "tvg_id": "Mukabele.tr",
-      "url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/mukabele-tv/playlist.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "NDR TV",
-      "tvg_id": "NDR.tr",
-      "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_nds/master.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
       "reason": "uncatalogued-tr-identity"
     },
     {
@@ -470,65 +371,11 @@
       "reason": "uncatalogued-tr-identity"
     },
     {
-      "name": "Rehber TV",
-      "tvg_id": "Rehber.tr",
-      "url": "https://cdn4.yayin.com.tr/rehbertv/tracks-v1a1/mono.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Rize Turk",
-      "tvg_id": "RizeTurk.tr",
-      "url": "https://yayin.rizeturk.com:3777/hybrid/play.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "SDM Sinema",
-      "tvg_id": "SDMSinema.tr",
-      "url": "https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Semarkand TV",
-      "tvg_id": "Semerkand.tr",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
       "name": "Show Turk (1080p)",
       "tvg_id": "ShowTurk.tr@SD",
       "url": "https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8",
       "source_kind": "iptv_org",
       "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Syria TV",
-      "tvg_id": "SyriaTV.tr",
-      "url": "https://live.kwikmotion.com/syriatvlive/syriatv.smil/playlist_dvr.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Tabii TV",
-      "tvg_id": "tabii TV.tr",
-      "url": "https://ceokzokgtd.erbvr.com/tabiitv/tabiitv_1080p.m3u8?sid=IUlyczhCBES7nvvwJSIycw&bvr_flags=10&bvr_ch=tabiitv&bvr_bw=2800000",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
       "reason": "uncatalogued-tr-identity"
     },
     {
@@ -564,15 +411,6 @@
       "reason": "uncatalogued-tr-identity"
     },
     {
-      "name": "TRT EBA TV",
-      "tvg_id": "TRTEbaTV.tr",
-      "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
       "name": "Turksat Tanitim (1080p) [Geo-blocked]",
       "tvg_id": "TurksatTanitim.tr@SD",
       "url": "http://176.65.153.26:6004/play/a02s/index.m3u8",
@@ -594,15 +432,6 @@
       "url": "https://live.artidijitalmedya.com/artidijital_vizyon58/vizyon58/playlist.m3u8",
       "source_kind": "upstream",
       "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Vuslat TV",
-      "tvg_id": "Vuslat.tr",
-      "url": "https://live.artidijitalmedya.com/artidijital_vuslattv/vuslattv/playlist.m3u8",
-      "source_repo": "emrecemal/my-iptv-playlist",
-      "source_path": "playlist.m3u",
-      "source_updated": "2026-10-04T23:24:58Z",
       "reason": "uncatalogued-tr-identity"
     }
   ]

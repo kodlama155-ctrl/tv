@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-10-18T10:11:19.029609+00:00",
+  "updated_at_utc": "2026-10-19T07:50:01.067070+00:00",
   "official_pages": 38,
-  "pages_ok": 33,
+  "pages_ok": 34,
   "pages_with_candidates": 12,
   "raw_candidates": 15,
   "accepted_unique_candidates": 15,
   "probe_statuses": {
-    "restricted": 4,
     "verified": 8,
+    "restricted": 4,
     "unknown": 3
   },
   "sources": [
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=MFdZWW9jdktCQmo2YUFkUWx3S1hMTmJDV2R1K3Zidmd4cFVlQm44czd0Zz0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=eXNzaE5zZFBoS285TFhpYkVyRTZvRnJVMHIvQjlMdWFJQ0ZnVkRhQXRjTT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=TFBSQ0RrK1J0Nm5ncEVtd3ROSmJEeEpLS05kT2s0N1JnZkZaSEg4ZE9kbz0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=NHBQUURxeXd3RkJoNHNuWDU3SFUwVU9NeW1oSVFodldZV1VyMzJiY2FPUT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -411,11 +411,12 @@
     {
       "name": "beIN Sports Haber",
       "page": "https://beinsports.com.tr/canli-yayin",
-      "status": "page_too_large",
-      "page_final_url": null,
+      "status": "ok",
+      "page_final_url": "https://beinsports.com.tr/canli-yayin",
       "page_candidates": 0,
-      "aux_scanned": 0,
-      "candidates": []
+      "aux_scanned": 2,
+      "candidates": [],
+      "identity_rejected_candidates": 0
     }
   ]
 }
