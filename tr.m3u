@@ -1,6 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="TRT1.tr@HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-1-tr.png" group-title="Ulusal",TRT 1
-https://tv-trt1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="Ulusal" tvg-logo="https://i.imgur.com/WIeZMKT.png",Kanal D
 #EXTVLCOPT:http-referrer=https://www.kanald.com.tr/canli-yayin
 #EXTVLCOPT:http-referer=https://www.kanald.com.tr/canli-yayin
