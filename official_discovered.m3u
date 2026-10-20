@@ -4,13 +4,13 @@
 #EXTINF:-1 group-title="Belgesel",DMAX
 #EXTVLCOPT:http-referrer=https://www.dmax.com.tr/canli-izle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=eXNzaE5zZFBoS285TFhpYkVyRTZvRnJVMHIvQjlMdWFJQ0ZnVkRhQXRjTT0=
+https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=WE1sU3B6NFkzczJYZlkxNnloL0pmUHMxMi80YkpTeUtIWHI1cklCVzhrbz0=
 # SOURCE: official:https://www.tlctv.com.tr/canli-izle
 # PROBE: unknown variant HTTP 500
 #EXTINF:-1 group-title="Belgesel",TLC
 #EXTVLCOPT:http-referrer=https://www.tlctv.com.tr/canli-izle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=NHBQUURxeXd3RkJoNHNuWDU3SFUwVU9NeW1oSVFodldZV1VyMzJiY2FPUT0=
+https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=c2crZy9rbkJKUDJIZzFJblgyUlZNVlQrWkhGemN4QVZIUElJL2txeDJVWT0=
 # SOURCE: official:https://www.vavtv.com.tr/canli-yayin
 # PROBE: restricted manifest HTTP 403
 #EXTINF:-1 group-title="Dini",Vav TV
@@ -78,7 +78,7 @@ https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://kdlive.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
 # SOURCE: official:https://www.meltemtv.com.tr/canli-yayin
-# PROBE: verified real media segment verified
+# PROBE: unknown response is not HLS
 #EXTINF:-1 group-title="Ulusal",Meltem TV
 #EXTVLCOPT:http-referrer=https://www.meltemtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -89,3 +89,9 @@ https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
 #EXTVLCOPT:http-referrer=https://www.tv8.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
+# SOURCE: official:https://img.tv8bucuk.com/tv8-5-canli-yayin
+# PROBE: restricted segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401
+#EXTINF:-1 group-title="Ulusal",TV8.5
+#EXTVLCOPT:http-referrer=https://img.tv8bucuk.com/tv8-5-canli-yayin
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3

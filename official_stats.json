@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-10-19T07:50:01.067070+00:00",
+  "updated_at_utc": "2026-10-20T07:37:20.183364+00:00",
   "official_pages": 38,
-  "pages_ok": 34,
-  "pages_with_candidates": 12,
-  "raw_candidates": 15,
-  "accepted_unique_candidates": 15,
+  "pages_ok": 35,
+  "pages_with_candidates": 13,
+  "raw_candidates": 16,
+  "accepted_unique_candidates": 16,
   "probe_statuses": {
-    "verified": 8,
-    "restricted": 4,
-    "unknown": 3
+    "verified": 7,
+    "restricted": 5,
+    "unknown": 4
   },
   "sources": [
     {
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=eXNzaE5zZFBoS285TFhpYkVyRTZvRnJVMHIvQjlMdWFJQ0ZnVkRhQXRjTT0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=WE1sU3B6NFkzczJYZlkxNnloL0pmUHMxMi80YkpTeUtIWHI1cklCVzhrbz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=NHBQUURxeXd3RkJoNHNuWDU3SFUwVU9NeW1oSVFodldZV1VyMzJiY2FPUT0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=c2crZy9rbkJKUDJIZzFJblgyUlZNVlQrWkhGemN4QVZIUElJL2txeDJVWT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -367,12 +367,14 @@
     {
       "name": "TV8.5",
       "page": "https://img.tv8bucuk.com/tv8-5-canli-yayin",
-      "status": "page_error",
-      "page_final_url": null,
-      "page_candidates": 0,
-      "aux_scanned": 0,
-      "candidates": [],
-      "error": "URLError"
+      "status": "ok",
+      "page_final_url": "https://img.tv8bucuk.com/tv8-5-canli-yayin",
+      "page_candidates": 1,
+      "aux_scanned": 2,
+      "candidates": [
+        "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3"
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "TVNET",
