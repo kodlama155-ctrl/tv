@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-21T07:42:59.291926+00:00",
+  "updated_at_utc": "2026-10-22T07:39:27.488746+00:00",
   "fallback_targets": 19,
   "pages_scanned": 19,
   "pages_with_candidates": 3,
@@ -16,7 +16,7 @@
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
       "network_events": 3,
-      "response_bodies_scanned": 1029,
+      "response_bodies_scanned": 1102,
       "candidates": [
         {
           "url": "https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758",
@@ -43,7 +43,7 @@
       "page": "https://www.akittv.com.tr/canli-izle",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 68,
+      "response_bodies_scanned": 83,
       "candidates": []
     },
     {
@@ -51,7 +51,7 @@
       "page": "https://www.benguturk.com/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 28,
+      "response_bodies_scanned": 30,
       "candidates": []
     },
     {
@@ -66,8 +66,8 @@
       "name": "EKOTÜRK",
       "page": "https://www.ekoturk.com/canli-yayin/",
       "status": "ok",
-      "network_events": 22,
-      "response_bodies_scanned": 103,
+      "network_events": 26,
+      "response_bodies_scanned": 105,
       "candidates": [
         {
           "url": "https://cdn.ekoturk.net/hls/master.m3u8",
@@ -82,7 +82,7 @@
           "via": "request"
         },
         {
-          "url": "https://cdn.ekoturk.net/hls/720p.m3u8",
+          "url": "https://cdn.ekoturk.net/hls/320p.m3u8",
           "referer": "https://cdn.ekoturk.net/2.html?embed=1",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
@@ -94,7 +94,7 @@
       "page": "https://www.fenerbahce.org/fenerbahcetv/canliyayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 11,
+      "response_bodies_scanned": 12,
       "candidates": []
     },
     {
@@ -102,7 +102,7 @@
       "page": "https://www.gzt.com/gzttv-canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 133,
+      "response_bodies_scanned": 146,
       "candidates": []
     },
     {
@@ -118,7 +118,7 @@
       "page": "https://www.krttv.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 12,
+      "response_bodies_scanned": 13,
       "candidates": []
     },
     {
@@ -126,7 +126,7 @@
       "page": "https://www.nowtv.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 56,
+      "response_bodies_scanned": 61,
       "candidates": []
     },
     {
@@ -142,7 +142,7 @@
       "page": "https://www.startv.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 7,
-      "response_bodies_scanned": 113,
+      "response_bodies_scanned": 123,
       "candidates": [
         {
           "url": "https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9",
@@ -157,7 +157,7 @@
           "via": "script-body"
         },
         {
-          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8uoyz5bc6enq&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
+          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8usj46p6xjax&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
           "referer": "https://www.startv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
@@ -169,7 +169,7 @@
       "page": "https://www.sozcu.com.tr/sozcu-tv-canli-yayin-wp7630113",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 292,
+      "response_bodies_scanned": 239,
       "candidates": []
     },
     {
@@ -177,7 +177,7 @@
       "page": "https://www.tele1.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 108,
+      "response_bodies_scanned": 106,
       "candidates": []
     },
     {
@@ -193,7 +193,7 @@
       "page": "https://www.trtspor.com.tr/canli-yayin-izle/trt-3-spor",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 132,
+      "response_bodies_scanned": 143,
       "candidates": []
     },
     {
@@ -201,7 +201,7 @@
       "page": "https://www.tv100.com/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 12,
+      "response_bodies_scanned": 13,
       "candidates": []
     },
     {
@@ -217,7 +217,7 @@
       "page": "https://beinsports.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 66,
+      "response_bodies_scanned": 0,
       "candidates": []
     }
   ]

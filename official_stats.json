@@ -1,12 +1,12 @@
 {
-  "updated_at_utc": "2026-10-21T07:41:57.181059+00:00",
+  "updated_at_utc": "2026-10-22T07:37:58.182417+00:00",
   "official_pages": 38,
-  "pages_ok": 34,
-  "pages_with_candidates": 13,
-  "raw_candidates": 16,
-  "accepted_unique_candidates": 16,
+  "pages_ok": 33,
+  "pages_with_candidates": 12,
+  "raw_candidates": 15,
+  "accepted_unique_candidates": 15,
   "probe_statuses": {
-    "restricted": 5,
+    "restricted": 4,
     "verified": 8,
     "unknown": 3
   },
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=eG44d2RYaXpUTTdPRS9MWHU2YkdCZTE5MVFCQnREbGwwbVZMaXpYaWEvdz0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=TUlnV1o0TFNSMzV4cWEvbTBMT1k1VmJGcHI2ZEIxZmJ3c1VCOXNIUGIrbz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=Rm5EMWNYU3F4ZDVPZmJBWTRpUnBkSmRHUmJWdWJUT1pKcWJMd2tPdWNBaz0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=NGh2bklFQkNkYXlEQ0xRZ2F4YlE3RFYwbXh0bkpXNWMvNlUxMEVWSGFkdz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -391,14 +391,12 @@
     {
       "name": "Vav TV",
       "page": "https://www.vavtv.com.tr/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.vavtv.com.tr/canli-yayin",
-      "page_candidates": 19,
+      "status": "page_error",
+      "page_final_url": null,
+      "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": [
-        "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8"
-      ],
-      "identity_rejected_candidates": 18
+      "candidates": [],
+      "error": "TimeoutError"
     },
     {
       "name": "Yaban TV",

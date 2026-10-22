@@ -1,17 +1,17 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 51,
+  "core_channels_verified": 52,
   "core_channels_geo_restricted": 5,
-  "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 19,
+  "core_channels_device_restricted": 5,
+  "core_channels_not_verified": 18,
   "status_counts": {
-    "verified": 51,
+    "verified": 52,
     "restricted": 2,
-    "absent": 2,
-    "unknown": 6,
+    "unknown": 5,
+    "absent": 1,
     "geo-restricted": 5,
-    "device-restricted": 4
+    "device-restricted": 5
   },
   "missing_channels": [
     {
@@ -24,9 +24,9 @@
     {
       "name": "FM TV",
       "expected_category": "Dini",
-      "status": "absent",
-      "reason": "No candidate found in current sources",
-      "candidate_url": ""
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "http://stream.tvcdn.net/dini/fm-tv.m3u8"
     },
     {
       "name": "Kanal 1",
@@ -34,13 +34,6 @@
       "status": "absent",
       "reason": "No candidate found in current sources",
       "candidate_url": ""
-    },
-    {
-      "name": "Meltem TV",
-      "expected_category": "Ulusal",
-      "status": "unknown",
-      "reason": "response is not HLS",
-      "candidate_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
     },
     {
       "name": "Sözcü TV",
@@ -129,9 +122,9 @@
     {
       "name": "TGRT Belgesel",
       "expected_category": "Belgesel",
-      "status": "unknown",
-      "reason": "manifest URLError",
-      "candidate_url": "https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8"
+      "status": "device-restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "http://162.212.179.32/gin-dvrfl05/gin-tgrtbelgesel/playlist.m3u8"
     },
     {
       "name": "DMAX",
