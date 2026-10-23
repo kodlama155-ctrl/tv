@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-22T07:50:11.709201+00:00",
-  "count": 33,
+  "updated_at_utc": "2026-10-23T07:52:09.417541+00:00",
+  "count": 30,
   "channels": {
     "24tv": {
       "channel_key": "24tv",
@@ -17,7 +17,7 @@
       "channel_key": "ahaber",
       "name": "A Haber",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=zXU-F9dbiC4tLhx5FXiMPw&e=1792699909",
+      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=DyWB0SY66S8ZfGFMEpGQMw&e=1792786133",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -28,29 +28,18 @@
       "channel_key": "apara",
       "name": "A Para",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/apara/apara.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=W_MpM0dk_Ydqs84560SXpg&e=1792699916",
+      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=cqXtHZG64xcAvKT8-19ZxA&e=1792786140",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
       "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       "fallback_referrer": "https://www.apara.com.tr/canli-yayin"
     },
-    "arastv": {
-      "channel_key": "arastv",
-      "name": "Aras TV",
-      "primary_url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
-      "fallback_url": "https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
     "aspor": {
       "channel_key": "aspor",
       "name": "A Spor",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
-      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=osFlVnlCKg7JMFlMmb36XQ&e=1792699913",
+      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=BGxTuQdMG_JRQwyolgibEQ&e=1792786137",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -60,24 +49,13 @@
     "atv": {
       "channel_key": "atv",
       "name": "ATV",
-      "primary_url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=3q7Gghn4iNy5putEfbWo4g&e=1792699901",
-      "fallback_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8",
+      "primary_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
+      "fallback_url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=GOjq95ntonvPR_6Wu1GzRA&e=1792786126",
       "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "birtv": {
-      "channel_key": "birtv",
-      "name": "Bir TV",
-      "primary_url": "https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8",
-      "fallback_url": "https://edge2.taksimbilisim.com/birtv/bant1/playlist.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "discovered.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
+      "fallback_source_kind": "official_api",
+      "fallback_source_name": "turkuvaz_discovered.m3u",
+      "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "fallback_referrer": "https://www.atv.com.tr/canli-yayin"
     },
     "bloomberght": {
       "channel_key": "bloomberght",
@@ -296,17 +274,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "priority",
       "fallback_source_name": "priority_sources.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "trtcocuk": {
-      "channel_key": "trtcocuk",
-      "name": "TRT Çocuk",
-      "primary_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-      "fallback_url": "https://tv-trtcocuk.medya.trt.com.tr/master_720.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "missing_discovered.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
