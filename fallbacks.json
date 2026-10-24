@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-23T07:52:09.417541+00:00",
+  "updated_at_utc": "2026-10-24T07:29:59.688519+00:00",
   "count": 30,
   "channels": {
     "24tv": {
@@ -17,7 +17,7 @@
       "channel_key": "ahaber",
       "name": "A Haber",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=DyWB0SY66S8ZfGFMEpGQMw&e=1792786133",
+      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=OuvBA4EXq5D-GLN8iiBfjQ&e=1792871646",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -28,18 +28,29 @@
       "channel_key": "apara",
       "name": "A Para",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/apara/apara.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=cqXtHZG64xcAvKT8-19ZxA&e=1792786140",
+      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=r5ENvm1f8XwOvXy_4ZRdwQ&e=1792871653",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
       "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       "fallback_referrer": "https://www.apara.com.tr/canli-yayin"
     },
+    "arastv": {
+      "channel_key": "arastv",
+      "name": "Aras TV",
+      "primary_url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+      "fallback_url": "https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+      "fallback_status": "verified",
+      "fallback_source_kind": "github_discovery",
+      "fallback_source_name": "discovered.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
+    },
     "aspor": {
       "channel_key": "aspor",
       "name": "A Spor",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
-      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=BGxTuQdMG_JRQwyolgibEQ&e=1792786137",
+      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=-nuEZ4ntuMC75WkSwNFhSA&e=1792871649",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -49,13 +60,13 @@
     "atv": {
       "channel_key": "atv",
       "name": "ATV",
-      "primary_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=GOjq95ntonvPR_6Wu1GzRA&e=1792786126",
+      "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
+      "fallback_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
       "fallback_status": "verified",
-      "fallback_source_kind": "official_api",
-      "fallback_source_name": "turkuvaz_discovered.m3u",
-      "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      "fallback_referrer": "https://www.atv.com.tr/canli-yayin"
+      "fallback_source_kind": "upstream",
+      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
     },
     "bloomberght": {
       "channel_key": "bloomberght",
@@ -263,17 +274,6 @@
       "fallback_status": "verified",
       "fallback_source_kind": "iptv_org",
       "fallback_source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "trt2": {
-      "channel_key": "trt2",
-      "name": "TRT 2",
-      "primary_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
-      "fallback_url": "http://tv-trt2.medya.trt.com.tr/master_1440.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "priority",
-      "fallback_source_name": "priority_sources.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },

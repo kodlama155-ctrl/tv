@@ -1,11 +1,10 @@
 {
-  "updated_at_utc": "2026-10-23T07:49:59.732640+00:00",
+  "updated_at_utc": "2026-10-24T07:27:53.474708+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 153,
-  "missing_before_search": 87,
+  "channels_in_previous_tr": 151,
+  "missing_before_search": 89,
   "prior_validation_aware": true,
   "missing_names": [
-    "TRT 1",
     "TRT 4K",
     "Show TV",
     "Kanal 7",
@@ -15,19 +14,21 @@
     "Sözcü TV",
     "A News",
     "DİM TV",
-    "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
     "TRT Spor",
     "TRT Spor Yıldız",
     "FB TV",
     "TRT 3 Spor",
+    "HT Spor",
     "beIN Sports Haber",
     "Sports TV",
     "FX",
+    "BBC First",
     "GEM Pixel",
     "Disney Junior",
     "BabyTV",
+    "TRT Çocuk",
     "TRT Genc",
     "TRT Belgesel",
     "National Geographic",
@@ -38,31 +39,31 @@
     "Yaban TV",
     "DMAX",
     "TLC",
-    "Dost TV",
     "Sercem TV",
     "On4 TV",
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
-    "Number1 Türk TV",
     "Ada TV",
-    "Kurdistan TV",
     "MyZen TV",
     "West Azerbaijan TV",
     "Finest TV",
     "Afroturk TV",
+    "Bir TV",
     "Edessa TV",
     "ETV Manisa",
     "Euro Star",
     "TGRT EU",
     "ATV Avrupa",
     "Kanal 1",
+    "Meltem TV",
     "Kanal 32",
     "Kanal Hayat",
     "MTurk TV",
     "Natural TV",
     "Öncü TV",
     "TV 1",
+    "Aras TV",
     "TELE1",
     "KRT TV",
     "GZT",
@@ -91,18 +92,13 @@
     "TV 38",
     "TV 42",
     "V TV",
+    "Kanal Avrupa",
     "TGRT Europe"
   ],
   "batch_size": 8,
   "search_delay_seconds": 3,
   "search_batches": [],
   "target_report": [
-    {
-      "name": "TRT 1",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
     {
       "name": "TRT 4K",
       "category": "Ulusal",
@@ -158,12 +154,6 @@
       "candidates": 0
     },
     {
-      "name": "Finans Turk TV",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Guneydogu TV",
       "category": "Yerel",
       "files_matched": 0,
@@ -200,6 +190,12 @@
       "candidates": 0
     },
     {
+      "name": "HT Spor",
+      "category": "Spor",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "beIN Sports Haber",
       "category": "Spor",
       "files_matched": 0,
@@ -218,6 +214,12 @@
       "candidates": 0
     },
     {
+      "name": "BBC First",
+      "category": "Film & Dizi",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "GEM Pixel",
       "category": "Film & Dizi",
       "files_matched": 0,
@@ -231,6 +233,12 @@
     },
     {
       "name": "BabyTV",
+      "category": "Çocuk",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TRT Çocuk",
       "category": "Çocuk",
       "files_matched": 0,
       "candidates": 0
@@ -296,12 +304,6 @@
       "candidates": 0
     },
     {
-      "name": "Dost TV",
-      "category": "Dini",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Sercem TV",
       "category": "Dini",
       "files_matched": 0,
@@ -332,19 +334,7 @@
       "candidates": 0
     },
     {
-      "name": "Number1 Türk TV",
-      "category": "Müzik",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Ada TV",
-      "category": "Uluslararası",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Kurdistan TV",
       "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
@@ -370,6 +360,12 @@
     {
       "name": "Afroturk TV",
       "category": "Uluslararası",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Bir TV",
+      "category": "Haber",
       "files_matched": 0,
       "candidates": 0
     },
@@ -410,6 +406,12 @@
       "candidates": 0
     },
     {
+      "name": "Meltem TV",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Kanal 32",
       "category": "Yerel",
       "files_matched": 0,
@@ -441,6 +443,12 @@
     },
     {
       "name": "TV 1",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Aras TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -610,6 +618,12 @@
     {
       "name": "V TV",
       "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Kanal Avrupa",
+      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },

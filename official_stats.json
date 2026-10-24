@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-10-23T07:35:01.016105+00:00",
+  "updated_at_utc": "2026-10-24T07:20:14.903066+00:00",
   "official_pages": 38,
-  "pages_ok": 35,
-  "pages_with_candidates": 13,
-  "raw_candidates": 16,
-  "accepted_unique_candidates": 16,
+  "pages_ok": 34,
+  "pages_with_candidates": 14,
+  "raw_candidates": 17,
+  "accepted_unique_candidates": 17,
   "probe_statuses": {
     "restricted": 5,
-    "verified": 7,
-    "unknown": 4
+    "verified": 9,
+    "unknown": 3
   },
   "sources": [
     {
@@ -94,12 +94,12 @@
     {
       "name": "BengüTürk",
       "page": "https://www.benguturk.com/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.benguturk.com/canli-yayin",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 1,
+      "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "HTTPError"
     },
     {
       "name": "CNN Türk",
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=NWVVblorby9KczFxWFhYTFRCSkJmNWJGaVZraTVBdU1LeXN4dVlzWVpPYz0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=ajhBQ2t3QnYyU1RGcnozUC9jUDhtcFRtcDBjZjh0TDFxUld6RmJGZmdtZz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -139,7 +139,7 @@
       "name": "EKOTÜRK",
       "page": "https://www.ekoturk.com/canli-yayin/",
       "status": "ok",
-      "page_final_url": "https://www.ekoturk.com/canli-yayin/",
+      "page_final_url": "https://www.ekoturk.com/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 2,
       "candidates": [],
@@ -251,9 +251,11 @@
       "page": "https://www.showtv.com.tr/canli-yayin",
       "status": "ok",
       "page_final_url": "https://www.showtv.com.tr/canli-yayin",
-      "page_candidates": 0,
+      "page_candidates": 1,
       "aux_scanned": 2,
-      "candidates": [],
+      "candidates": [
+        "https://ciner-live.ercdn.net/showtv/showtv.m3u8"
+      ],
       "identity_rejected_candidates": 0
     },
     {
@@ -304,7 +306,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=ZlZHY0pWeXVCeGdHMm1OU2YxeFhlNzRXaXU3VTR2M01ySWdWUFJiT1Ewdz0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=bnppVXdxMktJODRPdVhLa2g5WEhsQlhMdUZYQ3NQS0RSUGVpcVViSFhEMD0="
       ],
       "identity_rejected_candidates": 0
     },
