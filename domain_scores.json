@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-24T07:29:59.681316+00:00",
+  "updated_at_utc": "2026-10-25T07:46:55.249515+00:00",
   "method": "Bayesian-smoothed reliability: verified=1.0, restricted=0.55, unknown=0.25, dead/drm=0; prior=70 over 5 samples",
   "domains": {
     "rnttwmjcin.turknet.ercdn.net": {
@@ -43,6 +43,16 @@
       "verified_rate": 87.8
     },
     "cdn.ekoturk.net": {
+      "score": 83.33,
+      "samples": 4,
+      "verified": 4,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    "edge.taksimbilisim.com": {
       "score": 83.33,
       "samples": 4,
       "verified": 4,
@@ -742,16 +752,6 @@
       "drm": 0,
       "verified_rate": 100.0
     },
-    "tv-trtgenc.medya.trt.com.tr": {
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
     "tv-trthaber.medya.trt.com.tr": {
       "score": 75.0,
       "samples": 1,
@@ -812,7 +812,7 @@
       "drm": 0,
       "verified_rate": 100.0
     },
-    "uycyyuuzyh.turknet.ercdn.net": {
+    "vhxyrsly.rocketcdn.com": {
       "score": 75.0,
       "samples": 1,
       "verified": 1,
@@ -862,16 +862,6 @@
       "drm": 0,
       "verified_rate": 100.0
     },
-    "edge.taksimbilisim.com": {
-      "score": 72.22,
-      "samples": 4,
-      "verified": 3,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 1,
-      "drm": 0,
-      "verified_rate": 75.0
-    },
     "tjktv-live.tjk.org": {
       "score": 72.14,
       "samples": 2,
@@ -912,17 +902,17 @@
       "drm": 0,
       "verified_rate": 50.0
     },
-    "1nyaler.streamhostingcdn.top": {
-      "score": 67.5,
-      "samples": 1,
-      "verified": 0,
-      "restricted": 1,
-      "unknown": 0,
+    "uycyyuuzyh.turknet.ercdn.net": {
+      "score": 67.86,
+      "samples": 2,
+      "verified": 1,
+      "restricted": 0,
+      "unknown": 1,
       "dead": 0,
       "drm": 0,
-      "verified_rate": 0.0
+      "verified_rate": 50.0
     },
-    "217.174.229.138": {
+    "1nyaler.streamhostingcdn.top": {
       "score": 67.5,
       "samples": 1,
       "verified": 0,
@@ -1023,6 +1013,16 @@
       "verified_rate": 0.0
     },
     "tv-trtbelgesel.medya.trt.com.tr": {
+      "score": 67.5,
+      "samples": 1,
+      "verified": 0,
+      "restricted": 1,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 0.0
+    },
+    "tv-trtgenc.medya.trt.com.tr": {
       "score": 67.5,
       "samples": 1,
       "verified": 0,
@@ -1193,6 +1193,16 @@
       "verified_rate": 0.0
     },
     "212.42.111.152": {
+      "score": 62.5,
+      "samples": 1,
+      "verified": 0,
+      "restricted": 0,
+      "unknown": 1,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 0.0
+    },
+    "217.174.229.138": {
       "score": 62.5,
       "samples": 1,
       "verified": 0,
@@ -1673,16 +1683,6 @@
       "verified_rate": 0.0
     },
     "vbtob9hyq58eiophct5qctxr2.medya.trt.com.tr": {
-      "score": 62.5,
-      "samples": 1,
-      "verified": 0,
-      "restricted": 0,
-      "unknown": 1,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 0.0
-    },
-    "vhxyrsly.rocketcdn.com": {
       "score": 62.5,
       "samples": 1,
       "verified": 0,

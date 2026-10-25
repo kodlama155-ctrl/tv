@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-24T07:27:53.474708+00:00",
+  "updated_at_utc": "2026-10-25T07:44:49.483389+00:00",
   "catalog_channels": 240,
   "channels_in_previous_tr": 151,
   "missing_before_search": 89,
@@ -20,7 +20,6 @@
     "TRT Spor Yıldız",
     "FB TV",
     "TRT 3 Spor",
-    "HT Spor",
     "beIN Sports Haber",
     "Sports TV",
     "FX",
@@ -39,11 +38,13 @@
     "Yaban TV",
     "DMAX",
     "TLC",
+    "Lalegul TV",
     "Sercem TV",
     "On4 TV",
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
+    "Number1 Türk TV",
     "Ada TV",
     "MyZen TV",
     "West Azerbaijan TV",
@@ -63,7 +64,6 @@
     "Natural TV",
     "Öncü TV",
     "TV 1",
-    "Aras TV",
     "TELE1",
     "KRT TV",
     "GZT",
@@ -190,12 +190,6 @@
       "candidates": 0
     },
     {
-      "name": "HT Spor",
-      "category": "Spor",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "beIN Sports Haber",
       "category": "Spor",
       "files_matched": 0,
@@ -304,6 +298,12 @@
       "candidates": 0
     },
     {
+      "name": "Lalegul TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Sercem TV",
       "category": "Dini",
       "files_matched": 0,
@@ -329,6 +329,12 @@
     },
     {
       "name": "Number1 Rap TV",
+      "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Number1 Türk TV",
       "category": "Müzik",
       "files_matched": 0,
       "candidates": 0
@@ -443,12 +449,6 @@
     },
     {
       "name": "TV 1",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Aras TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0

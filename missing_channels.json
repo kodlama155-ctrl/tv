@@ -1,16 +1,16 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 48,
-  "core_channels_geo_restricted": 6,
+  "core_channels_verified": 49,
+  "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 22,
+  "core_channels_not_verified": 21,
   "status_counts": {
-    "verified": 48,
-    "restricted": 2,
-    "geo-restricted": 6,
+    "verified": 49,
+    "restricted": 1,
+    "geo-restricted": 7,
     "absent": 2,
-    "unknown": 7,
+    "unknown": 6,
     "device-restricted": 4,
     "dead": 1
   },
@@ -42,13 +42,6 @@
       "status": "absent",
       "reason": "No candidate found in current sources",
       "candidate_url": ""
-    },
-    {
-      "name": "Meltem TV",
-      "expected_category": "Ulusal",
-      "status": "unknown",
-      "reason": "variant not HLS",
-      "candidate_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
     },
     {
       "name": "Sözcü TV",
@@ -116,7 +109,7 @@
     {
       "name": "BabyTV Türkiye",
       "expected_category": "Çocuk",
-      "status": "restricted",
+      "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/babytv/index.m3u8"
     },
