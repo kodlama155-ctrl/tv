@@ -1,18 +1,17 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 49,
-  "core_channels_geo_restricted": 7,
+  "core_channels_verified": 51,
+  "core_channels_geo_restricted": 6,
   "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 21,
+  "core_channels_not_verified": 19,
   "status_counts": {
-    "verified": 49,
+    "verified": 51,
     "restricted": 1,
-    "geo-restricted": 7,
     "absent": 2,
     "unknown": 6,
-    "device-restricted": 4,
-    "dead": 1
+    "geo-restricted": 6,
+    "device-restricted": 4
   },
   "missing_channels": [
     {
@@ -21,13 +20,6 @@
       "status": "restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://ciner-live.daioncdn.net/showtv/showtv.m3u8"
-    },
-    {
-      "name": "TRT 2",
-      "expected_category": "Ulusal",
-      "status": "geo-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "FM TV",
@@ -98,13 +90,6 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
-    },
-    {
-      "name": "BBC First Türkiye",
-      "expected_category": "Film & Dizi",
-      "status": "dead",
-      "reason": "manifest HTTP 404",
-      "candidate_url": "http://88.212.15.17/live/bbc_first/index.m3u8"
     },
     {
       "name": "BabyTV Türkiye",

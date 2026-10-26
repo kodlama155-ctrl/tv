@@ -1,8 +1,8 @@
 {
-  "updated_at_utc": "2026-10-25T07:44:49.483389+00:00",
+  "updated_at_utc": "2026-10-26T07:58:19.033259+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 151,
-  "missing_before_search": 89,
+  "channels_in_previous_tr": 153,
+  "missing_before_search": 87,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
@@ -38,7 +38,6 @@
     "Yaban TV",
     "DMAX",
     "TLC",
-    "Lalegul TV",
     "Sercem TV",
     "On4 TV",
     "FM TV",
@@ -49,15 +48,14 @@
     "MyZen TV",
     "West Azerbaijan TV",
     "Finest TV",
+    "4U TV",
     "Afroturk TV",
-    "Bir TV",
     "Edessa TV",
     "ETV Manisa",
     "Euro Star",
     "TGRT EU",
     "ATV Avrupa",
     "Kanal 1",
-    "Meltem TV",
     "Kanal 32",
     "Kanal Hayat",
     "MTurk TV",
@@ -97,7 +95,23 @@
   ],
   "batch_size": 8,
   "search_delay_seconds": 3,
-  "search_batches": [],
+  "search_batches": [
+    {
+      "names": [
+        "TRT 4K",
+        "Show TV",
+        "Kanal 7",
+        "TRT 2",
+        "TYT Türk",
+        "AKİT TV",
+        "Sözcü TV",
+        "A News"
+      ],
+      "query": "\"TRT 4K\" OR \"Show TV\" OR \"Kanal 7\" OR \"TRT 2\" OR \"TYT Türk\" OR \"AKİT TV\" OR \"Sözcü TV\" OR \"A News\" extension:m3u",
+      "search_results": 0,
+      "fallback_individual": false
+    }
+  ],
   "target_report": [
     {
       "name": "TRT 4K",
@@ -298,12 +312,6 @@
       "candidates": 0
     },
     {
-      "name": "Lalegul TV",
-      "category": "Dini",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Sercem TV",
       "category": "Dini",
       "files_matched": 0,
@@ -364,14 +372,14 @@
       "candidates": 0
     },
     {
-      "name": "Afroturk TV",
+      "name": "4U TV",
       "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },
     {
-      "name": "Bir TV",
-      "category": "Haber",
+      "name": "Afroturk TV",
+      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },
@@ -407,12 +415,6 @@
     },
     {
       "name": "Kanal 1",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Meltem TV",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
