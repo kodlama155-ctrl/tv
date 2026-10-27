@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-26T08:01:13.741582+00:00",
+  "updated_at_utc": "2026-10-27T08:04:44.481902+00:00",
   "method": "Bayesian-smoothed reliability: verified=1.0, restricted=0.55, unknown=0.25, dead/drm=0; prior=70 over 5 samples",
   "domains": {
     "livetv.powerapp.com.tr": {
@@ -42,7 +42,7 @@
       "drm": 0,
       "verified_rate": 87.8
     },
-    "edge.taksimbilisim.com": {
+    "cdn.ekoturk.net": {
       "score": 83.33,
       "samples": 4,
       "verified": 4,
@@ -52,7 +52,7 @@
       "drm": 0,
       "verified_rate": 100.0
     },
-    "turkmedya-live.ercdn.net": {
+    "edge.taksimbilisim.com": {
       "score": 83.33,
       "samples": 4,
       "verified": 4,
@@ -72,16 +72,6 @@
       "drm": 0,
       "verified_rate": 83.33
     },
-    "cdn.ekoturk.net": {
-      "score": 81.25,
-      "samples": 3,
-      "verified": 3,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
     "ciner.daioncdn.net": {
       "score": 81.25,
       "samples": 3,
@@ -93,6 +83,16 @@
       "verified_rate": 100.0
     },
     "livetv.radyotvonline.net": {
+      "score": 81.25,
+      "samples": 3,
+      "verified": 3,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    "turkmedya-live.ercdn.net": {
       "score": 81.25,
       "samples": 3,
       "verified": 3,
@@ -622,16 +622,6 @@
       "drm": 0,
       "verified_rate": 100.0
     },
-    "playlist.fasttvcdn.com": {
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
     "rkhubpaomb.turknet.ercdn.net": {
       "score": 75.0,
       "samples": 1,
@@ -662,6 +652,16 @@
       "drm": 0,
       "verified_rate": 100.0
     },
+    "str.yodacdn.net": {
+      "score": 75.0,
+      "samples": 1,
+      "verified": 1,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
     "stream.ilketv.com.tr": {
       "score": 75.0,
       "samples": 1,
@@ -673,6 +673,16 @@
       "verified_rate": 100.0
     },
     "stream8.cinerama.uz": {
+      "score": 75.0,
+      "samples": 1,
+      "verified": 1,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    "tele1-live.ercdn.net": {
       "score": 75.0,
       "samples": 1,
       "verified": 1,
@@ -942,6 +952,16 @@
       "drm": 0,
       "verified_rate": 0.0
     },
+    "bantel-cdn1.iptvperu.tv": {
+      "score": 67.5,
+      "samples": 1,
+      "verified": 0,
+      "restricted": 1,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 0.0
+    },
     "beyaztv.daioncdn.net": {
       "score": 67.5,
       "samples": 1,
@@ -1077,16 +1097,6 @@
       "samples": 1,
       "verified": 0,
       "restricted": 1,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 0.0
-    },
-    "bantel-cdn1.iptvperu.tv": {
-      "score": 65.71,
-      "samples": 2,
-      "verified": 0,
-      "restricted": 2,
       "unknown": 0,
       "dead": 0,
       "drm": 0,
@@ -1542,16 +1552,6 @@
       "drm": 0,
       "verified_rate": 0.0
     },
-    "str.yodacdn.net": {
-      "score": 62.5,
-      "samples": 1,
-      "verified": 0,
-      "restricted": 0,
-      "unknown": 1,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 0.0
-    },
     "stream2.taksimbilisim.com": {
       "score": 62.5,
       "samples": 1,
@@ -1713,16 +1713,6 @@
       "verified_rate": 0.0
     },
     "gzttv-live.lg.mncdn.com": {
-      "score": 58.33,
-      "samples": 1,
-      "verified": 0,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 1,
-      "drm": 0,
-      "verified_rate": 0.0
-    },
-    "tele1-live.ercdn.net": {
       "score": 58.33,
       "samples": 1,
       "verified": 0,

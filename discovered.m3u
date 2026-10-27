@@ -1,30 +1,26 @@
 #EXTM3U
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="TR · eglence",Aras TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="ArasTV.tr@SD" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="General",Aras TV (576p) [Not 24/7]
 http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/TXDV1ty.png" group-title="TR · eglence",Bric ve Satranc TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="BricveSatrancTV.tr@SD" tvg-logo="https://i.imgur.com/TXDV1ty.png" group-title="Undefined",Bric ve Satranc TV (480p) [Not 24/7]
 http://139.162.182.79/live/test/index.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="KanalDDrama.tr@SD" tvg-logo="https://i.imgur.com/WIeZMKT.png" group-title="Entertainment",Kanal D Drama (1080p)
 http://190.93.224.42/KANAL-D-DRAMA/index.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/qBVqtYd.png" group-title="TR · spor",FB TV
-http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/gtUFmCD.png" group-title="TR · eglence",Med Muzik
-http://54.36.110.140/live3/live3.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · eglence",Kanal D Drama
-http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/KanalD_principal_SRT/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="FBTV.tr@SD" tvg-logo="https://i.imgur.com/qBVqtYd.png" group-title="Sports",FB TV
+http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
+# SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
+#EXTINF:-1 tvg-name="Med Muzik" tvg-logo="https://i.imgur.com/gtUFmCD.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Med Muzik
+http://54.36.110.140/live3/live3.m3u8
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TVDen.tr@SD" tvg-logo="https://i.imgur.com/Uhg95Ze.png" group-title="Undefined",TV Den (576p) [Not 24/7]
 http://canli.tvden.com.tr/hls/live.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -32,67 +28,63 @@ http://canli.tvden.com.tr/hls/live.m3u8
 #EXTINF:-1 tvg-id="TRTBelgesel.tr" tvg-name="TRT Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Belgesel_logo_%282019-%29.svg/960px-TRT_Belgesel_logo_%282019-%29.svg.png" group-title="Belgesel",TRT Belgesel
 http://hls127.freeott.top:8080/TRT_BELGESEL_TR/video.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="ImamHusseinTV5.iq@SD" tvg-logo="https://i.imgur.com/Oq2Ve7C.png" group-title="Religious",Imam Hussein TV 5 (720p)
 http://live.al-zahratv.com/live/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/UpsQsbd.png" group-title="TR · eglence",TV 4
-http://turkmedya-live.ercdn.net/tv4/tv4.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Aras TV
 https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="KurdistanTV.iq@SD" tvg-logo="https://i.imgur.com/mjQptpc.png" group-title="General",Kurdistan TV (720p) [Not 24/7]
 https://5a3ed7a72ed4b.streamlock.net/live/SMIL:myStream.smil/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="DHA.tr@SD" tvg-logo="https://i.imgur.com/VZhag2x.png" group-title="News",DHA (720p) [Not 24/7]
 https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="LoveNature.ca@SD" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="Outdoor",Love Nature (1080p)
 https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="beINSportsHaber.tr" tvg-name="beIN Sports Haber" tvg-logo="https://i.imgur.com/QWo0x7S.jpg" group-title="Spor",beIN Sports Haber
 https://andro.mangeinde4.lat/checklist/androstreamlivebsh.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/a3w9eFe.png" group-title="TR · eglence",Alanya Posta TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="AlanyaPostaTV.tr@SD" tvg-logo="https://i.imgur.com/a3w9eFe.png" group-title="General",Alanya Posta TV (1080p)
 https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TV264.tr@SD" tvg-logo="https://i.imgur.com/tudXdOZ.png" group-title="Undefined",TV 264 (1080p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/UVGGrQd.png" group-title="TR · eglence",Semerkand TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="SemerkandTV.tr@SD" tvg-logo="https://i.imgur.com/UVGGrQd.png" group-title="Undefined",Semerkand TV (1080p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/02cDIBi.png" group-title="TR · eglence",Number 1 TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Number1TV.tr@SD" tvg-logo="https://i.imgur.com/02cDIBi.png" group-title="Music",Number 1 TV (720p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/slwbux7.png" group-title="TR · eglence",Number 1 Ask
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Number1Ask.tr@SD" tvg-logo="https://i.imgur.com/slwbux7.png" group-title="Music",Number 1 Ask (720p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/rYtbAGZ.png" group-title="TR · eglence",Number 1 Damar
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Number1Damar.tr@SD" tvg-logo="https://i.imgur.com/rYtbAGZ.png" group-title="Music",Number 1 Damar (720p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/ZM4PSyq.png" group-title="TR · eglence",Number 1 Dance
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Number1Dance.tr@SD" tvg-logo="https://i.imgur.com/ZM4PSyq.png" group-title="Music",Number 1 Dance (720p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9EruWIQ.png" group-title="TR · belgesel",Luys TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="LuysTV.tr@SD" tvg-logo="https://i.imgur.com/9EruWIQ.png" group-title="Culture",Luys TV (1080p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TGRTBelgesel.tr@SD" tvg-logo="https://i.imgur.com/VwWTnf0.png" group-title="General",TGRT Belgesel (576p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -100,64 +92,64 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe46
 #EXTINF:-1 tvg-id="FlashHaberTV.tr" tvg-name="Flash Haber" group-title="Haber",Flash Haber
 https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Bi Kanal" group-title="TÜM KANALLAR (A-Z Sıralı)",Bi Kanal
 https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/rhU6j9I.png" group-title="TR · eglence",Edessa TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="EdessaTV.tr@SD" tvg-logo="https://i.imgur.com/rhU6j9I.png" group-title="Entertainment",Edessa TV (1080p)
 https://canli.edessatv.com/hls/stream.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://sercemtv.com.tr/sercemlogo.jpg" group-title="TR · belgesel",Sercem TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="SercemTV.tr@HD" tvg-logo="https://sercemtv.com.tr/sercemlogo.jpg" group-title="Culture;General;Religious",Sercem TV (1080p)
 https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="TGRTHaber.tr" tvg-name="TGRT Haber" tvg-logo="https://i.imgur.com/PrxwKDw.png" group-title="Haber",TGRT Haber
 https://canli.tgrthaber.com/tgrt.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="TGRT Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/TGRT_Haber_logo.svg/512px-TGRT_Haber_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TGRT Belgesel
 https://canli.tgrthaber.com/tgrtbelgesel.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="TV Den" tvg-logo="https://i.imgur.com/Uhg95Ze.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TV Den
 https://canli.tvden.com.tr/hls/live.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Cine 1" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Cine 1
 https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/bUwarR0.png" group-title="TR · eglence",ATV Alanya
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="ATVAlanya.tr@SD" tvg-logo="https://i.imgur.com/bUwarR0.png" group-title="General",ATV Alanya (1080p)
 https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="Haber61TV.tr@SD" tvg-logo="https://i.imgur.com/2a2XUKl.png" group-title="News",Haber61 TV (720p) [Not 24/7]
 https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/3br8RCq.png" group-title="TR · eglence",Kanal 23
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Kanal23.tr@SD" tvg-logo="https://i.imgur.com/3br8RCq.png" group-title="General",Kanal 23 (1080p)
 https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="Ekoturk.tr" tvg-name="Ekotürk" tvg-logo="https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65" group-title="Haber",Ekotürk
 https://cdn.ekoturk.net/hls/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="BabyFirst.us@US" tvg-logo="https://i.imgur.com/WxLHBwu.png" group-title="Kids",BabyFirst (720p)
 https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://www.knmusictv.com/wp-content/uploads/2026/01/LOGO2112.png" group-title="TR · eglence",KN Music TV
+# SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
+#EXTINF:-1 tvg-name="KN Music TV" tvg-logo="https://www.knmusictv.com/wp-content/uploads/2026/01/LOGO2112.png" group-title="TÜM KANALLAR (A-Z Sıralı)",KN Music TV
 https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="BloombergHT.tr" tvg-name="Bloomberg HT" tvg-logo="https://i.imgur.com/bmkXfIE.png" group-title="Haber",Bloomberg HT
 https://ciner-live.daioncdn.net/bloomberght/bloomberght.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="TR · spor",HTSpor TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="HTSporTV.tr@SD" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="Sports",HTSpor TV (1080p)
 https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
@@ -168,7 +160,7 @@ https://corestream.siteyaptim.live/trt-spor/index.m3u8
 #EXTINF:-1 tvg-id="KanalD.tr" tvg-name="Kanal D" tvg-logo="https://i.imgur.com/9o1atM6.png" group-title="Ulusal",Kanal D
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="KralPopTV.tr@SD" tvg-logo="https://i.imgur.com/ch365lh.png" group-title="Music",Kral Pop TV (720p)
 https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -176,133 +168,77 @@ https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
 #EXTINF:-1 tvg-id="NTV.tr" tvg-name="NTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/NTV_%28Turkey%29_logo.svg/960px-NTV_%28Turkey%29_logo.svg.png" group-title="Haber",NTV
 https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="NTV.HD.tr" tvg-name="NTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/NTV_logo.svg/512px-NTV_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",NTV
 https://dogus.daioncdn.net/ntv/ntv_720p.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="StarTV.tr" tvg-name="Star TV" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="Ulusal",Star TV
 https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://dosttv.com/wp-content/uploads/2022/02/dost_logo.png" group-title="TR · diger",Dost TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="DostTV.tr@SD" tvg-logo="https://dosttv.com/wp-content/uploads/2022/02/dost_logo.png" group-title="Religious",Dost TV (576p)
 https://dost.stream.emsal.im/tv/live.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · eglence",Afroturk TV
-https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="TR · eglence",Bir TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="BirTV.tr@SD" tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="Undefined",Bir TV (720p)
 https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Cay TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Cay TV
 https://edge.taksimbilisim.com/caytv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/LeTP4zq.png" group-title="TR · eglence",Kocaeli TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="KocaeliTV.tr@SD" tvg-logo="https://i.imgur.com/LeTP4zq.png" group-title="General",Kocaeli TV (1080p)
 https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/XaJ7fp6.png" group-title="TR · eglence",Altas TV
-https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/ndupxwu.png" group-title="TR · eglence",Cay TV
-https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/ZbUSlOC.png" group-title="TR · eglence",Fortuna TV
-https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/JT5pp3Y.png" group-title="TR · haber",Guneydogu TV
-https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/CGwImKv.png" group-title="TR · eglence",Icel TV
-https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · eglence",Kanal 32
-https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/5WYaoFZ.png" group-title="TR · eglence",Kanal 33
-https://edge1.socialsmart.tv/kanal33/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/6GNp7f8.png" group-title="TR · eglence",Line TV
-https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.ibb.co/QKXtdkz/sOd3INg.png" group-title="TR · eglence",ETV Manisa
-https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/xj1gvrq.png" group-title="TR · eglence",MTurk TV
-https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · belgesel",Natural TV
-https://edge1.socialsmart.tv/naturaltv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Altas TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Altas TV
 https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Icel TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Icel TV
 https://edge1.taksimbilisim.com/iceltv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Fortuna TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Fortuna TV
 https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Kanal 33" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 33
 https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Kocaeli TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Kocaeli TV
 https://edge2.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="LINETV.tr" tvg-name="Line TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Line TV
 https://edge2.taksimbilisim.com/linetv/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="TurkHaber TV" group-title="TÜM KANALLAR (A-Z Sıralı)",TurkHaber TV
 https://edge2.taksimbilisim.com/turkhaber/bant1/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="TV 52" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 52
 https://edge2.taksimbilisim.com/tv52/bant1/chunks.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Ekol Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Ekol Sports
 https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Ekol TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Ekol TV
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Diyanet_TV_logo.svg/960px-Diyanet_TV_logo.svg.png" group-title="TR · diger",Diyanet TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="DiyanetTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Diyanet_TV_logo.svg/960px-Diyanet_TV_logo.svg.png" group-title="Religious",Diyanet TV (1080p)
 https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · film",Grand Cinema
-https://gcinemahls.wns.live/hls/stream.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="HalkTV.tr" tvg-name="Halk TV" tvg-logo="https://i.imgur.com/xM0HA30.png" group-title="Haber",Halk TV
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/PexhKwp.png" group-title="TR · eglence",4U TV
-https://hls.4utv.live/hls/stream.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="CNBCe.tr" tvg-name="CNBC-e" tvg-logo="https://s.cnbce.com/dist/images/logo-nav.png" group-title="Ulusal",CNBC-e
@@ -311,240 +247,228 @@ https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="Kanal7.tr" tvg-name="Kanal 7" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Ulusal",Kanal 7
 https://kanal7.blutv.com/blutv_kanal7_live/live.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/wwCysFs.png" group-title="TR · diger",Lalegul TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="LalegulTV.tr@SD" tvg-logo="https://i.imgur.com/wwCysFs.png" group-title="Religious",Lalegul TV (1080p)
 https://lbl.netmedya.net/hls/lalegultv.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png" group-title="TR · cocuk",Spacetoon Turkey
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="SpacetoonTurkey.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png" http-referrer="https://spacetoon.com.tr/" group-title="Animation;Kids",Spacetoon Turkey (720p) [Not 24/7]
 https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/QEHKGnG.png" group-title="TR · diger",Al-Zahra TV Turkic
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="AlZahraTVTurkic.tr@SD" tvg-logo="https://i.imgur.com/QEHKGnG.png" group-title="Religious",Al-Zahra TV Turkic (720p) [Not 24/7]
 https://live.al-zahratv.com/live/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/mgDCKiy.png" group-title="TR · eglence",Aksu TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="AksuTV.tr@SD" tvg-logo="https://i.imgur.com/mgDCKiy.png" group-title="General",Aksu TV (720p)
 https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://www.anadolunettv.com/d/r/logo.png" group-title="TR · eglence",Anadolu Net TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="AnadoluNetTV.tr@SD" tvg-logo="https://www.anadolunettv.com/d/r/logo.png" group-title="General",Anadolu Net TV (1080p)
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png" group-title="TR · haber",AS TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="ASTV.tr@SD" tvg-logo="https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png" group-title="News",AS TV (900p)
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/U3qlEAp.png" group-title="TR · eglence",BRTV (Turkiye)
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="BRTV.tr@SD" tvg-logo="https://i.imgur.com/U3qlEAp.png" group-title="Undefined",BRTV (Turkiye) (720p) [Geo-blocked]
 https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="TR · belgesel",Ciftci TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="CiftciTV.tr@SD" tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="Culture;Education",Ciftci TV (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Mm8hdfx.png" group-title="TR · eglence",Deniz Postasi TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="DenizPostasiTV.tr@SD" tvg-logo="https://i.imgur.com/Mm8hdfx.png" group-title="General",Deniz Postasi TV (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/qWkHjRA.png" group-title="TR · diger",Diyar TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="DiyarTV.tr@SD" tvg-logo="https://i.imgur.com/qWkHjRA.png" group-title="Religious",Diyar TV (720p)
 https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/VDGEPrD.png" group-title="TR · eglence",ERTV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="ERTV.tr@SD" tvg-logo="https://i.imgur.com/VDGEPrD.png" group-title="General",ERTV (1080p) [Geo-blocked]
 https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/epAEBrp.png" group-title="TR · eglence",ES TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="ESTV.tr@SD" tvg-logo="https://i.imgur.com/epAEBrp.png" group-title="Undefined",ES TV (720p)
 https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/ytc/AIdro_msPtG6zfPKIJIIdvG4dehXLoVoXcHM2-2HL9YxsNYzGQ=s512-c-k-c0x00ffffff-no-rj" group-title="TR · eglence",ETV Kayseri
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="ETVKayseri.tr@SD" tvg-logo="https://yt3.googleusercontent.com/ytc/AIdro_msPtG6zfPKIJIIdvG4dehXLoVoXcHM2-2HL9YxsNYzGQ=s512-c-k-c0x00ffffff-no-rj" group-title="General",ETV Kayseri (720p)
 https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · eglence",Hunat TV
+# SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
+#EXTINF:-1 tvg-name="Hunat TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Hunat TV
 https://live.artidijitalmedya.com/artidijital_hunattv/hunattv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/51xCkXG.png" group-title="TR · eglence",Kanal 12
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Kanal12.tr@SD" tvg-logo="https://i.imgur.com/51xCkXG.png" group-title="General",Kanal 12 (720p)
 https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/wb1Cdc9.png" group-title="TR · eglence",Kanal 15
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Kanal15.tr@SD" tvg-logo="https://i.imgur.com/wb1Cdc9.png" group-title="General",Kanal 15 (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Mr7XPii.png" group-title="TR · eglence",Kanal 26
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Kanal26.tr@SD" tvg-logo="https://i.imgur.com/Mr7XPii.png" group-title="General",Kanal 26 (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/eXErSv0.png" group-title="TR · eglence",Kanal 3
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Kanal3.tr@SD" tvg-logo="https://i.imgur.com/eXErSv0.png" group-title="General",Kanal 3 (1080p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Rgc66sv.png" group-title="TR · eglence",Kanal 58
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Kanal58.tr@SD" tvg-logo="https://i.imgur.com/Rgc66sv.png" group-title="General",Kanal 58 (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/3o8Rokp.png" group-title="TR · eglence",Kanal Firat
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="KanalFirat.tr@SD" tvg-logo="https://i.imgur.com/3o8Rokp.png" group-title="General",Kanal Firat (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/7RNjTno.png" group-title="TR · eglence",Kanal V
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="KanalV.tr@SD" tvg-logo="https://i.imgur.com/7RNjTno.png" group-title="General",Kanal V (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/MymuDJ1.png" group-title="TR · eglence",Kay TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="KayTV.tr@SD" tvg-logo="https://i.imgur.com/MymuDJ1.png" group-title="General",Kay TV (576p) [Geo-blocked]
 https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="KentTurk.tr@SD" tvg-logo="https://i.imgur.com/FQKPjsm.png" group-title="General",Kent Turk (1080p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://www.konyaolaytv.com/upload/tema/20230307__5154687762.jpg" group-title="TR · eglence",Konya Olay TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="KonyaOlayTV.tr@SD" tvg-logo="https://www.konyaolaytv.com/upload/tema/20230307__5154687762.jpg" group-title="General",Konya Olay TV (720p)
 https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/lWeJxm0.png" group-title="TR · haber",Life TV (Turkiye)
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="LifeTV.tr@SD" tvg-logo="https://i.imgur.com/lWeJxm0.png" group-title="News",Life TV (Turkiye) (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/wyWappU.png" group-title="TR · eglence",MaviKaradeniz TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="MaviKaradenizTV.tr@SD" tvg-logo="https://i.imgur.com/wyWappU.png" group-title="General",MaviKaradeniz TV (1080p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/3CWV8bS.png" group-title="TR · eglence",Mercan TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="MercanTV.tr@SD" tvg-logo="https://i.imgur.com/3CWV8bS.png" group-title="Undefined",Mercan TV (576p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/e9ca6gc.png" group-title="TR · haber",OlayTurk TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="OlayTurkTV.tr@SD" tvg-logo="https://i.imgur.com/e9ca6gc.png" group-title="News",OlayTurk TV (720p) [Geo-blocked]
 https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9OPoXQG.png" group-title="TR · eglence",PowerTurk TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="PowerTurkTV.tr@SD" tvg-logo="https://i.imgur.com/9OPoXQG.png" group-title="Undefined",PowerTurk TV (720p)
 https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · eglence",Power TV
-https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/cKQIK4i.png" group-title="TR · eglence",Sat 7 Turk
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Sat7Turk.cy@SD" tvg-logo="https://i.imgur.com/cKQIK4i.png" group-title="Undefined",Sat 7 Turk (1080p)
 https://live.artidijitalmedya.com/artidijital_sat7turk/sat7turk/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/64tph9N.png" group-title="TR · eglence",Sun RTV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="SunRTV.tr@SD" tvg-logo="https://i.imgur.com/64tph9N.png" group-title="Undefined",Sun RTV (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/tZpx32y.png" group-title="TR · eglence",Tempo TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="TempoTV.tr@SD" tvg-logo="https://i.imgur.com/tZpx32y.png" group-title="Undefined",Tempo TV (720p)
 https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Mbi0jbz.png" group-title="TR · eglence",Tivi 6
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Tivi6.tr@SD" tvg-logo="https://i.imgur.com/Mbi0jbz.png" group-title="General",Tivi 6 (720p)
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/f0Soeob.png" group-title="TR · eglence",Ton TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="TonTV.tr@SD" tvg-logo="https://i.imgur.com/f0Soeob.png" group-title="Undefined",Ton TV (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · eglence",TV 41
+# SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
+#EXTINF:-1 tvg-name="TV 41" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 41
 https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/8KO0uxn.png" group-title="TR · eglence",Urfa Natik TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="UrfaNatikTV.tr@SD" tvg-logo="https://i.imgur.com/8KO0uxn.png" group-title="Undefined",Urfa Natik TV (720p)
 https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://van65tv.com/assets/images/logo/logo.png" group-title="TR · eglence",Van 65 TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Van65TV.tr@SD" tvg-logo="https://van65tv.com/assets/images/logo/logo.png" group-title="General",Van 65 TV
 https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/vJ8VaZi.png" group-title="TR · eglence",Dream Turk
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="DreamTurk.tr@SD" tvg-logo="https://i.imgur.com/vJ8VaZi.png" group-title="Music",Dream Turk (720p)
 https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="TR · eglence",Euro D
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="EuroD.tr@SD" tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="General",Euro D (720p)
 https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Kanal 34" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/rTBX6lS.png" group-title="TR · eglence",YOL TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="YOLTV.de@SD" tvg-logo="https://i.imgur.com/rTBX6lS.png" group-title="General",YOL TV
 https://live.yoltv.com/hls/stream.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/QpPteBO.png" group-title="TR · eglence",Power Dance
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="PowerDance.tr@SD" tvg-logo="https://i.imgur.com/QpPteBO.png" group-title="Music",Power Dance (1080p)
 https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="PowerLove.tr@SD" tvg-logo="https://i.imgur.com/0RzUswR.png" group-title="Music",Power Love (1080p)
 https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/XSL1gd7.png" group-title="TR · eglence",Power TV (Turkiye)
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="PowerTV.tr@SD" tvg-logo="https://i.imgur.com/XSL1gd7.png" group-title="Undefined",Power TV (Turkiye) (1080p)
 https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="PowerTurk TV" group-title="TÜM KANALLAR (A-Z Sıralı)",PowerTurk TV
 https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/driabBO.png" group-title="TR · eglence",PowerTurk Akustik
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="PowerTurkAkustik.tr@SD" tvg-logo="https://i.imgur.com/driabBO.png" group-title="Music",PowerTurk Akustik (1080p)
 https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/tQSoQXW.png" group-title="TR · eglence",PowerTurk Slow
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="PowerTurkSlow.tr@SD" tvg-logo="https://i.imgur.com/tQSoQXW.png" group-title="Music",PowerTurk Slow (1080p)
 https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/a5nW3HU.png" group-title="TR · eglence",PowerTurk Taptaze
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="PowerTurkTaptaze.tr@SD" tvg-logo="https://i.imgur.com/a5nW3HU.png" group-title="Music",PowerTurk Taptaze (1080p)
 https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/wlfyj5l.png" group-title="TR · eglence",Kanal 7 Avrupa
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="Kanal7Avrupa.tr@SD" tvg-logo="https://i.imgur.com/wlfyj5l.png" group-title="Entertainment",Kanal 7 Avrupa (720p) [Not 24/7]
 https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="StingrayNaturescape.ca@SD" tvg-logo="https://i.imgur.com/882kd90.png" group-title="Music",Stingray Naturescape (1080p)
 https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TBMMTV.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/TBMM_TV_logo.svg/960px-TBMM_TV_logo.svg.png" group-title="Undefined",TBMM TV (720p)
 https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="BeyazTV.tr" tvg-name="Beyaz TV" tvg-logo="https://i.imgur.com/uykIdML.png" group-title="Ulusal",Beyaz TV
 https://mn-nl.mncdn.com/blutv_beyaztv2/live.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/8vmfZb5.png" group-title="TR · eglence",Elsharq TV
-https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/q7iVchl.png" group-title="TR · haber",Mekameleen TV
-https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="LoveNature.ca@HD" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="Outdoor",Love Nature HD (1080p)
 https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="WestAzerbaijanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/2/21/Urmia_TV.svg/960px-Urmia_TV.svg.png" group-title="General",West Azerbaijan TV
 https://ncdn.telewebion.ir/azarbayjangharbi/live/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/jw0gB8L.png" group-title="TR · eglence",Vav TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="VavTV.tr@SD" tvg-logo="https://i.imgur.com/jw0gB8L.png" group-title="Undefined",Vav TV
 https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Show Max" group-title="TÜM KANALLAR (A-Z Sıralı)",Show Max
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -560,7 +484,7 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 #EXTINF:-1 tvg-id="ASpor.tr" tvg-name="A Spor" tvg-logo="https://i.imgur.com/ZhkZzLf.png" group-title="Spor",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="ATV.HD.tr" tvg-name="ATV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ATV_logo.svg/512px-ATV_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -576,29 +500,21 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
 #EXTINF:-1 tvg-id="MinikaCocuk.tr" tvg-name="Minika Çocuk" tvg-logo="https://i.imgur.com/VCywMTv.png" group-title="Çocuk",Minika Çocuk
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="MCTV.de@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/c/ca/MC_TV_logosu.png" group-title="Entertainment",MC TV (720p)
 https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&output=playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="BABY.TV.tr" tvg-name="Baby TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/BabyTV_logo.svg/512px-BabyTV_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Baby TV
 https://saran-live.ercdn.net/babytv/index.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="Disney Jr." tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Disney Jr.
 https://saran-live.ercdn.net/disneyjunior/index.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/GgEeTNr.png" group-title="TR · haber",Almahriah TV
-https://starmenajo.com/hls/almahriah/index.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://ilketv.com.tr/wp-content/uploads/2024/06/logo.png" group-title="TR · eglence",Ilke TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="IlkeTV.tr@HD" tvg-logo="https://ilketv.com.tr/wp-content/uploads/2024/06/logo.png" group-title="Undefined",Ilke TV (1080p)
 https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/eikZj19.png" group-title="TR · eglence",Kanal Hayat
-https://tbn02a.ltnschedule.com/hls/nx21i.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="Tele1.tr" tvg-name="TELE1" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/43/Tele1_logosu.png" group-title="Haber",TELE1
@@ -611,9 +527,9 @@ https://tjktv-live.tjk.org/tjktv.m3u8
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="TRTSporYildiz.tr" tvg-name="TRT Spor Yıldız" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg/960px-TRT_Spor_Y%C4%B1ld%C4%B1z_Logo.svg.png" group-title="Spor",TRT Spor Yıldız
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · eglence",Persiana Turkiye
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="PersianaTurkiye.fr@SD" tvg-logo="" group-title="Entertainment",Persiana Turkiye
 https://turkhls.persiana.live/hls/stream.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
@@ -624,19 +540,19 @@ https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
 #EXTINF:-1 tvg-id="360.tr" tvg-name="360" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="Ulusal",360
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TV4.tr@SD" tvg-logo="https://i.imgur.com/UpsQsbd.png" group-title="Undefined",TV 4 (720p)
 https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TRTEBAIlkokul.tr@SD" tvg-logo="https://i.imgur.com/CRBfZi4.png" group-title="Education",TRT EBA Ilkokul (720p)
 https://tv-e-okul00.medya.trt.com.tr/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TRTEBA.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/TRT_EBA_TV_logo.svg/960px-TRT_EBA_TV_logo.svg.png" group-title="Education",TRT EBA (720p)
 https://tv-e-okul01.medya.trt.com.tr/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TRTEBALise.tr@SD" tvg-logo="https://i.imgur.com/vj2L2L2.png" group-title="Education",TRT EBA Lise (720p)
 https://tv-e-okul02.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -648,19 +564,19 @@ https://tv-trt1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRT2.tr" tvg-name="TRT 2" tvg-logo="https://i.imgur.com/iOCQdyD.png" group-title="Kültür & Yaşam",TRT 2
 https://tv-trt2.medya.trt.com.tr/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Undefined",TRT 3 (720p)
 https://tv-trt3.live.trt.com.tr/master.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/yyhWOZs.png" group-title="TR · eglence",TRT Arabi
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="TRTArabi.tr@SD" tvg-logo="https://i.imgur.com/dEfI2M9.png" group-title="News",TRT Arabi (1080p) [Not 24/7]
 https://tv-trtarabi.medya.trt.com.tr/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TRTAvaz.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TRT_Avaz_logo.svg/960px-TRT_Avaz_logo.svg.png" group-title="Undefined",TRT Avaz (720p)
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="TRT.BELGESEL.HD.tr" tvg-name="TRT Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TRT_Belgesel_logo_2021.svg/512px-TRT_Belgesel_logo_2021.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Belgesel
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -668,47 +584,43 @@ https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTCocuk.tr" tvg-name="TRT Çocuk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Çocuk",TRT Çocuk
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 # SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
-# SOURCE-UPDATED: 2026-10-25T07:58:42Z
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
 #EXTINF:-1 tvg-id="TRTDiyanetCocuk.tr@SD" tvg-logo="https://i.imgur.com/8PmXz9t.png" group-title="Kids",TRT Diyanet Cocuk (720p)
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/fCHQYWS.png" group-title="TR · belgesel",TRT Genc
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="TRTGenc.tr@SD" tvg-logo="https://i.imgur.com/fCHQYWS.png" group-title="Culture;General",TRT Genc (1440p) [Geo-blocked]
 https://tv-trtgenc.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="TRTHaber.tr" tvg-name="TRT Haber" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png" group-title="Haber",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/TRT_Kurd%C3%AE_logo.svg/960px-TRT_Kurd%C3%AE_logo.svg.png" group-title="TR · eglence",TRT Kurdi
+# SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
+#EXTINF:-1 tvg-id="TRT.KURDİ.tr" tvg-name="TRT Kurdî" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TRT_Kurd%C3%AE_logo_2021.svg/512px-TRT_Kurd%C3%AE_logo_2021.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Kurdî
 https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="TRTMuzik.tr" tvg-name="TRT Müzik" tvg-logo="https://i.imgur.com/JgUzRH8.png" group-title="Müzik",TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="TRT.SPOR.HD.tr" tvg-name="TRT Spor" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/TRT_Spor_logo_2021.svg/512px-TRT_Spor_logo_2021.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Spor
 https://tv-trtspor1.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="TRT Spor Yıldız" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg/512px-TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Spor Yıldız
 https://tv-trtspor2.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="TRTTurk.tr" tvg-name="TRT Türk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/TRT_T%C3%BCrk_logo.svg/960px-TRT_T%C3%BCrk_logo.svg.png" group-title="Kültür & Yaşam",TRT Türk
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/JEA2xpv.png" group-title="TR · eglence",TRT World
-https://tv-trtworld.medya.trt.com.tr/master.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="BENGÜ.TÜRK.tr" tvg-name="Bengütürk TV" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/8/8c/Beng%C3%BCt%C3%BCrk_TV_logosu.png/512px-Beng%C3%BCt%C3%BCrk_TV_logosu.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Bengütürk TV
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="BLOOMBERG.HT.HD.tr" tvg-name="Bloomberg HT" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bloomberg_HT_logo.svg/512px-Bloomberg_HT_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Bloomberg HT
 https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -720,11 +632,11 @@ https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-id="HaberturkTV.tr" tvg-name="Habertürk" tvg-logo="https://i.imgur.com/6Tw3rUp.png" group-title="Haber",Habertürk
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="TV100" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TV100_logosu.svg/512px-TV100_logosu.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TV100
 https://tv.ensonhaber.com/tv100/tv100.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="KANAL.B.tr" tvg-name="Kanal B" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal B
 https://tv.kanalb.tr/hls/kanalb/index.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -732,7 +644,7 @@ https://tv.kanalb.tr/hls/kanalb/index.m3u8
 #EXTINF:-1 tvg-id="TV8.tr" tvg-name="TV8" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png" group-title="Ulusal",TV8
 https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-name="TV8.5" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/c/cf/Tv8_bucuk_logo.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TV8.5
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3#all
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
@@ -740,30 +652,26 @@ https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3#all
 #EXTINF:-1 tvg-id="TVNET.tr" tvg-name="TVNET" tvg-logo="https://i.imgur.com/mQo8yWQ.png" group-title="Haber",TVNET
 https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8
 # SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
-# SOURCE-UPDATED: 2026-10-24T08:47:29Z
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
 #EXTINF:-1 tvg-id="FOX.HD.tr" tvg-name="NOW" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="TÜM KANALLAR (A-Z Sıralı)",NOW
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 # SOURCE: github:YananHelena/iptvson/playlist.m3u
 # SOURCE-UPDATED: 2026-10-25T05:51:22Z
 #EXTINF:-1 tvg-id="NOW.tr" tvg-name="NOW" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="Ulusal",NOW
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv_720p.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/C3m6w5S.png" group-title="TR · eglence",Meltem TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="MeltemTV.tr@SD" tvg-logo="https://i.imgur.com/C3m6w5S.png" group-title="General",Meltem TV (1080p)
 https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/HF7N4Li.png" group-title="TR · eglence",Erzurum Web TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="ErzurumWebTV.tr@SD" tvg-logo="https://i.imgur.com/HF7N4Li.png" group-title="General",Erzurum Web TV (720p)
 https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="" group-title="TR · haber",Haber61 TV
-https://win8.yayin.com.tr/haber61tv/smil:haber61tv.smil/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.ibb.co/wBwmB1T/iY0osc7.png" group-title="TR · haber",Finans Turk TV
+# SOURCE: github:FeridunN12/ibo-iptv-playlist/combined.m3u
+# SOURCE-UPDATED: 2026-10-26T08:20:40Z
+#EXTINF:-1 tvg-id="FinansTurkTV.tr@SD" tvg-logo="https://i.ibb.co/wBwmB1T/iY0osc7.png" group-title="News",Finans Turk TV (720p)
 https://yayin30.haber100.com/live/finansturk/playlist.m3u8
-# SOURCE: github:GhostFelina/cortexia-tv-public/public/TV-tr.m3u
-# SOURCE-UPDATED: 2026-10-19T09:54:28Z
-#EXTINF:-1 tvg-logo="https://i.imgur.com/o0eevnb.png" group-title="TR · eglence",Zarok TV
+# SOURCE: github:YosemiteSam6/turkiye-iptv-m3u-m3u8/kanallar.m3u
+# SOURCE-UPDATED: 2026-10-26T09:58:06Z
+#EXTINF:-1 tvg-name="Zarok TV" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/8/87/Zarok_TV_logosu.png/512px-Zarok_TV_logosu.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Zarok TV
 https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
