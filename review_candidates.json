@@ -1,91 +1,11 @@
 {
-  "updated_at_utc": "2026-10-27T08:02:50.667718+00:00",
-  "count": 54,
+  "updated_at_utc": "2026-10-28T08:45:21.527868+00:00",
+  "count": 44,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
       "tvg_id": "AlRafidainTV.tr@SD",
       "url": "https://arrafidain.tvplayer.online/arrafidaintv/source/playlist.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Box Office 1",
-      "tvg_id": "beINBoxOffice1.tr@SD",
-      "url": "https://nord.ayakkabiparti.lol/box1/index.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Box Office 2",
-      "tvg_id": "beINBoxOffice2.tr@SD",
-      "url": "https://nord.ayakkabiparti.lol/box2/index.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Box Office 3",
-      "tvg_id": "beINBoxOffice3.tr@SD",
-      "url": "https://nord.ayakkabiparti.lol/box3/index.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Movies Stars",
-      "tvg_id": "beINMoviesStars.tr@SD",
-      "url": "https://nord.ayakkabiparti.lol/bsaction1/index.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Movies Turk",
-      "tvg_id": "beINMoviesTurk.tr@SD",
-      "url": "https://nord.ayakkabiparti.lol/bsturk/index.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Sports 1 Turk",
-      "tvg_id": "beINSports1Turk.tr@SD",
-      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs1.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Sports 2 Turk",
-      "tvg_id": "beINSports2Turk.tr@SD",
-      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs2.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Sports 3 Turk",
-      "tvg_id": "beINSports3Turk.tr@SD",
-      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs3.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Sports 4 Turk",
-      "tvg_id": "beINSports4Turk.tr@SD",
-      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs4.m3u8",
-      "source_kind": "iptv_org",
-      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "beIN Sports 5 Turk",
-      "tvg_id": "beINSports5Turk.tr@SD",
-      "url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs5.m3u8",
       "source_kind": "iptv_org",
       "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
       "reason": "uncatalogued-tr-identity"

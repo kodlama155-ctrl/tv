@@ -1,8 +1,8 @@
 {
-  "updated_at_utc": "2026-10-27T08:02:24.488752+00:00",
+  "updated_at_utc": "2026-10-28T08:45:08.280628+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 152,
-  "missing_before_search": 88,
+  "channels_in_previous_tr": 150,
+  "missing_before_search": 90,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
@@ -14,13 +14,13 @@
     "Sözcü TV",
     "A News",
     "DİM TV",
-    "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
     "TRT Spor",
     "TRT Spor Yıldız",
     "FB TV",
     "TRT 3 Spor",
+    "HT Spor",
     "beIN Sports Haber",
     "Sports TV",
     "FX",
@@ -38,6 +38,7 @@
     "Yaban TV",
     "DMAX",
     "TLC",
+    "VAV TV",
     "Sercem TV",
     "On4 TV",
     "FM TV",
@@ -47,22 +48,23 @@
     "MyZen TV",
     "West Azerbaijan TV",
     "Finest TV",
-    "TMB TV",
+    "Kanal 33",
     "Afroturk TV",
+    "Alanya Posta TV",
+    "ATV Alanya",
     "Edessa TV",
+    "Erzurum Web TV",
     "ETV Manisa",
     "Euro Star",
     "TGRT EU",
     "ATV Avrupa",
     "Kanal 1",
-    "Meltem TV",
     "Kanal 32",
     "Kanal Hayat",
     "MTurk TV",
     "Natural TV",
     "Öncü TV",
     "TV 1",
-    "Urfa Natik TV",
     "TELE1",
     "KRT TV",
     "GZT",
@@ -96,68 +98,7 @@
   ],
   "batch_size": 8,
   "search_delay_seconds": 3,
-  "search_batches": [
-    {
-      "names": [
-        "TRT 4K",
-        "Show TV",
-        "Kanal 7",
-        "TRT 2",
-        "TYT Türk",
-        "AKİT TV",
-        "Sözcü TV",
-        "A News"
-      ],
-      "query": "\"TRT 4K\" OR \"Show TV\" OR \"Kanal 7\" OR \"TRT 2\" OR \"TYT Türk\" OR \"AKİT TV\" OR \"Sözcü TV\" OR \"A News\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "DİM TV",
-        "Finans Turk TV",
-        "Guneydogu TV",
-        "Kudüs TV",
-        "TRT Spor",
-        "TRT Spor Yıldız",
-        "FB TV",
-        "TRT 3 Spor"
-      ],
-      "query": "\"DİM TV\" OR \"Finans Turk TV\" OR \"Guneydogu TV\" OR \"Kudüs TV\" OR \"TRT Spor\" OR \"TRT Spor Yıldız\" OR \"FB TV\" OR \"TRT 3 Spor\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "beIN Sports Haber",
-        "Sports TV",
-        "FX",
-        "GEM Pixel",
-        "Disney Junior",
-        "BabyTV",
-        "TRT Çocuk",
-        "TRT Genc"
-      ],
-      "query": "\"beIN Sports Haber\" OR \"Sports TV\" OR \"FX\" OR \"GEM Pixel\" OR \"Disney Junior\" OR \"BabyTV\" OR \"TRT Çocuk\" OR \"TRT Genc\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    },
-    {
-      "names": [
-        "TRT Belgesel",
-        "National Geographic",
-        "National Geographic Wild",
-        "Habitat TV",
-        "Manas TV",
-        "TGRT Belgesel",
-        "Yaban TV",
-        "DMAX"
-      ],
-      "query": "\"TRT Belgesel\" OR \"National Geographic\" OR \"National Geographic Wild\" OR \"Habitat TV\" OR \"Manas TV\" OR \"TGRT Belgesel\" OR \"Yaban TV\" OR \"DMAX\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    }
-  ],
+  "search_batches": [],
   "target_report": [
     {
       "name": "TRT 4K",
@@ -214,12 +155,6 @@
       "candidates": 0
     },
     {
-      "name": "Finans Turk TV",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Guneydogu TV",
       "category": "Yerel",
       "files_matched": 0,
@@ -251,6 +186,12 @@
     },
     {
       "name": "TRT 3 Spor",
+      "category": "Spor",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "HT Spor",
       "category": "Spor",
       "files_matched": 0,
       "candidates": 0
@@ -358,6 +299,12 @@
       "candidates": 0
     },
     {
+      "name": "VAV TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Sercem TV",
       "category": "Dini",
       "files_matched": 0,
@@ -412,8 +359,8 @@
       "candidates": 0
     },
     {
-      "name": "TMB TV",
-      "category": "Uluslararası",
+      "name": "Kanal 33",
+      "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
     },
@@ -424,7 +371,25 @@
       "candidates": 0
     },
     {
+      "name": "Alanya Posta TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "ATV Alanya",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Edessa TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Erzurum Web TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -455,12 +420,6 @@
     },
     {
       "name": "Kanal 1",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Meltem TV",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
@@ -497,12 +456,6 @@
     },
     {
       "name": "TV 1",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Urfa Natik TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
