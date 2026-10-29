@@ -1,17 +1,7 @@
 {
-  "updated_at_utc": "2026-10-28T08:47:30.943408+00:00",
+  "updated_at_utc": "2026-10-29T08:42:32.587700+00:00",
   "method": "Bayesian-smoothed reliability: verified=1.0, restricted=0.55, unknown=0.25, dead/drm=0; prior=70 over 5 samples",
   "domains": {
-    "rnttwmjcin.turknet.ercdn.net": {
-      "score": 90.62,
-      "samples": 11,
-      "verified": 11,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
     "livetv.powerapp.com.tr": {
       "score": 87.5,
       "samples": 7,
@@ -22,6 +12,16 @@
       "drm": 0,
       "verified_rate": 100.0
     },
+    "rnttwmjcin.turknet.ercdn.net": {
+      "score": 85.94,
+      "samples": 11,
+      "verified": 10,
+      "restricted": 0,
+      "unknown": 1,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 90.91
+    },
     "live.artidijitalmedya.com": {
       "score": 85.87,
       "samples": 41,
@@ -31,6 +31,16 @@
       "dead": 5,
       "drm": 0,
       "verified_rate": 87.8
+    },
+    "edge2.taksimbilisim.com": {
+      "score": 85.0,
+      "samples": 5,
+      "verified": 5,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
     },
     "cdn.ekoturk.net": {
       "score": 83.33,
@@ -192,16 +202,6 @@
       "drm": 0,
       "verified_rate": 75.0
     },
-    "edge2.taksimbilisim.com": {
-      "score": 77.27,
-      "samples": 6,
-      "verified": 5,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 1,
-      "drm": 0,
-      "verified_rate": 83.33
-    },
     "tv.ensonhaber.com": {
       "score": 76.92,
       "samples": 8,
@@ -223,6 +223,16 @@
       "verified_rate": 100.0
     },
     "139.162.182.79": {
+      "score": 75.0,
+      "samples": 1,
+      "verified": 1,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    "190.93.224.42": {
       "score": 75.0,
       "samples": 1,
       "verified": 1,
@@ -593,26 +603,6 @@
       "verified_rate": 100.0
     },
     "mumbai-edge.smartplaytv.in": {
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    "nrttn172.kesintisizyayin.com": {
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    "playlist.fasttvcdn.com": {
       "score": 75.0,
       "samples": 1,
       "verified": 1,
@@ -1702,7 +1692,7 @@
       "drm": 0,
       "verified_rate": 0.0
     },
-    "190.93.224.42": {
+    "gzttv-live.lg.mncdn.com": {
       "score": 58.33,
       "samples": 1,
       "verified": 0,
@@ -1712,7 +1702,7 @@
       "drm": 0,
       "verified_rate": 0.0
     },
-    "gzttv-live.lg.mncdn.com": {
+    "nrttn172.kesintisizyayin.com": {
       "score": 58.33,
       "samples": 1,
       "verified": 0,

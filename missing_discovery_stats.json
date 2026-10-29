@@ -1,10 +1,11 @@
 {
-  "updated_at_utc": "2026-10-28T08:45:08.280628+00:00",
+  "updated_at_utc": "2026-10-29T08:40:28.245269+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 150,
-  "missing_before_search": 90,
+  "channels_in_previous_tr": 151,
+  "missing_before_search": 89,
   "prior_validation_aware": true,
   "missing_names": [
+    "TRT 1",
     "TRT 4K",
     "Show TV",
     "Kanal 7",
@@ -12,6 +13,7 @@
     "TYT Türk",
     "AKİT TV",
     "Sözcü TV",
+    "Lider Haber TV",
     "A News",
     "DİM TV",
     "Guneydogu TV",
@@ -38,7 +40,6 @@
     "Yaban TV",
     "DMAX",
     "TLC",
-    "VAV TV",
     "Sercem TV",
     "On4 TV",
     "FM TV",
@@ -50,15 +51,13 @@
     "Finest TV",
     "Kanal 33",
     "Afroturk TV",
-    "Alanya Posta TV",
-    "ATV Alanya",
     "Edessa TV",
-    "Erzurum Web TV",
     "ETV Manisa",
     "Euro Star",
     "TGRT EU",
     "ATV Avrupa",
     "Kanal 1",
+    "Meltem TV",
     "Kanal 32",
     "Kanal Hayat",
     "MTurk TV",
@@ -98,8 +97,30 @@
   ],
   "batch_size": 8,
   "search_delay_seconds": 3,
-  "search_batches": [],
+  "search_batches": [
+    {
+      "names": [
+        "TRT 1",
+        "TRT 4K",
+        "Show TV",
+        "Kanal 7",
+        "TRT 2",
+        "TYT Türk",
+        "AKİT TV",
+        "Sözcü TV"
+      ],
+      "query": "\"TRT 1\" OR \"TRT 4K\" OR \"Show TV\" OR \"Kanal 7\" OR \"TRT 2\" OR \"TYT Türk\" OR \"AKİT TV\" OR \"Sözcü TV\" extension:m3u",
+      "search_results": 0,
+      "fallback_individual": false
+    }
+  ],
   "target_report": [
+    {
+      "name": "TRT 1",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
     {
       "name": "TRT 4K",
       "category": "Ulusal",
@@ -138,6 +159,12 @@
     },
     {
       "name": "Sözcü TV",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Lider Haber TV",
       "category": "Haber",
       "files_matched": 0,
       "candidates": 0
@@ -299,12 +326,6 @@
       "candidates": 0
     },
     {
-      "name": "VAV TV",
-      "category": "Dini",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Sercem TV",
       "category": "Dini",
       "files_matched": 0,
@@ -371,25 +392,7 @@
       "candidates": 0
     },
     {
-      "name": "Alanya Posta TV",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "ATV Alanya",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Edessa TV",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Erzurum Web TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -420,6 +423,12 @@
     },
     {
       "name": "Kanal 1",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Meltem TV",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0

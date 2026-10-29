@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-28T08:47:30.949928+00:00",
-  "count": 31,
+  "updated_at_utc": "2026-10-29T08:42:32.593956+00:00",
+  "count": 32,
   "channels": {
     "24tv": {
       "channel_key": "24tv",
@@ -17,7 +17,7 @@
       "channel_key": "ahaber",
       "name": "A Haber",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=PmR0WE7bJVlCPlALktA9hQ&e=1793221848",
+      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=WrdcWRMFvSVemxAI-7LgfA&e=1793307993",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -28,7 +28,7 @@
       "channel_key": "apara",
       "name": "A Para",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/apara/apara.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=SiJvBOSMAPSV3yQoOgNJxA&e=1793221855",
+      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=YLRtRfXljtDF2JJKDIU44Q&e=1793307999",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -50,7 +50,7 @@
       "channel_key": "aspor",
       "name": "A Spor",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
-      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=TSw_6Y07A9pr2YK4F1kMGw&e=1793221851",
+      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=fxUx3tQlCSjYaF7gdwKXqQ&e=1793307996",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -60,13 +60,13 @@
     "atv": {
       "channel_key": "atv",
       "name": "ATV",
-      "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
-      "fallback_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
+      "primary_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
+      "fallback_url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=3EfuBGRszRAt_iLZqQ-mJw&e=1793307986",
       "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
+      "fallback_source_kind": "official_api",
+      "fallback_source_name": "turkuvaz_discovered.m3u",
+      "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "fallback_referrer": "https://www.atv.com.tr/canli-yayin"
     },
     "bloomberght": {
       "channel_key": "bloomberght",
@@ -155,6 +155,17 @@
       "fallback_source_name": "official_discovered.m3u",
       "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       "fallback_referrer": "https://www.kanald.com.tr/canli-yayin"
+    },
+    "kanalddrama": {
+      "channel_key": "kanalddrama",
+      "name": "Kanal D Drama",
+      "primary_url": "http://190.93.224.42/KANAL-D-DRAMA/index.m3u8",
+      "fallback_url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01602-themahqfrance-vivekanald-samsungspain/playlist.m3u8",
+      "fallback_status": "verified",
+      "fallback_source_kind": "upstream",
+      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
     },
     "kocaelitv": {
       "channel_key": "kocaelitv",

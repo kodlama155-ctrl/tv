@@ -74,7 +74,7 @@
       "name": "beIN Sports Haber",
       "expected_category": "Spor",
       "status": "device-restricted",
-      "reason": "segment HTTP 403; segment HTTP 403; segment HTTP 403",
+      "reason": "manifest HTTP 403",
       "candidate_url": "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8"
     },
     {
