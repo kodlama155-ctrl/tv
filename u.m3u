@@ -5,11 +5,6 @@ https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
 #EXTINF:-1 tvg-id="GZT.tr" group-title="Haber",GZT
 https://mn-nl.mncdn.com/gzttv/gzttv/playlist.m3u8
-#EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber" tvg-logo="https://i.imgur.com/b9JcIqF.png",TELE1
-#EXTVLCOPT:http-user-agent=Lavf53.32.100
-#EXTHTTP:{"User-Agent":"Lavf53.32.100"}
-#KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Lavf53.32.100
-https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
 #EXTINF:-1 tvg-id="KRT.tr" group-title="Haber" tvg-logo="https://i.imgur.com/9ZKqdQJ.png",KRT TV
 #EXTVLCOPT:http-user-agent=Lavf53.32.100
 #EXTHTTP:{"User-Agent":"Lavf53.32.100"}
@@ -97,6 +92,8 @@ https://canli.edessatv.com/hls/stream.m3u8
 https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="GuneydoguTV.tr@SD" tvg-logo="https://i.imgur.com/JT5pp3Y.png" group-title="Yerel",Guneydogu TV
 https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8
+#EXTINF:-1 tvg-id="Haber61TV.tr@SD" tvg-logo="https://i.imgur.com/2a2XUKl.png" group-title="Yerel",Haber61 TV
+https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
 #EXTINF:-1 tvg-id="IBBTV.tr@SD" tvg-logo="https://i.imgur.com/aXxAz84.png" group-title="Yerel",IBB TV
 https://npserver1.ibb.gov.tr/webtv/webtv_wowza1/playlist.m3u8
 #EXTINF:-1 tvg-id="Kanal32.tr@SD" group-title="Yerel" tvg-logo="https://i.imgur.com/W2oN0qf.png",Kanal 32
