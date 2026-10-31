@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-30T08:49:28.705262+00:00",
-  "count": 44,
+  "updated_at_utc": "2026-10-31T08:35:41.506743+00:00",
+  "count": 45,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
@@ -24,6 +24,14 @@
       "url": "https://mn-nl.mncdn.com/blutv_bizimev/bizimev_sd.smil/playlist.m3u8",
       "source_kind": "upstream",
       "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "Cartoon Network (Turkiye)",
+      "tvg_id": "CartoonNetwork.tr@SD",
+      "url": "http://176.65.153.40:6002/play/a013/index.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
       "reason": "uncatalogued-tr-identity"
     },
     {
