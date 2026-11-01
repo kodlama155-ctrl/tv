@@ -1,8 +1,8 @@
 {
-  "updated_at_utc": "2026-10-31T08:35:28.085879+00:00",
+  "updated_at_utc": "2026-11-01T09:25:48.530629+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 155,
-  "missing_before_search": 85,
+  "channels_in_previous_tr": 153,
+  "missing_before_search": 87,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
@@ -15,7 +15,6 @@
     "A News",
     "DİM TV",
     "Guneydogu TV",
-    "Haber61 TV",
     "Kudüs TV",
     "TRT Spor",
     "TRT Spor Yıldız",
@@ -27,7 +26,7 @@
     "GEM Pixel",
     "Disney Junior",
     "BabyTV",
-    "TRT Çocuk",
+    "Spacetoon Turkey",
     "TRT Genc",
     "TRT Belgesel",
     "National Geographic",
@@ -38,6 +37,7 @@
     "Yaban TV",
     "DMAX",
     "TLC",
+    "VAV TV",
     "Sercem TV",
     "On4 TV",
     "FM TV",
@@ -61,6 +61,8 @@
     "Natural TV",
     "Öncü TV",
     "TV 1",
+    "Aras TV",
+    "TELE1",
     "KRT TV",
     "GZT",
     "S Sport",
@@ -93,7 +95,38 @@
   ],
   "batch_size": 8,
   "search_delay_seconds": 3,
-  "search_batches": [],
+  "search_batches": [
+    {
+      "names": [
+        "TRT 4K",
+        "Show TV",
+        "Kanal 7",
+        "TRT 2",
+        "TYT Türk",
+        "AKİT TV",
+        "Sözcü TV",
+        "A News"
+      ],
+      "query": "\"TRT 4K\" OR \"Show TV\" OR \"Kanal 7\" OR \"TRT 2\" OR \"TYT Türk\" OR \"AKİT TV\" OR \"Sözcü TV\" OR \"A News\" extension:m3u",
+      "search_results": 0,
+      "fallback_individual": false
+    },
+    {
+      "names": [
+        "DİM TV",
+        "Guneydogu TV",
+        "Kudüs TV",
+        "TRT Spor",
+        "TRT Spor Yıldız",
+        "FB TV",
+        "TRT 3 Spor",
+        "beIN Sports Haber"
+      ],
+      "query": "\"DİM TV\" OR \"Guneydogu TV\" OR \"Kudüs TV\" OR \"TRT Spor\" OR \"TRT Spor Yıldız\" OR \"FB TV\" OR \"TRT 3 Spor\" OR \"beIN Sports Haber\" extension:m3u",
+      "search_results": 0,
+      "fallback_individual": false
+    }
+  ],
   "target_report": [
     {
       "name": "TRT 4K",
@@ -151,12 +184,6 @@
     },
     {
       "name": "Guneydogu TV",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Haber61 TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -228,7 +255,7 @@
       "candidates": 0
     },
     {
-      "name": "TRT Çocuk",
+      "name": "Spacetoon Turkey",
       "category": "Çocuk",
       "files_matched": 0,
       "candidates": 0
@@ -290,6 +317,12 @@
     {
       "name": "TLC",
       "category": "Belgesel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "VAV TV",
+      "category": "Dini",
       "files_matched": 0,
       "candidates": 0
     },
@@ -428,6 +461,18 @@
     {
       "name": "TV 1",
       "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Aras TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TELE1",
+      "category": "Haber",
       "files_matched": 0,
       "candidates": 0
     },
