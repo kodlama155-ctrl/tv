@@ -94,8 +94,6 @@ https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
 https://edge2.taksimbilisim.com/turkhaber/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="HalkTV.tr@SD" tvg-logo="https://i.imgur.com/xM0HA30.png" group-title="Haber",Halk TV
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber" tvg-logo="https://i.imgur.com/b9JcIqF.png",TELE1
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 group-title="Haber" tvg-logo="https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65",EKOTÜRK
 #EXTVLCOPT:http-referrer=https://cdn.ekoturk.net/2.html?embed=1
 #EXTVLCOPT:http-referer=https://cdn.ekoturk.net/2.html?embed=1
@@ -284,8 +282,6 @@ https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8
 #EXTINF:-1 tvg-id="KocaeliTV.tr@SD" tvg-logo="https://i.imgur.com/LeTP4zq.png" group-title="Yerel",Kocaeli TV
 https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="KonyaOlayTV.tr@SD" tvg-logo="https://www.konyaolaytv.com/upload/tema/20230307__5154687762.jpg" group-title="Yerel",Konya Olay TV
-https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
 #EXTINF:-1 tvg-id="LINETV.tr" tvg-name="Line TV" group-title="Yerel" tvg-logo="https://i.imgur.com/6GNp7f8.png",Line TV
 https://edge2.taksimbilisim.com/linetv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="MaviKaradenizTV.tr@SD" tvg-logo="https://i.imgur.com/wyWappU.png" group-title="Yerel",MaviKaradeniz TV
