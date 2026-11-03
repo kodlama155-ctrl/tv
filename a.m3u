@@ -8,8 +8,8 @@ https://tv-trt1.medya.trt.com.tr/master.m3u8
 #EXTHTTP:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36","Referer":"https://www.kanald.com.tr/canli-yayin"}
 #KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://www.kanald.com.tr/canli-yayin
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
-#EXTINF:-1 tvg-id="ATV.tr@SD" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="Ulusal",ATV
-http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8
+#EXTINF:-1 tvg-id="ATV.tr@HD" group-title="Ulusal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/atv-tr.png",ATV
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 group-title="Ulusal" tvg-logo="https://i.imgur.com/9O3DHRB.png",Star TV
 #EXTVLCOPT:http-referrer=https://www.startv.com.tr/
 #EXTVLCOPT:http-referer=https://www.startv.com.tr/
@@ -33,9 +33,21 @@ https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
 #EXTINF:-1 tvg-id="BeyazTV.tr@HD" group-title="Ulusal" tvg-logo="https://i.imgur.com/uykIdML.png",Beyaz TV
 https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8
 #EXTINF:-1 tvg-id="Teve2.tr@HD" group-title="Ulusal" tvg-logo="https://i.imgur.com/rsoSLih.png",Teve2
-https://teve2.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
-#EXTINF:-1 tvg-id="TV85.tr@HD" group-title="Ulusal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tv85-tr.png",TV8.5
-https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk_1080p.m3u8
+https://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
+#EXTINF:-1 group-title="Ulusal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/tv85-tr.png",TV8.5
+#EXTVLCOPT:http-referrer=https://img.tv8bucuk.com/tv8-5-canli-yayin
+#EXTVLCOPT:http-referer=https://img.tv8bucuk.com/tv8-5-canli-yayin
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+#EXTHTTP:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36","Referer":"https://img.tv8bucuk.com/tv8-5-canli-yayin"}
+#KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://img.tv8bucuk.com/tv8-5-canli-yayin
+https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal" tvg-logo="https://i.imgur.com/iOCQdyD.png",TRT 2
+#EXTVLCOPT:http-referrer=https://www.trt2.com.tr/
+#EXTVLCOPT:http-referer=https://www.trt2.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+#EXTHTTP:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36","Referer":"https://www.trt2.com.tr/"}
+#KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://www.trt2.com.tr/
+https://tv-trt2.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="360.tr@SD" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="Ulusal",360
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
 #EXTINF:-1 tvg-id="FlashHaberTV.tr@SD" group-title="Ulusal" tvg-logo="https://i.imgur.com/L0NHKBM.png",Flash TV
@@ -44,8 +56,6 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c05
 https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
 #EXTINF:-1 tvg-id="Tivi6.tr@SD" tvg-logo="https://i.imgur.com/Mbi0jbz.png" group-title="Ulusal",Tivi 6
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-#EXTINF:-1 group-title="Ulusal" tvg-logo="https://tytturk.com/upload/tyt-logo.png",TYT Türk
-https://tytturk-live.ercdn.net/tytturk/tytturk.m3u8
 #EXTINF:-1 group-title="Ulusal" tvg-logo="https://i.imgur.com/XqTj9M3.png",Bi Kanal
 https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8
 #EXTINF:-1 tvg-id="FortunaTV.tr@HD" tvg-logo="https://i.imgur.com/ZbUSlOC.png" group-title="Ulusal",Fortuna TV
@@ -122,7 +132,7 @@ https://ip252.ozelip.com:1936/protv5/protv5/playlist.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTHTTP:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36","Referer":"https://www.anews.com.tr/webtv/live-broadcast"}
 #KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://www.anews.com.tr/webtv/live-broadcast
-https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=y47K6mvQoTPHau11uFa6IQ&e=1793657249
+https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=wPjXV4ej46zHkCbGAu4XRA&e=1793743819
 #EXTINF:-1 tvg-id="AnadoluAgency.tr@SD" tvg-logo="https://i.imgur.com/dWElJll.png" group-title="Haber",AA Live
 https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AlmahriahTV.tr@SD" tvg-logo="https://i.imgur.com/GgEeTNr.png" group-title="Haber",Almahriah TV
@@ -192,7 +202,7 @@ https://tv-e-okul01.medya.trt.com.tr/master.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTHTTP:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36","Referer":"https://www.vavtv.com.tr/canli-yayin"}
 #KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://www.vavtv.com.tr/canli-yayin
-https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=sNEDEXUJGqcyA3YCEeHlcQ&e=1793657258
+https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=efivsuuoX_CzEsd5NdoUdA&e=1793743823
 #EXTINF:-1 tvg-id="TRTDiyanetCocuk.tr@SD" tvg-logo="https://i.imgur.com/8PmXz9t.png" group-title="Dini",TRT Diyanet Cocuk
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="DiyanetTV.tr@SD" group-title="Dini" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/diyanet-tv-tr.png",Diyanet TV
@@ -281,6 +291,8 @@ https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8
 https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8
 #EXTINF:-1 tvg-id="ETVKayseri.tr@SD" tvg-logo="https://yt3.googleusercontent.com/ytc/AIdro_msPtG6zfPKIJIIdvG4dehXLoVoXcHM2-2HL9YxsNYzGQ=s512-c-k-c0x00ffffff-no-rj" group-title="Yerel",ETV Kayseri
 https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
+#EXTINF:-1 tvg-id="Haber61TV.tr@SD" tvg-logo="https://i.imgur.com/2a2XUKl.png" group-title="Yerel",Haber61 TV
+https://win8.yayin.com.tr/haber61tv/smil:haber61tv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="HunatTV.tr@SD" tvg-logo="https://i.imgur.com/NrxHGnb.png" group-title="Yerel",Hunat TV
 https://live.artidijitalmedya.com/artidijital_hunattv/hunattv/playlist.m3u8
 #EXTINF:-1 tvg-name="Icel TV" group-title="Yerel" tvg-logo="https://i.imgur.com/CGwImKv.png",Icel TV
@@ -307,8 +319,6 @@ https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
 #EXTINF:-1 tvg-id="LINETV.tr" tvg-name="Line TV" group-title="Yerel" tvg-logo="https://i.imgur.com/6GNp7f8.png",Line TV
 https://edge2.taksimbilisim.com/linetv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="MaviKaradenizTV.tr@SD" tvg-logo="https://i.imgur.com/wyWappU.png" group-title="Yerel",MaviKaradeniz TV
-https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8
 #EXTINF:-1 tvg-id="MercanTV.tr@SD" tvg-logo="https://i.imgur.com/3CWV8bS.png" group-title="Yerel",Mercan TV
 https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
 #EXTINF:-1 tvg-id="OlayTurkTV.tr@SD" tvg-logo="https://i.imgur.com/e9ca6gc.png" group-title="Yerel",OlayTurk TV
@@ -345,16 +355,19 @@ https://tv-trtavaz.medya.trt.com.tr/master.m3u8
 https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="4UTV.tr@SD" tvg-logo="https://i.imgur.com/PexhKwp.png" group-title="Uluslararası",4U TV
 https://hls.4utv.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="ATVAvrupa.tr@SD" group-title="Uluslararası" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/atv-avrupa-tr.png",ATV Avrupa
-https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
+#EXTINF:-1 group-title="Uluslararası" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/atv-avrupa-tr.png",ATV Avrupa
+#EXTVLCOPT:http-referrer=https://www.atvavrupa.tv/webtv/canli-yayin
+#EXTVLCOPT:http-referer=https://www.atvavrupa.tv/webtv/canli-yayin
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+#EXTHTTP:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36","Referer":"https://www.atvavrupa.tv/webtv/canli-yayin"}
+#KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://www.atvavrupa.tv/webtv/canli-yayin
+https://trkvz-live.ercdn.net/atvavrupa/atvavrupa.m3u8?st=O0hQAZIiYMm1Tf9cK_D4Ug&e=1793743808
 #EXTINF:-1 tvg-id="ElsharqTV.tr@SD" tvg-logo="https://i.imgur.com/8vmfZb5.png" group-title="Uluslararası",Elsharq TV
 https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8
 #EXTINF:-1 tvg-id="EuroD.tr@SD" tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="Uluslararası",Euro D
 https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
 #EXTINF:-1 group-title="Uluslararası" tvg-logo="https://i.imgur.com/8QpZb7x.png",Fashion One TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8
-#EXTINF:-1 tvg-id="FinestTV.de@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/1uoP10V.png",Finest TV
-http://media.finest.tv/hls/live.m3u8
 #EXTINF:-1 tvg-id="Kanal7Avrupa.tr@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/wlfyj5l.png",Kanal 7 Avrupa
 https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8
 #EXTINF:-1 tvg-id="KurdistanTV.iq@SD" tvg-logo="https://i.imgur.com/mjQptpc.png" group-title="Uluslararası",Kurdistan TV

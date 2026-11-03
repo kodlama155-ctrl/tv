@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-02T09:43:51.760314+00:00",
+  "updated_at_utc": "2026-11-03T09:45:50.684374+00:00",
   "validation_mode": "Header-aware HLS manifest + variant + live-safe real media segment probes",
   "sources": [
     {
@@ -20,7 +20,7 @@
     {
       "url": "local:browser_discovered.m3u",
       "status": "ok",
-      "entries": 8
+      "entries": 9
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
@@ -30,7 +30,7 @@
     {
       "url": "https://iptv-org.github.io/iptv/languages/tur.m3u",
       "status": "ok",
-      "entries": 175
+      "entries": 174
     },
     {
       "url": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye.m3u",
@@ -45,56 +45,67 @@
     {
       "url": "local:missing_discovered.m3u",
       "status": "ok",
-      "entries": 102
+      "entries": 0
     },
     {
       "url": "local:discovered.m3u",
       "status": "ok",
-      "entries": 189
+      "entries": 190
     }
   ],
-  "raw_entries": 1364,
+  "raw_entries": 1263,
   "priority_entries": 79,
   "reuse_validation_mode": false,
   "cached_output_entries": 0,
   "cached_turkey_entries": 0,
   "official_entries": 17,
   "turkuvaz_official_entries": 7,
-  "browser_official_entries": 8,
-  "discovered_entries": 189,
-  "targeted_missing_entries": 102,
-  "unique_entries": 404,
-  "unique_stream_candidates": 404,
-  "prevalidation_raw_candidates": 456,
+  "browser_official_entries": 9,
+  "discovered_entries": 190,
+  "targeted_missing_entries": 0,
+  "unique_entries": 383,
+  "unique_stream_candidates": 383,
+  "prevalidation_raw_candidates": 434,
   "prevalidation_rejected": {
-    "uncatalogued": 6,
+    "uncatalogued": 5,
     "vod-or-event-like": 1
   },
   "prevalidation_review_candidates": 45,
-  "semantic_channels": 237,
+  "semantic_channels": 235,
   "fallback_channels": 32,
-  "turkey_device_channels": 159,
+  "turkey_device_channels": 158,
   "turkey_device_reasons": {
-    "curated-category": 159
+    "curated-category": 158
   },
-  "duplicate_stream_variants_collapsed": 167,
-  "filtered_private_style_entries": 331,
+  "duplicate_stream_variants_collapsed": 148,
+  "filtered_private_style_entries": 327,
   "filtered_false_identity_entries": 4,
-  "header_aware_entries": 53,
+  "header_aware_entries": 54,
   "validation_cache_enabled": false,
   "validation_cache_hits": 0,
-  "validation_fresh_checks": 404,
+  "validation_fresh_checks": 383,
   "selected_stream_sources": {
-    "priority": 43,
-    "official_html": 9,
-    "upstream": 39,
-    "official_api": 2,
+    "priority": 42,
+    "official_html": 10,
+    "upstream": 40,
+    "official_api": 3,
     "official_browser": 2,
     "iptv_org": 131,
-    "github_discovery": 11
+    "github_discovery": 7
   },
-  "domain_score_count": 196,
+  "domain_score_count": 190,
   "top_domain_scores": [
+    {
+      "domain": "rnttwmjcin.turknet.ercdn.net",
+      "score": 90.62,
+      "samples": 11,
+      "verified": 11,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
     {
       "domain": "livetv.powerapp.com.tr",
       "score": 87.5,
@@ -118,26 +129,26 @@
       "verified_rate": 100.0
     },
     {
-      "domain": "rnttwmjcin.turknet.ercdn.net",
-      "score": 85.94,
-      "samples": 11,
-      "verified": 10,
+      "domain": "live.artidijitalmedya.com",
+      "score": 84.24,
+      "samples": 41,
+      "verified": 35,
       "restricted": 0,
       "unknown": 1,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 90.91
-    },
-    {
-      "domain": "live.artidijitalmedya.com",
-      "score": 85.87,
-      "samples": 41,
-      "verified": 36,
-      "restricted": 0,
-      "unknown": 0,
       "dead": 5,
       "drm": 0,
-      "verified_rate": 87.8
+      "verified_rate": 85.37
+    },
+    {
+      "domain": "cdn.ekoturk.net",
+      "score": 83.33,
+      "samples": 4,
+      "verified": 4,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
     },
     {
       "domain": "edge.taksimbilisim.com",
@@ -162,6 +173,17 @@
       "verified_rate": 100.0
     },
     {
+      "domain": "tv8.daioncdn.net",
+      "score": 83.33,
+      "samples": 4,
+      "verified": 4,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    {
       "domain": "b01c02nl.mediatriple.net",
       "score": 82.35,
       "samples": 12,
@@ -171,17 +193,6 @@
       "dead": 0,
       "drm": 0,
       "verified_rate": 83.33
-    },
-    {
-      "domain": "cdn.ekoturk.net",
-      "score": 81.25,
-      "samples": 3,
-      "verified": 3,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
     },
     {
       "domain": "ciner.daioncdn.net",
@@ -204,6 +215,17 @@
       "dead": 0,
       "drm": 0,
       "verified_rate": 100.0
+    },
+    {
+      "domain": "dogus.daioncdn.net",
+      "score": 80.0,
+      "samples": 10,
+      "verified": 8,
+      "restricted": 0,
+      "unknown": 2,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 80.0
     },
     {
       "domain": "trkvz-live.ercdn.net",
@@ -272,7 +294,7 @@
       "verified_rate": 100.0
     },
     {
-      "domain": "media.finest.tv",
+      "domain": "tv-trt2.medya.trt.com.tr",
       "score": 78.57,
       "samples": 2,
       "verified": 2,
@@ -292,62 +314,40 @@
       "dead": 0,
       "drm": 0,
       "verified_rate": 100.0
-    },
-    {
-      "domain": "tv.ensonhaber.com",
-      "score": 76.92,
-      "samples": 8,
-      "verified": 6,
-      "restricted": 0,
-      "unknown": 2,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 75.0
-    },
-    {
-      "domain": "1.rtmp.org",
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
     }
   ],
   "channel_name_sources": {
-    "turksat": 128,
-    "digiturk": 32,
-    "cleaned-source": 228,
+    "turksat": 123,
+    "digiturk": 28,
+    "cleaned-source": 216,
     "official-fallback": 16
   },
   "stream_validation_statuses": {
-    "verified": 198,
-    "restricted": 45,
-    "unknown": 145,
-    "dead": 16
+    "verified": 200,
+    "restricted": 39,
+    "unknown": 133,
+    "dead": 11
   },
-  "verified_entries": 159,
-  "restricted_entries": 20,
+  "verified_entries": 158,
+  "restricted_entries": 19,
   "unknown_entries": 55,
-  "unknown_retry_candidates": 28,
-  "unknown_retry_skipped_verified_sibling": 117,
+  "unknown_retry_candidates": 20,
+  "unknown_retry_skipped_verified_sibling": 113,
   "unknown_retry_recovered": 0,
   "unknown_retry_delay_seconds": 3,
   "unknown_retry_workers": 12,
   "dead_entries": 3,
   "drm_entries": 0,
-  "all_non_dead_non_drm_entries": 234,
-  "turkey_device_entries": 159,
+  "all_non_dead_non_drm_entries": 232,
+  "turkey_device_entries": 158,
   "turkey_device_geo_fallbacks": 0,
   "turkey_device_restricted_fallbacks": 0,
-  "turkey_device_ephemeral_overrides": 1,
+  "turkey_device_ephemeral_overrides": 0,
   "core_channels_total": 70,
-  "core_channels_verified": 49,
-  "core_channels_geo_restricted": 7,
+  "core_channels_verified": 50,
+  "core_channels_geo_restricted": 6,
   "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 21,
+  "core_channels_not_verified": 20,
   "categories_verified": {
     "Ulusal": 20,
     "Haber": 32,
@@ -358,11 +358,11 @@
     "Dini": 10,
     "Müzik": 18,
     "Yerel": 42,
-    "Uluslararası": 19,
+    "Uluslararası": 18,
     "Diğer": 0
   },
   "categories_restricted": {
-    "Ulusal": 3,
+    "Ulusal": 2,
     "Haber": 1,
     "Spor": 5,
     "Film & Dizi": 2,
@@ -375,7 +375,7 @@
     "Diğer": 0
   },
   "categories_unknown": {
-    "Ulusal": 1,
+    "Ulusal": 2,
     "Haber": 5,
     "Spor": 5,
     "Film & Dizi": 0,
@@ -384,7 +384,7 @@
     "Dini": 1,
     "Müzik": 3,
     "Yerel": 19,
-    "Uluslararası": 9,
+    "Uluslararası": 8,
     "Diğer": 0
   }
 }

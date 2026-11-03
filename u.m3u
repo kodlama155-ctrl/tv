@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="TYTTurk.tr@SD" tvg-logo="https://tytturk.com/upload/tyt-logo.png" group-title="Ulusal",TYT Turk
+https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
 #EXTINF:-1 group-title="Ulusal" tvg-logo="https://i.imgur.com/C3m6w5S.png",Meltem TV
 #EXTVLCOPT:http-referrer=https://www.meltemtv.com.tr/canli-yayin
 #EXTVLCOPT:http-referer=https://www.meltemtv.com.tr/canli-yayin
@@ -95,8 +97,6 @@ https://canli.edessatv.com/hls/stream.m3u8
 https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="GuneydoguTV.tr@SD" tvg-logo="https://i.imgur.com/JT5pp3Y.png" group-title="Yerel",Guneydogu TV
 https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="Haber61TV.tr@SD" tvg-logo="https://i.imgur.com/2a2XUKl.png" group-title="Yerel",Haber61 TV
-https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
 #EXTINF:-1 tvg-id="IBBTV.tr@SD" tvg-logo="https://i.imgur.com/aXxAz84.png" group-title="Yerel",IBB TV
 https://npserver1.ibb.gov.tr/webtv/webtv_wowza1/playlist.m3u8
 #EXTINF:-1 tvg-id="Kanal32.tr@SD" group-title="Yerel" tvg-logo="https://i.imgur.com/W2oN0qf.png",Kanal 32
@@ -105,6 +105,8 @@ https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8
 http://yayin3.canlitv.com:1935/live/kanal38/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalHayat.tr@SD" tvg-logo="https://i.imgur.com/eikZj19.png" group-title="Yerel",Kanal Hayat
 https://tbn02a.ltnschedule.com/hls/nx21i.m3u8
+#EXTINF:-1 tvg-id="MaviKaradenizTV.tr@SD" tvg-logo="https://i.imgur.com/wyWappU.png" group-title="Yerel",MaviKaradeniz TV
+https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8
 #EXTINF:-1 tvg-id="MTurkTV.tr@SD" tvg-logo="https://i.imgur.com/xj1gvrq.png" group-title="Yerel",MTurk TV
 https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="OncuTV.tr@SD" tvg-logo="https://i.imgur.com/TGPNYrD.jpg" group-title="Yerel",Öncü TV
@@ -121,20 +123,18 @@ https://canli.tv42.com.tr/memfs/d936e417-c4bd-4d42-89a2-02f289892d1d.m3u8
 #EXTHTTP:{"Referer":"https://www.vtv.net.tr/"}
 #KODIPROP:inputstream.adaptive.manifest_headers=Referer=https://www.vtv.net.tr/
 https://serdar.tiviplayer.com/player/m3u8/65aae71c9b93f0965aaed3a92660d98b/65aae71c9b93f0965aaed3a92660d98b.m3u8
-#EXTINF:-1 tvg-id="AdaTV.cy@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/YWmkUWU.png",Ada TV
-https://streams.uzunmuhalefet.com/stream/975e6a82-279a-4b00-a9b4-85c92f480803.m3u8
 #EXTINF:-1 tvg-id="AfroturkTV.tr@SD" tvg-logo="https://i.imgur.com/fWlLvRA.png" group-title="Uluslararası",Afroturk TV
 https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/kb165Ot.png",Euro Star
 https://xrklj56s.rocketcdn.com/eurostar.stream_720p/chunklist.m3u8
+#EXTINF:-1 tvg-id="FinestTV.de@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/1uoP10V.png",Finest TV
+http://media.finest.tv/hls/live.m3u8
 #EXTINF:-1 tvg-id="KanalAvrupa.tr@SD" tvg-logo="https://i.imgur.com/bIGk6RN.png" group-title="Uluslararası",Kanal Avrupa
 http://51.15.2.151/hls/kanalavrupa.m3u8
 #EXTINF:-1 tvg-id="MyZenTV.fr@SD" tvg-logo="https://i.imgur.com/fIi8o0C.png" group-title="Uluslararası",MyZen TV
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01255-secomcofites-my-myzen-en-plex/playlist.m3u8
 #EXTINF:-1 tvg-id="NaturalTV.tr@SD" tvg-logo="https://i.imgur.com/rfcJ674.png" group-title="Uluslararası",Natural TV
 http://broadcasttr.com:1935/naturaltv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası" tvg-logo="https://i.imgur.com/L13Q8n9.png",TGRT EU
-https://raw.githubusercontent.com/bnyusuf31-lab/tr_github.m3u/refs/heads/main/streams/Tgrt_Eu.m3u8
 #EXTINF:-1 tvg-id="TGRTEurope.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/TGRT_EU.png/960px-TGRT_EU.png" group-title="Uluslararası",TGRT Europe
 https://tv.ensonhaber.com/tv/tr/tgrteu/index.m3u8
 #EXTINF:-1 tvg-id="WestAzerbaijanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/2/21/Urmia_TV.svg/960px-Urmia_TV.svg.png" group-title="Uluslararası",West Azerbaijan TV

@@ -4,40 +4,40 @@
 #EXTINF:-1 group-title="Ulusal",ATV
 #EXTVLCOPT:http-referrer=https://www.atv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=MtVh1bgoepnxl0_embFCKQ&e=1793657232
+https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=17qaGwTEv_G-C0AMHmWJ3Q&e=1793743804
 # SOURCE: official-player-api:https://www.atvavrupa.tv/webtv/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Uluslararası",ATV Avrupa
 #EXTVLCOPT:http-referrer=https://www.atvavrupa.tv/webtv/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/atvavrupa/atvavrupa.m3u8?st=X68HpwYZv2z6D_0uT_xFog&e=1793657236
+https://trkvz-live.ercdn.net/atvavrupa/atvavrupa.m3u8?st=O0hQAZIiYMm1Tf9cK_D4Ug&e=1793743808
 # SOURCE: official-player-api:https://www.ahaber.com.tr/video/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Haber",A Haber
 #EXTVLCOPT:http-referrer=https://www.ahaber.com.tr/video/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=Wf3c5UZeLdP-gCQYWC0cMg&e=1793657239
+https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=VPbcWFWDQAnIA4dFgO_ekQ&e=1793743811
 # SOURCE: official-player-api:https://www.aspor.com.tr/webtv/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Spor",A Spor
 #EXTVLCOPT:http-referrer=https://www.aspor.com.tr/video/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=PCZJOlN8Ikif0eJ57VJTOA&e=1793657243
+https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=tDnJ6Ec8Z-H97DKMVmIojQ&e=1793743814
 # SOURCE: official-player-api:https://www.apara.com.tr/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Haber",A Para
 #EXTVLCOPT:http-referrer=https://www.apara.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=4CUmklzIzLUkyYwDrwczXQ&e=1793657246
+https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=P5NblVC5JP8pNxQA0PgYPg&e=1793743817
 # SOURCE: official-player-api:https://www.anews.com.tr/webtv/live-broadcast
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Uluslararası",A News
 #EXTVLCOPT:http-referrer=https://www.anews.com.tr/webtv/live-broadcast
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=y47K6mvQoTPHau11uFa6IQ&e=1793657249
+https://trkvz-live.ercdn.net/anewshd/anewshd.m3u8?st=wPjXV4ej46zHkCbGAu4XRA&e=1793743819
 # SOURCE: official-player-api:https://www.vavtv.com.tr/canli-yayin
 # PROBE: verified real media segment verified
 #EXTINF:-1 group-title="Dini",Vav TV
 #EXTVLCOPT:http-referrer=https://www.vavtv.com.tr/canli-yayin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=sNEDEXUJGqcyA3YCEeHlcQ&e=1793657258
+https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8?st=efivsuuoX_CzEsd5NdoUdA&e=1793743823
