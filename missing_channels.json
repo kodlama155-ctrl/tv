@@ -1,17 +1,17 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 49,
+  "core_channels_verified": 50,
   "core_channels_geo_restricted": 6,
-  "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 21,
+  "core_channels_device_restricted": 3,
+  "core_channels_not_verified": 20,
   "status_counts": {
-    "verified": 49,
+    "verified": 50,
     "restricted": 2,
     "absent": 2,
     "unknown": 7,
     "geo-restricted": 6,
-    "device-restricted": 4
+    "device-restricted": 3
   },
   "missing_channels": [
     {
@@ -153,13 +153,6 @@
       "status": "device-restricted",
       "reason": "manifest HTTP 403",
       "candidate_url": "https://dogus-live.daioncdn.net/dmax/dmax_720p.m3u8"
-    },
-    {
-      "name": "TLC",
-      "expected_category": "Belgesel",
-      "status": "device-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://dogus-live.daioncdn.net/tlc/tlc.m3u8"
     }
   ]
 }

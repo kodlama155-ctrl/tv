@@ -1,63 +1,70 @@
 {
-  "updated_at_utc": "2026-11-04T09:26:14.729742+00:00",
+  "updated_at_utc": "2026-11-05T09:38:45.696751+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-10-21T09:26:14.729742+00:00",
+  "cutoff_utc": "2026-10-22T09:38:45.696751+00:00",
   "repos_per_query": 50,
   "queries": [
     {
       "query": "turkish iptv",
-      "github_query": "turkish iptv pushed:>=2026-10-21",
+      "github_query": "turkish iptv pushed:>=2026-10-22",
       "repos_returned": 12
     },
     {
       "query": "iptv turkey m3u",
-      "github_query": "iptv turkey m3u pushed:>=2026-10-21",
-      "repos_returned": 1
+      "github_query": "iptv turkey m3u pushed:>=2026-10-22",
+      "repos_returned": 2
     },
     {
       "query": "turkiye iptv m3u",
-      "github_query": "turkiye iptv m3u pushed:>=2026-10-21",
+      "github_query": "turkiye iptv m3u pushed:>=2026-10-22",
       "repos_returned": 1
     },
     {
       "query": "turkish iptv playlist",
-      "github_query": "turkish iptv playlist pushed:>=2026-10-21",
-      "repos_returned": 4
+      "github_query": "turkish iptv playlist pushed:>=2026-10-22",
+      "repos_returned": 5
     },
     {
       "query": "turkiye canli tv m3u",
-      "github_query": "turkiye canli tv m3u pushed:>=2026-10-21",
+      "github_query": "turkiye canli tv m3u pushed:>=2026-10-22",
       "repos_returned": 1
     }
   ],
   "repos_scanned": 13,
   "stale_repos_skipped": 0,
-  "playlist_file_candidates": 12,
-  "fresh_files_scanned": 9,
+  "playlist_file_candidates": 13,
+  "fresh_files_scanned": 10,
   "stale_files_skipped": 3,
-  "unique_m3u8_candidates": 191,
-  "review_candidates": 1,
+  "unique_m3u8_candidates": 214,
+  "review_candidates": 5,
   "discovery_rejections": {
-    "uncatalogued": 53
+    "uncatalogued": 291,
+    "noisy-provider": 38
   },
-  "header_aware_candidates": 0,
+  "header_aware_candidates": 5,
   "fresh_source_files": [
     {
       "repo": "K3rimoff/IPTV",
       "path": "Aze.m3u",
-      "last_commit": "2026-11-04T05:03:58Z",
+      "last_commit": "2026-11-05T05:26:47Z",
       "entries_found": 0
+    },
+    {
+      "repo": "McRizzz/German-Turkish-iptv-playlist",
+      "path": "german-turkish-channels.m3u",
+      "last_commit": "2026-11-04T21:44:17Z",
+      "entries_found": 447
     },
     {
       "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
       "path": "kanallar.m3u",
-      "last_commit": "2026-11-03T11:46:21Z",
+      "last_commit": "2026-11-04T11:58:21Z",
       "entries_found": 307
     },
     {
       "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
       "path": "kanallar.m3u8",
-      "last_commit": "2026-11-03T11:46:21Z",
+      "last_commit": "2026-11-04T11:58:21Z",
       "entries_found": 307
     },
     {
