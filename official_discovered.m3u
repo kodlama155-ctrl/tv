@@ -4,13 +4,13 @@
 #EXTINF:-1 group-title="Belgesel",DMAX
 #EXTVLCOPT:http-referrer=https://www.dmax.com.tr/canli-izle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=Zzh1RGpkci83cnBIK3ZxNk5MUzVvbTRzcENJKzBYSnpkZFBjeVgxQSs0RT0=
+https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=eVo2dzdyWmFCaGJzRGl4Mng5cWs1L05rYjRJd1ZicytFOEEveUhVOW1lbz0=
 # SOURCE: official:https://www.tlctv.com.tr/canli-izle
 # PROBE: unknown variant HTTP 500
 #EXTINF:-1 group-title="Belgesel",TLC
 #EXTVLCOPT:http-referrer=https://www.tlctv.com.tr/canli-izle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=VTR5eFZvakdXM0NsUkVPNkVRUThFdU11aXQ4WnNPZmo4YTJOMXh4R21uMD0=
+https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=NTlVS1g0Q1RTZUUrRzRpczd5blZqakVWSE9xMzJPcEJCZ2Y3OTQzVlExUT0=
 # SOURCE: official:https://www.vavtv.com.tr/canli-yayin
 # PROBE: restricted manifest HTTP 403
 #EXTINF:-1 group-title="Dini",Vav TV
