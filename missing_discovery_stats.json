@@ -1,8 +1,8 @@
 {
-  "updated_at_utc": "2026-11-07T08:57:29.994991+00:00",
+  "updated_at_utc": "2026-11-08T09:09:21.811495+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 158,
-  "missing_before_search": 82,
+  "channels_in_previous_tr": 152,
+  "missing_before_search": 88,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
@@ -10,12 +10,12 @@
     "TV8",
     "Kanal 7",
     "TRT 2",
+    "TYT Türk",
     "AKİT TV",
     "Sözcü TV",
     "A News",
     "DİM TV",
     "Guneydogu TV",
-    "Haber61 TV",
     "Kudüs TV",
     "TRT Spor",
     "TRT Spor Yıldız",
@@ -37,10 +37,13 @@
     "TGRT Belgesel",
     "Yaban TV",
     "DMAX",
+    "VAV TV",
+    "Dost TV",
     "On4 TV",
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
+    "Number1 Türk TV",
     "Ada TV",
     "MyZen TV",
     "West Azerbaijan TV",
@@ -59,6 +62,8 @@
     "Natural TV",
     "Öncü TV",
     "TV 1",
+    "Aras TV",
+    "TELE1",
     "KRT TV",
     "GZT",
     "S Sport",
@@ -86,6 +91,7 @@
     "TV 38",
     "TV 42",
     "V TV",
+    "Kanal Avrupa",
     "TGRT Europe"
   ],
   "batch_size": 8,
@@ -123,6 +129,12 @@
       "candidates": 0
     },
     {
+      "name": "TYT Türk",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "AKİT TV",
       "category": "Haber",
       "files_matched": 0,
@@ -148,12 +160,6 @@
     },
     {
       "name": "Guneydogu TV",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Haber61 TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -285,6 +291,18 @@
       "candidates": 0
     },
     {
+      "name": "VAV TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Dost TV",
+      "category": "Dini",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "On4 TV",
       "category": "Dini",
       "files_matched": 0,
@@ -304,6 +322,12 @@
     },
     {
       "name": "Number1 Rap TV",
+      "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Number1 Türk TV",
       "category": "Müzik",
       "files_matched": 0,
       "candidates": 0
@@ -413,6 +437,18 @@
     {
       "name": "TV 1",
       "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Aras TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TELE1",
+      "category": "Haber",
       "files_matched": 0,
       "candidates": 0
     },
@@ -575,6 +611,12 @@
     {
       "name": "V TV",
       "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Kanal Avrupa",
+      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },
