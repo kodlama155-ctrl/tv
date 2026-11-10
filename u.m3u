@@ -1,6 +1,6 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="TRT4K.tr" group-title="Ulusal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-4k-tr.png",TRT 4K
-http://176.65.146.123:6001/play/a027/index.m3u8
+#EXTINF:-1 tvg-id="TYTTurk.tr@SD" tvg-logo="https://tytturk.com/upload/tyt-logo.png" group-title="Ulusal",TYT Turk
+https://cdn-tytturk.yayin.com.tr/tytturk/index.m3u8
 #EXTINF:-1 tvg-id="AkitTV.tr@HD" tvg-logo="https://i.ibb.co/MBwzD2b/akit-tv.png" group-title="Haber",AKİT TV
 https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
 #EXTINF:-1 tvg-id="GZT.tr" group-title="Haber",GZT
@@ -18,14 +18,7 @@ https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
 #KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Lavf53.32.100
 https://krtdvr.blutv.com/blutv_krt_live_dvr/live_720p4350000kbps/index.m3u8
 #EXTINF:-1 tvg-id="SozcuTV.tr@HD" group-title="Haber" tvg-logo="https://www.evrensel.net/upload/dosya/231375.jpg",Sözcü TV
-#EXTVLCOPT:http-user-agent=Lavf53.32.100
-#EXTHTTP:{"User-Agent":"Lavf53.32.100"}
-#KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Lavf53.32.100
 https://szctvdvr.blutv.com/blutv_szctv_dvr/live_720p4350000kbps/index.m3u8
-#EXTINF:-1 tvg-id="BirTV.tr@SD" group-title="Haber" tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png",Bir TV
-https://edge1.socialsmart.tv/birtv/bant1/chunks.m3u8
-#EXTINF:-1 tvg-id="LifeTV.tr@SD" group-title="Haber" tvg-logo="https://i.imgur.com/lWeJxm0.png",Life TV
-https://waw3.artiyerelmedya.net/lifetv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="OnMedyaTV.tr@SD" tvg-logo="https://i.imgur.com/thvk3Py.png" group-title="Haber",ON Medya Haber
 http://live.arkumedia.com:1935/marmaratv/marmaratv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRT3.tr@SD" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Spor",TRT 3 Spor
@@ -58,6 +51,13 @@ https://59c7ea6bec1c6.streamlock.net/filbox/habibattv.stream/playlist.m3u8
 https://tv.arectv29.sbs/live/viasathistory.m3u8
 #EXTINF:-1 tvg-id="ManasTV.kg@SD" tvg-logo="https://i.ibb.co/2Kvcj5Q/manas.jpg" group-title="Belgesel",Manas TV
 http://212.42.111.152:8080/hls/manas.m3u8
+#EXTINF:-1 tvg-id="TGRTBelgesel.tr@HD" tvg-logo="https://www.tgrtbelgesel.com.tr/wp-content/uploads/2021/08/TGRT_Belgesel_Logo.png" group-title="Belgesel",TGRT Belgesel
+#EXTVLCOPT:http-referrer=https://www.tgrtbelgesel.com.tr/canli-yayin
+#EXTVLCOPT:http-referer=https://www.tgrtbelgesel.com.tr/canli-yayin
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+#EXTHTTP:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36","Referer":"https://www.tgrtbelgesel.com.tr/canli-yayin"}
+#KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://www.tgrtbelgesel.com.tr/canli-yayin
+https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8
 #EXTINF:-1 tvg-id="ToprakTV.tr@SD" tvg-logo="https://i.imgur.com/JGnS0qs.png" group-title="Belgesel",Toprak TV
 https://59cba4d34b678.streamlock.net/canlitv/topraktv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRTEBAIlkokul.tr@SD" tvg-logo="https://i.imgur.com/CRBfZi4.png" group-title="Belgesel",TRT EBA Ilkokul
@@ -75,10 +75,10 @@ https://embedlp.becdn.net/womantv.m3u8
 #EXTHTTP:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36","Referer":"https://www.yabantv.com/broadcast/"}
 #KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://www.yabantv.com/broadcast/
 https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
-#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini" tvg-logo="https://i.imgur.com/nCzpHWM.png",FM TV
-https://livesx.canlitv.center/fmtv.m3u8
 #EXTINF:-1 tvg-id="On4TV.tr@SD" tvg-logo="https://i.imgur.com/qGRa1KI.png" group-title="Dini",On4 TV
 https://edge1.socialsmart.tv/on4/bant1/playlist.m3u8
+#EXTINF:-1 tvg-id="Number1Turk.tr@SD" tvg-logo="https://i.imgur.com/18zjk3q.png" group-title="Müzik",Number 1 Türk
+https://mn-nl.mncdn.com/blutv_nr1turk2/live.m3u8
 #EXTINF:-1 group-title="Müzik" tvg-logo="https://i.imgur.com/02cDIBi.png",Number1 Türk TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik" tvg-logo="https://i.imgur.com/4hH7nZs.png",Dream TV
@@ -99,8 +99,6 @@ https://livetv.canbroadcast.com:7443/canlican/tv.m3u8
 https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="CekmekoyTV.tr@SD" tvg-logo="https://i.imgur.com/sjAGFWu.png" group-title="Yerel",Cekmekoy TV
 https://cdn-cekmekoybeltv.yayin.com.tr/cekmekoybeltv/cekmekoybeltv_1080p/playlist.m3u8
-#EXTINF:-1 tvg-id="DimTV.tr@SD" group-title="Yerel" tvg-logo="https://i.imgur.com/X4QFDhk.png",DİM TV
-https://waw3.artiyerelmedya.net/dimtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="EdessaTV.tr@SD" tvg-logo="https://i.imgur.com/rhU6j9I.png" group-title="Yerel",Edessa TV
 https://canli.edessatv.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ETVManisa.tr@SD" tvg-logo="https://i.ibb.co/QKXtdkz/sOd3INg.png" group-title="Yerel",ETV Manisa
@@ -121,8 +119,6 @@ https://tbn02a.ltnschedule.com/hls/nx21i.m3u8
 https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="MTurkTV.tr@SD" tvg-logo="https://i.imgur.com/xj1gvrq.png" group-title="Yerel",MTurk TV
 https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="OlayTurkTV.tr@SD" group-title="Yerel" tvg-logo="https://i.imgur.com/e9ca6gc.png",OlayTurk TV
-https://streams.uzunmuhalefet.com/stream/8874c3c5-083d-4fff-bb0a-b7e2f8694c08.m3u8
 #EXTINF:-1 tvg-id="OncuTV.tr@SD" tvg-logo="https://i.imgur.com/TGPNYrD.jpg" group-title="Yerel",Öncü TV
 https://edge1.socialsmart.tv/oncurtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="TV1.tr@SD" tvg-logo="https://i.imgur.com/8CtrYVb.png" group-title="Yerel",TV 1
@@ -139,14 +135,14 @@ https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8
 #EXTHTTP:{"Referer":"https://www.vtv.net.tr/"}
 #KODIPROP:inputstream.adaptive.manifest_headers=Referer=https://www.vtv.net.tr/
 https://serdar.tiviplayer.com/player/m3u8/65aae71c9b93f0965aaed3a92660d98b/65aae71c9b93f0965aaed3a92660d98b.m3u8
-#EXTINF:-1 tvg-id="AdaTV.cy@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/YWmkUWU.png",Ada TV
-https://streams.uzunmuhalefet.com/stream/975e6a82-279a-4b00-a9b4-85c92f480803.m3u8
 #EXTINF:-1 tvg-id="AfroturkTV.tr@SD" tvg-logo="https://i.imgur.com/fWlLvRA.png" group-title="Uluslararası",Afroturk TV
 https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="EuroStar.tr@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/kb165Ot.png",Euro Star
 https://xrklj56s.rocketcdn.com/eurostar.stream_720p/chunklist.m3u8
 #EXTINF:-1 tvg-id="FinestTV.de@SD" group-title="Uluslararası" tvg-logo="https://i.imgur.com/1uoP10V.png",Finest TV
 http://media.finest.tv/hls/live.m3u8
+#EXTINF:-1 tvg-id="KanalAvrupa.tr@SD" tvg-logo="https://i.imgur.com/bIGk6RN.png" group-title="Uluslararası",Kanal Avrupa
+http://51.15.2.151/hls/kanalavrupa.m3u8
 #EXTINF:-1 tvg-id="KurdistanTV.iq@SD" tvg-logo="https://i.imgur.com/mjQptpc.png" group-title="Uluslararası",Kurdistan TV
 https://5a3ed7a72ed4b.streamlock.net/live/SMIL:myStream.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="MyZenTV.fr@SD" tvg-logo="https://i.imgur.com/fIi8o0C.png" group-title="Uluslararası",MyZen TV

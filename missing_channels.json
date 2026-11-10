@@ -1,17 +1,17 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 51,
-  "core_channels_geo_restricted": 7,
-  "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 19,
+  "core_channels_verified": 52,
+  "core_channels_geo_restricted": 6,
+  "core_channels_device_restricted": 3,
+  "core_channels_not_verified": 18,
   "status_counts": {
-    "verified": 51,
+    "verified": 52,
     "restricted": 1,
-    "geo-restricted": 7,
+    "absent": 2,
     "unknown": 6,
-    "absent": 1,
-    "device-restricted": 4
+    "geo-restricted": 6,
+    "device-restricted": 3
   },
   "missing_channels": [
     {
@@ -22,18 +22,11 @@
       "candidate_url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3"
     },
     {
-      "name": "TRT 2",
-      "expected_category": "Ulusal",
-      "status": "geo-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
-    },
-    {
       "name": "FM TV",
       "expected_category": "Dini",
-      "status": "unknown",
-      "reason": "manifest URLError",
-      "candidate_url": "http://mugla.tvizlehd.com/live/fmtv.m3u8"
+      "status": "absent",
+      "reason": "No candidate found in current sources",
+      "candidate_url": ""
     },
     {
       "name": "Kanal 1",
@@ -136,9 +129,9 @@
     {
       "name": "TGRT Belgesel",
       "expected_category": "Belgesel",
-      "status": "device-restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "http://162.212.179.32/gin-dvrfl05/gin-tgrtbelgesel/playlist.m3u8"
+      "status": "unknown",
+      "reason": "manifest URLError",
+      "candidate_url": "https://canli.ihlasdigitalassets.com/tgrtbelgesel.m3u8"
     },
     {
       "name": "DMAX",

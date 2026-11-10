@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-09T10:00:29.839437+00:00",
+  "updated_at_utc": "2026-11-10T10:02:38.786273+00:00",
   "count": 48,
   "candidates": [
     {
@@ -56,7 +56,7 @@
       "url": "https://s6.hopslan.com/disneyX/index.m3u8",
       "source_repo": "arslanavdo355-sys/Benim-iptv",
       "source_path": "tr-de-ku.m3u",
-      "source_updated": "2026-11-09T07:41:05Z",
+      "source_updated": "2026-11-10T07:26:21Z",
       "reason": "uncatalogued-tr-identity"
     },
     {
@@ -321,7 +321,7 @@
       "url": "https://ceokzokgtd.erbvr.com/tabiitv/tabiitv.m3u8",
       "source_repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
       "source_path": "kanallar.m3u",
-      "source_updated": "2026-11-08T19:43:30Z",
+      "source_updated": "2026-11-09T12:42:40Z",
       "reason": "uncatalogued-tr-identity"
     },
     {
