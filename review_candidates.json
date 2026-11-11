@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-11-10T10:02:38.786273+00:00",
-  "count": 48,
+  "updated_at_utc": "2026-11-11T09:37:09.874600+00:00",
+  "count": 47,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
@@ -48,15 +48,6 @@
       "url": "https://live.artidijitalmedya.com/artidijital_dehatv/dehatv/playlist.m3u8",
       "source_kind": "upstream",
       "source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Disney Channel (576p)",
-      "tvg_id": "DISNEY.CHANNEL.tr",
-      "url": "https://s6.hopslan.com/disneyX/index.m3u8",
-      "source_repo": "arslanavdo355-sys/Benim-iptv",
-      "source_path": "tr-de-ku.m3u",
-      "source_updated": "2026-11-10T07:26:21Z",
       "reason": "uncatalogued-tr-identity"
     },
     {
@@ -321,7 +312,7 @@
       "url": "https://ceokzokgtd.erbvr.com/tabiitv/tabiitv.m3u8",
       "source_repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
       "source_path": "kanallar.m3u",
-      "source_updated": "2026-11-09T12:42:40Z",
+      "source_updated": "2026-11-10T12:23:48Z",
       "reason": "uncatalogued-tr-identity"
     },
     {

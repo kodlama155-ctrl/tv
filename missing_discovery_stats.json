@@ -1,24 +1,22 @@
 {
-  "updated_at_utc": "2026-11-10T10:02:22.440670+00:00",
+  "updated_at_utc": "2026-11-11T09:36:56.776489+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 146,
-  "missing_before_search": 94,
+  "channels_in_previous_tr": 145,
+  "missing_before_search": 95,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
     "TV8",
     "Kanal 7",
     "TRT 2",
+    "TYT Türk",
     "AKİT TV",
     "TurkHaber TV",
     "Sözcü TV",
     "A News",
     "DİM TV",
-    "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
-    "Life TV",
-    "OlayTurk TV",
     "TRT Spor",
     "TRT Spor Yıldız",
     "FB TV",
@@ -29,6 +27,7 @@
     "GEM Pixel",
     "Disney Junior",
     "BabyTV",
+    "TRT Çocuk",
     "TRT Genc",
     "TRT Belgesel",
     "National Geographic",
@@ -52,8 +51,8 @@
     "Kanal 33",
     "Afroturk TV",
     "Altas TV",
+    "Anadolu Net TV",
     "Bir TV",
-    "Bric ve Satranc TV",
     "Cay TV",
     "Edessa TV",
     "ETV Manisa",
@@ -63,7 +62,6 @@
     "Icel TV",
     "Kanal 1",
     "Kanal 32",
-    "Kanal Firat",
     "Kanal Hayat",
     "Line TV",
     "MTurk TV",
@@ -71,6 +69,7 @@
     "Öncü TV",
     "TV 1",
     "TV 52",
+    "Urfa Natik TV",
     "TELE1",
     "KRT TV",
     "GZT",
@@ -87,6 +86,7 @@
     "TRT EBA Lise",
     "Üniversite TV",
     "Woman TV",
+    "Number 1 Türk",
     "Milyon TV",
     "ON Medya Haber",
     "A Türk Izmir",
@@ -98,27 +98,12 @@
     "TV 38",
     "TV 42",
     "V TV",
+    "Kanal Avrupa",
     "TGRT Europe"
   ],
   "batch_size": 8,
   "search_delay_seconds": 3,
-  "search_batches": [
-    {
-      "names": [
-        "TRT 4K",
-        "TV8",
-        "Kanal 7",
-        "TRT 2",
-        "AKİT TV",
-        "TurkHaber TV",
-        "Sözcü TV",
-        "A News"
-      ],
-      "query": "\"TRT 4K\" OR \"TV8\" OR \"Kanal 7\" OR \"TRT 2\" OR \"AKİT TV\" OR \"TurkHaber TV\" OR \"Sözcü TV\" OR \"A News\" extension:m3u",
-      "search_results": 0,
-      "fallback_individual": false
-    }
-  ],
+  "search_batches": [],
   "target_report": [
     {
       "name": "TRT 4K",
@@ -140,6 +125,12 @@
     },
     {
       "name": "TRT 2",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TYT Türk",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
@@ -175,12 +166,6 @@
       "candidates": 0
     },
     {
-      "name": "Finans Turk TV",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Guneydogu TV",
       "category": "Yerel",
       "files_matched": 0,
@@ -189,18 +174,6 @@
     {
       "name": "Kudüs TV",
       "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Life TV",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "OlayTurk TV",
-      "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
     },
@@ -260,6 +233,12 @@
     },
     {
       "name": "BabyTV",
+      "category": "Çocuk",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TRT Çocuk",
       "category": "Çocuk",
       "files_matched": 0,
       "candidates": 0
@@ -403,14 +382,14 @@
       "candidates": 0
     },
     {
-      "name": "Bir TV",
-      "category": "Haber",
+      "name": "Anadolu Net TV",
+      "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
     },
     {
-      "name": "Bric ve Satranc TV",
-      "category": "Spor",
+      "name": "Bir TV",
+      "category": "Haber",
       "files_matched": 0,
       "candidates": 0
     },
@@ -469,12 +448,6 @@
       "candidates": 0
     },
     {
-      "name": "Kanal Firat",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Kanal Hayat",
       "category": "Yerel",
       "files_matched": 0,
@@ -512,6 +485,12 @@
     },
     {
       "name": "TV 52",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Urfa Natik TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -613,6 +592,12 @@
       "candidates": 0
     },
     {
+      "name": "Number 1 Türk",
+      "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Milyon TV",
       "category": "Müzik",
       "files_matched": 0,
@@ -675,6 +660,12 @@
     {
       "name": "V TV",
       "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Kanal Avrupa",
+      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },

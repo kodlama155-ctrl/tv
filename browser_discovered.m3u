@@ -1,4 +1,25 @@
 #EXTM3U
+# SOURCE: official-browser:https://www.tlctv.com.tr/canli-izle
+# DISCOVERY: request
+# PROBE: unknown manifest HTTP 500
+#EXTINF:-1 group-title="Belgesel",TLC
+#EXTVLCOPT:http-referrer=https://www.tlctv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://dogus-blackout.daioncdn.net/tlctv_geoblock.smil/hlssubplaylist-qvbpo5g_qacpG7.m3u8
+# SOURCE: official-browser:https://www.tlctv.com.tr/canli-izle
+# DISCOVERY: request
+# PROBE: unknown variant HTTP 500
+#EXTINF:-1 group-title="Belgesel",TLC
+#EXTVLCOPT:http-referrer=https://www.tlctv.com.tr/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://dogus-blackout.daioncdn.net/tlctv_geoblock.smil/playlist.m3u8
+# SOURCE: official-browser:https://www.tlctv.com.tr/canli-izle
+# DISCOVERY: document-body
+# PROBE: unknown variant HTTP 500
+#EXTINF:-1 group-title="Belgesel",TLC
+#EXTVLCOPT:http-referrer=https://www.tlctv.com.tr/canli-izle
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=ckxFTHIvRHhOcHIxNmN4UlhOeEZIVGNWeThZTzRWdzEyT215T3BsT2VQWT0=
 # SOURCE: official-browser:https://www.ekoturk.com/canli-yayin/
 # DISCOVERY: request
 # PROBE: verified real media segment verified
@@ -28,13 +49,6 @@ https://cdn.ekoturk.net/hls/720p.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://cdn.ekoturk.net/hls/master.m3u8
 # SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
-# DISCOVERY: fetch-body
-# PROBE: restricted manifest HTTP 403
-#EXTINF:-1 group-title="Ulusal",A2
-#EXTVLCOPT:http-referrer=https://www.atv.com.tr/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8
-# SOURCE: official-browser:https://www.atv.com.tr/a2tv/canli-yayin
 # DISCOVERY: script-body
 # PROBE: restricted manifest HTTP 403
 #EXTINF:-1 group-title="Ulusal",A2
@@ -61,4 +75,4 @@ https://dogus.daioncdn.net/startv/startv.m3u8?ce=3&app=a20ac41e-bdc3-4aa1-934d-2
 #EXTINF:-1 group-title="Ulusal",Star TV
 #EXTVLCOPT:http-referrer=https://www.startv.com.tr/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8wonwkpn3efd&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3
+https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8ws621ahx06i&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3
