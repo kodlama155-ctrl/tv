@@ -1,14 +1,15 @@
 {
-  "updated_at_utc": "2026-11-11T09:28:53.128049+00:00",
+  "updated_at_utc": "2026-11-12T09:52:28.962141+00:00",
   "official_pages": 38,
   "pages_ok": 33,
   "pages_with_candidates": 13,
   "raw_candidates": 16,
-  "accepted_unique_candidates": 16,
+  "accepted_unique_candidates": 15,
   "probe_statuses": {
-    "restricted": 6,
+    "restricted": 5,
     "verified": 7,
-    "unknown": 3
+    "unknown": 3,
+    "dead": 1
   },
   "sources": [
     {
@@ -121,7 +122,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=N0w1c1k2MXlHazVsenk0Y0xOdS85cjlVSkFvVjVuQWxJYko5NnB5STFtTT0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=UFFOMDNBUnRZUVczcktYMTFzV3I2NlptOU8yNm9uRnl5TWhaUHdoWlk5WT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -301,12 +302,14 @@
     {
       "name": "TLC",
       "page": "https://www.tlctv.com.tr/canli-izle",
-      "status": "page_error",
-      "page_final_url": null,
-      "page_candidates": 0,
-      "aux_scanned": 0,
-      "candidates": [],
-      "error": "TimeoutError"
+      "status": "ok",
+      "page_final_url": "https://www.tlctv.com.tr/canli-izle",
+      "page_candidates": 1,
+      "aux_scanned": 2,
+      "candidates": [
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=eXdQbWN3UDAwOFJQMmNDRGxQRmdhVGR4R0JxOHZCNFVBbjhkTytZK1V6VT0="
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "TRT 3 Spor",
@@ -356,12 +359,10 @@
       "name": "TV8",
       "page": "https://www.tv8.com.tr/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.tv8.com.tr/canli-yayin",
-      "page_candidates": 1,
+      "page_final_url": "https://www.tv8.com.tr/",
+      "page_candidates": 0,
       "aux_scanned": 2,
-      "candidates": [
-        "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3"
-      ],
+      "candidates": [],
       "identity_rejected_candidates": 0
     },
     {
@@ -403,12 +404,12 @@
     {
       "name": "Yaban TV",
       "page": "https://www.yabantv.com/broadcast/",
-      "status": "ok",
-      "page_final_url": "https://www.yabantv.com/broadcast/",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 2,
+      "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "URLError"
     },
     {
       "name": "beIN Sports Haber",

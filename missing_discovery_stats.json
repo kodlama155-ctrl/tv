@@ -1,8 +1,8 @@
 {
-  "updated_at_utc": "2026-11-11T09:36:56.776489+00:00",
+  "updated_at_utc": "2026-11-12T09:59:58.650317+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 145,
-  "missing_before_search": 95,
+  "channels_in_previous_tr": 146,
+  "missing_before_search": 94,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
@@ -15,6 +15,7 @@
     "Sözcü TV",
     "A News",
     "DİM TV",
+    "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
     "TRT Spor",
@@ -37,21 +38,19 @@
     "TGRT Belgesel",
     "Yaban TV",
     "DMAX",
+    "TLC",
     "VAV TV",
     "On4 TV",
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
-    "Number1 Türk TV",
     "Ada TV",
-    "Kurdistan TV",
     "MyZen TV",
     "West Azerbaijan TV",
     "Finest TV",
     "Kanal 33",
     "Afroturk TV",
     "Altas TV",
-    "Anadolu Net TV",
     "Bir TV",
     "Cay TV",
     "Edessa TV",
@@ -61,6 +60,7 @@
     "ATV Avrupa",
     "Icel TV",
     "Kanal 1",
+    "Meltem TV",
     "Kanal 32",
     "Kanal Hayat",
     "Line TV",
@@ -86,7 +86,6 @@
     "TRT EBA Lise",
     "Üniversite TV",
     "Woman TV",
-    "Number 1 Türk",
     "Milyon TV",
     "ON Medya Haber",
     "A Türk Izmir",
@@ -162,6 +161,12 @@
     {
       "name": "DİM TV",
       "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Finans Turk TV",
+      "category": "Haber",
       "files_matched": 0,
       "candidates": 0
     },
@@ -298,6 +303,12 @@
       "candidates": 0
     },
     {
+      "name": "TLC",
+      "category": "Belgesel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "VAV TV",
       "category": "Dini",
       "files_matched": 0,
@@ -328,19 +339,7 @@
       "candidates": 0
     },
     {
-      "name": "Number1 Türk TV",
-      "category": "Müzik",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Ada TV",
-      "category": "Uluslararası",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Kurdistan TV",
       "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
@@ -377,12 +376,6 @@
     },
     {
       "name": "Altas TV",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Anadolu Net TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -437,6 +430,12 @@
     },
     {
       "name": "Kanal 1",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Meltem TV",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
@@ -588,12 +587,6 @@
     {
       "name": "Woman TV",
       "category": "Belgesel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Number 1 Türk",
-      "category": "Müzik",
       "files_matched": 0,
       "candidates": 0
     },
