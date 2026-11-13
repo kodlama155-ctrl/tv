@@ -1,11 +1,13 @@
 {
-  "updated_at_utc": "2026-11-12T09:59:58.650317+00:00",
+  "updated_at_utc": "2026-11-13T09:43:48.231867+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 146,
-  "missing_before_search": 94,
+  "channels_in_previous_tr": 148,
+  "missing_before_search": 92,
   "prior_validation_aware": true,
   "missing_names": [
+    "TRT 1",
     "TRT 4K",
+    "Show TV",
     "TV8",
     "Kanal 7",
     "TRT 2",
@@ -15,7 +17,6 @@
     "Sözcü TV",
     "A News",
     "DİM TV",
-    "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
     "TRT Spor",
@@ -28,7 +29,6 @@
     "GEM Pixel",
     "Disney Junior",
     "BabyTV",
-    "TRT Çocuk",
     "TRT Genc",
     "TRT Belgesel",
     "National Geographic",
@@ -38,7 +38,6 @@
     "TGRT Belgesel",
     "Yaban TV",
     "DMAX",
-    "TLC",
     "VAV TV",
     "On4 TV",
     "FM TV",
@@ -69,7 +68,6 @@
     "Öncü TV",
     "TV 1",
     "TV 52",
-    "Urfa Natik TV",
     "TELE1",
     "KRT TV",
     "GZT",
@@ -105,7 +103,19 @@
   "search_batches": [],
   "target_report": [
     {
+      "name": "TRT 1",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "TRT 4K",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Show TV",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
@@ -161,12 +171,6 @@
     {
       "name": "DİM TV",
       "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Finans Turk TV",
-      "category": "Haber",
       "files_matched": 0,
       "candidates": 0
     },
@@ -243,12 +247,6 @@
       "candidates": 0
     },
     {
-      "name": "TRT Çocuk",
-      "category": "Çocuk",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "TRT Genc",
       "category": "Çocuk",
       "files_matched": 0,
@@ -298,12 +296,6 @@
     },
     {
       "name": "DMAX",
-      "category": "Belgesel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "TLC",
       "category": "Belgesel",
       "files_matched": 0,
       "candidates": 0
@@ -484,12 +476,6 @@
     },
     {
       "name": "TV 52",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Urfa Natik TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0

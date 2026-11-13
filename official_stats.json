@@ -1,15 +1,14 @@
 {
-  "updated_at_utc": "2026-11-12T09:52:28.962141+00:00",
+  "updated_at_utc": "2026-11-13T09:35:09.448499+00:00",
   "official_pages": 38,
-  "pages_ok": 33,
+  "pages_ok": 32,
   "pages_with_candidates": 13,
   "raw_candidates": 16,
-  "accepted_unique_candidates": 15,
+  "accepted_unique_candidates": 16,
   "probe_statuses": {
     "restricted": 5,
     "verified": 7,
-    "unknown": 3,
-    "dead": 1
+    "unknown": 4
   },
   "sources": [
     {
@@ -56,7 +55,7 @@
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.atv.com.tr/canli-yayin",
+      "page_final_url": "https://www.atv.com.tr/a2tv/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
@@ -122,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=UFFOMDNBUnRZUVczcktYMTFzV3I2NlptOU8yNm9uRnl5TWhaUHdoWlk5WT0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=TUdrVlRmdnY2akZSbkVwNXozdmVlZ3pTWUVHekVydXphS3dkaHNTS21YWT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -139,12 +138,12 @@
     {
       "name": "EKOTÜRK",
       "page": "https://www.ekoturk.com/canli-yayin/",
-      "status": "ok",
-      "page_final_url": "https://www.ekoturk.com/canli-yayin",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 2,
+      "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "HTTPError"
     },
     {
       "name": "FB TV",
@@ -307,7 +306,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=eXdQbWN3UDAwOFJQMmNDRGxQRmdhVGR4R0JxOHZCNFVBbjhkTytZK1V6VT0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=MEhVNkVkRUZWeTJXMmNnbmJxa29hNnBBeU0xeFFockRVNDJzNGk0NlF5dz0="
       ],
       "identity_rejected_candidates": 0
     },
