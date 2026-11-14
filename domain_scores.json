@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-13T09:46:00.880424+00:00",
+  "updated_at_utc": "2026-11-14T09:10:12.176073+00:00",
   "method": "Bayesian-smoothed reliability: verified=1.0, restricted=0.55, unknown=0.25, dead/drm=0; prior=70 over 5 samples",
   "domains": {
     "rnttwmjcin.turknet.ercdn.net": {
@@ -22,30 +22,20 @@
       "drm": 0,
       "verified_rate": 100.0
     },
-    "live.artidijitalmedya.com": {
-      "score": 87.0,
-      "samples": 45,
-      "verified": 40,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 5,
-      "drm": 0,
-      "verified_rate": 88.89
-    },
-    "ciner.daioncdn.net": {
-      "score": 85.0,
-      "samples": 5,
-      "verified": 5,
+    "dogus.daioncdn.net": {
+      "score": 88.46,
+      "samples": 8,
+      "verified": 8,
       "restricted": 0,
       "unknown": 0,
       "dead": 0,
       "drm": 0,
       "verified_rate": 100.0
     },
-    "cdn.ekoturk.net": {
-      "score": 83.33,
-      "samples": 4,
-      "verified": 4,
+    "ciner.daioncdn.net": {
+      "score": 85.0,
+      "samples": 5,
+      "verified": 5,
       "restricted": 0,
       "unknown": 0,
       "dead": 0,
@@ -82,6 +72,26 @@
       "drm": 0,
       "verified_rate": 75.0
     },
+    "cdn.ekoturk.net": {
+      "score": 81.25,
+      "samples": 3,
+      "verified": 3,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    "edge.taksimbilisim.com": {
+      "score": 81.25,
+      "samples": 3,
+      "verified": 3,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
     "livetv.radyotvonline.net": {
       "score": 81.25,
       "samples": 3,
@@ -101,26 +111,6 @@
       "dead": 0,
       "drm": 0,
       "verified_rate": 80.0
-    },
-    "dogus.daioncdn.net": {
-      "score": 80.0,
-      "samples": 10,
-      "verified": 8,
-      "restricted": 0,
-      "unknown": 2,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 80.0
-    },
-    "b01c02nl.mediatriple.net": {
-      "score": 78.57,
-      "samples": 16,
-      "verified": 12,
-      "restricted": 0,
-      "unknown": 4,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 75.0
     },
     "beyaztv-live.daioncdn.net": {
       "score": 78.57,
@@ -143,6 +133,16 @@
       "verified_rate": 100.0
     },
     "ekoltv-live.ercdn.net": {
+      "score": 78.57,
+      "samples": 2,
+      "verified": 2,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
+    "helga.iptv2022.com": {
       "score": 78.57,
       "samples": 2,
       "verified": 2,
@@ -222,15 +222,25 @@
       "drm": 0,
       "verified_rate": 66.67
     },
-    "1.rtmp.org": {
+    "live.artidijitalmedya.com": {
       "score": 75.0,
-      "samples": 1,
-      "verified": 1,
+      "samples": 45,
+      "verified": 34,
       "restricted": 0,
       "unknown": 0,
+      "dead": 11,
+      "drm": 0,
+      "verified_rate": 75.56
+    },
+    "b01c02nl.mediatriple.net": {
+      "score": 75.0,
+      "samples": 16,
+      "verified": 11,
+      "restricted": 0,
+      "unknown": 5,
       "dead": 0,
       "drm": 0,
-      "verified_rate": 100.0
+      "verified_rate": 68.75
     },
     "139.162.182.79": {
       "score": 75.0,
@@ -252,16 +262,6 @@
       "drm": 0,
       "verified_rate": 100.0
     },
-    "2.rtmp.org": {
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
     "54.36.110.140": {
       "score": 75.0,
       "samples": 1,
@@ -273,16 +273,6 @@
       "verified_rate": 100.0
     },
     "5a3ed7a72ed4b.streamlock.net": {
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    "603c568fccdf5.streamlock.net": {
       "score": 75.0,
       "samples": 1,
       "verified": 1,
@@ -812,6 +802,16 @@
       "drm": 0,
       "verified_rate": 100.0
     },
+    "tv-trtcocuk.medya.trt.com.tr": {
+      "score": 75.0,
+      "samples": 1,
+      "verified": 1,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 100.0
+    },
     "tv-trtdiyanetcocuk.medya.trt.com.tr": {
       "score": 75.0,
       "samples": 1,
@@ -882,27 +882,7 @@
       "drm": 0,
       "verified_rate": 100.0
     },
-    "vhxyrsly.rocketcdn.com": {
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
     "win29.yayin.com.tr": {
-      "score": 75.0,
-      "samples": 1,
-      "verified": 1,
-      "restricted": 0,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 100.0
-    },
-    "yayin30.haber100.com": {
       "score": 75.0,
       "samples": 1,
       "verified": 1,
@@ -942,15 +922,15 @@
       "drm": 0,
       "verified_rate": 66.67
     },
-    "edge.taksimbilisim.com": {
-      "score": 68.75,
-      "samples": 3,
-      "verified": 2,
+    "vhxyrsly.rocketcdn.com": {
+      "score": 67.86,
+      "samples": 2,
+      "verified": 1,
       "restricted": 0,
-      "unknown": 0,
-      "dead": 1,
+      "unknown": 1,
+      "dead": 0,
       "drm": 0,
-      "verified_rate": 66.67
+      "verified_rate": 50.0
     },
     "1nyaler.streamhostingcdn.top": {
       "score": 67.5,
@@ -1053,16 +1033,6 @@
       "verified_rate": 0.0
     },
     "tv-trtbelgesel.medya.trt.com.tr": {
-      "score": 67.5,
-      "samples": 1,
-      "verified": 0,
-      "restricted": 1,
-      "unknown": 0,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 0.0
-    },
-    "tv-trtcocuk.medya.trt.com.tr": {
       "score": 67.5,
       "samples": 1,
       "verified": 0,
@@ -1182,12 +1152,32 @@
       "drm": 0,
       "verified_rate": 0.0
     },
+    "raw.githubusercontent.com": {
+      "score": 63.12,
+      "samples": 3,
+      "verified": 1,
+      "restricted": 1,
+      "unknown": 0,
+      "dead": 1,
+      "drm": 0,
+      "verified_rate": 33.33
+    },
     "saran-live.ercdn.net": {
       "score": 62.5,
       "samples": 5,
       "verified": 0,
       "restricted": 5,
       "unknown": 0,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 0.0
+    },
+    "1.rtmp.org": {
+      "score": 62.5,
+      "samples": 1,
+      "verified": 0,
+      "restricted": 0,
+      "unknown": 1,
       "dead": 0,
       "drm": 0,
       "verified_rate": 0.0
@@ -1283,6 +1273,16 @@
       "verified_rate": 0.0
     },
     "5be5d840359c6.streamlock.net": {
+      "score": 62.5,
+      "samples": 1,
+      "verified": 0,
+      "restricted": 0,
+      "unknown": 1,
+      "dead": 0,
+      "drm": 0,
+      "verified_rate": 0.0
+    },
+    "603c568fccdf5.streamlock.net": {
       "score": 62.5,
       "samples": 1,
       "verified": 0,
@@ -1413,16 +1413,6 @@
       "verified_rate": 0.0
     },
     "embedlp.becdn.net": {
-      "score": 62.5,
-      "samples": 1,
-      "verified": 0,
-      "restricted": 0,
-      "unknown": 1,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 0.0
-    },
-    "filbox-to-m3u8.onrender.com": {
       "score": 62.5,
       "samples": 1,
       "verified": 0,
@@ -1752,6 +1742,16 @@
       "drm": 0,
       "verified_rate": 0.0
     },
+    "2.rtmp.org": {
+      "score": 58.33,
+      "samples": 1,
+      "verified": 0,
+      "restricted": 0,
+      "unknown": 0,
+      "dead": 1,
+      "drm": 0,
+      "verified_rate": 0.0
+    },
     "gzttv-live.lg.mncdn.com": {
       "score": 58.33,
       "samples": 1,
@@ -1782,11 +1782,11 @@
       "drm": 0,
       "verified_rate": 0.0
     },
-    "raw.githubusercontent.com": {
-      "score": 57.86,
-      "samples": 2,
+    "yayin30.haber100.com": {
+      "score": 58.33,
+      "samples": 1,
       "verified": 0,
-      "restricted": 1,
+      "restricted": 0,
       "unknown": 0,
       "dead": 1,
       "drm": 0,
@@ -1813,16 +1813,6 @@
       "verified_rate": 0.0
     },
     "cdn-cekmekoybeltv.yayin.com.tr": {
-      "score": 57.14,
-      "samples": 2,
-      "verified": 0,
-      "restricted": 0,
-      "unknown": 2,
-      "dead": 0,
-      "drm": 0,
-      "verified_rate": 0.0
-    },
-    "helga.iptv2022.com": {
       "score": 57.14,
       "samples": 2,
       "verified": 0,

@@ -1,11 +1,19 @@
 {
-  "updated_at_utc": "2026-11-13T09:44:01.407448+00:00",
-  "count": 47,
+  "updated_at_utc": "2026-11-14T09:08:09.209659+00:00",
+  "count": 48,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
       "tvg_id": "AlRafidainTV.tr@SD",
       "url": "https://arrafidain.tvplayer.online/arrafidaintv/source/playlist.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
+      "name": "beIN Sports 1 Turk",
+      "tvg_id": "beINSports1Turk.tr@SD",
+      "url": "http://57.129.0.61:1990/stream/117/index.m3u8",
       "source_kind": "iptv_org",
       "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
       "reason": "uncatalogued-tr-identity"
@@ -312,7 +320,7 @@
       "url": "https://ceokzokgtd.erbvr.com/tabiitv/tabiitv.m3u8",
       "source_repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
       "source_path": "kanallar.m3u",
-      "source_updated": "2026-11-12T12:26:17Z",
+      "source_updated": "2026-11-13T12:00:58Z",
       "reason": "uncatalogued-tr-identity"
     },
     {

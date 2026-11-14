@@ -1,13 +1,11 @@
 {
-  "updated_at_utc": "2026-11-13T09:43:48.231867+00:00",
+  "updated_at_utc": "2026-11-14T09:07:56.480625+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 148,
-  "missing_before_search": 92,
+  "channels_in_previous_tr": 145,
+  "missing_before_search": 95,
   "prior_validation_aware": true,
   "missing_names": [
-    "TRT 1",
     "TRT 4K",
-    "Show TV",
     "TV8",
     "Kanal 7",
     "TRT 2",
@@ -16,7 +14,9 @@
     "TurkHaber TV",
     "Sözcü TV",
     "A News",
+    "DHA",
     "DİM TV",
+    "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
     "TRT Spor",
@@ -29,6 +29,7 @@
     "GEM Pixel",
     "Disney Junior",
     "BabyTV",
+    "TRT Çocuk",
     "TRT Genc",
     "TRT Belgesel",
     "National Geographic",
@@ -43,6 +44,7 @@
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
+    "Number1 Türk TV",
     "Ada TV",
     "MyZen TV",
     "West Azerbaijan TV",
@@ -59,7 +61,6 @@
     "ATV Avrupa",
     "Icel TV",
     "Kanal 1",
-    "Meltem TV",
     "Kanal 32",
     "Kanal Hayat",
     "Line TV",
@@ -68,6 +69,7 @@
     "Öncü TV",
     "TV 1",
     "TV 52",
+    "Aras TV",
     "TELE1",
     "KRT TV",
     "GZT",
@@ -84,6 +86,7 @@
     "TRT EBA Lise",
     "Üniversite TV",
     "Woman TV",
+    "Number 1 Türk",
     "Milyon TV",
     "ON Medya Haber",
     "A Türk Izmir",
@@ -103,19 +106,7 @@
   "search_batches": [],
   "target_report": [
     {
-      "name": "TRT 1",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "TRT 4K",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Show TV",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
@@ -169,8 +160,20 @@
       "candidates": 0
     },
     {
+      "name": "DHA",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "DİM TV",
       "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Finans Turk TV",
+      "category": "Haber",
       "files_matched": 0,
       "candidates": 0
     },
@@ -242,6 +245,12 @@
     },
     {
       "name": "BabyTV",
+      "category": "Çocuk",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TRT Çocuk",
       "category": "Çocuk",
       "files_matched": 0,
       "candidates": 0
@@ -326,6 +335,12 @@
     },
     {
       "name": "Number1 Rap TV",
+      "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Number1 Türk TV",
       "category": "Müzik",
       "files_matched": 0,
       "candidates": 0
@@ -427,12 +442,6 @@
       "candidates": 0
     },
     {
-      "name": "Meltem TV",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Kanal 32",
       "category": "Yerel",
       "files_matched": 0,
@@ -476,6 +485,12 @@
     },
     {
       "name": "TV 52",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Aras TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -573,6 +588,12 @@
     {
       "name": "Woman TV",
       "category": "Belgesel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Number 1 Türk",
+      "category": "Müzik",
       "files_matched": 0,
       "candidates": 0
     },
