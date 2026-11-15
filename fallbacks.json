@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-11-14T09:10:12.185247+00:00",
-  "count": 45,
+  "updated_at_utc": "2026-11-15T09:39:11.179598+00:00",
+  "count": 47,
   "channels": {
     "24tv": {
       "channel_key": "24tv",
@@ -17,7 +17,7 @@
       "channel_key": "ahaber",
       "name": "A Haber",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=rdjI9ILvXAPPYPa35CgxZA&e=1794692016",
+      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=9kVMKjQrs1HDYWOsGBMz1Q&e=1794780193",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -28,7 +28,7 @@
       "channel_key": "apara",
       "name": "A Para",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/apara/apara.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=xwzMd8jWBwpXXVyQ07lVFQ&e=1794692020",
+      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=XE6VcrclTn5yw8wEQHR2ig&e=1794780198",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -39,7 +39,7 @@
       "channel_key": "aspor",
       "name": "A Spor",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
-      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=aVhPiL3V7CovvvnYmgZKNQ&e=1794692018",
+      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=qS3p-j3cKEKXk9-ETD5Tgw&e=1794780196",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -127,7 +127,7 @@
       "channel_key": "ekoturk",
       "name": "EKOTÜRK",
       "primary_url": "https://cdn.ekoturk.net/hls/master.m3u8",
-      "fallback_url": "https://cdn.ekoturk.net/hls/720p.m3u8",
+      "fallback_url": "https://cdn.ekoturk.net/hls/320p.m3u8",
       "fallback_status": "verified",
       "fallback_source_kind": "official_browser",
       "fallback_source_name": "browser_discovered.m3u",
@@ -211,6 +211,17 @@
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
+    "lifetv": {
+      "channel_key": "lifetv",
+      "name": "Life TV",
+      "primary_url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
+      "fallback_url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/chunks.m3u8",
+      "fallback_status": "verified",
+      "fallback_source_kind": "github_discovery",
+      "fallback_source_name": "discovered.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
+    },
     "lovenature": {
       "channel_key": "lovenature",
       "name": "Love Nature",
@@ -227,6 +238,17 @@
       "name": "MC TV",
       "primary_url": "https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&output=playlist.m3u8&protocol=https&service=wowza&type=live",
       "fallback_url": "https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&type=live&service=wowza&protocol=https&output=playlist.m3u8",
+      "fallback_status": "verified",
+      "fallback_source_kind": "github_discovery",
+      "fallback_source_name": "discovered.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
+    },
+    "meltemtv": {
+      "channel_key": "meltemtv",
+      "name": "Meltem TV",
+      "primary_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
+      "fallback_url": "https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8",
       "fallback_status": "verified",
       "fallback_source_kind": "github_discovery",
       "fallback_source_name": "discovered.m3u",
@@ -260,17 +282,6 @@
       "name": "Minika GO",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
       "fallback_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "upstream",
-      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
-      "fallback_user_agent": null,
-      "fallback_referrer": null
-    },
-    "nowtv": {
-      "channel_key": "nowtv",
-      "name": "NOW TV",
-      "primary_url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv_720p.m3u8",
-      "fallback_url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
       "fallback_status": "verified",
       "fallback_source_kind": "upstream",
       "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
@@ -373,6 +384,17 @@
       "fallback_status": "verified",
       "fallback_source_kind": "upstream",
       "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
+      "fallback_user_agent": null,
+      "fallback_referrer": null
+    },
+    "semerkandtv": {
+      "channel_key": "semerkandtv",
+      "name": "Semerkand TV",
+      "primary_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
+      "fallback_url": "http://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
+      "fallback_status": "verified",
+      "fallback_source_kind": "github_discovery",
+      "fallback_source_name": "discovered.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },

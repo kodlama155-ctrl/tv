@@ -1,8 +1,8 @@
 {
-  "updated_at_utc": "2026-11-14T09:07:56.480625+00:00",
+  "updated_at_utc": "2026-11-15T09:37:09.783456+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 145,
-  "missing_before_search": 95,
+  "channels_in_previous_tr": 143,
+  "missing_before_search": 97,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
@@ -12,13 +12,14 @@
     "TYT Türk",
     "AKİT TV",
     "TurkHaber TV",
-    "Sözcü TV",
     "A News",
     "DHA",
     "DİM TV",
     "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
+    "Life TV",
+    "OlayTurk TV",
     "TRT Spor",
     "TRT Spor Yıldız",
     "FB TV",
@@ -29,7 +30,6 @@
     "GEM Pixel",
     "Disney Junior",
     "BabyTV",
-    "TRT Çocuk",
     "TRT Genc",
     "TRT Belgesel",
     "National Geographic",
@@ -52,13 +52,15 @@
     "Kanal 33",
     "Afroturk TV",
     "Altas TV",
-    "Bir TV",
     "Cay TV",
+    "Deniz Postasi TV",
     "Edessa TV",
+    "ETV Kayseri",
     "ETV Manisa",
     "Euro Star",
     "TGRT EU",
     "ATV Avrupa",
+    "Hunat TV",
     "Icel TV",
     "Kanal 1",
     "Kanal 32",
@@ -103,7 +105,23 @@
   ],
   "batch_size": 8,
   "search_delay_seconds": 3,
-  "search_batches": [],
+  "search_batches": [
+    {
+      "names": [
+        "TRT 4K",
+        "TV8",
+        "Kanal 7",
+        "TRT 2",
+        "TYT Türk",
+        "AKİT TV",
+        "TurkHaber TV",
+        "A News"
+      ],
+      "query": "\"TRT 4K\" OR \"TV8\" OR \"Kanal 7\" OR \"TRT 2\" OR \"TYT Türk\" OR \"AKİT TV\" OR \"TurkHaber TV\" OR \"A News\" extension:m3u",
+      "search_results": 0,
+      "fallback_individual": false
+    }
+  ],
   "target_report": [
     {
       "name": "TRT 4K",
@@ -148,12 +166,6 @@
       "candidates": 0
     },
     {
-      "name": "Sözcü TV",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "A News",
       "category": "Haber",
       "files_matched": 0,
@@ -186,6 +198,18 @@
     {
       "name": "Kudüs TV",
       "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Life TV",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "OlayTurk TV",
+      "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
     },
@@ -245,12 +269,6 @@
     },
     {
       "name": "BabyTV",
-      "category": "Çocuk",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "TRT Çocuk",
       "category": "Çocuk",
       "files_matched": 0,
       "candidates": 0
@@ -388,19 +406,25 @@
       "candidates": 0
     },
     {
-      "name": "Bir TV",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Cay TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
     },
     {
+      "name": "Deniz Postasi TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Edessa TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "ETV Kayseri",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -426,6 +450,12 @@
     {
       "name": "ATV Avrupa",
       "category": "Uluslararası",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Hunat TV",
+      "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
     },

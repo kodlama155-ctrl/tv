@@ -1,22 +1,22 @@
 {
-  "updated_at_utc": "2026-11-14T09:00:53.685014+00:00",
+  "updated_at_utc": "2026-11-15T09:30:29.313881+00:00",
   "fallback_targets": 19,
   "pages_scanned": 19,
   "pages_with_candidates": 4,
-  "raw_candidates": 13,
-  "accepted_unique_candidates": 12,
+  "raw_candidates": 15,
+  "accepted_unique_candidates": 14,
   "probe_statuses": {
-    "restricted": 6,
+    "restricted": 7,
     "dead": 1,
-    "verified": 6
+    "verified": 7
   },
   "sources": [
     {
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "network_events": 2,
-      "response_bodies_scanned": 1507,
+      "network_events": 3,
+      "response_bodies_scanned": 341,
       "candidates": [
         {
           "url": "https://trkvz.daioncdn.net/a2tv/a2tv.m3u8?ce=3&app=59363a60-be96-4f73-9eff-355d0ff2c758",
@@ -29,6 +29,12 @@
           "referer": "https://www.atv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "script-body"
+        },
+        {
+          "url": "https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8",
+          "referer": "https://www.atv.com.tr/",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "fetch-body"
         }
       ]
     },
@@ -37,7 +43,7 @@
       "page": "https://www.akittv.com.tr/canli-izle",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 72,
+      "response_bodies_scanned": 71,
       "candidates": []
     },
     {
@@ -53,15 +59,15 @@
       "page": "https://www.dreamtv.com.tr/",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 25,
+      "response_bodies_scanned": 26,
       "candidates": []
     },
     {
       "name": "EKOTÜRK",
       "page": "https://www.ekoturk.com/canli-yayin/",
       "status": "ok",
-      "network_events": 21,
-      "response_bodies_scanned": 38,
+      "network_events": 24,
+      "response_bodies_scanned": 41,
       "candidates": [
         {
           "url": "https://cdn.ekoturk.net/hls/master.m3u8",
@@ -71,6 +77,12 @@
         },
         {
           "url": "https://cdn.ekoturk.net/hls/240p.m3u8",
+          "referer": "https://cdn.ekoturk.net/2.html?embed=1",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "via": "request"
+        },
+        {
+          "url": "https://cdn.ekoturk.net/hls/320p.m3u8",
           "referer": "https://cdn.ekoturk.net/2.html?embed=1",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
@@ -143,7 +155,7 @@
           "via": "script-body"
         },
         {
-          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8x2su0hgh6ff&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
+          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8x6fw4bbdpfu&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3",
           "referer": "https://www.startv.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
@@ -155,7 +167,7 @@
       "page": "https://www.sozcu.com.tr/sozcu-tv-canli-yayin-wp7630113",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 363,
+      "response_bodies_scanned": 368,
       "candidates": []
     },
     {
@@ -163,7 +175,7 @@
       "page": "https://www.tele1.com.tr/canli-yayin",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 190,
+      "response_bodies_scanned": 197,
       "candidates": []
     },
     {
@@ -179,7 +191,7 @@
       "page": "https://www.trtspor.com.tr/canli-yayin-izle/trt-3-spor",
       "status": "ok",
       "network_events": 0,
-      "response_bodies_scanned": 147,
+      "response_bodies_scanned": 132,
       "candidates": []
     },
     {
@@ -204,25 +216,25 @@
           "via": "script-body"
         },
         {
-          "url": "https://tv8.daioncdn.net/tv8/tv8_1080p.m3u8?&sid=8x2t053vlo51&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
+          "url": "https://tv8.daioncdn.net/tv8/tv8_1080p.m3u8?&sid=8x6g276lxvn2&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
           "referer": "https://www.tv8.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
         },
         {
-          "url": "https://tv8.daioncdn.net/tv8/tv8_720p.m3u8?&sid=8x2t053vlo51&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
+          "url": "https://tv8.daioncdn.net/tv8/tv8_720p.m3u8?&sid=8x6g276lxvn2&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
           "referer": "https://www.tv8.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
         },
         {
-          "url": "https://tv8.daioncdn.net/tv8/tv8_480p.m3u8?&sid=8x2t053vlo51&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
+          "url": "https://tv8.daioncdn.net/tv8/tv8_480p.m3u8?&sid=8x6g276lxvn2&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
           "referer": "https://www.tv8.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
         },
         {
-          "url": "https://tv8.daioncdn.net/tv8/tv8_360p.m3u8?&sid=8x2t053vlo51&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
+          "url": "https://tv8.daioncdn.net/tv8/tv8_360p.m3u8?&sid=8x6g276lxvn2&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
           "referer": "https://www.tv8.com.tr/",
           "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "via": "request"
