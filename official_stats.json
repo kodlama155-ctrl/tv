@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-15T09:29:27.800172+00:00",
+  "updated_at_utc": "2026-11-16T09:48:46.644356+00:00",
   "official_pages": 38,
   "pages_ok": 34,
   "pages_with_candidates": 13,
@@ -7,8 +7,8 @@
   "accepted_unique_candidates": 16,
   "probe_statuses": {
     "restricted": 6,
-    "verified": 7,
-    "unknown": 3
+    "verified": 6,
+    "unknown": 4
   },
   "sources": [
     {
@@ -55,7 +55,7 @@
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.atv.com.tr/a2tv/canli-yayin",
+      "page_final_url": "https://www.atv.com.tr/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=NGNQMlpZN3UwWWowMTlaYkZ3Y3ZzeEdud3NPL2JzbHAyaWh6a0c3UGVCWT0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=V2FMa3BxM0hleUhhMFhHTEQxbXpLWDV4ajA3Z041WGJNNlgrSDdpSVZjST0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -306,7 +306,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=VmhhZkFsazZyaWhiMzJxVWZJN1hnTUFUWERaOFp3UmFaS2RYeHBRREE0MD0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=djYzWUpNTG9UNGNsc2ZIbXZnYUF5OVA0dWFPYVVNT1dUYnlXQXd6VDVXbz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -406,7 +406,7 @@
       "status": "ok",
       "page_final_url": "https://www.yabantv.com/broadcast/",
       "page_candidates": 0,
-      "aux_scanned": 0,
+      "aux_scanned": 2,
       "candidates": [],
       "identity_rejected_candidates": 0
     },

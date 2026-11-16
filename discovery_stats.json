@@ -1,44 +1,44 @@
 {
-  "updated_at_utc": "2026-11-15T09:36:56.731285+00:00",
+  "updated_at_utc": "2026-11-16T09:56:38.489167+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-11-01T09:36:56.731285+00:00",
+  "cutoff_utc": "2026-11-02T09:56:38.489167+00:00",
   "repos_per_query": 50,
   "queries": [
     {
       "query": "turkish iptv",
-      "github_query": "turkish iptv pushed:>=2026-11-01",
-      "repos_returned": 12
+      "github_query": "turkish iptv pushed:>=2026-11-02",
+      "repos_returned": 11
     },
     {
       "query": "iptv turkey m3u",
-      "github_query": "iptv turkey m3u pushed:>=2026-11-01",
-      "repos_returned": 4
+      "github_query": "iptv turkey m3u pushed:>=2026-11-02",
+      "repos_returned": 3
     },
     {
       "query": "turkiye iptv m3u",
-      "github_query": "turkiye iptv m3u pushed:>=2026-11-01",
+      "github_query": "turkiye iptv m3u pushed:>=2026-11-02",
       "repos_returned": 3
     },
     {
       "query": "turkish iptv playlist",
-      "github_query": "turkish iptv playlist pushed:>=2026-11-01",
+      "github_query": "turkish iptv playlist pushed:>=2026-11-02",
       "repos_returned": 8
     },
     {
       "query": "turkiye canli tv m3u",
-      "github_query": "turkiye canli tv m3u pushed:>=2026-11-01",
+      "github_query": "turkiye canli tv m3u pushed:>=2026-11-02",
       "repos_returned": 1
     }
   ],
-  "repos_scanned": 14,
+  "repos_scanned": 13,
   "stale_repos_skipped": 0,
-  "playlist_file_candidates": 19,
-  "fresh_files_scanned": 18,
+  "playlist_file_candidates": 20,
+  "fresh_files_scanned": 19,
   "stale_files_skipped": 1,
-  "unique_m3u8_candidates": 228,
+  "unique_m3u8_candidates": 239,
   "review_candidates": 7,
   "discovery_rejections": {
-    "uncatalogued": 660,
+    "uncatalogued": 661,
     "vod-or-event-like": 6,
     "noisy-provider": 61
   },
@@ -47,14 +47,44 @@
     {
       "repo": "K3rimoff/IPTV",
       "path": "Aze.m3u",
-      "last_commit": "2026-11-15T05:06:46Z",
+      "last_commit": "2026-11-16T05:03:28Z",
       "entries_found": 0
+    },
+    {
+      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
+      "path": "kanallar.m3u",
+      "last_commit": "2026-11-15T11:52:03Z",
+      "entries_found": 431
+    },
+    {
+      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
+      "path": "kanallar.m3u8",
+      "last_commit": "2026-11-15T11:52:03Z",
+      "entries_found": 431
     },
     {
       "repo": "alpayaydemir-ui/tv-kanal-listesi",
       "path": "turkiye-ucretsiz.m3u",
-      "last_commit": "2026-11-14T19:08:33Z",
-      "entries_found": 136
+      "last_commit": "2026-11-15T11:50:56Z",
+      "entries_found": 145
+    },
+    {
+      "repo": "alpayaydemir-ui/tv-kanal-listesi",
+      "path": "ek-kanallar.m3u",
+      "last_commit": "2026-11-15T11:44:32Z",
+      "entries_found": 11
+    },
+    {
+      "repo": "FeridunN12/ibo-iptv-playlist",
+      "path": "combined.m3u",
+      "last_commit": "2026-11-15T10:14:33Z",
+      "entries_found": 132
+    },
+    {
+      "repo": "FeridunN12/ibo-iptv-playlist",
+      "path": "docs/combined.m3u",
+      "last_commit": "2026-11-15T10:14:33Z",
+      "entries_found": 132
     },
     {
       "repo": "macukadam/iptv",
@@ -85,30 +115,6 @@
       "path": "kids.m3u",
       "last_commit": "2026-11-14T12:56:38Z",
       "entries_found": 52
-    },
-    {
-      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
-      "path": "kanallar.m3u",
-      "last_commit": "2026-11-14T11:19:48Z",
-      "entries_found": 427
-    },
-    {
-      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
-      "path": "kanallar.m3u8",
-      "last_commit": "2026-11-14T11:19:48Z",
-      "entries_found": 427
-    },
-    {
-      "repo": "FeridunN12/ibo-iptv-playlist",
-      "path": "combined.m3u",
-      "last_commit": "2026-11-14T09:41:13Z",
-      "entries_found": 118
-    },
-    {
-      "repo": "FeridunN12/ibo-iptv-playlist",
-      "path": "docs/combined.m3u",
-      "last_commit": "2026-11-14T09:41:13Z",
-      "entries_found": 118
     },
     {
       "repo": "YananHelena/iptvson",
