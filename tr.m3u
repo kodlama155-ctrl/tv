@@ -120,8 +120,6 @@ https://raw.githubusercontent.com/yaskar661-lgtm/stream/refs/heads/main/filbox/s
 https://mtulqxgomrllive.mediatriple.net/mtulqxgomrllive/broadcast_59f9c0c785b88.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AlmahriahTV.tr@SD" tvg-logo="https://i.imgur.com/GgEeTNr.png" group-title="Haber",Almahriah TV
 https://starmenajo.com/hls/almahriah/index.m3u8
-#EXTINF:-1 tvg-id="BirTV.tr@SD" tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="Haber",Bir TV
-https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber" tvg-logo="https://i.imgur.com/bUsbxTQ.png",Kanal B
 https://tv.kanalb.tr/hls/kanalb/index.m3u8
 #EXTINF:-1 group-title="Haber" tvg-logo="https://i.imgur.com/5B42KwY.png",LİDER HABER TV
