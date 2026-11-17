@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-11-16T09:48:46.644356+00:00",
+  "updated_at_utc": "2026-11-17T10:46:16.340040+00:00",
   "official_pages": 38,
   "pages_ok": 34,
-  "pages_with_candidates": 13,
-  "raw_candidates": 16,
-  "accepted_unique_candidates": 16,
+  "pages_with_candidates": 14,
+  "raw_candidates": 17,
+  "accepted_unique_candidates": 17,
   "probe_statuses": {
     "restricted": 6,
-    "verified": 6,
+    "verified": 7,
     "unknown": 4
   },
   "sources": [
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=V2FMa3BxM0hleUhhMFhHTEQxbXpLWDV4ajA3Z041WGJNNlgrSDdpSVZjST0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=bW9Sc0JERjQvcXBWTG84d3VKYjVGdS8zeEphelA0MnBlZ09zYjZuUHp2OD0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -306,7 +306,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=djYzWUpNTG9UNGNsc2ZIbXZnYUF5OVA0dWFPYVVNT1dUYnlXQXd6VDVXbz0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=WjNWVWNBQm1EclBBOGhtekhibm5aOGVaMGpaRXVocHNMOGFWOXlnK2ZRcz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -358,10 +358,12 @@
       "name": "TV8",
       "page": "https://www.tv8.com.tr/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.tv8.com.tr/",
-      "page_candidates": 0,
+      "page_final_url": "https://www.tv8.com.tr/canli-yayin",
+      "page_candidates": 1,
       "aux_scanned": 2,
-      "candidates": [],
+      "candidates": [
+        "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3"
+      ],
       "identity_rejected_candidates": 0
     },
     {
