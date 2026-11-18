@@ -1,12 +1,11 @@
 {
-  "updated_at_utc": "2026-11-17T10:54:16.599470+00:00",
+  "updated_at_utc": "2026-11-18T10:25:24.061272+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 149,
-  "missing_before_search": 91,
+  "channels_in_previous_tr": 153,
+  "missing_before_search": 87,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
-    "TV8",
     "Kanal 7",
     "TRT 2",
     "TYT Türk",
@@ -14,8 +13,6 @@
     "TurkHaber TV",
     "A News",
     "DHA",
-    "DİM TV",
-    "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
     "TRT Spor",
@@ -62,7 +59,6 @@
     "Kanal 32",
     "Kanal Hayat",
     "Line TV",
-    "Luys TV",
     "MTurk TV",
     "Natural TV",
     "Öncü TV",
@@ -108,12 +104,6 @@
       "candidates": 0
     },
     {
-      "name": "TV8",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Kanal 7",
       "category": "Ulusal",
       "files_matched": 0,
@@ -151,18 +141,6 @@
     },
     {
       "name": "DHA",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "DİM TV",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Finans Turk TV",
       "category": "Haber",
       "files_matched": 0,
       "candidates": 0
@@ -440,12 +418,6 @@
     {
       "name": "Line TV",
       "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Luys TV",
-      "category": "Uluslararası",
       "files_matched": 0,
       "candidates": 0
     },
