@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-11-18T10:27:20.487087+00:00",
-  "count": 49,
+  "updated_at_utc": "2026-11-19T10:38:14.514238+00:00",
+  "count": 48,
   "channels": {
     "24tv": {
       "channel_key": "24tv",
@@ -17,7 +17,7 @@
       "channel_key": "ahaber",
       "name": "A Haber",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=04YNwn4SnHV1Vl-_cC_xdQ&e=1795042037",
+      "fallback_url": "https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8?st=7idF6eY9IbBH3LmA5DODJQ&e=1795129116",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -28,7 +28,7 @@
       "channel_key": "apara",
       "name": "A Para",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/apara/apara.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=JyQidgKkWtEKECA71Ht6CQ&e=1795042041",
+      "fallback_url": "https://trkvz-live.ercdn.net/aparahd/aparahd.m3u8?st=hWD3QbS9o6Y5VqGaqnRpxw&e=1795129122",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -50,7 +50,7 @@
       "channel_key": "aspor",
       "name": "A Spor",
       "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
-      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=x2miyrLCBVt4uD4dIkEc7Q&e=1795042039",
+      "fallback_url": "https://trkvz.daioncdn.net/aspor/aspor.m3u8?ce=3&app=45f847c4-04e8-419a-a561-2ebf87084765&st=_BqN3UD77_nSIwT71AlTkA&e=1795129118",
       "fallback_status": "verified",
       "fallback_source_kind": "official_api",
       "fallback_source_name": "turkuvaz_discovered.m3u",
@@ -60,22 +60,11 @@
     "atv": {
       "channel_key": "atv",
       "name": "ATV",
-      "primary_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
-      "fallback_url": "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=wFZKTGYy9s3MfKwcshfugg&e=1795042032",
+      "primary_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
+      "fallback_url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
       "fallback_status": "verified",
-      "fallback_source_kind": "official_api",
-      "fallback_source_name": "turkuvaz_discovered.m3u",
-      "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      "fallback_referrer": "https://www.atv.com.tr/canli-yayin"
-    },
-    "atvalanya": {
-      "channel_key": "atvalanya",
-      "name": "ATV Alanya",
-      "primary_url": "https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8",
-      "fallback_url": "https://helga.iptv2022.com/sh/AlanyaTV/tracks-v1a1/mono.m3u8",
-      "fallback_status": "verified",
-      "fallback_source_kind": "github_discovery",
-      "fallback_source_name": "discovered.m3u",
+      "fallback_source_kind": "upstream",
+      "fallback_source_name": "https://raw.githubusercontent.com/omerdenizhan/IPTV-M3U/refs/heads/main/m3u/turkiye-iptv-org.m3u",
       "fallback_user_agent": null,
       "fallback_referrer": null
     },
@@ -423,8 +412,8 @@
     "showtv": {
       "channel_key": "showtv",
       "name": "Show TV",
-      "primary_url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?app=showtv_web",
-      "fallback_url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558#all",
+      "primary_url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558",
+      "fallback_url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?app=showtv_web",
       "fallback_status": "verified",
       "fallback_source_kind": "github_discovery",
       "fallback_source_name": "discovered.m3u",

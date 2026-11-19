@@ -1,11 +1,13 @@
 {
-  "updated_at_utc": "2026-11-18T10:25:24.061272+00:00",
+  "updated_at_utc": "2026-11-19T10:36:16.948860+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 153,
-  "missing_before_search": 87,
+  "channels_in_previous_tr": 145,
+  "missing_before_search": 95,
   "prior_validation_aware": true,
   "missing_names": [
+    "TRT 1",
     "TRT 4K",
+    "TV8",
     "Kanal 7",
     "TRT 2",
     "TYT Türk",
@@ -13,6 +15,7 @@
     "TurkHaber TV",
     "A News",
     "DHA",
+    "Finans Turk TV",
     "Guneydogu TV",
     "Kudüs TV",
     "TRT Spor",
@@ -40,6 +43,7 @@
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
+    "Number1 Türk TV",
     "Ada TV",
     "MyZen TV",
     "West Azerbaijan TV",
@@ -50,10 +54,12 @@
     "Bir TV",
     "Cay TV",
     "Edessa TV",
+    "ETV Kayseri",
     "ETV Manisa",
     "Euro Star",
     "TGRT EU",
     "ATV Avrupa",
+    "Hunat TV",
     "Icel TV",
     "Kanal 1",
     "Kanal 32",
@@ -64,6 +70,7 @@
     "Öncü TV",
     "TV 1",
     "TV 52",
+    "Aras TV",
     "TELE1",
     "GZT",
     "S Sport",
@@ -79,6 +86,7 @@
     "TRT EBA Lise",
     "Üniversite TV",
     "Woman TV",
+    "Number 1 Türk",
     "Milyon TV",
     "ON Medya Haber",
     "A Türk Izmir",
@@ -98,7 +106,19 @@
   "search_batches": [],
   "target_report": [
     {
+      "name": "TRT 1",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "TRT 4K",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "TV8",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
@@ -141,6 +161,12 @@
     },
     {
       "name": "DHA",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Finans Turk TV",
       "category": "Haber",
       "files_matched": 0,
       "candidates": 0
@@ -308,6 +334,12 @@
       "candidates": 0
     },
     {
+      "name": "Number1 Türk TV",
+      "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Ada TV",
       "category": "Uluslararası",
       "files_matched": 0,
@@ -368,6 +400,12 @@
       "candidates": 0
     },
     {
+      "name": "ETV Kayseri",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "ETV Manisa",
       "category": "Yerel",
       "files_matched": 0,
@@ -388,6 +426,12 @@
     {
       "name": "ATV Avrupa",
       "category": "Uluslararası",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Hunat TV",
+      "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
     },
@@ -447,6 +491,12 @@
     },
     {
       "name": "TV 52",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Aras TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -538,6 +588,12 @@
     {
       "name": "Woman TV",
       "category": "Belgesel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Number 1 Türk",
+      "category": "Müzik",
       "files_matched": 0,
       "candidates": 0
     },

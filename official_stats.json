@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-11-18T10:13:36.496396+00:00",
+  "updated_at_utc": "2026-11-19T10:24:50.322571+00:00",
   "official_pages": 38,
-  "pages_ok": 32,
+  "pages_ok": 33,
   "pages_with_candidates": 13,
   "raw_candidates": 16,
   "accepted_unique_candidates": 16,
   "probe_statuses": {
+    "restricted": 6,
     "verified": 6,
-    "restricted": 7,
-    "unknown": 3
+    "unknown": 4
   },
   "sources": [
     {
@@ -55,7 +55,7 @@
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.atv.com.tr/a2tv/canli-yayin",
+      "page_final_url": "https://www.atv.com.tr/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=Zmo3SDdxQU1xOVZqWWhjRkhyM0ZxR0xvNnZoOHBPbVlldWJWdkN5WU01ND0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=NVZ0aVlaOU1FV09IQkVoUHpwdS9DWk52bitCSHkydDRGT1dYKy9DMlNGcz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -180,12 +180,12 @@
     {
       "name": "Habitat TV",
       "page": "https://www.habitattv.com.tr/home.php",
-      "status": "page_error",
-      "page_final_url": null,
+      "status": "ok",
+      "page_final_url": "https://www.habitattv.com.tr/home.php",
       "page_candidates": 0,
-      "aux_scanned": 0,
+      "aux_scanned": 2,
       "candidates": [],
-      "error": "HTTPError"
+      "identity_rejected_candidates": 0
     },
     {
       "name": "KRT TV",
@@ -227,12 +227,14 @@
     {
       "name": "Meltem TV",
       "page": "https://www.meltemtv.com.tr/canli-yayin",
-      "status": "page_error",
-      "page_final_url": null,
-      "page_candidates": 0,
-      "aux_scanned": 0,
-      "candidates": [],
-      "error": "HTTPError"
+      "status": "ok",
+      "page_final_url": "https://www.meltemtv.com.tr/canli-yayin",
+      "page_candidates": 1,
+      "aux_scanned": 1,
+      "candidates": [
+        "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
+      ],
+      "identity_rejected_candidates": 0
     },
     {
       "name": "NOW TV",
@@ -249,11 +251,9 @@
       "page": "https://www.showtv.com.tr/canli-yayin",
       "status": "ok",
       "page_final_url": "https://www.showtv.com.tr/canli-yayin",
-      "page_candidates": 1,
+      "page_candidates": 0,
       "aux_scanned": 2,
-      "candidates": [
-        "https://ciner-live.ercdn.net/showtv/showtv.m3u8"
-      ],
+      "candidates": [],
       "identity_rejected_candidates": 0
     },
     {
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=NGNKeVhhMG04VmRWbCtKSi8yek5pc1FxdEl0bGNqejR0TGgzbmZ0b3hJOD0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=dUd3NG9mSHA1elFERU5tSC95S2hXRUVMMTNVOGFtam5DUnJaS3hocGFVbz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -413,12 +413,11 @@
     {
       "name": "beIN Sports Haber",
       "page": "https://beinsports.com.tr/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://beinsports.com.tr/canli-yayin",
+      "status": "page_too_large",
+      "page_final_url": null,
       "page_candidates": 0,
-      "aux_scanned": 2,
-      "candidates": [],
-      "identity_rejected_candidates": 0
+      "aux_scanned": 0,
+      "candidates": []
     }
   ]
 }
