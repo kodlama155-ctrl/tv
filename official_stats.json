@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-11-19T10:24:50.322571+00:00",
+  "updated_at_utc": "2026-11-20T10:03:52.100389+00:00",
   "official_pages": 38,
-  "pages_ok": 33,
+  "pages_ok": 34,
   "pages_with_candidates": 13,
   "raw_candidates": 16,
   "accepted_unique_candidates": 16,
   "probe_statuses": {
-    "restricted": 6,
-    "verified": 6,
-    "unknown": 4
+    "restricted": 5,
+    "verified": 8,
+    "unknown": 3
   },
   "sources": [
     {
@@ -55,7 +55,7 @@
       "name": "A2",
       "page": "https://www.atv.com.tr/a2tv/canli-yayin",
       "status": "ok",
-      "page_final_url": "https://www.atv.com.tr/canli-yayin",
+      "page_final_url": "https://www.atv.com.tr/a2tv/canli-yayin",
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=NVZ0aVlaOU1FV09IQkVoUHpwdS9DWk52bitCSHkydDRGT1dYKy9DMlNGcz0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=V2tWbWw1QlJJL0FoSVJHOGxWMHhCb1dTNFZ5VUxXeW1qN3hJWTJvOTBXRT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=dUd3NG9mSHA1elFERU5tSC95S2hXRUVMMTNVOGFtam5DUnJaS3hocGFVbz0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=eFhCNjMwWUhjeTVVdW5SbXdPVHB6M1BnTDlOUy8yT0hUQUNMdk84V0VVaz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -413,11 +413,12 @@
     {
       "name": "beIN Sports Haber",
       "page": "https://beinsports.com.tr/canli-yayin",
-      "status": "page_too_large",
-      "page_final_url": null,
+      "status": "ok",
+      "page_final_url": "https://beinsports.com.tr/canli-yayin",
       "page_candidates": 0,
-      "aux_scanned": 0,
-      "candidates": []
+      "aux_scanned": 2,
+      "candidates": [],
+      "identity_rejected_candidates": 0
     }
   ]
 }

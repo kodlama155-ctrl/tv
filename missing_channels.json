@@ -1,25 +1,24 @@
 {
   "standard": "Core Turkish TV lineup tracked against current Türksat and major IPTV platform channel lineups",
   "core_channels_total": 70,
-  "core_channels_verified": 51,
-  "core_channels_geo_restricted": 6,
+  "core_channels_verified": 53,
+  "core_channels_geo_restricted": 7,
   "core_channels_device_restricted": 4,
-  "core_channels_not_verified": 19,
+  "core_channels_not_verified": 17,
   "status_counts": {
-    "verified": 51,
-    "restricted": 2,
+    "verified": 53,
+    "geo-restricted": 7,
     "absent": 2,
-    "unknown": 5,
-    "geo-restricted": 6,
-    "device-restricted": 4
+    "device-restricted": 4,
+    "unknown": 4
   },
   "missing_channels": [
     {
-      "name": "TV8",
+      "name": "TRT 2",
       "expected_category": "Ulusal",
-      "status": "restricted",
-      "reason": "segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401; segment HTTP 401",
-      "candidate_url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3"
+      "status": "geo-restricted",
+      "reason": "manifest HTTP 403",
+      "candidate_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "FM TV",
@@ -34,13 +33,6 @@
       "status": "absent",
       "reason": "No candidate found in current sources",
       "candidate_url": ""
-    },
-    {
-      "name": "Tele1",
-      "expected_category": "Haber",
-      "status": "unknown",
-      "reason": "manifest URLError",
-      "candidate_url": "https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8"
     },
     {
       "name": "TRT Spor",
@@ -83,13 +75,6 @@
       "status": "geo-restricted",
       "reason": "manifest HTTP 401",
       "candidate_url": "https://saran-live.ercdn.net/fx/index.m3u8"
-    },
-    {
-      "name": "TRT Çocuk",
-      "expected_category": "Çocuk",
-      "status": "restricted",
-      "reason": "manifest HTTP 403",
-      "candidate_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8"
     },
     {
       "name": "BabyTV Türkiye",
