@@ -1,13 +1,11 @@
 {
-  "updated_at_utc": "2026-11-20T10:12:53.495957+00:00",
+  "updated_at_utc": "2026-11-21T10:00:17.282952+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 150,
-  "missing_before_search": 90,
+  "channels_in_previous_tr": 149,
+  "missing_before_search": 91,
   "prior_validation_aware": true,
   "missing_names": [
-    "TRT 1",
     "TRT 4K",
-    "Show TV",
     "TV8",
     "Kanal 7",
     "TRT 2",
@@ -22,13 +20,13 @@
     "TRT Spor Yıldız",
     "FB TV",
     "TRT 3 Spor",
+    "HT Spor",
     "beIN Sports Haber",
     "Sports TV",
     "FX",
     "GEM Pixel",
     "Disney Junior",
     "BabyTV",
-    "TRT Çocuk",
     "TRT Genc",
     "TRT Belgesel",
     "National Geographic",
@@ -59,6 +57,7 @@
     "ATV Avrupa",
     "Icel TV",
     "Kanal 1",
+    "Meltem TV",
     "Kanal 32",
     "Kanal Hayat",
     "Line TV",
@@ -67,7 +66,9 @@
     "Öncü TV",
     "TV 1",
     "TV 52",
+    "Aras TV",
     "TELE1",
+    "Kanal B",
     "GZT",
     "S Sport",
     "S Sport 2",
@@ -101,19 +102,7 @@
   "search_batches": [],
   "target_report": [
     {
-      "name": "TRT 1",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "TRT 4K",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Show TV",
       "category": "Ulusal",
       "files_matched": 0,
       "candidates": 0
@@ -203,6 +192,12 @@
       "candidates": 0
     },
     {
+      "name": "HT Spor",
+      "category": "Spor",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "beIN Sports Haber",
       "category": "Spor",
       "files_matched": 0,
@@ -234,12 +229,6 @@
     },
     {
       "name": "BabyTV",
-      "category": "Çocuk",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "TRT Çocuk",
       "category": "Çocuk",
       "files_matched": 0,
       "candidates": 0
@@ -425,6 +414,12 @@
       "candidates": 0
     },
     {
+      "name": "Meltem TV",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Kanal 32",
       "category": "Yerel",
       "files_matched": 0,
@@ -473,7 +468,19 @@
       "candidates": 0
     },
     {
+      "name": "Aras TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "TELE1",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Kanal B",
       "category": "Haber",
       "files_matched": 0,
       "candidates": 0
