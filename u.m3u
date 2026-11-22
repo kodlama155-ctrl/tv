@@ -7,13 +7,6 @@ https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8
 https://mn-nl.mncdn.com/gzttv/gzttv/playlist.m3u8
 #EXTINF:-1 tvg-id="TurkHaberTV.tr@SD" tvg-logo="https://i.imgur.com/2AcRKdL.png" group-title="Haber",TurkHaber TV
 https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="Tele1.tr@HD" group-title="Haber" tvg-logo="https://i.imgur.com/b9JcIqF.png",TELE1
-#EXTVLCOPT:http-user-agent=Lavf53.32.100
-#EXTHTTP:{"User-Agent":"Lavf53.32.100"}
-#KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=Lavf53.32.100
-https://tele1dvr.blutv.com/blutv_tele1_dvr2/live_720p2000000kbps/index.m3u8
-#EXTINF:-1 tvg-id="DHA.tr@SD" tvg-logo="https://i.imgur.com/VZhag2x.png" group-title="Haber",DHA
-https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber" tvg-logo="https://i.imgur.com/bUsbxTQ.png",Kanal B
 https://tv.kanalb.tr/hls/kanalb/index.m3u8
 #EXTINF:-1 tvg-id="OnMedyaTV.tr@SD" tvg-logo="https://i.imgur.com/thvk3Py.png" group-title="Haber",ON Medya Haber
@@ -72,8 +65,6 @@ https://59cba4d34b678.streamlock.net/live1/yabantv/playlist.m3u8
 https://edge1.socialsmart.tv/on4/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="Number1Turk.tr@SD" tvg-logo="https://i.imgur.com/18zjk3q.png" group-title="Müzik",Number 1 Türk
 https://mn-nl.mncdn.com/blutv_nr1turk2/live.m3u8
-#EXTINF:-1 group-title="Müzik" tvg-logo="https://i.imgur.com/02cDIBi.png",Number1 Türk TV
-https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik" tvg-logo="https://i.imgur.com/4hH7nZs.png",Dream TV
 https://mn-nl.mncdn.com/blutv_dream/smil:dream_hd.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="MilyonTV.tr@SD" tvg-logo="https://i.imgur.com/lEIFDwo.png" group-title="Müzik",Milyon TV
@@ -86,6 +77,8 @@ https://vdo.digitalbox.xyz:3807/stream/play.m3u8
 https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="ArasTV.tr@SD" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="Yerel",Aras TV
 http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="ATVAlanya.tr@SD" tvg-logo="https://i.imgur.com/bUwarR0.png" group-title="Yerel",ATV Alanya
+http://stream2.taksimbilisim.com:1935/alanyatv/alanyatv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="BursaTV.tr@SD" tvg-logo="https://i.imgur.com/9cl1MR8.png" group-title="Yerel",Bursa TV
 https://cdn-bursatv.yayin.com.tr/bursatv/bursatv/playlist.m3u8
 #EXTINF:-1 tvg-id="CanTV.tr@SD" tvg-logo="https://i.imgur.com/oIMtuwB.png" group-title="Yerel",Can TV
@@ -110,6 +103,8 @@ https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8
 http://yayin3.canlitv.com:1935/live/kanal38/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalHayat.tr@SD" tvg-logo="https://i.imgur.com/eikZj19.png" group-title="Yerel",Kanal Hayat
 https://tbn02a.ltnschedule.com/hls/nx21i.m3u8
+#EXTINF:-1 tvg-name="Kocaeli TV" tvg-logo="https://i.imgur.com/LeTP4zq.png" group-title="Yerel",Kocaeli TV
+https://edge1.socialsmart.tv/kocaelitv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="LineTV.tr@SD" tvg-logo="https://i.imgur.com/6GNp7f8.png" group-title="Yerel",Line TV
 https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="MTurkTV.tr@SD" tvg-logo="https://i.imgur.com/xj1gvrq.png" group-title="Yerel",MTurk TV
@@ -138,6 +133,8 @@ https://xrklj56s.rocketcdn.com/eurostar.stream_720p/chunklist.m3u8
 http://media.finest.tv/hls/live.m3u8
 #EXTINF:-1 tvg-id="KanalAvrupa.tr@SD" tvg-logo="https://i.imgur.com/bIGk6RN.png" group-title="Uluslararası",Kanal Avrupa
 http://51.15.2.151/hls/kanalavrupa.m3u8
+#EXTINF:-1 tvg-id="KurdistanTV.iq@SD" tvg-logo="https://i.imgur.com/mjQptpc.png" group-title="Uluslararası",Kurdistan TV
+https://5a3ed7a72ed4b.streamlock.net/live/SMIL:myStream.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="NaturalTV.tr@SD" tvg-logo="https://i.imgur.com/rfcJ674.png" group-title="Uluslararası",Natural TV
 http://broadcasttr.com:1935/naturaltv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="TGRTEurope.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/TGRT_EU.png/960px-TGRT_EU.png" group-title="Uluslararası",TGRT Europe
