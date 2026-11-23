@@ -1,18 +1,16 @@
 {
-  "updated_at_utc": "2026-11-22T09:57:25.834597+00:00",
+  "updated_at_utc": "2026-11-23T10:57:31.809771+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 143,
-  "missing_before_search": 97,
+  "channels_in_previous_tr": 147,
+  "missing_before_search": 93,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
     "TV8",
     "Kanal 7",
-    "TRT 2",
     "TYT Türk",
     "AKİT TV",
     "TurkHaber TV",
-    "Lider Haber TV",
     "A News",
     "DHA",
     "Guneydogu TV",
@@ -28,7 +26,6 @@
     "Disney Junior",
     "BabyTV",
     "TRT Çocuk",
-    "TRT Genc",
     "TRT Belgesel",
     "National Geographic",
     "National Geographic Wild",
@@ -43,7 +40,6 @@
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
-    "Number1 Türk TV",
     "Ada TV",
     "Kurdistan TV",
     "MyZen TV",
@@ -52,6 +48,8 @@
     "Kanal 33",
     "Afroturk TV",
     "Altas TV",
+    "Anadolu Net TV",
+    "ATV Alanya",
     "Cay TV",
     "Edessa TV",
     "ETV Manisa",
@@ -71,8 +69,6 @@
     "TV 1",
     "TV 52",
     "Aras TV",
-    "TELE1",
-    "TV5",
     "Kanal B",
     "GZT",
     "S Sport",
@@ -126,12 +122,6 @@
       "candidates": 0
     },
     {
-      "name": "TRT 2",
-      "category": "Ulusal",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "TYT Türk",
       "category": "Ulusal",
       "files_matched": 0,
@@ -145,12 +135,6 @@
     },
     {
       "name": "TurkHaber TV",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Lider Haber TV",
       "category": "Haber",
       "files_matched": 0,
       "candidates": 0
@@ -246,12 +230,6 @@
       "candidates": 0
     },
     {
-      "name": "TRT Genc",
-      "category": "Çocuk",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "TRT Belgesel",
       "category": "Belgesel",
       "files_matched": 0,
@@ -336,12 +314,6 @@
       "candidates": 0
     },
     {
-      "name": "Number1 Türk TV",
-      "category": "Müzik",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Ada TV",
       "category": "Uluslararası",
       "files_matched": 0,
@@ -385,6 +357,18 @@
     },
     {
       "name": "Altas TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Anadolu Net TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "ATV Alanya",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -500,18 +484,6 @@
     {
       "name": "Aras TV",
       "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "TELE1",
-      "category": "Haber",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "TV5",
-      "category": "Haber",
       "files_matched": 0,
       "candidates": 0
     },

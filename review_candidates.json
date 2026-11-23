@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-22T09:57:38.447042+00:00",
+  "updated_at_utc": "2026-11-23T10:57:44.691342+00:00",
   "count": 49,
   "candidates": [
     {
@@ -329,7 +329,7 @@
       "url": "https://ceokzokgtd.erbvr.com/tabiitv/tabiitv.m3u8",
       "source_repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
       "source_path": "kanallar.m3u",
-      "source_updated": "2026-11-21T12:22:27Z",
+      "source_updated": "2026-11-22T12:25:11Z",
       "reason": "uncatalogued-tr-identity"
     },
     {
@@ -341,7 +341,7 @@
       "reason": "uncatalogued-tr-identity"
     },
     {
-      "name": "Thaqalayn TV",
+      "name": "Thaqalayn TV (480p)",
       "tvg_id": "ThaqalaynTV.tr@SD",
       "url": "http://62.60.207.173:8080/hls/thaqalayn/index.m3u8",
       "source_kind": "iptv_org",
