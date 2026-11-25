@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-11-24T12:40:37.496448+00:00",
-  "count": 49,
+  "updated_at_utc": "2026-11-25T11:28:56.926822+00:00",
+  "count": 50,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
@@ -308,6 +308,14 @@
       "reason": "uncatalogued-tr-identity"
     },
     {
+      "name": "Pati TV (1080p)",
+      "tvg_id": "PatiTV.tr@SD",
+      "url": "https://patitv.radyotelekomtv.com:3958/live/patitvlive.m3u8",
+      "source_kind": "iptv_org",
+      "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "reason": "uncatalogued-tr-identity"
+    },
+    {
       "name": "Qaf TV (1080p)",
       "tvg_id": "QafTV.tr@SD",
       "url": "https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8",
@@ -329,7 +337,7 @@
       "url": "https://ceokzokgtd.erbvr.com/tabiitv/tabiitv.m3u8",
       "source_repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
       "source_path": "kanallar.m3u",
-      "source_updated": "2026-11-23T14:16:55Z",
+      "source_updated": "2026-11-24T14:42:36Z",
       "reason": "uncatalogued-tr-identity"
     },
     {

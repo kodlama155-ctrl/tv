@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-11-24T12:32:36.078486+00:00",
+  "updated_at_utc": "2026-11-25T11:21:14.415904+00:00",
   "official_pages": 38,
   "pages_ok": 34,
   "pages_with_candidates": 13,
   "raw_candidates": 16,
   "accepted_unique_candidates": 16,
   "probe_statuses": {
-    "restricted": 6,
-    "verified": 6,
+    "verified": 7,
+    "restricted": 5,
     "unknown": 4
   },
   "sources": [
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=QzJZSHMvR2dSSnY2R2hrYTc0R3ExOU9SY1pCNERTQUYrRjVXa0ZFdzV4WT0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=dTZSbWpKVHNkOTl4QmttS2RqVWdxZFFOdWsyV0lORjYvWTBQczdiN29GRT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=R09rM0k2Qm9BOTZZeFBiT1pvSncvV2xPNVNVSmtvbzlianhnQ2c3d3NaST0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=TDdoaGd4OVYxN0pWWXdDVTNUT3ZReWhoUzY1Ui9YSEtZZHpzR1l3OTE4ST0="
       ],
       "identity_rejected_candidates": 0
     },
