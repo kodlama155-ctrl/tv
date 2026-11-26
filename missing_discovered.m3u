@@ -1,1 +1,145 @@
 #EXTM3U
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="ATurk.tr@SD" group-title="Yerel",A Türk Izmir
+https://vdo.digitalbox.xyz:3807/stream/play.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="AkitTV.tr@HD" group-title="Haber",AKİT TV
+https://raw.githubusercontent.com/tecotv2025/tecotv/main/playlist/Akit_Tv.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="ATVAvrupa.tr@SD" group-title="Uluslararası",ATV Avrupa
+https://streams.uzunmuhalefet.com/stream/017621fb-d6f1-4e21-91d8-2510bdcb4ceb.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="AdaTV.cy@SD" group-title="Uluslararası",Ada TV
+https://streams.uzunmuhalefet.com/stream/975e6a82-279a-4b00-a9b4-85c92f480803.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="AfroturkTV.tr@SD" group-title="Uluslararası",Afroturk TV
+https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="AltasTV.tr@SD" group-title="Yerel",Altas TV
+https://streams.uzunmuhalefet.com/stream/ca4c7b79-5810-4478-92a7-025f7a82cb82.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="BabyTV.uk@Turkiye" group-title="Çocuk",BabyTV
+https://saran-live.ercdn.net/babytv/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="BursaTV.tr@SD" group-title="Yerel",Bursa TV
+https://cdn-bursatv.yayin.com.tr/bursatv/bursatv/playlist.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="CanTV.tr@SD" group-title="Yerel",Can TV
+https://streams.uzunmuhalefet.com/stream/904601a0-a0b6-4b3b-9f68-15e73afba3b7.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="CayTV.tr@SD" group-title="Yerel",Cay TV
+https://streams.uzunmuhalefet.com/stream/e129c625-fd17-4c9f-b91e-051170f3d5ae.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="DMAX.tr" group-title="Belgesel",DMAX
+https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="Discovery.CHANNEL.tr" group-title="Belgesel",Discovery Channel
+https://tatataliscaa.testworker0y.workers.dev/channel/RGlzY292ZXJ5IENoYW5uZWw=.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="DreamTV.tr@SD" group-title="Müzik",Dream TV
+https://live.duhnet.tv/S2/HLS_LIVE/dreamtvnp/playlist.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="ETVManisa.tr@SD" group-title="Yerel",ETV Manisa
+https://streams.uzunmuhalefet.com/stream/d4a753af-63a0-4cdc-899d-abe84721e1f4.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="FBTV.tr@SD" group-title="Spor",FB TV
+https://fbtv.fenerbahce.org/fenerbahcetv.stream_1080p/chunklist.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="FMTV.tr" group-title="Dini",FM TV
+http://463758a0.ucomist.net/iptv/V4ZVP6G52HVXDE/6789/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="FX.tr@HD" group-title="Film & Dizi",FX
+https://saran-live.ercdn.net/fx/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="GEMPixel.tr@SD" group-title="Film & Dizi",GEM Pixel
+https://glserver1.tamashaland.com/live/aBCH96886YznRbGOiqTnnQ__/stream_0.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="GZT.tr" group-title="Haber",GZT
+https://mn-nl.mncdn.com/gzttv/gzttv/playlist.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="KanalB.tr@SD" group-title="Haber",Kanal B
+https://tv.kanalb.tr/hls/kanalb/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="MTurkTV.tr@SD" group-title="Yerel",MTurk TV
+https://streams.uzunmuhalefet.com/stream/cf468f36-7389-43f1-a5c4-04250bb7cdd5.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="MilyonTV.tr@SD" group-title="Müzik",Milyon TV
+https://sosyoapp-live.cdnnew.com/sosyo/buraya-bir-isim-verin.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="NationalGeographic.tr@SD" group-title="Belgesel",National Geographic
+https://saran-live.ercdn.net/natgeohd/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="NationalGeographicWild.tr@SD" group-title="Belgesel",National Geographic Wild
+https://saran-live.ercdn.net/natgeowild/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="Number1Turk.tr@SD" group-title="Müzik",Number 1 Türk
+https://streams.uzunmuhalefet.com/stream/1eb6107d-6e37-479a-a81d-7999287bc876.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="SSport.tr@SD" group-title="Spor",S Sport
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan9gote10sokan.cfd/checklist/androstreamlivess1.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="SSport2.tr@SD" group-title="Spor",S Sport 2
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan9gote10sokan.cfd/checklist/androstreamlivess2.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="SportsTV.tr" group-title="Spor",Sports TV
+http://463758a0.ucomist.net/iptv/V4ZVP6G52HVXDE/6828/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="Tele1.tr" group-title="Haber",TELE1
+https://tele1-live.ercdn.net/tele1/tele1.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TGRTBelgesel.tr@HD" group-title="Belgesel",TGRT Belgesel
+https://raw.githubusercontent.com/tecotv2025/tecotv/refs/heads/main/playlist/Tgrt_Belgesel.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TGRTEU.tr" group-title="Uluslararası",TGRT EU
+https://raw.githubusercontent.com/bnyusuf31-lab/tr_github.m3u/refs/heads/main/streams/Tgrt_Eu.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TLC.tr" group-title="Belgesel",TLC
+https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TRT2.tr@HD" group-title="Ulusal",TRT 2
+https://tv-trt2.medya.trt.com.tr/master.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TRTBelgesel.tr@HD" group-title="Belgesel",TRT Belgesel
+https://streams.uzunmuhalefet.com/stream/d2c6d071-d252-4b73-9607-df0084017f2e.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TRTGenc.tr@SD" group-title="Çocuk",TRT Genc
+https://tv-trtgenc.medya.trt.com.tr/master.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TRTSporYildiz.tr@SD" group-title="Spor",TRT Spor Yıldız
+https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TRTCocuk.tr@SD" group-title="Çocuk",TRT Çocuk
+https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TV52.tr@SD" group-title="Yerel",TV 52
+https://streams.uzunmuhalefet.com/stream/89dd70d5-1028-4426-9df5-cc86d4d230fa.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 group-title="Ulusal",TYT Türk
+https://tytturk-live.ercdn.net/tytturk/tytturk.m3u8
+# SOURCE: github-targeted:bscandua/D-zzserisi/vavoo.m3u
+#EXTINF:-1 tvg-id="TabiiSpor6.tr@SD" group-title="Spor",Tabii Spor 6
+https://renderd-dm9o.onrender.com/proxy/m3u?url=https://vavoo.to/play3/184486327.m3u8
+# SOURCE: github-targeted:umitm0d/Liveinlive/vavoo.m3u
+#EXTINF:-1 tvg-id="TabiiSpor6.tr@SD" group-title="Spor",Tabii Spor 6
+https://vavoo.to/play3/184486327.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TabiiSpor6.tr@SD" group-title="Spor",Tabii Spor 6
+https://vbtob9hyq58eiophct5qctxr2.medya.trt.com.tr/master.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="TurkHaberTV.tr@SD" group-title="Haber",TurkHaber TV
+https://streams.uzunmuhalefet.com/stream/335a70f2-e7fb-4012-99f9-a4014c305140.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="VTV.tr@SD" group-title="Yerel",V TV
+https://serdar.tiviplayer.com/player/m3u8/65aae71c9b93f0965aaed3a92660d98b/65aae71c9b93f0965aaed3a92660d98b.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="ViasatExplore.tr@SD" group-title="Belgesel",Viasat Explore
+http://c3921155.edmonst.net/iptv/E4XLXZWBES7MLN/6856/index.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="WomanTV.tr@SD" group-title="Belgesel",Woman TV
+https://embedlp.becdn.net/womantv.m3u8
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="YabanTV.tr@HD" group-title="Belgesel",Yaban TV
+https://trn03.tulix.tv/gt-yabantv/tracks-v1a1/mono.m3u8?token=0631e8753bcdf25bb2a5015db22ec082
+# SOURCE: github-targeted:bnyusuf31-lab/tr_github.m3u/tr_github.m3u
+#EXTINF:-1 tvg-id="UniversiteTV.tr@SD" group-title="Belgesel",Üniversite TV
+https://vdo.digitalbox.xyz:3986/live/unitvlive.m3u8

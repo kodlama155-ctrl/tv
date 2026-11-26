@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-11-25T11:21:14.415904+00:00",
+  "updated_at_utc": "2026-11-26T10:57:03.205149+00:00",
   "official_pages": 38,
   "pages_ok": 34,
   "pages_with_candidates": 13,
   "raw_candidates": 16,
   "accepted_unique_candidates": 16,
   "probe_statuses": {
-    "verified": 7,
-    "restricted": 5,
-    "unknown": 4
+    "verified": 9,
+    "restricted": 4,
+    "unknown": 3
   },
   "sources": [
     {
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=dTZSbWpKVHNkOTl4QmttS2RqVWdxZFFOdWsyV0lORjYvWTBQczdiN29GRT0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=Mm1uMWtnWUpUdytISHp2SFdYMm9oUVNwTitZdnZUSmxGaWVWVitGdERpYz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -183,7 +183,7 @@
       "status": "ok",
       "page_final_url": "https://www.habitattv.com.tr/home.php",
       "page_candidates": 0,
-      "aux_scanned": 2,
+      "aux_scanned": 0,
       "candidates": [],
       "identity_rejected_candidates": 0
     },
@@ -304,7 +304,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=TDdoaGd4OVYxN0pWWXdDVTNUT3ZReWhoUzY1Ui9YSEtZZHpzR1l3OTE4ST0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=bEZGMHBQMFRJQXhDSTNJMnNoVG1oajhlREtsNW1tZTlOWkRHQWJWS2QxVT0="
       ],
       "identity_rejected_candidates": 0
     },
