@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-11-26T11:05:28.030596+00:00",
-  "count": 50,
+  "updated_at_utc": "2026-11-27T11:03:01.517416+00:00",
+  "count": 49,
   "candidates": [
     {
       "name": "Al-Rafidain TV (720p) [Not 24/7]",
@@ -329,15 +329,6 @@
       "url": "https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8",
       "source_kind": "iptv_org",
       "source_name": "https://iptv-org.github.io/iptv/countries/tr.m3u",
-      "reason": "uncatalogued-tr-identity"
-    },
-    {
-      "name": "Tabii",
-      "tvg_id": "TABİİ.tr",
-      "url": "https://ceokzokgtd.erbvr.com/tabiitv/tabiitv.m3u8",
-      "source_repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
-      "source_path": "kanallar.m3u",
-      "source_updated": "2026-11-25T14:04:43Z",
       "reason": "uncatalogued-tr-identity"
     },
     {

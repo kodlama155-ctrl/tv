@@ -1,12 +1,12 @@
 {
-  "updated_at_utc": "2026-11-26T10:57:03.205149+00:00",
+  "updated_at_utc": "2026-11-27T10:55:05.489199+00:00",
   "official_pages": 38,
-  "pages_ok": 34,
-  "pages_with_candidates": 13,
-  "raw_candidates": 16,
-  "accepted_unique_candidates": 16,
+  "pages_ok": 31,
+  "pages_with_candidates": 11,
+  "raw_candidates": 14,
+  "accepted_unique_candidates": 14,
   "probe_statuses": {
-    "verified": 9,
+    "verified": 7,
     "restricted": 4,
     "unknown": 3
   },
@@ -27,7 +27,7 @@
       "status": "ok",
       "page_final_url": "https://www.anews.com.tr/webtv/live-broadcast",
       "page_candidates": 0,
-      "aux_scanned": 0,
+      "aux_scanned": 2,
       "candidates": [],
       "identity_rejected_candidates": 0
     },
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=Mm1uMWtnWUpUdytISHp2SFdYMm9oUVNwTitZdnZUSmxGaWVWVitGdERpYz0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=OUFtSDk0clRPU1FxNHgxbHdrcXpabDh3ZFVudmM0WXRvSnpZRUduNkdYYz0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -180,12 +180,12 @@
     {
       "name": "Habitat TV",
       "page": "https://www.habitattv.com.tr/home.php",
-      "status": "ok",
-      "page_final_url": "https://www.habitattv.com.tr/home.php",
+      "status": "page_error",
+      "page_final_url": null,
       "page_candidates": 0,
       "aux_scanned": 0,
       "candidates": [],
-      "identity_rejected_candidates": 0
+      "error": "HTTPError"
     },
     {
       "name": "KRT TV",
@@ -227,14 +227,12 @@
     {
       "name": "Meltem TV",
       "page": "https://www.meltemtv.com.tr/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.meltemtv.com.tr/canli-yayin",
-      "page_candidates": 1,
-      "aux_scanned": 1,
-      "candidates": [
-        "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
-      ],
-      "identity_rejected_candidates": 0
+      "status": "page_error",
+      "page_final_url": null,
+      "page_candidates": 0,
+      "aux_scanned": 0,
+      "candidates": [],
+      "error": "HTTPError"
     },
     {
       "name": "NOW TV",
@@ -304,7 +302,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=bEZGMHBQMFRJQXhDSTNJMnNoVG1oajhlREtsNW1tZTlOWkRHQWJWS2QxVT0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=QmR1ZDBiNUhUSVFjSEdCY3YreDNoNzl1ZVBoK0Z4Ti9sSkU2aEZPYzB5RT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -391,14 +389,12 @@
     {
       "name": "Vav TV",
       "page": "https://www.vavtv.com.tr/canli-yayin",
-      "status": "ok",
-      "page_final_url": "https://www.vavtv.com.tr/canli-yayin",
-      "page_candidates": 19,
+      "status": "page_error",
+      "page_final_url": null,
+      "page_candidates": 0,
       "aux_scanned": 0,
-      "candidates": [
-        "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8"
-      ],
-      "identity_rejected_candidates": 18
+      "candidates": [],
+      "error": "TimeoutError"
     },
     {
       "name": "Yaban TV",

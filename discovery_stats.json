@@ -1,84 +1,96 @@
 {
-  "updated_at_utc": "2026-11-26T11:04:19.386103+00:00",
+  "updated_at_utc": "2026-11-27T11:02:32.974130+00:00",
   "max_file_age_days": 14,
-  "cutoff_utc": "2026-11-12T11:04:19.386103+00:00",
+  "cutoff_utc": "2026-11-13T11:02:32.974130+00:00",
   "repos_per_query": 50,
   "queries": [
     {
       "query": "turkish iptv",
-      "github_query": "turkish iptv pushed:>=2026-11-12",
-      "repos_returned": 9
+      "github_query": "turkish iptv pushed:>=2026-11-13",
+      "repos_returned": 7
     },
     {
       "query": "iptv turkey m3u",
-      "github_query": "iptv turkey m3u pushed:>=2026-11-12",
+      "github_query": "iptv turkey m3u pushed:>=2026-11-13",
       "repos_returned": 0
     },
     {
       "query": "turkiye iptv m3u",
-      "github_query": "turkiye iptv m3u pushed:>=2026-11-12",
+      "github_query": "turkiye iptv m3u pushed:>=2026-11-13",
       "repos_returned": 2
     },
     {
       "query": "turkish iptv playlist",
-      "github_query": "turkish iptv playlist pushed:>=2026-11-12",
-      "repos_returned": 5
+      "github_query": "turkish iptv playlist pushed:>=2026-11-13",
+      "repos_returned": 3
     },
     {
       "query": "turkiye canli tv m3u",
-      "github_query": "turkiye canli tv m3u pushed:>=2026-11-12",
+      "github_query": "turkiye canli tv m3u pushed:>=2026-11-13",
       "repos_returned": 1
     }
   ],
   "repos_scanned": 9,
-  "stale_repos_skipped": 2,
+  "stale_repos_skipped": 0,
   "playlist_file_candidates": 20,
-  "fresh_files_scanned": 15,
-  "stale_files_skipped": 5,
-  "unique_m3u8_candidates": 277,
-  "review_candidates": 33,
+  "fresh_files_scanned": 17,
+  "stale_files_skipped": 3,
+  "unique_m3u8_candidates": 245,
+  "review_candidates": 32,
   "discovery_rejections": {
     "noisy-provider": 31,
-    "vod-or-event-like": 7,
-    "uncatalogued": 423
+    "vod-or-event-like": 3,
+    "uncatalogued": 259
   },
   "header_aware_candidates": 8,
   "fresh_source_files": [
     {
       "repo": "K3rimoff/IPTV",
       "path": "Aze.m3u",
-      "last_commit": "2026-11-26T07:05:08Z",
+      "last_commit": "2026-11-27T07:00:05Z",
       "entries_found": 0
+    },
+    {
+      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
+      "path": "top50.m3u",
+      "last_commit": "2026-11-26T13:41:57Z",
+      "entries_found": 0
+    },
+    {
+      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
+      "path": "top50.m3u8",
+      "last_commit": "2026-11-26T13:41:57Z",
+      "entries_found": 0
+    },
+    {
+      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
+      "path": "kanallar.m3u",
+      "last_commit": "2026-11-26T13:41:57Z",
+      "entries_found": 338
+    },
+    {
+      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
+      "path": "kanallar.m3u8",
+      "last_commit": "2026-11-26T13:41:57Z",
+      "entries_found": 338
+    },
+    {
+      "repo": "FeridunN12/ibo-iptv-playlist",
+      "path": "combined.m3u",
+      "last_commit": "2026-11-26T11:45:10Z",
+      "entries_found": 131
+    },
+    {
+      "repo": "FeridunN12/ibo-iptv-playlist",
+      "path": "docs/combined.m3u",
+      "last_commit": "2026-11-26T11:45:10Z",
+      "entries_found": 131
     },
     {
       "repo": "alpayaydemir-ui/tv-kanal-listesi",
       "path": "turkiye-ucretsiz.m3u",
       "last_commit": "2026-11-25T23:04:23Z",
       "entries_found": 147
-    },
-    {
-      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
-      "path": "kanallar.m3u",
-      "last_commit": "2026-11-25T14:04:43Z",
-      "entries_found": 439
-    },
-    {
-      "repo": "YosemiteSam6/turkiye-iptv-m3u-m3u8",
-      "path": "kanallar.m3u8",
-      "last_commit": "2026-11-25T14:04:43Z",
-      "entries_found": 439
-    },
-    {
-      "repo": "FeridunN12/ibo-iptv-playlist",
-      "path": "combined.m3u",
-      "last_commit": "2026-11-25T11:56:53Z",
-      "entries_found": 132
-    },
-    {
-      "repo": "FeridunN12/ibo-iptv-playlist",
-      "path": "docs/combined.m3u",
-      "last_commit": "2026-11-25T11:56:53Z",
-      "entries_found": 132
     },
     {
       "repo": "YananHelena/iptvson",
