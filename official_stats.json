@@ -1,13 +1,13 @@
 {
-  "updated_at_utc": "2026-11-27T10:55:05.489199+00:00",
+  "updated_at_utc": "2026-11-28T10:30:15.860863+00:00",
   "official_pages": 38,
-  "pages_ok": 31,
-  "pages_with_candidates": 11,
-  "raw_candidates": 14,
-  "accepted_unique_candidates": 14,
+  "pages_ok": 32,
+  "pages_with_candidates": 12,
+  "raw_candidates": 15,
+  "accepted_unique_candidates": 15,
   "probe_statuses": {
+    "restricted": 5,
     "verified": 7,
-    "restricted": 4,
     "unknown": 3
   },
   "sources": [
@@ -121,7 +121,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=OUFtSDk0clRPU1FxNHgxbHdrcXpabDh3ZFVudmM0WXRvSnpZRUduNkdYYz0="
+        "https://dogus.daioncdn.net/dmax/dmax.m3u8?ce=3&app=5a02c599-d17e-4982-9b04-090934d51af7&token=V3B2UHZrcjk2citXc3ZkL2hOQ1ZJeUM2Tk1mYlVyeU1uRkErS21rakw5RT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -302,7 +302,7 @@
       "page_candidates": 1,
       "aux_scanned": 2,
       "candidates": [
-        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=QmR1ZDBiNUhUSVFjSEdCY3YreDNoNzl1ZVBoK0Z4Ti9sSkU2aEZPYzB5RT0="
+        "https://dogus.daioncdn.net/tlc/tlc.m3u8?ce=3&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&token=NVVRT2JzMy9tWFpRZWVLSG5vVmMrYnBzelEveC81cjJ6Skc2M1Q0SUNnWT0="
       ],
       "identity_rejected_candidates": 0
     },
@@ -389,12 +389,14 @@
     {
       "name": "Vav TV",
       "page": "https://www.vavtv.com.tr/canli-yayin",
-      "status": "page_error",
-      "page_final_url": null,
-      "page_candidates": 0,
+      "status": "ok",
+      "page_final_url": "https://www.vavtv.com.tr/canli-yayin",
+      "page_candidates": 19,
       "aux_scanned": 0,
-      "candidates": [],
-      "error": "TimeoutError"
+      "candidates": [
+        "https://trkvz-live.ercdn.net/vavtv/vavtv.m3u8"
+      ],
+      "identity_rejected_candidates": 18
     },
     {
       "name": "Yaban TV",

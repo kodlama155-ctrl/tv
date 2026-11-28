@@ -1,15 +1,17 @@
 {
-  "updated_at_utc": "2026-11-27T11:02:48.454652+00:00",
+  "updated_at_utc": "2026-11-28T10:38:28.424347+00:00",
   "catalog_channels": 240,
-  "channels_in_previous_tr": 150,
-  "missing_before_search": 90,
+  "channels_in_previous_tr": 147,
+  "missing_before_search": 93,
   "prior_validation_aware": true,
   "missing_names": [
     "TRT 4K",
     "TV8",
     "Kanal 7",
+    "TYT Türk",
     "AKİT TV",
     "TurkHaber TV",
+    "A News",
     "DHA",
     "Guneydogu TV",
     "Kudüs TV",
@@ -39,6 +41,7 @@
     "FM TV",
     "Dream TV",
     "Number1 Rap TV",
+    "Med Muzik",
     "Ada TV",
     "Kurdistan TV",
     "MyZen TV",
@@ -49,23 +52,22 @@
     "Afroturk TV",
     "Altas TV",
     "Cay TV",
-    "Deniz Postasi TV",
     "Edessa TV",
     "ETV Manisa",
     "Euro Star",
     "TGRT EU",
+    "ATV Avrupa",
     "Icel TV",
     "Kanal 1",
     "Kanal 32",
     "Kanal Hayat",
-    "Kocaeli TV",
     "Line TV",
     "MTurk TV",
     "Natural TV",
     "Öncü TV",
     "TV 1",
     "TV 52",
-    "TELE1",
+    "Aras TV",
     "Kanal B",
     "GZT",
     "S Sport",
@@ -89,6 +91,7 @@
     "Can TV",
     "Cekmekoy TV",
     "IBB TV",
+    "Kanal 34",
     "Kanal 38",
     "TV 38",
     "TV 42",
@@ -119,6 +122,12 @@
       "candidates": 0
     },
     {
+      "name": "TYT Türk",
+      "category": "Ulusal",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "AKİT TV",
       "category": "Haber",
       "files_matched": 0,
@@ -126,6 +135,12 @@
     },
     {
       "name": "TurkHaber TV",
+      "category": "Haber",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "A News",
       "category": "Haber",
       "files_matched": 0,
       "candidates": 0
@@ -305,6 +320,12 @@
       "candidates": 0
     },
     {
+      "name": "Med Muzik",
+      "category": "Müzik",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Ada TV",
       "category": "Uluslararası",
       "files_matched": 0,
@@ -365,12 +386,6 @@
       "candidates": 0
     },
     {
-      "name": "Deniz Postasi TV",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
       "name": "Edessa TV",
       "category": "Yerel",
       "files_matched": 0,
@@ -395,6 +410,12 @@
       "candidates": 0
     },
     {
+      "name": "ATV Avrupa",
+      "category": "Uluslararası",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
       "name": "Icel TV",
       "category": "Yerel",
       "files_matched": 0,
@@ -414,12 +435,6 @@
     },
     {
       "name": "Kanal Hayat",
-      "category": "Yerel",
-      "files_matched": 0,
-      "candidates": 0
-    },
-    {
-      "name": "Kocaeli TV",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
@@ -461,8 +476,8 @@
       "candidates": 0
     },
     {
-      "name": "TELE1",
-      "category": "Haber",
+      "name": "Aras TV",
+      "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
     },
@@ -600,6 +615,12 @@
     },
     {
       "name": "IBB TV",
+      "category": "Yerel",
+      "files_matched": 0,
+      "candidates": 0
+    },
+    {
+      "name": "Kanal 34",
       "category": "Yerel",
       "files_matched": 0,
       "candidates": 0
